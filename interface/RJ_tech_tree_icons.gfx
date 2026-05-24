@@ -211,6 +211,21 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_next_gen_computing_machine_medium"
+		texturefile = "gfx/interface/technologies/advanced_computing_machine.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_advanced_next_gen_computing_machine_medium"
+		texturefile = "gfx/interface/technologies/advanced_computing_machine.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_modern_computing_machine_medium"
+		texturefile = "gfx/interface/technologies/advanced_computing_machine.dds"
+	}
+
+	SpriteType = {
 		name = "GFX_pulse_doppler_radar_medium"
 		texturefile = "gfx/interface/technologies/RJ_tech/RJ_pulse_doppler_radar.dds"
 	}
