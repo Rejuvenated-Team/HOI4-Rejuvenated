@@ -14,4 +14,3 @@ tags={
 }
 name="Rejuvenated Local"
 supported_version="1.18.2.0"
-path="rejuvinated"
