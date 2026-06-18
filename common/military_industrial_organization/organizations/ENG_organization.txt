@@ -15,6 +15,8 @@ ENG_vickers_armstrong_eng_organization = {
 	allowed = {	
 		OR = {
 			tag = ENG
+			tag = BUL
+			tag = IRE
 			AND = {
 				tag = GRE
 				has_dlc = "Battle for the Bosporus"
@@ -69,6 +71,16 @@ ENG_vickers_armstrong_eng_organization = {
 				}
 				#is_in_faction_with = ENG
 				NOT = { has_completed_focus = BUL_nationalization }
+			}
+		}
+		IF = {
+			limit = { FROM = { original_tag = IRE } } 
+			FROM = {
+				OR = {
+					is_subject = no
+					is_subject_of = ENG
+				}
+				NOT = { is_embargoed_by = ENG }
 			}
 		}
 	}
@@ -129,6 +141,7 @@ ENG_vauxhall_organization = {
 		OR = {
 			tag = ENG
 			tag = SAF
+			tag = IRE
 			AND = {
 				tag = POL # If Poland sets up a local one
 				OR = {
@@ -166,6 +179,14 @@ ENG_vauxhall_organization = {
 		IF = {
 			limit = { FROM = { original_tag = ETH } }
 			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+		}
+		IF = {
+			limit = {
+				FROM = { original_tag = IRE }
+			}
+			FROM = {
+				has_completed_focus = IRE_fuse_the_kingdoms
+			}
 		}
 	
 	}
@@ -247,10 +268,21 @@ ENG_harland_wolff_organization = {
 	icon = GFX_idea_harland_wolff
 	
 	allowed = {	
-		tag = ENG
+		OR = {
+			tag = ENG
+			tag = IRE
+		}
 		has_dlc = "Arms Against Tyranny"
 	}
 
+	available = {
+		if = {
+			limit = {
+				owner = { tag = IRE }
+			}
+			owner = { owns_state = 119 }
+		}
+	}
 	override_trait = {
 		token = generic_mio_trait_underway_replenishment_equipment
 
@@ -300,8 +332,21 @@ ENG_cammell_laird_organization = {
 		has_dlc = "Arms Against Tyranny"
 		OR = {
 			tag = ENG
+			tag = IRE
 			AND = {
 				tag = BRA
+				has_dlc = "Trial of Allegiance"
+			}
+		}
+	}
+
+	visible = {
+		IF = {
+			limit = {
+				FROM = { original_tag = IRE }
+			}
+			FROM = {
+				has_completed_focus = IRE_fuse_the_kingdoms
 			}
 		}
 	}
@@ -419,6 +464,7 @@ ENG_john_brown_organization = {
 	allowed = {	
 		OR = {
 			tag = ENG
+			tag = IRE
 			AND = {
 				tag = BUL #This one is an additional option for Bulgaria with AAT 
 				has_dlc = "Battle for the Bosporus"
@@ -435,6 +481,14 @@ ENG_john_brown_organization = {
 		IF = {
 			limit = { FROM = { original_tag = ETH } }
 			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+		}
+		IF = {
+			limit = {
+				FROM = { original_tag = IRE }
+			}
+			FROM = {
+				has_completed_focus = IRE_fuse_the_kingdoms
+			}
 		}
 	}
 	
@@ -477,10 +531,22 @@ ENG_supermarine_organization = {
 	icon = GFX_idea_supermarine
 	
 	allowed = {	
-		tag = ENG
+		OR = {
+			tag = ENG
+			tag = IRE
+		}
 		has_dlc = "Arms Against Tyranny"
 	}
-
+	visible = {
+		IF = {
+			limit = {
+				FROM = { original_tag = IRE }
+			}
+			FROM = {
+				has_completed_focus = IRE_fuse_the_kingdoms
+			}
+		}
+	}
 	equipment_type = {
 		mio_cat_eq_all_small_plane
 		maritime_patrol_plane
@@ -586,9 +652,21 @@ ENG_de_havilland_organization = {
 		OR = {
 			tag = ENG
 			tag = NOR 		
+			tag = IRE 		
 		}
 	}
 
+	
+	visible = {
+		IF = {
+			limit = {
+				FROM = { original_tag = IRE }
+			}
+			FROM = {
+				has_completed_focus = IRE_fuse_the_kingdoms
+			}
+		}
+	}
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
 		IF = {
@@ -616,6 +694,7 @@ ENG_fairey_aviation_organization = {
 	allowed = {	
 		OR = {
 			tag = ENG 
+			tag = IRE 
 			AND = {
 				tag = BUL
 				has_dlc = "Battle for the Bosporus"
@@ -631,6 +710,14 @@ ENG_fairey_aviation_organization = {
 		IF = {
 			limit = { FROM = { original_tag = ETH } }
 			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
+		}
+		IF = {
+			limit = {
+				FROM = { original_tag = IRE }
+			}
+			FROM = {
+				has_completed_focus = IRE_fuse_the_kingdoms
+			}
 		}
 	}
 	
@@ -680,8 +767,20 @@ ENG_avro_organization = {
 	allowed = {	
 		OR = {
 			tag = ENG
+			tag = IRE
 			AND = {
 				tag = BRA
+				has_dlc = "Trial of Allegiance"
+			}
+		}
+	}
+	visible = {
+		IF = {
+			limit = {
+				FROM = { original_tag = IRE }
+			}
+			FROM = {
+				has_completed_focus = IRE_fuse_the_kingdoms
 			}
 		}
 	}
@@ -722,6 +821,7 @@ ENG_rsaf_enfield_organization = {
 	allowed = {	
 		OR = {
 			tag = ENG 
+			tag = IRE
 			AND = {
 				tag = GRE
 				has_dlc = "Battle for the Bosporus"
@@ -758,6 +858,16 @@ ENG_rsaf_enfield_organization = {
 			}
 			FROM = {
 				has_completed_focus = BALTIC_british_designers
+			}
+		}
+		IF = {
+			limit = { FROM = { original_tag = IRE } } 
+			FROM = {
+				OR = {
+					is_subject = no
+					is_subject_of = ENG
+				}
+				NOT = { is_embargoed_by = ENG }
 			}
 		}
 	}

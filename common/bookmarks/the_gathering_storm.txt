@@ -238,6 +238,22 @@ bookmarks = {
 			}
 		}
 
+		IRE = {
+			minor = yes
+			history = "rj_IRE_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				IRE_trade_war
+				IRE_autonomous_dominion
+				IRE_ira_3
+			}
+			focuses = {
+				IRE_the_new_state
+				IRE_confirm_ties_to_commonwealth
+				IRE_legacy_of_revolution
+			}
+		}
+
 		EGY = {
 			minor = yes
 			history = "EGY_GATHERING_STORM_DESC"
