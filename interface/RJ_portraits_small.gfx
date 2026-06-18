@@ -67,4 +67,19 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/eng/advisors/rj_advisor_ENG_william_fairbairn.dds"
 	}
 
+
+	#####################
+	### GER - Germany ###
+	#####################
+
+	SpriteType = {
+		name = "GFX_rj_portrait_GER_otto_skorzeny_small"
+		texturefile = "gfx/interface/ideas/ger/advisors/rj_advisor_GER_otto_skorzeny.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rj_portrait_GER_theodor_von_hippel_small"
+		texturefile = "gfx/interface/ideas/ger/advisors/rj_advisor_GER_theodor_von_hippel.dds"
+	}
+
 }

@@ -1025,6 +1025,10 @@ if = {
 	GER_create_operative_fritz_duquesne = yes
 }
 
+# RJ Characters
+recruit_character = GER_otto_skorzeny
+recruit_character = GER_theodor_von_hippel
+
 # Creating different equipment variants
 if = {
 	limit = {

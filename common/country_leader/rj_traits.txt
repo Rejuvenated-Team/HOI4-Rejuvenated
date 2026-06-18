@@ -21,16 +21,6 @@ leader_traits = {
 		sprite = 13
 		compliance_growth = 0.05
 		resistance_decay = 0.05
-		autonomy_manpower_share = 0.10
-		extra_trade_to_overlord_factor = 0.1
-		cic_to_overlord_factor = 0.1
-		mic_to_overlord_factor = 0.1
-		subjects_autonomy_gain = -0.15
-
-		conscription_factor = -0.05
-		stability_factor = -0.05
-		recruitable_population_factor = -0.05
-		monthly_population = -0.05
 	}
 
 	### Military Minister Traits

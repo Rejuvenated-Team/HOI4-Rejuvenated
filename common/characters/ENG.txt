@@ -2578,9 +2578,9 @@ characters={
 		}
 	}
 
-	########################
-	### HOI4 Rejuvinated ###
-	########################
+	###################
+	### Rejuvenated ###
+	###################
 
 	ENG_edward_halifax={
 		name=ENG_edward_halifax

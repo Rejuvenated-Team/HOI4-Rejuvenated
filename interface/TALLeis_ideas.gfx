@@ -11,16 +11,6 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_idea_GER_otto_skorzeny"
-		texturefile = "gfx/interface/ideas/idea_ger_otto_skorzeny.dds"
-	}
-
-	SpriteType = {
-		name = "GFX_idea_GER_theodor_von_hippel"
-		texturefile = "gfx/interface/ideas/idea_ger_theodor_von_hippel.dds"
-	}
-
-	SpriteType = {
 		name = "GFX_idea_ITA_cesare_ame"
 		texturefile = "gfx/interface/ideas/idea_ita_cesare_ame.dds"
 	}

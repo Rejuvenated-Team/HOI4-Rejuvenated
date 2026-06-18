@@ -18,35 +18,6 @@ ideas = {
 			traits = { spymaster }
 		}
 
-		GER_otto_skorzeny = {
-			available = {
-				has_intelligence_agency = yes
-			}
-			
-			allowed = {
-				original_tag = GER
-				has_dlc = "La Resistance"
-			}
-			
-			traits = { spymaster }
-		}
-		
-		GER_reinhard_heydrich = {
-
-			available = {
-				has_completed_focus = GER_rhineland
-			}			
-
-			cost = 250
-
-			allowed = {
-				original_tag = GER
-				has_dlc = "La Resistance"
-			}
-			
-			traits = { iron_heart }
-		}
-
 		ITA_cesare_ame = {
 			available = {
 				has_intelligence_agency = yes
