@@ -2189,6 +2189,9 @@ focus_tree = {
 				is_faction_leader = yes
 				has_government = fascism
 			}
+			NOT = {
+				has_government = communism
+			}
 		}
 		bypass = {
 			is_in_faction_with = GER
@@ -2218,9 +2221,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = IRE_s_plan
 		cost = 5
-		available = {
-			has_government = communism
-		}	
 		ai_will_do = {
 			factor = 20
 		}
@@ -2229,6 +2229,9 @@ focus_tree = {
 			SOV = { 
 				is_faction_leader = yes
 				has_government = communism
+			}
+			NOT = {
+				has_government = fascism
 			}
 		}
 		bypass = {
@@ -2241,6 +2244,26 @@ focus_tree = {
 					id = ireland.23
 				}
 			}
+		}
+	}
+	
+	focus = { # increases IRA loyalty
+		id = IRE_soviet_military_advisors
+		icon = GFX_focus_RJ_communist_advisor
+		prerequisite = { focus = IRE_join_comintern}
+		x = 0
+		y = 1
+		relative_position_id = IRE_join_comintern
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+		is_in_faction_with = SOV
+		}
+		search_filters =  { FOCUS_FILTER_POLITICAL }
+		completion_reward  = {
+			add_ideas = CUB_soviet_military_advisors_idea
 		}
 	}
 	

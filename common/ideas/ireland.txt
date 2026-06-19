@@ -1106,9 +1106,10 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_PEOPLES_ARMY"}
 			picture = ast_volunteer_defence_corps
 			modifier = {
-				planning_speed = 0.04
-				army_speed_factor = 0.02
-				army_morale_factor = 0.03
+				planning_speed = 0.10
+				max_planning_factor = 0.15
+				army_speed_factor = 0.05
+				army_morale_factor = 0.05
 			}
 		}
 
@@ -1116,7 +1117,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_FIGHTING_IRISH"}
 			picture = generic_manpower_bonus
 			modifier = {
-				training_time_factor = -0.06
+				training_time_factor = -0.15
 			}
 		}
 
@@ -1124,8 +1125,8 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_BLUEBLOUSES_idea"}
 			picture = generic_manpower_bonus
 			modifier = {
-				conscription_factor = 0.04
-				stability_factor = -0.03
+				conscription_factor = 0.10
+				stability_factor = -0.05
 			}
 		}
 
@@ -1133,7 +1134,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_CNM"}
 			picture = generic_manpower_bonus
 			modifier = {
-				conscription_factor = 0.10
+				conscription_factor = 0.20
 				stability_factor = -0.08
 			}
 		}
@@ -1142,8 +1143,9 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRE_OFFICER_SCHOOL"}
 			picture = generic_research_bonus
 			modifier = {
-				max_planning = 0.06
-				experience_gain_factor = 0.05
+				max_planning = 0.08
+				max_planning_factor = 0.05
+				experience_gain_factor = 0.10
 			}
 		}
 
