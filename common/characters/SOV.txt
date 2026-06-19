@@ -4034,11 +4034,13 @@ characters = {
 				large = GFX_portrait_SOV_aleksandr_kerensky
 			}
 			army = {
-				small = "GFX_idea_alexander_kerensky"
+				small = GFX_idea_alexander_kerensky
+				large = GFX_portrait_SOV_aleksandr_kerensky
 			}
 		}
 		country_leader = {
 			ideology = socialism
+			traits = { anti_soviet_socialist }
 			expire = "1953.3.1.1"
 			id = -1
 		}
@@ -4073,6 +4075,82 @@ characters = {
 			}
 			traits = {
 				democratic_reformer 
+			}
+			do_effect = {
+				NOT = {
+					has_government = democratic 
+				}
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
+	}
+
+	SOV_viktor_chernov = {
+		name = SOV_viktor_chernov
+
+		portraits = {
+			army = {
+				small = GFX_idea_SOV_generic_1
+			}
+		}
+		allowed_civil_war = { tag = SOV}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_viktor_chernov
+			allowed = {
+					original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				has_completed_focus = SOV_internal_management
+			}
+			traits = {
+				GER_minister_of_agriculture 
+			}
+			do_effect = {
+				NOT = {
+					has_government = democratic 
+				}
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
+	}
+
+	SOV_pavel_milyukov = {
+		name = SOV_pavel_milyukov
+
+		portraits = {
+			army = {
+				small = GFX_idea_SOV_generic_2
+			}
+		}
+		allowed_civil_war = { tag = SOV}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_pavel_milyukov
+			allowed = {
+					original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				has_completed_focus = SOV_internal_management
+			}
+			traits = {
+				skillful_diplomat silent_workhorse 
 			}
 			do_effect = {
 				NOT = {

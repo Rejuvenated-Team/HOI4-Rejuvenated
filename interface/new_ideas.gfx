@@ -1,0 +1,8 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_idea_RUS_republic_flag"
+		texturefile = "gfx/interface/ideas/RUS_republic_flag.dds"
+	}
+
+}
