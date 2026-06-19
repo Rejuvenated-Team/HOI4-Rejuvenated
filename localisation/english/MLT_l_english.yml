@@ -5,3 +5,13 @@
  MLT_fascism_party_long: "Partit Nazzjonalista"
  MLT_democratic_party: "Partit Kostituzzjonali"
  MLT_democratic_party_long: "Partit Kostituzzjonali"
+
+
+
+
+ ###################################################################################
+ ##################### FOCUSES #####################################################
+ ###################################################################################
+
+ MLT_answer_the_language_question: "Answer the Language Question"
+ MLT_answer_the_language_question_desc: "The question of official language in Malta has plagued us for well over a century now. It's time we settle matters regarding such a question, once & for all!"

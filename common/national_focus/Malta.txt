@@ -13,8 +13,22 @@ focus_tree = {
 	default = no
 
 	continuous_focus_position = { x = 50 y = 1500 }
-	
-focus = {
+
+	focus = {
+		id = MLT_answer_the_language_question
+		icon = GFX_focus_RJ_MLT_answer_the_language_question
+		prerequisite = { }
+		x = 0
+		y = 0
+		cost = 7.2
+
+		available_if_capitulated = yes
+		available = {
+			
+		}
+	}
+
+	focus = {
 		id = MLT_state_of_the_nation
 		icon = GFX_goal_generic_consumer_goods
 		x = 3

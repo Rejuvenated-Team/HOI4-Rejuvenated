@@ -1,0 +1,6 @@
+spriteTypes = {
+    SpriteType = {
+		name = "GFX_focus_RJ_MLT_answer_the_language_question"
+		texturefile = "gfx/interface/goals/mlt/RJ_MLT_answer_the_language_question.dds"
+	}
+}
