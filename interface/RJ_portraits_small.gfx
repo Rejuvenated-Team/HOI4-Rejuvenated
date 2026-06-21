@@ -65,6 +65,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/ger/advisors/rj_advisor_GER_adolf_hitler.dds"
 	}
 
+	spriteType = {
+		name = "GFX_rj_portrait_GER_gerd_von_rundstedt_small"
+		texturefile = "gfx/interface/ideas/ger/advisors/rj_advisor_GER_gerd_von_rundstedt.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_GER_gunther_von_kluge_small"
+		texturefile = "gfx/interface/ideas/ger/advisors/rj_advisor_GER_gunther_von_kluge.dds"
+	}
+
 	##########################
 	### SOV - Soviet Union ###
 	##########################
