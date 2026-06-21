@@ -1812,6 +1812,21 @@ greater_caribbean = {
 	color_ui = rgb { 72 22 107 }
 }
 
+SOV_russian_tsardom_democratic = {
+	color = rgb { 64 128 0 }
+	color_ui = rgb { 51 204 51 }
+}
+
+SOV_GREATER_RUSSIAN_EMPIRE = {
+	color = rgb { 64 128 0 }
+	color_ui = rgb { 51 204 51 }
+}
+
+SOV_UNION_SOVEREIGN_STATES = {
+	color = rgb { 78 93 135 }
+	color_ui = rgb { 78 93 135 }
+}
+
 ENG_FRA_imperial_federation_unified = {
 	color = rgb { 180 0 0 }
 	color_ui = rgb { 255 0 0 }
@@ -1821,18 +1836,22 @@ ENG_FRA_imperial_federation_india_unified = {
 	color = rgb { 180 0 0 }
 	color_ui = rgb { 255 0 0 }
 }
+
 ENG_IRE_dual_monarchy = {
 	color = rgb { 170  10  10 }
 	color_ui = rgb { 170  10  10 }
 }
+
 AUHU_federation = {
 	color = rgb { 194 198 215 }
 	color_ui = rgb { 255 255 255 }
 }
+
 HAN_HANNOVER = {
 	color = rgb { 255 0 0 }
 	color_ui = rgb { 255 0 0 }
 }
+
 NOR_occupied = {
 	color = rgb { 91  51  51  }
 	color_ui = rgb { 91  51  51 }
