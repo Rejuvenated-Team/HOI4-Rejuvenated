@@ -1038,10 +1038,6 @@
  portugal.45.a:0 "yup"
  ##############################
  ##END
- ##BOOKMARKS
- POR_GATHERING_STORM_DESC:0 "Portugal - once a prospering Empire that, along with Spain, divided the World in half thanks to its explorers and colonists but it is now a decaying country condmned to the backstage of the World politics. The road to glory will not be an easy one and the sea may prove as treacherous as it was centuries ago. \n\nPortugal has many paths ahead - will they pursue its former glory and maybe even greater heights, or will they just work on surviving the coming storm?"
- POR_BLITZKRIEG_DESC:0 "Portugal - once a prospering Empire that, along with Spain, divided the World in half thanks to its explorers and colonists but it is now a decaying country condmned to the backstage of the World politics. The road to glory will not be an easy one and the sea may prove as treacherous as it was centuries ago. \n\nPortugal has many paths ahead - will they pursue its former glory and maybe even greater heights, or will they just work on surviving the coming storm?"
- ##END
  ##DIPLOMACY
  por_supported_spain_civil_war:0 "Portuguese Volunteers in Civil War"
  por_aid_spain_fascism:0 "Portuguese Aid in Civil War"
