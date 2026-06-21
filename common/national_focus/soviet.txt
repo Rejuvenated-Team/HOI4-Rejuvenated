@@ -6979,6 +6979,8 @@ focus_tree = {
 			}
 			army_experience = 30
 		}
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
 	}
 
 	focus = {
@@ -11875,6 +11877,8 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = sov_gulag
 		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	}
 	
 	focus = {
@@ -11898,6 +11902,8 @@ focus_tree = {
 				add_idea = sov_gulag2
 			}
 		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	}
 	
 	focus = {
@@ -11921,6 +11927,8 @@ focus_tree = {
 				add_idea = sov_gulag3
 			}
 		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 	
 	focus = {
@@ -11954,6 +11962,8 @@ focus_tree = {
 				}
 			}
 		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	}
 	
 	focus = {
@@ -11978,15 +11988,22 @@ focus_tree = {
 
 		completion_reward = {
 			574 = {
-				add_extra_state_shared_building_slots = 3
+				upgrade_state_category_3 = yes
+				add_manpower = 150000
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			575 = {
-				add_extra_state_shared_building_slots = 3
+				upgrade_state_category_2 = yes
+				add_manpower = 50000
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			576 = {
-				add_extra_state_shared_building_slots = 3
+				upgrade_state_category_2 = yes
+				add_manpower = 50000
 			}
 		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -12075,11 +12092,53 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SOV_militarized_schools
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = SOV_collectivist_propaganda focus = SOV_positive_heroism }
+		x = -1
+		y = 1
+		relative_position_id = SOV_positive_heroism
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = militarized_schools
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+	}
+
+	focus = {
+		id = SOV_socialist_science
+		icon = GFX_focus_generic_socialist_science
+		prerequisite = { focus = SOV_militarized_schools }
+		x = 0
+		y = 2
+		relative_position_id = SOV_militarized_schools
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = socialist_science_focus
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
 		id = SOV_revive_the_stakhanovite_movement
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = SOV_positive_heroism }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = SOV_positive_heroism
 		cost = 10
 
@@ -12099,7 +12158,7 @@ focus_tree = {
 		icon = GFX_goal_generic_war_with_comintern
 		prerequisite = { focus = SOV_revive_the_stakhanovite_movement }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = SOV_revive_the_stakhanovite_movement
 		cost = 10
 
@@ -12216,7 +12275,7 @@ focus_tree = {
 		icon = GFX_goal_generic_soviet_construction
 		prerequisite = { focus = SOV_collectivist_propaganda }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = SOV_collectivist_propaganda
 		cost = 10
 
@@ -12236,7 +12295,7 @@ focus_tree = {
 		icon = GFX_focus_YUG_pan_slavic_congress
 		prerequisite = { focus = SOV_socialist_emulation }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = SOV_socialist_emulation
 		cost = 10
 
