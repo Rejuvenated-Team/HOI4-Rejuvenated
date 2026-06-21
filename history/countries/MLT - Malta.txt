@@ -4,6 +4,10 @@ capital = 116
 set_stability = 0.35
 set_war_support = 0.15
 
+add_ideas = {
+	MLT_the_language_question_idea
+}
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -44,7 +48,7 @@ set_politics = {
 	elections_allowed = no ##The constitution was temporarily suspended at this point until stability could be restored.
 }
 set_popularities = {
-	fascism = 3
-	neutrality = 70
+	fascism = 5
+	neutrality = 68
 	democratic = 27
 }

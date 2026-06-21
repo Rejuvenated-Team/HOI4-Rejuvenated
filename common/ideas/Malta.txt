@@ -1,0 +1,23 @@
+ideas = {
+	country = {
+		MLT_the_language_question_idea = {
+			
+			allowed = {
+				original_tag = MLT
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = HUN_treaty_of_triannon
+	
+			modifier = {
+				stability_factor = -0.10
+				political_power_factor = -0.15
+			}
+		}
+	}
+}
