@@ -30,6 +30,21 @@ characters={
 		}
 	}
 
+	MLT_gerald_strickland = { # Constitutional Party leader until his death in 1940.
+		name = "Gerald Strickland"
+		portraits={
+			civilian={
+				large = "gfx/leaders/MLT/Gerald_Strickland.dds"
+			}
+		}
+		country_leader={
+			ideology= conservatism
+			traits={ }
+			expire="1965.1.1.12"
+			id=-1
+		}
+	}
+
 
 
 
