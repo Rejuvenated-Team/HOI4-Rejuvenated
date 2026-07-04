@@ -183,10 +183,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_timed_idea = {
-			idea = MLT_italian_help_idea
-			days = 545
-			}
 
 		}
 	}
@@ -244,15 +240,11 @@ focus_tree = {
 
 		available_if_capitulated = no
 		available = {
-			NOT = { has_idea = MLT_infiltration_ongoing }
 			num_of_available_civilian_factories > 0
 		}
 
 		completion_reward = {
-           add_timed_idea = {
-			idea = MLT_infiltration_ongoing
-			days = 150
-			}
+         
 		}
 	}
 	
@@ -267,15 +259,10 @@ focus_tree = {
 
 		available_if_capitulated = no
 		available = {
-			NOT = { has_idea = MLT_infiltration_ongoing }
 			num_of_available_civilian_factories > 1
 		}
 
 		completion_reward = {
-           add_timed_idea = {
-			idea = MLT_infiltration_ongoing
-			days = 150
-			}
 		}
 	}
 	
@@ -291,7 +278,7 @@ focus_tree = {
 
 		available_if_capitulated = no
 		available = {
-			NOT = { has_idea = MLT_infiltration_ongoing }
+		
 		}
 
 		completion_reward = {
@@ -312,7 +299,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-          add_ideas = MLT_friends_in_high_places
 	}
 	}
 	
@@ -401,7 +387,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-        add_ideas = MLT_italian_trade_investments_idea
 		}
 	}
 	
@@ -469,7 +454,6 @@ focus_tree = {
 
 		available_if_capitulated = no
 		completion_reward = {
-		 add_ideas = MLT_new_colonial_administration_idea1
 		}
 	}
 	
@@ -662,10 +646,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		swap_ideas = {
-			remove_idea = MLT_new_colonial_administration_idea1
-			add_idea = MLT_new_colonial_administration_idea2
-			}
 		}
 	}
 	
@@ -682,8 +662,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		add_ideas = MLT_british_investments_idea
-		
 		}
 	}
 	
@@ -715,8 +693,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		add_ideas = MLT_italian_refugees_idea
-		
 		}
 	}
 	

@@ -1,0 +1,28 @@
+MLT_italy_infiltration = {
+
+	icon = eng_organize_the_blackshirts
+
+	picture = GFX_decision_cat_picture_organize_the_blackshirts
+	
+	allowed = {
+		tag = MLT
+	}
+
+	on_map_area = {
+		state = 115
+		name = MLT_italy_infiltration_map_category_name
+		zoom = 200
+	}
+
+	priority = {
+		base = 0
+		modifier = {
+			add = 10
+			has_completed_focus = MLT_the_grand_plan
+		}
+	}
+
+	visible = {
+		has_completed_focus = MLT_the_grand_plan
+	}
+}

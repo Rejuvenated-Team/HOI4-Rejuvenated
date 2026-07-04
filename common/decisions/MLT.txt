@@ -1,0 +1,74 @@
+MLT_italy_infiltration_cat = {
+	MLT_infiltration_in_sicily = {
+
+		icon = eng_blackshirt_march
+
+		available = {
+			NOT = { has_country_flag = MLT_infiltration_ongoing }
+			ITA = {
+			has_full_control_of_state = 115
+			}
+			is_subject_of = ITA
+		}
+
+		highlight_states = {
+ 			highlight_state_targets = { state = 115 } 
+		}
+
+		on_map_mode = map_only
+
+		cost = 26
+
+		fire_only_once = yes
+
+		visible = {
+			country_exists = ITA
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			115 = { save_event_target_as = MLT_infiltration_state }
+			random_list = {
+				25 = {
+					country_event = { id = mtg_britain.57 days = 1 }
+					effect_tooltip = {
+						ITA = {
+						add_stability = -0.05
+						}
+					}
+				}
+				50 = {
+					country_event = { id = mtg_britain.58 days = 1 }
+					effect_tooltip = {
+						ITA = {
+						add_stability = -0.10
+						}
+					}
+				}
+				25 = {
+					country_event = { id = mtg_britain.59 days = 1 }
+					effect_tooltip = {
+					    ITA = {
+						add_stability = -0.15
+						}
+					}
+				}
+			}
+			set_country_flag = MLT_infiltration_temp_sicily
+			set_country_flag = MLT_infiltration_timer_flag
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_stability < 0.581
+			}
+			modifier = {
+				factor = 0
+				fascism > 0.5
+			}
+		}
+	}
+}
