@@ -1,0 +1,439 @@
+﻿add_namespace = bra
+add_namespace = election_BRA
+add_namespace = news_BRA
+
+country_event = {
+	id = bra.2
+	title = bra.2.t
+	desc = bra.2.d
+	picture = GFX_bra.2
+	
+	is_triggered_only = yes
+	
+	option = { #fasc
+		name = bra.2.a
+		ai_chance = {
+			base = 60
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.1
+		}
+	}
+	
+	option = { #com
+		name = bra.2.b
+		ai_chance = {
+			base = 10
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.1
+		}
+	}
+	
+	option = { #en
+		name = bra.2.c
+		ai_chance = {
+			base = 30
+		}
+		add_political_power = 75
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.1
+		}
+	}
+	
+	option = { #dem
+		name = bra.2.e
+		ai_chance = {
+			base = 10
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.1
+		}
+	}
+}
+
+country_event = {
+	id = bra.6
+	title = bra.6.t
+	desc = bra.6.d
+	picture = GFX_bra.6
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 20 }
+		name = bra.6.a
+		BRA = { add_to_faction = ROOT }
+		#add_ideas = bra_mercosul_outro
+	}
+	
+	option = {
+		ai_chance = { factor = 0 }
+		name = bra.6.b
+		add_opinion_modifier = { target = BRA modifier = bra_inimigo_modifier }
+	}
+}
+
+country_event = {
+	id = bra.7
+	title = bra.7.t
+	desc = bra.7.d
+	picture = GFX_bra.7
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 20 }
+		name = bra.7.a
+		add_to_faction = BRA
+	}
+	
+	option = {
+		ai_chance = { factor = 0 }
+		name = bra.7.b
+		add_opinion_modifier = { target = BRA modifier = bra_inimigo_modifier }
+	}
+}
+
+country_event = {
+	id = bra.8
+	title = bra.8.t
+	desc = bra.8.d
+	picture = GFX_bra.8
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = { factor = 20 }
+		name = bra.8.a
+		BRA = { add_to_faction = ROOT }
+	}
+	
+	option = {
+		ai_chance = { factor = 0 }
+		name = bra.8.b
+		add_opinion_modifier = { target = BRA modifier = bra_inimigo_modifier }
+	}
+}
+	
+country_event = {
+	id = bra.13
+	title = bra.13.t
+	desc = bra.13.d
+	picture = GFX_bra.13
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = bra.13.a
+
+		effect_tooltip = {
+			kill_country_leader = yes
+		}
+		hidden_effect = {
+			retire_character = BRA_getulio_vargas
+
+			promote_character = BRA_eurico_gaspar_dutra
+		}
+
+		set_politics = { ruling_party = communism elections_allowed = no }
+
+		add_popularity = { ideology = communism popularity = 0.1 }
+
+		add_political_power = 150
+	}
+}
+
+country_event = {
+	id = bra.14
+	title = bra.14.t
+	desc = bra.14.d
+	picture = GFX_bra.14
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = bra.14.a
+
+		retire_character = BRA_getulio_vargas
+
+		hidden_effect = {
+			promote_character = BRA_eurico_gaspar_dutra
+		}
+
+		set_politics = { ruling_party = fascism elections_allowed = no }
+
+		add_popularity = { ideology = fascism popularity = 0.1 }
+
+		add_political_power = 150
+	}
+}
+
+country_event = {
+	id = bra.15
+	title = bra.15.t
+	desc = bra.15.d
+	picture = GFX_bra.15
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = bra.15.a
+		
+		#add_ideas = BRA_filinto_muller
+		
+		#add_ideas = bra_propaganda_en
+		
+		set_party_name = { ideology = neutrality long_name = "Estado Novo" name = "Estado Novo" } 
+		
+		add_popularity = { ideology = neutrality popularity = 0.1 }
+		
+		add_political_power = 150
+	}
+}
+
+country_event = {
+	id = bra.16
+	title = bra.16.t
+	desc = bra.16.d
+	picture = GFX_bra.16
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = bra.16.a
+
+		retire_character = BRA_getulio_vargas
+
+		hidden_effect = {
+			promote_character = BRA_eurico_gaspar_dutra
+		}
+
+		set_politics = { ruling_party = democratic elections_allowed = no }
+
+		set_party_name = { ideology = democratic long_name = "União Democrática Nacional" name = "UDN" }
+
+		add_popularity = { ideology = democratic popularity = 0.1 }
+
+		add_political_power = 150
+	}
+}
+
+#country_event = {
+#	id = bra.5
+#	title = bra.5.t
+#	desc = bra.5.d
+#	picture = GFX_bra.5
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = bra.5.a
+#		ai_chance = { factor = 0 }
+#		add_popularity = { ideology = neutrality popularity = 0.25 }
+#		create_country_leader = {
+#			name = "Pedro III"
+#			desc = "POLITICS_DPIII_DESC"
+#			picture = "gfx/leaders/BRA/DPIII.dds"
+#			expire = "1965.1.1"
+#			ideology = despotism
+#			traits = { vfb_trait_dompedro_1 vfb_trait_dompedro_3 }
+#		}
+#		set_politics = { ruling_party = neutrality elections_allowed = no }
+#	}
+#	
+#	option = {
+#		name = bra.5.b
+#		ai_chance = { factor = 1 }
+#		add_popularity = { ideology = fascism popularity = 0.25 }
+#		create_country_leader = {
+#			name = "Pedro III"
+#			desc = "POLITICS_DPIII_DESC"
+#			picture = "gfx/leaders/BRA/DPIII.dds"
+#			expire = "1965.1.1"
+#			ideology = falangism
+#			traits = { vfb_trait_dompedro_1 vfb_trait_dompedro_2 }
+#		}
+#		set_politics = { ruling_party = fascism elections_allowed = no }
+#	}
+#}
+
+country_event = {
+	id = bra.17
+	title = bra.17.t
+	desc = bra.17.d
+	picture = GFX_bra.17
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bra.17.a
+		ai_chance = { factor = 1 }
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+		swap_ideas = { remove_idea = bra_march_in_silence_2 add_idea = bra_march_in_silence_3_m }
+	}
+	
+	option = {
+		name = bra.17.b
+		ai_chance = { factor = 4 }
+		add_popularity = { ideology = fascism popularity = 0.05 }
+		swap_ideas = { remove_idea = bra_march_in_silence_2 add_idea = bra_march_in_silence_3_n }
+	}
+}
+
+country_event = {
+	id = bra.18
+	title = bra.18.t
+	desc = bra.18.d
+	picture = GFX_bra.18
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bra.18.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				has_idea = bra_march_in_silence_3_m
+			}
+			add_popularity = { ideology = neutrality popularity = 0.05 }
+			swap_ideas = { remove_idea = bra_march_in_silence_3_m add_idea = bra_march_in_silence_4_m }
+		}
+		else_if = {
+			limit = {
+				has_idea = bra_march_in_silence_3_n
+			}
+			add_popularity = { ideology = fascism popularity = 0.05 }
+			swap_ideas = { remove_idea = bra_march_in_silence_3_n add_idea = bra_march_in_silence_4_n }
+		}
+	}
+}
+
+country_event = {
+	id = bra.19
+	title = bra.19.t
+	desc = bra.19.d
+	picture = GFX_bra.19
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			BRA_pedro_henrique = {
+				set_character_name = BRA_pedro_iii
+			}
+		}
+	}
+	
+	option = {
+		name = bra.19.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				has_idea = bra_march_in_silence_4_m
+			}
+			add_popularity = { ideology = neutrality popularity = 0.05 }
+			add_country_leader_role = {
+				character = BRA_pedro_henrique
+				country_leader = {
+					expire = 1965.1.1
+					ideology = monarchy
+					traits = {
+						vfb_trait_dompedro_1
+						vfb_trait_dompedro_3
+					}
+				}
+			}
+			hidden_effect = { 
+				swap_ideas = { remove_idea = bra_antropofagia add_idea = bra_antropofagia_imperial_neutra }
+				remove_ideas = bra_march_in_silence_4_m
+				set_politics = { ruling_party = neutrality elections_allowed = no }
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = bra_march_in_silence_4_n
+			}
+			add_popularity = { ideology = fascism popularity = 0.05 }
+			add_country_leader_role = {
+				character = BRA_pedro_henrique
+				country_leader = {
+					expire = 1965.1.1
+					ideology = falangism
+					traits = {
+						vfb_trait_dompedro_1
+						vfb_trait_dompedro_2
+					}
+				}
+			}
+			hidden_effect = { 
+				swap_ideas = { remove_idea = bra_antropofagia add_idea = bra_antropofagia_imperial_fascista }
+				remove_ideas = bra_march_in_silence_4_n
+				set_politics = { ruling_party = fascism elections_allowed = no }
+			}
+		}
+		hidden_effect = {
+			set_party_name = { ideology = neutrality long_name = "Partido Liberal" name = "Chimangos" }
+			set_party_name = { ideology = fascism long_name = "Partido Conservador" name = "Caramurus"}
+			set_party_name = { ideology = democratic long_name = "Partido Federalista" name = "Maragatos" }
+			set_party_name = { ideology = communism long_name = "Frentes Regionalistas" name = "Farroupilhas" }
+			set_cosmetic_tag = BRA_IDB
+			country_event = { id = bra.22 days = 1 }
+			300 = { add_core_of = BRA }
+			301 = { add_core_of = BRA }
+			510 = { add_core_of = BRA }
+		}
+	}
+}
+
+country_event = {
+	id = bra.20
+	title = bra.20.t
+	desc = bra.20.d
+	picture = GFX_bra.20
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bra.20.a
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = bra_por_sabotage_ai_tooltip
+		hidden_effect = { set_global_flag = bra_por_sabotage_ai_flag	}
+	}
+	
+	option = {
+		name = bra.20.b
+		ai_chance = { factor = 10 }
+		custom_effect_tooltip = bra_por_nosabotage_ai_tooltip
+	}
+}
+
+country_event = {
+	id = bra.22
+	title = bra.22.t
+	desc = bra.22.d
+	picture = GFX_bra.22
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bra.22.a
+		ai_chance = { factor = 0 }
+		set_rule = { can_send_volunteers = yes }
+		add_ideas = { bra_feb_idea }
+	}
+	
+	option = {
+		name = bra.22.b
+		ai_chance = { factor = 0 }
+		custom_effect_tooltip = bra.22.b_tt
+	}
+}
