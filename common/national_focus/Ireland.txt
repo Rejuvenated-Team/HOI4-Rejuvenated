@@ -3981,7 +3981,7 @@ focus_tree = {
 	}
 	focus = {
 		id = IRE_ACADEMY
-		icon = GFX_focus_generic_military_academy
+		icon = GFX_focus_ETH_ecole_militaire_haile_selassie_1er
 		x = 0
 		y = 1
 		relative_position_id = IRE_OFFICERSCHOOL
