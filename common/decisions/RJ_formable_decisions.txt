@@ -1,0 +1,448 @@
+greater_caribbean_category = {
+
+	form_the_greater_caribbean = {
+		icon = generic_form_nation
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 1140
+				state = 488
+				state = 1139
+				state = 486
+				state = 1137
+				state = 306
+				state = 1136
+				state = 1135
+				state = 493
+				state = 1134
+				state = 1130
+				state = 304
+				state = 1131
+				state = 316
+				state = 317
+				state = 1132
+				state = 312
+				state = 314
+				state = 313
+				state = 1133
+				state = 307
+				state = 1141
+				state = 489
+				state = 311
+				state = 474
+				state = 685
+			}
+		}
+
+		visible = {
+			has_global_flag = antilles_formed_flag
+			
+			NOT = { has_global_flag = greater_caribbean_formed_flag }
+		}
+
+		allowed = {
+			OR = {
+				original_tag = HAI # Haiti
+				original_tag = DOM # Dominican Republic
+				original_tag = PUE # Puerto Rico
+				original_tag = CUB # Cuba
+				original_tag = JAM # Jamaica
+				original_tag = BAH # Bahamas
+				original_tag = GDL # Guadeloupe 
+				original_tag = BAS # British Antilles 
+			}
+		}
+
+		available = {
+			
+			1140 = {
+				is_fully_controlled_by = ROOT
+			}
+
+			488 = {
+				is_fully_controlled_by = ROOT
+			}
+
+			1139 = {
+				is_fully_controlled_by = ROOT
+			}
+
+			486 = {
+				is_fully_controlled_by = ROOT
+			}
+
+			1137 = {
+				is_fully_controlled_by = ROOT
+			}
+
+			306 = {
+				is_fully_controlled_by = ROOT
+			}
+
+			1136 = {
+				is_fully_controlled_by = ROOT
+			}
+
+			1135 = {
+				is_fully_controlled_by = ROOT
+			}
+
+			493 = {
+				is_fully_controlled_by = ROOT
+			}
+
+			1134 = {
+				is_fully_controlled_by = ROOT
+			}
+
+			1130 = {
+				is_fully_controlled_by = ROOT
+			}
+
+			304 = {
+				is_fully_controlled_by = ROOT
+			}
+
+			1131 = {
+				is_fully_controlled_by = ROOT
+			}
+
+			316 = {
+				is_fully_controlled_by = ROOT
+			}
+
+			317 = {
+				is_fully_controlled_by = ROOT
+			}
+
+			1132 = {
+				is_fully_controlled_by = ROOT
+			}
+
+			312 = {
+				is_fully_controlled_by = ROOT
+			}
+
+			313 = {
+				is_fully_controlled_by = ROOT
+			}
+
+			314 = {
+				is_fully_controlled_by = ROOT
+			}
+
+			1133 = {
+				is_fully_controlled_by = ROOT
+			}
+
+			307 = {
+				is_fully_controlled_by = ROOT
+			}
+
+			1141 = {
+				is_fully_controlled_by = ROOT
+			}
+
+			489 = {
+				is_fully_controlled_by = ROOT
+			}
+
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			set_cosmetic_tag = greater_caribbean
+			
+			IF =  {
+				limit = {
+					NOT = {
+						1140 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				1140 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						1141 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				1141 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						307 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				307 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						489 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				489 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						488 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				488 = { add_core_of = ROOT }
+			}
+			
+			IF =  {
+				limit = {
+					NOT = {
+						1139 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				1139 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						486 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				486 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						1137 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				1137 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						306 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				306 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						1136 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				1136 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						1135 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				1135 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						493 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				493 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						1134 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				1134 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						1130 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				1130 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						304 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				304 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						1131 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				1131 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						316 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				316 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						317 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				317 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						1132 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				1132 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						312 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				312 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						313 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				313 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						314 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				314 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						1133 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				1133 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						685 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				685 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						311 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				311 = { add_core_of = ROOT }
+			}
+
+			IF =  {
+				limit = {
+					NOT = {
+						474 = {
+							is_core_of = ROOT
+						}
+					}
+				}
+				474 = { add_core_of = ROOT }
+			}
+
+			hidden_effect = {
+				set_global_flag = greater_caribbean_formed_flag
+			}
+		}
+	}
+}
