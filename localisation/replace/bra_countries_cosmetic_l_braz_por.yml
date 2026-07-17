@@ -1,0 +1,64 @@
+﻿l_braz_por:
+ BRA_IDB_fascism: "Império do Brasil"
+ BRA_IDB_fascism_ADJ: "Brasileiro"
+ BRA_IDB_fascism_DEF: "O Império do Brasil"
+ BRA_IDB_neutrality: "Império do Brasil"
+ BRA_IDB_neutrality_ADJ: "Brasileiro"
+ BRA_IDB_neutrality_DEF: "O Império do Brasil"
+ BRA_IDB_democratic: "Império do Brasil"
+ BRA_IDB_democratic_ADJ: "Brasileiro"
+ BRA_IDB_democratic_DEF: "O Império do Brasil"
+ BRA_IDB_communism: "Império do Brasil"
+ BRA_IDB_communism_ADJ: "Brasileiro"
+ BRA_IDB_communism_DEF: "O Império do Brasil"
+ 
+ PAR_BRA_autonomy_integrated_puppet: "Estado do Mato Grosso Oriental"
+ PAR_BRA_autonomy_puppet: "Estado do Mato Grosso Oriental"
+ PAR_BRA_autonomy_colony: "Território Federal do Mato Grosso Oriental"
+ PAR_BRA_autonomy_dominion: "República Federal do Paraguai"
+ 
+ URG_BRA_autonomy_integrated_puppet: "Estado da Cisplatina"
+ URG_BRA_autonomy_puppet: "Estado da Cisplatina"
+ URG_BRA_autonomy_colony: "Território Federal da Cisplatina"
+ URG_BRA_autonomy_dominion: "República Federal do Uruguai"
+ 
+ BOL_BRA_autonomy_integrated_puppet: "Estado dos Paranhos"
+ BOL_BRA_autonomy_puppet: "Estado dos Paranhos"
+ BOL_BRA_autonomy_colony: "Território Federal dos Paranhos"
+ BOL_BRA_autonomy_dominion: "República Federal da Bolívia"
+ 
+ ARG_BRA_autonomy_integrated_puppet: "Estados Platinos"
+ ARG_BRA_autonomy_puppet: "Estados Platinos"
+ ARG_BRA_autonomy_colony: "Territórios Federais da Argentina "
+ ARG_BRA_autonomy_dominion: "Repúblicas Federais da Argentina"
+ 
+ VEN_BRA_autonomy_integrated_puppet: "Estados Caribenhos"
+ VEN_BRA_autonomy_puppet: "Estados Caribenhos"
+ VEN_BRA_autonomy_colony: "Territórios Federaos do Caribe"
+ VEN_BRA_autonomy_dominion: "Repúblicas Federais do Caribe"
+ 
+ PAR_BRA_autonomy_reichskommissariat: "Estado do Mato Grosso Oriental"
+ PAR_BRA_autonomy_reichsprotectorate: "Estado do Mato Grosso Oriental"
+ PAR_BRA_autonomy_satellite: "Território Federal do Mato Grosso Oriental"
+ PAR_BRA_autonomy_dominion: "República Federal do Paraguai"
+ 
+ URG_BRA_autonomy_reichskommissariat: "Estado da Cisplatina"
+ URG_BRA_autonomy_reichsprotectorate: "Estado da Cisplatina"
+ URG_BRA_autonomy_satellite: "Território Federal da Cisplatina"
+ URG_BRA_autonomy_dominion: "República Federal do Uruguai"
+ 
+ BOL_BRA_autonomy_reichskommissariat: "Estado dos Paranhos"
+ BOL_BRA_autonomy_reichsprotectorate: "Estado dos Paranhos"
+ BOL_BRA_autonomy_satellite: "Território Federal dos Paranhos"
+ BOL_BRA_autonomy_dominion: "República Federal da Bolívia"
+ 
+ ARG_BRA_autonomy_reichskommissariat: "Estados Platinos"
+ ARG_BRA_autonomy_reichsprotectorate: "Estados Platinos"
+ ARG_BRA_autonomy_satellite: "Territórios Federais da Argentina "
+ ARG_BRA_autonomy_dominion: "Repúblicas Federais da Argentina"
+ 
+ VEN_BRA_autonomy_reichskommissariat: "Estados Caribenhos"
+ VEN_BRA_autonomy_reichsprotectorate: "Estados Caribenhos"
+ VEN_BRA_autonomy_satellite: "Territórios Federais do Caribe"
+ VEN_BRA_autonomy_dominion: "Repúblicas Federais do Caribe"
+ 

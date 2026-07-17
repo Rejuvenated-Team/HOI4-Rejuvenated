@@ -1,0 +1,67 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_bra.1"
+		texturefile = "gfx/event_pictures/bra.1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bra.2"
+		texturefile = "gfx/event_pictures/bra.2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_bra.4"
+		texturefile = "gfx/event_pictures/bra.4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bra.5"
+		texturefile = "gfx/event_pictures/bra.5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_bra.13"
+		texturefile = "gfx/event_pictures/bra.13.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bra.14"
+		texturefile = "gfx/event_pictures/bra.14.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bra.15"
+		texturefile = "gfx/event_pictures/bra.15.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bra.16"
+		texturefile = "gfx/event_pictures/bra.16.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bra.17"
+		texturefile = "gfx/event_pictures/bra.17.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bra.18"
+		texturefile = "gfx/event_pictures/bra.18.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bra.19"
+		texturefile = "gfx/event_pictures/bra.19.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bra.20"
+		texturefile = "gfx/event_pictures/bra.20.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bra.22"
+		texturefile = "gfx/event_pictures/bra.22.dds"
+	}
+}

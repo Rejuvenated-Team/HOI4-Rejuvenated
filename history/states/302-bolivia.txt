@@ -1,0 +1,30 @@
+state = {
+	id = 302
+	name = "STATE_302"
+	manpower = 1283500
+	
+	state_category = city
+
+	history = {
+
+		owner = BOL
+		add_core_of = BOL
+
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 2
+			air_base = 2
+		}
+		
+		victory_points = {
+			5230 12 
+		}
+
+	}
+
+	provinces = { 5230 8157 8225 13134 13174 13195 5188 }
+	
+	buildings_max_level_factor = 1.000
+	local_supplies = 4.0 
+}

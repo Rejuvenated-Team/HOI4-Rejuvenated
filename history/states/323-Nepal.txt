@@ -1,0 +1,26 @@
+state={
+	id=323
+	name="STATE_323"
+	manpower = 4097791
+	
+	state_category = large_town
+	history={
+		owner = NEP
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 2
+			4987 = {
+				dam_mountain = 1 #Pharping Hydropower Station
+			} 
+		}
+		victory_points = {
+			4987 3 
+		}
+		add_core_of = NEP
+	}
+
+	provinces={	4987 12892 5310 }
+
+	local_supplies=3.0 
+}

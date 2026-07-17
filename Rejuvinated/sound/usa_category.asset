@@ -1,6 +1,0 @@
-category = {
-    name = "US Sound Effects"
-    soundeffects = {
-        fdr_ph_speech
-    }
-}

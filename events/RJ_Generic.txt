@@ -1,0 +1,67 @@
+﻿###########################
+# Generic Events
+###########################
+
+add_namespace = rj_generic
+
+# Facility Construction
+country_event = {
+	id = rj_generic.1
+	title = rj_generic.1.t
+	desc = rj_generic.1.d
+	picture = GFX_report_event_ast_parliament_house
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A Land Facility!"
+		ai_chance = {
+			base = 1
+		}
+		random_owned_controlled_state = {
+			construct_building_in_random_province = {
+				land_facility = 1
+			}
+		}
+	}
+
+	option = {
+		name = "A Naval Facility!"
+		ai_chance = {
+			base = 1
+		}
+		random_owned_controlled_state = {
+			construct_building_in_random_province = {
+				naval_facility = 1
+			}
+		}
+	}
+
+	option = {
+		name = "An Air Facility!"
+		ai_chance = {
+			base = 1
+		}
+		random_owned_controlled_state = {
+			construct_building_in_random_province = {
+				air_facility = 1
+			}
+		}
+	}
+
+	option = {
+		name = "A Nuclear Facility!"
+		ai_chance = {
+			base = 0
+			modifier = {
+				has_tech = atomic_research
+				add = 2
+			}
+		}
+		random_owned_controlled_state = {
+			construct_building_in_random_province = {
+				nuclear_facility = 1
+			}
+		}
+	}
+}
