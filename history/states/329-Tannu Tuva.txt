@@ -1,0 +1,28 @@
+state={
+	id=329
+	name="STATE_329"
+	manpower = 57000
+	resources={
+		coal = 3
+	}
+	
+	state_category = rural
+
+	history={
+		owner = TAN
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			10627 3
+		}
+		add_core_of = TAN
+		add_core_of = SOV
+	}
+
+	provinces={	1676 10627 1877 10597 }
+
+	local_supplies=1.0 
+}

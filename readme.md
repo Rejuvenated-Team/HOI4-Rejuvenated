@@ -58,3 +58,21 @@ If you'd like to either contribute to this project or you're simply interested i
 - VF's Brazil
 - [Kaiserreich 4](https://steamcommunity.com/sharedfiles/filedetails/?id=1521695605)
 - [China National Focus](https://steamcommunity.com/sharedfiles/filedetails/?id=715497831)
+- [Overwhelming Division Icons!](https://steamcommunity.com/sharedfiles/filedetails/?id=2905970690)
+- [The Agency](https://steamcommunity.com/workshop/filedetails/?id=2387530567)
+- [Portugal Reworked++](https://steamcommunity.com/sharedfiles/filedetails/?id=1568444273)
+- [France Completed](https://steamcommunity.com/sharedfiles/filedetails/?id=2273181015)
+- [France Total Rework](https://steamcommunity.com/sharedfiles/filedetails/?id=843048390)
+- [Democratic Russia](https://steamcommunity.com/sharedfiles/filedetails/?id=3453965141)
+- [Zeru](https://discord.gg/3HRTbpnP2C)
+- [Millennium Dawn](https://steamcommunity.com/sharedfiles/filedetails/?id=2777392649)
+
+# HOW TO SETUP THE GITHUB INSTALATION
+## STEP 1
+Clone the GitHub repository into "C:\Users\%username%\Documents\Paradox Interactive\Hearts of Iron IV\mod\HOI4-Rejuvenated" directory on Windows. For Linux Ubuntu users (Ubuntu, Mint, Debian), this directory is "/home/%username%/.local/share/Paradox Interactive/Hearts of Iron IV/mod/HOI4-Rejuvenated".
+## STEP 2
+Copy the "HOI4-Rejuvenated.mod" file found in the .extras folder in the mod into the "C:\Users\%username%\Documents\Paradox Interactive\Hearts of Iron IV\mod" directory on Windows. For Linux Ubuntu users (Ubuntu, Mint, Debian), this directory is "/home/%username%/.local/share/Paradox Interactive/Hearts of Iron IV/mod".
+## STEP 3
+Go to the launcher and click "Mod library". In there click at the reload button in top right, tick "Also clear out cached information and update from server" and click reload.
+## STEP 4
+Add the mod to your playset and Play!
