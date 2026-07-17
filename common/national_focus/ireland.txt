@@ -1468,8 +1468,7 @@ focus_tree = {
 		id = IRE_strict_neutrality
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = IRE_take_stance }
-		mutually_exclusive = { focus = IRE_join_allies }
-		mutually_exclusive = { focus = IRE_join_axis }
+		mutually_exclusive = { focus = IRE_join_allies focus = IRE_join_axis focus = IRE_join_comintern }
 		x = 0
 		y = 2
 		relative_position_id = IRE_take_stance
@@ -1511,8 +1510,7 @@ focus_tree = {
 		id = IRE_join_allies
 		icon = GFX_goal_support_democracy
 		prerequisite = { focus = IRE_plan_w }
-		mutually_exclusive = { focus = IRE_strict_neutrality }
-		mutually_exclusive = { focus = IRE_join_axis }
+		mutually_exclusive = { focus = IRE_strict_neutrality focus = IRE_join_axis focus = IRE_join_comintern }
 		x = 0
 		y = 1
 		relative_position_id = IRE_plan_w
@@ -2175,9 +2173,7 @@ focus_tree = {
 		id = IRE_join_axis
 		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = IRE_northern_campaign  focus = IRE_s_plan }
-		mutually_exclusive = { focus = IRE_strict_neutrality}
-		mutually_exclusive = { focus = IRE_join_allies}
-		mutually_exclusive = { focus = IRE_join_comintern}
+		mutually_exclusive = { focus = IRE_strict_neutrality focus = IRE_join_allies focus = IRE_join_comintern }
 		x = 0
 		y = 1
 		relative_position_id = IRE_northern_campaign
@@ -2218,7 +2214,7 @@ focus_tree = {
 		id = IRE_join_comintern
 		icon = GFX_goal_support_communism
 		prerequisite = { focus = IRE_northern_campaign focus = IRE_s_plan }
-		mutually_exclusive = { focus = IRE_join_axis }
+		mutually_exclusive = { focus = IRE_join_allies focus = IRE_strict_neutrality focus = IRE_join_axis }
 		x = 0
 		y = 1
 		relative_position_id = IRE_s_plan
