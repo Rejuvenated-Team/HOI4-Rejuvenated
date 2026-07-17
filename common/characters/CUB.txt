@@ -136,7 +136,8 @@ characters={
 		name="Blas Roca Calderio"
 		portraits={
 			civilian={
-				large = "gfx/leaders/CUB/Blas_Roca_Calderio.dds"
+				large = GFX_rj_portrait_CUB_blas_roca_calderio
+				small = GFX_rj_portrait_CUB_blas_roca_calderio_small
 			}
 		}
 		country_leader={
