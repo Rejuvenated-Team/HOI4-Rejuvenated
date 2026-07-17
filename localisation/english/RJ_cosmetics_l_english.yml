@@ -1,0 +1,25 @@
+﻿l_english:
+ greater_caribbean_neutrality: "Greater Caribbean State"
+ greater_caribbean_neutrality_DEF: "the Greater Caribbean State"
+ greater_caribbean_neutrality_ADJ: "Caribbean"
+ greater_caribbean_fascism: "Caribbean Empire"
+ greater_caribbean_fascism_DEF: "the Caribbean Empire"
+ greater_caribbean_fascism_ADJ: "Caribbean"
+ greater_caribbean_democratic: "United States of the Caribbean"
+ greater_caribbean_democratic_DEF: "the United States of the Caribbean"
+ greater_caribbean_democratic_ADJ: "Caribbean"
+ greater_caribbean_communism: "Oceanic Union of the Caribbean"
+ greater_caribbean_communism_DEF: "the Oceanic Union of the Caribbean"
+ greater_caribbean_communism_ADJ: "Caribbean"
+
+ SOV_russian_tsardom_democratic: "Tsardom of Russia"
+ SOV_russian_tsardom_democratic_DEF: "the Tsardom of Russia"
+ SOV_russian_tsardom_democratic_ADJ: "Russian"
+
+ SOV_UNION_SOVEREIGN_STATES: "Union of Sovereign Republics"
+ SOV_UNION_SOVEREIGN_STATES_DEF: "the Union of Sovereign Republics"
+ SOV_UNION_SOVEREIGN_STATES_ADJ: "Eurasian"
+
+ SOV_GREATER_RUSSIAN_EMPIRE: "Greater Russian Empire"
+ SOV_GREATER_RUSSIAN_EMPIRE_DEF: "the Greater Russian Empire"
+ SOV_GREATER_RUSSIAN_EMPIRE_ADJ: "Greater Russian"

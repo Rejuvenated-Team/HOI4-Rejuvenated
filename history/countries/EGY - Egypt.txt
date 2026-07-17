@@ -1,0 +1,69 @@
+﻿capital = 907
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+IF = {
+	limit = {
+		has_dlc = "Battle for the Bosporus"
+	}
+	set_technology = { camelry = 1 }
+}
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+
+set_convoys = 20
+
+#set_cosmetic_tag = EGY_brit_puppet
+
+add_ideas = {
+	#EGY_republican_opposition
+	rj_generic_illiteracy_2
+	#censored_press
+}
+
+country_event = { # Ahmed Fuad I dead
+	id = egypt.1
+	days = 118
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 25
+	fascism = 20
+	communism = 5
+	neutrality = 50
+}
+
+#recruit_character = EGY_muhammad_naguib
+recruit_character = EGY_ahmed_hussein
+recruit_character = EGY_fuad_i
+recruit_character = EGY_farouk_i
+recruit_character = EGY_mohamed_tawfik_naseem
+#recruit_character = EGY_mostafa_el_nahas
+#recruit_character = EGY_mohamed_mahmoud
+#recruit_character = EGY_aly_maher_pasha
+recruit_character = EGY_hosni_al_arabi
+#recruit_character = EGY_gamal_abdel_nasser
+#recruit_character = EGY_abdel_hakim_amer
+#recruit_character = EGY_abdul_munim_riad
+#recruit_character = EGY_ahmad_smail_ali
+#recruit_character = EGY_ahmed_ali_al_mwawi
+#recruit_character = EGY_hussein_el_shafei
+#recruit_character = EGY_aziz_ezzat

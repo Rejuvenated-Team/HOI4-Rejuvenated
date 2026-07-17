@@ -1,0 +1,25 @@
+state = {
+	id = 767
+	name = "STATE_767" # North Darfur
+	manpower = 8143
+	
+	state_category = wasteland
+	impassable = yes
+	force_link_ownership_to = 1118 # Darfur passage
+	
+	history = {
+
+		owner = EGY
+		add_core_of = SUD
+		
+		buildings = {
+			infrastructure = 0
+		}
+	}
+
+	provinces = {
+		8103 10900
+	}
+
+	local_supplies = 0.0 
+}

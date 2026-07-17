@@ -1,0 +1,111 @@
+﻿###########################
+# Generic Events
+###########################
+
+add_namespace = rj_generic
+
+# Facility Construction
+country_event = {
+	id = rj_generic.1
+	title = rj_generic.1.t
+	desc = rj_generic.1.d
+	picture = GFX_report_event_ast_parliament_house
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A Land Facility!"
+		ai_chance = {
+			base = 1
+		}
+		random_owned_controlled_state = {
+			construct_building_in_random_province = {
+				land_facility = 1
+			}
+		}
+	}
+
+	option = {
+		name = "A Naval Facility!"
+		ai_chance = {
+			base = 1
+		}
+		random_owned_controlled_state = {
+			construct_building_in_random_province = {
+				naval_facility = 1
+			}
+		}
+	}
+
+	option = {
+		name = "An Air Facility!"
+		ai_chance = {
+			base = 1
+		}
+		random_owned_controlled_state = {
+			construct_building_in_random_province = {
+				air_facility = 1
+			}
+		}
+	}
+
+	option = {
+		name = "A Nuclear Facility!"
+		ai_chance = {
+			base = 0
+			modifier = {
+				has_tech = atomic_research
+				add = 2
+			}
+		}
+		random_owned_controlled_state = {
+			construct_building_in_random_province = {
+				nuclear_facility = 1
+			}
+		}
+	}
+}
+
+add_namespace = exptd
+
+# Anti-Magnetic Mine Defense
+country_event = {
+	id = exptd.1
+	title = exptd.1.t
+	desc = exptd.1.d
+	picture = GFX_report_event_german_reichstag_gathering
+	
+	fire_only_once = yes
+	
+	trigger = {
+		always = no #TODO: Remove when adding the hashed techs below thx
+		tag = GER
+		#has_tech = turret_tank_tech_1
+	}
+
+	option = { 
+		name = exptd.1.a
+		#set_technology = { special_zimmerit = 1 }
+	}
+}
+
+# Anti-Magnetic Mine Defense
+country_event = {
+	id = exptd.2
+	title = exptd.2.t
+	desc = exptd.2.d
+	picture = GFX_report_event_german_reichstag_gathering
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 2920 }
+	trigger = {
+		always = no #TODO: Remove when adding the hashed tech below thx
+		tag = GER
+	}
+
+	option = { 
+		name = exptd.2.a
+		#set_technology = { special_schmalturm = 1 }
+	}
+}
