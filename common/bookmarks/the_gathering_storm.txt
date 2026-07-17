@@ -269,7 +269,7 @@ bookmarks = {
 			minor = yes
 			history = ICE_GATHERING_STORM_DESC
 			ideology = democratic
-			new_content = yes
+			version = base_game
 			ideas = {
 				ICE_christian_x
 				ICE_the_icelandic_economy_modifier_fake_idea
@@ -278,6 +278,7 @@ bookmarks = {
 				ICE_the_kingdom_of_iceland
 				ICE_republicanism
 			}
+			label = { rj_label_new_content }
 		}
 
 		EGY = {
