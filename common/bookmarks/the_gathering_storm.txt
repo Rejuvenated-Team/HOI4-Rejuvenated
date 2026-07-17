@@ -7,7 +7,7 @@ bookmarks = {
 		default_country = "POR"
 		default = yes
 
-		filters = { new_content continent }
+		filters = { rj_label_new_content continent } #new_content
 		# filters can also contain 'label'
 		# in that case the countries below can have 'label = { label_1 }' or 'label = { label_1 label_2 }'
 		# all these labels will be gathered and displayed as filter buttons
@@ -19,6 +19,8 @@ bookmarks = {
 		# label_order = { label_1 label_2 }   # optional: forces the label filter button order; a warning is logged for
 		#                                     # any label used by a country that is missing from this list
 		# scrollable_country_list = yes       # defaults to no: scroll the minor list with its vertical scrollbar instead of the overflow dropdown
+
+		scrollable_country_list = yes
 
 		"FRA"={
 			history = "FRA_GATHERING_STORM_DESC"
@@ -232,7 +234,6 @@ bookmarks = {
 			history = "rj_CUB_GATHERING_STORM_DESC"
 			ideology = democratic
 			version = base_game
-			label = { new_content }
 			ideas = {
 				CUB_batistas_influence
 				CUB_recovering_sugar_industry
@@ -243,6 +244,7 @@ bookmarks = {
 				CUB_deal_with_the_mafia
 				CUB_caribbean_dominance
 			}
+			label = { rj_label_new_content }
 		}
 
 		BRA = {
@@ -250,7 +252,6 @@ bookmarks = {
 			history = "rj_BRA_GATHERING_STORM_DESC"
 			ideology = neutrality
 			version = base_game
-			label = { new_content }
 			ideas = {
 				bra_bandeirantes
 				bra_1930
@@ -261,6 +262,7 @@ bookmarks = {
 				bra_monarquia_2_focus
 				bra_a_voz_do_brasil
 			}
+			label = { rj_label_new_content }
 		}
 
 		POR = {
@@ -295,6 +297,7 @@ bookmarks = {
 				#EGY_
 				#EGY_
 			}
+			label = { rj_label_new_content }
 		}
 
 		effect = {

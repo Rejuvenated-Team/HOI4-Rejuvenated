@@ -37,6 +37,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
 	}
 
+	##################
+	### CUB - Cuba ###
+	##################
+
+	spriteType = {
+		name = "GFX_rj_portrait_CUB_blas_roca_calderio_small"
+		#texturefile = "gfx/interface/ideas/cub/advisors/rj_advisor_CUB_blas_roca_calderio.dds"
+		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
+	}
+
 	############################
 	### ENG - United Kingdom ###
 	############################
