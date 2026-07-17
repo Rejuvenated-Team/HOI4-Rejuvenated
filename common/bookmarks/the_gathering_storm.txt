@@ -270,7 +270,6 @@ bookmarks = {
 			history = "rj_IRE_GATHERING_STORM_DESC"
 			ideology = democratic
 			version = base_game
-			label = { new_content }
 			ideas = {
 				IRE_trade_war
 				IRE_autonomous_dominion
@@ -281,6 +280,7 @@ bookmarks = {
 				IRE_confirm_ties_to_commonwealth
 				IRE_legacy_of_revolution
 			}
+			label = { rj_label_new_content }
 		}
 
 		EGY = {
