@@ -110,5 +110,3 @@ jobs:
         run: ruff check tools --output-format=github
       - name: Check formatting (ruff format)
         run: ruff format --check tools
-
-# Courtesy of Millennium Dawn Team

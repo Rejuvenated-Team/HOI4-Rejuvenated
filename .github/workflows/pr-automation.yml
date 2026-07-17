@@ -40,5 +40,3 @@ jobs:
         with:
           issue-number: ${{ github.event.pull_request.number }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
-
-# Courtesy of Millennium Dawn Team

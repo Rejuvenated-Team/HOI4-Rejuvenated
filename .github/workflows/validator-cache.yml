@@ -114,5 +114,3 @@ jobs:
             exit 1
           fi
           echo "Cache entry ${EXPECTED_KEY} confirmed"
-
-# Courtesy of Millennium Dawn Team

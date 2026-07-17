@@ -33,5 +33,3 @@ jobs:
                   && echo "deleted cache ${id}" \
                   || echo "cache ${id} already gone"
               done
-
-# Courtesy of Millennium Dawn Team

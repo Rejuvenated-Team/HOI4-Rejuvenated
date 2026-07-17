@@ -611,5 +611,3 @@ jobs:
           name: validation-report
           path: report.md
           retention-days: 30
-
-# Courtesy of Millennium Dawn Team
