@@ -156,15 +156,6 @@ on_actions = {
 				drop_cosmetic_tag = yes # we are done here
 				set_country_flag = democratic_usa_won_civil_war
 			}
-			#End of British Communist Civil War
-			if = {
-				limit = {
-					original_tag = ENG
-					has_government = democratic
-					has_completed_focus = ENG_concessions_to_the_trade_unions
-				}
-				country_event = { id = mtg_britain.56 }
-			}
 			#End of Imperialist Loyalist civil war
 			if = {
 				limit = {
