@@ -8,9 +8,6 @@ state={
 	history={
 		owner = EGY
 		add_core_of = SUD
-		victory_points = {
-			12099 1
-		}
 	}
 	
 	provinces={
