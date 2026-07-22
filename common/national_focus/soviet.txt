@@ -13,6 +13,7 @@
 # Reminder that focus filters prio has to be handled in the generic focus file :)
 
 #!gfx:interface/RJ_goals.gfx
+#!gfx:interface/KR_goals.gfx
 focus_tree = {
 	id = soviet_focus
 
@@ -52,7 +53,7 @@ focus_tree = {
 	focus = {
 		id = SOV_infrastructure_effort_nsb
 
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_road_investment
 		x = 1
 		y = 0
 		cost = 5
@@ -176,7 +177,7 @@ focus_tree = {
 	focus = {
 		id = SOV_heavy_industry
 
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_generic_heavy_industry
 		x = 2
 		y = 0
 		relative_position_id = SOV_infrastructure_effort_nsb
@@ -393,7 +394,7 @@ focus_tree = {
 	focus = {
 		id = SOV_improve_railway_network
 
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_goal_generic_railway_construction
 		prerequisite = { focus = SOV_finish_the_five_year_plan }
 		x = -2
 		y = 1
@@ -483,17 +484,16 @@ focus_tree = {
 				add_to_variable = { SOV_fyp_production_factory_efficiency_gain_factor = 0.05 }
 				add_to_variable = { SOV_fyp_consumer_goods_factor = 0.10 }
 			}
+			hidden_effect = {
+				#Swap dynamic modifier to change icon
+				remove_dynamic_modifier = { modifier = SOV_second_five_year_plan_dynamic_modifier }
+				add_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier }
+			}
+			custom_effect_tooltip = SOV_third_five_year_plan_ns_tt
 			if = {
 				limit = {
 					has_government = communism
 				}
-				hidden_effect = {
-					#Swap dynamic modifier to change icon
-					remove_dynamic_modifier = { modifier = SOV_second_five_year_plan_dynamic_modifier }
-					add_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier }
-				}
-				custom_effect_tooltip = SOV_third_five_year_plan_ns_tt
-
 				add_tech_bonus = {
 					name = SOV_third_five_year_plan_default
 					bonus = 0.75
@@ -502,13 +502,6 @@ focus_tree = {
 				}
 			}
 			else = {
-				custom_effect_tooltip = SOV_third_five_year_plan_ns_alt_tt
-				hidden_effect = {
-					#Swap dynamic modifier to change icon
-					remove_dynamic_modifier = { modifier = SOV_second_five_year_plan_dynamic_modifier }
-					add_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier_alt }
-				}
-
 				add_tech_bonus = {
 					name = SOV_third_five_year_plan_alt
 					bonus = 0.75
@@ -547,16 +540,16 @@ focus_tree = {
 				add_to_variable = { SOV_fyp_consumer_goods_factor = -0.05 }
 			}
 			custom_effect_tooltip = SOV_reorganize_the_pc_of_heavy_industry_ns_tt
+			hidden_effect = {
+				#Swap dynamic modifier to change icon
+				remove_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier }
+				add_dynamic_modifier = { modifier = SOV_third_five_year_plan_civilian_dynamic_modifier }
+			}
+
 			if = {
 				limit = {
 					has_government = communism
 				}
-				hidden_effect = {
-					#Swap dynamic modifier to change icon
-					remove_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier }
-					add_dynamic_modifier = { modifier = SOV_third_five_year_plan_civilian_dynamic_modifier }
-				}
-
 				add_tech_bonus = {
 					name = SOV_reorganize_the_pc_of_heavy_industry_name_default
 					bonus = 1.0
@@ -566,12 +559,6 @@ focus_tree = {
 				}
 			}
 			else = {
-				hidden_effect = {
-					#Swap dynamic modifier to change icon
-					remove_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier_alt}
-					add_dynamic_modifier = { modifier = SOV_third_five_year_plan_civilian_dynamic_modifier_alt }
-				}
-
 				add_tech_bonus = {
 					name = SOV_reorganize_the_pc_of_heavy_industry_name_alt
 					bonus = 1.0
@@ -740,22 +727,10 @@ focus_tree = {
 			hidden_effect = {
 				set_variable = { SOV_fyp_production_speed_industrial_complex_factor = 0 } #Remove Civ constr speed
 			}
-			if = {
-				limit = {
-					has_government = communism
-				}
-				hidden_effect = {
-					#Swap dynamic modifier to change icon
-					remove_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier }
-					add_dynamic_modifier = { modifier = SOV_third_five_year_plan_military_dynamic_modifier }
-				}
-			}
-			else = {
-				hidden_effect = {
-					#Swap dynamic modifier to change icon
-					remove_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier_alt }
-					add_dynamic_modifier = { modifier = SOV_third_five_year_plan_military_dynamic_modifier_alt }
-				}
+			hidden_effect = {
+				#Swap dynamic modifier to change icon
+				remove_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier }
+				add_dynamic_modifier = { modifier = SOV_third_five_year_plan_military_dynamic_modifier }
 			}
 			custom_effect_tooltip = SOV_shift_to_armaments_production_ns_tt
 
@@ -1144,28 +1119,6 @@ focus_tree = {
 					}
 					add_dynamic_modifier = { modifier = SOV_fourth_five_year_plan_dynamic_modifier }
 				}
-				else = {
-					#Swap dynamic modifier to change icon
-					if = {
-						limit = {
-							has_dynamic_modifier = { modifier = SOV_third_five_year_plan_civilian_dynamic_modifier_alt }
-						}
-						remove_dynamic_modifier = { modifier = SOV_third_five_year_plan_civilian_dynamic_modifier_alt }
-					}
-					else_if = {
-						limit = {
-							has_dynamic_modifier = { modifier = SOV_third_five_year_plan_military_dynamic_modifier_alt }
-						}
-						remove_dynamic_modifier = { modifier = SOV_third_five_year_plan_military_dynamic_modifier_alt }
-					}
-					else_if = {
-						limit = {
-							has_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier_alt }
-						}
-						remove_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier_alt }
-					}
-					add_dynamic_modifier = { modifier = SOV_fourth_five_year_plan_dynamic_modifier_alt }
-				}
 			}
 			custom_effect_tooltip = SOV_fourth_five_year_plan_ns_tt
 		}
@@ -1463,7 +1416,7 @@ focus_tree = {
 	focus = {
 		id = SOV_eastern_development
 
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_RUS_siberia_industry
 		prerequisite = { focus = SOV_national_specialists focus = SOV_foreign_experts }
 		x = 0
 		y = 1
@@ -1656,7 +1609,7 @@ focus_tree = {
 	focus = {
 		id = SOV_develop_the_urals
 
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_RUS_urals_industry
 		prerequisite = { focus = SOV_national_specialists focus = SOV_foreign_experts }
 		x = 2
 		y = 0
@@ -2113,7 +2066,7 @@ focus_tree = {
 	focus = {
 		id = SOV_expand_the_aircraft_industry
 
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_focus_PRC_establish_domestic_aircraft_production
 		prerequisite = { focus = SOV_transpolar_flights }
 		x = -1
 		y = 1
@@ -7718,7 +7671,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_war_economy
-		icon = GFX_goal_generic_trade
+		icon = GFX_goal_FRA_common_economic_plan
 		prerequisite = { focus = SOV_organization_centralization_discipline }
 		x = 0
 		y = 1

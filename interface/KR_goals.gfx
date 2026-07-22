@@ -1,0 +1,28 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_goal_RUS_siberia_industry"
+		texturefile = "gfx/interface/goals/kr/RUS_siberia_industry.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_RUS_urals_industry"
+		texturefile = "gfx/interface/goals/kr/RUS_urals_industry.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_FRA_common_economic_plan"
+		texturefile = "gfx/interface/goals/kr/FRA_common_economic_plan.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_generic_heavy_industry"
+		texturefile = "gfx/interface/goals/kr/generic_heavy_industry.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_generic_railway_construction"
+		texturefile = "gfx/interface/goals/kr/generic_railway_construction.dds"
+	}
+
+}
