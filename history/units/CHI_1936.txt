@@ -72,7 +72,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 4
 		}
-		location = 4925
+		location = 1010
 		division_template = "Qibing Jun"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.8
@@ -95,7 +95,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 402
 		}
-		location = 7256
+		location = 4295
 		division_template = "Sanjiao Jun"		# Reorganized German-trained division (frontline infantry, better equipment and highest experience)
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -106,7 +106,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 425
 		}
-		location = 7256
+		location = 4295
 		division_template = "Sanjiao Jun"		# Reorganized German-trained division (frontline infantry, better equipment and highest experience)
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -118,7 +118,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 427
 		}
-		location = 2091
+		location = 4167
 		division_template = "Sanjiao Jun"		# Reorganized German-trained division (frontline infantry, better equipment and highest experience)
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
@@ -134,7 +134,7 @@ units = {
 	## 14th Army ##
 	division = {
 		name = "14 Lujun Shi"
-		location = 10144
+		location = 7418
 		division_template = "Sanjiao Jun"
 		start_equipment_factor = 0.7
 		start_experience_factor = 0.1
@@ -314,7 +314,7 @@ units = {
 	}
 	division = {
 		name = "8 Lujun Shi"
-		location = 4925
+		location = 1010
 		division_template = "Juntuán"
 		start_equipment_factor = 0.8
 		start_experience_factor = 0.1
