@@ -2,6 +2,8 @@ state = {
 	id = 1037
 	name = "STATE_1037"
 	resources = {
+		coal = 15
+		aluminium = 5
 	}
 
 	history = {
@@ -26,16 +28,6 @@ state = {
 			11972 1 # Yibin
 		}
 
-		1936.1.1 = {
-			IF = {
-				limit = {
-					has_dlc = "No Compromise, No Surrender"
-				}
-				transfer_state_to = SIC
-				add_core_of = SIC
-			}
-		}
-
 		1938.10.25 = {	
 			IF = {
 				limit = {
@@ -47,15 +39,6 @@ state = {
 			controller = CHI
 		}
 
-		1939.1.1 = {
-			buildings = {
-				industrial_complex = 3
-				infrastructure = 3
-				air_base = 3
-				arms_factory = 1
-			}
-		}
-
 	}
 
 	provinces = {
@@ -65,5 +48,5 @@ state = {
 	buildings_max_level_factor = 1.000
 	state_category = city
 
-	local_supplies = 0.0 
+	local_supplies = 10.0 
 }
