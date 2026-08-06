@@ -2,7 +2,7 @@ state={
 	id=602
 	name="STATE_602"
 	resources={
-		tungsten=27.000
+		tungsten=37.000
 	}
 
 	history={
