@@ -1711,6 +1711,7 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
+					increase_state_category = yes
 				}
 				add_to_temp_variable = { SOV_states_targeted_eastern_development = 1 }
 			}
@@ -1740,6 +1741,7 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
+				increase_state_category = yes
 			}
 
 			if = {
@@ -1766,6 +1768,7 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
+					increase_state_category = yes
 				}
 				add_to_temp_variable = { SOV_states_targeted_eastern_development = 1 }
 			}
@@ -1794,6 +1797,7 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
+					increase_state_category = yes
 				}
 			}
 		}
