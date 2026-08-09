@@ -255,7 +255,6 @@ POR_neutrality_monarchist_plan = {
 		POR_merchant_marine_protection
 		POR_standardization
 		POR_submarine_effort
-		POR_elastic_defense
 		POR_colonial_army
 
 		#1943
