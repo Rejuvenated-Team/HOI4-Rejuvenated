@@ -6942,16 +6942,73 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SOV_adjoined_battle_priests
+		icon = GFX_focus_GRE_an_orthodox_state
+		prerequisite = { focus = SOV_military_reorganization }
+		prerequisite = { focus = SOV_lessons_of_war }
+		x = 1
+		y = 1
+		relative_position_id = SOV_military_reorganization
+		cost = 10
+
+		mutually_exclusive = { focus = SOV_swap_to_political_advisors }
+
+		allow_branch = {
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+
+		available = {
+			has_completed_focus = SOV_church_candidates
+		}
+
+		bypass = {
+			has_completed_focus = SOV_depoliticize_the_military
+			has_completed_focus = SOV_socialist_humanism
+		}
+		
+		search_filters = {}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = SOV_politicized_military
+				}
+				swap_ideas = {
+					remove_idea = SOV_politicized_military
+					add_idea = SOV_politicized_military_battle_priests
+				}
+			}
+			else_if = { #Just in case weird shit happens
+				limit = {
+					has_idea = SOV_politicized_military_humanism
+				}
+				swap_ideas = {
+					remove_idea = SOV_politicized_military_humanism
+					add_idea = SOV_politicized_military_battle_priests
+				}
+			}
+			else = {	
+				add_ideas = SOV_politicized_military_battle_priests
+			}
+		}
+	}
+
+	focus = {
 		id = SOV_swap_to_political_advisors
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = SOV_military_reorganization }
 		prerequisite = { focus = SOV_lessons_of_war }
+
 		x = 3
 		y = 1
 		relative_position_id = SOV_military_reorganization
 		cost = 10
 
 		mutually_exclusive = { focus = SOV_keep_commissars_organization }
+		mutually_exclusive = { focus = SOV_adjoined_battle_priests }
 
 		available = {
 
