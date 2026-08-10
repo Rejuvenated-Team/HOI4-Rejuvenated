@@ -320,7 +320,7 @@ focus_tree = {
 	focus = {
 		id = SOV_finish_the_five_year_plan
 
-		icon = GFX_focus_generic_industry_1
+		icon = GFX_focus_RJ_SOV_five_year_plan
 		prerequisite = { focus = SOV_infrastructure_effort_nsb }
 		prerequisite = { focus = SOV_heavy_industry }
 		x = 1
@@ -411,7 +411,7 @@ focus_tree = {
 	focus = {
 		id = SOV_improve_railway_network
 
-		icon = GFX_focus_RJ_industry2
+		icon = GFX_focus_RJ_SOV_expand_the_railway_network
 		prerequisite = { focus = SOV_finish_the_five_year_plan }
 		x = 1
 		y = 1
@@ -476,11 +476,153 @@ focus_tree = {
 	}
 
 	focus = {
+		id = RJ_SOV_continue_eastern_development
+
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = { focus = SOV_improve_railway_network }
+		prerequisite = { focus = SOV_eastern_development }
+		x = 1
+		y = 2
+		relative_position_id = SOV_improve_railway_network
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			# Khabarovsk - Nikolayev-on-Amur
+			build_railway = {
+				path = { 12189 7266 3963 12136 1343 7249 4841 7868 12559 }
+				level = 2
+			}
+
+			
+			409 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 7868
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_manpower = 30000
+			}
+
+			560 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_manpower = 85000
+				increase_state_category = yes
+			}
+
+			657 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_manpower = 25000
+				increase_state_category = yes
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_SOV_expand_the_eastern_railway
+
+		icon = GFX_focus_generic_railroad
+		prerequisite = { focus = RJ_SOV_continue_eastern_development }
+		x = -1
+		y = 1
+		relative_position_id = RJ_SOV_continue_eastern_development
+		cost = 7.2
+
+		ai_will_do = {
+			base = 3
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		available = {
+
+		}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			# Khabarovsk - Sovetskaya Gavan
+			build_railway = {
+				path = { 12189 7266 1397 9749 9589 9604 }
+			}
+
+			# Nikolayevsk-on-Amur - Albazino
+			build_railway = {
+				path = { 12559 4844 10577 7871 1724 1807 4847 4731 10678 7851 }
+			}
+
+			build_railway = {
+				path = { 1772 10598 4810 12518 12551 12683 1865 10540 4744 13063 }
+			}
+			
+			#Anadyr - Petropavlosk-Kamchatskiy
+			build_railway = {
+				path = { 13063 4744 1823 1863 7878 4728 }
+			}
+
+			560 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 1807
+					instant_build = yes
+				}
+			}
+
+			874 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 12683
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
 		id = SOV_third_five_year_plan
 
-		icon = GFX_focus_generic_industry_2
+		icon = GFX_focus_RJ_SOV_third_five_year_plan
 		prerequisite = { focus = SOV_finish_the_five_year_plan }
-		x = -3
+		x = -2
 		y = 1
 		relative_position_id = SOV_finish_the_five_year_plan
 		cost = 10
@@ -2231,7 +2373,7 @@ focus_tree = {
 	focus = {
 		id = SOV_found_the_jet_institute
 
-		icon = GFX_goal_generic_build_airforce
+		icon = GFX_focus_generic_jet_planes
 		prerequisite = { focus = SOV_the_ussr_academy_of_sciences }
 		prerequisite = { focus = SOV_merge_aircraft_plants }
 		x = 0

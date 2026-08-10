@@ -16,7 +16,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = SOV_second_five_year_plan
+			picture = RJ_idea_SOV_five_year_plan
 
 			allowed = {
 				always = no
@@ -35,7 +35,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = SOV_third_five_year_plan
+			picture = RJ_idea_SOV_five_year_plan
 
 			allowed = {
 				always = no

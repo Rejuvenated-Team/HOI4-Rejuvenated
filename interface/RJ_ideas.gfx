@@ -564,5 +564,20 @@ spriteTypes = {
 		name = "GFX_idea_RJ_idea_USA_mechanize_the_army"
 		texturefile = "gfx/interface/ideas/usa/RJ_idea_USA_mechanize_the_army.dds"
 	}
+
+
+
+
+	###############################################################################################
+	################ SOVIET IDEAS #################################################################
+	###############################################################################################
+
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_SOV_five_year_plan"
+		texturefile = "gfx/interface/ideas/sov/RJ_idea_SOV_five_year_plan.dds"
+	}
+
+
 	
 }
