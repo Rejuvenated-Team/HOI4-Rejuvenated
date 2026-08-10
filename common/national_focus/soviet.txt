@@ -491,7 +491,15 @@ focus_tree = {
 		}
 
 		available = {
-
+			409 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			560 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			657 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -572,7 +580,24 @@ focus_tree = {
 		}
 
 		available = {
-
+			560 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			562 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			874 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			822 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			637 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			409 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
