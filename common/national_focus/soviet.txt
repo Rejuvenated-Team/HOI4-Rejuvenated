@@ -5590,7 +5590,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_move_industry_to_the_urals
-		icon = GFX_focus_RJ_industry4
+		icon = GFX_goal_RUS_urals_industry
 		prerequisite = { focus = SOV_military_engineering_university }
 		x = -3
 		y = 1
