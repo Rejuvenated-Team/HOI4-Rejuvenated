@@ -574,5 +574,18 @@ spriteTypes = {
 		name = "GFX_idea_RJ_idea_MLT_the_language_question"
 		texturefile = "gfx/interface/ideas/mlt/RJ_idea_MLT_the_language_question.dds"
 	}
+
+
+	###############################################################################################
+	################ SOVIET IDEAS #################################################################
+	###############################################################################################
+
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_SOV_five_year_plan"
+		texturefile = "gfx/interface/ideas/sov/RJ_idea_SOV_five_year_plan.dds"
+	}
+
+
 	
 }

@@ -1,8 +1,6 @@
 state={
 	id=667
 	name="STATE_667"
-	resources={
-	}
 
 	history={
 		owner = INS
