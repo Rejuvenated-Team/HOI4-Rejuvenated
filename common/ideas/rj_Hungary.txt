@@ -1,0 +1,388 @@
+ideas = {
+
+	country = {
+
+		HUN_Kingdom_Without_King = {
+			picture = xxx
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.33
+				stability_factor = -0.15
+				surrender_limit = -0.15
+			}
+		}
+
+		HUN_national_rearment = {
+			picture = xxx
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.2
+				industrial_capacity_factory = 0.15
+				production_factory_max_efficiency_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		HUN_Iron_Cross = {
+			picture = xxx
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_core_defence_factor = 0.05
+				conscription_factor = 0.15
+			}
+		}
+
+		HUN_Expanded_Iron_Cross_1 = {
+			picture = xxx
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+				conscription_factor = 0.15
+				non_core_manpower = 0.05
+			}
+		}
+
+		HUN_Expanded_Iron_Cross_2 = {
+			picture = xxx
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+				conscription_factor = 0.15
+				non_core_manpower = 0.25
+			}
+		}
+
+		HUN_autarky = {
+			name = HUN_autarky_idea
+			picture = generic_exploit_mines
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				local_resources_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				min_export = 0.1
+				trade_opinion_factor = -0.15
+			}
+		}
+
+
+		HUN_expanded_autarky = {
+			name = HUN_autarky_idea
+			picture = generic_exploit_mines
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				local_resources_factor = 0.2
+				production_speed_arms_factory_factor = 0.15
+				min_export = 0.25
+				trade_opinion_factor = -0.35
+			}
+		}
+	}
+
+	economy = {
+		HUN_treaty_of_triannon = {
+			allowed = {
+				original_tag = HUN
+				always = no
+			}
+			available = {
+				has_war = no
+			}
+
+			rule = {
+				can_not_declare_war = yes
+			}
+
+			modifier = {
+				consumer_goods_expected_value = 0.5
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = -0.75
+				conversion_cost_civ_to_mil_factor= 0.75
+				conversion_cost_mil_to_civ_factor = -0.2
+				max_fuel_factor = -0.75
+				fuel_gain_factor = -0.9
+				stability_factor = -0.25
+				stability_weekly = 0.005
+				war_support_factor = -0.25
+				war_support_weekly = 0.005
+				conscription = -0.005
+				industrial_capacity_factory = -0.5
+				industrial_capacity_dockyard = -0.5
+				custom_modifier_tooltip = SPR_military_disloyalty_tt
+			}
+
+			allowed_to_remove = {
+				has_war = yes
+				has_completed_focus = HUN_Denouce_Treaty_of_Triannon
+			}
+		}
+		HUN_treaty_of_triannon_aat = {
+			name = HUN_treaty_of_triannon
+			picture = HUN_treaty_of_triannon
+			allowed = {
+				original_tag = HUN
+				always = no
+			}
+			available = {
+				has_war = no
+			}
+
+			rule = {
+				can_access_market = no
+				can_not_declare_war = yes
+			}
+
+			modifier = {
+				consumer_goods_expected_value = 0.5
+				production_speed_industrial_complex_factor = -0.2
+				production_speed_arms_factory_factor = -0.75
+				conversion_cost_civ_to_mil_factor = 0.75
+				conversion_cost_mil_to_civ_factor = -0.25
+				max_fuel_factor = -0.75
+				fuel_gain_factor = -0.9
+				stability_factor = -0.25
+				stability_weekly = 0.005
+				war_support_factor = -0.25
+				war_support_weekly = 0.005
+				conscription = -0.005
+				industrial_capacity_factory = -0.5
+				industrial_capacity_dockyard = -0.5
+				custom_modifier_tooltip = SPR_military_disloyalty_tt
+			}
+
+			allowed_to_remove = {
+				has_war = yes
+				has_completed_focus = HUN_Denouce_Treaty_of_Triannon
+			}
+		}
+
+		HUN_treaty_of_triannon_2 = {
+			allowed = {
+				original_tag = HUN
+				always = no
+			}
+			picture = HUN_treaty_of_triannon
+
+			available = {
+				has_war = no
+			}
+
+			modifier = {
+				consumer_goods_expected_value = 0.4
+				production_speed_industrial_complex_factor = -0.15
+				production_speed_arms_factory_factor = -0.25
+				conversion_cost_civ_to_mil_factor = 0.3
+				conversion_cost_mil_to_civ_factor = 0.25
+			}
+		}
+
+		HUN_treaty_of_triannon_3 = {
+			allowed = {
+				original_tag = HUN
+				always = no
+			}
+			picture = HUN_treaty_of_triannon
+
+			available = {
+				has_war = no
+			}
+
+			modifier = {
+				consumer_goods_expected_value = 0.35
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.25
+				conversion_cost_civ_to_mil_factor = 0.25
+				conversion_cost_mil_to_civ_factor = 0.2
+			}
+		}
+
+		HUN_secret_rearmament = {
+			allowed = {
+				original_tag = HUN
+				always = no
+			}
+			available = {
+				OR = {
+					has_idea = disarmed_nation
+					has_idea = volunteer_only
+				}
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			modifier = {
+				consumer_goods_expected_value = 0.25
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.2
+				conversion_cost_civ_to_mil_factor = 0.2
+				conversion_cost_mil_to_civ_factor = 0.2
+				conscription = 0.0025
+				industrial_capacity_factory = 0.05
+				custom_modifier_tooltip = HUN_secret_rearmament_tt_2
+			}
+		}
+
+		Secret_Rearment = {
+
+			picture = HUN_secret_rearmament
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = 0.25
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.2
+				conversion_cost_civ_to_mil_factor = 0.2
+				conversion_cost_mil_to_civ_factor = 0.2
+				max_fuel_factor = -0.55
+				fuel_gain_factor = -0.4
+				stability_factor = -0.15
+				war_support_weekly = 0.01
+				industrial_capacity_factory = -0.25
+				industrial_capacity_dockyard = -0.25
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+			allowed_to_remove = {
+				has_war = yes
+				has_completed_focus = HUN_Denouce_Treaty_of_Triannon
+			}
+
+		}
+	}
+}

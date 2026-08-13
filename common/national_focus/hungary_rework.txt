@@ -1,0 +1,2546 @@
+focus_tree = {
+	id = HUN_focus
+
+	default = no
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 1000
+			tag = HUN
+		}
+	}
+
+
+	############################## military #########################################
+
+    focus = {
+		id = HUN_Start_Army_Exercises
+		icon = GFX_goal_continuous_reduce_training_time
+
+
+		x = 5
+		y = 0
+		cost = 7.2
+
+
+		available = {
+			has_war_support > 0.1
+		}
+
+
+		completion_reward = {
+			army_experience = 10
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HUN_Offensive_Doctrine_Reform
+		icon = GFX_goal_continuous_armor_production
+		prerequisite = { focus = HUN_Start_Army_Exercises }
+
+		relative_position_id = HUN_Start_Army_Exercises
+		x = -3
+		y = 1
+		cost = 7.2
+
+
+		available = {
+			has_war_support > 0.25
+		}
+
+
+		completion_reward = {
+
+				add_to_variable = { HUN_Hungarian_Army_army_attack_factor = 0.05 }
+                add_to_variable = { HUN_Hungarian_Army_army_speed_factor = 0.05 }
+
+			custom_effect_tooltip = HUN_Offensive_Doctrine_Reform_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Defensive_Doctrine_Reform
+		icon = GFX_focus_generic_little_entente
+		mutually_exclusive = { focus = HUN_Modernized_Blitzkrieg_Tactics }
+		prerequisite = { focus = HUN_Offensive_Doctrine_Reform }
+
+		relative_position_id = HUN_Offensive_Doctrine_Reform
+		x = -1
+		y = 1
+		cost = 7.2
+
+
+		available = {
+			OR = {
+				if = {
+					limit = {
+						has_dlc = "Arms Against Tyranny"
+					}
+					NOT = {
+						has_idea = HUN_treaty_of_triannon_aat
+					}
+					else = {
+						NOT = {
+							has_idea = HUN_treaty_of_triannon
+						}
+					}
+				}
+				has_completed_focus = HUN_Denouce_Treaty_of_Triannon
+			}
+			has_war_support > 0.5
+		}
+
+
+		completion_reward = {
+
+            add_to_variable = { HUN_Hungarian_Army_army_defence_factor = 0.1 }
+			add_to_variable = { HUN_Hungarian_Army_army_armor_defence_factor = 0.05 }
+			add_to_variable = { HUN_Hungarian_Army_mechanized_defence_factor = 0.05 }
+			add_to_variable = { HUN_Hungarian_Army_motorized_defence_factor = 0.05 }
+			add_to_variable = { HUN_Hungarian_Army_army_core_defence_factor = 0.05 }
+
+			custom_effect_tooltip = HUN_Defensive_Doctrine_Reform_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Modernized_Blitzkrieg_Tactics
+		icon = GFX_focus_generic_license_production
+		mutually_exclusive = { focus = HUN_Defensive_Doctrine_Reform }
+		prerequisite = { focus = HUN_Offensive_Doctrine_Reform }
+
+		relative_position_id = HUN_Offensive_Doctrine_Reform
+		x = 1
+		y = 1
+		cost = 7.2
+
+
+		available = {
+			OR = {
+				if = {
+					limit = {
+						has_dlc = "Arms Against Tyranny"
+					}
+					NOT = {
+						has_idea = HUN_treaty_of_triannon_aat
+					}
+					else = {
+						NOT = {
+							has_idea = HUN_treaty_of_triannon
+						}
+					}
+				}
+				has_completed_focus = HUN_Denouce_Treaty_of_Triannon
+			}
+			has_war_support > 0.5
+		}
+
+
+		completion_reward = {
+
+				add_to_variable = { HUN_Hungarian_Army_army_attack_factor = 0.05 }
+                add_to_variable = { HUN_Hungarian_Army_army_speed_factor = 0.05 }
+				add_to_variable = { HUN_Hungarian_Army_army_armor_attack_factor = 0.05 }
+				add_to_variable = { HUN_Hungarian_Army_mechanized_attack_factor = 0.05 }
+				add_to_variable = { HUN_Hungarian_Army_motorized_attack_factor = 0.05 }
+
+			custom_effect_tooltip = HUN_Modernized_Blitzkrieg_Tactics_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Fortified_Defensive_Lines
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = HUN_Modernized_Blitzkrieg_Tactics focus = HUN_Defensive_Doctrine_Reform }
+
+		relative_position_id = HUN_Defensive_Doctrine_Reform
+		x = 1
+		y = 1
+		cost = 7.2
+
+
+		available = {
+			has_war_support > 0.65
+			OR = {
+				NOT = { has_idea = Secret_Rearment }
+				has_completed_focus = HUN_Denouce_Treaty_of_Triannon
+			}
+		}
+
+
+		completion_reward = {
+
+                add_to_variable = { HUN_Hungarian_Army_army_speed_factor = 0.1 }
+                add_to_variable = { HUN_Hungarian_Army_army_defence_factor = 0.05 }
+				add_to_variable = { HUN_Hungarian_Army_army_core_defence_factor = 0.05 }
+				army_experience = 10
+
+
+			custom_effect_tooltip = HUN_Fortified_Defensive_Lines_modifier
+		}
+	}
+
+
+
+
+
+
+
+	focus = {
+		id = HUN_Centralized_Command_Structure
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = HUN_Start_Army_Exercises }
+
+		relative_position_id = HUN_Start_Army_Exercises
+		x = 0
+		y = 1
+		cost = 7.2
+
+
+		available = {
+			has_war_support > 0.25
+
+		}
+
+
+		completion_reward = {
+
+				add_to_variable = { HUN_Hungarian_Army_army_org_factor = 0.05 }
+                add_to_variable = { HUN_Hungarian_Army_army_org_regain = 0.1 }
+                add_to_variable = { HUN_Hungarian_Army_attrition = -0.05 }
+
+			custom_effect_tooltip = HUN_Centralized_Command_Structure_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Decentralized_Tactical_Units
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = HUN_Centralized_Command_Structure }
+
+		relative_position_id = HUN_Centralized_Command_Structure
+		x = 0
+		y = 3
+		cost = 7.2
+
+
+		available = {
+			has_war_support > 0.5
+			OR = {
+				if = {
+					limit = {
+						has_dlc = "Arms Against Tyranny"
+					}
+					NOT = {
+						has_idea = HUN_treaty_of_triannon_aat
+					}
+					else = {
+						NOT = {
+							has_idea = HUN_treaty_of_triannon
+						}
+					}
+				}
+				has_completed_focus = HUN_Denouce_Treaty_of_Triannon
+			}
+		}
+
+
+		completion_reward = {
+
+				add_to_variable = { HUN_Hungarian_Army_army_attack_factor = 0.05 }
+                add_to_variable = { HUN_Hungarian_Army_army_defence_factor = 0.05 }
+				add_to_variable = { HUN_Hungarian_Army_army_org_factor = 0.1 }
+                add_to_variable = { HUN_Hungarian_Army_army_org_regain = 0.05 }
+
+			custom_effect_tooltip = HUN_Decentralized_Tactical_Units_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Integrated_Support_and_Logistics
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = HUN_Decentralized_Tactical_Units }
+
+		relative_position_id = HUN_Decentralized_Tactical_Units
+		x = 0
+		y = 1
+		cost = 7.2
+
+
+		available = {
+			has_war_support > 0.65
+			OR = {
+				NOT = { has_idea = Secret_Rearment }
+				has_completed_focus = HUN_Denouce_Treaty_of_Triannon
+			}
+		}
+
+
+		completion_reward = {
+
+				add_to_variable = { HUN_Hungarian_Army_army_org_factor = 0.1 }
+                add_to_variable = { HUN_Hungarian_Army_army_org_regain = 0.1 }
+                add_to_variable = { HUN_Hungarian_Army_attrition = -0.05 }
+				add_to_variable = { HUN_Hungarian_Army_supply_consumption_factor = -0.05 }
+
+			custom_effect_tooltip = HUN_Integrated_Support_and_Logistics_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Combined_Arms_Operations
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = HUN_Start_Army_Exercises }
+
+		relative_position_id = HUN_Start_Army_Exercises
+		x = 3
+		y = 1
+		cost = 7.2
+
+
+		available = {
+			has_war_support > 0.25
+			OR = {
+				if = {
+					limit = {
+						has_dlc = "Arms Against Tyranny"
+					}
+					NOT = {
+						has_idea = HUN_treaty_of_triannon_aat
+					}
+					else = {
+						NOT = {
+							has_idea = HUN_treaty_of_triannon
+						}
+					}
+				}
+				has_completed_focus = HUN_Denouce_Treaty_of_Triannon
+			}
+		}
+
+
+		completion_reward = {
+
+				add_to_variable = { HUN_Hungarian_Army_land_doctrine_cost_factor = -0.05 }
+				add_to_variable = { HUN_Hungarian_Army_air_doctrine_cost_factor = -0.05 }
+                add_to_variable = { HUN_Hungarian_Army_mechanized_defence_factor = 0.05 }
+                add_to_variable = { HUN_Hungarian_Army_motorized_defence_factor = 0.05 }
+
+			custom_effect_tooltip = HUN_Combined_Arms_Operations_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Aggressive_Assault_Doctrine
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = HUN_Combined_Arms_Operations }
+		mutually_exclusive = { focus = HUN_Elastic_Defense_Doctrine }
+
+		relative_position_id = HUN_Combined_Arms_Operations
+		x = -1
+		y = 1
+		cost = 7.2
+
+
+		available = {
+			has_war_support > 0.5
+		}
+
+
+		completion_reward = {
+
+				add_to_variable = { HUN_Hungarian_Army_army_attack_factor = 0.05 }
+                add_to_variable = { HUN_Hungarian_Army_army_speed_factor = 0.05 }
+				add_to_variable = { HUN_Hungarian_Army_land_doctrine_cost_factor = -0.05 }
+				add_to_variable = { HUN_Hungarian_Army_air_doctrine_cost_factor = -0.05 }
+
+			custom_effect_tooltip = HUN_Aggressive_Assault_Doctrine_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Elastic_Defense_Doctrine
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = HUN_Combined_Arms_Operations }
+		mutually_exclusive = { focus = HUN_Aggressive_Assault_Doctrine }
+
+		relative_position_id = HUN_Combined_Arms_Operations
+		x = 1
+		y = 1
+		cost = 7.2
+
+
+		available = {
+				has_war_support > 0.5
+		}
+
+
+		completion_reward = {
+
+                add_to_variable = { HUN_Hungarian_Army_army_defence_factor = 0.05 }
+				add_to_variable = { HUN_Hungarian_Army_army_core_defence_factor = 0.1 }
+				add_to_variable = { HUN_Hungarian_Army_land_doctrine_cost_factor = -0.05 }
+				add_to_variable = { HUN_Hungarian_Army_air_doctrine_cost_factor = -0.05 }
+
+			custom_effect_tooltip = HUN_Elastic_Defense_Doctrine_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Guerilla_Warfare_Specialization
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = HUN_Aggressive_Assault_Doctrine focus = HUN_Elastic_Defense_Doctrine }
+
+		relative_position_id = HUN_Aggressive_Assault_Doctrine
+		x = 1
+		y = 2
+		cost = 7.2
+
+
+		available = {
+				has_war_support > 0.65
+				OR = {
+				NOT = { has_idea = Secret_Rearment }
+				has_completed_focus = HUN_Denouce_Treaty_of_Triannon
+			}
+		}
+
+
+		completion_reward = {
+
+				add_to_variable = { HUN_Hungarian_Army_land_doctrine_cost_factor = -0.1 }
+				add_to_variable = { HUN_Hungarian_Army_air_doctrine_cost_factor = -0.1 }
+				add_to_variable = { HUN_Hungarian_Army_resistance_damage_to_garrison_on_our_occupied_states = 0.1 }
+				add_to_variable = { HUN_Hungarian_Army_resistance_decay_on_our_occupied_states = -0.1 }
+				add_to_variable = { HUN_Hungarian_Army_resistance_growth_on_our_occupied_states = 0.1 }
+				add_to_variable = { HUN_Hungarian_Army_resistance_target_on_our_occupied_states = 0.1 }
+
+			custom_effect_tooltip = HUN_Guerilla_Warfare_Specialization_modifier
+		}
+	}
+
+
+
+
+	focus = {
+		id = HUN_Unified_Military_Reform
+		icon = GFX_focus_ger_reichskommisariats
+		prerequisite = { focus = HUN_Fortified_Defensive_Lines }
+		prerequisite = { focus = HUN_Integrated_Support_and_Logistics }
+		prerequisite = { focus = HUN_Guerilla_Warfare_Specialization }
+		relative_position_id = HUN_Integrated_Support_and_Logistics
+		x = 0
+		y = 1
+		cost = 7.2
+
+
+		available = {
+		OR = {
+			has_war_support > 0.75
+			has_war = yes
+			}
+		}
+
+
+		completion_reward = {
+
+				add_to_variable = { HUN_Hungarian_Army_army_attack_factor = 0.05 }
+                add_to_variable = { HUN_Hungarian_Army_army_defence_factor = 0.05 }
+
+				add_to_variable = { HUN_Hungarian_Army_experience_gain_army_factor = 0.15 }
+                add_to_variable = { HUN_Hungarian_Army_experience_gain_air_factor = 0.15 }
+
+				add_to_variable = { HUN_Hungarian_Army_land_doctrine_cost_factor = -0.05 }
+                add_to_variable = { HUN_Hungarian_Army_air_doctrine_cost_factor = -0.05 }
+
+				add_to_variable = { HUN_Hungarian_training_time_army_factor = 0.1 }
+                add_to_variable = { HUN_Hungarian_minimum_training_level = 0.1 }
+
+			custom_effect_tooltip = HUN_Unified_Military_Reform_modifier
+		}
+	}
+
+	############################## industry #########################################
+
+	focus = {
+		id = HUN_Ipari_Fejlesztés
+		icon = GFX_goal_generic_consumer_goods
+
+
+		x = 17
+		y = 0
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			add_dynamic_modifier = {
+				modifier = HUN_Ipari_Fejlesztes
+			}
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+
+	# military #
+
+	focus = {
+		id = HUN_Secret_Rearment
+		text = HUN_secret_rearmament
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = HUN_Ipari_Fejlesztés }
+
+		relative_position_id = HUN_Ipari_Fejlesztés
+		x = -4
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_political_power_factor = 0.05 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_consumer_goods_factor = 0.05 }
+			add_ideas = Secret_Rearment
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+					}
+
+		    }
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+					}
+
+		    }
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Project_Silent_Shield
+		icon = GFX_goal_continuous_armor_production
+		prerequisite = { focus = HUN_Secret_Rearment }
+
+		relative_position_id = HUN_Secret_Rearment
+		x = -2
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_speed_arms_factory_factor = 0.02 }
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+
+		}
+	}
+
+	focus = {
+		id = HUN_Operation_Phantom_Forge
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = HUN_Project_Silent_Shield }
+
+		relative_position_id = HUN_Project_Silent_Shield
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+					}
+
+		    }
+
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+					}
+
+		    }
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_factory_max_efficiency_factor = 0.02 }
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+
+		}
+	}
+
+
+
+
+	focus = {
+		id = HUN_Initiative_Iron_Veil
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = HUN_Secret_Rearment }
+
+		relative_position_id = HUN_Secret_Rearment
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_factory_max_efficiency_factor = 0.02 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_factory_start_efficiency_factor = 0.02 }
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+
+		}
+	}
+
+	focus = {
+		id = HUN_Program_Covert_Hammer
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = HUN_Initiative_Iron_Veil }
+
+		relative_position_id = HUN_Initiative_Iron_Veil
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_industrial_capacity_factory = 0.03 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_factory_efficiency_gain_factor = 0.02 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_line_change_production_efficiency_factor = 0.02 }
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+
+		}
+	}
+
+	focus = {
+		id = HUN_Mission_Stealth_Sentinel
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = HUN_Secret_Rearment }
+
+		relative_position_id = HUN_Secret_Rearment
+		x = 2
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+					}
+
+		    }
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_industrial_capacity_factory = 0.025 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_local_resources_factor = 0.025 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_speed_buildings_factor = 0.01 }
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+
+		}
+	}
+
+	focus = {
+		id = HUN_Directive_Hidden_Arsenal
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = HUN_Mission_Stealth_Sentinel }
+
+		relative_position_id = HUN_Mission_Stealth_Sentinel
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_industrial_capacity_factory = 0.025 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_factory_efficiency_gain_factor = 0.01 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_line_change_production_efficiency_factor = 0.01 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_factory_max_efficiency_factor = 0.01 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_factory_start_efficiency_factor = 0.01 }
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+					}
+
+		    }
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+
+		}
+	}
+
+
+
+
+	focus = {
+		id = HUN_Denouce_Treaty_of_Triannon
+		text = HUN_renounce_the_treaty_of_trianon
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		prerequisite = { focus = HUN_Directive_Hidden_Arsenal }
+		prerequisite = { focus = HUN_Operation_Phantom_Forge }
+		prerequisite = { focus = HUN_Program_Covert_Hammer }
+
+		relative_position_id = HUN_Program_Covert_Hammer
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_consumer_goods_factor = 0.05 }
+			add_ideas = partial_economic_mobilisation
+
+			add_political_power = 150
+			add_stability = 0.1
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+	# total rearment #
+
+	focus = {
+		id = HUN_Start_rearment
+		text = HUN_bled_agreement
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = HUN_Denouce_Treaty_of_Triannon }
+
+		relative_position_id = HUN_Denouce_Treaty_of_Triannon
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			add_timed_idea = { idea = HUN_national_rearment days = 365 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_speed_arms_factory_factor = 0.05 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_industrial_capacity_factory = 0.05 }
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Modernization_Initiative
+		icon = GFX_focus_generic_air_defense
+		prerequisite = { focus = HUN_Start_rearment }
+
+		relative_position_id = HUN_Start_rearment
+		x = -2
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+					}
+
+		    }
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_speed_arms_factory_factor = 0.01 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_industrial_capacity_factory = 0.025 }
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Modernize_the_Arsenal
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = HUN_Modernization_Initiative }
+
+		relative_position_id = HUN_Modernization_Initiative
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_factory_efficiency_gain_factor = 0.01 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_factory_max_efficiency_factor = 0.01 }
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Danube_Defense_Line
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		prerequisite = { focus = HUN_Modernize_the_Arsenal }
+
+		relative_position_id = HUN_Modernize_the_Arsenal
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+
+			43 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							id = 9690
+						}
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							id = 9660
+						}
+						instant_build = yes
+					}
+			}
+			154 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							id = 11625
+						}
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							id = 6670
+						}
+						instant_build = yes
+					}
+			}
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_speed_buildings_factor = 0.01 }
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+
+
+
+
+
+	focus = {
+		id = HUN_Advanced_Weaponry_Research
+		icon = GFX_focus_ger_oppose_hitler
+		prerequisite = { focus = HUN_Start_rearment }
+
+		relative_position_id = HUN_Start_rearment
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+					}
+
+		    }
+
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+					}
+
+		    }
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_speed_arms_factory_factor = 0.01 }
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Military_Logistics_Overhaul
+		icon = GFX_focus_RAJ_indian_gentlemen_offcers
+		prerequisite = { focus = HUN_Advanced_Weaponry_Research }
+
+		relative_position_id = HUN_Advanced_Weaponry_Research
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_factory_efficiency_gain_factor = 0.01 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_factory_max_efficiency_factor = 0.01 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_line_change_production_efficiency_factor = 0.01 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_lack_of_resource_penalty_factor = -0.1 }
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Defense_Innovation_Hub
+		icon = GFX_focus_mex_privatisation
+		prerequisite = { focus = HUN_Military_Logistics_Overhaul }
+
+		relative_position_id = HUN_Military_Logistics_Overhaul
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+
+			build_railway = {
+				path = { 3670 9624 11610 9643 6670 6700 679 9656 11644 11659 }
+			}
+
+			154 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 11659
+					instant_build = yes
+				}
+			}
+
+			155 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 11610
+					instant_build = yes
+				}
+			}
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_speed_buildings_factor = 0.01 }
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Modernization_of_Armament_Factories
+		icon = GFX_focus_hol_the_foundations_of_defense
+		prerequisite = { focus = HUN_Start_rearment }
+
+		relative_position_id = HUN_Start_rearment
+		x = 2
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+					}
+
+		    }
+
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+					}
+
+		    }
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_industrial_capacity_factory = 0.025 }
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Expansion_of_Military_Research_Institutes
+		icon = GFX_focus_focus_fra_maquis
+		prerequisite = { focus = HUN_Modernization_of_Armament_Factories }
+
+		relative_position_id = HUN_Modernization_of_Armament_Factories
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+					}
+
+		    }
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_industrial_capacity_factory = 0.025 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_speed_arms_factory_factor = 0.01 }
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Development_of_Advanced_Weapon_Systems
+		icon = GFX_focus_spa_the_spanish_miracle
+		prerequisite = { focus = HUN_Expansion_of_Military_Research_Institutes }
+
+		relative_position_id = HUN_Expansion_of_Military_Research_Institutes
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+					}
+
+		    }
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_industrial_capacity_factory = 0.025 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_speed_buildings_factor = 0.01 }
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+
+
+
+
+	focus = {
+		id = HUN_Complete_Rearment
+		icon = GFX_focus_EST_republican_defence_league
+		prerequisite = { focus = HUN_Danube_Defense_Line }
+		prerequisite = { focus = HUN_Defense_Innovation_Hub }
+		prerequisite = { focus = HUN_Development_of_Advanced_Weapon_Systems }
+
+		relative_position_id = HUN_Defense_Innovation_Hub
+		x = 0
+		y = 1
+		cost = 10
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+					}
+
+		    }
+
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+					}
+
+		    }
+
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+					}
+
+		    }
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_industrial_capacity_factory = 0.02 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_factory_start_efficiency_factor = 0.02 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_factory_max_efficiency_factor = 0.02 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_consumer_goods_factor = 0.05 }
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+
+
+
+
+
+	# civilian #
+
+
+
+
+	focus = {
+		id = HUN_Industrial_Revitalization_Initiative
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = HUN_Ipari_Fejlesztés }
+
+		relative_position_id = HUN_Ipari_Fejlesztés
+		x = 4
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_consumer_goods_factor = 0.05 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_political_power_factor = 0.05 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_speed_industrial_complex_factor = 0.025 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_speed_buildings_factor = 0.01 }
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Urban_Manufacturing_Expansion
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = HUN_Industrial_Revitalization_Initiative  }
+
+		relative_position_id = HUN_Industrial_Revitalization_Initiative
+		x = -3
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+					}
+
+		    }
+
+		add_to_variable = { HUN_Ipari_Fejlesztes_production_speed_buildings_factor = 0.01 }
+
+
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_National_Infrastructure_Development
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = HUN_Urban_Manufacturing_Expansion }
+
+		relative_position_id = HUN_Urban_Manufacturing_Expansion
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			random_owned_controlled_state = {
+				limit = {
+					infrastructure < 5
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					infrastructure < 5
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					infrastructure < 5
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+
+		add_to_variable = { HUN_Ipari_Fejlesztes_global_building_slots_factor = 2 }
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Technological_Innovation_Drive
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = HUN_Industrial_Revitalization_Initiative }
+
+		relative_position_id = HUN_Industrial_Revitalization_Initiative
+		x = -1
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_research_speed_factor = 0.025 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_speed_buildings_factor = 0.01 }
+			add_research_slot = 1
+
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Resource_Extraction_Optimization
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = HUN_Technological_Innovation_Drive }
+
+		relative_position_id = HUN_Technological_Innovation_Drive
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_to_variable = { HUN_Ipari_Fejlesztes_local_resources_factor = 0.05 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_speed_buildings_factor = 0.01 }
+
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+
+	focus = {
+		id = HUN_Energy_Sector_Overhaul
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = HUN_Industrial_Revitalization_Initiative }
+
+		relative_position_id = HUN_Industrial_Revitalization_Initiative
+		x = 1
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+					}
+
+		    }
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_research_speed_factor = 0.01 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_HUN_Ipari_Fejlesztés_global_building_slots_factor = 0.05 }
+
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Agricultural_Modernization_Program
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = HUN_Energy_Sector_Overhaul }
+
+		relative_position_id = HUN_Energy_Sector_Overhaul
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_speed_industrial_complex_factor = 0.01 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_local_resources_factor = 0.01 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_HUN_Ipari_Fejlesztés_global_building_slots_factor = 2 }
+
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Transport_Network_Enhancement
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = HUN_Industrial_Revitalization_Initiative }
+
+		relative_position_id = HUN_Industrial_Revitalization_Initiative
+		x = 3
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+					}
+
+		    }
+
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_speed_buildings_factor = 0.01 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_speed_arms_factory_factor = 0.05 }
+
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+	focus = {
+		id = HUN_Skilled_Labor_Training_Programs
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = HUN_Transport_Network_Enhancement }
+
+		relative_position_id = HUN_Transport_Network_Enhancement
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_research_speed_factor = 0.015 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_speed_buildings_factor = 0.01 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_factory_max_efficiency_factor = 0.06 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_factory_efficiency_gain_factor = 0.05 }
+
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+
+	focus = {
+		id = HUN_Trade_and_Commerce_Stimulation
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = HUN_Resource_Extraction_Optimization focus = HUN_National_Infrastructure_Development }
+		prerequisite = { focus = HUN_Agricultural_Modernization_Program  focus = HUN_Skilled_Labor_Training_Programs }
+
+		relative_position_id = HUN_Industrial_Revitalization_Initiative
+		x = 0
+		y = 3
+		cost = 10
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+					}
+
+		    }
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+					}
+
+
+		    }
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+					}
+
+
+		    }
+
+			add_to_variable = { HUN_Ipari_Fejlesztes_consumer_goods_factor = 0.05 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_speed_buildings_factor = 0.05 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_speed_industrial_complex_factor = 0.04 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_production_speed_arms_factory_factor = 0.05 }
+			add_to_variable = { HUN_Ipari_Fejlesztes_global_building_slots_factor = 2 }
+
+
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+		}
+	}
+
+
+
+
+
+
+
+	######## politic ###############
+
+	focus = {
+		id = HUN_Strength_Horthys_Government
+		icon = xxx
+
+
+		x = 33
+		y = 0
+		cost = 10
+
+
+		available = {
+
+		}
+
+		completion_reward = {
+
+
+			add_dynamic_modifier = {
+				modifier = HUN_Horthys_New_Government
+			}
+
+
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+	}
+
+	focus = {
+		id = HUN_Rise_of_the_Iron_Cross
+		icon = GFX_focus_spa_no_compromise_on_carlist_ideals
+		prerequisite = { focus = HUN_Strength_Horthys_Government }
+
+		relative_position_id = HUN_Strength_Horthys_Government
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+			fascism > 0.35
+		}
+
+		completion_reward = {
+
+			add_to_variable = { HUN_Horthys_New_Government_power_factor = 0.05 }
+			add_to_variable = { HUN_Horthys_New_Government_fascism_acceptance = 25 }
+
+			add_ideas = HUN_Iron_Cross
+
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+	}
+
+	focus = {
+		id = HUN_March_of_the_Magyar_Legion
+		icon = GFX_focus_focus_fra_maquis
+		prerequisite = { focus = HUN_Rise_of_the_Iron_Cross }
+
+		relative_position_id = HUN_Rise_of_the_Iron_Cross
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+			fascism > 0.4
+		}
+
+		completion_reward = {
+
+			add_to_variable = { HUN_Horthys_New_Government_stability_factor = 0.05 }
+			add_to_variable = { HUN_Horthys_New_Government_war_support_factor = 0.05 }
+
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+	}
+
+	focus = {
+		id = HUN_Hungarian_Revival
+		icon = GFX_focus_focus_fra_revolution_utmost
+		prerequisite = { focus = HUN_March_of_the_Magyar_Legion }
+
+		relative_position_id = HUN_March_of_the_Magyar_Legion
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+			fascism > 0.45
+		}
+
+		completion_reward = {
+
+			add_to_variable = { HUN_Horthys_New_Government_power_factor = 0.05 }
+			add_to_variable = { HUN_Horthys_New_Government_fascism_drift = 0.05 }
+			add_to_variable = { HUN_Horthys_New_Government_surrender_limit = 0.1 }
+			add_to_variable = { HUN_Horthys_New_Government_fascism_acceptance = 25 }
+
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+	}
+
+	focus = {
+		id = HUN_Horthy_s_New_Order
+		icon = GFX_focus_hun_assassinate_horthy
+		prerequisite = { focus = HUN_Hungarian_Revival }
+
+		relative_position_id = HUN_Hungarian_Revival
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+			fascism > 0.5
+		}
+
+		completion_reward = {
+
+			add_to_variable = { HUN_Horthys_New_Government_war_support_factor = 0.05 }
+			add_to_variable = { HUN_Horthys_New_Government_surrender_limit = 0.05 }
+			add_to_variable = { HUN_Horthys_New_Government_war_support_factor = 0.05 }
+
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+	}
+
+	focus = {
+		id = HUN_Eternal_Hungary
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = HUN_Horthy_s_New_Order }
+
+		relative_position_id = HUN_Horthy_s_New_Order
+		x = 0
+		y = 1
+		cost = 10
+
+
+		available = {
+
+			fascism > 0.65
+
+		}
+
+		completion_reward = {
+			remove_ideas = HUN_Kingdom_Without_King
+			set_politics = {
+				ruling_party = fascism
+			}
+
+			add_to_variable = { HUN_Horthys_New_Government_power_factor = 0.05 }
+			add_to_variable = { HUN_Horthys_New_Government_stability_factor = 0.05 }
+			add_to_variable = { HUN_Horthys_New_Government_fascism_acceptance = 25 }
+
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+	}
+
+	######## Autarky #######
+
+
+
+	focus = {
+		id = HUN_Autarky_Project
+		text = HUN_autarky
+		icon = GFX_focus_generic_improve_roads
+		prerequisite = { focus = HUN_Eternal_Hungary }
+
+
+		relative_position_id = HUN_Eternal_Hungary
+		x = -7
+		y = 1
+		cost = 5
+
+
+		available = {
+
+
+
+		}
+
+		completion_reward = {
+			add_ideas = HUN_Autarky
+		}
+	}
+
+	focus = {
+		id = HUN_Expanded_Autarky_Project
+		icon = GFX_focus_generic_tankette
+		prerequisite = { focus = HUN_Autarky_Project }
+
+
+		relative_position_id = HUN_Autarky_Project
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = HUN_Expanded_Autarky
+				remove_idea = HUN_Autarky
+			}
+		}
+	}
+
+
+	### axis ###
+
+	focus = {
+		id = HUN_Follow_German_Military_Buildup
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = HUN_Eternal_Hungary }
+
+		relative_position_id = HUN_Eternal_Hungary
+		x = -5
+		y = 1
+		cost = 5
+
+
+		available = {
+
+
+
+		}
+
+		completion_reward = {
+
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+					}
+
+			}
+
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+					}
+			}
+
+			army_experience = 10
+
+
+
+
+		}
+	}
+
+	focus = {
+		id = HUN_Expand_Berlin_Budapest_Trade
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = HUN_Follow_German_Military_Buildup }
+
+		relative_position_id = HUN_Follow_German_Military_Buildup
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+
+
+		}
+
+		completion_reward = {
+
+
+			43 = {
+				add_extra_state_shared_building_slots = 1
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+			}
+
+			43 = {
+				add_extra_state_shared_building_slots = 1
+				add_resource = {
+					type = oil
+					amount = 4
+				}
+			}
+
+			GER = {
+				64 = {
+				add_extra_state_shared_building_slots = 1
+				add_resource = {
+					type = aluminium
+					amount = 20
+				}
+			}
+			}
+
+
+		}
+	}
+
+	focus = {
+		id = HUN_Join_Axis
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = HUN_Expand_Berlin_Budapest_Trade }
+
+		relative_position_id = HUN_Expand_Berlin_Budapest_Trade
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+			GER = {
+				is_faction_leader = yes
+				has_government = fascism
+				has_opinion	= {
+						target = ROOT
+						value > 69
+				}
+			}
+
+		}
+
+		completion_reward = {
+
+			GER = {
+			add_to_faction = HUN
+			}
+
+
+
+
+
+
+		}
+	}
+
+	########### Iron Cross #######
+
+
+	focus = {
+		id = HUN_Expand_Iron_Cross
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = HUN_Eternal_Hungary }
+
+		relative_position_id = HUN_Eternal_Hungary
+		x = -3
+		y = 1
+		cost = 5
+
+
+		available = {
+
+
+
+		}
+
+		completion_reward = {
+
+			  swap_ideas = {
+				add_idea = HUN_Expanded_Iron_Cross_1
+				remove_idea = HUN_Iron_Cross
+			  }
+
+
+
+
+
+
+		}
+	}
+
+	focus = {
+		id = HUN_Bigger_minority_consription
+		icon = GFX_focus_CZE_german_puppet
+		prerequisite = { focus = HUN_Expand_Iron_Cross }
+
+		relative_position_id = HUN_Expand_Iron_Cross
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+
+
+		}
+
+		completion_reward = {
+
+			  swap_ideas = {
+				add_idea = HUN_Expanded_Iron_Cross_2
+				remove_idea = HUN_Expanded_Iron_Cross_1
+			  }
+
+
+
+
+
+
+		}
+	}
+
+
+	######## Politic #######
+
+
+	focus = {
+		id = HUN_Consolidate_Horthy_s_Regime
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = HUN_Eternal_Hungary }
+
+		relative_position_id = HUN_Eternal_Hungary
+		x = -1
+		y = 1
+		cost = 5
+
+
+		available = {
+
+
+
+		}
+
+		completion_reward = {
+
+			add_country_leader_trait = Horthys_Regime_1
+
+
+			add_to_variable = { HUN_Political_Disputy_political_power_factor = 0.05 }
+			add_to_variable = { HUN_Political_Disputy_war_support_factor = 0.05 } 
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+
+			add_political_power = 100
+			add_stability = 0.05
+
+
+
+
+
+		}
+	}
+
+	focus = {
+		id = HUN_Suppress_Political_Opposition
+		icon = GFX_focus_mex_exile_calles
+		prerequisite = { focus = HUN_Consolidate_Horthy_s_Regime }
+
+		relative_position_id = HUN_Consolidate_Horthy_s_Regime
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+
+
+		}
+
+		completion_reward = {
+
+			swap_ruler_traits = {
+				add = Horthys_Regime_2
+				remove = Horthys_Regime_1
+			}
+
+			add_to_variable = { HUN_Political_Disputy_political_power_factor = 0.05 }
+			add_to_variable = { HUN_Political_Disputy_war_support_factor = 0.1 }
+			add_to_variable = { HUN_Political_Disputy_drift_defence_factor = 0.1 }
+			add_to_variable = { HUN_Political_Disputy_fascism_acceptance = 5 }
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+
+			add_political_power = 100
+			add_stability = 0.05
+
+
+
+
+		}
+	}
+
+	focus = {
+		id = HUN_Strengthen_National_Identity
+		icon = GFX_focus_mex_soldaderas
+		prerequisite = { focus = HUN_Suppress_Political_Opposition }
+
+		relative_position_id = HUN_Suppress_Political_Opposition
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+
+
+		}
+
+		completion_reward = {
+
+			swap_ruler_traits = {
+				add = Horthys_Regime_3
+				remove = Horthys_Regime_2
+			}
+
+			add_to_variable = { HUN_Political_Disputy_political_power_factor = 0.05 }
+			add_to_variable = { HUN_Political_Disputy_war_support_factor = 0.15 }
+			add_to_variable = { HUN_Political_Disputy_drift_defence_factor = 0.25 }
+			add_to_variable = { HUN_Political_Disputy_fascism_acceptance = 5 }
+			add_to_variable = { HUN_Political_Disputy_communism_acceptance = -25 }
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+
+			add_stability = 0.05
+
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+
+		}
+	}
+
+	focus = {
+		id = HUN_Centralize_Control
+		icon = GFX_focus_BUL_found_the_brannik
+		prerequisite = { focus = HUN_Eternal_Hungary }
+
+		relative_position_id = HUN_Eternal_Hungary
+		x = 1
+		y = 1
+		cost = 5
+
+
+		available = {
+
+
+
+		}
+
+		completion_reward = {
+
+			add_country_leader_trait = Horthys_Control_1
+
+			add_to_variable = { HUN_Political_Disputy_stability_factor = 0.05 }
+			add_to_variable = { HUN_Political_Disputy_drift_defence_factor = 0.15 }
+
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+
+			add_political_power = 100
+
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+
+		}
+	}
+
+	focus = {
+		id = HUN_Hungarian_Unity_Act
+		icon = GFX_focus_BUL_condemn_macedonian_organizations
+		prerequisite = { focus = HUN_Centralize_Control }
+
+		relative_position_id = HUN_Centralize_Control
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+
+
+		}
+
+		completion_reward = {
+
+			swap_ruler_traits = {
+				add = Horthys_Control_2
+				remove = Horthys_Control_1
+			}
+
+			add_to_variable = { HUN_Political_Disputy_stability_factor = 0.15 }
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+
+
+
+
+
+		}
+	}
+
+	focus = {
+		id = HUN_Militarize_the_Government
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = { focus = HUN_Hungarian_Unity_Act }
+
+		relative_position_id = HUN_Hungarian_Unity_Act
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+
+
+		}
+
+		completion_reward = {
+
+
+			swap_ruler_traits = {
+				add = Horthys_Control_3
+				remove = Horthys_Control_2
+			}
+
+
+
+			add_to_variable = { HUN_Political_Disputy_stability_factor = 0.1 }
+			add_to_variable = { HUN_Political_Disputy_communism_acceptance = -25 }
+
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+
+
+			custom_effect_tooltip = HUN_Start_Army_Exercises_modifier
+
+			add_manpower = 10000
+
+
+
+		}
+	}
+
+
+
+	focus = {
+		id = HUN_Hungarian_Dictatorship
+		icon = xxx
+		prerequisite = { focus = HUN_Militarize_the_Government }
+		prerequisite = { focus = HUN_Strengthen_National_Identity }
+
+		relative_position_id = HUN_Militarize_the_Government
+		x = -1
+		y = 1
+		cost = 5
+
+
+		available = {
+
+
+
+		}
+
+		completion_reward = {
+
+			remove_dynamic_modifier = {
+				modifier = HUN_Political_Disputy
+			}
+
+
+			remove_country_leader_trait = Horthys_Regime_3
+			remove_country_leader_trait = Horthys_Control_3
+
+			add_country_leader_trait = Horthys_Dictatorship
+
+
+
+
+
+		}
+	}
+
+	######## Greater Hungary #######
+
+	focus = {
+		id = HUN_Demand_Czechoslovakian_Territories
+		icon = GFX_focus_generic_aircraft_production
+		prerequisite = { focus = HUN_Eternal_Hungary }
+
+
+		relative_position_id = HUN_Eternal_Hungary
+		x = 4
+		y = 1
+		cost = 5
+
+
+		available = {
+
+		has_army_manpower = { size > 200000 }
+
+
+		}
+
+		completion_reward = {
+			CZE = {
+				country_event = { id = hun.100 days = 2 }
+			}
+		}
+	}
+
+	focus = {
+		id = HUN_Demand_Slovakia
+		icon = GFX_focus_POL_reassert_silesian_claims
+		prerequisite = { focus = HUN_Demand_Czechoslovakian_Territories }
+		mutually_exclusive = { focus = HUN_German_Hungarian_treaty }
+
+
+		relative_position_id = HUN_Demand_Czechoslovakian_Territories
+		x = -1
+		y = 1
+		cost = 5
+
+
+		available = {
+			has_army_manpower = { size > 300000 }
+			has_full_control_of_state = 664
+			has_full_control_of_state = 73
+		}
+
+		completion_reward = {
+			CZE = {
+				country_event = { id = hun.103 days = 2 }
+			}
+			add_state_claim = 71
+			add_state_claim = 70
+		}
+	}
+
+	focus = {
+		id = HUN_German_Hungarian_treaty
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = HUN_Demand_Czechoslovakian_Territories }
+		mutually_exclusive = { focus = HUN_Demand_Slovakia }
+
+
+		relative_position_id = HUN_Demand_Czechoslovakian_Territories
+		x = 1
+		y = 1
+		cost = 5
+
+
+		available = {
+			has_army_manpower = { size > 250000 }
+			has_full_control_of_state = 664
+			has_full_control_of_state = 73
+			OR = {
+				SLO = {
+					exists = yes
+					is_in_faction_with = GER
+				}
+				GER = {
+				owns_state = 70
+				owns_state = 71
+				}
+			}
+
+		}
+
+		completion_reward = {
+			GER = {
+				country_event = { id = hun.106 days = 2 }
+			}
+		}
+	}
+
+	focus = {
+		id = HUN_Ultimatum_for_Transylvania
+		icon = GFX_focus_YUG_autonomous_transylvania
+		prerequisite = { focus = HUN_Eternal_Hungary }
+
+
+		relative_position_id = HUN_Eternal_Hungary
+		x = 6
+		y = 1
+		cost = 5
+
+
+		available = {
+
+			has_army_manpower = { size > 400000 }
+
+		}
+
+		completion_reward = {
+
+
+			ROM = {
+				country_event = { id = hun.109 days = 2 }
+			}
+
+			add_state_claim = 76
+
+
+
+
+
+		}
+	}
+
+	focus = {
+		id = HUN_Vojvodina_Claims
+		icon = GFX_focus_YUG_dissolve_serbia
+		prerequisite = { focus = HUN_Eternal_Hungary }
+
+
+		relative_position_id = HUN_Eternal_Hungary
+		x = 8
+		y = 1
+		cost = 5
+
+
+		available = {
+
+			has_army_manpower = { size > 200000 }
+
+		}
+
+		completion_reward = {
+
+			YUG = {
+				country_event = { id = hun.113 days = 2 }
+			}
+
+			add_state_claim = 764
+			add_state_claim = 45
+
+
+
+
+
+
+		}
+	}
+
+	focus = {
+		id = HUN_Demand_Yugoslavian_Coastline
+		icon = GFX_focus_YUG_banovina_of_croatia
+		prerequisite = { focus = HUN_Vojvodina_Claims }
+
+
+		relative_position_id = HUN_Vojvodina_Claims
+		x = 0
+		y = 1
+		cost = 5
+
+
+		available = {
+
+			has_army_manpower = { size > 250000 }
+
+		}
+
+		completion_reward = {
+
+
+			YUG = {
+				country_event = { id = hun.116 days = 2 }
+			}
+
+			add_state_claim = 109
+			add_state_claim = 103
+
+
+
+
+
+		}
+	}
+
+
+
+	focus = {
+		id = HUN_Annouce_Greater_Hungary
+		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+		prerequisite = { focus = HUN_Demand_Yugoslavian_Coastline }
+		prerequisite = { focus = HUN_Ultimatum_for_Transylvania }
+		prerequisite = { focus = HUN_Demand_Slovakia focus = HUN_German_Hungarian_treaty }
+
+
+		relative_position_id = HUN_Ultimatum_for_Transylvania
+		x = 0
+		y = 2
+		cost = 5
+
+
+		available = {
+
+			has_army_manpower = { size > 500000 }
+			has_full_control_of_state = 664
+			has_full_control_of_state = 73
+			has_full_control_of_state = 45
+			has_full_control_of_state = 764
+			has_full_control_of_state = 76
+
+		}
+
+		completion_reward = {
+
+			set_cosmetic_tag = HUN_GREATER
+
+			add_state_core = 664
+			add_state_core = 73
+			add_state_core = 45
+			add_state_core = 764
+			add_state_core = 76
+			add_state_core = 109
+			add_state_core = 103
+			add_state_core = 82
+			add_state_core = 83
+			add_state_core = 84
+			add_state_core = 70
+			add_state_core = 71
+
+
+
+
+		}
+	}
+
+
+
+
+
+}
