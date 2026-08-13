@@ -394,7 +394,7 @@ focus_tree = {
 	focus = {
 		id = SOV_improve_railway_network
 
-		icon = GFX_goal_generic_railway_construction
+		icon = GFX_focus_RJ_SOV_expand_the_railway_network
 		prerequisite = { focus = SOV_finish_the_five_year_plan }
 		x = -2
 		y = 1
@@ -461,7 +461,7 @@ focus_tree = {
 	focus = {
 		id = SOV_third_five_year_plan
 
-		icon = GFX_focus_generic_industry_2
+		icon = GFX_focus_RJ_SOV_third_five_year_plan
 		prerequisite = { focus = SOV_finish_the_five_year_plan }
 		x = 0
 		y = 1
@@ -11230,7 +11230,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_sway_the_railway_workers
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_railway_construction
 		prerequisite = { focus = SOV_the_left_opposition focus = SOV_the_right_opposition } 
 		x = 3
 		y = 1
