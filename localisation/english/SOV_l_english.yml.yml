@@ -37,6 +37,8 @@
  SOV_urban_idea: "Urbanization Efforts"
  SOV_urban_idea_desc: "We have made large efforts to bring people into the cities, to bring them together."
 #Focuses
+ SOV_transformation_of_nature_communism: "Transformation of Nature"
+ SOV_transformation_of_nature_communism_desc: "With our scientific community pushing the borders of what was previously thought possible, even the largest, most invasive projects are becoming feasible."
  SOV_reinstate_the_duma: "Reinstate the Duma"
  SOV_reinstate_the_duma_desc: "While the previous iterations of it massively failed, we should still give democratic institutions in the Duma a second chance!"
  SOV_hold_election: "Begin Elections"
