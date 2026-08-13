@@ -453,6 +453,15 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/cub/RJ_idea_CUB_batistas_cooperation.dds"
 	}
 
+	#############
+	### MALTA ###
+	#############
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_MLT_the_language_question"
+		texturefile = "gfx/interface/ideas/mlt/RJ_idea_MLT_the_language_question.dds"
+	}
+
 	##########
 	### UK ###
 	##########
@@ -484,6 +493,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_SOV_russian_republic_flag"
 		texturefile = "gfx/interface/ideas/sov/SOV_russian_republic_flag.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_SOV_five_year_plan"
+		texturefile = "gfx/interface/ideas/sov/RJ_idea_SOV_five_year_plan.dds"
 	}
 
 	###########
@@ -565,27 +579,4 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/usa/RJ_idea_USA_mechanize_the_army.dds"
 	}
 
-
-	#############
-	### MALTA ###
-	#############
-
-	spriteType = {
-		name = "GFX_idea_RJ_idea_MLT_the_language_question"
-		texturefile = "gfx/interface/ideas/mlt/RJ_idea_MLT_the_language_question.dds"
-	}
-
-
-	###############################################################################################
-	################ SOVIET IDEAS #################################################################
-	###############################################################################################
-
-
-	spriteType = {
-		name = "GFX_idea_RJ_idea_SOV_five_year_plan"
-		texturefile = "gfx/interface/ideas/sov/RJ_idea_SOV_five_year_plan.dds"
-	}
-
-
-	
 }
