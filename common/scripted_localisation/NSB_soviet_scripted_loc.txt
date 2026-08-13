@@ -2014,18 +2014,18 @@ defined_text = {
 	}
 }
 
-#defined_text = {
-#	name = GetAppropriateFYPName
-#	text = {
-#		trigger = {
-#			NOT = { has_government = communism }
-#		}
-#		localization_key = SOV_modify_fyp_ns_intro_alt_ns_name
-#	}
-#	text = {
-#		localization_key = SOV_modify_fyp_ns_intro_default_ns_name
-#	}
-#}
+defined_text = {
+	name = GetAppropriateFYPName
+	text = {
+		trigger = {
+			NOT = { has_government = communism }
+		}
+		localization_key = SOV_third_five_year_plan_dynamic_modifier_alt #RJ
+	}
+	text = {
+		localization_key = SOV_second_five_year_plan_dynamic_modifier #RJ
+	}
+}
 
 defined_text = {
 	name = GetReorganizeThePcOfHeavyIndustryName
@@ -2104,6 +2104,7 @@ defined_text = {
 		localization_key = SOV_pc_of_the_ussr_navy_ns_name_default
 	}
 }
+
 defined_text = {
 	name = GetFoundThePcdiName
 	text = {
@@ -2155,6 +2156,7 @@ defined_text = {
 		localization_key = SOV_pc_of_mortar_armament_name_default
 	}
 }
+
 defined_text = {
 	name = GetAppropriateRedArmyNsName
 	text = {
@@ -2193,6 +2195,7 @@ defined_text = {
 		localization_key = SOV_improve_the_stalin_line_name_default
 	}
 }
+
 defined_text = {
 	name = GetTheMolotovLineName
 	text = {
@@ -2232,7 +2235,6 @@ defined_text = {
 }
 
 ### For Turkey
-
 defined_text = {
 	name = GetBraceAgainstTheRedMenaceName
 	text = {

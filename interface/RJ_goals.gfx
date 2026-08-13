@@ -810,6 +810,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/sov/SOV_democratic_socialism.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_expand_the_railway_network"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_expand_the_railway_network.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_third_five_year_plan"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_third_five_year_plan.dds"
+	}
+
 	###########
 	### USA ###
 	###########
@@ -1217,26 +1227,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_RJ_USA_airborne_divisions"
 		texturefile = "gfx/interface/goals/usa/RJ_USA_airborne_divisions.dds"
-	}
-
-
-	#######################################################################################
-	########### SOVIET UNION ##############################################################
-	#######################################################################################
-
-	SpriteType = {
-		name = "GFX_focus_RJ_SOV_five_year_plan"
-		texturefile = "gfx/interface/goals/sov/RJ_SOV_five_year_plan.dds"
-	}
-
-	SpriteType = {
-		name = "GFX_focus_RJ_SOV_expand_the_railway_network"
-		texturefile = "gfx/interface/goals/sov/RJ_SOV_expand_the_railway_network.dds"
-	}
-
-	SpriteType = {
-		name = "GFX_focus_RJ_SOV_third_five_year_plan"
-		texturefile = "gfx/interface/goals/sov/RJ_SOV_third_five_year_plan.dds"
 	}
 
 }
