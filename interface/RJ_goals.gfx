@@ -820,6 +820,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/sov/RJ_SOV_third_five_year_plan.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_five_year_plan"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_five_year_plan.dds"
+	}
+
 	###########
 	### USA ###
 	###########

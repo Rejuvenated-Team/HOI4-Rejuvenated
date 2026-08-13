@@ -320,7 +320,7 @@ focus_tree = {
 	focus = {
 		id = SOV_finish_the_five_year_plan
 
-		icon = GFX_focus_generic_industry_1
+		icon = GFX_focus_RJ_SOV_five_year_plan
 		prerequisite = { focus = SOV_infrastructure_effort_nsb }
 		prerequisite = { focus = SOV_heavy_industry }
 		x = 1
@@ -399,7 +399,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_finish_the_five_year_plan
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -1906,6 +1906,7 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
+					increase_state_category = yes
 				}
 				add_to_temp_variable = { SOV_states_targeted_eastern_development = 1 }
 			}
@@ -1934,6 +1935,7 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
+					increase_state_category = yes
 				}
 			}
 
@@ -1961,6 +1963,7 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
+					increase_state_category = yes
 				}
 				add_to_temp_variable = { SOV_states_targeted_eastern_development = 1 }
 			}
@@ -1989,6 +1992,7 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
+					increase_state_category = yes
 				}
 			}
 		}
@@ -2099,6 +2103,7 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
+					increase_state_category = yes
 				}
 				add_to_temp_variable = { SOV_states_targeted_eastern_development = 1 }
 			}
@@ -2127,6 +2132,7 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
+					increase_state_category = yes
 				}
 			}
 
@@ -2154,6 +2160,7 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
+					increase_state_category = yes
 				}
 				add_to_temp_variable = { SOV_states_targeted_eastern_development = 1 }
 			}
@@ -2182,6 +2189,7 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
+					increase_state_category = yes
 				}
 			}
 		}
