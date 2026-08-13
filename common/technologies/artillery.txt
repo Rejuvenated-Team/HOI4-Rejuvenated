@@ -1756,6 +1756,16 @@ technologies = {
 		}
 	}
 
+	#TAOG
+	the_thunder_at_our_gates_artillery = {
+
+		artillery_brigade = {
+			combat_width = -0.1
+		}
+
+	}
+	#End TAOG
+
 	sp_land_large_caliber_kinetic_energy_sabot_no_gd_tech = {
 		#HIDDEN EFFECT FOR THE LARGE CALIBER KINETIC ENERGY PENETRATOR
 		
