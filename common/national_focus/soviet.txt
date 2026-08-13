@@ -2611,7 +2611,7 @@ focus_tree = {
 	focus = {
 		id = SOV_found_the_jet_institute
 
-		icon = GFX_goal_generic_build_airforce
+		icon = GFX_focus_generic_jet_planes
 		prerequisite = { focus = SOV_the_ussr_academy_of_sciences }
 		prerequisite = { focus = SOV_merge_aircraft_plants }
 		x = 0
