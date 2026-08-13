@@ -10,7 +10,7 @@ state={
 		add_core_of = MOR
 		add_core_of = SMR
 		victory_points = {
-			8011 1
+			8111 1
 		}
 	}
 	
