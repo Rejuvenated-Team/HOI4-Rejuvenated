@@ -220,10 +220,10 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_military_research_old_shine"
-		texturefile = "gfx/interface/goals/military_research_old.dds"
+		texturefile = "gfx/interface/goals/kr/military_research_old.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/military_research_old.dds"
+			animationmaskfile = "gfx/interface/goals/kr/military_research_old.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -236,7 +236,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/military_research_old.dds"
+			animationmaskfile = "gfx/interface/goals/kr/military_research_old.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
