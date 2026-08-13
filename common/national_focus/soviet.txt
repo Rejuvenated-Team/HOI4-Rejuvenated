@@ -54,7 +54,7 @@ focus_tree = {
 		id = SOV_infrastructure_effort_nsb
 
 		icon = GFX_focus_generic_road_investment
-		x = 1
+		x = 3
 		y = 0
 		cost = 5
 
@@ -396,7 +396,7 @@ focus_tree = {
 
 		icon = GFX_focus_RJ_SOV_expand_the_railway_network
 		prerequisite = { focus = SOV_finish_the_five_year_plan }
-		x = -2
+		x = 1
 		y = 1
 		relative_position_id = SOV_finish_the_five_year_plan
 		cost = 10
@@ -459,11 +459,399 @@ focus_tree = {
 	}
 
 	focus = {
+		id = RJ_SOV_continue_eastern_development
+
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = { focus = SOV_improve_railway_network }
+		prerequisite = { focus = SOV_eastern_development }
+		x = 1
+		y = 2
+		relative_position_id = SOV_improve_railway_network
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			409 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			560 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			657 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			# Khabarovsk - Nikolayev-on-Amur
+			build_railway = {
+				path = { 12189 7266 3963 12136 1343 7249 4841 7868 12559 }
+				level = 2
+			}
+
+			
+			409 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 7868
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_manpower = 60000
+			}
+
+			560 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_manpower = 85000
+				increase_state_category = yes
+			}
+
+			657 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_manpower = 45000
+				increase_state_category = yes
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_SOV_expand_the_eastern_railway
+
+		icon = GFX_focus_generic_railroad
+		prerequisite = { focus = RJ_SOV_continue_eastern_development }
+		x = -1
+		y = 1
+		relative_position_id = RJ_SOV_continue_eastern_development
+		cost = 7.2
+
+		ai_will_do = {
+			base = 3
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		available = {
+			560 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			562 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			874 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			822 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			637 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			409 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			# Khabarovsk - Sovetskaya Gavan
+			build_railway = {
+				path = { 12189 7266 1397 9749 9589 9604 }
+			}
+
+			# Nikolayevsk-on-Amur - Albazino
+			build_railway = {
+				path = { 12559 4844 10577 7871 1724 1807 4847 4731 10678 7851 }
+			}
+
+			build_railway = {
+				path = { 1772 10598 4810 12518 12551 12683 1865 10540 4744 13063 }
+			}
+			
+			#Anadyr - Petropavlosk-Kamchatskiy
+			build_railway = {
+				path = { 13063 4744 1823 1863 7878 4728 }
+			}
+
+			560 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 1807
+					instant_build = yes
+				}
+			}
+
+			874 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 12683
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_SOV_reorganize_the_civilian_sectors
+
+		icon = GFX_focus_RJ_industry1
+		prerequisite = { focus = RJ_SOV_continue_eastern_development }
+		x = 0
+		y = 2
+		relative_position_id = RJ_SOV_continue_eastern_development
+		cost = 7.2
+
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {
+			655 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			822 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			637 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			655 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_manpower = 55000
+				increase_state_category = yes
+			}
+			822 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_manpower = 85000
+				increase_state_category = yes
+			}
+			637 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_manpower = 80000
+				increase_state_category = yes
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_SOV_fill_in_the_infrastructure_gaps
+
+		icon = GFX_focus_RJ_industry4
+		prerequisite = { focus = RJ_SOV_reorganize_the_civilian_sectors }
+		x = 0
+		y = 1
+		relative_position_id = RJ_SOV_reorganize_the_civilian_sectors
+		cost = 7.2
+
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {
+			655 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			822 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			637 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			874 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			562 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			657 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			560 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			409 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			655 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			822 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			637 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			874 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			562 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			657 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			560 = {
+				add_building_construction = {
+					type = energy_infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			409 = {
+				add_building_construction = {
+					type = energy_infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_SOV_increase_the_militarization
+
+		icon = GFX_focus_RJ_USA_military_construction
+		prerequisite = { focus = RJ_SOV_continue_eastern_development }
+		x = 1
+		y = 1
+		relative_position_id = RJ_SOV_continue_eastern_development
+		cost = 10
+
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {
+			560 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			409 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			637 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			560 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			409 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			637 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
 		id = SOV_third_five_year_plan
 
 		icon = GFX_focus_RJ_SOV_third_five_year_plan
 		prerequisite = { focus = SOV_finish_the_five_year_plan }
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = SOV_finish_the_five_year_plan
 		cost = 10
@@ -1310,7 +1698,7 @@ focus_tree = {
 		icon = GFX_focus_rocketry
 		prerequisite = { focus = SOV_fourth_five_year_plan }
 		prerequisite = { focus = SOV_national_academies_of_sciences }
-		x = 3
+		x = 5
 		y = 1
 		relative_position_id = SOV_fourth_five_year_plan
 		cost = 10
