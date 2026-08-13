@@ -1,0 +1,95 @@
+HUN_Hungarian_Army = {  
+	
+	icon = GFX_idea_HUN_army  
+ 
+	#INITIAL  
+	
+
+	#FUTURE
+    army_attack_factor = HUN_Hungarian_Army_army_attack_factor  
+    army_speed_factor = HUN_Hungarian_Army_army_speed_factor 
+    army_defence_factor = HUN_Hungarian_Army_army_defence_factor
+    army_org_factor = HUN_Hungarian_Army_army_org_factor 
+    army_org_regain = HUN_Hungarian_Army_army_org_regain 
+    experience_gain_army_factor = HUN_Hungarian_Army_experience_gain_army_factor
+    experience_gain_air_factor = HUN_Hungarian_Army_experience_gain_air_factor
+    land_doctrine_cost_factor = HUN_Hungarian_Army_land_doctrine_cost_factor 
+    air_doctrine_cost_factor = HUN_Hungarian_Army_air_doctrine_cost_factor  
+    army_armor_attack_factor =  HUN_Hungarian_Army_army_armor_attack_factor
+    mechanized_attack_factor =  HUN_Hungarian_Army_mechanized_attack_factor
+    motorized_attack_factor =   HUN_Hungarian_Army_motorized_attack_factor  
+    army_core_defence_factor =  HUN_Hungarian_Army_army_core_defence_factor
+    army_armor_defence_factor =     HUN_Hungarian_Army_army_armor_defence_factor
+    mechanized_defence_factor =     HUN_Hungarian_Army_mechanized_defence_factor
+    motorized_defence_factor =      HUN_Hungarian_Army_motorized_defence_factor 
+    supply_consumption_factor =     HUN_Hungarian_Army_supply_consumption_factor 
+    attrition = HUN_Hungarian_Army_attrition 
+    resistance_damage_to_garrison_on_our_occupied_states = HUN_Hungarian_Army_resistance_damage_to_garrison_on_our_occupied_states
+    resistance_decay_on_our_occupied_states = HUN_Hungarian_Army_resistance_decay_on_our_occupied_states
+    resistance_growth_on_our_occupied_states = HUN_Hungarian_Army_resistance_growth_on_our_occupied_states
+    resistance_target_on_our_occupied_states = HUN_Hungarian_Army_resistance_target_on_our_occupied_states 
+    training_time_army_factor = HUN_Hungarian_training_time_army_factor 
+    minimum_training_level = HUN_Hungarian_minimum_training_level 
+	 
+}
+
+HUN_Political_Disputy = {  
+	
+	icon = xxx 
+
+	#INITIAL
+	
+	
+
+	#FUTURE
+	political_power_factor = HUN_Political_Disputy_political_power_factor
+    stability_factor = HUN_Political_Disputy_stability_factor
+    war_support_factor = HUN_Political_Disputy_war_support_factor
+    drift_defence_factor = HUN_Political_Disputy_drift_defence_factor
+    fascism_acceptance = HUN_Political_Disputy_fascism_acceptance
+    communism_acceptance = HUN_Political_Disputy_communism_acceptance  
+}
+
+HUN_Horthys_New_Government = {
+
+    icon = xxx
+     
+	#INITIAL
+	
+	
+
+	#FUTURE 
+    political_power_factor = HUN_Horthys_New_Government_power_factor
+    war_support_factor = HUN_Horthys_New_Government_war_support_factor 
+    stability_factor = HUN_Horthys_New_Government_stability_factor
+    stability_weekly = HUN_Horthys_New_Government_stability_weekly 
+    surrender_limit = HUN_Horthys_New_Government_surrender_limit 
+    fascism_drift = HUN_Horthys_New_Government_fascism_drift    
+    fascism_acceptance = HUN_Horthys_New_Government_fascism_acceptance  
+
+}   
+
+HUN_Ipari_Fejlesztes = {     
+	
+	icon = xxx  
+ 
+	#INITIAL
+	
+	
+
+	#FUTURE    
+    political_power_factor = HUN_Ipari_Fejlesztes_political_power_factor
+    consumer_goods_factor = HUN_Ipari_Fejlesztes_consumer_goods_factor  
+    research_speed_factor = HUN_Ipari_Fejlesztes_research_speed_factor
+    local_resources_factor = HUN_Ipari_Fejlesztes_local_resources_factor
+    production_factory_efficiency_gain_factor = HUN_Ipari_Fejlesztes_production_factory_efficiency_gain_factor 
+    production_factory_max_efficiency_factor = HUN_Ipari_Fejlesztes_production_factory_max_efficiency_factor 
+    production_factory_start_efficiency_factor = HUN_Ipari_Fejlesztes_production_factory_start_efficiency_factor
+    line_change_production_efficiency_factor = HUN_Ipari_Fejlesztes_line_change_production_efficiency_factor
+    production_lack_of_resource_penalty_factor = HUN_Ipari_Fejlesztes_production_lack_of_resource_penalty_factor
+    production_speed_buildings_factor = HUN_Ipari_Fejlesztes_production_speed_buildings_factor
+    production_speed_industrial_complex_factor = HUN_Ipari_Fejlesztes_production_speed_industrial_complex_factor
+    production_speed_arms_factory_factor =  HUN_Ipari_Fejlesztes_production_speed_arms_factory_factor
+    industrial_capacity_factory = HUN_Ipari_Fejlesztes_industrial_capacity_factory  
+    global_building_slots = HUN_Ipari_Fejlesztes_global_building_slots_factor 
+} 
