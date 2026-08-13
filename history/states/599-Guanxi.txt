@@ -2,11 +2,11 @@ state= {
 	id=599
 	name="STATE_599"
 	manpower = 8685200
-	state_category = town
+	state_category = large_town
 	resources={
-		tungsten=15 # was: 20
+		tungsten=22 # was: 20
 		steel= 15 # was: 20
-		chromium = 3 # was: 4
+		chromium = 8
 	}
 
 	history= {
@@ -43,5 +43,5 @@ state= {
 		1023 1597 4134 4152 7095 7128 7168 7210 10039 10404 10431 12407 12436 
 	}
 
-	local_supplies=0.0 
+	local_supplies=3.0 
 }

@@ -2,7 +2,7 @@ state={
 	id=602
 	name="STATE_602"
 	resources={
-		tungsten=6.000
+		tungsten=37.000
 	}
 
 	history={
@@ -15,15 +15,6 @@ state={
 			infrastructure = 2 #was: 3 was: 5
 			industrial_complex = 1 #was 2
 			arms_factory = 1 #was 2
-		}
-		1939.1.1 = {
-			buildings = {
-				industrial_complex = 2
-				infrastructure = 3 #was: 6
-				air_base = 1
-				arms_factory = 1
-			}
-
 		}
 
 		victory_points = {
@@ -41,7 +32,7 @@ state={
 	}
 	manpower=20293700
 	buildings_max_level_factor=1.000
-	state_category=town
+	state_category=city
 
-	local_supplies=0.0 
+	local_supplies=6.0 
 }
