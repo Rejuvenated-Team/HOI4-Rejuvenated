@@ -7207,7 +7207,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_swap_to_political_advisors
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_RJ_army_review
 		prerequisite = { focus = SOV_military_reorganization }
 		prerequisite = { focus = SOV_lessons_of_war }
 		x = 3
