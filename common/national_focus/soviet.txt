@@ -2289,11 +2289,7 @@ focus_tree = {
 			GFX_goal_generic_soviet_construction = {
 				has_government = communism
 			}
-			GFX_goal_generic_construction2 = {
-				NOT = {
-					has_government = communism
-				}
-			}
+			GFX_goal_generic_construction2 = yes
 		}
 		prerequisite = { focus = SOV_fourth_five_year_plan }
 		prerequisite = { focus = SOV_national_academies_of_sciences }
@@ -7110,11 +7106,7 @@ focus_tree = {
 			GFX_goal_generic_major_war = {
 				has_government = communism
 			}
-			GFX_focus_GRE_an_orthodox_state = {
-				NOT = {
-					has_government = communism
-				}
-			}
+			GFX_focus_GRE_an_orthodox_state = yes
 		}
 		prerequisite = { focus = SOV_military_reorganization }
 		prerequisite = { focus = SOV_lessons_of_war }
@@ -7331,11 +7323,7 @@ focus_tree = {
 			GFX_focus_SOV_the_glory_of_the_red_army_communism = {
 				has_government = communism
 			}
-			GFX_focus_SOV_the_glory_of_the_red_army_alternative = {
-				NOT = {
-					has_government = communism
-				}
-			}
+			GFX_focus_SOV_the_glory_of_the_red_army_alternative = yes
 		}
 		prerequisite = { focus = SOV_Deep_Operations }
 		x = 0
