@@ -7741,7 +7741,7 @@
 				}
 				add_extra_state_shared_building_slots = 3
 			}
-		 custom_effect_tooltip = FRA_slum_clearing_effect_tt
+			custom_effect_tooltip = FRA_slum_clearing_effect_tt #RJ
 		}
 	}
 	focus = {
