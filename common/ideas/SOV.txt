@@ -12,11 +12,11 @@ ideas = {
 	country= {
 
 		SOV_second_five_year_plan_fake_1936_ns = { #Only used for 1936 bookmark (dynamic modifiers don't show up there)
-			name = RJ_idea_SOV_five_year_plan
+			name = SOV_second_five_year_plan_dynamic_modifier
 
 			removal_cost = -1
 
-			picture = SOV_second_five_year_plan
+			picture = RJ_idea_SOV_five_year_plan
 
 			allowed = {
 				always = no
@@ -31,11 +31,11 @@ ideas = {
 		}
 
 		SOV_second_five_year_plan_fake_1939_ns = { #Only used for 1939 bookmark (dynamic modifiers don't show up there)
-			name = RJ_idea_SOV_five_year_plan
+			name = SOV_second_five_year_plan_dynamic_modifier
 
 			removal_cost = -1
 
-			picture = SOV_third_five_year_plan
+			picture = RJ_idea_SOV_five_year_plan
 
 			allowed = {
 				always = no
