@@ -259,6 +259,8 @@
  SOV_foreign_investment_tt: "Adds one §Hcivilian factory§! and one §Hmilitary factory§! for relations above §H70§! with the following nations:\n- @ENG§H[ENG.getnamedefcap]§!\n- @USA§H[USA.getnamedefcap]§!\n- @GER§H[GER.getnamedefcap]§!\n- @ITA§H[ITA.getnamedefcap]§!\n- @FRA§H[FRA.getnamedefcap]§!\n- @JAP§H[JAP.getnamedefcap]§!\nTherefore, it is possible to gain up to §Htwelve§! factories in total.\n\nHere are the current effects:"
  SOV_internal_management_tt: "Some former members of government will return to the country and can now be hired as advisors."
 
+ RJ_SOV_air_production_tt: "$SOV_modify_airforce_ns_intro$ \nAir Accidents Chance: §R+5.0%§! \n§YAll types of aircraft§!: £production_cost Production Cost: §G-15.00%§! \n\n"
+
  controls_highlighted_states_tt: "The §Hhighlighted§! states are controlled by us, or one of our subjects."
  SOV_memel_disclusion_tt: "§H[188.getname]§! is not required, but will be cored."
  SOV_has_integrated_congress_poland_tt: "Has integrated §HCongress Poland§!"
