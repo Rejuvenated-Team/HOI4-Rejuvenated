@@ -177,7 +177,7 @@ focus_tree = {
 	focus = {
 		id = SOV_heavy_industry
 
-		icon = GFX_focus_RJ_industry3
+		icon = GFX_generic_heavy_industry
 		x = 2
 		y = 0
 		relative_position_id = SOV_infrastructure_effort_nsb
@@ -320,7 +320,7 @@ focus_tree = {
 	focus = {
 		id = SOV_finish_the_five_year_plan
 
-		icon = GFX_focus_RJ_SOV_five_year_plan
+		icon = GFX_focus_generic_industry_1
 		prerequisite = { focus = SOV_infrastructure_effort_nsb }
 		prerequisite = { focus = SOV_heavy_industry }
 		x = 1
@@ -372,23 +372,6 @@ focus_tree = {
 					industrial_complex > 0
 					free_building_slots = {
 						building = industrial_complex
-						size > 2
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = SOV_finish_five_year_plan_2IC
-			}
-			random_owned_controlled_state = {
-				limit = {
-					industrial_complex > 0
-					free_building_slots = {
-						building = industrial_complex
 						size > 1
 						include_locked = yes
 					}
@@ -411,12 +394,12 @@ focus_tree = {
 	focus = {
 		id = SOV_improve_railway_network
 
-		icon = GFX_focus_RJ_SOV_expand_the_railway_network
+		icon = GFX_goal_generic_railway_construction
 		prerequisite = { focus = SOV_finish_the_five_year_plan }
-		x = 1
+		x = -2
 		y = 1
 		relative_position_id = SOV_finish_the_five_year_plan
-		cost = 7.2
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -476,399 +459,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = RJ_SOV_continue_eastern_development
-
-		icon = GFX_focus_generic_modernize_industry
-		prerequisite = { focus = SOV_improve_railway_network }
-		prerequisite = { focus = SOV_eastern_development }
-		x = 1
-		y = 2
-		relative_position_id = SOV_improve_railway_network
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			409 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			560 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			657 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-		}
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-
-		completion_reward = {
-			# Khabarovsk - Nikolayev-on-Amur
-			build_railway = {
-				path = { 12189 7266 3963 12136 1343 7249 4841 7868 12559 }
-				level = 2
-			}
-
-			
-			409 = {
-				add_building_construction = {
-					type = supply_node
-					level = 1
-					province = 7868
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-				}
-				add_manpower = 60000
-			}
-
-			560 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
-				add_manpower = 85000
-				increase_state_category = yes
-			}
-
-			657 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
-				add_manpower = 45000
-				increase_state_category = yes
-			}
-		}
-	}
-
-	focus = {
-		id = RJ_SOV_expand_the_eastern_railway
-
-		icon = GFX_focus_generic_railroad
-		prerequisite = { focus = RJ_SOV_continue_eastern_development }
-		x = -1
-		y = 1
-		relative_position_id = RJ_SOV_continue_eastern_development
-		cost = 7.2
-
-		ai_will_do = {
-			base = 3
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
-		}
-
-		available = {
-			560 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			562 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			874 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			822 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			637 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			409 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-		}
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-
-		completion_reward = {
-			# Khabarovsk - Sovetskaya Gavan
-			build_railway = {
-				path = { 12189 7266 1397 9749 9589 9604 }
-			}
-
-			# Nikolayevsk-on-Amur - Albazino
-			build_railway = {
-				path = { 12559 4844 10577 7871 1724 1807 4847 4731 10678 7851 }
-			}
-
-			build_railway = {
-				path = { 1772 10598 4810 12518 12551 12683 1865 10540 4744 13063 }
-			}
-			
-			#Anadyr - Petropavlosk-Kamchatskiy
-			build_railway = {
-				path = { 13063 4744 1823 1863 7878 4728 }
-			}
-
-			560 = {
-				add_building_construction = {
-					type = supply_node
-					level = 1
-					province = 1807
-					instant_build = yes
-				}
-			}
-
-			874 = {
-				add_building_construction = {
-					type = supply_node
-					level = 1
-					province = 12683
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = RJ_SOV_reorganize_the_civilian_sectors
-
-		icon = GFX_focus_RJ_industry1
-		prerequisite = { focus = RJ_SOV_continue_eastern_development }
-		x = 0
-		y = 2
-		relative_position_id = RJ_SOV_continue_eastern_development
-		cost = 7.2
-
-		ai_will_do = {
-			base = 2
-		}
-
-		available = {
-			655 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			822 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			637 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-		}
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-
-		completion_reward = {
-			655 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_manpower = 55000
-				increase_state_category = yes
-			}
-			822 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_manpower = 85000
-				increase_state_category = yes
-			}
-			637 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_manpower = 80000
-				increase_state_category = yes
-			}
-		}
-	}
-
-	focus = {
-		id = RJ_SOV_fill_in_the_infrastructure_gaps
-
-		icon = GFX_focus_RJ_industry4
-		prerequisite = { focus = RJ_SOV_reorganize_the_civilian_sectors }
-		x = 0
-		y = 1
-		relative_position_id = RJ_SOV_reorganize_the_civilian_sectors
-		cost = 7.2
-
-		ai_will_do = {
-			base = 2
-		}
-
-		available = {
-			655 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			822 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			637 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			874 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			562 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			657 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			560 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			409 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-		}
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-
-		completion_reward = {
-			655 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			822 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			637 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			874 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			562 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			657 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			560 = {
-				add_building_construction = {
-					type = energy_infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			409 = {
-				add_building_construction = {
-					type = energy_infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = RJ_SOV_increase_the_militarization
-
-		icon = GFX_focus_RJ_USA_military_construction
-		prerequisite = { focus = RJ_SOV_continue_eastern_development }
-		x = 1
-		y = 1
-		relative_position_id = RJ_SOV_continue_eastern_development
-		cost = 10
-
-		ai_will_do = {
-			base = 2
-		}
-
-		available = {
-			560 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			409 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			637 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-		}
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-
-		completion_reward = {
-			560 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			409 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			637 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = SOV_third_five_year_plan
 
-		icon = GFX_focus_RJ_SOV_third_five_year_plan
+		icon = GFX_focus_generic_industry_2
 		prerequisite = { focus = SOV_finish_the_five_year_plan }
-		x = -2
+		x = 0
 		y = 1
 		relative_position_id = SOV_finish_the_five_year_plan
 		cost = 10
@@ -2116,7 +1711,6 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
-					increase_state_category = yes
 				}
 				add_to_temp_variable = { SOV_states_targeted_eastern_development = 1 }
 			}
@@ -2146,7 +1740,6 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
-				increase_state_category = yes
 			}
 
 			if = {
@@ -2173,7 +1766,6 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
-					increase_state_category = yes
 				}
 				add_to_temp_variable = { SOV_states_targeted_eastern_development = 1 }
 			}
@@ -2202,7 +1794,6 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
-					increase_state_category = yes
 				}
 			}
 		}
@@ -2306,7 +1897,16 @@ focus_tree = {
 	focus = {
 		id = SOV_transformation_of_nature
 		dynamic = yes
-		icon = GFX_focus_RJ_industry1
+		icon = {
+			GFX_goal_generic_soviet_construction = {
+				has_government = communism
+			}
+			GFX_goal_generic_construction2 = {
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
 		prerequisite = { focus = SOV_fourth_five_year_plan }
 		prerequisite = { focus = SOV_national_academies_of_sciences }
 		x = 2
@@ -2619,7 +2219,7 @@ focus_tree = {
 	focus = {
 		id = SOV_found_the_jet_institute
 
-		icon = GFX_focus_generic_jet_planes
+		icon = GFX_goal_generic_build_airforce
 		prerequisite = { focus = SOV_the_ussr_academy_of_sciences }
 		prerequisite = { focus = SOV_merge_aircraft_plants }
 		x = 0
@@ -2691,7 +2291,7 @@ focus_tree = {
 				}
 			}
 			
-			custom_effect_tooltip = RJ_increase_aircraft_production_tt
+			custom_effect_tooltip = SOV_increase_aircraft_production_ns_tt
 
 			add_tech_bonus = {
 				name = SOV_increase_aircraft_production
@@ -3431,7 +3031,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 7.2
+		cost = 5
 
 		available = {
 			OR = {
@@ -3439,21 +3039,6 @@ focus_tree = {
 					is_owned_and_controlled_by = ROOT
 				}
 				409 = { #KHABAROVSK
-					is_owned_and_controlled_by = ROOT
-				}
-				560 = {
-					is_owned_and_controlled_by = ROOT
-				}
-				655 = {
-					is_owned_and_controlled_by = ROOT
-				}
-				637 = {
-					is_owned_and_controlled_by = ROOT
-				}
-				822 = {
-					is_owned_and_controlled_by = ROOT
-				}
-				875 = {
 					is_owned_and_controlled_by = ROOT
 				}
 			}
@@ -3493,7 +3078,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			if = {
+			if = { #VLADIVOSTOK - Improved naval base + AA + coastal fort
 				limit = {
 					has_full_control_of_state = 409
 				}
@@ -3519,161 +3104,6 @@ focus_tree = {
 						level = 2
 						instant_build = yes
 						province = 9604
-					}
-					set_state_flag = SOV_naval_bases_reinforced_flag
-				}
-			}
-
-			if = {
-				limit = {
-					has_full_control_of_state = 560
-				}
-				560 = {
-					add_building_construction = {
-						type = anti_air_building
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = air_base
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = naval_base
-						level = 2
-						instant_build = yes
-						province = 12559
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						instant_build = yes
-						province = 12559
-					}
-					set_state_flag = SOV_naval_bases_reinforced_flag
-				}
-			}
-
-			if = {
-				limit = {
-					has_full_control_of_state = 655
-				}
-				655 = {
-					add_building_construction = {
-						type = anti_air_building
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = air_base
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = naval_base
-						level = 2
-						instant_build = yes
-						province = 855
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						instant_build = yes
-						province = 855
-					}
-					set_state_flag = SOV_naval_bases_reinforced_flag
-				}
-			}
-
-			if = {
-				limit = {
-					has_full_control_of_state = 637
-				}
-				637 = {
-					add_building_construction = {
-						type = anti_air_building
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = air_base
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = naval_base
-						level = 2
-						instant_build = yes
-						province = 4728
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						instant_build = yes
-						province = 4728
-					}
-					set_state_flag = SOV_naval_bases_reinforced_flag
-				}
-			}
-
-			if = {
-				limit = {
-					has_full_control_of_state = 822
-				}
-				822 = {
-					add_building_construction = {
-						type = anti_air_building
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = air_base
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = naval_base
-						level = 2
-						instant_build = yes
-						province = 13063
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						instant_build = yes
-						province = 13063
-					}
-					set_state_flag = SOV_naval_bases_reinforced_flag
-				}
-			}
-
-			if = {
-				limit = {
-					has_full_control_of_state = 875
-				}
-				875 = {
-					add_building_construction = {
-						type = anti_air_building
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = air_base
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = naval_base
-						level = 2
-						instant_build = yes
-						province = 13204
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						instant_build = yes
-						province = 13204
 					}
 					set_state_flag = SOV_naval_bases_reinforced_flag
 				}
@@ -5590,7 +5020,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_move_industry_to_the_urals
-		icon = GFX_goal_RUS_urals_industry
+		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = SOV_military_engineering_university }
 		x = -3
 		y = 1
@@ -7238,7 +6668,16 @@ focus_tree = {
 	focus = {
 		id = SOV_keep_commissars_organization
 		dynamic = yes
-		icon = GFX_goal_generic_major_war
+		icon = {
+			GFX_goal_generic_major_war = {
+				has_government = communism
+			}
+			GFX_focus_GRE_an_orthodox_state = {
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
 		prerequisite = { focus = SOV_military_reorganization }
 		prerequisite = { focus = SOV_lessons_of_war }
 		x = 1
@@ -7329,73 +6768,16 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_adjoined_battle_priests
-		icon = GFX_focus_GRE_an_orthodox_state
-		prerequisite = { focus = SOV_military_reorganization }
-		prerequisite = { focus = SOV_lessons_of_war }
-		x = 1
-		y = 1
-		relative_position_id = SOV_military_reorganization
-		cost = 10
-
-		mutually_exclusive = { focus = SOV_swap_to_political_advisors }
-
-		allow_branch = {
-			OR = {
-				has_government = fascism
-				has_government = neutrality
-			}
-		}
-
-		available = {
-			has_completed_focus = SOV_church_candidates
-		}
-
-		bypass = {
-			has_completed_focus = SOV_depoliticize_the_military
-			has_completed_focus = SOV_socialist_humanism
-		}
-		
-		search_filters = {}
-
-		completion_reward = {
-			if = {
-				limit = {
-					has_idea = SOV_politicized_military
-				}
-				swap_ideas = {
-					remove_idea = SOV_politicized_military
-					add_idea = SOV_politicized_military_battle_priests
-				}
-			}
-			else_if = { #Just in case weird shit happens
-				limit = {
-					has_idea = SOV_politicized_military_humanism
-				}
-				swap_ideas = {
-					remove_idea = SOV_politicized_military_humanism
-					add_idea = SOV_politicized_military_battle_priests
-				}
-			}
-			else = {	
-				add_ideas = SOV_politicized_military_battle_priests
-			}
-		}
-	}
-
-	focus = {
 		id = SOV_swap_to_political_advisors
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = SOV_military_reorganization }
 		prerequisite = { focus = SOV_lessons_of_war }
-
 		x = 3
 		y = 1
 		relative_position_id = SOV_military_reorganization
 		cost = 10
 
 		mutually_exclusive = { focus = SOV_keep_commissars_organization }
-		mutually_exclusive = { focus = SOV_adjoined_battle_priests }
 
 		available = {
 
@@ -7449,7 +6831,16 @@ focus_tree = {
 	focus = {
 		id = SOV_the_glory_of_the_red_army
 		dynamic = yes
-		icon = GFX_focus_RJ_army_review
+		icon = {
+			GFX_focus_SOV_the_glory_of_the_red_army_communism = {
+				has_government = communism
+			}
+			GFX_focus_SOV_the_glory_of_the_red_army_alternative = {
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
 		prerequisite = { focus = SOV_keep_commissars_organization focus = SOV_swap_to_political_advisors focus = SOV_adjoined_battle_priests }
 		x = 1
 		y = 1
@@ -8172,7 +7563,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_war_economy
-		icon = GFX_focus_RJ_industry2
+		icon = GFX_goal_FRA_common_economic_plan
 		prerequisite = { focus = SOV_organization_centralization_discipline }
 		x = 0
 		y = 1
