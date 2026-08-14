@@ -561,7 +561,7 @@ SOV_soviet_imports = { #STATE MODIFIER
 SOV_second_five_year_plan_dynamic_modifier = { #NATIONAL SPIRIT
 	enable = { always = yes }
 
-	icon = GFX_idea_SOV_second_five_year_plan
+	icon = GFX_idea_RJ_idea_SOV_five_year_plan
 
 	#INITIAL
 	production_factory_efficiency_gain_factor = SOV_fyp_production_factory_efficiency_gain_factor #-0.15
@@ -573,7 +573,7 @@ SOV_second_five_year_plan_dynamic_modifier = { #NATIONAL SPIRIT
 SOV_third_five_year_plan_dynamic_modifier = { #NATIONAL SPIRIT - Basic
 	enable = { always = yes }
 
-	icon = GFX_idea_SOV_third_five_year_plan
+	icon = GFX_idea_RJ_idea_SOV_five_year_plan
 
 	#PREVIOUS -> Third Five Year Plan
 	production_factory_efficiency_gain_factor = SOV_fyp_production_factory_efficiency_gain_factor #-0.1
@@ -591,7 +591,7 @@ SOV_third_five_year_plan_dynamic_modifier = { #NATIONAL SPIRIT - Basic
 SOV_third_five_year_plan_civilian_dynamic_modifier = { #NATIONAL SPIRIT - Civilian
 	enable = { always = yes }
 
-	icon = GFX_idea_SOV_third_five_year_plan_civilian
+	icon = GFX_idea_RJ_idea_SOV_five_year_plan
 
 	#PREVIOUS
 	production_factory_efficiency_gain_factor = SOV_fyp_production_factory_efficiency_gain_factor #-0.1
@@ -612,7 +612,7 @@ SOV_third_five_year_plan_civilian_dynamic_modifier = { #NATIONAL SPIRIT - Civili
 SOV_third_five_year_plan_military_dynamic_modifier = { #NATIONAL SPIRIT - Military
 	enable = { always = yes }
 
-	icon = GFX_idea_SOV_third_five_year_plan_military
+	icon = GFX_idea_RJ_idea_SOV_five_year_plan
 
 	#PREVIOUS
 	production_factory_efficiency_gain_factor = SOV_fyp_production_factory_efficiency_gain_factor #-0.1 (turned to 0 with Optmize Production Lines)
@@ -636,7 +636,7 @@ SOV_third_five_year_plan_military_dynamic_modifier = { #NATIONAL SPIRIT - Milita
 SOV_fourth_five_year_plan_dynamic_modifier = { #NATIONAL SPIRIT
 	enable = { always = yes }
 
-	icon = GFX_idea_SOV_fourth_five_year_plan
+	icon = GFX_idea_RJ_idea_SOV_five_year_plan
 
 	#PREVIOUS
 	production_factory_efficiency_gain_factor = SOV_fyp_production_factory_efficiency_gain_factor #0

@@ -6,7 +6,7 @@ state={
 		coal = 3
 	}
 	
-	state_category = rural
+	state_category = large_town
 
 	history={
 		owner = TAN
@@ -24,5 +24,5 @@ state={
 
 	provinces={	1676 10627 1877 10597 }
 
-	local_supplies=1.0 
+	local_supplies=5.0 
 }
