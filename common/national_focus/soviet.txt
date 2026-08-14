@@ -978,7 +978,7 @@ focus_tree = {
 	focus = {
 		id = SOV_industrial_modernization
 
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_focus_RJ_industry2
 		prerequisite = { focus = SOV_reorganize_the_pc_of_heavy_industry }
 		x = 0
 		y = 3
@@ -1014,7 +1014,7 @@ focus_tree = {
 	focus = {
 		id = SOV_increase_state_reserves
 
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_resource_extraction
 		prerequisite = { focus = SOV_third_five_year_plan }
 		x = 0
 		y = 1
