@@ -15,9 +15,8 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_kr_portrait_BRA_eurico_gaspar_dutra_small"
-		#texturefile = "gfx/interface/ideas/bra/advisors/kr_advisor_BRA_eurico_gaspar_dutra.dds"
-		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
+		name = "GFX_rj_portrait_BRA_eurico_gaspar_dutra_small"
+		texturefile = "gfx/interface/ideas/bra/advisors/rj_portrait_BRA_eurico_gaspar_dutra.dds"
 	}
 
 	spriteType = {
@@ -35,11 +34,6 @@ spriteTypes = {
 		name = "GFX_rj_portrait_BRA_senado_small"
 		#texturefile = "gfx/interface/ideas/bra/advisors/rj_advisor_BRA_senado.dds"
 		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
-	}
-
-	spriteType = {
-		name = "GFX_RJ_portrait_BRA_dutra_small"
-		texturefile = "gfx/interface/ideas/bra/advisors/RJ_advisor_BRA_eurico_gaspar_dutra.dds"
 	}
 
 	##################

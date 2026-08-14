@@ -15,8 +15,8 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_kr_portrait_BRA_eurico_gaspar_dutra"
-		texturefile = "gfx/leaders/BRA/kr_portrait_BRA_eurico_gaspar_dutra.dds"
+		name = "GFX_rj_portrait_BRA_eurico_gaspar_dutra"
+		texturefile = "gfx/leaders/BRA/rj_portrait_BRA_eurico_gaspar_dutra.dds"
 	}
 
 	spriteType = {
