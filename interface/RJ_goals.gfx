@@ -810,6 +810,53 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/sov/SOV_democratic_socialism.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_expand_the_railway_network"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_expand_the_railway_network.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_third_five_year_plan"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_third_five_year_plan.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_five_year_plan"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_five_year_plan.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_expand_the_red_fleet"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_expand_the_red_fleet.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_rehabilitated_military"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_rehabilitated_military.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_military_reorganization"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_military_reorganization.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_development_of_tankograd"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_development_of_tankograd.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_assembly_line_heavy_tanks"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_assembly_line_heavy_tanks.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_deep_operations"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_deep_operations.dds"
+	}
+
+
+
 	###########
 	### USA ###
 	###########
@@ -1217,26 +1264,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_RJ_USA_airborne_divisions"
 		texturefile = "gfx/interface/goals/usa/RJ_USA_airborne_divisions.dds"
-	}
-
-
-	#######################################################################################
-	########### SOVIET UNION ##############################################################
-	#######################################################################################
-
-	SpriteType = {
-		name = "GFX_focus_RJ_SOV_five_year_plan"
-		texturefile = "gfx/interface/goals/sov/RJ_SOV_five_year_plan.dds"
-	}
-
-	SpriteType = {
-		name = "GFX_focus_RJ_SOV_expand_the_railway_network"
-		texturefile = "gfx/interface/goals/sov/RJ_SOV_expand_the_railway_network.dds"
-	}
-
-	SpriteType = {
-		name = "GFX_focus_RJ_SOV_third_five_year_plan"
-		texturefile = "gfx/interface/goals/sov/RJ_SOV_third_five_year_plan.dds"
 	}
 
 }
