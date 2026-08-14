@@ -141,21 +141,7 @@ ideas = {
 	}
 	
 	
-	high_command = {
-		
-		FIN_simo_hayha = {
-			ledger = army
-
-			allowed = {
-				original_tag = FIN
-			}
-			
-			traits = { army_sniper_adherent }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}	
+	high_command = {	
 
 		ITA_paolo_aloisi = {
 			ledger = army

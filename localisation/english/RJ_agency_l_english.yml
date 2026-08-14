@@ -1,7 +1,4 @@
 ﻿l_english:
-  
-#Modded TALL-EIS
-
 #Agency Upgrades
  upgrade_internal_security: "Internal Security"
  upgrade_internal_security_desc: "§LAddressing places within our own government and military easily exploited by foreign intelligence services is the best defense against the hostile actions of enemy operatives.  By educating personnel in all fields of security, and monitoring trusted personnel for risks in areas such as financial stress, political views, or vulnerability to blackmail we can counter the efforts of our enemies.§!"
@@ -21,15 +18,6 @@
  operative_spyhunter_desc: "This Operative is skilled at hunting and catching enemy agents."
  operative_codebreaker: "Cipher Expert"
  operative_codebreaker_desc: "This Operative is gifted in the use of codes and ciphers."
-
-#Leader Traits
- spymaster: "Spymaster"
- iron_heart: "Heart of Iron"
- spy_hunter: "Spy Hunter"
- army_specops_instructor_1:1 "Spec-Ops Instructor\n(Specialist)"
- army_specops_instructor_2:1 "Spec-Ops Instructor\n(Expert)"
- army_specops_instructor_3:1 "Spec-Ops Instructor\n(Genius)"
- army_sniper_adherent:1 "Sniper Adherent"
 
 #Agent Ranks
  operative_skill_3: "Special Agent"
@@ -62,7 +50,6 @@
  operation_blow_ship_desc: "§LWhile its unlikely our naval asset will work with us again afterwards, the opportunity to destroy an enemy vessel shouldn't be missed.§!"
 
 #Leader Names
- FIN_simo_hayha: "Simo Häyhä"
  FRA_louis_rivet: "Louis Rivet"
  ITA_cesare_ame: "Cesare Amè"
  ITA_paolo_aloisi: "Paolo Aloisi"

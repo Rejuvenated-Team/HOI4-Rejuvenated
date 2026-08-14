@@ -81,6 +81,15 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/eng/advisors/rj_advisor_ENG_william_stephenson.dds"
 	}
 
+	#####################
+	### FIN - Finland ###
+	#####################
+
+	spriteType = {
+		name = "GFX_rj_portrait_FIN_simo_hayha_small"
+		texturefile = "gfx/interface/ideas/fin/advisors/rj_advisor_FIN_simo_hayha.dds"
+	}
+
 
 	#####################
 	### GER - Germany ###
