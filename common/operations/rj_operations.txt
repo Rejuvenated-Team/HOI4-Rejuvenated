@@ -429,7 +429,7 @@ operation_blow_ship = { ### 16 3/55
 
 		has_operation_token = {
 			tag = FROM
-			token = token_prep_sabotage
+			token = token_resistance_contacts
 		}
 		FROM = {
 			any_controlled_state = {
@@ -442,7 +442,7 @@ operation_blow_ship = { ### 16 3/55
 
 		has_operation_token = {
 			tag = FROM
-			token = token_prep_sabotage
+			token = token_resistance_contacts
 		}
 	}
 
@@ -453,7 +453,7 @@ operation_blow_ship = { ### 16 3/55
 
 	required_tokens = {
 		token_navy
-		token_prep_sabotage
+		token_resistance_contacts
 	}
 
 	risk_chance = 0.4
@@ -476,7 +476,7 @@ operation_blow_ship = { ### 16 3/55
 			}
 			remove_operation_token = {
 				tag = FROM
-				token = token_prep_sabotage
+				token = token_resistance_contacts
 			}
 		}
 	}
@@ -504,7 +504,7 @@ operation_blow_ship = { ### 16 3/55
 					}
 					remove_operation_token = {
 						tag = FROM
-						token = token_prep_sabotage
+						token = token_resistance_contacts
 					}
 				}
 			}
@@ -619,7 +619,7 @@ operation_blow_fuel = { ### 18 2/35
 
 		has_operation_token = {
 			tag = FROM
-			token = token_prep_sabotage
+			token = token_resistance_contacts
 		}
 
 		FROM = {
@@ -630,7 +630,7 @@ operation_blow_fuel = { ### 18 2/35
 	requirements = {
 		has_operation_token = {
 			tag = FROM
-			token = token_prep_sabotage
+			token = token_resistance_contacts
 		}
 	}
 
@@ -650,7 +650,7 @@ operation_blow_fuel = { ### 18 2/35
 	selection_target = {
 		targets = { FROM }
 	}
-	required_tokens = { token_prep_sabotage }
+	required_tokens = { token_resistance_contacts }
 	equipment = {
 		support_equipment = 40
 	}

@@ -20,12 +20,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_ita_paolo_aloisi.dds"
 	}
 
-
-	SpriteType = {
-		name = "GFX_idea_GER_reinhard_heydrich"
-		texturefile = "gfx/interface/ideas/idea_ger_reinhard_heydrich.dds"
-	}
-
 	SpriteType = {
 		name = "GFX_idea_JAP_hideo_iwakuro"
 		texturefile = "gfx/interface/ideas/idea_jap_hideo_iwakuro.dds"

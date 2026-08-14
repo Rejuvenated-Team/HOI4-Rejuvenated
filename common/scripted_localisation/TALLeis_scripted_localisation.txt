@@ -79,17 +79,3 @@ defined_text = {
 		localization_key = "TOKEN_RESISTANCE_ICON"
 	}
 }
-defined_text = {
-	name = GetToken/Sabotage
-	text = {
-		trigger = { 
-			ROOT = {
-				has_operation_token = {
-					tag = PREV
-					token = token_prep_sabotage
-				}
-			}
-		}
-		localization_key = "TOKEN_SABOTAGE_ICON"
-	}
-}

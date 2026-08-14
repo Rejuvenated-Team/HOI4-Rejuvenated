@@ -40,10 +40,6 @@ scripted_gui = {
 										tag = PREV
 										token = token_resistance_contacts
 									}
-									has_operation_token = {
-										tag = PREV
-										token = token_prep_sabotage
-									}
 								}
 							}
 						}

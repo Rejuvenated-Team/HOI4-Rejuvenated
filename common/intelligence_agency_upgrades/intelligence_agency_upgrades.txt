@@ -1147,10 +1147,10 @@ branch_crypto = {
 		
 		level = {
 			modifier = {
-				decryption_power = 15 #TALLeis - original value = 10 (adjust to address 'communications security'
+				decryption_power = 15 #rj was 10 (adjust to address 'communications security'
 			}
 		}		
-		level = { #TALLeis - +1 rank to counter upgrade from 'communication security'
+		level = { #rj +1 rank to counter upgrade from 'communication security'
 			modifier = {
 				decryption_power = 10
 			}
