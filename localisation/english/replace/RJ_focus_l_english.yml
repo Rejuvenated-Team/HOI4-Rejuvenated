@@ -37,3 +37,7 @@
 #lar_focus_l_english
  POR_concordat_with_the_holy_see: "Concordat of 1940"
  POR_concordat_with_the_holy_see_desc: "The Concordat of 1940 was an agreement between Portugal and the Holy See of the Catholic Church signed in Vatican City on May 1940 under António de Oliveira Salazar´s Estado Novo. It was made to try to reverse the diplomatic damage caused by the law of separation of church and state in the first Portuguese republic."
+#nsb_focus_l_english
+ SOV_keep_commissars_organization: "[GetKeepCommissarsOrganizationName]"
+ SOV_keep_commissars_organization_desc: "[GetKeepCommissarsOrganizationDesc]"
+ SOV_improve_railway_network: "Improve the Railway Network"

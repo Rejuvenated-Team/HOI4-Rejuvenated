@@ -479,12 +479,8 @@ focus_tree = {
 
         available = {
             OR = {
-                NOT = {
-                    is_puppet = yes
-                }
-                NOT = {
-                    is_ai = yes
-                }
+                is_subject = no
+                is_ai = no
             }
         }
 
@@ -524,9 +520,7 @@ focus_tree = {
 		y = 1
 
         available = {
-            NOT = {
-                is_puppet = yes
-            }
+            is_subject = no
         }
 
 		ai_will_do = {
@@ -557,9 +551,7 @@ focus_tree = {
 		y = 1
 
         available = {
-            NOT = {
-                is_puppet = yes
-            }
+            is_subject = no
         }
 
 		ai_will_do = {
@@ -743,12 +735,8 @@ focus_tree = {
 
         available = {
             OR = {
-                NOT = {
-                    is_puppet = yes
-                }
-                NOT = {
-                    is_ai = yes
-                }
+                is_subject = no
+                is_ai = no
             }
         }
 
@@ -788,9 +776,7 @@ focus_tree = {
 		y = 1
 
         available = {
-            NOT = {
-                is_puppet = yes
-            }
+            is_subject = no
         }
 
 		ai_will_do = {
@@ -821,9 +807,7 @@ focus_tree = {
 		y = 1
 
         available = {
-            NOT = {
-                is_puppet = yes
-            }
+            is_subject = no
         }
 
 		ai_will_do = {

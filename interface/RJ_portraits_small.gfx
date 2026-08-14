@@ -37,6 +37,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
 	}
 
+	spriteType = {
+		name = "GFX_RJ_portrait_BRA_dutra_small"
+		texturefile = "gfx/interface/ideas/bra/advisors/RJ_advisor_BRA_eurico_gaspar_dutra.dds"
+	}
+
 	##################
 	### CUB - Cuba ###
 	##################
