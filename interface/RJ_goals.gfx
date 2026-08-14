@@ -825,6 +825,38 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/sov/RJ_SOV_five_year_plan.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_expand_the_red_fleet"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_expand_the_red_fleet.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_rehabilitated_military"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_rehabilitated_military.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_military_reorganization"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_military_reorganization.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_development_of_tankograd"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_development_of_tankograd.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_assembly_line_heavy_tanks"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_assembly_line_heavy_tanks.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_deep_operations"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_deep_operations.dds"
+	}
+
+
+
 	###########
 	### USA ###
 	###########
