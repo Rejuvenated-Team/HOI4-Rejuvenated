@@ -531,6 +531,7 @@
  VICTORY_POINTS_12118: "Cebu"
  VICTORY_POINTS_12213: "Aparri"
  VICTORY_POINTS_12371: "Hollandia" # Later Kota Baru, Sukarnopura or Jayapura 
+ VICTORY_POINTS_12371_indonesian: "Jayapura"
  VICTORY_POINTS_4468: "Sorong" 
  VICTORY_POINTS_10505: "Merauke" 
  VICTORY_POINTS_7859: "Canberra"
@@ -1392,7 +1393,6 @@
  VICTORY_POINTS_1573: "Bukhara"
  VICTORY_POINTS_10671: "Samarkand"
  VICTORY_POINTS_12465: "Khiva"
- VICTORY_POINTS_1554: "Navoi" #Navoiy in Uzbek
  VICTORY_POINTS_1493: "Tashauz"
  VICTORY_POINTS_6278: "Izhevsk"
  VICTORY_POINTS_9259: "Cheboksary"
@@ -2176,3 +2176,9 @@
  VICTORY_POINTS_7260: "Galle"
  VICTORY_POINTS_12113: "Batam"
  VICTORY_POINTS_1316: "Pontianak"
+ VICTORY_POINTS_8111: "Tarfaya"
+ VICTORY_POINTS_9604: "Sovetskaya Gavan"
+ VICTORY_POINTS_855: "Okha"
+ VICTORY_POINTS_12261: "Birobidzhan"
+ VICTORY_POINTS_12559: "Nikolayev-on-Amur"
+ VICTORY_POINTS_4728: "Petropavlovsk-Kamchatskiy"

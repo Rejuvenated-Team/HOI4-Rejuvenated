@@ -3,7 +3,11 @@ state = {
 	name = "STATE_611" # South Chahar
 	manpower = 1470000
 	
-	state_category = pastoral
+	state_category = town
+
+	resources = {
+		steel = 13
+	}
 
 	history = {
 
@@ -36,5 +40,5 @@ state = {
 		828 952 1489 4495 4612 7545 7674 10397 11752 13379
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 3.0 
 }

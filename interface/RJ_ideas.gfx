@@ -486,6 +486,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/sov/SOV_russian_republic_flag.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_RJ_idea_SOV_five_year_plan"
+		texturefile = "gfx/interface/ideas/sov/RJ_idea_SOV_five_year_plan.dds"
+	}
+
 	###########
 	### USA ###
 	###########
