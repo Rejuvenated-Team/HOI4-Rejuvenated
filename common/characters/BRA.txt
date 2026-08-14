@@ -149,11 +149,11 @@ characters={
 		name=BRA_eurico_gaspar_dutra
 		portraits={
 			army={
-				large= "gfx/leaders/BRA/Eurico_Gaspar_Dutra.dds"
+				large = "gfx/leaders/BRA/Eurico_Gaspar_Dutra.dds"
 			}
 			civilian={
-				large= "gfx/leaders/BRA/Eurico_Gaspar_Dutra.dds"
-				small=GFX_kr_portrait_BRA_eurico_gaspar_dutra_small
+				large = "gfx/leaders/BRA/Eurico_Gaspar_Dutra.dds"
+				small = "GFX_RJ_portrait_BRA_dutra_small"
 			}
 		}
 		country_leader = {
