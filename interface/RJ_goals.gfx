@@ -472,11 +472,6 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_focus_RJ_ENG_RADAR"
-		texturefile = "gfx/interface/goals/eng/RJ_ENG_RADAR.dds"
-	}
-
-	SpriteType = {
 		name = "GFX_focus_RJ_ENG_royal_ordinance_factories"
 		texturefile = "gfx/interface/goals/eng/RJ_ENG_royal_ordinance_factories.dds"
 	}
