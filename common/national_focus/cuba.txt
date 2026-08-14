@@ -3123,7 +3123,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
-			create_faction = "Caribbean Pact"
+			create_faction_from_template = {
+				template = faction_template_generic_dominance
+				name = carribean_pact
+			}
 			add_political_power = 25
 		}
 		search_filters = { FOCUS_FILTER_DIPLOMACY FOCUS_FILTER_POLITICAL }
