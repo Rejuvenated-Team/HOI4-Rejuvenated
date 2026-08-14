@@ -307,7 +307,7 @@ focus_tree = {
 		}
 
 		available = {
-			is_puppet = no
+			is_subject = no
 			is_in_faction = no
 			any_other_country = {
 				is_major = yes
@@ -582,7 +582,6 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 			    type = fighter_equipment_0
 			    amount = 500
-			    variant_name = PewPewPew
 			}
 		}
 		search_filters = { FOCUS_FILTER_AIRFORCE }
@@ -1107,7 +1106,7 @@ focus_tree = {
 	focus = {
 		id = CUB_study_american_shipbuilding
 		icon = GFX_focus_generic_refit_civilian_ships
-		cost = 10
+		cost = 5
 		prerequisite = { focus = CUB_our_northern_comrades }
 		relative_position_id = CUB_our_northern_comrades
 		x = -1
@@ -1127,8 +1126,9 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
+				name = CUB_study_american_shipbuilding
 				bonus = 0.80
-				uses = 3
+				uses = 2
 				category = naval_equipment
 			}			
 		}
@@ -1377,6 +1377,7 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 50
 			add_doctrine_cost_reduction = {
+				name = CUB_study_soviet_tactics
 				cost_reduction = 0.5
 				uses = 2
 				category = land_doctrine
@@ -1462,16 +1463,19 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
+				name = CUB_study_soviet_armaments
 				bonus = 0.75
 				uses = 1
 				category = armor
 			}
 			add_tech_bonus = {
+				name = CUB_study_soviet_armaments
 				bonus = 0.50
 				uses = 1
 				category = infantry_tech
 			}
 			add_tech_bonus = {
+				name = CUB_study_soviet_armaments
 				bonus = 0.50
 				uses = 1
 				category = artillery
@@ -2218,10 +2222,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		ai_will_do = {
-			factor = 1
 			modifier = {
 				is_historical_focus_on = yes
 				factor = 0
@@ -2942,10 +2942,9 @@ focus_tree = {
 		}
 
 		cost = 7.2
-		
 
 		available = {			
-			is_puppet = no
+			is_subject = no
 			OR = {
 				NOT = {
 					has_completed_focus = CUB_join_the_allies
@@ -2973,16 +2972,12 @@ focus_tree = {
 		y = 1
 
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 
 		relative_position_id = CUB_caribbean_dominance
 
 		cost = 10
-
-		ai_will_do = {
-			factor = 40
-		}
 
 		available = {
 			NOT = {
@@ -3052,11 +3047,6 @@ focus_tree = {
 
 		cost = 7.2
 
-		ai_will_do = {
-			factor = 1
-
-		}
-
 		completion_reward = {				
 			add_tech_bonus = {
 				name = JAP_expand_the_snlf
@@ -3094,11 +3084,6 @@ focus_tree = {
 
 		cost = 10
 
-		ai_will_do = {
-			factor = 1
-
-		}
-
 		completion_reward = {				
 			add_ideas = CUB_amphibious_training_idea
 			custom_effect_tooltip = CUB_amphibious_training_tt
@@ -3134,7 +3119,7 @@ focus_tree = {
 
 		available = {
 			is_in_faction = no
-			is_puppet = no
+			is_subject = no
 		}
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
@@ -3161,11 +3146,11 @@ focus_tree = {
 
 		available = {
 			is_in_faction = no
-			is_puppet = no
+			is_subject = no
 			OR = {
 				SPR = {
 					is_in_faction = no
-					is_puppet = no
+					is_subject = no
 					has_government = fascism
 				}
 				SPR = {
@@ -3204,7 +3189,7 @@ focus_tree = {
 
 		available = {
 			is_in_faction = no
-			is_puppet = no
+			is_subject = no
 			GER = {
 				has_government = fascism
 				is_faction_leader = yes
@@ -3240,7 +3225,7 @@ focus_tree = {
 
 		available = {
 			is_in_faction = no
-			is_puppet = no
+			is_subject = no
 			JAP = {
 				has_government = fascism
 				is_faction_leader = yes
@@ -3271,7 +3256,7 @@ focus_tree = {
 		}
 
 		available = {
-			is_puppet = no
+			is_subject = no
 			OR = {
 				HAI = {
 					exists = yes
@@ -3323,7 +3308,7 @@ focus_tree = {
 		}
 
 		available = {
-			is_puppet = no						
+			is_subject = no						
 		}
 		bypass = {
 			CUB = {
@@ -3368,7 +3353,7 @@ focus_tree = {
 		}
 
 		available = {
-			is_puppet = no						
+			is_subject = no						
 		}
 		bypass = {
 			CUB = {
@@ -3402,7 +3387,7 @@ focus_tree = {
 		}
 
 		available = {
-			is_puppet = no		
+			is_subject = no		
 		}
 		bypass = {
 			CUB = {
@@ -4403,7 +4388,7 @@ focus_tree = {
 				}
 				NOT = {
 					DOM = {
-						is_puppet = yes
+						is_subject = yes
 						is_in_faction = yes
 					}
 				}					
@@ -4501,7 +4486,7 @@ focus_tree = {
 		available = {
 			country_exists = DOM
 			DOM = {
-				is_puppet = no
+				is_subject = no
 				is_in_faction_with = CUB
 			}
 		}
@@ -4556,18 +4541,18 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 50
 			add_doctrine_cost_reduction = {
-				name = CUB_joint_excercises
+				name = CUB_conduct_joint_military_excercises
 				cost_reduction = 0.25
 				uses = 3
 				category = land_doctrine
-				}
+			}
 			DOM = {
 				army_experience = 50
 				add_doctrine_cost_reduction = {
-				name = CUB_joint_excercises
-				cost_reduction = 0.25
-				uses = 3
-				category = land_doctrine
+					name = CUB_conduct_joint_military_excercises
+					cost_reduction = 0.25
+					uses = 3
+					category = land_doctrine
 				}
 			}
 		}
@@ -4854,11 +4839,13 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
+				name = CUB_update_our_equipment
 				bonus = 0.5
 				uses = 2
 				category = infantry_tech
 			}
 			add_tech_bonus = {
+				name = CUB_update_our_equipment
 				bonus = 0.5
 				uses = 1
 				category = mio_cat_tech_all_motorized_mechanized
@@ -5038,11 +5025,13 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
+				name = CUB_support_advancements
 				bonus = 0.5
 				uses = 2
 				category = support_tech
 			}
 			add_tech_bonus = {
+				name = CUB_support_advancements
 				bonus = 0.5
 				uses = 2
 				category = electronics
@@ -5079,11 +5068,13 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
+				name = CUB_a_new_era_in_warfare
 				bonus = 0.5
 				uses = 2
 				category = armor
 			}
 			add_tech_bonus = {
+				name = CUB_a_new_era_in_warfare
 				bonus = 0.5
 				uses = 2
 				category = artillery
@@ -5120,16 +5111,19 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
+				name = CUB_state_of_the_airforce
 				bonus = 0.75
 				uses = 2
 				category = plane_modules_tech
 			}
 			add_tech_bonus = {
+				name = CUB_state_of_the_airforce
 				bonus = 0.50
 				uses = 1
 				category = light_air
 			}
 			add_tech_bonus = {
+				name = CUB_state_of_the_airforce
 				bonus = 0.50
 				uses = 1
 				category = medium_air
@@ -5166,6 +5160,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
+				name = CUB_sea_patrols
 				bonus = 0.50
 				uses = 2
 				category = mio_cat_all_naval_bomber_and_modules
@@ -5203,6 +5198,12 @@ focus_tree = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 315 }
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 2
+					}
+				}
 				add_building_construction = {
 					type = air_base
 					level = 3
@@ -5210,6 +5211,12 @@ focus_tree = {
 			}
 
 			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 3
+					}
+				}
 				add_building_construction = {
 					type = air_base
 					level = 4
@@ -5349,11 +5356,13 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
+				name = CUB_a_defensive_navy
 				bonus = 0.50
 				uses = 2
 				category = mio_cat_tech_all_screen_ship_and_modules
 			}
 			add_tech_bonus = {
+				name = CUB_a_defensive_navy
 				bonus = 0.50
 				uses = 1
 				technology = basic_depth_charges
@@ -5464,6 +5473,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
+				name = CUB_marine_training
 				bonus = 0.50
 				uses = 2
 				category = marine_tech
@@ -5508,16 +5518,19 @@ focus_tree = {
 				}
 			}
 			add_tech_bonus = {
+				name = CUB_industrial_investments
 				bonus = 0.50
 				uses = 1
 				category = cat_production
 			}
 			add_tech_bonus = {
+				name = CUB_industrial_investments
 				bonus = 0.50
 				uses = 1
 				category = industry
 			}
 			add_tech_bonus = {
+				name = CUB_industrial_investments
 				bonus = 0.50
 				uses = 1
 				category = construction_tech
@@ -5630,6 +5643,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
+				name = CUB_excavation_research
 				bonus = 0.5
 				uses = 2
 				category = excavation_tech
@@ -5799,6 +5813,7 @@ focus_tree = {
 				}
 			}
 			add_tech_bonus = {
+				name = CUB_cuba_company_train_plant
 				bonus = 0.50
 				uses = 1
 				category = train_tech
