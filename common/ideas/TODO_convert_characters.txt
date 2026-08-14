@@ -155,25 +155,7 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
-		}
-		
-		GER_theodor_von_hippel = {
-			ledger = army
-
-			available = {
-				has_intelligence_agency = yes
-			}
-			
-			allowed = {
-				original_tag = GER
-			}
-			
-			traits = { army_commando_1 }
-			
-			ai_will_do = {
-				factor = 0.1
-			}
-		}		
+		}	
 
 		ITA_paolo_aloisi = {
 			ledger = army
