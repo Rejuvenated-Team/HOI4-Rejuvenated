@@ -5774,7 +5774,7 @@ focus_tree = {
 
 	focus = {
 		id = TUR_expanded_credit_on_our_debts
-		icon = GFX_goal_OTT_opda
+		icon = GFX_focus_mex_privatisation
 		prerequisite = { focus = TUR_controlling_the_skies_of_europe }
 		prerequisite = { focus = TUR_expanding_our_navy }
 		x = 0
@@ -7582,7 +7582,7 @@ focus_tree = {
 
 	focus = {
 		id = TUR_dissolve_the_ODPA
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_goal_OTT_opda
 		prerequisite = { focus = TUR_provide_refuge_to_the_victims_of_fascism }
 		x = -2
 		y = 1
