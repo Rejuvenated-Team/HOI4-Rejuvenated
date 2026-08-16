@@ -110,7 +110,7 @@
 		y = 1
 		relative_position_id = CHI_secure_internal_politics
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -294,7 +294,7 @@
 
 	focus = {
 		id = CHI_root_out_corruption
-		icon = GFX_goal_demand_sudetenland
+		icon = GFX_focus_ARG_crackdown_on_corruption
 		prerequisite = { focus = CHI_new_model_province }
 		mutually_exclusive = { focus = CHI_embrace_the_opium_trade }
 		x = -1
@@ -327,7 +327,7 @@
 
 	focus = {
 		id = CHI_embrace_the_opium_trade
-		icon = GFX_goal_generic_trade
+		icon = GFX_focus_RAJ_legalize_the_opium_trade
 		prerequisite = { focus = CHI_new_model_province }
 		mutually_exclusive = { focus = CHI_root_out_corruption }
 		x = 1
@@ -427,7 +427,7 @@
 
 	focus = {
 		id = CHI_join_the_republican_government
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_CHI_lay_the_foundation_for_a_united_china
 		prerequisite = { focus = CHI_land_reform focus = CHI_reform_the_administration }
 		x = -1
 		y = 3
@@ -544,7 +544,7 @@
 		y = 1
 		relative_position_id = CHI_secure_internal_politics
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -642,7 +642,7 @@
 
 	focus = {
 		id = CHI_ideological_education
-		icon = GFX_focus_generic_socialist_science
+		icon = GFX_focus_PRC_form_the_yanan_university
 		prerequisite = { focus = CHI_land_redistribution }
 		x = -1
 		y = 1
@@ -679,7 +679,7 @@
 
 	focus = {
 		id = CHI_land_value_tax
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_PRC_rural_region_development
 		prerequisite = { focus = CHI_land_redistribution }
 		x = 1
 		y = 1
@@ -743,7 +743,7 @@
 
 	focus = {
 		id = CHI_communist_administrators
-		icon = GFX_focus_generic_soviet_politics
+		icon = GFX_focus_RJ_communist_advisor
 		prerequisite = { focus = CHI_land_value_tax }
 		x = 1
 		y = 2
@@ -774,7 +774,7 @@
 
 	focus = {
 		id = CHI_join_the_chinese_soviet
-		icon = GFX_goal_generic_war_with_comintern
+		icon = GFX_focus_prc_maoism
 		prerequisite = { focus = CHI_judiciary_reforms focus = CHI_communist_administrators }
 		x = 0
 		y = 3
@@ -846,7 +846,7 @@
 
 	focus = {
 		id = CHI_the_yanan_incident
-		icon = GFX_goal_support_communism
+		icon = GFX_focus_PRC_immediate_response_to_lack_of_army
 		prerequisite = { focus = CHI_join_the_chinese_soviet }
 		x = 0
 		y = 4
@@ -897,14 +897,14 @@
 
 	focus = {
 		id = CHI_opposition
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_CHI_weaponise_the_faithful
 		prerequisite = { focus = CHI_secure_internal_politics }
 		mutually_exclusive = { focus = CHI_cooperation_with_the_communists focus = CHI_cooperation_with_the_nationalists }
 		x = 5
 		y = 1
 		relative_position_id = CHI_secure_internal_politics
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1065,7 +1065,7 @@
 
 	focus = {
 		id = CHI_rural_militias
-		icon = GFX_goal_generic_military_sphere
+		icon = GFX_focus_CHL_incorporate_machi_into_the_army
 		prerequisite = { focus = CHI_public_works }
 		x = 1
 		y = 1
@@ -1097,7 +1097,7 @@
 
 	focus = {
 		id = CHI_war_taxes
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_generic_currency_reforms
 		prerequisite = { focus = CHI_opposition }
 		x = 3
 		y = 1
@@ -1226,7 +1226,7 @@
 
 	focus = {
 		id = CHI_cult_of_personality
-		icon = GFX_goal_generic_propaganda
+		icon = GFX_focus_CHI_military_mission
 		prerequisite = { focus = CHI_war_taxes }
 		x = 2
 		y = 1
@@ -1259,7 +1259,7 @@
 
 	focus = {
 		id = CHI_provoke_border_clashes
-		icon = GFX_focus_generic_provoke_border_clashes
+		icon = GFX_focus_CHI_decisive_battles
 		prerequisite = { focus = CHI_personal_leadership }
 		mutually_exclusive = { focus = CHI_defensive_posture }
 		x = -1
@@ -1324,7 +1324,7 @@
 
 	focus = {
 		id = CHI_rapid_mobilization
-		icon = GFX_goal_generic_more_territorial_claims
+		icon = GFX_focus_CHI_meritocratic_principles
 		prerequisite = { focus = CHI_provoke_border_clashes focus = CHI_defensive_posture }
 		x = 0
 		y = 2
