@@ -15,9 +15,13 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_kr_portrait_BRA_eurico_gaspar_dutra_small"
-		#texturefile = "gfx/interface/ideas/bra/advisors/kr_advisor_BRA_eurico_gaspar_dutra.dds"
-		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
+		name = "GFX_rj_portrait_BRA_eurico_gaspar_dutra_small"
+		texturefile = "gfx/interface/ideas/bra/advisors/rj_portrait_BRA_eurico_gaspar_dutra.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_BRA_francisco_morato_small"
+		texturefile = "gfx/interface/ideas/bra/advisors/rj_portrait_BRA_francisco_morato.dds"
 	}
 
 	spriteType = {

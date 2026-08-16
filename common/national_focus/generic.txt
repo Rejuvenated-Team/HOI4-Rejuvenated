@@ -816,7 +816,7 @@ focus_tree = {
 
 		completion_reward = {
             add_timed_idea = {
-                idea = RJ_generic_democracy_idea
+                idea = RJ_generic_neutrality_idea
                 days = 500
             }
 		}
