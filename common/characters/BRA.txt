@@ -981,7 +981,7 @@ characters={
 		name = "Francisco Morato"
 		portraits = {
 			army = {
-				small = "GFX_idea_advisor_morato"
+				small = GFX_rj_portrait_BRA_francisco_morato_small
 			}
 		}
 

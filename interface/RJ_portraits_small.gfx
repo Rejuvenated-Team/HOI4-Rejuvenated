@@ -20,6 +20,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_rj_portrait_BRA_francisco_morato_small"
+		texturefile = "gfx/interface/ideas/bra/advisors/rj_portrait_BRA_francisco_morato.dds"
+	}
+
+	spriteType = {
 		name = "GFX_kr_portrait_BRA_luis_carlos_prestes_small"
 		#texturefile = "gfx/interface/ideas/bra/advisors/kr_portrait_BRA_luis_carlos_prestes.dds"
 		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
