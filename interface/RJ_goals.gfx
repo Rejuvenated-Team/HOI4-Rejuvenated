@@ -1261,4 +1261,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/usa/RJ_USA_airborne_divisions.dds"
 	}
 
+
+
+	##############################################
+	#### CHINESE WARLORDS ########################
+	##############################################
+
+
+	SpriteType = {
+		name = "GFX_focus_RJ_warlord_coastal_economics"
+		texturefile = "gfx/interface/goals/warlords/RJ_warlord_coastal_economics.dds"
+	}
+
 }

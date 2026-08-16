@@ -1415,8 +1415,8 @@
 
 	focus = {
 		id = CHI_industrial_investment
-		icon = GFX_goal_generic_construct_civ_factory
-		x = 12
+		icon = GFX_focus_RJ_industry1
+		x = 13
 		y = 0
 		relative_position_id = CHI_secure_internal_politics
 
@@ -1470,6 +1470,65 @@
 					instant_build = yes
 				}
 				set_state_flag = CHI_industrial_investment_IC
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_CHI_warlord_coastal_economics
+		icon = GFX_focus_RJ_warlord_coastal_economics
+		prerequisite = { focus = CHI_industrial_investment }
+		x = 2
+		y = 1
+		relative_position_id = CHI_industrial_investment
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			any_state = {
+				is_coastal = yes
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -1683,7 +1742,7 @@
 	focus = {
 		id = CHI_strenghten_warlord_authority
 		icon = GFX_focus_generic_military_dictatorship
-		x = 16
+		x = 19
 		y = 0
 
 		cost = 10
