@@ -1273,4 +1273,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/warlords/RJ_warlord_coastal_economics.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_warlord_long_term_economic_planning"
+		texturefile = "gfx/interface/goals/warlords/RJ_warlord_long_term_economic_planning.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_warlord_uplift_the_cavalry"
+		texturefile = "gfx/interface/goals/warlords/RJ_warlord_uplift_the_cavalry.dds"
+	}
+
 }

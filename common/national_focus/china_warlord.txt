@@ -53,9 +53,9 @@
 #
 #		}
 #
-#		cancel_if_invalid = yes
-#		continue_if_invalid = no
-#		available_if_capitulated = no
+#		
+#		
+#		
 #
 #		complete_tooltip = {
 #
@@ -86,9 +86,9 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -138,9 +138,9 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_stability = 0.05
@@ -158,7 +158,7 @@
 		y = 1
 		relative_position_id = CHI_cooperation_with_the_nationalists
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -167,14 +167,6 @@
 		available = {
 
 		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		complete_tooltip = {
 			custom_effect_tooltip = CHI_anti_opposition_campaigns_effect_tooltip
@@ -229,7 +221,7 @@
 		y = 1
 		relative_position_id = CHI_cooperation_with_the_nationalists
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -242,11 +234,7 @@
 		bypass = {
 
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
+	
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			if = {
@@ -282,10 +270,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			add_stability = 0.1
@@ -310,18 +294,12 @@
 		available = {
 
 		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
+		
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			remove_ideas = PRC_government_corruption
+			add_political_power = 150
 		}
 	}
 
@@ -348,10 +326,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
 		completion_reward = {
 			add_ideas = CHI_embrace_the_opium_trade
 		}
@@ -361,9 +335,9 @@
 		id = CHI_land_reform
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = CHI_root_out_corruption }
-		x = -2
-		y = 2
-		relative_position_id = CHI_new_model_province
+		x = 0
+		y = 1
+		relative_position_id = CHI_root_out_corruption
 
 		cost = 10
 
@@ -379,17 +353,13 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			every_owned_state = {
 				limit = {
 					is_controlled_by = ROOT
 				}
-				add_extra_state_shared_building_slots = 1 
+				add_extra_state_shared_building_slots = 2
 			}
 		}
 	}
@@ -399,8 +369,8 @@
 		icon = GFX_focus_generic_improve_the_administration
 		prerequisite = { focus = CHI_root_out_corruption focus = CHI_embrace_the_opium_trade }
 		x = 0
-		y = 2
-		relative_position_id = CHI_new_model_province
+		y = 1
+		relative_position_id = CHI_embrace_the_opium_trade
 
 		cost = 10
 
@@ -412,16 +382,11 @@
 
 		}
 
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
 		completion_reward = {
-			remove_ideas = CHI_ineffective_bureaucracy_warlord
+			swap_ideas = {
+				remove_idea = CHI_ineffective_bureaucracy_warlord
+				add_idea = RJ_CHI_reformed_administration_idea
+			}
 		}
 	}
 
@@ -429,9 +394,9 @@
 		id = CHI_join_the_republican_government
 		icon = GFX_focus_CHI_lay_the_foundation_for_a_united_china
 		prerequisite = { focus = CHI_land_reform focus = CHI_reform_the_administration }
-		x = -1
-		y = 3
-		relative_position_id = CHI_new_model_province
+		x = 1
+		y = 1
+		relative_position_id = CHI_land_reform
 
 		cost = 10
 
@@ -472,9 +437,9 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			custom_effect_tooltip = enable_power_struggle
@@ -487,9 +452,9 @@
 		id = CHI_power_struggle
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = CHI_join_the_republican_government }
-		x = -1
-		y = 4
-		relative_position_id = CHI_new_model_province
+		x = 0
+		y = 1
+		relative_position_id = CHI_join_the_republican_government
 
 		cost = 10
 
@@ -513,9 +478,9 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			load_focus_tree = china_nationalist_focus
@@ -570,9 +535,9 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_political_power = 50
@@ -621,21 +586,13 @@
 
 		}
 
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			every_owned_state = {
 				limit = {
 					is_controlled_by = ROOT
 				}
-				add_extra_state_shared_building_slots = 1 
+				add_extra_state_shared_building_slots = 2
 			}
 		}
 	}
@@ -648,7 +605,7 @@
 		y = 1
 		relative_position_id = CHI_land_redistribution
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -663,14 +620,6 @@
 				}
 			}
 		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			add_timed_idea = { idea = CHI_ideological_education days = 1095 }
@@ -694,14 +643,6 @@
 		available = {
 
 		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -727,14 +668,6 @@
 
 		}
 
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			remove_ideas = PRC_government_corruption
@@ -759,16 +692,11 @@
 
 		}
 
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
 		completion_reward = {
-			remove_ideas = CHI_ineffective_bureaucracy_warlord
+			swap_ideas = {
+				remove_idea = CHI_ineffective_bureaucracy_warlord
+				add_idea = RJ_CHI_communist_administrators_idea
+			}
 		}
 	}
 
@@ -814,9 +742,9 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			set_politics = { ruling_party = communism elections_allowed = no }
@@ -877,9 +805,9 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			custom_effect_tooltip = CHI_the_yanan_incident_effect_tt
@@ -900,7 +828,7 @@
 		icon = GFX_focus_CHI_weaponise_the_faithful
 		prerequisite = { focus = CHI_secure_internal_politics }
 		mutually_exclusive = { focus = CHI_cooperation_with_the_communists focus = CHI_cooperation_with_the_nationalists }
-		x = 5
+		x = 6
 		y = 1
 		relative_position_id = CHI_secure_internal_politics
 
@@ -918,13 +846,6 @@
 			
 		}
 
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
 
 		completion_reward = {
 			add_war_support = 0.05
@@ -970,11 +891,11 @@
 		id = CHI_institute_cross_border_raids
 		icon = GFX_focus_generic_provoke_border_clashes
 		prerequisite = { focus = CHI_opposition }		
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = CHI_opposition
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -984,114 +905,9 @@
 			is_subject = no
 		}
 
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
 		completion_reward = {
 			custom_effect_tooltip = CHI_institute_cross_border_raids_effect_tooltip
 			set_country_flag = CHI_institute_cross_border_raids
-		}
-	}
-
-
-	focus = {
-		id = CHI_public_works
-		icon = GFX_focus_generic_public_works
-		prerequisite = { focus = CHI_cooperation_with_the_communists focus = CHI_opposition }
-		x = -1
-		y = 2
-		relative_position_id = CHI_opposition
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			add_ideas = CHI_public_works
-		}
-	}
-
-	focus = {
-		id = CHI_labor_reform
-		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = CHI_public_works }
-		x = -1
-		y = 1
-		relative_position_id = CHI_public_works
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
-		completion_reward = {
-			add_ideas = CHI_labor_reform
-		}
-	}
-
-	focus = {
-		id = CHI_rural_militias
-		icon = GFX_focus_CHL_incorporate_machi_into_the_army
-		prerequisite = { focus = CHI_public_works }
-		x = 1
-		y = 1
-		relative_position_id = CHI_public_works
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-		completion_reward = {
-			add_ideas = CHI_rural_militias
 		}
 	}
 
@@ -1099,7 +915,7 @@
 		id = CHI_war_taxes
 		icon = GFX_focus_generic_currency_reforms
 		prerequisite = { focus = CHI_opposition }
-		x = 3
+		x = -1
 		y = 1
 		relative_position_id = CHI_opposition
 
@@ -1112,14 +928,6 @@
 		available = {
 
 		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -1135,7 +943,7 @@
 		y = 1
 		relative_position_id = CHI_war_taxes
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1149,10 +957,6 @@
 		bypass = {
 
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			unlock_decision_category_tooltip = CHI_seek_japanese_support
@@ -1176,14 +980,6 @@
 		available = {
 
 		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			add_command_power = 30
@@ -1232,7 +1028,7 @@
 		y = 1
 		relative_position_id = CHI_war_taxes
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -1241,14 +1037,6 @@
 		available = {
 
 		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
@@ -1266,7 +1054,7 @@
 		y = 1
 		relative_position_id = CHI_personal_leadership
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1275,14 +1063,6 @@
 		available = {
 
 		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			custom_effect_tooltip = CHI_provoke_border_clashes_effect_tooltip
@@ -1309,14 +1089,6 @@
 
 		}
 
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
 		completion_reward = {
 			add_ideas = CHI_defensive_posture
 		}
@@ -1327,8 +1099,8 @@
 		icon = GFX_focus_CHI_meritocratic_principles
 		prerequisite = { focus = CHI_provoke_border_clashes focus = CHI_defensive_posture }
 		x = 0
-		y = 2
-		relative_position_id = CHI_personal_leadership
+		y = 1
+		relative_position_id = CHI_provoke_border_clashes
 
 		cost = 10
 
@@ -1340,14 +1112,6 @@
 
 		}
 
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
 		complete_tooltip = {
 		}
 
@@ -1357,12 +1121,37 @@
 	}
 
 	focus = {
+		id = CHI_rural_militias
+		icon = GFX_focus_CHL_incorporate_machi_into_the_army
+		prerequisite = { focus = CHI_provoke_border_clashes focus = CHI_defensive_posture }
+		x = 0
+		y = 1
+		relative_position_id = CHI_defensive_posture
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_ideas = CHI_rural_militias
+			unlock_subunit = militia
+		}
+	}
+
+	focus = {
 		id = CHI_proclaim_rival_government
 		icon = GFX_focus_chi_proclaim_rival_government
 		prerequisite = { focus = CHI_rural_militias }
 		prerequisite = { focus = CHI_rapid_mobilization }
-		x = 1
-		y = 2
+		x = -1
+		y = 1
 		relative_position_id = CHI_rural_militias
 
 		cost = 10
@@ -1374,14 +1163,6 @@
 		available = {
 			is_subject = no
 		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			every_state = {
@@ -1416,7 +1197,7 @@
 	focus = {
 		id = CHI_industrial_investment
 		icon = GFX_focus_RJ_industry1
-		x = 13
+		x = 11
 		y = 0
 		relative_position_id = CHI_secure_internal_politics
 
@@ -1434,14 +1215,16 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-			random_state = {
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
 				limit = {
-					has_state_flag = CHI_industrial_investment_IC
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -1449,11 +1232,8 @@
 					level = 2
 					instant_build = yes
 				}
+				set_state_flag = CHI_industrial_investment_IC
 			}
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
@@ -1463,10 +1243,10 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 				set_state_flag = CHI_industrial_investment_IC
@@ -1551,14 +1331,6 @@
 
 		}
 
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_research_slot = 1
@@ -1567,7 +1339,7 @@
 
 	focus = {
 		id = CHI_local_arms_production
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = CHI_industrial_investment }
 		x = 0
 		y = 1
@@ -1583,28 +1355,6 @@
 
 		}
 
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = CHI_local_arms_production_AF
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -1612,7 +1362,7 @@
 					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = arms_factory
-						size > 0
+						size > 1
 						include_locked = yes
 					}
 				}
@@ -1624,12 +1374,29 @@
 				}
 				set_state_flag = CHI_local_arms_production_AF
 			}
+			random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = CHI_local_arms_production_AF
+			}
 		}
 	}
 
 	focus = {
 		id = CHI_long_term_economic_planning
-		icon = GFX_goal_generic_production2
+		icon = GFX_focus_RJ_warlord_long_term_economic_planning
 		prerequisite = { focus = CHI_local_arms_production }
 		x = -1
 		y = 2
@@ -1645,14 +1412,6 @@
 
 		}
 
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = CHI_long_term_economic_planning
@@ -1660,14 +1419,75 @@
 	}
 
 	focus = {
+		id = CHI_labor_reform
+		icon = GFX_focus_CHI_commemorate_labour_corp
+		prerequisite = { focus = CHI_long_term_economic_planning }
+		x = -1
+		y = 2
+		relative_position_id = CHI_long_term_economic_planning
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_ideas = CHI_labor_reform
+		}
+	}
+
+	focus = {
+		id = RJ_CHI_warlord_electrification_scheme
+		icon = GFX_focus_generic_electrification
+		prerequisite = { focus = CHI_long_term_economic_planning }
+		x = 0
+		y = 1
+		relative_position_id = CHI_long_term_economic_planning
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = RJ_CHI_electrification_scheme_idea
+			random_owned_controlled_state = {
+				limit = {
+					is_capital = yes
+				}
+				add_building_construction = {
+					type = energy_infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_infrastructure
+					level = 1
+				}
+			}
+		}
+	}
+
+	focus = {
 		id = CHI_local_arms_development
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_focus_generic_combined_arms
 		prerequisite = { focus = CHI_local_arms_production }
 		x = 1
 		y = 2
 		relative_position_id = CHI_industrial_investment
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -1676,14 +1496,6 @@
 		available = {
 
 		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -1703,7 +1515,7 @@
 		y = 3
 		relative_position_id = CHI_industrial_investment
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1712,14 +1524,6 @@
 		available = {
 
 		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 
@@ -1737,15 +1541,45 @@
 		}
 	}
 
+	focus = {
+		id = RJ_CHI_warlord_medical_modernization
+		icon = GFX_focus_generic_field_hostpital
+		prerequisite = { focus = CHI_local_arms_production }
+		x = 0
+		y = 3
+		relative_position_id = CHI_local_arms_production
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RJ_CHI_medical_idea
+
+			add_tech_bonus = {
+				name = CHI_warlord_medical_bonus
+				bonus = 0.5
+				uses = 2
+				category = hospital_tech
+			}
+		}
+	}
+
 	### WARLORD NATIONAL SPIRIT-RELATED FOCUSES ###
 
 	focus = {
 		id = CHI_strenghten_warlord_authority
 		icon = GFX_focus_generic_military_dictatorship
-		x = 19
+		x = 17
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		relative_position_id = CHI_secure_internal_politics
 
@@ -1756,14 +1590,6 @@
 		available = {
 
 		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -1781,11 +1607,11 @@
 
 	focus = {
 		id = CHI_uplift_the_cavalry_regiments
-		icon = GFX_goal_generic_cavalry
+		icon = GFX_focus_RJ_warlord_uplift_the_cavalry
 		x = -1
 		y = 1
 
-		cost = 10
+		cost = 7.2
 
 		prerequisite = { focus = CHI_strenghten_warlord_authority }
 
@@ -1803,30 +1629,19 @@
 
 		}
 
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = {  }
+		search_filters = { FOCUS_FILTER_NATIONAL_SPIRIT }
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = CHI_warlord_state_idea_2
-				add_idea = CHI_warlord_state_idea_cav
-			}	
+			add_ideas = RJ_CHI_cavalry_idea
 		}
 	}
 
 	focus = {
 		id = CHI_uplift_the_mountain_brigades
-		icon = GFX_focus_secret_rearmament
+		icon = GFX_focus_generic_mountain_troops
 		x = 1
 		y = 1
 
-		cost = 10
+		cost = 7.2
 
 		prerequisite = { focus = CHI_strenghten_warlord_authority }
 
@@ -1844,21 +1659,9 @@
 
 		}
 
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = {  }
+		search_filters = { FOCUS_FILTER_NATIONAL_SPIRIT }
 		completion_reward = {
-
-			swap_ideas = {
-				remove_idea = CHI_warlord_state_idea_2
-				add_idea = CHI_warlord_state_idea_mnt
-			}
+			add_ideas = RJ_CHI_mountaineers_idea
 
 			add_tech_bonus = {
 				name = CHI_uplift_the_mountain_brigades
