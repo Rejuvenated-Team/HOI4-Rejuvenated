@@ -2215,14 +2215,14 @@ characters={
 		}
 
 		field_marshal = {
-			skill = 3
+			skill = 6
 			attack_skill = 3
-			defense_skill = 3
-			planning_skill = 2
-			logistics_skill = 2
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 4
 			legacy_id = -1
 			traits = {
-				inflexible_strategist 
+				inflexible_strategist unyielding_defender
 			}
 			visible = {
 				
@@ -2542,12 +2542,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits = { organizer }
-			skill=3
-			attack_skill=2
-			defense_skill=2
-			planning_skill=4
-			logistics_skill=2
+			traits = { organizer trickster brilliant_strategist }
+			skill=6
+			attack_skill=5
+			defense_skill=3
+			planning_skill=6
+			logistics_skill=4
 			legacy_id=-1
 		}
 		advisor={
