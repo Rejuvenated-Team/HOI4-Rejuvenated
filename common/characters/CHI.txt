@@ -1239,7 +1239,7 @@ characters = {
 		portraits={
 			army={
 				large="GFX_portrait_li_zongren"
-				small="GFX_idea_CHI_li_zongren"
+				small = GFX_rj_portrait_GXC_li_zongren_small
 			}
 		}
 		advisor={	
@@ -1364,17 +1364,17 @@ characters = {
 	name=CHI_bai_chongxi
 	portraits={
 		army={
-			small="GFX_idea_generic_navy_asia_2"
+			small="GFX_rj_portrait_GXC_bai_chongxi_small"
 		}
 	}
 	advisor={
-		slot = navy_chief
+		slot = army_chief
 		idea_token = CHI_bai_chongxi
 		allowed = {
 			original_tag = CHI
 		}
 		traits = {
-			navy_chief_reform_2
+			army_chief_maneuver_3
 		}
 		cost = 100
 		ai_will_do = {
