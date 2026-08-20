@@ -351,20 +351,20 @@ defined_text = {
 
 # Money-system breakdown line items — surface the reparations transfer in
 # the player's additional income / expense summary tooltip.
-defined_text = {
-	name = additional_income_war_reparations
-	text = {
-		trigger = { has_idea = CPD_war_reparations_receiver }
-		localization_key = additional_income_war_reparations_tt
-	}
-}
-defined_text = {
-	name = additional_expense_war_reparations
-	text = {
-		trigger = { has_idea = CPD_war_reparations_payer }
-		localization_key = additional_expense_war_reparations_tt
-	}
-}
+#defined_text = {
+#	name = additional_income_war_reparations
+#	text = {
+#		trigger = { has_idea = CPD_war_reparations_receiver }
+#		localization_key = additional_income_war_reparations_tt
+#	}
+#}
+#defined_text = {
+#	name = additional_expense_war_reparations
+#	text = {
+#		trigger = { has_idea = CPD_war_reparations_payer }
+#		localization_key = additional_expense_war_reparations_tt
+#	}
+#}
 
 # War Reparations Live Preview — resolves to the projected weekly transfer
 # amount. Uses payer's GDP (target if we demand, self if we concede), the
@@ -555,53 +555,53 @@ defined_text = {
 		localization_key = "CPD_ai_accept_deal_fairness_tt"
 	}
 }
-defined_text = {
-	name = CPD_ai_accept_power_ranking
-
-	text = {
-		trigger = {
-			if = {
-				limit = { THIS = { has_idea = super_power } }
-				set_temp_variable = { CPD_PR_temp = -60 }
-			}
-			else_if = {
-				limit = { THIS = { has_idea = great_power } }
-				set_temp_variable = { CPD_PR_temp = -45 }
-			}
-			else_if = {
-				limit = { THIS = { has_idea = large_power } }
-				set_temp_variable = { CPD_PR_temp = -30 }
-			}
-			else_if = {
-				limit = { THIS = { has_idea = regional_power } }
-				set_temp_variable = { CPD_PR_temp = -15 }
-			}
-			else_if = {
-				limit = { THIS = { has_idea = non_power } }
-				set_temp_variable = { CPD_PR_temp = 15 }
-			}
-		}
-		localization_key = "CPD_ai_accept_power_ranking_tt"
-	}
-}
-defined_text = {
-	name = CPD_ai_accept_faction_backing
-
-	text = {
-		trigger = {
-			set_temp_variable = { CPD_FB_temp = 0 }
-			if = {
-				limit = { THIS = { has_idea = NATO_member } }
-				add_to_temp_variable = { CPD_FB_temp = -25 }
-			}
-			if = {
-				limit = { THIS = { has_idea = CSTO_member } }
-				add_to_temp_variable = { CPD_FB_temp = -25 }
-			}
-		}
-		localization_key = "CPD_ai_accept_faction_backing_tt"
-	}
-}
+#defined_text = {
+#	name = CPD_ai_accept_power_ranking
+#
+#	text = {
+#		trigger = {
+#			if = {
+#				limit = { THIS = { has_idea = super_power } }
+#				set_temp_variable = { CPD_PR_temp = -60 }
+#			}
+#			else_if = {
+#				limit = { THIS = { has_idea = great_power } }
+#				set_temp_variable = { CPD_PR_temp = -45 }
+#			}
+#			else_if = {
+#				limit = { THIS = { has_idea = large_power } }
+#				set_temp_variable = { CPD_PR_temp = -30 }
+#			}
+#			else_if = {
+#				limit = { THIS = { has_idea = regional_power } }
+#				set_temp_variable = { CPD_PR_temp = -15 }
+#			}
+#			else_if = {
+#				limit = { THIS = { has_idea = non_power } }
+#				set_temp_variable = { CPD_PR_temp = 15 }
+#			}
+#		}
+#		localization_key = "CPD_ai_accept_power_ranking_tt"
+#	}
+#}
+#defined_text = {
+#	name = CPD_ai_accept_faction_backing
+#
+#	text = {
+#		trigger = {
+#			set_temp_variable = { CPD_FB_temp = 0 }
+#			if = {
+#				limit = { THIS = { has_idea = NATO_member } }
+#				add_to_temp_variable = { CPD_FB_temp = -25 }
+#			}
+#			if = {
+#				limit = { THIS = { has_idea = CSTO_member } }
+#				add_to_temp_variable = { CPD_FB_temp = -25 }
+#			}
+#		}
+#		localization_key = "CPD_ai_accept_faction_backing_tt"
+#	}
+#}
 defined_text = {
 	name = CPD_ai_accept_months_at_war
 
