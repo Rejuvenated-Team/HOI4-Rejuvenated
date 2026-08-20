@@ -132,4 +132,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/warlords/advisors/rj_portrait_GXC_bai_chongxi.dds"
 	}
 
+	spriteType = {
+		name = "GFX_rj_portrait_GXC_chen_jitang_small"
+		texturefile = "gfx/interface/ideas/warlords/advisors/rj_portrait_GXC_chen_jitang.dds"
+	}
+
 }

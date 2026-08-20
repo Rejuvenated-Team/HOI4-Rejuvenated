@@ -1213,8 +1213,8 @@ characters = {
 		name=CHI_chen_jitang
 		portraits={
 			army={
-				large=GFX_portrait_GXC_chen_jitang 
-				small="GFX_idea_generic_army_asia_5"
+				large=GFX_rj_portrait_GXC_chen_jitang
+				small=GFX_rj_portrait_GXC_chen_jitang_small
 			}
 		}
 		advisor={

@@ -2240,8 +2240,8 @@ characters={
 			name=GXC_chen_jitang
 			portraits={
 				army={
-					large= GFX_portrait_GXC_chen_jitang
-					small=GFX_portrait_GXC_chen_jitang_small
+					large= GFX_rj_portrait_GXC_chen_jitang
+					small=GFX_rj_portrait_GXC_chen_jitang_small
 				}
 			}
 			advisor={
@@ -2251,12 +2251,22 @@ characters={
 					original_tag = GXC
 				}
 				traits = {
-					army_chief_defensive_2
+					army_chief_organizational_2
 				}
 					cost = 100
 				ai_will_do = {
 					base = 1.000
 				}
+			}
+			field_marshal={
+				skill=4
+				attack_skill=4
+				defense_skill=3
+				planning_skill=3
+				logistics_skill=2
+				legacy_id=-1
+
+				traits = { inspirational_leader infantry_leader	}
 			}
 		}
 		instance = {

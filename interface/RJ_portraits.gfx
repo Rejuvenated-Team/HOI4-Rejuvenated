@@ -114,4 +114,9 @@ spriteTypes = {
 		texturefile = "gfx/leaders/GXC/rj_portrait_GXC_bai_chongxi.dds"
 	}
 
+	spriteType = {
+		name = "GFX_rj_portrait_GXC_chen_jitang"
+		texturefile = "gfx/leaders/GXC/rj_portrait_GXC_chen_jitang.dds"
+	}
+
 }
