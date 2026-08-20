@@ -12,7 +12,6 @@
 		}
 		CPD_AI_is_stalemated = {
 			ROOT = {
-				check_variable = { months_at_war > 18 }
 				surrender_progress < 0.4
 				check_variable = { strength_ratio@THIS < 1.3 }
 				check_variable = { strength_ratio@THIS > 0.7 }
@@ -28,21 +27,12 @@
 				# Long war with low war support
 				AND = {
 					has_war_support < 0.3
-					check_variable = { months_at_war > 12 }
 				}
 				# High surrender progress
-				AND = {
 					surrender_progress > 0.3
-					check_variable = { months_at_war > 6 }
-				}
 				# Economic collapse
 				# Massively outgunned
-				AND = {
 					enemies_strength_ratio > 2.0
-					check_variable = { months_at_war > 6 }
-				}
-				# Stalemate — long indecisive war
-				check_variable = { months_at_war > 18 }
 			}
 		}
 		# Just for display shit
@@ -185,40 +175,6 @@
 				}
 				add_to_temp_variable = { CPD_acceptance_temp = CPD_FB_temp }
 
-			# Time at War (capped at 120 to prevent runaway acceptance in very long wars)
-			set_temp_variable = { months_at_war_tmp = THIS.months_at_war }
-			multiply_temp_variable = { months_at_war_tmp = 2 }
-			clamp_temp_variable = {
-				var = months_at_war_tmp
-				max = 120
-			}
-			add_to_temp_variable = { CPD_acceptance_temp = months_at_war_tmp }
-			# Dug-in stubbornness — opposite-sign of months_at_war_tmp.
-			# Long wars make AI more reluctant to accept the offerer's terms.
-			set_temp_variable = { CPD_WW_temp = 0 }
-			if = { limit = { check_variable = { THIS.months_at_war > 12 } } subtract_from_temp_variable = { CPD_WW_temp = 15 } }
-			if = { limit = { check_variable = { THIS.months_at_war > 24 } } subtract_from_temp_variable = { CPD_WW_temp = 15 } }
-			if = { limit = { check_variable = { THIS.months_at_war > 48 } } subtract_from_temp_variable = { CPD_WW_temp = 30 } }
-			add_to_temp_variable = { CPD_acceptance_temp = CPD_WW_temp }
-
-			if = { limit = { difficulty < 1 }
-				add_to_temp_variable = { CPD_acceptance_temp = 15 }
-			}
-			if = { limit = { difficulty > 1 }
-				add_to_temp_variable = { CPD_acceptance_temp = -15 }
-			}
-			if = { limit = { difficulty > 2 }
-				add_to_temp_variable = { CPD_acceptance_temp = -15 }
-			}
-
-			# Cost of Peace Deal (capped: concessions bonus maxes at +50)
-			set_temp_variable = { v = ROOT.CPD_total_cost_of_built_peace_deal }
-			multiply_temp_variable = { v = -5 }
-			clamp_temp_variable = {
-				var = v
-				max = 50
-			}
-			add_to_temp_variable = { CPD_acceptance_temp = v }
 			# DEAL FAIRNESS
 				set_temp_variable = { CPD_DF_temp = 0 }
 				if = {
@@ -287,7 +243,6 @@
 					limit = {
 						ROOT = { has_country_flag = CPD_ceasefire_demand }
 						THIS = {
-							check_variable = { months_at_war > 18 }
 							surrender_progress < 0.4
 						}
 					}
@@ -304,10 +259,7 @@
 		CPD_has_war_contribution = {
 			custom_trigger_tooltip = {
 				tooltip = CPD_has_war_contribution_TT
-				OR = {
-					check_variable = { ROOT.CPD_VP@THIS > 0 }
-					check_variable = { ROOT.months_at_war > 3 }
-				}
+				check_variable = { ROOT.CPD_VP@THIS > 0 }
 			}
 		}
 		CPD_has_demands_in_deal = {
@@ -350,7 +302,7 @@
 		}
 		# A deal composed only of a ceasefire with no territorial or political
 		# demands. Blocked by CPD_deal_has_no_demands (ceasefire IS a demand) and
-		# CPD_has_war_contribution (no VP gain or months-at-war threshold met),
+		# CPD_has_war_contribution (no VP gain threshold met),
 		# so it needs its own exemption.
 		CPD_is_ceasefire_only_deal = {
 			has_war = yes
