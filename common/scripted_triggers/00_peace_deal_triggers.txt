@@ -125,27 +125,6 @@
 					set_temp_variable = { CPD_SWC_temp = -25 }
 				}
 				add_to_temp_variable = { CPD_acceptance_temp = CPD_SWC_temp }
-			# POWER RANKING
-				if = {
-					limit = { THIS = { has_idea = super_power } }
-					set_temp_variable = { CPD_PR_temp = -60 }
-				}
-				else_if = {
-					limit = { THIS = { has_idea = great_power } }
-					set_temp_variable = { CPD_PR_temp = -45 }
-				}
-				else_if = {
-					limit = { THIS = { has_idea = large_power } }
-					set_temp_variable = { CPD_PR_temp = -30 }
-				}
-				else_if = {
-					limit = { THIS = { has_idea = regional_power } }
-					set_temp_variable = { CPD_PR_temp = -15 }
-				}
-				else_if = {
-					limit = { THIS = { has_idea = non_power } }
-					set_temp_variable = { CPD_PR_temp = 15 }
-				}
 				add_to_temp_variable = { CPD_acceptance_temp = CPD_PR_temp }
 			# FACTION BACKING
 				set_temp_variable = { CPD_FB_temp = 0 }
