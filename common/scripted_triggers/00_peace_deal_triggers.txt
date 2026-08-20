@@ -12,6 +12,7 @@
 		}
 		CPD_AI_is_stalemated = {
 			ROOT = {
+				check_variable = { months_at_war > 18 }
 				surrender_progress < 0.4
 				check_variable = { strength_ratio@THIS < 1.3 }
 				check_variable = { strength_ratio@THIS > 0.7 }
@@ -27,12 +28,21 @@
 				# Long war with low war support
 				AND = {
 					has_war_support < 0.3
+					check_variable = { months_at_war > 12 }
 				}
 				# High surrender progress
+				AND = {
 					surrender_progress > 0.3
+					check_variable = { months_at_war > 6 }
+				}
 				# Economic collapse
 				# Massively outgunned
+				AND = {
 					enemies_strength_ratio > 2.0
+					check_variable = { months_at_war > 6 }
+				}
+				# Stalemate — long indecisive war
+				check_variable = { months_at_war > 18 }
 			}
 		}
 		# Just for display shit
@@ -98,6 +108,18 @@
 					max = 100
 				}
 				add_to_temp_variable = { CPD_acceptance_temp = CPD_SP_temp }
+			# BATTLES WON — clamp the differential to keep long back-and-forth fronts
+			# from producing runaway acceptance scores.
+				set_temp_variable = { CPD_RBW_temp = ROOT.CPD_VP@PREV }
+				set_temp_variable = { CPD_TBW_temp = THIS.CPD_VP@ROOT }
+				subtract_from_temp_variable = { CPD_RBW_temp = CPD_TBW_temp }
+				round_temp_variable = CPD_RBW_temp
+				clamp_temp_variable = {
+					var = CPD_RBW_temp
+					min = -150
+					max = 150
+				}
+				add_to_temp_variable = { CPD_acceptance_temp = CPD_RBW_temp }
 			# SENDER WAR CONTRIBUTION
 				set_temp_variable = { CPD_SWC_temp = 0 }
 				if = {
@@ -125,23 +147,78 @@
 					set_temp_variable = { CPD_SWC_temp = -25 }
 				}
 				add_to_temp_variable = { CPD_acceptance_temp = CPD_SWC_temp }
-				add_to_temp_variable = { CPD_acceptance_temp = CPD_PR_temp }
-			# FACTION BACKING
-				set_temp_variable = { CPD_FB_temp = 0 }
-				if = {
-					limit = { THIS = { has_idea = NATO_member } }
-					add_to_temp_variable = { CPD_FB_temp = -25 }
-				}
-				if = {
-					limit = { THIS = { has_idea = CSTO_member } }
-					add_to_temp_variable = { CPD_FB_temp = -25 }
-				}
-				if = {
-					limit = { THIS = { has_idea = faction_resistance_axis_member } }
-					add_to_temp_variable = { CPD_FB_temp = -25 }
-				}
-				add_to_temp_variable = { CPD_acceptance_temp = CPD_FB_temp }
+			# POWER RANKING --- Temporarily disabling this since it's non-functional & erroring. I want to replicate this for our systems, but I don't have the time to do it right now. We can input factions to replace NATO, CSTO, etc., relying on a faction check instead of a hidden idea.
+			#	if = {
+			#		limit = { THIS = { has_idea = super_power } }
+			#		set_temp_variable = { CPD_PR_temp = -60 }
+			#	}
+			#	else_if = {
+			#		limit = { THIS = { has_idea = great_power } }
+			#		set_temp_variable = { CPD_PR_temp = -45 }
+			#	}
+			#	else_if = {
+			#		limit = { THIS = { has_idea = large_power } }
+			#		set_temp_variable = { CPD_PR_temp = -30 }
+			#	}
+			#	else_if = {
+			#		limit = { THIS = { has_idea = regional_power } }
+			#		set_temp_variable = { CPD_PR_temp = -15 }
+			#	}
+			#	else_if = {
+			#		limit = { THIS = { has_idea = non_power } }
+			#		set_temp_variable = { CPD_PR_temp = 15 }
+			#	}
+			#	add_to_temp_variable = { CPD_acceptance_temp = CPD_PR_temp }
+			## FACTION BACKING
+			#	set_temp_variable = { CPD_FB_temp = 0 }
+			#	if = {
+			#		limit = { THIS = { has_idea = NATO_member } }
+			#		add_to_temp_variable = { CPD_FB_temp = -25 }
+			#	}
+			#	if = {
+			#		limit = { THIS = { has_idea = CSTO_member } }
+			#		add_to_temp_variable = { CPD_FB_temp = -25 }
+			#	}
+			#	if = {
+			#		limit = { THIS = { has_idea = faction_resistance_axis_member } }
+			#		add_to_temp_variable = { CPD_FB_temp = -25 }
+			#	}
+			#	add_to_temp_variable = { CPD_acceptance_temp = CPD_FB_temp }
 
+			# Time at War (capped at 120 to prevent runaway acceptance in very long wars)
+			set_temp_variable = { months_at_war_tmp = THIS.months_at_war }
+			multiply_temp_variable = { months_at_war_tmp = 2 }
+			clamp_temp_variable = {
+				var = months_at_war_tmp
+				max = 120
+			}
+			add_to_temp_variable = { CPD_acceptance_temp = months_at_war_tmp }
+			# Dug-in stubbornness — opposite-sign of months_at_war_tmp.
+			# Long wars make AI more reluctant to accept the offerer's terms.
+			set_temp_variable = { CPD_WW_temp = 0 }
+			if = { limit = { check_variable = { THIS.months_at_war > 12 } } subtract_from_temp_variable = { CPD_WW_temp = 15 } }
+			if = { limit = { check_variable = { THIS.months_at_war > 24 } } subtract_from_temp_variable = { CPD_WW_temp = 15 } }
+			if = { limit = { check_variable = { THIS.months_at_war > 48 } } subtract_from_temp_variable = { CPD_WW_temp = 30 } }
+			add_to_temp_variable = { CPD_acceptance_temp = CPD_WW_temp }
+
+			if = { limit = { difficulty < 1 }
+				add_to_temp_variable = { CPD_acceptance_temp = 15 }
+			}
+			if = { limit = { difficulty > 1 }
+				add_to_temp_variable = { CPD_acceptance_temp = -15 }
+			}
+			if = { limit = { difficulty > 2 }
+				add_to_temp_variable = { CPD_acceptance_temp = -15 }
+			}
+
+			# Cost of Peace Deal (capped: concessions bonus maxes at +50)
+			set_temp_variable = { v = ROOT.CPD_total_cost_of_built_peace_deal }
+			multiply_temp_variable = { v = -5 }
+			clamp_temp_variable = {
+				var = v
+				max = 50
+			}
+			add_to_temp_variable = { CPD_acceptance_temp = v }
 			# DEAL FAIRNESS
 				set_temp_variable = { CPD_DF_temp = 0 }
 				if = {
@@ -210,6 +287,7 @@
 					limit = {
 						ROOT = { has_country_flag = CPD_ceasefire_demand }
 						THIS = {
+							check_variable = { months_at_war > 18 }
 							surrender_progress < 0.4
 						}
 					}
@@ -226,7 +304,10 @@
 		CPD_has_war_contribution = {
 			custom_trigger_tooltip = {
 				tooltip = CPD_has_war_contribution_TT
-				check_variable = { ROOT.CPD_VP@THIS > 0 }
+				OR = {
+					check_variable = { ROOT.CPD_VP@THIS > 0 }
+					check_variable = { ROOT.months_at_war > 3 }
+				}
 			}
 		}
 		CPD_has_demands_in_deal = {
@@ -269,7 +350,7 @@
 		}
 		# A deal composed only of a ceasefire with no territorial or political
 		# demands. Blocked by CPD_deal_has_no_demands (ceasefire IS a demand) and
-		# CPD_has_war_contribution (no VP gain threshold met),
+		# CPD_has_war_contribution (no VP gain or months-at-war threshold met),
 		# so it needs its own exemption.
 		CPD_is_ceasefire_only_deal = {
 			has_war = yes
@@ -479,129 +560,7 @@
 		# 		}
 		# 	}
 		# }
-	# LIBYA
-		LBA_was_original_state = {
-			OR = {
-				state = 391
-				state = 392
-				state = 393
-				state = 395
-				state = 396
-				state = 397
-				state = 579
-				state = 918
-				state = 919
-				state = 920
-				state = 1100
-				state = 1101
-			}
-		}
-		LBA_salafist_claim = {
-			OR = {
-				state = 85
-				state = 187
-				state = 327
-				state = 329
-				state = 330
-				state = 366
-				state = 370
-				state = 379
-				state = 381
-				state = 382
-				state = 394
-				state = 413
-				state = 1108
-				state = 1163
-				state = 1164
-				state = 1165
-				state = 1167
-			}
-		}
-	# NIGERIA
-		NIG_was_boko_haramed = {
-			OR = {
-				original_tag = BEN
-				original_tag = CAM
-				original_tag = CAR
-				original_tag = EGU
-				original_tag = NGR
-				original_tag = TOG
-			}
-		}
-		NIG_state_was_boko_haramed = {
-			OR = {
-				is_core_of = BEN
-				is_core_of = CAM
-				is_core_of = CAR
-				is_core_of = EGU
-				is_core_of = NGR
-				is_core_of = TOG
-			}
-		}
-	# NOVOROSSIYA
-		NOV_is_novorossiya_tag = {
-			OR = {
-				original_tag = CRM
-				original_tag = DPR
-				original_tag = HPR
-				original_tag = LPR
-				original_tag = NOV
-				original_tag = OPR
-			}
-		}
-		NOV_is_novorossiya_state = {
-			OR = {
-				state = 333
-				state = 693
-				state = 694
-				state = 695
-				state = 696
-				state = 1030
-				state = 1075
-				state = 1076
-				state = 1085
-				state = 1086
-				state = 1087
-			}
-		}
-	# PALESTINE
-		PAL_palestinian_state = {
-			OR = {
-				state = 204
-				state = 205
-				state = 206
-				state = 207
-				state = 208
-				state = 209
-			}
-		}
-	# SERBIA
-		SER_is_yugoslav_nation = {
-			OR = {
-				original_tag = BOS
-				original_tag = CRO
-				original_tag = FYR
-				original_tag = HZG
-				original_tag = KOS
-				original_tag = MNT
-				original_tag = RSK
-				original_tag = SLV
-				original_tag = VOJ
-			}
-		}
-		SER_is_yugoslav_state = {
-			OR = {
-				is_core_of = BOS
-				is_core_of = CRO
-				is_core_of = FYR
-				is_core_of = HZG
-				is_core_of = KOS
-				is_core_of = MNT
-				is_core_of = RSK
-				is_core_of = SLV
-				is_core_of = VOJ
-			}
-		}
+
 # MISCELLANEOUS TRIGGERS
 CPC_off_western = {
 	ROOT = { has_government = democratic }
@@ -622,132 +581,5 @@ CPC_off_non_aligned = {
 
 # Custom Civil War Trigger
 CPD_is_a_custom_civil_war = {
-	# Somalia
-	if = {
-		limit = { ROOT = { original_tag = SOM } }
-		NOT = {
-			OR = {
-				original_tag = JUB
-				original_tag = SNA
-				original_tag = SWS
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = JUB } }
-		NOT = {
-			OR = {
-				original_tag = SOM
-				original_tag = SNA
-				original_tag = SWS
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = SNA } }
-		NOT = {
-			OR = {
-				original_tag = SOM
-				original_tag = JUB
-				original_tag = SWS
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = SWS } }
-		NOT = {
-			OR = {
-				original_tag = SOM
-				original_tag = JUB
-				original_tag = SNA
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = LIB } }
-		NOT = {
-			OR = {
-				original_tag = LUR
-				original_tag = SIE
-				original_tag = GUI
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = LUR } }
-		NOT = {
-			OR = {
-				original_tag = AFR
-				original_tag = LIB
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = SIE } }
-		NOT = {
-			OR = {
-				original_tag = AFR
-				original_tag = LIB
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = GUI } }
-		NOT = {
-			OR = {
-				original_tag = AFR
-				original_tag = LIB
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = AFR } }
-		NOT = {
-			OR = {
-				original_tag = LUR
-				original_tag = SIE
-				original_tag = GUI
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = SUD } }
-		NOT = {
-			OR = {
-				original_tag = SSU
-				original_tag = DAR
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = SSU } }
-		NOT = {
-			OR = {
-				original_tag = SUD
-				original_tag = DAR
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = DAR } }
-		NOT = {
-			OR = {
-				original_tag = SUD
-				original_tag = SSU
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = TAL } }
-		NOT = {
-			original_tag = AFG
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = AFG } }
-		NOT = {
-			original_tag = TAL
-		}
-	}
 
 }
