@@ -90,7 +90,7 @@ focus_tree = {
 		prerequisite = { focus = ICE_our_economic_revival }
 
 		x = 2
-		y = 0
+		y = 1
 
 		cost = 10
 
