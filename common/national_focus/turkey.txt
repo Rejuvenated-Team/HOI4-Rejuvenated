@@ -2706,7 +2706,7 @@ focus_tree = {
 
 	focus = {
 		id = TUR_return_of_the_sultan
-		icon = GFX_focus_rom_royal_dictatorship
+		icon = GFX_goal_MOR_sultan
 		prerequisite = { focus = TUR_restore_the_divan }
 		prerequisite = { focus = TUR_rebuilding_our_nation }
 		x = 0
@@ -2758,7 +2758,7 @@ focus_tree = {
 
 	focus = {
 		id = TUR_join_the_central_powers
-		icon = GFX_focus_ger_revive_kaiserreich
+		icon = GFX_goal_central_powers
 		available = {
 			is_subject = no
 			OR = {
@@ -2959,7 +2959,7 @@ focus_tree = {
 
 	focus = {
 		id = TUR_reclaiming_our_lost_empire
-		icon = GFX_focus_generic_strike_at_democracy1
+		icon = GFX_goal_OTT_caliph
 		prerequisite = { focus = TUR_aligning_bulgaria }
 		x = -2
 		y = 1
@@ -3003,7 +3003,7 @@ focus_tree = {
 
 	focus = {
 		id = TUR_expanding_the_saadabad_pact
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_TUR_treaty_of_saadabad
 		prerequisite = { focus = TUR_aligning_bulgaria }
 		x = 0
 		y = 1
@@ -3150,7 +3150,7 @@ focus_tree = {
 
 	focus = {
 		id = TUR_the_damascus_diktat
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_generic_attack_syria
 		prerequisite = { focus = TUR_aligning_bulgaria }
 		x = 2
 		y = 1
@@ -3267,7 +3267,7 @@ focus_tree = {
 
 	focus = {
 		id = TUR_desert_camel_corps
-		icon = GFX_goal_generic_cavalry
+		icon = GFX_focus_generic_camel_corps
 		prerequisite = { focus = TUR_supporting_the_east }
 		x = 0
 		y = 1
@@ -3285,7 +3285,7 @@ focus_tree = {
 
 	focus = {
 		id = TUR_the_pan_national_association_of_ulemas
-		icon = GFX_goal_anschluss
+		icon = GFX_goal_OTT_Association_of_Muslim_Nations
 		prerequisite = { focus = TUR_expanding_the_saadabad_pact }
 		prerequisite = { focus = TUR_reclaiming_our_lost_empire focus = TUR_the_damascus_diktat }
 		x = 0
@@ -3486,7 +3486,7 @@ focus_tree = {
 
 	focus = {
 		id = TUR_reinstate_the_darulfununu_sahane
-		icon = GFX_goal_generic_scientific_exchange
+		icon = GFX_focus_PER_university_of_isfahan
 		prerequisite = { focus = TUR_the_pan_national_association_of_ulemas focus = TUR_reclaiming_our_lost_empire }
 		x = -1
 		y = 1
@@ -3542,7 +3542,7 @@ focus_tree = {
 
 	focus = {
 		id = TUR_refining_our_strategies
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_generic_army_doctrines_2
 		prerequisite = { focus = TUR_the_damascus_diktat }
 		x = 3
 		y = 1
@@ -5489,20 +5489,14 @@ focus_tree = {
 					target = TUR
 					modifier = TUR_imperialist_puppets
 				}
-				add_opinion_modifier = {
-					target = GER
-					modifier = embargo
-				}
+				send_embargo = GER
 			}
 			GER = {
 				add_opinion_modifier = {
 					target = TUR
 					modifier = TUR_aiding_our_enemies
 				}
-				add_opinion_modifier = {
-					target = IRQ
-					modifier = embargo
-				}
+				send_embargo = IRQ
 			}
 			hidden_effect = {
 				if = {
@@ -5512,10 +5506,7 @@ focus_tree = {
 						}
 					}
 					PER = {
-						add_opinion_modifier = {
-							target = GER
-							modifier = embargo
-						}
+						send_embargo = GER
 					}
 				}
 			}
@@ -5524,7 +5515,7 @@ focus_tree = {
 
 	focus = {
 		id = TUR_host_exiled_scientists
-		icon = GFX_focus_research2
+		icon = GFX_focus_generic_university_2
 		prerequisite = { focus = TUR_the_anglo_turkish_agreement }
 		x = 1
 		y = 1
@@ -5649,7 +5640,7 @@ focus_tree = {
 
 	focus = {
 		id = TUR_join_the_allies
-		icon = GFX_goal_support_democracy
+		icon = GFX_focus_ARG_join_the_allies
 		mutually_exclusive = { focus = TUR_the_mediterranean_entente focus = TUR_join_the_axis focus = TUR_anti_bolshevik_mediterranean_bloc focus = TUR_readdress_the_montreux_convention }
 		prerequisite = { focus = TUR_american_motor_factories }
 		prerequisite = { focus = TUR_bomber_schematics }
@@ -5756,11 +5747,19 @@ focus_tree = {
 		}
 
 		bypass = {
-			ENG = {
-				NOT = {
-					controls_state = 455
-					controls_state = 454
-					controls_state = 453
+			455 = {
+				ENG = {
+					is_not_controlled_by_ROOT_or_subject = yes
+				}
+			}
+			454 = {
+				ENG = {
+					is_not_controlled_by_ROOT_or_subject = yes
+				}
+			}
+			453 = {
+				ENG = {
+					is_not_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -5775,7 +5774,7 @@ focus_tree = {
 
 	focus = {
 		id = TUR_expanded_credit_on_our_debts
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_focus_mex_privatisation
 		prerequisite = { focus = TUR_controlling_the_skies_of_europe }
 		prerequisite = { focus = TUR_expanding_our_navy }
 		x = 0
@@ -5854,7 +5853,7 @@ focus_tree = {
 
 	focus = {
 		id = TUR_seizing_the_romanian_oil_fields
-		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		icon = GFX_focus_generic_attack_romania
 		available = {
 			ROM = {
 				is_subject = no 
@@ -5908,7 +5907,7 @@ focus_tree = {
 
 	focus = {
 		id = TUR_securing_iran
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_generic_attack_iran
 		prerequisite = { focus = TUR_partnership_pact_with_bulgaria }
 		x = 0
 		y = 1
@@ -7583,7 +7582,7 @@ focus_tree = {
 
 	focus = {
 		id = TUR_dissolve_the_ODPA
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_goal_OTT_opda
 		prerequisite = { focus = TUR_provide_refuge_to_the_victims_of_fascism }
 		x = -2
 		y = 1

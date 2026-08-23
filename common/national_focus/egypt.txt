@@ -234,12 +234,11 @@ focus_tree = {
 						keep_political_party_members = yes
 					}
 					add_stability = -0.1
-					every_state = {
+					every_owned_state = {
 						limit = {
 							is_core_of = SUD
 						}
-						set_state_owner_to = SUD
-						set_state_controller_to = SUD
+						transfer_state_to = SUD
 					}
 					SUD = {
 						#load_oob = SUD_1936

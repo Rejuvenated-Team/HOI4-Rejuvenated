@@ -15,9 +15,13 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_kr_portrait_BRA_eurico_gaspar_dutra_small"
-		#texturefile = "gfx/interface/ideas/bra/advisors/kr_advisor_BRA_eurico_gaspar_dutra.dds"
-		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
+		name = "GFX_rj_portrait_BRA_eurico_gaspar_dutra_small"
+		texturefile = "gfx/interface/ideas/bra/advisors/rj_portrait_BRA_eurico_gaspar_dutra.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_BRA_francisco_morato_small"
+		texturefile = "gfx/interface/ideas/bra/advisors/rj_portrait_BRA_francisco_morato.dds"
 	}
 
 	spriteType = {
@@ -110,6 +114,27 @@ spriteTypes = {
 		name = "GFX_rj_portrait_SOV_peter_struve_small"
 		#texturefile = "gfx/interface/ideas/sov/advisors/rj_advisor_SOV_peter_struve.dds"
 		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
+	}
+
+
+
+	################################
+	### CHINA + WARLORDS ###########
+	################################
+
+	spriteType = {
+		name = "GFX_rj_portrait_GXC_li_zongren_small"
+		texturefile = "gfx/interface/ideas/warlords/advisors/rj_portrait_GXC_li_zongren.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_GXC_bai_chongxi_small"
+		texturefile = "gfx/interface/ideas/warlords/advisors/rj_portrait_GXC_bai_chongxi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_GXC_chen_jitang_small"
+		texturefile = "gfx/interface/ideas/warlords/advisors/rj_portrait_GXC_chen_jitang.dds"
 	}
 
 }
