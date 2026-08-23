@@ -2737,13 +2737,21 @@ characters = {
 				
 			}
 			available = {
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-				}
-				OR = {
-					has_completed_focus = SOV_integrate_smirnovs_bloc
-					has_completed_focus = SOV_return_democracy_to_the_party
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_reinvite_the_zinovyevites_into_the_party
+					else = {
+						OR = {
+							has_global_flag = SOV_soviet_civil_war
+							has_global_flag = SOV_soviet_civil_war_over
+						}
+						OR = {
+							has_completed_focus = SOV_integrate_smirnovs_bloc
+							has_completed_focus = SOV_return_democracy_to_the_party
+						}
+					}
 				}
 				is_country_leader = no
 				if = {
@@ -2992,9 +3000,17 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					SOV_is_left_opposition = yes
-					has_completed_focus = SOV_return_democracy_to_the_party
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_reinvite_the_zinovyevites_into_the_party
+					else = {
+						OR = {
+							SOV_is_left_opposition = yes
+							has_completed_focus = SOV_return_democracy_to_the_party
+						}
+					}
 				}
 				if = {
 					limit = {
@@ -3218,9 +3234,17 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					has_completed_focus = SOV_the_need_for_policy_changes 
-					has_completed_focus = SOV_return_democracy_to_the_party
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_reinvite_the_zinovyevites_into_the_party
+					else = {
+						OR = {
+							has_completed_focus = SOV_the_need_for_policy_changes 
+							has_completed_focus = SOV_return_democracy_to_the_party
+						}
+					}
 				}
 				if = {
 					limit = {
@@ -3273,13 +3297,21 @@ characters = {
 				}
 			}
 			available = {
-				has_completed_focus = SOV_align_the_zinovyevites
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-					AND = {
-						has_completed_focus = SOV_the_plan_for_the_coup
-						has_completed_focus = SOV_coup_detat
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_reinvite_the_zinovyevites_into_the_party
+					else = {
+						has_completed_focus = SOV_align_the_zinovyevites
+						OR = {
+							has_global_flag = SOV_soviet_civil_war
+							has_global_flag = SOV_soviet_civil_war_over
+							AND = {
+								has_completed_focus = SOV_the_plan_for_the_coup
+								has_completed_focus = SOV_coup_detat
+							}
+						}
 					}
 				}
 				if = {
@@ -3339,10 +3371,18 @@ characters = {
 				}
 			}
 			available = {
-				has_completed_focus = SOV_align_the_zinovyevites
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_reinvite_the_zinovyevites_into_the_party
+					else = {
+						has_completed_focus = SOV_align_the_zinovyevites
+						OR = {
+							has_global_flag = SOV_soviet_civil_war
+							has_global_flag = SOV_soviet_civil_war_over
+						}
+					}
 				}
 				if = {
 					limit = {

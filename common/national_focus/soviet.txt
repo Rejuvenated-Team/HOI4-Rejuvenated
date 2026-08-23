@@ -7782,7 +7782,7 @@ focus_tree = {
 		id = SOV_the_stalin_constitution
 		icon = GFX_goal_support_communism
 		prerequisite = { focus = SOV_the_centre }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = SOV_the_centre
 		cost = 10
@@ -7809,7 +7809,7 @@ focus_tree = {
 		id = SOV_the_zinovyevite_terrorist_center
 		icon = GFX_focus_SOV_purge_zinovyevists
 		prerequisite = { focus = SOV_the_stalin_constitution }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = SOV_the_stalin_constitution
 		cost = 5
@@ -7919,9 +7919,81 @@ focus_tree = {
 	}
 
 	focus = {
+		id = rj_SOV_reinvite_the_zinovyevites_into_the_party
+		icon = GFX_focus_SOV_purge_zinovyevists
+		prerequisite = { focus = SOV_the_stalin_constitution }
+		mutually_exclusive = { focus = SOV_the_zinovyevite_terrorist_center }
+		x = 1
+		y = 1
+		relative_position_id = SOV_the_stalin_constitution
+		cost = 5
+		
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
+
+		completion_reward = {
+			SOV_remove_paranoia_effect = yes
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SOV_grigory_zinovyev
+			show_ideas_tooltip = SOV_lev_kamenev
+			show_ideas_tooltip = SOV_ivan_smirnov
+			show_ideas_tooltip = SOV_grigory_sokolnikov
+			show_ideas_tooltip = SOV_aleksandr_shlyapnikov
+			hidden_effect = {
+				SOV_grigory_zinovyev = {
+					clr_character_flag = SOV_imprisoned_flag
+					set_portraits = {
+						army = {
+							small = "GFX_idea_SOV_grigory_zinovyev"
+						}
+					}
+				}
+				SOV_lev_kamenev = {
+					clr_character_flag = SOV_imprisoned_flag
+					set_portraits = {
+						army = {
+							small = "GFX_idea_SOV_lev_kamenev"
+						}
+					}
+				}
+				SOV_ivan_smirnov = {
+					clr_character_flag = SOV_imprisoned_flag
+					set_portraits = {
+						army = {
+							small = "GFX_idea_SOV_ivan_smirnov"
+						}
+					}
+				}
+				#SOV_grigory_sokolnikov
+				SOV_aleksandr_shlyapnikov = {
+					clr_character_flag = SOV_imprisoned_flag
+					set_portraits = {
+						army = {
+							small = "GFX_idea_SOV_aleksandr_shlyapnikov"
+						}
+					}
+				}
+			}
+
+			custom_effect_tooltip = newline_tt
+			if = {
+				limit = { NOT = { has_completed_focus = SOV_lessons_of_war } }
+				
+				custom_effect_tooltip = modify_the_red_army_tt
+				add_to_variable = { SOV_the_red_army_mastery_loss_factor  = -0.05 tooltip = land_mastery_gain_factor_tt }
+
+				#Need for tooltip
+				set_variable = { SOV_the_red_army_mastery_loss_factor_inverted = SOV_the_red_army_mastery_loss_factor }
+				multiply_variable = { SOV_the_red_army_mastery_loss_factor_inverted = -1 }
+			}
+		}
+	}
+
+	focus = {
 		id = SOV_secure_the_administration
 		icon = GFX_focus_generic_join_comintern
-		prerequisite = { focus = SOV_the_zinovyevite_terrorist_center }
+		prerequisite = { focus = SOV_the_zinovyevite_terrorist_center focus = rj_SOV_reinvite_the_zinovyevites_into_the_party }
 		x = -1
 		y = 1
 		relative_position_id = SOV_the_zinovyevite_terrorist_center
@@ -8220,10 +8292,149 @@ focus_tree = {
 	}
 
 	focus = {
+		id = rj_SOV_get_back_the_trotskyists
+		icon = GFX_focus_SOV_purge_trotskyists
+		prerequisite = { focus = rj_SOV_reinvite_the_zinovyevites_into_the_party }
+		mutually_exclusive = { focus = SOV_the_anti_soviet_trotskyist_center }
+		x = 0
+		y = 2
+		relative_position_id = rj_SOV_reinvite_the_zinovyevites_into_the_party
+		cost = 5
+
+		available = {
+			has_country_flag = {
+				flag = SOV_first_moscow_trial_flag
+				days > 175
+			}
+			custom_trigger_tooltip = {
+				tooltip = SOV_last_purge_focus_days_tt
+				has_country_flag = {
+					flag = SOV_first_moscow_trial_flag
+					days > 175
+				}
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
+
+		select_effect = {
+			set_country_flag = SOV_paranoia_do_not_cancel_focus_flag #This focus cannot be canceled
+		}
+
+		completion_reward = {
+			clr_country_flag = SOV_paranoia_do_not_cancel_focus_flag
+			set_country_flag = { flag = SOV_paranoia_random_purge_cooldown_from_focus_flag days = 15 } #Used to prevent random purges from popping up while this is active
+			set_country_flag = SOV_second_moscow_trial_flag #Used to unlock the next purge focus
+
+			add_political_power = 25
+
+			SOV_paranoia_high_increase_effect = yes
+
+			#HISTORICAL
+			#Radek
+			if = {
+				limit = {
+					has_character = SOV_karl_radek
+				}
+				SOV_karl_radek = {
+					set_character_flag = SOV_targeted_for_purge_flag
+				}
+			}
+			else = {
+				SOV_add_random_character_to_purge_targets_effect = yes
+			}
+			#NOT-SO-HISTORICAL
+			#Smilga
+			if = {
+				limit = {
+					has_character = SOV_ivar_smilga
+				}
+				SOV_ivar_smilga = {
+					set_character_flag = SOV_targeted_for_purge_flag
+				}
+			}
+			else = {
+				SOV_add_random_character_to_purge_targets_effect = yes
+			}
+			#Preobrazhensky
+			if = {
+				limit = {
+					has_character = SOV_yevgeny_preobrazhensky
+				}
+				SOV_yevgeny_preobrazhensky = {
+					set_character_flag = SOV_targeted_for_purge_flag
+				}
+			}
+			else = {
+				SOV_add_random_character_to_purge_targets_effect = yes
+			}
+			#Ryutin
+			if = {
+				limit = {
+					has_character = SOV_martemyan_ryutin
+				}
+				SOV_martemyan_ryutin = {
+					set_character_flag = SOV_targeted_for_purge_flag
+				}
+			}
+			else = {
+				SOV_add_random_character_to_purge_targets_effect = yes
+			}
+			#Ustryalov
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				if = {
+					limit = {
+						has_character = SOV_nikolay_ustryalov
+					}
+					SOV_nikolay_ustryalov = {
+						set_character_flag = SOV_targeted_for_purge_flag
+					}
+				}
+				else = {
+					SOV_add_random_character_to_purge_targets_effect = yes
+				}
+			}
+
+			custom_effect_tooltip = SOV_will_trigger_a_great_purge_tt
+			hidden_effect = {
+				set_country_flag = SOV_purge_event_unavoidable_flag #No way to avoid this purge. This people are about to be purged and there's nothing you can do for them.
+				SOV_trigger_great_purge_moscow_trial_effect = yes #SECOND MOSCOW TRIAL -> Left Opposition
+			}
+			custom_effect_tooltip = SOV_trigger_second_moscow_trial_tt
+
+			hidden_effect = {
+				swap_ruler_traits = {
+					remove = stalin_political_paranoia
+					add = stalin_political_paranoia_advanced
+				}
+				add_to_variable = { SOV_paranoia_weekly_modifiers_amount = 1 }
+				SOV_paranoia_modifier_update_gui_tooltip = yes
+			}		
+			custom_effect_tooltip = SOV_increase_weekly_paranoia_in_trait_tt
+
+			custom_effect_tooltip = newline_tt
+
+			if = {
+				limit = { NOT = { has_completed_focus = SOV_lessons_of_war } }
+				
+				custom_effect_tooltip = modify_the_red_army_tt
+				add_to_variable = { SOV_the_red_army_mastery_loss_factor = -0.05 tooltip = land_mastery_gain_factor_tt }
+
+				#Need for tooltip
+				set_variable = { SOV_the_red_army_mastery_loss_factor_inverted = SOV_the_red_army_mastery_loss_factor }
+				multiply_variable = { SOV_the_red_army_mastery_loss_factor_inverted = -1 }
+			}
+		}
+	}
+
+	focus = {
 		id = SOV_the_workers_dictatorship
 		icon = GFX_focus_spr_masters_of_our_own_fate
-		prerequisite = { focus = SOV_the_anti_soviet_trotskyist_center }
-		x = 0
+		prerequisite = { focus = SOV_the_anti_soviet_trotskyist_center focus = rj_SOV_get_back_the_trotskyists }
+		x = -1
 		y = 1
 		relative_position_id = SOV_the_anti_soviet_trotskyist_center
 		cost = 10
@@ -8250,7 +8461,7 @@ focus_tree = {
 		icon = GFX_focus_SOV_organization_centralization_discipline
 		prerequisite = { focus = SOV_the_collectivization_process }
 		prerequisite = { focus = SOV_the_workers_dictatorship }
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = SOV_the_workers_dictatorship
 		cost = 5
@@ -8351,9 +8562,121 @@ focus_tree = {
 		id = SOV_the_military_conspiracy
 		icon = GFX_focus_SOV_military_purge
 		prerequisite = { focus = SOV_the_workers_dictatorship }
+		prerequisite = { focus = SOV_the_anti_soviet_trotskyist_center }
 		x = 0
 		y = 2
 		relative_position_id = SOV_the_anti_soviet_trotskyist_center
+		cost = 5
+
+		available = {
+			has_country_flag = {
+				flag = SOV_second_moscow_trial_flag
+				days > 175
+			}
+			custom_trigger_tooltip = {
+				tooltip = SOV_last_purge_focus_days_military_tt
+				has_country_flag = {
+					flag = SOV_second_moscow_trial_flag
+					days > 175
+				}
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
+
+		select_effect = {
+			set_country_flag = SOV_paranoia_do_not_cancel_focus_flag #This focus cannot be canceled
+		}
+
+		completion_reward = {
+			clr_country_flag = SOV_paranoia_do_not_cancel_focus_flag
+			set_country_flag = { flag = SOV_paranoia_random_purge_cooldown_from_focus_flag days = 15 } #Used to prevent random purges from popping up while this is active
+			set_country_flag = SOV_trial_of_the_generals_flag #Used to unlock the next purge focus
+
+			add_political_power = 25
+
+			SOV_paranoia_high_increase_effect = yes
+
+			#Historical
+			if = {
+				limit = {
+					has_character = SOV_mikhail_tukhachevsky
+				}
+				SOV_mikhail_tukhachevsky = {
+					set_character_flag = SOV_targeted_for_purge_flag
+				}
+			}
+			else = {
+				SOV_add_random_character_to_purge_targets_effect = yes
+			}
+			#NOT-SO-HISTORICAL
+			#Yegorov
+			if = {
+				limit = {
+					has_character = SOV_aleksandr_yegorov
+				}
+				SOV_aleksandr_yegorov = {
+					set_character_flag = SOV_targeted_for_purge_flag
+				}
+			}
+			else = {
+				SOV_add_random_character_to_purge_targets_effect = yes
+			}
+			#Blyukher
+			if = {
+				limit = {
+					has_character = SOV_vasily_blyukher
+				}
+				SOV_vasily_blyukher = {
+					set_character_flag = SOV_targeted_for_purge_flag
+				}
+			}
+			else = {
+				SOV_add_random_character_to_purge_targets_effect = yes
+			}
+			#Primakov
+			if = {
+				limit = {
+					has_character = SOV_vitaly_primakov
+				}
+				SOV_vitaly_primakov = {
+					set_character_flag = SOV_targeted_for_purge_flag
+				}
+			}
+			else = {
+				SOV_add_random_character_to_purge_targets_effect = yes
+			}			
+
+			custom_effect_tooltip = SOV_will_trigger_a_great_purge_tt
+			hidden_effect = {
+				set_country_flag = SOV_purge_event_unavoidable_flag #No way to avoid this purge. This people are about to be purged and there's nothing you can do for them.
+				SOV_great_purge_army_trial_of_the_generals_effect = yes #TRIAL OF THE GENERALS -> Tukhachevsky
+			}
+
+			set_country_flag = SOV_stalinist_military_flag #New Generals have more chances of being Stalinists after this
+
+			custom_effect_tooltip = newline_tt
+			if = {
+				limit = { NOT = { has_completed_focus = SOV_lessons_of_war } }
+				
+				custom_effect_tooltip = modify_the_red_army_tt
+				add_to_variable = { SOV_the_red_army_mastery_loss_factor = -0.05 tooltip = land_mastery_gain_factor_tt }
+
+				#Need for tooltip
+				set_variable = { SOV_the_red_army_mastery_loss_factor_inverted = SOV_the_red_army_mastery_loss_factor }
+				multiply_variable = { SOV_the_red_army_mastery_loss_factor_inverted = -1 }
+			}
+		}
+	}
+
+	focus = {
+		id = rj_SOV_invite_the_white_exiles
+		icon = GFX_focus_SOV_military_purge
+		prerequisite = { focus = rj_SOV_get_back_the_trotskyists }
+		mutually_exclusive = { focus = SOV_the_military_conspiracy }
+		x = 0
+		y = 2
+		relative_position_id = rj_SOV_get_back_the_trotskyists
 		cost = 5
 
 		available = {
@@ -8571,8 +8894,8 @@ focus_tree = {
 		id = SOV_behead_the_snake
 		icon = GFX_focus_SOV_behead_the_snake
 		prerequisite = { focus = SOV_the_military_conspiracy }
-		x = 2
-		y = 1
+		x = -1
+		y = 2
 		relative_position_id = SOV_the_military_conspiracy
 		cost = 5
 
@@ -8615,7 +8938,7 @@ focus_tree = {
 		id = SOV_stalins_cult_of_personality
 		icon = GFX_focus_SOV_stalins_cult_of_personality
 		prerequisite = { focus = SOV_the_bloc_of_rights_and_trotskyites }
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = SOV_the_bloc_of_rights_and_trotskyites
 		cost = 5
@@ -9686,7 +10009,7 @@ focus_tree = {
 		icon = GFX_focus_spr_masters_of_our_own_fate
 		prerequisite = { focus = SOV_approach_tukhachevsky focus = SOV_approach_primakov}
 		x = 1
-		y = 2
+		y = 1
 		relative_position_id = SOV_approach_tukhachevsky
 		cost = 5
 
@@ -9753,7 +10076,7 @@ focus_tree = {
 		prerequisite = { focus = SOV_left_opposition_coup }
 		prerequisite = { focus = SOV_funds_for_the_cause }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = SOV_funds_for_the_cause
 		cost = 10
 
@@ -9932,7 +10255,7 @@ focus_tree = {
 		prerequisite = { focus = SOV_left_opposition_coup }
 		prerequisite = { focus = SOV_committee_in_exile }
 		x = 0
-		y = 4
+		y = 3
 		relative_position_id = SOV_committee_in_exile
 		
 		cost = 10
@@ -10790,7 +11113,7 @@ focus_tree = {
 		icon = GFX_goal_generic_war_with_comintern
 		prerequisite = { focus = SOV_covert_support_for_spanish_poum }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = SOV_covert_support_for_spanish_poum
 		cost = 5
 		available = {
@@ -10879,7 +11202,7 @@ focus_tree = {
 		icon = GFX_focus_spr_masters_of_our_own_fate
 		prerequisite = { focus = SOV_dissent_in_the_party }
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = SOV_dissent_in_the_party
 		cost = 10
 		available = {
@@ -12068,7 +12391,7 @@ focus_tree = {
 		prerequisite = { focus = SOV_cooperation_against_stalin }
 		mutually_exclusive = { focus = SOV_left_purges focus = SOV_right_purges }
 		x = 0
-		y = 4
+		y = 3
 		relative_position_id = SOV_cooperation_against_stalin
 		cost = 10
 		available = {
