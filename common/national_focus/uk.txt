@@ -347,10 +347,6 @@ focus_tree = {
 		dynamic = yes
 
 		available = {
-		} 
-
-		allow_branch = {
-			has_dlc = "La Resistance"
 		}
 
 		icon = GFX_focus_RJ_ENG_SIS
@@ -364,15 +360,23 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
-					has_intelligence_agency = no
+					has_dlc = "La Resistance"
 				}
-				create_intelligence_agency = yes
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
+				IF = {
+					limit = {
+						has_intelligence_agency = no
+					}
+					create_intelligence_agency = yes
+					custom_effect_tooltip = generic_skip_one_line_tt
+				}
 
-			add_ideas = ENG_mi6_ns
+				add_ideas = ENG_mi6_ns
+			}
+			else = {
+				add_ideas = ENG_mi6_no_lar_ns
+			}
 
 		}
 	}
@@ -910,9 +914,6 @@ focus_tree = {
 	focus = {
 		id = ENG_parachute_regiments
 		prerequisite = { focus = ENG_special_air_service }
-		allow_branch = {
-			has_dlc = "Arms Against Tyranny"
-		}
 		continue_if_invalid = yes
 
 		icon = GFX_focus_generic_paratrooper
@@ -924,12 +925,25 @@ focus_tree = {
 			factor = 1
 		}	
 		completion_reward = {
-			add_potential_special_forces_tree = yes
-			add_doctrine_cost_reduction = {
-				name = ENG_parachute_regiments
-				cost_reduction = 0.25
-				uses = 2
-				category = special_forces_doctrine
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				add_potential_special_forces_tree = yes
+				add_doctrine_cost_reduction = {
+					name = ENG_parachute_regiments
+					cost_reduction = 0.25
+					uses = 2
+					category = special_forces_doctrine
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = ENG_parachute_regiments
+					bonus = 0.25
+					uses = 2
+					category = cat_special_forces_generic
+				}
 			}
 		}
 	}
