@@ -2190,7 +2190,7 @@ characters={
 	USA_jack_h_taylor = {
 		name = USA_jack_h_taylor
 		portraits = {
-			civilian = {
+			army = {
 				small = GFX_rj_portrait_USA_jack_h_taylor_small
 			}
 		}
