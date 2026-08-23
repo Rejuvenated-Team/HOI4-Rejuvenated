@@ -7,6 +7,11 @@
 #Characters
  SOV_viktor_chernov: "Viktor Chernov"
  SOV_pavel_milyukov: "Pavel Milyukov"
+ SOV_pavel_sudoplatov: "Pavel Sudoplatov"
+ SOV_yan_karlovich_berzin: "Yan Karlovich Berzin"
+ SOV_viktor_abakumov: "Viktor Abakumov"
+ SOV_viktor_leonov: "Viktor Leonov"
+ SOV_vasily_zaitsev: "Vasily Zaitsev"
 #Ideas
  sov_gulag: "Gulag System"
  sov_gulag2: "Improved Gulag System"

@@ -48,12 +48,3 @@
  operation_targeted_sabotage_dockyard_desc: "§LOur agents in enemy territory have requested support disabling a critical Naval Dockyard.§!"
  operation_blow_ship: "Sabotage Naval Vessel"
  operation_blow_ship_desc: "§LWhile its unlikely our naval asset will work with us again afterwards, the opportunity to destroy an enemy vessel shouldn't be missed.§!"
-
-#Leader Names
- JAP_hideo_iwakuro: "Hideo Iwakuro"
- SOV_pavel_sudoplatov: "Pavel Sudoplatov"
- SOV_viktor_abakumov: "Viktor Abakumov"
- SOV_yan_karlovich_berzin: "Yan Karlovich Berzin"
- SOV_viktor_leonov: "Viktor Leonov"
- SOV_vasily_zaitsev: "Vasily Zaitsev"
- TUR_sukru_ali_ogel: "Şükrü Âli Ögel"

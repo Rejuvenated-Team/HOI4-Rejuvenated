@@ -6987,6 +6987,11 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = SOV_vasily_zaitsev
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			custom_effect_tooltip = SOV_desperate_measures_decisions_unlocked_tt
 		}
 	}
@@ -7226,6 +7231,13 @@ focus_tree = {
 			else = {
 				add_ideas = SOV_smersh_no_lar
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SOV_viktor_abakumov
+
+			custom_effect_tooltip = generic_skip_one_line_tt
 
 			if = {
 				limit = {
