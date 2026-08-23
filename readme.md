@@ -4,6 +4,8 @@ Rejuvenated is a large-scale overhaul/content mod. It aims to overhaul a large a
 
 ## New Content
 
+![Countries with a New Focus Tree](https://i.imgur.com/577f0NE.png "Countries with a New Focus Tree")
+
 - **Generic Focus Tree** - A brand new generic focus tree. A good bit more interesting than the base game's!
 - **New States** - All across the world, from the Americas & Madagascar, to Indonesia, Malaysia, & New Zealand.
 - **Resource Updates** - Many countries now have more realistic & functional resources.
