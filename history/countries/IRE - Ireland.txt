@@ -5,7 +5,7 @@ if = {
 	limit = {
 		has_dlc = "Man the Guns"
 	}
-	set_naval_oob = IRE_naval_1936
+	set_naval_oob = "IRE_1936_naval"
 	else = {
 		set_naval_oob = "IRE_1936_Naval_Legacy"
 	}
@@ -127,7 +127,7 @@ set_convoys = 10
 		limit = {
 			has_dlc = "Man the Guns"
 		}
-		set_naval_oob = IRE_naval_1939
+		set_naval_oob = "IRE_1939_naval"
 		else = {
 			set_naval_oob = "IRE_1939_Naval_Legacy"
 		}
@@ -163,8 +163,17 @@ set_convoys = 10
 	add_ideas = {
 		IRE_MFR1
 		IRE_TNTN1
-	}	
+	}
+
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1938.6.17"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
 	add_political_power = 1198
+	add_command_power = 100
 	
 	#generic focuses
 	complete_national_focus = IRE_end_the_trade_war #March 10 1936	
@@ -185,7 +194,7 @@ set_convoys = 10
 	complete_national_focus =IRE_ARMYTREE #November 30 1938
 	complete_national_focus =IRE_MILITARYINDUSTRY #February 10 1939
 	complete_national_focus =IRE_NORMALINDUSTRY #April 20 1939
-	complete_national_focus = IRE_INFANTRY#June 30 1939
+	complete_national_focus = IRE_INFANTRY #June 30 1939
 		
 	oob = "IRE_1939"
 	set_technology = {
@@ -194,17 +203,11 @@ set_convoys = 10
 		infantry_weapons2 = 1
 
 		#doctrines
-		air_superiority = 1
-		grand_battle_plan = 1
-		trench_warfare = 1
-		fleet_in_being = 1
-		battlefleet_concentration = 1
-		convoy_sailing = 1
+		#air_superiority = 1
 
 		#electronics
 		electronic_mechanical_engineering = 1
 		radio = 1
-		radio_detection = 1
 		mechanical_computing = 1
 		computing_machine = 1
 
@@ -217,7 +220,14 @@ set_convoys = 10
 		dispersed_industry = 1
 		dispersed_industry2 = 1
 		fuel_refining = 1
-		
+	}
+
+set_grand_doctrine = grand_battleplan
+set_grand_doctrine = new_fleet_in_being
+set_grand_doctrine = new_strategic_destruction
+
+	complete_special_project = {
+		project = sp:sp_air_radar
 	}
 }
 
@@ -233,14 +243,6 @@ set_popularities = {
 	communism = 3
 }
 
-1939.1.1 = {
-	set_politics = {
-		ruling_party = democratic
-		last_election = "1938.6.17"
-		election_frequency = 48
-		elections_allowed = yes
-	}
-}
 #order matters - first ideology leader will be pulled for the start - other leaders get put lower down the order
 recruit_character = IRE_Éamon_de_valera
 recruit_character = IRE_eoin_oduffy
@@ -281,9 +283,6 @@ recruit_character = IRE_Oskar_von_preussen
 recruit_character = IRE_edward_viii 
 recruit_character = IRE_george_vi 
 recruit_character = IRE_elisabeth_ii  
-
-
-
 
 ### ship variants
 

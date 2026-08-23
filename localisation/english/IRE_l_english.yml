@@ -586,9 +586,8 @@
  IRE_northern_campaign_desc: "This is it, our opportinity to unite the whole of Ireland under our banner. We must prepare properly, so that we may cast the British into the sea, and ensure that they can never set foot on Ireland again."
  IRE_join_comintern: "Join the Comintern"
  IRE_join_comintern_desc: "Previously, all attempts made to form a Communist Party in Ireland were given support from the Communist internationl. We must now repay that favour, and join the international ourselves in the great struggle for the revolution."
- IRE_soviet_military_advisors:0 "Soviet Military Advisors"
- IRE_soviet_military_advisors_desc:0 "The Soviets have been kind enough to send us military advisors, who have helped us improve our armed forces greatly."
- 
+ IRE_soviet_military_advisors: "Soviet Military Advisors"
+ IRE_soviet_military_advisors_desc: "The Soviets have been kind enough to send us military advisors, who have helped us improve our armed forces greatly."
  IRE_revive_monarchist_cause: "Revive the Monarchist Cause"
  IRE_revive_monarchist_cause_desc: "In the early days of the Sinn Féin, before the dreadful civil war and the fracturing of the independence movement, we had a vision of a unified Ireland under an independent Irish high King, just like the Ireland of old.\n\n The fickle parties of democracy cannot be trusted to forge a unified Ireland. It is high time we return to earlier ideals."
  IRE_infiltrate_the_IRA: "Infiltrate the IRA"
@@ -756,7 +755,7 @@
  ireland.27.d: "[ENG.GetAdjective] officials have responded to our request to transfer Northern Ireland positively, and have handed control of the territory over to us."
  ireland.27.a: "A Great day for [IRE.GetNameDef]!"
  ireland.28.t: "[ENG.GetNameDef] refuses to transfer Northern Ireland"
- ireland.28.d: "The [ENG.GetAdjective] representatives have repsonded to our request for Northern Ireland, stating that though they appreciate our loyalty to the commonwealth, they cannot freely hand over Northern Ireland to us, stating that the results of the 1922 plebicite must be respected.
+ ireland.28.d: "The [ENG.GetAdjective] representatives have repsonded to our request for Northern Ireland, stating that though they appreciate our loyalty to the commonwealth, they cannot freely hand over Northern Ireland to us, stating that the results of the 1922 plebicite must be respected."
  ireland.28.a: "Disappointing"
  ireland.29.t: "Unionists and Protestants challenge [IRE.GetnameDef]"
  ireland.29.d: "We should have seen it coming, but our acquisistion of Ulster has led to increased resistance from Ulster Protestants and Unionists, who have begun organising and alligning themselves with paramilitary groups like the Ulster Volunteer Force and the Orange Order. They have now begun an organised resistance against our occupation, seeking to either rejoin Britain, or independence from us."
