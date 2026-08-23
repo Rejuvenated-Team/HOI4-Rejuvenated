@@ -60,6 +60,7 @@ If you'd like to either contribute to this project or you're simply interested i
 - [China National Focus](https://steamcommunity.com/sharedfiles/filedetails/?id=715497831)
 - [Overwhelming Division Icons!](https://steamcommunity.com/sharedfiles/filedetails/?id=2905970690)
 - [The Agency](https://steamcommunity.com/workshop/filedetails/?id=2387530567)
+- [Portugal Reworked++](https://steamcommunity.com/sharedfiles/filedetails/?id=1568444273)
 - [Democratic Russia](https://steamcommunity.com/sharedfiles/filedetails/?id=3453965141)
 - [Zeru](https://discord.gg/3HRTbpnP2C)
 - [Millennium Dawn](https://steamcommunity.com/sharedfiles/filedetails/?id=2777392649)
