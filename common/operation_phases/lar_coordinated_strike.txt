@@ -8,8 +8,7 @@ coordinated_strike_scout_target = {
 		
 	}
 	equipment = {
-#TALL-EIS = Original Value = 100
-		support_equipment = 50
+		support_equipment = 50 #rj was 100
 	}
 }
 
@@ -23,8 +22,7 @@ coordinate_strike_mark_targets = {
 		
 	}
 	equipment = {
-#TALL-EIS = Original Value = 100
-		support_equipment = 50
+		support_equipment = 50 #rj was 100
 	}
 }
 
@@ -39,8 +37,7 @@ coordinated_strike_sabotage_communications = {
 	}
 
 	equipment = {
-#TALL-EIS = Original Value = 100
-		support_equipment = 50
+		support_equipment = 50 #rj was 100
 	}
 }
 
@@ -55,8 +52,7 @@ coordinated_strike_direct_units = {
 	}
 
 	equipment = {
-#TALL-EIS = Original Value = 100
-		support_equipment = 50
+		support_equipment = 50 #rj was 100
 	}
 }
 
@@ -71,7 +67,6 @@ coordinated_strike_occupy_bridges = {
 	}
 
 	equipment = {
-#TALL-EIS = Original Value = 1000
-		infantry_equipment = 500
+		infantry_equipment = 500 #rj was 1000
 	}
 }

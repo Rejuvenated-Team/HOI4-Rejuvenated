@@ -8,8 +8,7 @@ fake_intel_decoy_tanks = {
 	requirements = {  }
 
 	equipment = {
-#TALL-EIS - Original Value = 500
-		support_equipment = 250
+		support_equipment = 250 #rj was 500
 	}
 }
 
@@ -21,8 +20,7 @@ fake_intel_radio_deception = {
 	icon = "GFX_phase_fake_intel_radio_deception_small"
 	
 	equipment = {
-#TALL-EIS - Original Value = 500
-		support_equipment = 250
+		support_equipment = 250 #rj was 500
 	}
 }
 
@@ -76,8 +74,7 @@ fake_intel_plant_evidence = {
 	icon = "GFX_phase_fake_intel_plant_evidence_small"
 	
 	equipment = {
-#TALL-EIS - Original Value = 250
-		support_equipment = 125
+		support_equipment = 125 #rj was 250
 	}
 }
 

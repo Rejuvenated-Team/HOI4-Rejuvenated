@@ -38,9 +38,8 @@ capture_cyphers_raid = {
 
 	}
 	equipment = {
-#TALL-EIS = Original Value = IE-500; SE-100
-		infantry_equipment = 400
-		support_equipment = 80
+		infantry_equipment = 400 #rj was 500
+		support_equipment = 80 #rj was 100
 	}
 }
 
