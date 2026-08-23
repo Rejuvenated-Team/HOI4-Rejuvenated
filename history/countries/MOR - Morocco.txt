@@ -1,29 +1,132 @@
 ﻿capital = 461
 
+oob = "MOR_1936"
+
+set_research_slots = 2
+set_stability = 0.75
+set_war_support = 0.3
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
-}
-set_cosmetic_tag = MOR_FRA
-set_convoys = 20
-set_research_slots = 3
-
-add_ideas = {
-	rj_generic_illiteracy
+	tech_mountaineers = 1
 }
 
+set_convoys = 5
+
+1939.1.1 = {
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = naval_effort
+	complete_national_focus = flexible_navy
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+	
+	set_technology = {
+
+		#doctrines
+		grand_battle_plan = 1
+		trench_warfare = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+		oil_plant = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
+
 set_popularities = {
-	democratic = 8
-	fascism = 2
-	communism = 0
-	neutrality = 90
+	neutrality = 100
 }
 
-recruit_character = MOR_mohammed_v
+
+add_to_tech_sharing_group = french_research
+
+
+add_ideas = {
+	MOR_fes_traity1
+	MOR_resident_general1
+	disarmed_nation
+	uncontrolled_exports
+}
+
+create_country_leader = {
+	name = "Mohammed V"
+	desc = "POLITICS_MOR_DESC"
+	picture = "gfx/leaders/MOR/Portrait_Morocco_Mohammed_V.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+}
+
+create_country_leader = {
+	name = "Hazem Nahri"
+	desc = ""
+	picture = "gfx/leaders/PAL/Portrait_Arabia_Generic_1.dds"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Osama Danid"
+	desc = ""
+	picture = "gfx/leaders/PAL/Portrait_Arabia_Generic_2.dds"
+	ideology = leninism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Mohammed V"
+	desc = "POLITICS_MOR_DESC"
+	picture = "gfx/leaders/MOR/Portrait_Morocco_Mohammed_V.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+}
+
+create_field_marshal = {
+	name = "Charles Nogues"
+	picture = "Portrait_France_Charles_Nogues.dds"
+	traits = { old_guard career_officer }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Augustin Guillaume"
+	picture = "Portrait_France_Augustin_Guillaume.dds"
+	traits = { old_guard trickster cavalry_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
 

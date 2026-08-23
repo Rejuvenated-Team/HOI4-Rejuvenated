@@ -201,6 +201,13 @@ ideas = {
 						}
 					}
 				}
+
+				if = {
+					limit = {
+						original_tag = MOR
+					}
+					has_completed_focus = MOR_handle_the_makhyen
+				}
 			}
 			on_add = {
 				if = {
@@ -318,6 +325,13 @@ ideas = {
 							has_active_mission = TUR_etatism_crisis_4
 						}
 					}
+				}
+
+				if = {
+					limit = {
+						original_tag = MOR
+					}
+					has_completed_focus = MOR_handle_the_makhyen
 				}
 			}
 
@@ -508,6 +522,13 @@ ideas = {
 						}
 					}
 				}
+
+				if = {
+					limit = {
+						original_tag = MOR
+					}
+					has_completed_focus = MOR_handle_the_makhyen
+				}
 			}
 
 			cost = 150
@@ -691,6 +712,13 @@ ideas = {
 							has_active_mission = TUR_etatism_crisis_3
 						}
 					}
+				}
+
+				if = {
+					limit = {
+						original_tag = MOR
+					}
+					has_completed_focus = MOR_handle_the_makhyen
 				}
 			}
 			on_add = {
@@ -1071,6 +1099,13 @@ ideas = {
 					}
 					NOT = { has_completed_focus = PRC_promote_paper_bills }
 				}
+
+				if = {
+					limit = {
+						original_tag = MOR
+					}
+					has_completed_focus = MOR_handle_the_makhyen
+				}
 			}
 
 			cost = 150
@@ -1155,6 +1190,13 @@ ideas = {
 						has_dlc = "No Compromise, No Surrender"
 					}
 					NOT = { has_completed_focus = PRC_promote_paper_bills }
+				}
+
+				if = {
+					limit = {
+						original_tag = MOR
+					}
+					has_completed_focus = MOR_handle_the_makhyen
 				}
 			}
 
@@ -1258,6 +1300,13 @@ ideas = {
 						has_dlc = "La Resistance"
 					}
 					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
+				}
+
+				if = {
+					limit = {
+						original_tag = MOR
+					}
+					has_completed_focus = MOR_handle_the_makhyen
 				}
 			}
 
@@ -1471,6 +1520,12 @@ ideas = {
 					NOT = { has_idea = CHI_nine_power_treaty }
 				}
 
+				if = {
+					limit = {
+						original_tag = MOR
+					}
+					has_completed_focus = MOR_handle_the_makhyen
+				}
 			}
 
 			rule = {

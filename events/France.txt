@@ -287,7 +287,7 @@ country_event = {
 	option = { # Become Free French
 		name = france.10.b
 		ai_chance = {
-			factor = 85
+			base = 85
 		}
 		set_global_flag = fall_of_france
 		save_global_event_target_as = free_france
@@ -298,7 +298,7 @@ country_event = {
 	option = { # Ask for British Union
 		name = france.10.c
 		ai_chance = {
-			factor = 15
+			base = 15
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
@@ -338,7 +338,7 @@ country_event = {
 	option = { # Refuse Union
 		name = france.11.a
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 		FRA = {
 			country_event = { hours = 6 id = france.13 }
@@ -347,7 +347,7 @@ country_event = {
 	option = { # Agree to Union
 		name = france.11.b
 		ai_chance = {
-			factor = 90
+			base = 90
 		}
 		FRA = {
 			country_event = { hours = 6 id = france.12 }
@@ -452,7 +452,7 @@ country_event = {
 	option = { # Agree
 		name = france.14.a
 		ai_chance = {
-			factor = 50
+			base = 50
 		}
 		trigger = {
 			has_government = fascism
@@ -780,9 +780,7 @@ country_event = {
 					expire = "1965.1.1.1"
 					id = -1
 				}
-				promote_leader = yes 
 			}
-			transfer_advisors_to_vichy = yes
 			# FRA Player Switches to Vichy
 			if = {
 				limit = { FRA = { has_country_flag = become_vichy } }
@@ -801,7 +799,7 @@ country_event = {
 	option = { # Agree - Neutrality
 		name = france.14.c
 		ai_chance = {
-			factor = 50
+			base = 50
 		}
 		trigger = {
 			has_government = neutrality
@@ -1525,26 +1523,28 @@ country_event = {
 	}
 }
 
-# French strikes
+# French strikes - rj disabled
 country_event = {
 	id = france.21
 	title = france.21.t
 	desc = france.21.d
 	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
 	
-	trigger = {
-		NOT = { has_government = communism }
-		NOT = { has_idea = FRA_matignon_agreements }
-		has_completed_focus = FRA_form_the_popular_front
-		NOT = { has_country_flag = FRA_popular_front_cooldown }
-		tag = FRA
-		date > 1936.4.1
-		date < 1938.1.1
-	}
+	#trigger = {
+	#	NOT = { has_government = communism }
+	#	NOT = { has_idea = FRA_matignon_agreements }
+	#	has_completed_focus = FRA_form_the_popular_front
+	#	NOT = { has_country_flag = FRA_popular_front_cooldown }
+	#	tag = FRA
+	#	date > 1936.4.1
+	#	date < 1938.1.1
+	#}
 
 	fire_only_once = yes
 	
-	mean_time_to_happen = {	days = 60 }
+	#mean_time_to_happen = {	days = 60 }
 
 	option = {
 		ai_chance = {
@@ -1666,36 +1666,23 @@ country_event = {
 	id = france.25
 	title = france.25.t
 	desc = france.25.d
-	picture = GFX_report_event_generic_croatia_handshake
+	picture = GFX_report_event_hitler_croatia_handshake
 
 	is_triggered_only	= yes	
 	option = { # Follow Britain's lead
 		name = france.25.a
 		ai_chance = {
-			factor = 90
+			base = 90
 			modifier = {
 				factor = 0
-				OR = {
-					is_in_faction_with = YUG
-					has_war_with = GER
-				}
+				is_in_faction_with = YUG
 			}
-		}
-		if = {
-			limit = {
-				has_guaranteed = YUG
-			}
-			diplomatic_relation = {
-   				country = YUG
-   				relation = guarantee
-   				active = no
-  			}
 		}
 		if = {
 			limit = {
 				ITA = {
 					OR = {
-						NOT = { has_completed_focus = ITA_balkan_ambition }						
+						NOT = { has_completed_focus = ITA_yugoslavia_friend }						
 						is_in_faction_with = GER
 						exists = no
 					}
@@ -1709,7 +1696,7 @@ country_event = {
 		if = {
 			limit = { 
 				ITA = {
-					has_completed_focus = ITA_balkan_ambition
+					has_completed_focus = ITA_yugoslavia_friend
 					NOT = { is_in_faction_with = GER }
 					NOT = { has_war_with = YUG }
 				}
@@ -1720,7 +1707,7 @@ country_event = {
 	option = { # Support the Yugoslavs alone
 		name = france.25.b
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				is_in_faction_with = GER
@@ -1812,7 +1799,7 @@ country_event = {
 			}
 		}
 		if = {
-			limit = { NOT = { has_completed_focus = FRA_strengthen_the_little_entente } }
+			limit = { NOT = { has_completed_focus = FRA_little_entente } }
 			add_stability = 0.05
 		}
 	}
@@ -1830,7 +1817,7 @@ country_event = {
 	option = { #stand together
 		name = france.26.a
 		ai_chance = {
-			factor = 90
+			base = 90
 			modifier = {
 				factor = 0
 				is_in_faction_with = GER
@@ -2015,7 +2002,7 @@ country_event = {
 	}
 }
 
-# Édouard Daladier Resigns
+# Édouard Daladier Resigns - rj disabled
 country_event = {
 	id = france.31
 	title = france.31.t
@@ -2024,12 +2011,14 @@ country_event = {
 
 	fire_only_once = yes
 
-	trigger = {
-		original_tag = FRA
-		has_government = democratic
-		has_global_flag = fall_of_france
-		NOT = { has_country_flag = france_de_gaulle }
-	} 
+	is_triggered_only = yes
+
+	#trigger = {
+	#	original_tag = FRA
+	#	has_government = democratic
+	#	has_global_flag = fall_of_france
+	#	NOT = { has_country_flag = france_de_gaulle }
+	#} 
 
 	mean_time_to_happen = {
 		days = 7
@@ -2050,53 +2039,6 @@ country_event = {
 		}
 		set_country_flag = daladier_resigned
 	}
-}
-
-# Hidden event to add AI values for nationalist spain if France is going fascist
-country_event = {
-	id = france.32
-	hidden = yes
- 
-    fire_only_once = yes
-
-    is_triggered_only = yes
-
-    immediate = {
-    	if = {
-    		limit = {
-    			NOT = { has_dlc = "La Resistance" }
-    		}
-    		random_other_country = {
-				limit = {
-					original_tag = SPR
-					has_government = fascism
-				}
-				FRA = {
-					add_ai_strategy = {
-						type = befriend
-						id = PREV
-						value = 200
-					}
-				}
-			}
-    	}
-    	if = {
-    		limit = {
-    			has_dlc = "La Resistance"
-    		}
-			FRA = {
-					add_ai_strategy = {
-						type = befriend
-					id = "SPA"
-						value = 200
-					}
-			}
-    	}
-    }
-
-    option = {
-		name = france.32.a
-    }
 }
 
 # Britain is at peace after annexing France in the Franco-British Union
@@ -2258,7 +2200,7 @@ country_event = {
 		}
 		
 		ai_chance = {
-			factor = 60
+			base = 60
 			
 			modifier = {
 				factor = 2
@@ -2291,7 +2233,7 @@ country_event = {
 		}
 		
 		ai_chance = {
-			factor = 40
+			base = 40
 			
 			modifier = {
 				factor = 0.5

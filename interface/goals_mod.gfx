@@ -1,0 +1,162 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_support_blum"
+		texturefile = "gfx/interface/goals/focus_blum.dds"
+	}
+	spriteType = {
+		name = "GFX_support_daladier"
+		texturefile = "gfx/interface/goals/focus_daladier.dds"
+	}
+	spriteType = {
+		name = "GFX_CZE_alliance"
+		texturefile = "gfx/interface/goals/focus_CZE_alliance.dds"
+	}
+	spriteType = {
+		name = "GFX_ENG_alliance"
+		texturefile = "gfx/interface/goals/focus_ENG_alliance.dds"
+	}
+	spriteType = {
+		name = "GFX_ROM_alliance"
+		texturefile = "gfx/interface/goals/focus_ROM_alliance.dds"
+	}
+	spriteType = {
+		name = "GFX_YUG_alliance"
+		texturefile = "gfx/interface/goals/focus_YUG_alliance.dds"
+	}
+	spriteType = {
+		name = "GFX_POL_alliance"
+		texturefile = "gfx/interface/goals/focus_POL_alliance.dds"
+	}
+	spriteType = {
+		name = "GFX_ITA_alliance"
+		texturefile = "gfx/interface/goals/focus_ITA_alliance.dds"
+	}
+	spriteType = {
+		name = "GFX_SPA_alliance"
+		texturefile = "gfx/interface/goals/focus_SPA_alliance.dds"
+	}
+	spriteType = {
+		name = "GFX_mobilisation"
+		texturefile = "gfx/interface/goals/focus_mobilisation.dds"
+	}
+	spriteType = {
+		name = "GFX_france_first"
+		texturefile = "gfx/interface/goals/focus_francefirst.dds"
+	}
+	spriteType = {
+		name = "GFX_allies"
+		texturefile = "gfx/interface/goals/focus_allies.dds"
+	}
+	spriteType = {
+		name = "GFX_victor"
+		texturefile = "gfx/interface/goals/focus_victor.dds"
+	}
+	spriteType = {
+		name = "GFX_africa"
+		texturefile = "gfx/interface/goals/focus_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_wallonia"
+		texturefile = "gfx/interface/goals/focus_wallonia.dds"
+	}
+	spriteType = {
+		name = "GFX_propaganda_soviet"
+		texturefile = "gfx/interface/goals/focus_propaganda_soviet.dds"
+	}
+	spriteType = {
+		name = "GFX_church"
+		texturefile = "gfx/interface/goals/focus_church.dds"
+	}
+	spriteType = {
+		name = "GFX_monarchism"
+		texturefile = "gfx/interface/goals/focus_monarchism.dds"
+	}
+	spriteType = {
+		name = "GFX_shadow_government"
+		texturefile = "gfx/interface/goals/focus_shadow_government.dds"
+	}
+	spriteType = {
+		name = "GFX_propaganda_axis"
+		texturefile = "gfx/interface/goals/focus_propaganda_axis.dds"
+	}
+	spriteType = {
+		name = "GFX_POR_alliance"
+		texturefile = "gfx/interface/goals/focus_POR_alliance.dds"
+	}
+	spriteType = {
+		name = "GFX_restoration"
+		texturefile = "gfx/interface/goals/focus_restoration.dds"
+	}
+	spriteType = {
+		name = "GFX_action_francaise"
+		texturefile = "gfx/interface/goals/focus_action_francaise.dds"
+	}
+	spriteType = {
+		name = "GFX_belgium_defense"
+		texturefile = "gfx/interface/goals/focus_belgium_defense.dds"
+	}
+	spriteType = {
+		name = "GFX_popular_party"
+		texturefile = "gfx/interface/goals/focus_popular_party.dds"
+	}
+	spriteType = {
+		name = "GFX_blum_violette"
+		texturefile = "gfx/interface/goals/focus_blum_violette.dds"
+	}
+	spriteType = {
+		name = "GFX_expand_air_force"
+		texturefile = "gfx/interface/goals/focus_air_force.dds"
+	}
+	spriteType = {
+		name = "GFX_reform_air_force"
+		texturefile = "gfx/interface/goals/focus_reform_air_force.dds"
+	}
+	spriteType = {
+		name = "GFX_vienot_accords"
+		texturefile = "gfx/interface/goals/focus_vienot_accords.dds"
+	}
+	spriteType = {
+		name = "GFX_nuclear_research"
+		texturefile = "gfx/interface/goals/focus_nuclear_research.dds"
+	}
+	spriteType = {
+		name = "GFX_construct_war_factory"
+		texturefile = "gfx/interface/goals/focus_construct_war_factory.dds"
+	}
+	spriteType = {
+		name = "GFX_front_de_la_liberte"
+		texturefile = "gfx/interface/goals/focus_front_de_la_liberte.dds"
+	}
+	spriteType = {
+		name = "GFX_social_reforms"
+		texturefile = "gfx/interface/goals/focus_social_reforms.dds"
+	}
+	spriteType = {
+		name = "GFX_troupe_marine"
+		texturefile = "gfx/interface/goals/focus_troupe_marine.dds"
+	}
+	spriteType = {
+		name = "GFX_work_with_the_cgt"
+		texturefile = "gfx/interface/goals/focus_work_with_the_cgt.dds"
+	}
+	spriteType = {
+		name = "GFX_attack_communists"
+		texturefile = "gfx/interface/goals/focus_attack_communists.dds"
+	}
+	spriteType = {
+		name = "GFX_army_purges"
+		texturefile = "gfx/interface/goals/focus_army_purges.dds"
+	}
+	spriteType = {
+		name = "GFX_ban_communism"
+		texturefile = "gfx/interface/goals/focus_ban_communism.dds"
+	}
+	spriteType = {
+		name = "GFX_ban_extreme"
+		texturefile = "gfx/interface/goals/focus_ban_extreme.dds"
+	}
+	spriteType = {
+		name = "GFX_francisque"
+		texturefile = "gfx/interface/goals/focus_francisque.dds"
+	}
+}
