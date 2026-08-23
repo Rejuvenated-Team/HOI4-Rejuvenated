@@ -147,43 +147,43 @@
 					set_temp_variable = { CPD_SWC_temp = -25 }
 				}
 				add_to_temp_variable = { CPD_acceptance_temp = CPD_SWC_temp }
-			# POWER RANKING
-				if = {
-					limit = { THIS = { has_idea = super_power } }
-					set_temp_variable = { CPD_PR_temp = -60 }
-				}
-				else_if = {
-					limit = { THIS = { has_idea = great_power } }
-					set_temp_variable = { CPD_PR_temp = -45 }
-				}
-				else_if = {
-					limit = { THIS = { has_idea = large_power } }
-					set_temp_variable = { CPD_PR_temp = -30 }
-				}
-				else_if = {
-					limit = { THIS = { has_idea = regional_power } }
-					set_temp_variable = { CPD_PR_temp = -15 }
-				}
-				else_if = {
-					limit = { THIS = { has_idea = non_power } }
-					set_temp_variable = { CPD_PR_temp = 15 }
-				}
-				add_to_temp_variable = { CPD_acceptance_temp = CPD_PR_temp }
-			# FACTION BACKING
-				set_temp_variable = { CPD_FB_temp = 0 }
-				if = {
-					limit = { THIS = { has_idea = NATO_member } }
-					add_to_temp_variable = { CPD_FB_temp = -25 }
-				}
-				if = {
-					limit = { THIS = { has_idea = CSTO_member } }
-					add_to_temp_variable = { CPD_FB_temp = -25 }
-				}
-				if = {
-					limit = { THIS = { has_idea = faction_resistance_axis_member } }
-					add_to_temp_variable = { CPD_FB_temp = -25 }
-				}
-				add_to_temp_variable = { CPD_acceptance_temp = CPD_FB_temp }
+			# POWER RANKING --- Temporarily disabling this since it's non-functional & erroring. I want to replicate this for our systems, but I don't have the time to do it right now. We can input factions to replace NATO, CSTO, etc., relying on a faction check instead of a hidden idea.
+			#	if = {
+			#		limit = { THIS = { has_idea = super_power } }
+			#		set_temp_variable = { CPD_PR_temp = -60 }
+			#	}
+			#	else_if = {
+			#		limit = { THIS = { has_idea = great_power } }
+			#		set_temp_variable = { CPD_PR_temp = -45 }
+			#	}
+			#	else_if = {
+			#		limit = { THIS = { has_idea = large_power } }
+			#		set_temp_variable = { CPD_PR_temp = -30 }
+			#	}
+			#	else_if = {
+			#		limit = { THIS = { has_idea = regional_power } }
+			#		set_temp_variable = { CPD_PR_temp = -15 }
+			#	}
+			#	else_if = {
+			#		limit = { THIS = { has_idea = non_power } }
+			#		set_temp_variable = { CPD_PR_temp = 15 }
+			#	}
+			#	add_to_temp_variable = { CPD_acceptance_temp = CPD_PR_temp }
+			## FACTION BACKING
+			#	set_temp_variable = { CPD_FB_temp = 0 }
+			#	if = {
+			#		limit = { THIS = { has_idea = NATO_member } }
+			#		add_to_temp_variable = { CPD_FB_temp = -25 }
+			#	}
+			#	if = {
+			#		limit = { THIS = { has_idea = CSTO_member } }
+			#		add_to_temp_variable = { CPD_FB_temp = -25 }
+			#	}
+			#	if = {
+			#		limit = { THIS = { has_idea = faction_resistance_axis_member } }
+			#		add_to_temp_variable = { CPD_FB_temp = -25 }
+			#	}
+			#	add_to_temp_variable = { CPD_acceptance_temp = CPD_FB_temp }
 
 			# Time at War (capped at 120 to prevent runaway acceptance in very long wars)
 			set_temp_variable = { months_at_war_tmp = THIS.months_at_war }
@@ -560,129 +560,7 @@
 		# 		}
 		# 	}
 		# }
-	# LIBYA
-		LBA_was_original_state = {
-			OR = {
-				state = 391
-				state = 392
-				state = 393
-				state = 395
-				state = 396
-				state = 397
-				state = 579
-				state = 918
-				state = 919
-				state = 920
-				state = 1100
-				state = 1101
-			}
-		}
-		LBA_salafist_claim = {
-			OR = {
-				state = 85
-				state = 187
-				state = 327
-				state = 329
-				state = 330
-				state = 366
-				state = 370
-				state = 379
-				state = 381
-				state = 382
-				state = 394
-				state = 413
-				state = 1108
-				state = 1163
-				state = 1164
-				state = 1165
-				state = 1167
-			}
-		}
-	# NIGERIA
-		NIG_was_boko_haramed = {
-			OR = {
-				original_tag = BEN
-				original_tag = CAM
-				original_tag = CAR
-				original_tag = EGU
-				original_tag = NGR
-				original_tag = TOG
-			}
-		}
-		NIG_state_was_boko_haramed = {
-			OR = {
-				is_core_of = BEN
-				is_core_of = CAM
-				is_core_of = CAR
-				is_core_of = EGU
-				is_core_of = NGR
-				is_core_of = TOG
-			}
-		}
-	# NOVOROSSIYA
-		NOV_is_novorossiya_tag = {
-			OR = {
-				original_tag = CRM
-				original_tag = DPR
-				original_tag = HPR
-				original_tag = LPR
-				original_tag = NOV
-				original_tag = OPR
-			}
-		}
-		NOV_is_novorossiya_state = {
-			OR = {
-				state = 333
-				state = 693
-				state = 694
-				state = 695
-				state = 696
-				state = 1030
-				state = 1075
-				state = 1076
-				state = 1085
-				state = 1086
-				state = 1087
-			}
-		}
-	# PALESTINE
-		PAL_palestinian_state = {
-			OR = {
-				state = 204
-				state = 205
-				state = 206
-				state = 207
-				state = 208
-				state = 209
-			}
-		}
-	# SERBIA
-		SER_is_yugoslav_nation = {
-			OR = {
-				original_tag = BOS
-				original_tag = CRO
-				original_tag = FYR
-				original_tag = HZG
-				original_tag = KOS
-				original_tag = MNT
-				original_tag = RSK
-				original_tag = SLV
-				original_tag = VOJ
-			}
-		}
-		SER_is_yugoslav_state = {
-			OR = {
-				is_core_of = BOS
-				is_core_of = CRO
-				is_core_of = FYR
-				is_core_of = HZG
-				is_core_of = KOS
-				is_core_of = MNT
-				is_core_of = RSK
-				is_core_of = SLV
-				is_core_of = VOJ
-			}
-		}
+
 # MISCELLANEOUS TRIGGERS
 CPC_off_western = {
 	ROOT = { has_government = democratic }
@@ -703,132 +581,5 @@ CPC_off_non_aligned = {
 
 # Custom Civil War Trigger
 CPD_is_a_custom_civil_war = {
-	# Somalia
-	if = {
-		limit = { ROOT = { original_tag = SOM } }
-		NOT = {
-			OR = {
-				original_tag = JUB
-				original_tag = SNA
-				original_tag = SWS
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = JUB } }
-		NOT = {
-			OR = {
-				original_tag = SOM
-				original_tag = SNA
-				original_tag = SWS
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = SNA } }
-		NOT = {
-			OR = {
-				original_tag = SOM
-				original_tag = JUB
-				original_tag = SWS
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = SWS } }
-		NOT = {
-			OR = {
-				original_tag = SOM
-				original_tag = JUB
-				original_tag = SNA
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = LIB } }
-		NOT = {
-			OR = {
-				original_tag = LUR
-				original_tag = SIE
-				original_tag = GUI
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = LUR } }
-		NOT = {
-			OR = {
-				original_tag = AFR
-				original_tag = LIB
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = SIE } }
-		NOT = {
-			OR = {
-				original_tag = AFR
-				original_tag = LIB
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = GUI } }
-		NOT = {
-			OR = {
-				original_tag = AFR
-				original_tag = LIB
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = AFR } }
-		NOT = {
-			OR = {
-				original_tag = LUR
-				original_tag = SIE
-				original_tag = GUI
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = SUD } }
-		NOT = {
-			OR = {
-				original_tag = SSU
-				original_tag = DAR
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = SSU } }
-		NOT = {
-			OR = {
-				original_tag = SUD
-				original_tag = DAR
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = DAR } }
-		NOT = {
-			OR = {
-				original_tag = SUD
-				original_tag = SSU
-			}
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = TAL } }
-		NOT = {
-			original_tag = AFG
-		}
-	}
-	else_if = {
-		limit = { ROOT = { original_tag = AFG } }
-		NOT = {
-			original_tag = TAL
-		}
-	}
 
 }
