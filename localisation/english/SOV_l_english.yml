@@ -256,7 +256,8 @@
  rj_soviet.11.a: "They did help fight the commies, so we'll give them a pass this time."
  rj_soviet.11.b: "Their past actions will not be tolerated in the new Russia."
 #Tooltips
- modify_the_red_air_force_tt: "Modify [GetSovietAirforceNsName] by:\n"
+ modify_the_red_army_tt: "Modify [GetSovietArmyNsName] by:\n"
+ modify_the_red_air_force_tt: "Modify [GetAppropriateRedArmyNsName] by:\n"
  SOV_reinstate_the_duma_tt: "§HAleksandr Kerensky§! will return from exile."
  SOV_return_of_republic_tt: "This will §Ranger§! the §HFascists§! and §HAutocrats§!!"
  SOV_dismantle_the_union_tt: "The §HUnion§! will be dissolved, §Hreleasing§! all constituent states as §Hintegrated puppets§!."
@@ -279,4 +280,4 @@
  SOV_has_integrated_northern_manchuria_tt: "Has integrated §HNorth Manchuria§!"
 #Flags
  SOV_assembly_line_heavy_tanks_idea: "Assembly Line Heavy Tanks"
- SOV_the_all_russian_united_front_cflg:
+ SOV_the_all_russian_united_front_cflg: ""
