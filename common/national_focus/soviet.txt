@@ -7809,6 +7809,7 @@ focus_tree = {
 		id = SOV_the_zinovyevite_terrorist_center
 		icon = GFX_focus_SOV_purge_zinovyevists
 		prerequisite = { focus = SOV_the_stalin_constitution }
+		mutually_exclusive = { focus = rj_SOV_reinvite_the_zinovyevites_into_the_party }
 		x = -1
 		y = 1
 		relative_position_id = SOV_the_stalin_constitution
@@ -7976,7 +7977,7 @@ focus_tree = {
 				}
 			}
 
-			custom_effect_tooltip = newline_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = { NOT = { has_completed_focus = SOV_lessons_of_war } }
 				
@@ -8157,6 +8158,7 @@ focus_tree = {
 		id = SOV_the_anti_soviet_trotskyist_center
 		icon = GFX_focus_SOV_purge_trotskyists
 		prerequisite = { focus = SOV_the_zinovyevite_terrorist_center }
+		mutually_exclusive = { focus = rj_SOV_get_back_the_trotskyists }
 		x = 0
 		y = 2
 		relative_position_id = SOV_the_zinovyevite_terrorist_center
@@ -8563,6 +8565,7 @@ focus_tree = {
 		icon = GFX_focus_SOV_military_purge
 		prerequisite = { focus = SOV_the_workers_dictatorship }
 		prerequisite = { focus = SOV_the_anti_soviet_trotskyist_center }
+		mutually_exclusive = { focus = rj_SOV_invite_the_white_exiles }
 		x = 0
 		y = 2
 		relative_position_id = SOV_the_anti_soviet_trotskyist_center
