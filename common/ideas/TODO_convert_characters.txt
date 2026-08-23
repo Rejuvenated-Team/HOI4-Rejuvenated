@@ -1,35 +1,6 @@
 ideas = {
-
-	country = {
-	}
 	
 	political_advisor = {
-
-		FRA_louis_rivet = {
-			available = {
-				has_intelligence_agency = yes
-			}
-			
-			allowed = {
-				original_tag = FRA
-				has_dlc = "La Resistance"
-			}
-			
-			traits = { spymaster }
-		}
-
-		ITA_cesare_ame = {
-			available = {
-				has_intelligence_agency = yes
-			}
-			
-			allowed = {
-				original_tag = ITA
-				has_dlc = "La Resistance"
-			}
-			
-			traits = { spymaster }
-		}
 		
 		JAP_hideo_iwakuro = {
 			available = {
@@ -130,36 +101,8 @@ ideas = {
 			traits = { mastermind_code_cracker }
 		}
 	}
-	
-	army_chief = {
-	}
-	
-	air_chief = {
-	}
-	
-	navy_chief = {
-	}
-	
-	
-	high_command = {	
 
-		ITA_paolo_aloisi = {
-			ledger = army
-
-			available = {
-				has_intelligence_agency = yes
-			}
-			
-			allowed = {
-				original_tag = ITA
-			}
-			
-			traits = { army_commando_1 }
-			
-			ai_will_do = {
-				factor = 0.1
-			}
-		}
+	high_command = {
 
 		SOV_viktor_leonov = {
 			ledger = army
@@ -215,25 +158,5 @@ ideas = {
 			}
 		}
 	}
-		
-	tank_manufacturer = { 
-	}
-	
-	naval_manufacturer = { 
-	}
-	
-	aircraft_manufacturer = { 
-	}
-	
-	
-	materiel_manufacturer = {
-	}
-	
-	industrial_concern = {
-	}
-	
-	
-	theorist = {
-	}
-	
+
 }

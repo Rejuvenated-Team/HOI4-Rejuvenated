@@ -1,19 +1,4 @@
-spriteTypes = {	
-
-	SpriteType = {
-		name = "GFX_idea_FRA_louis_rivet"
-		texturefile = "gfx/interface/ideas/idea_fra_louis_rivet.dds"
-	}
-
-	SpriteType = {
-		name = "GFX_idea_ITA_cesare_ame"
-		texturefile = "gfx/interface/ideas/idea_ita_cesare_ame.dds"
-	}
-	
-	SpriteType = {
-		name = "GFX_idea_ITA_paolo_aloisi"
-		texturefile = "gfx/interface/ideas/idea_ita_paolo_aloisi.dds"
-	}
+spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_idea_JAP_hideo_iwakuro"

@@ -94,6 +94,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/fin/advisors/rj_advisor_FIN_simo_hayha.dds"
 	}
 
+	####################
+	### FRA - France ###
+	####################
+
+	spriteType = {
+		name = "GFX_rj_portrait_FRA_louis_rivet_small"
+		texturefile = "gfx/interface/ideas/fra/advisors/rj_advisor_FRA_louis_rivet.dds"
+	}
 
 	#####################
 	### GER - Germany ###
@@ -122,6 +130,20 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_rj_portrait_GER_theodor_von_hippel_small"
 		texturefile = "gfx/interface/ideas/ger/advisors/rj_advisor_GER_theodor_von_hippel.dds"
+	}
+
+	###################
+	### ITA - Italy ###
+	###################
+
+	spriteType = {
+		name = "GFX_rj_portrait_ITA_cesare_ame_small"
+		texturefile = "gfx/interface/ideas/ita/advisors/rj_advisor_ITA_cesare_ame.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_ITA_paolo_aloisi_small"
+		texturefile = "gfx/interface/ideas/ita/advisors/rj_advisor_ITA_paolo_aloisi.dds"
 	}
 
 	##########################
