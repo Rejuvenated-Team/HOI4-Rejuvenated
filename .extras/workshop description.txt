@@ -1,5 +1,5 @@
-[h1]HOI4 Rejuvenated[/h1]
-HOI4 Rejuvenated is a large-scale overhaul/content mod. It aims to overhaul a large amount of pre-existing game content, as well add a great deal to it.
+[h1]Rejuvenated[/h1]
+Rejuvenated is a large-scale overhaul/content mod. It aims to overhaul a large amount of pre-existing game content, as well add a great deal to it.
 
 [h1]New Content[/h1]
 [img]https://i.imgur.com/BBXMeUY.png[/img]
@@ -19,13 +19,20 @@ HOI4 Rejuvenated is a large-scale overhaul/content mod. It aims to overhaul a la
 [/list]
 
 [h1]Information[/h1]
-This mod is still fairly new and thus it is still lacking in some departments. This can change with your help!
-If you'd like to either contribute to this project or you're simply interested in getting the latest on updates & progress, check out our Discord server, here: https://discord.gg/NPa6fs7tSV
+
+New update releases on the 20th of each month.
+
+If you'd like to either contribute to this project or you're simply interested in getting the latest on updates & progress, check out our [url=https://discord.gg/NPa6fs7tSV]Discord Server[/url]!
+
+If you want to experience our latest changes, check out our [url=https://github.com/Rejuvenated-Team/HOI4-Rejuvenated]GitHub[/url].
 
 [h1]Credits[/h1]
 [list]
 [*]VF's Brazil
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1521695605]Kaiserreich 4[/url]
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=715497831]China National Focus[/url]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2905970690]Overwhelming Division Icons![/url]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2387530567]The Agency[/url]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3453965141]Democratic Russia[/url]
+[*][url=https://discord.gg/3HRTbpnP2C]Zeru[/url]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2777392649]Millennium Dawn[/url]
 [/list]
