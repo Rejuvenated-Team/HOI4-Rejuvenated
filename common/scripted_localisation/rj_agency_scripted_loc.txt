@@ -20,7 +20,7 @@ defined_text = {
 				}
 			}
 		}
-		localization_key = "TOKEN_AIRFORCE_ICON"
+		localization_key = TOKEN_AIRFORCE_ICON
 	}
 }
 defined_text = {
@@ -34,7 +34,7 @@ defined_text = {
 				}
 			}
 		}
-		localization_key = "TOKEN_ARMY_ICON"
+		localization_key = TOKEN_ARMY_ICON
 	}
 }
 defined_text = {
@@ -48,7 +48,7 @@ defined_text = {
 				}
 			}
 		}
-		localization_key = "TOKEN_CIVILIAN_ICON"
+		localization_key = TOKEN_CIVILIAN_ICON
 	}
 }
 defined_text = {
@@ -62,7 +62,7 @@ defined_text = {
 				}
 			}
 		}
-		localization_key = "TOKEN_NAVY_ICON"
+		localization_key = TOKEN_NAVY_ICON
 	}
 }
 defined_text = {
@@ -76,6 +76,6 @@ defined_text = {
 				}
 			}
 		}
-		localization_key = "TOKEN_RESISTANCE_ICON"
+		localization_key = TOKEN_RESISTANCE_ICON
 	}
 }
