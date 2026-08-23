@@ -173,7 +173,29 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
 	}
 
+	###########################
+	### USA - United States ###
+	###########################
 
+	spriteType = {
+		name = "GFX_rj_portrait_USA_elizebeth_friedman_small"
+		texturefile = "gfx/interface/ideas/usa/advisors/rj_advisor_USA_elizebeth_friedman.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_USA_jack_h_taylor_small"
+		texturefile = "gfx/interface/ideas/usa/advisors/rj_advisor_USA_jack_h_taylor.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_USA_john_j_mccloy_small"
+		texturefile = "gfx/interface/ideas/usa/advisors/rj_advisor_USA_john_j_mccloyy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_USA_william_friedman_small"
+		texturefile = "gfx/interface/ideas/usa/advisors/rj_advisor_USA_william_friedman.dds"
+	}
 
 	################################
 	### CHINA + WARLORDS ###########

@@ -83,23 +83,6 @@ ideas = {
 			
 			traits = { spymaster }
 		}
-
-		USA_john_j_mccloy = {
-			allowed = {
-				original_tag = USA
-			}
-			
-			traits = { prince_of_terror }
-		}
-		
-		USA_william_n_elizebeth_friedman = {
-			allowed = {
-				original_tag = USA
-				has_intelligence_agency = yes
-			}
-			
-			traits = { mastermind_code_cracker }
-		}
 	}
 
 	high_command = {
@@ -129,32 +112,6 @@ ideas = {
 			
 			ai_will_do = {
 				factor = 0.3
-			}
-		}
-		
-		USA_jack_h_taylor = {
-			ledger = army
-
-
-			available = {
-				has_intelligence_agency = yes
-				has_completed_focus = USA_first_special_service_force
-				has_completed_focus = USA_expand_the_USMC
-			}
-			
-			cost = 250
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-			traits = { 
-				army_commando_2 
-				navy_amphibious_assault_1
-			}
-			
-			ai_will_do = {
-				factor = 0.1
 			}
 		}
 	}

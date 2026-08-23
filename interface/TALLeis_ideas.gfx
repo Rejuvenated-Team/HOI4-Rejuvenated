@@ -34,19 +34,4 @@ spriteTypes = {
 		name = "GFX_idea_TUR_sukru_ali_ogel"
 		texturefile = "gfx/interface/ideas/idea_tur_sukru_ali_ogel.dds"
 	}
-
-	SpriteType = {
-		name = "GFX_idea_USA_john_j_mccloy"
-		texturefile = "gfx/interface/ideas/idea_usa_john_j_mccloy.dds"
-	}
-
-	SpriteType = {
-		name = "GFX_idea_USA_william_n_elizebeth_friedman"
-		texturefile = "gfx/interface/ideas/idea_usa_william_n_elizebeth_friedman.dds"
-	}
-
-	SpriteType = {
-		name = "GFX_idea_USA_jack_h_taylor"
-		texturefile = "gfx/interface/ideas/idea_usa_jack_h_taylor.dds"
-	}
 }
