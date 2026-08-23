@@ -2011,6 +2011,24 @@ characters = {
 			}
 		}
 
+		advisor = { #rj
+			slot = political_advisor
+			idea_token = JAP_hideo_iwakuro
+			allowed = {
+				original_tag = JAP
+				has_dlc = "La Resistance"
+			}
+			available = {
+				has_intelligence_agency = yes
+			}
+			traits = {
+				spymaster
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+
 		scientist = {
 			traits = { scientist_trait_armored_specialist } 
 			skills = {

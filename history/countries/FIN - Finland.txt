@@ -309,6 +309,9 @@ if = {
 	recruit_character = FIN_arvo_tuominen
 }
 
+#RJ Characters
+recruit_character = FIN_simo_hayha
+
 #Set up flags for Civil Wars
 if = {
 	limit = {

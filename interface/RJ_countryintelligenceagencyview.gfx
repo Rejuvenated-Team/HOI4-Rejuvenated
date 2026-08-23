@@ -1,0 +1,17 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_agency_internal_security"
+		texturefile = "gfx/interface/operatives/icons/agency_internal_security.dds"
+	}
+
+	spriteType = {
+		name = "GFX_agency_communications_security"
+		texturefile = "gfx/interface/operatives/icons/agency_communications_security.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tokencount_button"
+		texturefile = "gfx/interface/operatives/tokencount_button.dds"
+	}
+}
