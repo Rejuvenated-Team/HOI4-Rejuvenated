@@ -33,3 +33,16 @@ defined_text = {
 		localization_key = SOV_adjoined_battle_priests_desc
 	}
 }
+
+defined_text = {
+	name = GetRyutinTraitName
+	text = {
+		trigger = {
+			has_completed_focus = rj_SOV_get_back_the_trotskyists
+		}
+		localization_key = anti_stalinist_propagandist_alt
+	}
+	text = {
+		localization_key = anti_stalinist_propagandist_default
+	}
+}

@@ -2808,9 +2808,17 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					has_completed_focus = SOV_integrate_smirnovs_bloc
-					has_completed_focus = SOV_return_democracy_to_the_party
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_get_back_the_trotskyists
+					else = {
+						OR = {
+							has_completed_focus = SOV_integrate_smirnovs_bloc
+							has_completed_focus = SOV_return_democracy_to_the_party
+						}
+					}
 				}
 				if = {
 					limit = {
@@ -2875,14 +2883,22 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					AND = {
-						SOV_is_left_opposition = yes 
-						has_completed_focus = SOV_bring_old_trotskyists_back
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
 					}
-					AND = {
-						SOV_is_right_opposition = yes 
-						has_completed_focus = SOV_cooperation_against_stalin 
+					has_completed_focus = rj_SOV_get_back_the_trotskyists
+					else = {
+						OR = {
+							AND = {
+								SOV_is_left_opposition = yes 
+								has_completed_focus = SOV_bring_old_trotskyists_back
+							}
+							AND = {
+								SOV_is_right_opposition = yes 
+								has_completed_focus = SOV_cooperation_against_stalin 
+							}
+						}
 					}
 				}
 				if = {
@@ -2940,16 +2956,24 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					AND = {
-						tag = SOV
-						SOV_is_left_opposition = yes 
-						has_completed_focus = SOV_bring_old_trotskyists_back
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
 					}
-					AND = {
-						tag = SOV
-						SOV_is_right_opposition = yes 
-						has_completed_focus = SOV_cooperation_against_stalin 
+					has_completed_focus = rj_SOV_get_back_the_trotskyists
+					else = {
+						OR = {
+							AND = {
+								tag = SOV
+								SOV_is_left_opposition = yes 
+								has_completed_focus = SOV_bring_old_trotskyists_back
+							}
+							AND = {
+								tag = SOV
+								SOV_is_right_opposition = yes 
+								has_completed_focus = SOV_cooperation_against_stalin 
+							}
+						}
 					}
 				}
 				if = {
@@ -3748,7 +3772,15 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				has_completed_focus = SOV_consolidate_power
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_get_back_the_trotskyists
+					else = {
+						has_completed_focus = SOV_consolidate_power
+					}
+				}
 			}
 			traits = {
 				political_chameleon
