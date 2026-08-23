@@ -4,17 +4,17 @@ Rejuvenated is a large-scale overhaul/content mod. It aims to overhaul a large a
 
 ## New Content
 
-- Generic Focus Tree - A brand new generic focus tree. A good bit more interesting than the base game's!
-- New States - All across the world, from the Americas & Madagascar, to Indonesia, Malaysia, & New Zealand.
-- Resource Updates - Many countries now have more realistic & functional resources.
-- Base Mechanic Changes - Smaller airwings , more dockyards per ship, faster naval transports, reduced energy demands, building adjustments, faster wargoal justifications, and more!
-- Global Population Overhaul - Tired of a decent chunk of world population being missing? Thanos couldn't keep everyone away forever, & they've been restored!
-- New Formables
-- Tech Tree Adjustments
-- Unit Adjustments - Armored Cars have been made far more affordable, & much better at scouting & a few terrains.
-- Misc. Country Tweaks
-- Building Updates - Electrical grids are no longer mutually exclusive, & no longer use a shared building slot with factories.
-- New Division Icons
+- **Generic Focus Tree** - A brand new generic focus tree. A good bit more interesting than the base game's!
+- **New States** - All across the world, from the Americas & Madagascar, to Indonesia, Malaysia, & New Zealand.
+- **Resource Updates** - Many countries now have more realistic & functional resources.
+- **Base Mechanic Changes** - Conditional peace deals, agency improvements, smaller airwings, more dockyards per ship, reduced energy demands, faster wargoal justifications, and more!
+- **Global Population Overhaul** - Tired of a decent chunk of world population being missing? Thanos couldn't keep everyone away forever, & they've been restored!
+- **New Formables**
+- **Tech Tree Adjustments**
+- **Unit Adjustments** - Armored Cars have been made far more affordable, & much better at scouting & a few terrains.
+- **Misc. Country Tweaks**
+- **Building Updates** - Electrical grids are no longer mutually exclusive, & no longer use a shared building slot with factories.
+- **New Division Icons**
 
 ## Information
 
