@@ -164,6 +164,14 @@ if = {
 	recruit_character = SOV_anton_denikin
 }
 
+#RJ Characters
+recruit_character = SOV_viktor_chernov
+recruit_character = SOV_pavel_milyukov
+recruit_character = SOV_yan_karlovich_berzin
+recruit_character = SOV_pavel_sudoplatov
+recruit_character = SOV_viktor_abakumov
+recruit_character = SOV_viktor_leonov
+recruit_character = SOV_vasily_zaitsev
 
 #Initialize character flags Part I (aka who's safe)
 SOV_mikhail_kalinin = {
@@ -200,6 +208,12 @@ SOV_lev_trotsky = { #Not in the country
 	set_character_flag = SOV_exiled_flag
 }
 SOV_patriarch_sergy = { #Priests are not political enemies at this point
+	set_character_flag = SOV_safe_from_purge_flag
+}
+SOV_viktor_leonov = { #rj Irelevant until WW2
+	set_character_flag = SOV_safe_from_purge_flag
+}
+SOV_vasily_zaitsev = { #rj Irelevant until WW2
 	set_character_flag = SOV_safe_from_purge_flag
 }
 if = {
@@ -545,6 +559,9 @@ set_variable = { SOV_soviet_airforce_strategic_bomb_visibility = 0 } #-> Long Ra
 set_variable = { SOV_soviet_airforce_air_mission_efficiency = 0 } #-> The Modern War in the Skies
 set_variable = { SOV_soviet_airforce_air_nav_efficiency = 0 } #-> Expand the Morskaya Aviatsiya
 
+#RJ
+set_variable = { SOV_soviet_airforce_army_bonus_air_superiority_factor = 0 } #-> Military Excellence
+
 add_dynamic_modifier = { modifier = SOV_soviet_airforce_dynamic_modifier }
 
 
@@ -579,7 +596,7 @@ set_variable = { SOV_defense_industry_army_artillery_defence_factor = 0 } #-> Mi
 
 #THE RED ARMY NATIONAL SPIRIT VARS
 set_variable = { SOV_the_red_army_mobilization_laws_cost_factor = -0.1 }
-set_variable = { SOV_the_red_army_army_org_factor = -0.15 } # -> Restore Cossack Units / Cohsesion First #Meant to represent disgruntledness
+set_variable = { SOV_the_red_army_army_org_factor = -0.15 } # -> Restore Cossack Units / Cohsesion First / Military Excellence #Meant to represent disgruntledness
 set_variable = { SOV_the_red_army_experience_loss_factor = 0.25 }
 set_variable = { SOV_the_red_army_mastery_loss_factor = -0.15 }
 set_variable = { SOV_the_red_army_mastery_loss_factor_inverted = SOV_the_red_army_mastery_loss_factor }
@@ -605,6 +622,10 @@ set_variable = { SOV_the_red_army_max_dig_in = 0 } # -> Experts in Camouflage
 set_variable = { SOV_the_red_army_dig_in_speed_factor = 0 } # -> Experts in Camouflage
 set_variable = { SOV_the_red_army_operative_slot  = 0 } # -> Organization of the Partisans
 set_variable = { SOV_the_red_army_max_command_power_mult = 0 } # -> Depoliticize the Military
+
+#RJ
+set_variable = { SOV_the_red_army_army_attack_factor = 0 } # -> Deep Operations
+set_variable = { SOV_the_red_army_army_speed_factor = 0 } # -> Deep Operations
 
 add_dynamic_modifier = { modifier = SOV_the_red_army_dynamic_modifier }
 
@@ -757,7 +778,7 @@ if = {
 	}
 }
 
-set_research_slots = 3
+set_research_slots = 4
 set_stability = 0.5
 set_war_support = 0.3
 
@@ -1502,7 +1523,10 @@ if = {
 			tank_nsb_engine_upgrade = 10
 			tank_nsb_armor_upgrade = 2
 		}
+
 		icon = "GFX_SOV_improved_light_tank_medium"
+		model = "SOV_light_armor_entity"
+	
 	}
 
 	create_equipment_variant = {
@@ -1547,6 +1571,24 @@ if = {
 			tank_nsb_engine_upgrade = 10
 		}
 		icon = "GFX_SOV_basic_heavy_tank_medium"
+	}
+	create_equipment_variant = {
+		name = "ISU-152"
+		type = heavy_tank_destroyer_chassis_1
+		design_team = mio:SOV_kirov_organization
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_cannon
+			turret_type_slot = tank_heavy_fixed_superstructure_turret
+			suspension_type_slot = tank_torsion_bar_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 4
+			tank_nsb_armor_upgrade = 3
+		}
 	}
 }
 if = {
@@ -1632,6 +1674,12 @@ if = {
 			fixed_ship_engine_slot = sub_ship_engine_1
 			rear_1_custom_slot = empty
 		}
+		optional_assets = {
+			{
+				icon = "GFX_SOV_submarine_shchuka"
+				model = "SOV_submarine_entity"
+			}
+		}
 		obsolete = yes
 	}
 	create_equipment_variant = {
@@ -1654,6 +1702,12 @@ if = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_2
 			fixed_ship_engine_slot = sub_ship_engine_2
 			rear_1_custom_slot = empty
+		}
+		optional_assets = {
+			{
+				icon = "GFX_SOV_submarine_shchuka"
+				model = "SOV_submarine_entity"
+			}
 		}
 	}
 	# Destroyers #
@@ -1930,6 +1984,12 @@ if = {
 				fixed_ship_torpedo_slot = empty
 				mid_1_custom_slot = empty
 				rear_1_custom_slot = ship_depth_charge_1
+			}
+			optional_assets = {
+				{
+					icon = "GFX_PRC_destroyer_anshan"
+					model = "PRC_destroyer_entity"
+				}
 			}
 			obsolete = yes
 		}

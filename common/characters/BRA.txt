@@ -77,6 +77,7 @@ characters={
 		portraits={
 			civilian={
 				large=GFX_kr_portrait_BRA_luis_carlos_prestes
+				small=GFX_kr_portrait_BRA_luis_carlos_prestes_small
 			}
 		}
 		country_leader={
@@ -131,7 +132,8 @@ characters={
 		name=BRA_pedro_henrique
 		portraits={
 			civilian={
-				large=GFX_kr_portrait_BRA_pedro_henrique
+				large=GFX_rj_portrait_BRA_pedro_henrique
+				small=GFX_rj_portrait_BRA_pedro_henrique_small
 			}
 		}
 		#country_leader = {
@@ -147,11 +149,11 @@ characters={
 		name=BRA_eurico_gaspar_dutra
 		portraits={
 			army={
-				large=GFX_kr_portrait_BRA_eurico_gaspar_dutra
+				large = GFX_rj_portrait_BRA_Eurico_Gaspar_Dutra
 			}
 			civilian={
-				large=GFX_kr_portrait_BRA_eurico_gaspar_dutra
-				small=GFX_kr_portrait_BRA_eurico_gaspar_dutra_small
+				large = GFX_rj_portrait_BRA_eurico_gaspar_dutra
+				small = GFX_rj_portrait_BRA_eurico_gaspar_dutra_small
 			}
 		}
 		country_leader = {
@@ -979,7 +981,7 @@ characters={
 		name = "Francisco Morato"
 		portraits = {
 			army = {
-				small = "GFX_idea_advisor_morato"
+				small = GFX_rj_portrait_BRA_francisco_morato_small
 			}
 		}
 

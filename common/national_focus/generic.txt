@@ -338,7 +338,7 @@ focus_tree = {
 
     focus = {
 		id = RJ_generic_arms_subsidies
-		icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
+		icon = GFX_goal_generic_construct_mil_factory
 		cost = 7.2
 		prerequisite = {
             focus = RJ_generic_the_military_sector
@@ -479,12 +479,8 @@ focus_tree = {
 
         available = {
             OR = {
-                NOT = {
-                    is_puppet = yes
-                }
-                NOT = {
-                    is_ai = yes
-                }
+                is_subject = no
+                is_ai = no
             }
         }
 
@@ -524,9 +520,7 @@ focus_tree = {
 		y = 1
 
         available = {
-            NOT = {
-                is_puppet = yes
-            }
+            is_subject = no
         }
 
 		ai_will_do = {
@@ -557,9 +551,7 @@ focus_tree = {
 		y = 1
 
         available = {
-            NOT = {
-                is_puppet = yes
-            }
+            is_subject = no
         }
 
 		ai_will_do = {
@@ -743,12 +735,8 @@ focus_tree = {
 
         available = {
             OR = {
-                NOT = {
-                    is_puppet = yes
-                }
-                NOT = {
-                    is_ai = yes
-                }
+                is_subject = no
+                is_ai = no
             }
         }
 
@@ -788,9 +776,7 @@ focus_tree = {
 		y = 1
 
         available = {
-            NOT = {
-                is_puppet = yes
-            }
+            is_subject = no
         }
 
 		ai_will_do = {
@@ -821,9 +807,7 @@ focus_tree = {
 		y = 1
 
         available = {
-            NOT = {
-                is_puppet = yes
-            }
+            is_subject = no
         }
 
 		ai_will_do = {
@@ -832,7 +816,7 @@ focus_tree = {
 
 		completion_reward = {
             add_timed_idea = {
-                idea = RJ_generic_democracy_idea
+                idea = RJ_generic_neutrality_idea
                 days = 500
             }
 		}
@@ -960,7 +944,7 @@ focus_tree = {
 
     focus = {
 		id = RJ_generic_strengthen_the_military
-		icon = GFX_SOV_depoliticize_the_military_ccp_2d_sov_compatibility
+		icon = GFX_focus_generic_little_entente
 		cost = 10
         prerequisite = {
             focus = RJ_generic_the_vision_of_one
@@ -1084,7 +1068,7 @@ focus_tree = {
 
     focus = {
 		id = RJ_generic_prioritize_conscription
-		icon = GFX_SOV_depoliticize_the_military_ccp_2d_sov_compatibility
+		icon = GFX_focus_generic_little_entente
 		cost = 10
         prerequisite = {
             focus = RJ_generic_army_review
@@ -1558,7 +1542,7 @@ focus_tree = {
 
     focus = {
 		id = RJ_generic_new_shipyards
-		icon = GFX_SOV_expand_shipbuilding_plants_ccp_2d_sov_compatibility
+		icon = GFX_goal_generic_construct_naval_dockyard
 		cost = 10
         prerequisite = {
             focus = RJ_generic_navy_review
@@ -1593,7 +1577,7 @@ focus_tree = {
 
     focus = {
 		id = RJ_generic_shipyard_expansion
-		icon = GFX_SOV_expand_shipbuilding_plants_ccp_2d_sov_compatibility
+		icon = GFX_goal_generic_construct_naval_dockyard
 		cost = 10
         prerequisite = {
             focus = RJ_generic_new_shipyards
@@ -1742,7 +1726,7 @@ focus_tree = {
 
     focus = {
 		id = RJ_generic_study_foreign_designs
-		icon = GFX_SOV_pc_of_the_ussr_navy_ccp_2d_sov_compatibility
+		icon = GFX_goal_generic_navy_cruiser
 		cost = 10
         prerequisite = {
             focus = RJ_generic_shipbuilding_advancements
