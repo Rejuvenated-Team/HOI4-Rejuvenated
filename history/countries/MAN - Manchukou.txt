@@ -48,6 +48,12 @@ recruit_character = MAN_yin_zuoqian
 recruit_character = MAN_xian_yuan
 recruit_character = MAN_urzhin_garmaev
 recruit_character = MAN_yu_zishan
+<<<<<<< Updated upstream
+=======
+recruit_character = MAN_luo_wengan
+recruit_character = MAN_hu_shi
+recruit_character = MAN_wellington_koo
+>>>>>>> Stashed changes
 recruit_character = MAN_ma_zhanshan
 recruit_character = MAN_jonjurjab
 recruit_character = MAN_pujie
@@ -64,6 +70,10 @@ recruit_character = MAN_li_zhaolin
 recruit_character = MAN_kanjurjab
 recruit_character = MAN_ding_jianxiu
 recruit_character = MAN_kawashima_naniwa
+<<<<<<< Updated upstream
+=======
+recruit_character = MAN_wu_peifu
+>>>>>>> Stashed changes
 
 # Old fake characters 
 #recruit_character = MAN_kyoiji_tomonaga
@@ -226,4 +236,8 @@ set_popularities = {
 }
 
 1939.1.1 = {
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

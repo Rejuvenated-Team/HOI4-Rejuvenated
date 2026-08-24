@@ -1,0 +1,19 @@
+﻿l_english:
+ #MANCHUKUO
+ MAN_BYN: "Beiyiang Junta"
+ MAN_BYN_long: "Beiyiang Junta"
+ XIC_fengtian: "Fengtian Junta"
+ XIC_fengtian_long: "Fengtian Junta"
+ MAN_CDL_long: "China Democratic League"
+ MAN_CDL: "CDL"
+ MAN_CPC_long: "Communist Party of China"
+ MAN_CPC: "CPC"
+ #SHANXI
+ CHI_GMJ: "GMJ"
+ CHI_GMJ_long: "Guominjun"
+ #GUANGXI
+ GXC_ZGD_long: "Zhigongdang"
+ GXC_ZGD: "ZGD"
+ GXC_PPP_long: "Productive People's Party"
+ GXC_PPP: "PPP"
+ 

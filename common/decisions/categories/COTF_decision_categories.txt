@@ -1,0 +1,14 @@
+   cotf_reorganize_east_asia = {
+	icon = generic_independence
+	priority = 100
+
+	allowed = {
+		always = yes
+	}
+
+	visible_when_empty = no
+
+	visible = {
+		
+	}
+}

@@ -1,0 +1,110 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_fading_sun"
+		texturefile = "gfx/interface/ideas/fading_sun_bw.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_fading_sun_alliance"
+		texturefile = "gfx/interface/ideas/fading_sun.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_idea_citizen_militia_1"
+		texturefile = "gfx/interface/ideas/idea_citizen_militia_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_asian_unifier_and_liberator"
+		texturefile = "gfx/interface/ideas/idea_chi_warlord_integration5.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CHI_the_ticking_clock"
+		texturefile = "gfx/interface/ideas/idea_JAP_imperial_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CHI_war_is_peace"
+		texturefile = "gfx/interface/ideas/idea_CHI_decisive_battle.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CHI_jinling"
+		texturefile = "gfx/interface/ideas/CHI_jinling.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CHI_victorious_war_of_resistance"
+		texturefile = "gfx/interface/ideas/idea_CHI_baojia_system.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_confucianism"
+		texturefile = "gfx/interface/ideas/confucianism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_confucianism_alt"
+		texturefile = "gfx/interface/ideas/confucianism_alt.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_agrarian_reform"
+		texturefile = "gfx/interface/ideas/agrarian_reform.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_feng_yuxiang"
+		texturefile = "gfx/interface/ideas/feng_yuxiang.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_yan_xishan"
+		texturefile = "gfx/interface/ideas/yan_xishan.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_idea_generic_improved_industries"
+		texturefile = "gfx/interface/ideas/idea_generic_improved_industries.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_idea_CHI_protracted_warfare"
+		texturefile = "gfx/interface/ideas/idea_CHI_protracted_warfare.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_idea_mex_revolutionary_army"
+		texturefile = "gfx/interface/ideas/idea_mex_revolutionary_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_idea_chi_army_corruption2"
+		texturefile = "gfx/interface/ideas/idea_chi_army_corruption2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_idea_jap_zaibatsu"
+		texturefile = "gfx/interface/ideas/idea_jap_zaibatsu.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_idea_generic_japanese_conflict"
+		texturefile = "gfx/interface/ideas/idea_generic_japanese_conflict.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GXC_the_triumvirate"
+		texturefile = "gfx/interface/ideas/GXC_the_triumvirate.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GXC_the_pearl_river_valley_revolution"
+		texturefile = "gfx/interface/ideas/GXC_the_pearl_river_valley_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GXC_baojia_militarism"
+		texturefile = "gfx/interface/ideas/chinese_militarism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GXC_japanese_officer_training"
+		texturefile = "gfx/interface/ideas/JAP_advisors.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GXC_the_wealth_beneath_the_mountains"
+		texturefile = "gfx/interface/ideas/mining_mines.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GXC_organization_and_training_committee"
+		texturefile = "gfx/interface/ideas/agency_secret_police.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GXC_liangguang_crisis"
+		texturefile = "gfx/interface/ideas/GXC_liangguang_crisis.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GXC_federal_authority_5"
+		texturefile = "gfx/interface/ideas/GXC_federal_authority_5.dds"
+	}
+}

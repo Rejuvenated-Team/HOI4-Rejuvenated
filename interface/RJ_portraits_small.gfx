@@ -146,6 +146,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/ita/advisors/rj_advisor_ITA_paolo_aloisi.dds"
 	}
 
+	#####################
+	### SIC - Sichuan ###
+	#####################
+
+	spriteType = {
+		name = "GFX_rj_portrait_SIC_liu_wenhui_small"
+		#texturefile = "gfx/interface/ideas/sic/advisors/rj_advisor_SIC_liu_wenhui.dds"
+		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
+	}
+
 	##########################
 	### SOV - Soviet Union ###
 	##########################

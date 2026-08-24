@@ -1,0 +1,6368 @@
+focus_tree = {
+	id = shanxi_focus_cotf
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = SHX
+		}
+	}
+
+	shared_focus = CHI_sea_invite_foreign_investors
+
+	focus = {
+		id = SHX_fight_the_communists_back
+		icon = GFX_focus_PRC_raid_weapon_depots
+		x = 42
+		y = 0
+
+		#relative_position_id = MAN_reject_nanjings_militarism 
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			army_experience = 30
+			add_doctrine_cost_reduction = {
+				name = SHX_fight_the_communists_back
+				cost_reduction = 0.75
+				uses = 1
+				category = land_doctrine
+			}
+			give_military_access = CHI
+			add_manpower = -15000
+			PRC = {
+				add_manpower = 8000
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					set_grand_doctrine = mass_assault
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_expand_the_militias
+		icon = GFX_focus_CHI_weaponise_the_faithful
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = SHX_fight_the_communists_back
+		}
+		relative_position_id = SHX_fight_the_communists_back 
+		#mutually_exclusive = { focus = SHX_expand_the_taiyuan_arsenal }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 150
+			custom_effect_tooltip = generic_skip_one_line_tt
+			army_experience = 20
+			custom_effect_tooltip = generic_skip_one_line_tt
+			IF = {
+				limit = {
+					has_doctrine = peoples_war
+				}
+				add_daily_mastery = {
+					amount = 1
+					days = 75
+					name = SHX_expand_the_militias
+					track = infantry
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_subdoctrine_in_track = infantry
+				}
+				add_daily_mastery = {
+					amount = 1
+					days = 50
+					name = SHX_expand_the_militias
+					track = infantry
+				}
+			}
+			ELSE = {
+				set_sub_doctrine = peoples_war
+			}
+			#add_mastery_bonus = {
+			#	bonus = 0.1
+			#	days = 365
+			#	name = PRC_asymmetric_warfare
+			#	track = operations
+			#}
+			#custom_effect_tooltip = generic_skip_one_line_tt
+			#add_mastery_bonus = {
+			#	bonus = 0.1
+			#	days = 365
+			#	name = PRC_asymmetric_warfare
+			#	track = infantry
+			#	track = combat_support
+			#}
+
+			#custom_effect_tooltip = generic_skip_one_line_tt
+
+			#every_unit_leader = {
+			#random_select_amount = 3
+			#	limit = {
+			#		NOT = {
+			#			has_trait = militias_officer
+			#		}
+			#	}	
+			#	add_trait = { trait = militias_officer }
+			#}
+		}
+	}
+
+	focus = {
+		id = SHX_expand_the_taiyuan_arsenal
+		icon = GFX_SHX_Taiyuan_Arsenal
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = SHX_fight_the_communists_back
+		}
+		relative_position_id = SHX_fight_the_communists_back 
+		#mutually_exclusive = { focus = SHX_expand_the_militias }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			controls_state = 615
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			615 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			#every_unit_leader = {
+			#	random_select_amount = 3
+			#	limit = {
+			#		NOT = {
+			#			has_trait = fortress_buster
+			#		}
+			#	}	
+			#	add_trait = { trait = fortress_buster }
+			#}
+		}
+	}
+
+	focus = {
+		id = SHX_the_northern_menace
+		icon = GFX_focus_generic_desert_training
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_expand_the_militias
+		}
+		relative_position_id = SHX_expand_the_militias 
+		#mutually_exclusive = { focus = SHX_expand_the_taiyuan_arsenal }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			army_experience = 15
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
+				limit = {
+					has_character = CHI_fu_zuoyi
+					CHI_fu_zuoyi = {
+						NOT = {
+							has_trait = desert_fox
+						}
+					}
+				}
+				CHI_fu_zuoyi = {
+					add_trait = {
+						trait = desert_fox
+					}
+				}
+			}
+			IF = {
+				limit = {
+					has_character = SHX_dong_qiwu
+					SHX_dong_qiwu = {
+						NOT = {
+							has_trait = desert_fox
+						}
+					}
+				}
+				SHX_dong_qiwu = {
+					add_trait = {
+						trait = desert_fox
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_the_western_menace
+		icon = GFX_focus_generic_mountain_training
+		x = -2
+		y = 1
+
+		prerequisite = {
+			focus = SHX_expand_the_militias
+		}
+		relative_position_id = SHX_expand_the_militias 
+		#mutually_exclusive = { focus = SHX_expand_the_taiyuan_arsenal }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			army_experience = 15
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_tech_bonus = {
+				name = SHX_the_eastern_front
+				bonus = 1
+				uses = 1
+				category = mountaineers_tech
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				add_doctrine_cost_reduction = {
+					name = SHX_the_eastern_front
+					cost_reduction = 0.25
+					uses = 2
+					category = cat_mountaineers_doctrine
+				}
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_terrain_specialization
+		icon = GFX_focus_GRE_a_land_of_mountains
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = SHX_the_northern_menace
+		}
+		prerequisite = {
+			focus = SHX_the_western_menace
+		}
+		relative_position_id = SHX_the_western_menace 
+		#mutually_exclusive = { focus = SHX_expand_the_taiyuan_arsenal }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			custom_effect_tooltip = SHX_modify_the_northern_frontier_dynamic_modifier_tt
+			add_to_variable = {
+				SHX_the_northern_frontier_special_forces_cap = 0.05
+				tooltip = special_forces_cap_tt
+			} 
+			add_to_variable = {
+				SHX_the_northern_frontier_special_forces_out_of_supply_factor = -0.05
+				tooltip = special_forces_out_of_supply_factor_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = SHX_the_northern_frontier
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = SHX_the_northern_frontier
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_copy_western_designs
+		icon = GFX_focus_CHI_planned_economy
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_expand_the_taiyuan_arsenal
+		}
+		relative_position_id = SHX_expand_the_taiyuan_arsenal 
+		#mutually_exclusive = { focus = SHX_expand_the_militias }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			controls_state = 615
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			custom_effect_tooltip = SHX_modify_taiyuan_arsenal_dynamic_modifier_tt
+			add_to_variable = {
+				SHX_taiyuan_arsenal_dynamic_modifier_industrial_capacity_factory = 0.1 
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = {
+				SHX_taiyuan_arsenal_dynamic_modifier_equipment_conversion_speed = 0.1
+				tooltip = equipment_conversion_speed_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = SHX_taiyuan_arsenal_dynamic_modifier
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = SHX_taiyuan_arsenal_dynamic_modifier
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_invite_foreign_observers
+		icon = GFX_focus_CHI_utilize_german_contacts
+		x = 2
+		y = 1
+
+		prerequisite = {
+			focus = SHX_expand_the_taiyuan_arsenal
+		}
+		relative_position_id = SHX_expand_the_taiyuan_arsenal 
+		#mutually_exclusive = { focus = SHX_expand_the_militias }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			controls_state = 615
+			OR = {
+				NOT = {
+					has_war_with = GER
+				}
+				NOT = {
+					has_war_with = USA
+				}
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			custom_effect_tooltip = SHX_modify_taiyuan_arsenal_dynamic_modifier_tt
+			add_to_variable = {
+				SHX_taiyuan_arsenal_dynamic_modifier_research_speed_factor = 0.03
+				tooltip = research_speed_factor_tt
+			}
+			add_to_variable = {
+				SHX_taiyuan_arsenal_dynamic_modifier_production_factory_max_efficiency_factor = 0.1
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = SHX_taiyuan_arsenal_dynamic_modifier
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = SHX_taiyuan_arsenal_dynamic_modifier
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_import_industrial_equipment
+		icon = GFX_focus_generic_industrial_experts
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = SHX_invite_foreign_observers
+		}
+		prerequisite = {
+			focus = SHX_copy_western_designs
+		}
+		relative_position_id = SHX_invite_foreign_observers
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_tech_bonus = {
+				name = SHX_import_western_equipment
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_the_suiyuan_campaign
+		icon = GFX_focus_JAP_establish_the_mongol_military_government
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = SHX_the_northern_menace
+			focus = SHX_the_western_menace
+			focus = SHX_copy_western_designs
+			focus = SHX_invite_foreign_observers
+		}
+		relative_position_id = SHX_the_northern_menace
+		#mutually_exclusive = { focus = SHX_expand_the_militias }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			MEN = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+
+		will_lead_to_war_with = MEN
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			custom_effect_tooltip = SHX_modify_the_northern_frontier_dynamic_modifier_tt
+			add_to_variable = {
+				SHX_the_northern_frontier_equipment_capture_factor = 0.1
+				tooltip = equipment_capture_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = SHX_the_northern_frontier
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = SHX_the_northern_frontier
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+			MEN = {
+				declare_war_on = {
+					target = SHX
+					type = take_state_focus
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = SHX_suiyuan_war
+			hidden_effect = {
+				activate_mission = SHX_suiyuan_campaign_mission
+				if = {
+					limit = {
+						MEN = {
+							exists = yes
+						}
+					}
+					MEN = {
+						activate_mission = MEN_suiyuan_campaign_mission
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_develop_the_taiyuan_iron_plant
+		icon = GFX_focus_generic_steel_mill
+		x = -5
+		y = 2
+
+		prerequisite = {
+			focus = SHX_the_suiyuan_campaign
+		}
+		relative_position_id = SHX_the_suiyuan_campaign
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		available = {
+			controls_state = 615
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			615 = {
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_develop_the_model_province
+		icon = GFX_focus_generic_economic_recovery
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = SHX_develop_the_taiyuan_iron_plant
+		}
+		relative_position_id = SHX_develop_the_taiyuan_iron_plant
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			controls_state = 615
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			615 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_extract_the_baotou_deposits
+		icon = GFX_focus_generic_steel
+		x = 3
+		y = 1
+
+		prerequisite = {
+			focus = SHX_develop_the_taiyuan_iron_plant
+		}
+		relative_position_id = SHX_develop_the_taiyuan_iron_plant
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		available = {
+			OR = {
+				controls_state = 1043
+				controls_state = 621
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			if = {
+				limit = {
+					controls_state = 1043
+				}
+				1043 = {
+					add_resource = {
+						type = steel
+						amount = 6
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 621
+				}
+				621 = {
+					add_resource = {
+						type = steel
+						amount = 6
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_promote_the_livestock_industry
+		icon = GFX_focus_ARG_capitalize_the_beef_industry
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = SHX_develop_the_taiyuan_iron_plant
+		}
+		relative_position_id = SHX_develop_the_taiyuan_iron_plant
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			any_controlled_state = {
+				is_core_of = MEN
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			every_controlled_state = {
+				limit = {
+					is_core_of = MEN
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			add_offsite_building = { type = industrial_complex level = 1 }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = SHX_cows
+		}
+	}
+
+	focus = {
+		id = SHX_profesionalize_the_mining_industry
+		icon = GFX_focus_generic_mining_industry
+		x = -3
+		y = 1
+
+		prerequisite = {
+			focus = SHX_develop_the_taiyuan_iron_plant
+		}
+		relative_position_id = SHX_develop_the_taiyuan_iron_plant
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			custom_effect_tooltip = SHX_modify_taiyuan_arsenal_dynamic_modifier_tt
+			add_to_variable = {
+				SHX_taiyuan_arsenal_dynamic_modifier_local_resources_factor = 0.15
+				tooltip = local_resources_factor_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = SHX_taiyuan_arsenal_dynamic_modifier
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = SHX_taiyuan_arsenal_dynamic_modifier
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_expand_public_education
+		icon = GFX_focus_research
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = SHX_profesionalize_the_mining_industry
+			focus = SHX_promote_the_livestock_industry
+			focus = SHX_extract_the_baotou_deposits
+			focus = SHX_develop_the_model_province
+		}
+		relative_position_id = SHX_promote_the_livestock_industry
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = SHX_educate_the_masses
+		icon = GFX_focus_CHI_students_to_the_countryside
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_expand_public_education
+		}
+		relative_position_id = SHX_expand_public_education
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			num_of_factories > 34
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = SHX_spearhead_the_breakthrough
+		icon = GFX_focus_research2
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_educate_the_masses
+		}
+		relative_position_id = SHX_educate_the_masses
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			num_of_factories > 74
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = SHX_self_sufficient_army
+		icon = GFX_focus_generic_reinforcing_the_supply_network
+		x = 5
+		y = 2
+
+		prerequisite = {
+			focus = SHX_the_suiyuan_campaign
+		}
+		relative_position_id = SHX_the_suiyuan_campaign
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			custom_effect_tooltip = SHX_modify_taiyuan_arsenal_dynamic_modifier_tt
+			add_to_variable = {
+				SHX_taiyuan_arsenal_dynamic_modifier_supply_consumption_factor = -0.1
+				tooltip = supply_consumption_factor_tt
+			}
+			add_to_variable = {
+				SHX_taiyuan_arsenal_dynamic_modifier_supply_node_range = 0.15
+				tooltip = supply_node_range_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = SHX_taiyuan_arsenal_dynamic_modifier
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = SHX_taiyuan_arsenal_dynamic_modifier
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+		}
+	}
+
+	focus = {
+		id = SHX_armored_car_industry
+		icon = GFX_goal_generic_army_motorized
+		x = -3
+		y = 1
+
+		prerequisite = {
+			focus = SHX_self_sufficient_army
+		}
+		relative_position_id = SHX_self_sufficient_army
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				ahead_reduction = 1
+				uses = 1
+				category = cat_armored_cars
+				name = SHX_armoured_car_tactics
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = SHX_modify_taiyuan_arsenal_dynamic_modifier_tt
+			add_to_variable = {
+				SHX_taiyuan_arsenal_dynamic_modifier_army_sub_unit_armored_car_attack_factor = 0.15
+				tooltip = modifier_army_sub_unit_armored_car_attack_factor_tt
+			}
+			add_to_variable = {
+				SHX_taiyuan_arsenal_dynamic_modifier_army_sub_unit_armored_car_max_org_factor = 0.25
+				tooltip = modifier_army_sub_unit_armored_car_max_org_factor_tt
+			}
+			add_to_variable = {
+				SHX_taiyuan_arsenal_dynamic_modifier_army_sub_unit_armored_car_recon_attack_factor = 0.15
+				tooltip = modifier_army_sub_unit_armored_car_recon_attack_factor_tt
+			}
+			add_to_variable = {
+				SHX_taiyuan_arsenal_dynamic_modifier_army_sub_unit_armored_car_recon_max_org_factor = 0.15
+				tooltip = modifier_army_sub_unit_armored_car_recon_max_org_factor_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = SHX_taiyuan_arsenal_dynamic_modifier
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = SHX_taiyuan_arsenal_dynamic_modifier
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_the_provincial_air_force
+		icon = GFX_goal_generic_air_fighter
+		x = 3
+		y = 1
+
+		prerequisite = {
+			focus = SHX_self_sufficient_army
+		}
+		relative_position_id = SHX_self_sufficient_army
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			air_experience = 15
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				bonus = 0.15
+				uses = 5
+				category = air_equipment
+				name = SHX_italian_fighter_imports
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_0
+					amount = 100
+					producer = ITA
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = small_plane_airframe_0
+					amount = 100
+					producer = ITA
+					variant_name = "CR.32"
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_anti_air_production
+		icon = GFX_focus_generic_air_defense
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = SHX_self_sufficient_army
+		}
+		relative_position_id = SHX_self_sufficient_army
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_anti_air
+				name = SHX_anti_air_production
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = SHX_modify_taiyuan_arsenal_dynamic_modifier_tt
+			add_to_variable = {
+				SHX_taiyuan_arsenal_dynamic_modifier_cas_damage_reduction = 0.05
+				tooltip = cas_damage_reduction_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = SHX_taiyuan_arsenal_dynamic_modifier
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = SHX_taiyuan_arsenal_dynamic_modifier
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_birth_of_a_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 2
+		y = 2
+
+		prerequisite = {
+			focus = SHX_self_sufficient_army
+		}
+		relative_position_id = SHX_self_sufficient_army
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_controlled_state = {
+				is_coastal = yes
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			navy_experience = 15
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = SHX_modify_taiyuan_arsenal_dynamic_modifier_tt
+			add_to_variable = {
+				SHX_taiyuan_arsenal_dynamic_modifier_industrial_capacity_dockyard = 0.1
+				tooltip = industrial_capacity_dockyard_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = SHX_taiyuan_arsenal_dynamic_modifier
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = SHX_taiyuan_arsenal_dynamic_modifier
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 3
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = CHI_investment_into_shipbuilding_DY
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_mountain_artillery
+		icon = GFX_focus_SMB_mountain_guns
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = SHX_self_sufficient_army
+		}
+		relative_position_id = SHX_self_sufficient_army
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = SHX_mountain_artillery
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			IF = {
+				limit = {
+					NOT = {
+						has_tech = mountain_gun
+					}
+				}
+				custom_effect_tooltip = mountain_guns_tt
+				hidden_effect = {
+					set_technology = {
+						mountain_gun = 1
+						popup = no
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_modernize_our_army
+		icon = GFX_focus_SIA_reverse_engineer_allied_tanks
+		x = -2
+		y = 2
+
+		prerequisite = {
+			focus = SHX_self_sufficient_army
+		}
+		relative_position_id = SHX_self_sufficient_army
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			army_experience = 50
+			add_tech_bonus = {
+				name = SHX_modernize_our_army
+				bonus = 0.75
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = SHX_modernize_our_army
+				bonus = 0.75
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_guerrilla_warfare
+		icon = GFX_focus_CHI_guerrilla_warfare
+		x = 0
+		y = 2
+
+		prerequisite = {
+			focus = SHX_self_sufficient_army
+		}
+		relative_position_id = SHX_self_sufficient_army
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			custom_effect_tooltip = SHX_modify_the_northern_frontier_dynamic_modifier_tt
+			add_to_variable = {
+				SHX_the_northern_frontier_max_dig_in = 1
+				tooltip = max_dig_in_tt
+			}
+			add_to_variable = {
+				SHX_the_northern_frontier_dig_in_speed_factor = 0.2
+				tooltip = dig_in_speed_factor_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = SHX_the_northern_frontier
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = SHX_the_northern_frontier
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_utilize_the_terrain
+		icon = GFX_focus_CHI_utilize_the_terrain
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_guerrilla_warfare
+		}
+		relative_position_id = SHX_guerrilla_warfare
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			custom_effect_tooltip = SHX_modify_the_northern_frontier_dynamic_modifier_tt
+			add_to_variable = {
+				SHX_the_northern_frontier_max_dig_in = 2
+				tooltip = max_dig_in_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = SHX_the_northern_frontier
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = SHX_the_northern_frontier
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_shanxi_prevails
+		icon = GFX_SHX_yan_xishan
+		x = -14
+		y = 1
+
+		prerequisite = {
+			focus = SHX_the_suiyuan_campaign
+		}
+		relative_position_id = SHX_the_suiyuan_campaign
+		mutually_exclusive = { focus = SHX_the_suiyuan_catastrophe }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			OR = {
+				NOT = { has_war_with = MEN }
+				MEN = { is_subject = yes }
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = SHX_the_suiyuan_catastrophe
+		icon = GFX_focus_CZE_german_puppet
+		x = 14
+		y = 1
+
+		prerequisite = {
+			focus = SHX_the_suiyuan_campaign
+		}
+		relative_position_id = SHX_the_suiyuan_campaign
+		mutually_exclusive = { focus = SHX_shanxi_prevails }
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			NOT = {
+				owns_state = 621
+			}
+			NOT = {
+				owns_state = 746
+			}
+			OR = {
+				NOT = { has_war_with = MEN }
+				MEN = { is_subject = yes }
+			}
+			#has_country_flag = cotf_WIP
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					CHI = {
+						OR = {
+							has_character = CHI_feng_yuxiang
+							has_character = CHI_sun_lianzhong
+						}
+					}
+				}
+				CHI = {
+					CHI_feng_yuxiang = {
+						set_nationality = SHX
+					}
+					CHI_sun_lianzhong = {
+						set_nationality = SHX
+						add_unit_leader_trait = war_hero
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				CHI = {
+					country_event = { id = cotf_shx.1 }
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					CHI = {
+						exists = yes
+						is_in_faction = yes
+					}
+					NOT = {
+						is_in_faction_with = CHI
+						has_war_with = CHI
+					}
+				}
+				if = {
+					limit = {
+						is_in_faction = yes
+					}
+					leave_faction = yes
+				}
+				CHI = {
+					country_event = {
+						id = generic.2
+						hours = 6
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = SHX_CHI_faction
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			retire_character = SHX_yan_xishan
+			country_event = { id = cotf_shx.2 }
+			if = {
+				limit = {
+					NOT = { can_be_country_leader = CHI_feng_yuxiang }
+				}
+				add_country_leader_role = {
+					character = CHI_feng_yuxiang
+					country_leader = {
+						ideology = despotism
+						traits = { the_christian_general }
+						expire = "1965.1.1.1"
+						id = -1
+					}
+				}
+			}
+			promote_character = {
+				character = CHI_feng_yuxiang
+				ideology = despotism
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			effect_tooltip = {
+				add_country_leader_trait = the_christian_general
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = CHI_GMJ_long
+				name = CHI_GMJ
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_consolidate_our_gains
+		icon = GFX_focus_AUS_raid_military_storages
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_shanxi_prevails
+		}
+		relative_position_id = SHX_shanxi_prevails
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 250
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 250
+				producer = JAP
+			}
+			build_railway = {
+				path = {
+					4174
+					4469
+					10507
+					7631
+					4525
+					12331
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_cooperate_with_the_KMT
+		icon = GFX_focus_CHI_baojia_system
+		x = -14
+		y = 1
+
+		prerequisite = {
+			focus = SHX_consolidate_our_gains
+		}
+		relative_position_id = SHX_consolidate_our_gains
+		mutually_exclusive = { focus = SHX_denounce_chiang_kai_shek }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = SHX_cooperate_with_the_KMT
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					CHI = {
+						exists = yes
+						is_in_faction = yes
+					}
+					NOT = {
+						is_in_faction_with = CHI
+						has_war_with = CHI
+					}
+				}
+				if = {
+					limit = {
+						is_in_faction = yes
+					}
+					leave_faction = yes
+				}
+				CHI = {
+					country_event = {
+						id = generic.2
+						hours = 6
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = SHX_CHI_faction
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_denounce_chiang_kai_shek
+		icon = GFX_focus_prc_remove_chiang_kai_shek
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_consolidate_our_gains
+		}
+		relative_position_id = SHX_consolidate_our_gains
+		mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			if = {
+				limit = {
+					GXC = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				GXC = {
+					country_event = { id = cotf_shx.7 }
+				}
+			}
+			if = {
+				limit = {
+					GDC = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				GDC = {
+					country_event = { id = cotf_shx.7 }
+				}
+			}
+			if = {
+				limit = {
+					YUN = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				YUN = {
+					country_event = { id = cotf_shx.7 }
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_state_core = 1046
+			add_state_core = 622
+			add_state_core = 1032
+			add_state_core = 608
+			add_state_core = 614
+			add_state_core = 609
+			custom_effect_tooltip = generic_skip_one_line_tt
+			set_cosmetic_tag = SHX_XMH
+		}
+	}
+
+	focus = {
+		id = SHX_finish_off_mengjiang
+		icon = GFX_focus_JAP_reorganize_the_united_autonomous_government
+		x = 2
+		y = 1
+
+		prerequisite = {
+			focus = SHX_consolidate_our_gains
+		}
+		relative_position_id = SHX_consolidate_our_gains
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			MEN = {
+				exists = no
+			}
+		}
+
+		will_lead_to_war_with = MEN
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			if = {
+				limit = {
+					MEN = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = MEN
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_the_three_new_principles_of_the_people
+		icon = GFX_GXC_kmt_civil_war
+		x = -7
+		y = 1
+
+		prerequisite = {
+			focus = SHX_cooperate_with_the_KMT
+			focus = SHX_denounce_chiang_kai_shek
+		}
+		relative_position_id = SHX_denounce_chiang_kai_shek
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_political_power = 75
+			custom_effect_tooltip = SHX_modify_the_three_new_principles_of_the_people_dynamic_modifier_tt
+			add_to_variable = {
+				SHX_the_three_new_principles_of_the_people_dynamic_modifier_stability_factor = 0.05
+				tooltip = stability_factor_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = SHX_the_three_new_principles_of_the_people_dynamic_modifier
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = SHX_the_three_new_principles_of_the_people_dynamic_modifier
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_the_principle_of_mincai
+		icon = GFX_focus_RAJ_special_economic_zones
+		x = -2
+		y = 1
+
+		prerequisite = {
+			focus = SHX_the_three_new_principles_of_the_people
+		}
+		relative_position_id = SHX_the_three_new_principles_of_the_people
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			custom_effect_tooltip = SHX_modify_the_three_new_principles_of_the_people_dynamic_modifier_tt
+			add_to_variable = {
+				SHX_the_three_new_principles_of_the_people_dynamic_modifier_consumer_goods_factor = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = SHX_the_three_new_principles_of_the_people_dynamic_modifier
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = SHX_the_three_new_principles_of_the_people_dynamic_modifier
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_the_principle_of_minde
+		icon = GFX_SHD_confucianism
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_the_three_new_principles_of_the_people
+		}
+		relative_position_id = SHX_the_three_new_principles_of_the_people
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			custom_effect_tooltip = SHX_modify_the_three_new_principles_of_the_people_dynamic_modifier_tt
+			add_to_variable = {
+				SHX_the_three_new_principles_of_the_people_dynamic_modifier_drift_defence_factor = 0.15
+				tooltip = drift_defence_factor_tt
+			}
+			add_to_variable = {
+				SHX_the_three_new_principles_of_the_people_dynamic_modifier_war_support_factor = 0.05
+				tooltip = war_support_factor_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = SHX_the_three_new_principles_of_the_people_dynamic_modifier
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = SHX_the_three_new_principles_of_the_people_dynamic_modifier
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_the_principle_of_minzhi
+		icon = GFX_focus_generic_university_2
+		x = 2
+		y = 1
+
+		prerequisite = {
+			focus = SHX_the_three_new_principles_of_the_people
+		}
+		relative_position_id = SHX_the_three_new_principles_of_the_people
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			custom_effect_tooltip = SHX_modify_the_three_new_principles_of_the_people_dynamic_modifier_tt
+			add_to_variable = {
+				SHX_the_three_new_principles_of_the_people_dynamic_modifier_research_speed_factor = 0.05
+				tooltip = research_speed_factor_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = SHX_the_three_new_principles_of_the_people_dynamic_modifier
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = SHX_the_three_new_principles_of_the_people_dynamic_modifier
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_empower_the_villages
+		icon = GFX_focus_CHI_a_chapter_in_every_village
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_the_principle_of_mincai
+		}
+		prerequisite = {
+			focus = SHX_the_principle_of_minde
+		}
+		prerequisite = {
+			focus = SHX_the_principle_of_minzhi
+		}
+		relative_position_id = SHX_the_principle_of_minde
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			custom_effect_tooltip = SHX_modify_the_three_new_principles_of_the_people_dynamic_modifier_tt
+			add_to_variable = {
+				SHX_the_three_new_principles_of_the_people_dynamic_modifier_stability_factor = 0.1
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				SHX_the_three_new_principles_of_the_people_dynamic_modifier_communism_drift = -0.02
+				tooltip = communism_drift_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = SHX_the_three_new_principles_of_the_people_dynamic_modifier
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = SHX_the_three_new_principles_of_the_people_dynamic_modifier
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_the_fairness_doctrine
+		icon = GFX_focus_generic_worker_expansion
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_empower_the_villages
+		}
+		relative_position_id = SHX_empower_the_villages
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			custom_effect_tooltip = SHX_modify_the_three_new_principles_of_the_people_dynamic_modifier_tt
+			add_to_variable = {
+				SHX_the_three_new_principles_of_the_people_dynamic_modifier_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				SHX_the_three_new_principles_of_the_people_dynamic_modifier_production_speed_industrial_complex_factor = 0.1
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
+			add_to_variable = {
+				SHX_the_three_new_principles_of_the_people_dynamic_modifier_production_speed_infrastructure_factor = 0.1
+				tooltip = production_speed_infrastructure_factor_tt
+			}
+			add_to_variable = {
+				SHX_the_three_new_principles_of_the_people_dynamic_modifier_production_speed_rail_way_factor = 0.1
+				tooltip = production_speed_rail_way_factor_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = SHX_the_three_new_principles_of_the_people_dynamic_modifier
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = SHX_the_three_new_principles_of_the_people_dynamic_modifier
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_the_land_to_the_villages
+		icon = GFX_focus_CHI_students_to_the_countryside
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_the_fairness_doctrine
+		}
+		relative_position_id = SHX_the_fairness_doctrine
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			custom_effect_tooltip = SHX_modify_the_three_new_principles_of_the_people_dynamic_modifier_tt
+			add_to_variable = {
+				SHX_the_three_new_principles_of_the_people_dynamic_modifier_global_building_slots_factor = 0.15
+				tooltip = global_building_slots_factor_tt
+			}
+			add_to_variable = {
+				SHX_the_three_new_principles_of_the_people_dynamic_modifier_communism_drift = -0.03
+				tooltip = communism_drift_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = SHX_the_three_new_principles_of_the_people_dynamic_modifier
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = SHX_the_three_new_principles_of_the_people_dynamic_modifier
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.1
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_commit_to_our_ideals
+		icon = GFX_focus_PRC_ban_special_goods_trade
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_the_land_to_the_villages
+		}
+		relative_position_id = SHX_the_land_to_the_villages
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			remove_ideas = SHX_the_opium_hypocrisy
+		}
+	}
+
+	focus = {
+		id = SHX_a_message_from_the_japanese
+		icon = GFX_focus_PER_fascist_reach_out_to_japan
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = SHX_cooperate_with_the_KMT
+		}
+		relative_position_id = SHX_cooperate_with_the_KMT
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				date < 1942.1.1
+			}
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			has_war_with = JAP
+			is_subject = yes
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					has_war_with = JAP
+				}
+				JAP = {
+					country_event = { id = cotf_shx.3 }
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = SHX_japanese_investments
+					days = 730
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_negotiate_with_the_communists
+		icon = GFX_focus_generic_befriend_the_chinese_soviet
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = SHX_cooperate_with_the_KMT
+		}
+		relative_position_id = SHX_cooperate_with_the_KMT
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		available = {
+			NOT = {
+				has_war_with = PRC
+			}
+			NOT = {
+				has_completed_focus = SHX_purge_the_communists_from_our_ranks
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_stability = 0.05
+			custom_effect_tooltip = SHX_modify_anti_japanese_intellectuals_dynamic_modifier_tt
+			add_to_variable = {
+				SHX_anti_japanese_intellectuals_communism_drift = 0.02
+				tooltip = communism_drift_tt
+			}
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = generic_skip_one_line_tt
+			IF = {
+				limit = {
+					is_subject = no
+					NOT = {
+						is_in_faction_with = PRC
+					}
+				}
+				diplomatic_relation = {
+					country = PRC
+					relation = non_aggression_pact
+					active = yes
+				}
+				give_military_access = PRC
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			PRC = {
+				add_manpower = 5000
+				add_ideas = PRC_infiltration_in_shanxi
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_form_the_ximenghui
+		icon = GFX_focus_generic_spur_communist_revolutions
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_negotiate_with_the_communists
+		}
+		relative_position_id = SHX_negotiate_with_the_communists
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			NOT = {
+				has_completed_focus = SHX_purge_the_communists_from_our_ranks
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_XP FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			custom_effect_tooltip = SHX_modify_anti_japanese_intellectuals_dynamic_modifier_tt
+			add_to_variable = {
+				SHX_anti_japanese_intellectuals_communism_drift = 0.02
+				tooltip = communism_drift_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_conscription_factor = 0.1
+					tooltip = conscription_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_political_power_factor = -0.05
+					tooltip = political_power_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_command_power_gain_mult = 0.25
+					tooltip = command_power_gain_mult_tt
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = SHX_citizen_army
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				if = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = SHX_new_shanxi_army
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = SHX_dare_to_die_corps
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				add_to_variable = {
+					SHX_citizen_army_conscription_factor = 0.1
+				}
+				add_to_variable = {
+					SHX_citizen_army_political_power_factor = -0.05
+				}
+				add_to_variable = {
+					SHX_citizen_army_command_power_gain_mult = 0.25
+				}
+				force_update_dynamic_modifier = yes
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			PRC = {
+				add_manpower = 5000
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_learn_from_the_rats
+		icon = GFX_focus_prc_infiltration
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_form_the_ximenghui
+		}
+		relative_position_id = SHX_form_the_ximenghui
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			NOT = {
+				has_completed_focus = SHX_purge_the_communists_from_our_ranks
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			custom_effect_tooltip = SHX_modify_anti_japanese_intellectuals_dynamic_modifier_tt
+			add_to_variable = {
+				SHX_anti_japanese_intellectuals_communism_drift = 0.02
+				tooltip = communism_drift_tt
+			}
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = generic_skip_one_line_tt
+			IF = {
+				limit = {
+					has_character = CHI_fu_zuoyi
+					CHI_fu_zuoyi = {
+						NOT = {
+							has_trait = scavenger
+						}
+					}
+				}
+				CHI_fu_zuoyi = {
+					add_trait = {
+						trait = scavenger
+					}
+				}
+			}
+			IF = {
+				limit = {
+					has_character = CHI_fu_zuoyi
+					CHI_fu_zuoyi = {
+						NOT = {
+							has_trait = guerilla_fighter
+						}
+					}
+				}
+				CHI_fu_zuoyi = {
+					add_trait = {
+						trait = guerilla_fighter
+					}
+				}
+			}
+			IF = {
+				limit = {
+					has_character = SHX_dong_qiwu
+					SHX_dong_qiwu = {
+						NOT = {
+							has_trait = scavenger
+						}
+					}
+				}
+				SHX_dong_qiwu = {
+					add_trait = {
+						trait = scavenger
+					}
+				}
+			}
+			IF = {
+				limit = {
+					has_character = SHX_dong_qiwu
+					SHX_dong_qiwu = {
+						NOT = {
+							has_trait = guerilla_fighter
+						}
+					}
+				}
+				SHX_dong_qiwu = {
+					add_trait = {
+						trait = guerilla_fighter
+					}
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			PRC = {
+				add_manpower = 5000
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_purge_the_communists_from_our_ranks
+		icon = GFX_focus_SOV_military_purge
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_a_message_from_the_japanese
+		}
+		relative_position_id = SHX_a_message_from_the_japanese
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				date < 1942.1.1
+			}
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = communism
+				popularity = -0.1
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			remove_dynamic_modifier = {
+				modifier = SHX_anti_japanese_intellectuals
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_accept_japanese_aid
+		icon = GFX_goal_generic_dangerous_deal
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_purge_the_communists_from_our_ranks
+		}
+		relative_position_id = SHX_purge_the_communists_from_our_ranks
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				date < 1942.1.1
+			}
+		}
+
+		available = {
+			NOT = {
+				has_war_with = JAP
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 100
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 100
+				producer = JAP
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_experience_gain_army_factor = 0.2
+					tooltip = experience_gain_army_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_army_attack_factor = 0.05
+					tooltip = army_attack_factor_tt
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					SHX_citizen_army_experience_gain_army_factor = 0.2
+				}
+				add_to_variable = {
+					SHX_citizen_army_army_attack_factor = 0.05
+				}
+				if = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = SHX_citizen_army
+						}
+					}
+					force_update_dynamic_modifier = yes
+				}
+				else_if = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = SHX_dare_to_die_corps
+						}
+					}
+					force_update_dynamic_modifier = yes
+				}
+				else_if = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = SHX_new_shanxi_army
+						}
+					}
+					force_update_dynamic_modifier = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_recruit_japanese_volunteers
+		icon = GFX_focus_JAP_supremacy_of_will
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = SHX_accept_japanese_aid
+			focus = SHX_learn_from_the_rats
+		}
+		relative_position_id = SHX_accept_japanese_aid
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				date < 1942.1.1
+			}
+		}
+
+		available = {
+			NOT = {
+				has_war_with = JAP
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_corps_commander_role = {
+				character = SHX_imamura_hosaku
+				traits = { organizer infantry_leader }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+				legacy_id = -1
+			}
+			add_corps_commander_role = {
+				character = SHX_kaoru_motoizumi
+				traits = { harsh_leader urban_assault_specialist }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 3
+				legacy_id = -1
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_army_org_factor = 0.05
+					tooltip = army_org_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_army_morale_factor = 0.05
+					tooltip = army_morale_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_training_time_factor = -0.05
+					tooltip = training_time_factor_tt
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					SHX_citizen_army_army_org_factor = 0.05
+				}
+				add_to_variable = {
+					SHX_citizen_army_army_morale_factor = 0.05
+				}
+				add_to_variable = {
+					SHX_citizen_army_training_time_factor = -0.05
+				}
+				if = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = SHX_citizen_army
+						}
+					}
+					force_update_dynamic_modifier = yes
+				}
+				else_if = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = SHX_dare_to_die_corps
+						}
+					}
+					force_update_dynamic_modifier = yes
+				}
+				else_if = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = SHX_new_shanxi_army
+						}
+					}
+					force_update_dynamic_modifier = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_the_new_shanxi_army
+		icon = GFX_focus_CHI_victory_over_the_invaders
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_recruit_japanese_volunteers
+		}
+		relative_position_id = SHX_recruit_japanese_volunteers
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				date < 1942.1.1
+			}
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_political_power_factor = 0.15
+					tooltip = political_power_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_max_planning_factor = 0.05
+					tooltip = max_planning_factor_tt
+				}
+			}
+			hidden_effect = {
+				set_variable = {
+					SHX_citizen_army_political_power_factor = 0
+				}
+				add_to_variable = {
+					SHX_citizen_army_max_planning_factor = 0.05
+				}
+				if = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = SHX_citizen_army
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				if = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = SHX_dare_to_die_corps
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = SHX_new_shanxi_army
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_destroy_the_rats_burrow
+		icon = GFX_focus_SWE_attack_landsorganisationen
+		x = 2
+		y = 1
+
+		prerequisite = {
+			focus = SHX_denounce_chiang_kai_shek
+		}
+		relative_position_id = SHX_denounce_chiang_kai_shek
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			if = {
+				limit = {
+					PRC = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = PRC
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_political_power_factor = 0.1
+					tooltip = political_power_factor_tt
+				}
+			}
+			hidden_effect = {
+				set_variable = {
+					SHX_citizen_army_political_power_factor = 0
+				}
+				force_update_dynamic_modifier = yes
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_stability = 0.1
+			add_war_support = 0.1
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			remove_dynamic_modifier = {
+				modifier = SHX_anti_japanese_intellectuals
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_renounce_the_he_umezu_agreement
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_denounce_chiang_kai_shek
+		}
+		relative_position_id = SHX_denounce_chiang_kai_shek
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			HBC = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					HBC = {
+						is_subject = yes
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = HBC
+				}
+			}
+			else = {
+				HBC = {
+					country_event = { id = cotf_shx.6 }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_remember_the_guominjun
+		icon = GFX_china_feng_yuxiang
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_renounce_the_he_umezu_agreement
+		}
+		relative_position_id = SHX_renounce_the_he_umezu_agreement
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			if = {
+				limit = {
+					CHI = {
+						OR = {
+							has_character = CHI_feng_yuxiang
+							has_character = CHI_sun_lianzhong
+						}
+					}
+				}
+				CHI = {
+					CHI_feng_yuxiang = {
+						set_nationality = SHX
+					}
+					CHI_sun_lianzhong = {
+						set_nationality = SHX
+						add_unit_leader_trait = war_hero
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				CHI = {
+					country_event = { id = cotf_shx.8 }
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_conscription_factor = 0.1
+					tooltip = conscription_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_command_power_gain_mult = 0.15
+					tooltip = command_power_gain_mult_tt
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					SHX_citizen_army_conscription_factor = 0.1
+				}
+				add_to_variable = {
+					SHX_citizen_army_command_power_gain_mult = 0.15
+				}
+				force_update_dynamic_modifier = yes
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					SND = {
+						is_subject = no
+					}
+				}
+				SND = {
+					country_event = { id = cotf_shx.6 }
+				}
+				add_state_core = 1038
+				add_state_core = 597
+				add_state_core = 743
+			}
+			add_state_core = 1045
+			add_state_core = 283
+			add_state_core = 744
+			add_state_core = 607
+		}
+	}
+
+	focus = {
+		id = SHX_learn_from_the_japanese
+		icon = GFX_focus_JAP_give_it_your_all_for_the_emperor
+		x = 2
+		y = 1
+
+		prerequisite = {
+			focus = SHX_renounce_the_he_umezu_agreement
+		}
+		relative_position_id = SHX_renounce_the_he_umezu_agreement
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = SHX_learn_from_the_japanese
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_army_attack_factor = 0.05
+					tooltip = army_attack_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_army_org_factor = 0.05
+					tooltip = army_org_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_army_morale_factor = 0.05
+					tooltip = army_morale_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_training_time_factor = -0.05
+					tooltip = training_time_factor_tt
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					SHX_citizen_army_army_attack_factor = 0.05
+				}
+				add_to_variable = {
+					SHX_citizen_army_army_org_factor = 0.05
+				}
+				add_to_variable = {
+					SHX_citizen_army_army_morale_factor = 0.05
+				}
+				add_to_variable = {
+					SHX_citizen_army_training_time_factor = -0.05
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_memories_of_the_expedition
+		icon = GFX_focus_CHI_decisive_battles
+		x = -2
+		y = 1
+
+		prerequisite = {
+			focus = SHX_renounce_the_he_umezu_agreement
+		}
+		relative_position_id = SHX_renounce_the_he_umezu_agreement
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_conscription = 0.01
+					tooltip = conscription_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_army_core_attack_factor = 0.05
+					tooltip = army_core_attack_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_org_loss_when_moving = -0.05
+					tooltip = org_loss_when_moving_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_attrition = -0.05
+					tooltip = attrition_tt
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					SHX_citizen_army_conscription = 0.01
+				}
+				add_to_variable = {
+					SHX_citizen_army_army_core_attack_factor = 0.05
+				}
+				add_to_variable = {
+					SHX_citizen_army_org_loss_when_moving = -0.05
+				}
+				add_to_variable = {
+					SHX_citizen_army_attrition = -0.05
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = SHX_second_central_plains_war
+		icon = GFX_GXC_kmt_guard
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_memories_of_the_expedition
+			focus = SHX_remember_the_guominjun
+			focus = SHX_learn_from_the_japanese
+		}
+		relative_position_id = SHX_remember_the_guominjun
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_literally_china = yes
+					is_subject = no
+				}
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+			add_timed_idea = {
+				idea = MAN_southern_expedition
+				days = 550
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_the_new_republic
+		icon = GFX_chi_one_china_policy_KMT
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_second_central_plains_war
+		}
+		relative_position_id = SHX_second_central_plains_war
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+			OR = {
+				1035 = {
+					controller = {
+						surrender_progress > 0.8
+						NOT = {
+							original_tag = ROOT
+						}
+					}
+				}
+				608 = {
+					controller = {
+						surrender_progress > 0.8
+						NOT = {
+							original_tag = ROOT
+						}
+					}
+				}
+				AND = {
+					1035 = {
+						is_controlled_by = ROOT
+					}
+					608 = {
+						is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+			remove_ideas = CHI_warlord_state_idea
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_state = {
+				limit = { is_core_of = CHI }
+				add_core_of = ROOT
+			}
+			every_state = {
+				limit = { is_claimed_by = CHI }
+				add_claim_by = ROOT
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			set_cosmetic_tag = SHX_CHI_YS
+			#custom_effect_tooltip = generic_skip_one_line_tt
+			#set_capital = {
+			#	state = 608
+			#	remember_old_capital = no
+			#}
+			#hidden_effect = {
+			#	set_province_name = { id = 9843 name = PRC_beijing_capital_name }
+			#	608 = {
+			#		set_state_name = PRC_beijing_capital_name
+			#	}
+			#}
+		}
+	}
+
+	focus = {
+		id = SHX_second_northeast_flag_replacement
+		icon = GFX_focus_generic_attack_manchukuo
+		x = 4
+		y = 1
+
+		prerequisite = {
+			focus = SHX_finish_off_mengjiang
+			focus = SHX_renounce_the_he_umezu_agreement
+		}
+		relative_position_id = SHX_renounce_the_he_umezu_agreement
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			has_completed_focus = SHX_the_new_republic
+			MAN = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = MAN
+			}
+			add_state_core = 610
+			add_state_core = 716
+			add_state_core = 745
+			add_state_core = 328
+			add_state_core = 715
+			add_state_core = 761
+			add_state_core = 714
+			add_state_core = 717
+		}
+	}
+
+	focus = {
+		id = SHX_integrate_the_warlords
+		icon = GFX_focus_CHI_tongzi_jun
+		x = -2
+		y = 1
+
+		prerequisite = {
+			focus = SHX_denounce_chiang_kai_shek
+		}
+		relative_position_id = SHX_denounce_chiang_kai_shek
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_other_country = {
+				is_literally_china_tooltip = yes
+				is_subject_of = ROOT
+			}
+		}
+
+		bypass = {
+			NOT = {
+				any_other_country = {
+					is_literally_china_tooltip = yes
+					exists = yes
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = -0.05
+			every_other_country = {
+				limit = {
+					is_literally_china = yes
+					is_subject_of = ROOT
+				}
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_core_of = ROOT
+				}
+				ROOT = {
+					annex_country = {
+						target = PREV
+						transfer_troops = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_strike_the_red_menace
+		icon = GFX_focus_GER_end_european_communism
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_the_new_republic
+		}
+		
+		relative_position_id = SHX_the_new_republic
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			every_other_country = {
+				# TODO_JNS Have a thunk about interactions
+				limit = {
+					has_government = communism
+					NOT = {
+						tag = PRC
+						is_in_faction_with = ROOT
+						is_guaranteed_by = ROOT
+						has_non_aggression_pact_with = ROOT
+						ROOT = {
+							has_wargoal_against = PREV
+						}
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_the_chahar_counteroffensive
+		icon = GFX_focus_JAP_reorganize_the_united_autonomous_government
+		x = -2
+		y = 1
+
+		prerequisite = {
+			focus = SHX_the_suiyuan_catastrophe
+		}
+		relative_position_id = SHX_the_suiyuan_catastrophe
+		#mutually_exclusive = { focus = SHX_the_suiyuan_catastrophe }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		will_lead_to_war_with = MEN
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			custom_effect_tooltip = SHX_modify_the_northern_frontier_dynamic_modifier_tt
+			add_to_variable = {
+				SHX_the_northern_frontier_army_core_attack_factor = 0.1
+				tooltip = army_core_attack_factor_tt
+			}
+			add_to_variable = {
+				SHX_the_northern_frontier_army_core_defence_factor = 0.1
+				tooltip = army_core_defence_factor_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = SHX_the_northern_frontier
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = SHX_the_northern_frontier
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					MEN = {
+						exists = yes
+					}
+				}
+				declare_war_on = {
+					target = MEN
+					type = annex_everything
+				}
+			}
+			
+		}
+	}
+
+	focus = {
+		id = SHX_raid_the_north
+		icon = GFX_focus_AUS_raid_military_storages
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_the_chahar_counteroffensive
+		}
+		relative_position_id = SHX_the_chahar_counteroffensive
+		#mutually_exclusive = { focus = SHX_the_suiyuan_catastrophe }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			OR = {
+				controls_state = 621
+				controls_state = 1043
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 250
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 250
+				producer = JAP
+			}
+			build_railway = {
+				path = {
+					4174
+					4469
+					10507
+					7631
+					4525
+					12331
+				}
+			}
+			
+		}
+	}
+
+	focus = {
+		id = SHX_guominjun_reborn
+		icon = GFX_china_feng_yuxiang
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_the_suiyuan_catastrophe
+		}
+		relative_position_id = SHX_the_suiyuan_catastrophe
+		#mutually_exclusive = { focus = SHX_the_suiyuan_catastrophe }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_conscription = 0.01
+					tooltip = conscription_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_command_power_gain_mult = 0.25
+					tooltip = command_power_gain_mult_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_political_power_factor = 0.1
+					tooltip = political_power_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_production_speed_buildings_factor = 0.05
+					tooltip = production_speed_buildings_factor_tt
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = SHX_citizen_army
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = SHX_national_peoples_army
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				add_to_variable = {
+					SHX_citizen_army_conscription = 0.01
+				}
+				add_to_variable = {
+					SHX_citizen_army_command_power_gain_mult = 0.25
+				}
+				add_to_variable = {
+					SHX_citizen_army_political_power_factor = 0.1
+				}
+				add_to_variable = {
+					SHX_citizen_army_production_speed_buildings_factor = 0.05
+				}
+				force_update_dynamic_modifier = yes
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			remove_ideas = SHX_the_opium_hypocrisy
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_state_core = 1046
+			add_state_core = 622
+			add_state_core = 1032
+			#add_state_core = 608
+			#add_state_core = 614
+			#add_state_core = 609
+			add_state_core = 1045
+			add_state_core = 283
+			add_state_core = 744
+			add_state_core = 607
+			custom_effect_tooltip = generic_skip_one_line_tt
+			set_cosmetic_tag = SHX_GMJ
+			custom_effect_tooltip = generic_skip_one_line_tt
+			reduce_focus_completion_cost = {
+				focus = { SHX_second_beijing_coup SHX_contact_the_southern_warlords }
+				cost = 35
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_second_beijing_coup
+		icon = GFX_focus_JAP_put_an_end_to_chinese_feudalism
+		overlay = GFX_focus_fast_overlay_generic_clock
+		x = 2
+		y = 1
+
+		prerequisite = {
+			focus = SHX_the_suiyuan_catastrophe
+		}
+		relative_position_id = SHX_the_suiyuan_catastrophe
+		#mutually_exclusive = { focus = SHX_the_suiyuan_catastrophe }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			SND = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			HBC = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					SND = {
+						is_subject = no
+					}
+				}
+				SND = {
+					country_event = { id = cotf_shx.6 }
+				}
+				add_state_core = 1038
+				add_state_core = 597
+				add_state_core = 743
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					HBC = {
+						is_subject = no
+					}
+				}
+				HBC = {
+					country_event = { id = cotf_shx.6 }
+				}
+				add_state_core = 608
+				add_state_core = 614
+				add_state_core = 609
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_contact_the_southern_warlords
+		icon = GFX_focus_generic_secret_agent_operative
+		overlay = GFX_focus_fast_overlay_generic_clock
+		x = 4
+		y = 1
+
+		prerequisite = {
+			focus = SHX_the_suiyuan_catastrophe
+		}
+		relative_position_id = SHX_the_suiyuan_catastrophe
+		#mutually_exclusive = { focus = SHX_the_suiyuan_catastrophe }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			if = {
+				limit = {
+					GXC = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				GXC = {
+					country_event = { id = cotf_shx.7 }
+				}
+			}
+			if = {
+				limit = {
+					GDC = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				GDC = {
+					country_event = { id = cotf_shx.7 }
+				}
+			}
+			if = {
+				limit = {
+					YUN = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				YUN = {
+					country_event = { id = cotf_shx.7 }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_unify_our_armies
+		icon = GFX_focus_CHI_decisive_battles
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_contact_the_southern_warlords
+		}
+		relative_position_id = SHX_contact_the_southern_warlords
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_other_country = {
+				is_literally_china_tooltip = yes
+				is_subject_of = ROOT
+			}
+		}
+
+		bypass = {
+			NOT = {
+				any_other_country = {
+					is_literally_china_tooltip = yes
+					exists = yes
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = -0.05
+			every_other_country = {
+				limit = {
+					is_literally_china = yes
+					is_subject_of = ROOT
+				}
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_core_of = ROOT
+				}
+				ROOT = {
+					annex_country = {
+						target = PREV
+						transfer_troops = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_amend_our_mistake
+		icon = GFX_focus_prc_remove_chiang_kai_shek
+		x = 0
+		y = 2
+
+		prerequisite = {
+			focus = SHX_military_chaplains
+		}
+		relative_position_id = SHX_military_chaplains
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_literally_china = yes
+					is_subject = no
+				}
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+			add_timed_idea = {
+				idea = MAN_southern_expedition
+				days = 550
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_the_righteous_republic
+		icon = GFX_chi_one_china_policy_KMT
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_amend_our_mistake
+		}
+		relative_position_id = SHX_amend_our_mistake
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+			OR = {
+				1035 = {
+					controller = {
+						surrender_progress > 0.8
+						NOT = {
+							original_tag = ROOT
+						}
+					}
+				}
+				608 = {
+					controller = {
+						surrender_progress > 0.8
+						NOT = {
+							original_tag = ROOT
+						}
+					}
+				}
+				AND = {
+					1035 = {
+						is_controlled_by = ROOT
+					}
+					608 = {
+						is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+			remove_ideas = CHI_warlord_state_idea
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_state = {
+				limit = { is_core_of = CHI }
+				add_core_of = ROOT
+			}
+			every_state = {
+				limit = { is_claimed_by = CHI }
+				add_claim_by = ROOT
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			set_cosmetic_tag = SHX_CHI_FY
+			#custom_effect_tooltip = generic_skip_one_line_tt
+			#set_capital = {
+			#	state = 608
+			#	remember_old_capital = no
+			#}
+			#hidden_effect = {
+			#	set_province_name = { id = 9843 name = PRC_beijing_capital_name }
+			#	608 = {
+			#		set_state_name = PRC_beijing_capital_name
+			#	}
+			#}
+		}
+	}
+
+	focus = {
+		id = SHX_military_chaplains
+		icon = GFX_focus_mex_restore_the_army_of_christ
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_guominjun_reborn
+		}
+		relative_position_id = SHX_guominjun_reborn
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_army_org_factor = 0.05
+					tooltip = army_org_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_army_morale_factor = 0.05
+					tooltip = army_morale_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_war_support_factor = 0.1
+					tooltip = war_support_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_defensive_war_stability_factor = 0.2
+					tooltip = defensive_war_stability_factor_tt
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			remove_dynamic_modifier = {
+				modifier = SHX_anti_japanese_intellectuals
+			}
+			hidden_effect = {
+				add_to_variable = {
+					SHX_citizen_army_army_org_factor = 0.05
+				}
+				add_to_variable = {
+					SHX_citizen_army_army_morale_factor = 0.05
+				}
+				add_to_variable = {
+					SHX_citizen_army_war_support_factor = 0.1
+				}
+				add_to_variable = {
+					SHX_citizen_army_defensive_war_stability_factor = 0.2
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_an_educated_army
+		icon = GFX_focus_CHI_tongzi_jun
+		x = 3
+		y = 1
+
+		prerequisite = {
+			focus = SHX_military_chaplains
+		}
+		relative_position_id = SHX_military_chaplains
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_research_speed_factor = 0.05
+					tooltip = research_speed_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_conscription_factor = 0.1
+					tooltip = conscription_factor_tt
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					SHX_citizen_army_research_speed_factor = 0.05
+				}
+				add_to_variable = {
+					SHX_citizen_army_conscription_factor = 0.1
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_an_army_that_serves
+		icon = GFX_focus_generic_public_works
+		x = 5
+		y = 1
+
+		prerequisite = {
+			focus = SHX_military_chaplains
+		}
+		relative_position_id = SHX_military_chaplains
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_production_speed_buildings_factor = 0.1
+					tooltip = production_speed_buildings_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_consumer_goods_factor = -0.05
+					tooltip = consumer_goods_factor_tt
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					SHX_citizen_army_production_speed_buildings_factor = 0.1
+				}
+				add_to_variable = {
+					SHX_citizen_army_consumer_goods_factor = -0.05
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_the_principle_of_minzu
+		icon = GFX_focus_CHI_baojia_system
+		x = -1
+		y = 2
+
+		prerequisite = {
+			focus = SHX_military_chaplains
+		}
+		relative_position_id = SHX_guominjun_reborn
+		mutually_exclusive = { focus = SHX_the_only_way }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_war_support_factor = 0.1
+					tooltip = war_support_factor_tt
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					SHX_citizen_army_war_support_factor = 0.1
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_the_principle_of_minsheng
+		icon = GFX_focus_BEL_christian_corporatism
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = SHX_the_principle_of_minzu
+		}
+		relative_position_id = SHX_the_principle_of_minzu
+		#mutually_exclusive = { focus = SHX_an_army_with_a_state }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_stability_factor = 0.05
+					tooltip = stability_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_consumer_goods_factor = -0.05
+					tooltip = consumer_goods_factor_tt
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					SHX_citizen_army_stability_factor = 0.05
+				}
+				add_to_variable = {
+					SHX_citizen_army_consumer_goods_factor = -0.05
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_the_principle_of_minquan
+		icon = GFX_focus_generic_vote
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_the_principle_of_minsheng
+		}
+		relative_position_id = SHX_the_principle_of_minsheng
+		#mutually_exclusive = { focus = SHX_an_army_with_a_state }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_political_power_factor = 0.1
+					tooltip = political_power_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_democratic_drift = 0.05
+					tooltip = democratic_drift_tt
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					SHX_citizen_army_political_power_factor = 0.1
+				}
+				add_to_variable = {
+					SHX_citizen_army_democratic_drift = 0.05
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_one_party_state
+		icon = GFX_focus_CHI_revise_the_national_curriculum
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = SHX_the_principle_of_minquan
+		}
+		prerequisite = {
+			focus = SHX_the_righteous_republic
+		}
+		relative_position_id = SHX_the_principle_of_minquan
+		#mutually_exclusive = { focus = SHX_an_army_with_a_state }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.2
+			}
+			set_party_name = {
+				ideology = democratic
+				long_name = CHI_left_kmt_party_long
+				name = CHI_left_kmt_party
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_feng_yuxiangs_premiership
+		icon = GFX_BEL_Improve_Catholic_Relations
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_one_party_state
+		}
+		relative_position_id = SHX_one_party_state
+		mutually_exclusive = {
+			focus = SHX_soong_chin_lings_premiership
+			focus = SHX_li_dequans_premiership
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = 0.1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_country_leader_role = {
+				character = CHI_feng_yuxiang
+				country_leader = {
+					ideology = socialism
+					traits = { the_christian_general }
+					expire = "1965.1.1.1"
+					id = -1
+				}
+			}
+			hidden_effect = {
+				promote_character = {
+				character = CHI_feng_yuxiang
+				ideology = socialism
+				}
+				CHI_feng_yuxiang = {
+					set_portraits = {
+						civilian = {
+							large = "GFX_portrait_SHX_feng_yuxiang_civilian"
+						}
+					}
+				}
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				election_frequency = 48
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_soong_chin_lings_premiership
+		icon = GFX_focus_CHI_lay_the_foundation_for_a_united_china
+		x = 2
+		y = 1
+
+		prerequisite = {
+			focus = SHX_one_party_state
+		}
+		relative_position_id = SHX_one_party_state
+		mutually_exclusive = {
+			focus = SHX_feng_yuxiangs_premiership
+			focus = SHX_li_dequans_premiership
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+			CHI = {
+				OR = {
+					has_completed_focus = CHI_dang_guo
+					has_completed_focus = CHI_strengthening_our_resolve
+					has_completed_focus = CHI_victory_for_the_CDSP
+					has_completed_focus = CHI_victory_for_the_CDL
+					has_completed_focus = CHI_victory_for_the_KMT
+					has_completed_focus = CHI_victory_for_the_YCP
+				}
+			}
+			MAN = {
+				OR = {
+					has_completed_focus = MAN_tsr_obedience
+					has_completed_focus = MAN_tsr_bolster_nationalism
+					has_completed_focus = MAN_tsr_zhao_shangzhis_coup
+					has_completed_focus = MAN_the_good_government
+					has_completed_focus = MAN_the_jade_marshal
+					has_completed_focus = MAN_rejoin_the_KMT
+					has_completed_focus = MAN_defect_to_the_communists
+					has_completed_focus = MAN_zhou_enlais_premiership
+					has_completed_focus = MAN_zhang_xueliangs_premiership
+				}
+			}
+			GXC = {
+				OR = {
+					has_completed_focus = GXC_kneel_before_chiang
+					has_completed_focus = GXC_a_triumvirate
+					has_completed_focus = GXC_li_jishens_premiership
+					has_completed_focus = GXC_victory_for_the_PPP
+					has_completed_focus = GXC_victory_for_the_ZGD
+				}
+			}
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					CHI = {
+						has_character = CHI_soong_ching_ling
+					}
+				}
+				CHI = {
+					CHI_soong_ching_ling = {
+						set_nationality = ROOT
+					}
+				}
+			}
+			promote_character = {
+				character = CHI_soong_ching_ling
+				ideology = socialism
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				election_frequency = 48
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = CHI_flag_KMTRC
+			hidden_effect = {
+				set_cosmetic_tag = SHX_CHI_KMT
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_li_dequans_premiership
+		icon = GFX_focus_ARG_women_in_industry
+		x = -2
+		y = 1
+
+		prerequisite = {
+			focus = SHX_one_party_state
+		}
+		relative_position_id = SHX_one_party_state
+		mutually_exclusive = {
+			focus = SHX_feng_yuxiangs_premiership
+			focus = SHX_soong_chin_lings_premiership
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_country_leader_role = {
+				character = SHX_li_dequan
+				country_leader = {
+					ideology = socialism
+					traits = { christian_feminist }
+					expire = "1965.1.1.1"
+					id = -1
+				}
+			}
+			promote_character = {
+				character = SHX_li_dequan
+				ideology = socialism
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				election_frequency = 48
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_the_only_way
+		icon = GFX_BRA_catholic_education
+		x = 1
+		y = 2
+
+		prerequisite = {
+			focus = SHX_military_chaplains
+		}
+		relative_position_id = SHX_guominjun_reborn
+		mutually_exclusive = { focus = SHX_the_principle_of_minzu }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_drift_defence_factor = 0.2
+					tooltip = drift_defence_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_war_support_weekly = 0.005
+					tooltip = SHX_war_support_weekly_decimal_tt
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					SHX_citizen_army_drift_defence_factor = 0.2
+				}
+				add_to_variable = {
+					SHX_citizen_army_war_support_weekly = 0.005
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_punish_the_unvirtuous
+		icon = GFX_focus_CZE_german_puppet
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = SHX_the_only_way
+		}
+		relative_position_id = SHX_the_only_way
+		#mutually_exclusive = { focus = SHX_the_principle_of_minzu }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_stability_weekly = 0.001
+					tooltip = SHX_stability_weekly_decimal_tt
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					SHX_citizen_army_stability_weekly = 0.001
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_an_army_with_a_state
+		icon = GFX_focus_generic_limited_social_mobilization
+		x = 3
+		y = 1
+
+		prerequisite = {
+			focus = SHX_the_only_way
+		}
+		relative_position_id = SHX_the_only_way
+		#mutually_exclusive = { focus = SHX_the_principle_of_minzu }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war_support > 0.8
+		}
+
+		bypass = {
+			has_idea = tot_economic_mobilisation
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_ideas = tot_economic_mobilisation
+		}
+	}
+
+	focus = {
+		id = SHX_chinese_institute_for_women
+		icon = GFX_focus_JAP_women_in_industry
+		x = 2
+		y = 1
+
+		prerequisite = {
+			focus = SHX_guominjun_reborn
+		}
+		relative_position_id = SHX_guominjun_reborn
+		#mutually_exclusive = { focus = SHX_the_principle_of_minzu }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_research_speed_factor = 0.02
+					tooltip = research_speed_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_conscription = 0.02
+					tooltip = conscription_tt
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					SHX_citizen_army_research_speed_factor = 0.02
+				}
+				add_to_variable = {
+					SHX_citizen_army_conscription = 0.02
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_avenge_the_peoples_anti_japanese_army
+		icon = GFX_focus_generic_attack_manchukuo
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = SHX_raid_the_north
+		}
+		relative_position_id = SHX_raid_the_north
+		#mutually_exclusive = { focus = SHX_the_principle_of_minzu }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			has_completed_focus = SHX_the_new_republic
+			MAN = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = MAN
+			}
+			add_state_core = 610
+			add_state_core = 716
+			add_state_core = 745
+			add_state_core = 328
+			add_state_core = 715
+			add_state_core = 761
+			add_state_core = 714
+			add_state_core = 717
+		}
+	}
+
+	focus = {
+		id = SHX_recall_soviet_advisors
+		icon = GFX_focus_PRC_invite_soviet_general
+		x = 7
+		y = 1
+
+		prerequisite = {
+			focus = SHX_military_chaplains
+		}
+		relative_position_id = SHX_military_chaplains
+		#mutually_exclusive = { focus = SHX_the_principle_of_minzu }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war_with = SOV
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = SHX_recall_soviet_advisors
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = SHX_recall_soviet_advisors
+				bonus = 0.75
+				uses = 2
+				category = armor
+			}
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_army_attack_factor = 0.05
+					tooltip = army_attack_factor_tt
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					SHX_citizen_army_army_attack_factor = 0.05
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_an_example_of_austerity
+		icon = GFX_focus_SIA_thai_rice_company
+		x = 6
+		y = 2
+
+		prerequisite = {
+			focus = SHX_military_chaplains
+		}
+		relative_position_id = SHX_military_chaplains
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_supply_consumption_factor = -0.05
+					tooltip = supply_consumption_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_attrition = -0.05
+					tooltip = attrition_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_consumer_goods_factor = -0.1
+					tooltip = consumer_goods_factor_tt
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					SHX_citizen_army_supply_consumption_factor = -0.05
+				}
+				add_to_variable = {
+					SHX_citizen_army_attrition = -0.05
+				}
+				add_to_variable = {
+					SHX_citizen_army_consumer_goods_factor = -0.1
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_the_best_of_the_best
+		icon = GFX_focus_PRC_develop_the_army
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SHX_an_example_of_austerity
+		}
+		relative_position_id = SHX_an_example_of_austerity
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_army_org_factor = 0.05
+					tooltip = army_org_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_army_morale_factor = 0.05
+					tooltip = army_morale_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_org_loss_when_moving = -0.05
+					tooltip = org_loss_when_moving_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_acclimatization_cold_climate_gain_factor = 0.05
+					tooltip = acclimatization_cold_climate_gain_factor_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_acclimatization_hot_climate_gain_factor = 0.05
+					tooltip = acclimatization_hot_climate_gain_factor_tt
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					SHX_citizen_army_army_org_factor = 0.05
+				}
+				add_to_variable = {
+					SHX_citizen_army_army_morale_factor = 0.05
+				}
+				add_to_variable = {
+					SHX_citizen_army_org_loss_when_moving = -0.05
+				}
+				add_to_variable = {
+					SHX_citizen_army_acclimatization_cold_climate_gain_factor = 0.05
+				}
+				add_to_variable = {
+					SHX_citizen_army_acclimatization_hot_climate_gain_factor = 0.05
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_retire_abusive_taxes
+		icon = GFX_focus_RAJ_war_taxes
+		x = 9
+		y = 1
+
+		prerequisite = {
+			focus = SHX_military_chaplains
+		}
+		relative_position_id = SHX_military_chaplains
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_stability = -0.1
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_global_building_slots_factor = 0.15
+					tooltip = global_building_slots_factor_tt
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					SHX_citizen_army_global_building_slots_factor = 0.15
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SHX_remember_mukden
+		icon = GFX_focus_CHI_utilize_the_terrain
+		x = 8
+		y = 2
+
+		prerequisite = {
+			focus = SHX_military_chaplains
+		}
+		relative_position_id = SHX_military_chaplains
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_citizen_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_citizen_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_dare_to_die_corps
+					}
+				}
+				custom_effect_tooltip = SHX_modify_dare_to_die_corps_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_new_shanxi_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_new_shanxi_army_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = SHX_national_peoples_army
+					}
+				}
+				custom_effect_tooltip = SHX_modify_national_peoples_army_dynamic_modifier_tt
+			}
+			effect_tooltip = {
+				add_to_variable = {
+					SHX_citizen_army_resistance_target_on_our_occupied_states = 0.1
+					tooltip = resistance_target_on_our_occupied_states_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_compliance_growth_on_our_occupied_states = -0.2
+					tooltip = compliance_growth_on_our_occupied_states_tt
+				}
+				add_to_variable = {
+					SHX_citizen_army_pocket_penalty = -0.05
+					tooltip = pocket_penalty_tt
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					SHX_citizen_army_resistance_target_on_our_occupied_states = 0.1
+				}
+				add_to_variable = {
+					SHX_citizen_army_compliance_growth_on_our_occupied_states = -0.2
+				}
+				add_to_variable = {
+					SHX_citizen_army_pocket_penalty = -0.05
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = SHX_strike_the_enemies_of_christianism
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = SHX_the_righteous_republic
+		}
+		
+		relative_position_id = SHX_the_righteous_republic
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			every_other_country = {
+				# TODO_JNS Have a thunk about interactions
+				limit = {
+					has_government = communism
+					NOT = {
+						#tag = PRC
+						is_in_faction_with = ROOT
+						is_guaranteed_by = ROOT
+						has_non_aggression_pact_with = ROOT
+						ROOT = {
+							has_wargoal_against = PREV
+						}
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+
+}

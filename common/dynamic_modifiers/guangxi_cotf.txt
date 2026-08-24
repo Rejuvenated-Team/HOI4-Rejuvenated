@@ -1,0 +1,115 @@
+GXC_the_triumvirate = {
+	icon = GFX_idea_GXC_the_triumvirate
+	enable = { tag = GXC }
+
+	surrender_limit = 0.15
+	command_power_gain_mult = GXC_the_triumvirate_command_power_gain_mult
+	political_power_factor = GXC_the_triumvirate_political_power_factor
+	production_speed_rail_way_factor = GXC_the_triumvirate_production_speed_rail_way_factor
+	democratic_drift = GXC_the_triumvirate_democratic_drift
+}
+
+GXC_the_southern_bastion = {
+	icon = GFX_idea_idea_CHI_protracted_warfare
+	enable = { tag = GXC }
+
+	max_dig_in = GXC_the_southern_bastion_max_dig_in
+	dig_in_speed_factor = GXC_the_southern_bastion_dig_in_speed_factor
+	special_forces_cap = GXC_the_southern_bastion_special_forces_cap
+	special_forces_out_of_supply_factor = GXC_the_southern_bastion_special_forces_out_of_supply_factor
+	equipment_capture_factor = GXC_the_southern_bastion_equipment_capture_factor
+	army_core_defence_factor = GXC_the_southern_bastion_army_core_defence_factor
+	cas_damage_reduction = GXC_the_southern_bastion_cas_damage_reduction
+}
+
+GXC_baojia_militarism = {
+	icon = GFX_idea_GXC_baojia_militarism
+	enable = { tag = GXC }
+
+	conscription_factor = GXC_baojia_militarism_conscription_factor
+	conscription = GXC_baojia_militarism_conscription
+	army_leader_cost_factor = GXC_baojia_militarism_army_leader_cost_factor
+	mobilization_speed = 0.15
+	training_time_factor = GXC_baojia_militarism_training_time_factor
+	minimum_training_level = GXC_baojia_militarism_minimum_training_level
+	modifier_army_sub_unit_militia_attack_factor = 0.05
+	modifier_army_sub_unit_militia_defence_factor = 0.05
+	modifier_army_sub_unit_militia_max_org_factor = 0.05
+	war_support_factor = GXC_baojia_militarism_war_support_factor
+	stability_factor = GXC_baojia_militarism_stability_factor
+	democratic_drift = GXC_baojia_militarism_democratic_drift
+	consumer_goods_factor = GXC_baojia_militarism_consumer_goods_factor
+	global_building_slots_factor = GXC_baojia_militarism_global_building_slots_factor
+	surrender_limit = GXC_baojia_militarism_surrender_limit
+	political_power_factor = GXC_baojia_militarism_political_power_gain
+	production_speed_industrial_complex_factor = GXC_baojia_militarism_production_speed_industrial_complex_factor
+	production_speed_buildings_factor = GXC_baojia_militarism_production_speed_buildings_factor
+	resistance_target_on_our_occupied_states = GXC_baojia_militarism_resistance_target_on_our_occupied_states
+	compliance_growth_on_our_occupied_states = GXC_baojia_militarism_compliance_growth_on_our_occupied_states
+	compliance_growth = GXC_baojia_militarism_compliance_growth
+	compliance_gain = GXC_baojia_militarism_compliance_gain
+	weekly_casualties_war_support = GXC_baojia_militarism_weekly_casualties_war_support
+	supply_consumption_factor = GXC_baojia_militarism_supply_consumption_factor
+	supply_node_range = GXC_baojia_militarism_supply_node_range
+	research_speed_factor = GXC_baojia_militarism_research_speed_factor
+	local_resources_factor = GXC_baojia_militarism_local_resources_factor
+	monthly_population = GXC_baojia_militarism_monthly_population
+	global_building_slots = GXC_baojia_militarism_global_building_slots
+	army_core_defence_factor = GXC_baojia_militarism_army_core_defence_factor
+	generate_wargoal_tension = GXC_baojia_militarism_generate_wargoal_tension
+	join_faction_tension = GXC_baojia_militarism_join_faction_tension
+	send_volunteers_tension = GXC_baojia_militarism_send_volunteers_tension
+	guarantee_tension = GXC_baojia_militarism_guarantee_tension
+	drift_defence_factor = GXC_baojia_militarism_drift_defence_factor
+}
+
+GXC_the_pearl_river_valley_revolution = {
+	icon = GFX_idea_GXC_the_pearl_river_valley_revolution
+	enable = { tag = GXC }
+
+	conscription_factor = GXC_baojia_militarism_conscription_factor
+	conscription = GXC_baojia_militarism_conscription
+	army_leader_cost_factor = GXC_baojia_militarism_army_leader_cost_factor
+	mobilization_speed = 0.15
+	training_time_factor = GXC_baojia_militarism_training_time_factor
+	minimum_training_level = GXC_baojia_militarism_minimum_training_level
+	modifier_army_sub_unit_militia_attack_factor = 0.05
+	modifier_army_sub_unit_militia_defence_factor = 0.05
+	modifier_army_sub_unit_militia_max_org_factor = 0.05
+	war_support_factor = GXC_baojia_militarism_war_support_factor
+	stability_factor = GXC_baojia_militarism_stability_factor
+	democratic_drift = GXC_baojia_militarism_democratic_drift
+	consumer_goods_factor = GXC_baojia_militarism_consumer_goods_factor
+	global_building_slots_factor = GXC_baojia_militarism_global_building_slots_factor
+	surrender_limit = GXC_baojia_militarism_surrender_limit
+	political_power_factor = GXC_baojia_militarism_political_power_gain
+	production_speed_industrial_complex_factor = GXC_baojia_militarism_production_speed_industrial_complex_factor
+	production_speed_buildings_factor = GXC_baojia_militarism_production_speed_buildings_factor
+	resistance_target_on_our_occupied_states = GXC_baojia_militarism_resistance_target_on_our_occupied_states
+	compliance_growth_on_our_occupied_states = GXC_baojia_militarism_compliance_growth_on_our_occupied_states
+	compliance_growth = GXC_baojia_militarism_compliance_growth
+	compliance_gain = GXC_baojia_militarism_compliance_gain
+	weekly_casualties_war_support = GXC_baojia_militarism_weekly_casualties_war_support
+	supply_consumption_factor = GXC_baojia_militarism_supply_consumption_factor
+	supply_node_range = GXC_baojia_militarism_supply_node_range
+	research_speed_factor = GXC_baojia_militarism_research_speed_factor
+	local_resources_factor = GXC_baojia_militarism_local_resources_factor
+	monthly_population = GXC_baojia_militarism_monthly_population
+	global_building_slots = GXC_baojia_militarism_global_building_slots
+	army_core_defence_factor = GXC_baojia_militarism_army_core_defence_factor
+	generate_wargoal_tension = GXC_baojia_militarism_generate_wargoal_tension
+	join_faction_tension = GXC_baojia_militarism_join_faction_tension
+	send_volunteers_tension = GXC_baojia_militarism_send_volunteers_tension
+	guarantee_tension = GXC_baojia_militarism_guarantee_tension
+	drift_defence_factor = GXC_baojia_militarism_drift_defence_factor
+}
+
+GXC_the_liangguang_crisis = {
+	icon = GFX_idea_GXC_liangguang_crisis
+	enable = { tag = GXC }
+
+	war_support_factor = GXC_the_liangguang_crisis_war_support_factor
+	minimum_training_level = 0.10
+	mobilization_speed = -0.15
+	democratic_drift = GXC_the_liangguang_crisis_democratic_drift
+}

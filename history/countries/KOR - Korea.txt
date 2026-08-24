@@ -19,17 +19,36 @@ set_politics = {
 	elections_allowed = yes
 }
 set_popularities = {
+<<<<<<< Updated upstream
 	democratic = 35
 	fascism = 25
 	communism = 30
 	neutrality = 10
+=======
+	democratic = 40
+	fascism = 0
+	communism = 40
+	neutrality = 20
+>>>>>>> Stashed changes
 }
 
 recruit_character = KOR_jiro_minami
 recruit_character = KOR_syngman_rhee
+<<<<<<< Updated upstream
 recruit_character = KOR_lyuh_woon_hyung
 recruit_character = KOR_yi_kang
 recruit_character = KOR_kim_il_sung
 recruit_character = KOR_yi_un
 recruit_character = KOR_choe_hyon
 recruit_character = KOR_pak_hon_yong
+=======
+#recruit_character = KOR_lyuh_woon_hyung
+recruit_character = KOR_yi_kang
+recruit_character = KOR_kim_il_sung
+recruit_character = KOR_kim_gu
+recruit_character = KOR_yi_un
+recruit_character = KOR_choe_hyon
+recruit_character = KOR_pak_hon_yong
+recruit_character = KOR_jo_so_ang
+recruit_character = KOR_yeom_dong_jin
+>>>>>>> Stashed changes

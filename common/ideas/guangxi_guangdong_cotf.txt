@@ -1,0 +1,131 @@
+ideas = {
+	country = {
+		GXC_opium_dependent_economy = { #35% of their income, damn
+			picture = CHI_illicit_trade_1
+			allowed = {
+				tag = GXC
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.25
+				stability_factor = -0.25
+				war_support_factor = -0.1
+				production_speed_buildings_factor = 0.15
+				drift_defence_factor = -0.2
+			}
+		}
+
+		GXC_opium_dependent_economy_local = { #35% of their income, damn. but at least this one is theirs
+			picture = CHI_illicit_trade_1
+			allowed = {
+				tag = GXC
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.3
+				stability_factor = -0.2
+				war_support_factor = -0.1
+				production_speed_buildings_factor = 0.15
+				drift_defence_factor = -0.3
+			}
+		}
+
+		GXC_opium_dependent_economy_small = { #35+20=less%
+			picture = CHI_illicit_trade_1
+			allowed = {
+				tag = GXC
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.15
+				stability_factor = -0.15
+				war_support_factor = -0.1
+				production_speed_buildings_factor = 0.1
+				drift_defence_factor = -0.15
+			}
+		}
+
+		GXC_japanese_officer_training = {
+			picture = GXC_japanese_officer_training
+			allowed = {
+				tag = GXC
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			cancel = {
+				has_war_with = JAP
+			}
+			targeted_modifier = {
+				tag = JAP
+				defense_bonus_against = -0.15
+			}
+			modifier = {
+				land_doctrine_cost_factor = -0.05
+				air_doctrine_cost_factor = -0.05
+				experience_gain_army = 0.05
+				experience_gain_air = 0.05
+			}
+		}
+
+		GXC_the_wealth_beneath_the_mountains_ = {
+			picture = GXC_the_wealth_beneath_the_mountains
+			allowed = {
+				OR = {
+					tag = GXC
+					tag = GDC
+				}
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				local_resources_factor = 0.15
+			}
+		}
+
+		GXC_organization_and_training_committee = {
+			picture = GXC_organization_and_training_committee
+			allowed = {
+				tag = GXC
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				intelligence_agency_defense = 1
+				operative_slot = 1
+				agency_upgrade_time = -0.15
+				intel_network_gain_factor = 0.20
+			}
+		}
+
+		GDC_opium_revenues = { #20% of their income, could be worse?
+			picture = CHI_illicit_trade_1
+			allowed = {
+				tag = GDC
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			cancel = {
+				num_of_factories > 49
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				production_speed_buildings_factor = 0.05
+				drift_defence_factor = -0.1
+			}
+		}
+
+		
+    }
+}

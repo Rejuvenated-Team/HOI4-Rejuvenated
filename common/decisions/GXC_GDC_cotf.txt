@@ -1,0 +1,132 @@
+GXC_GDC_war_in_liangguang = {
+
+	GXC_GDC_CHI_war_in_south_halting = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		visible = {
+			original_tag = CHI
+			has_war_with = GXC
+			GXC = {
+				has_cosmetic_tag = liangguang_clique
+			}
+		}
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 184
+
+		fire_only_once = yes
+
+		activation = {
+			always = no
+		}
+
+		cancel_if_not_visible = yes
+
+		is_good = no
+
+		timeout_effect = {
+			custom_effect_tooltip = CHI_stalemate_tt
+			country_event = {
+				id = cotf_gxc.9
+				hours = 6
+			}
+		}
+
+	}
+
+	GXC_GDC_holding_out = {
+
+		priority = 100
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		visible = {
+			original_tag = GXC
+			has_war_with = CHI
+			GXC = {
+				has_cosmetic_tag = liangguang_clique
+			}
+		}
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 184
+
+		fire_only_once = yes
+
+		activation = {
+			always = no
+		}
+
+		cancel_if_not_visible = yes
+
+		is_good = no
+
+		timeout_effect = {
+			effect_tooltip = {
+				IF = {
+					limit = {
+						603 = {
+							is_controlled_by = GXC
+						}
+					}
+					603 = {
+						transfer_state_to = GXC
+					}
+				}
+				IF = {
+					limit = {
+						602 = {
+							#is_controlled_by = GXC
+							is_owned_by = CHI
+						}
+					}
+					602 = {
+						transfer_state_to = GXC
+					}
+				}
+				IF = {
+					limit = {
+						600 = {
+							is_controlled_by = GXC
+						}
+					}
+					600 = {
+						transfer_state_to = GXC
+					}
+				}
+				IF = {
+					limit = {
+						595 = {
+							is_controlled_by = GXC
+						}
+					}
+					595 = {
+						transfer_state_to = GXC
+					}
+				}
+				IF = {
+					limit = {
+						748 = {
+							is_controlled_by = GXC
+						}
+					}
+					748 = {
+						transfer_state_to = GXC
+					}
+				}
+			}
+			custom_effect_tooltip = GDC_survival_tt
+		}
+
+	}
+
+}

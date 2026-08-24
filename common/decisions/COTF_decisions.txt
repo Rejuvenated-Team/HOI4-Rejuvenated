@@ -1,0 +1,308 @@
+cotf_reorganize_east_asia = {
+	COTF_reorganize_korea = {
+		icon = generic_nationalism
+
+		visible = {
+			NOT = {
+				AND = {
+					NOT = {
+						OR = {
+							tag = MAN
+							original_tag = MAN
+						}
+					}
+					KOR = {
+						is_subject = yes
+						OVERLORD = {
+							OR = {
+								tag = MAN
+								original_tag = MAN
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				AND = {
+					JAP = {
+						OR = {
+							has_idea = the_fading_sun
+							has_idea = the_fading_sun_alliance
+							has_government = democratic
+							has_government = communism
+							is_subject = yes
+							exists = no
+						}
+						#NOT = { has_completed_focus = JAP_okadas_military_purge_speech }
+					}
+					OR = {
+						has_country_flag = COTF_korean_overlord
+						AND = {
+							OR = {
+								is_literally_china = yes
+								tag = MAN
+							}
+							OR = {
+								KOR = {
+									exists = yes
+								}
+								owns_state = 525
+								owns_state = 527
+							}
+						}
+					}
+					NOT = { has_global_flag = cotf_korean_leader_chosen }
+				}
+				AND = {
+					OR = {
+						is_literally_china = yes
+						tag = MAN
+					}
+					KOR = {
+						is_subject_of = ROOT
+					}
+					OR = {
+						NOT = { has_global_flag = cotf_korean_leader_chosen }
+						AND = {
+							has_global_flag = cotf_korean_leader_chosen
+							NOT = { has_global_flag = cotf_korea_reorganized_after_man }
+							KOR = {
+								has_country_flag = COTF_korea_organized_by_man
+							}
+						}
+					}
+				}
+			}
+		}
+
+		available = {
+			NOT = {
+				AND = {
+					NOT = {
+						OR = {
+							tag = MAN
+							original_tag = MAN
+						}
+					}
+					KOR = {
+						is_subject = yes
+						OVERLORD = {
+							OR = {
+								tag = MAN
+								original_tag = MAN
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				AND = {
+					JAP = {
+						OR = {
+							has_idea = the_fading_sun
+							has_idea = the_fading_sun_alliance
+							has_government = democratic
+							has_government = communism
+							is_subject = yes
+							exists = no
+						}
+						#NOT = { has_completed_focus = JAP_okadas_military_purge_speech }
+					}
+					OR = {
+						#has_country_flag = COTF_korean_overlord
+						AND = {
+							#OR = {
+							#	is_literally_china = yes
+							#	tag = MAN
+							#}
+							OR = {
+								KOR = {
+									exists = yes
+								}
+								owns_state = 525
+								owns_state = 527
+							}
+						}
+					}
+					NOT = { has_global_flag = cotf_korean_leader_chosen }
+				}
+				AND = {
+					#OR = {
+					#	is_literally_china = yes
+					#	tag = MAN
+					#}
+					KOR = {
+						is_subject_of = ROOT
+					}
+					#OR = {
+						NOT = { has_global_flag = cotf_korean_leader_chosen }
+					#	AND = {
+					#		has_global_flag = cotf_korean_leader_chosen
+					#		NOT = { has_global_flag = cotf_korea_reorganized_after_man }
+					#		KOR = {
+					#			has_country_flag = COTF_korea_organized_by_man
+					#		}
+					#	}
+					#}
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 100
+		}
+
+		complete_effect = {
+			set_country_flag = COTF_reorganizing_korea
+			clr_country_flag = COTF_korean_overlord
+			if = {
+				limit = {
+					has_government = communism
+				}
+				country_event = {
+					id = cotf_chi.4
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						tag = MAN
+						original_tag = MAN
+					}
+					NOT = {
+						has_government = communism
+					}
+				}
+				country_event = {
+					id = cotf_chi.5
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_government = democratic
+						has_government = neutrality
+					}
+				}
+				country_event = {
+					id = cotf_chi.3
+				}
+			}
+			else_if = {
+				limit = {
+					is_literally_china = yes
+					has_government = fascism
+					NOT = {
+						OR = {
+							tag = MAN
+							original_tag = MAN
+						}
+					}
+				}
+				country_event = {
+					id = cotf_chi.6
+				}
+			}
+			else = {
+				clr_country_flag = COTF_reorganizing_korea
+			}
+		}
+	}
+
+	COTF_reorganize_indochina = {
+		icon = generic_nationalism
+
+		visible = {
+			OR = {
+				is_literally_china = yes
+				tag = MAN
+			}
+			owns_state = 671
+			NOT = { has_global_flag = cotf_indochina_leader_chosen }
+		}
+
+		available = {
+			#OR = {
+			#	is_literally_china = yes
+			#	tag = MAN
+			#}
+			owns_state = 671
+			NOT = { has_global_flag = cotf_indochina_leader_chosen }
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 100
+		}
+
+		complete_effect = {
+			set_global_flag = cotf_indochina_leader_chosen
+			country_event = {
+				id = cotf_chi.7
+			}
+		}
+	}
+
+	COTF_integrating_western_indochina = {
+		icon = generic_nationalism
+
+		visible = {
+			VIN = {
+				is_subject_of = ROOT
+			}
+			670 = {
+				OR = {
+					is_controlled_by = ROOT
+					is_controlled_by = VIN
+				}
+			}
+			741 = {
+				OR = {
+					is_controlled_by = ROOT
+					is_controlled_by = VIN
+				}
+			}
+		}
+
+		available = {
+			VIN = {
+				is_subject_of = ROOT
+			}
+			670 = {
+				OR = {
+					is_controlled_by = ROOT
+					is_controlled_by = VIN
+				}
+				compliance > 59
+			}
+			741 = {
+				OR = {
+					is_controlled_by = ROOT
+					is_controlled_by = VIN
+				}
+				compliance > 59
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 100
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = CAM
+						is_core_of = LAO
+					}
+				}
+				add_core_of = VIN
+			}
+		}
+	}
+}

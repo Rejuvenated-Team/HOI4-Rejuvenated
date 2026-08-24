@@ -1,0 +1,842 @@
+add_namespace = cotf_chi
+country_event = {
+	id = cotf_chi.1
+	title = "[FROM.GetName] Demands Our Subjugation"
+	desc = cotf_chi.1.d
+	picture = GFX_report_event_chinese_soldiers_01
+	is_triggered_only = yes
+	option = {
+		name = "We are hopeless..."
+		ai_chance = {
+			base = 9
+			modifier = {
+				factor = 0
+				ROOT = {
+					is_in_faction = yes
+				}
+			}
+		}
+		FROM = {
+			puppet = ROOT
+		}
+	}
+	option = {
+		name = "Let them try."
+		ai_chance = {
+			base = 1
+		}
+		FROM = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ROOT
+			}
+		}
+	}
+}
+
+country_event = {
+	id = cotf_chi.0
+	hidden = yes
+	is_triggered_only = no
+	fire_only_once = yes
+	trigger = {
+		tag = CHI
+		date > 1944.10.29
+		has_country_leader = {
+			ruling_only = yes
+			character = CHI_wang_jingwei
+		}
+		NOT = {
+			has_country_flag = wang_jingwei_dead
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		set_country_flag = wang_jingwei_dead
+		country_event = {
+			id = cotf_chi.2
+			days = 1
+			random_days = 90
+		}
+	}
+}
+
+country_event = {
+	id = cotf_chi.2
+	title = "The Death Of Wang Jingwei"
+	desc = cotf_chi.2.d
+	picture = GFX_report_event_generic_military_parade
+	is_triggered_only = yes
+	trigger = {
+		tag = CHI
+		has_country_flag = wang_jingwei_dead
+		has_country_leader = {
+			ruling_only = yes
+			character = CHI_wang_jingwei
+		}
+	}
+	option = {
+		name = "Farewell, guardian of the republic..."
+		retire_character = CHI_wang_jingwei
+		add_country_leader_role = {
+			character = CHI_he_yingqin
+			promote_leader = yes
+			country_leader = {
+				ideology = despotism
+				expire = "1965.1.1.1"
+				traits = {
+					anti_communist
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = cotf_chi.3
+	title = "The Korean Question" #democratic korea
+	desc = cotf_chi.3.d
+	picture = GFX_report_event_chinese_soldiers_01
+	is_triggered_only = yes
+	option = {
+		name = "Korea is free to choose its own path."
+		ai_chance = {
+			base = 80
+		}
+		clr_country_flag = COTF_korean_overlord
+		clr_country_flag = COTF_reorganizing_korea
+		if = {
+			limit = {
+				KOR = { exists = no }
+				any_owned_state = {
+					is_core_of = KOR
+				}
+			}
+			release = KOR
+		}
+		if = {
+			limit = {
+				has_global_flag = cotf_korean_leader_chosen
+				KOR = {
+					has_country_flag = COTF_korea_organized_by_man
+				}
+			}
+			set_global_flag = cotf_korea_reorganized_after_man
+			KOR = {
+				clr_country_flag = COTF_korea_organized_by_man
+			}
+		}
+		set_global_flag = cotf_korean_leader_chosen
+		KOR = {
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				OVERLORD = {
+					set_autonomy = {
+						target = KOR
+						autonomy_state = autonomy_free
+						end_wars = no
+						end_civil_wars = no
+					}
+				}
+			}
+			diplomatic_relation = {
+				country = ROOT
+				relation = military_access
+				active = yes
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.5
+			}
+			promote_character = {
+				character = KOR_kim_gu
+				ideology = conservatism
+			}
+		}
+		give_guarantee = KOR
+	}
+	option = {
+		name = "We should make sure they don't deviate from our sphere."
+		ai_chance = {
+			base = 20
+		}
+		clr_country_flag = COTF_korean_overlord
+		clr_country_flag = COTF_reorganizing_korea
+		if = {
+			limit = {
+				KOR = { exists = no }
+				any_owned_state = {
+					is_core_of = KOR
+				}
+			}
+			release = KOR
+		}
+		if = {
+			limit = {
+				has_global_flag = cotf_korean_leader_chosen
+				KOR = {
+					has_country_flag = COTF_korea_organized_by_man
+				}
+			}
+			set_global_flag = cotf_korea_reorganized_after_man
+			KOR = {
+				clr_country_flag = COTF_korea_organized_by_man
+			}
+		}
+		set_global_flag = cotf_korean_leader_chosen
+		KOR = {
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				OVERLORD = {
+					set_autonomy = {
+						target = KOR
+						autonomy_state = autonomy_free
+						end_wars = no
+						end_civil_wars = no
+					}
+				}
+			}
+		}
+		puppet = KOR
+		KOR = {
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.5
+			}
+			promote_character = {
+				character = KOR_jo_so_ang
+				ideology = socialism
+			}
+		}
+	}
+}
+
+country_event = {
+	id = cotf_chi.4
+	title = "The Korean Question" #communist korea
+	desc = cotf_chi.4.d
+	picture = GFX_report_event_chinese_soldiers_01
+	is_triggered_only = yes
+	option = {
+		name = "Korea is free to choose its own path."
+		ai_chance = {
+			base = 0
+		}
+		clr_country_flag = COTF_korean_overlord
+		clr_country_flag = COTF_reorganizing_korea
+		if = {
+			limit = {
+				KOR = { exists = no }
+				any_owned_state = {
+					is_core_of = KOR
+				}
+			}
+			release = KOR
+		}
+		if = {
+			limit = {
+				has_global_flag = cotf_korean_leader_chosen
+				KOR = {
+					has_country_flag = COTF_korea_organized_by_man
+				}
+			}
+			set_global_flag = cotf_korea_reorganized_after_man
+			KOR = {
+				clr_country_flag = COTF_korea_organized_by_man
+			}
+		}
+		set_global_flag = cotf_korean_leader_chosen
+		KOR = {
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				OVERLORD = {
+					set_autonomy = {
+						target = KOR
+						autonomy_state = autonomy_free
+						end_wars = no
+						end_civil_wars = no
+					}
+				}
+			}
+			diplomatic_relation = {
+				country = ROOT
+				relation = military_access
+				active = yes
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.5
+			}
+			KOR_pak_hon_yong = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+					ideology = stalinism
+					expire = "1952.1.1.1"
+					traits = { JAP_socialist_revolutionary } 
+					}
+				}
+			}
+		}
+		give_guarantee = KOR
+	}
+	option = {
+		name = "They're not ready yet to defend themselves from counter-revolutionaries."
+		ai_chance = {
+			base = 100
+		}
+		clr_country_flag = COTF_korean_overlord
+		clr_country_flag = COTF_reorganizing_korea
+		if = {
+			limit = {
+				KOR = { exists = no }
+				any_owned_state = {
+					is_core_of = KOR
+				}
+			}
+			release = KOR
+		}
+		if = {
+			limit = {
+				has_global_flag = cotf_korean_leader_chosen
+				KOR = {
+					has_country_flag = COTF_korea_organized_by_man
+				}
+			}
+			set_global_flag = cotf_korea_reorganized_after_man
+			KOR = {
+				clr_country_flag = COTF_korea_organized_by_man
+			}
+		}
+		set_global_flag = cotf_korean_leader_chosen
+		KOR = {
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				OVERLORD = {
+					set_autonomy = {
+						target = KOR
+						autonomy_state = autonomy_free
+						end_wars = no
+						end_civil_wars = no
+					}
+				}
+			}
+		}
+		puppet = KOR
+		KOR = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.5
+			}
+			KOR_pak_hon_yong = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+					ideology = stalinism
+					expire = "1952.1.1.1"
+					traits = { JAP_socialist_revolutionary } 
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = cotf_chi.5
+	title = "The Korean Question" #monarchist korea
+	desc = cotf_chi.5.d
+	picture = GFX_report_event_chinese_soldiers_01
+	is_triggered_only = yes
+	option = {
+		name = "Korea is free to choose its own path."
+		ai_chance = {
+			base = 0
+		}
+		clr_country_flag = COTF_korean_overlord
+		clr_country_flag = COTF_reorganizing_korea
+		if = {
+			limit = {
+				KOR = { exists = no }
+				any_owned_state = {
+					is_core_of = KOR
+				}
+			}
+			release = KOR
+		}
+		if = {
+			limit = {
+				has_global_flag = cotf_korean_leader_chosen
+				KOR = {
+					has_country_flag = COTF_korea_organized_by_man
+				}
+			}
+			set_global_flag = cotf_korea_reorganized_after_man
+			KOR = {
+				clr_country_flag = COTF_korea_organized_by_man
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_global_flag = cotf_korean_leader_chosen }
+				OR = {
+					tag = MAN
+					original_tag = MAN
+				}
+			}
+			KOR = {
+				set_country_flag = COTF_korea_organized_by_man
+			}
+		}
+		set_global_flag = cotf_korean_leader_chosen
+		KOR = {
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				OVERLORD = {
+					set_autonomy = {
+						target = KOR
+						autonomy_state = autonomy_free
+						end_wars = no
+						end_civil_wars = no
+					}
+				}
+			}
+			diplomatic_relation = {
+				country = ROOT
+				relation = military_access
+				active = yes
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.5
+			}
+			KOR_yi_kang = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = despotism
+						expire = "1952.1.1.1"
+						traits = { KOR_highness_yi_of_changdeokgung } 
+					}
+				}
+			}
+			set_cosmetic_tag = KOR_JOS
+		}
+		give_guarantee = KOR
+	}
+	option = {
+		name = "We gave them freedom before, and they just ended up conquered."
+		ai_chance = {
+			base = 100
+		}
+		clr_country_flag = COTF_korean_overlord
+		clr_country_flag = COTF_reorganizing_korea
+		if = {
+			limit = {
+				KOR = { exists = no }
+				any_owned_state = {
+					is_core_of = KOR
+				}
+			}
+			release = KOR
+		}
+		if = {
+			limit = {
+				has_global_flag = cotf_korean_leader_chosen
+				KOR = {
+					has_country_flag = COTF_korea_organized_by_man
+				}
+			}
+			set_global_flag = cotf_korea_reorganized_after_man
+			KOR = {
+				clr_country_flag = COTF_korea_organized_by_man
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_global_flag = cotf_korean_leader_chosen }
+				OR = {
+					tag = MAN
+					original_tag = MAN
+				}
+			}
+			KOR = {
+				set_country_flag = COTF_korea_organized_by_man
+			}
+		}
+		set_global_flag = cotf_korean_leader_chosen
+		KOR = {
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				OVERLORD = {
+					set_autonomy = {
+						target = KOR
+						autonomy_state = autonomy_free
+						end_wars = no
+						end_civil_wars = no
+					}
+				}
+			}
+		}
+		puppet = KOR
+		KOR = {
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.5
+			}
+			KOR_yi_kang = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = despotism
+						expire = "1952.1.1.1"
+						traits = { KOR_highness_yi_of_changdeokgung } 
+					}
+				}
+			}
+			set_cosmetic_tag = KOR_JOS
+		}
+	}
+}
+
+country_event = {
+	id = cotf_chi.6
+	title = "The Korean Question" #fascist korea
+	desc = cotf_chi.6.d
+	picture = GFX_report_event_chinese_soldiers_01
+	is_triggered_only = yes
+	#option = {
+	#	name = "Let them be..."
+	#	ai_chance = {
+	#		base = 0
+	#	}
+	#	clr_country_flag = COTF_korean_overlord
+	#	KOR = {
+	#		if = {
+	#			limit = {
+	#				is_subject = yes
+	#			}
+	#			OVERLORD = {
+	#				set_autonomy = {
+	#					target = KOR
+	#					autonomy_state = autonomy_free
+	#					end_wars = no
+	#					end_civil_wars = no
+	#				}
+	#			}
+	#		}
+	#		diplomatic_relation = {
+	#			country = ROOT
+	#			relation = military_access
+	#			active = yes
+	#		}
+	#		set_politics = {
+	#			ruling_party = fascism
+	#			elections_allowed = no
+	#		}
+	#		add_popularity = {
+	#			ideology = fascism
+	#			popularity = 0.5
+	#		}
+			#KOR_yi_kang = {
+			#	add_country_leader_role = {
+			#		promote_leader = yes
+			#		country_leader = {
+			#			ideology = despotism
+			#			expire = "1952.1.1.1"
+			#			traits = { KOR_highness_yi_of_changdeokgung } 
+			#		}
+			#	}
+			#}
+	#	}
+	#	give_guarantee = KOR
+	#}
+	option = {
+		name = "They got freedom before, and they just ended up conquered..."
+		ai_chance = {
+			base = 100
+		}
+		clr_country_flag = COTF_korean_overlord
+		clr_country_flag = COTF_reorganizing_korea
+		if = {
+			limit = {
+				KOR = { exists = no }
+				any_owned_state = {
+					is_core_of = KOR
+				}
+			}
+			release = KOR
+		}
+		if = {
+			limit = {
+				has_global_flag = cotf_korean_leader_chosen
+				KOR = {
+					has_country_flag = COTF_korea_organized_by_man
+				}
+			}
+			set_global_flag = cotf_korea_reorganized_after_man
+			KOR = {
+				clr_country_flag = COTF_korea_organized_by_man
+			}
+		}
+		set_global_flag = cotf_korean_leader_chosen
+		KOR = {
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				OVERLORD = {
+					set_autonomy = {
+						target = KOR
+						autonomy_state = autonomy_free
+						end_wars = no
+						end_civil_wars = no
+					}
+				}
+			}
+		}
+		puppet = KOR
+		KOR = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.5
+			}
+			promote_character = {
+				character = KOR_yeom_dong_jin
+				ideology = fascism_ideology
+			}
+			set_cosmetic_tag = KOR_KMT
+		}
+		
+	}
+}
+
+country_event = {
+	id = cotf_chi.7
+	title = cotf_chi.7.t
+	desc = cotf_chi.7.d
+	picture = GFX_report_event_chinese_soldiers_01
+	is_triggered_only = yes
+	option = {
+		name = "Indochina is free to choose its own path."
+		ai_chance = {
+			base = 50
+		}
+		release = VIN
+		release = CAM
+		release = LAO
+		if = {
+			limit = {
+				VIN = { exists = yes }
+			}
+			give_guarantee = VIN
+			VIN = {
+				diplomatic_relation = {
+					country = ROOT
+					relation = military_access
+					active = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				CAM = { exists = yes }
+			}
+			give_guarantee = CAM
+			CAM = {
+				diplomatic_relation = {
+					country = ROOT
+					relation = military_access
+					active = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				LAO = { exists = yes }
+			}
+			give_guarantee = LAO
+			LAO = {
+				diplomatic_relation = {
+					country = ROOT
+					relation = military_access
+					active = yes
+				}
+			}
+		}
+		custom_effect_tooltip = we_will_guarantee_and_get_military_access
+		hidden_effect = {
+			if = {
+				limit = {
+					has_government = communism
+				}
+				VIN = {
+					if = {
+						limit = { exists = yes }
+						add_popularity = {
+							ideology = communism
+							popularity = 0.5
+						}
+						set_politics = {
+							ruling_party = communism
+							elections_allowed = no
+						}
+					}
+				}
+				CAM = {
+					if = {
+						limit = { exists = yes }
+						add_popularity = {
+							ideology = communism
+							popularity = 0.5
+						}
+						set_politics = {
+							ruling_party = communism
+							elections_allowed = no
+						}
+					}
+				}
+				LAO = {
+					if = {
+						limit = { exists = yes }
+						add_popularity = {
+							ideology = communism
+							popularity = 0.5
+						}
+						set_politics = {
+							ruling_party = communism
+							elections_allowed = no
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "Indochina is not yet ready for self-governance..."
+		trigger = {
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
+		}
+		ai_chance = {
+			base = 50
+		}
+		release_autonomy = {
+			target = VIN
+			autonomy_state = autonomy_puppet
+			freedom_level = 0.5
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = CAM
+					is_core_of = LAO
+				}
+			}
+			add_claim_by = VIN
+			if = {
+				limit = {
+					is_owned_by = ROOT
+				}
+				transfer_state_to = VIN
+			}
+		}
+		VIN = {
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.5
+			}
+			add_country_leader_role = {
+				character = VIN_vu_hong_khanh
+				country_leader = {
+					ideology = socialism
+					expire = "1965.1.1.1"
+					traits = { ideological_crusader PHI_nation_builder }
+					id = -1
+				}
+			}
+			promote_character = {
+				character = VIN_vu_hong_khanh
+				ideology = socialism
+			}
+			set_cosmetic_tag = VIN_KMT
+		}
+	}
+	option = {
+		name = "Indochina is not yet ready for self-governance..."
+		trigger = {
+			tag = MAN
+		}
+		ai_chance = {
+			base = 50
+		}
+		release_autonomy = {
+			target = VIN
+			autonomy_state = autonomy_puppet
+			freedom_level = 0.5
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = CAM
+					is_core_of = LAO
+				}
+			}
+			add_claim_by = VIN
+			if = {
+				limit = {
+					is_owned_by = ROOT
+				}
+				transfer_state_to = VIN
+			}
+		}
+	}
+}

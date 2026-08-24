@@ -24,47 +24,47 @@ characters = {
 		name = KOR_syngman_rhee
 		portraits = {
 			civilian = {
-				large = GFX_portrait_Syngman_Rhee
+				large = GFX_KOR_syngman_rhee
 			}
 		}
 		country_leader = {
 			ideology = conservatism
-			traits = { KOR_unam }
+			traits = { KOR_unam anti_communist }
 			expire = "1965.1.1.1"
 			id = -1
 		}
 	}
 
 	# Lyuh Woon-hyung
-	KOR_lyuh_woon_hyung = {
-		name = KOR_lyuh_woon_hyung
-		portraits = {
-			civilian = {
-				large = GFX_portrait_Yi_Kang
-			}
-		}
-		country_leader = {
-			ideology = centrism
-			expire = "1965.1.1.1"
-			traits = { KOR_mongyang }
-			id = -1
-		}
-	}
+	#KOR_lyuh_woon_hyung = {
+	#	name = KOR_lyuh_woon_hyung
+	#	portraits = {
+	#		civilian = {
+	#			large = GFX_portrait_Yi_Kang
+	#		}
+	#	}
+	#	country_leader = {
+	#		ideology = centrism
+	#		expire = "1965.1.1.1"
+	#		traits = { KOR_mongyang }
+	#		id = -1
+	#	}
+	#}
 
 	# Yi Kang
 	KOR_yi_kang = {
 		name = KOR_yi_kang
 		portraits = {
 			civilian = {
-				large = GFX_portrait_Yi_Kang
+				large = GFX_KOR_yi_kang
 			}
 		}
-		country_leader = {
-			ideology = despotism
-			expire = "1965.1.1.1"
-			traits = {  }
-			id = -1
-		}
+	#	country_leader = {
+	#		ideology = despotism
+	#		expire = "1965.1.1.1"
+	#		traits = {  }
+	#		id = -1
+	#	}
 	}
 
 	# Kim Il-sung
@@ -120,6 +120,66 @@ characters = {
 			ideology = fascism_ideology
 			traits = { KOR_highness_yi_of_changdeokgung }
 			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+	KOR_kim_gu = {
+		name = KOR_kim_gu
+		portraits = {
+			civilian = {
+				large = GFX_KOR_kim_gu
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1965.1.1.1"
+			traits = { popular_figurehead anti_communist }
+			id = -1
+		}
+	}
+
+	KOR_ji_cheong_cheon = {
+		name = KOR_ji_cheong_cheon
+		portraits = {
+			civilian = {
+				large = GFX_KOR_ji_cheong_cheon
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1965.1.1.1"
+			traits = { anti_communist }
+			id = -1
+		}
+	}
+
+	KOR_jo_so_ang = {
+		name = KOR_jo_so_ang
+		portraits = {
+			civilian = {
+				large = GFX_KOR_jo_so_ang
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			expire = "1965.1.1.1"
+			traits = { ideological_crusader PHI_nation_builder }
+			id = -1
+		}
+	}
+
+	KOR_yeom_dong_jin = {
+		name = KOR_yeom_dong_jin
+		portraits = {
+			civilian = {
+				large = GFX_KOR_yeom_dong_jin
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1965.1.1.1"
+			traits = { BRA_minister_of_defense }
 			id = -1
 		}
 	}

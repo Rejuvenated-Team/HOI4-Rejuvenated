@@ -1,0 +1,119 @@
+SHX_suiyuan_campaign_category = {
+
+	SHX_suiyuan_campaign_mission = {
+		icon = generic_military
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = 60
+		fire_only_once = yes
+
+		activation = {
+			always = no
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			custom_effect_tooltip = SHX_suiyuan_campaign_transfer_tt
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_controlled_by = MEN
+						is_owned_by = SHX
+					}
+					transfer_state_to = MEN
+				}
+				every_state = {
+					limit = {
+						is_controlled_by = SHX
+						is_owned_by = MEN
+					}
+					transfer_state_to = SHX
+				}
+				every_faction_member = {
+					white_peace = {
+						tag = MEN
+					}
+				}
+				if = {
+					limit = {
+						is_subject = yes
+					}
+					OVERLORD = {
+						white_peace = {
+							tag = MEN
+						}
+					}
+				}
+				MEN = {
+					every_faction_member = {
+						white_peace = {
+							tag = SHX
+						}
+					}
+					if = {
+						limit = {
+							is_subject = yes
+						}
+						OVERLORD = {
+							white_peace = {
+								tag = SHX
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						SHX = {
+							is_ai = yes
+						}
+						MEN = {
+							is_ai = yes
+						}
+						MEN = {
+							owns_state = 1043
+						}
+						SHX = {
+							controls_state = 621
+						}
+					}
+					1043 = {
+						transfer_state_to = SHX
+					}
+				}
+			}
+			white_peace = {
+				tag = MEN
+			}
+		}
+	}
+
+	MEN_suiyuan_campaign_mission = {
+		icon = generic_military
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = 60
+		fire_only_once = yes
+
+		activation = {
+			always = no
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			custom_effect_tooltip = SHX_suiyuan_campaign_transfer_tt
+			effect_tooltip = {
+				white_peace = {
+					tag = SHX
+				}
+			}
+		}
+	}
+}

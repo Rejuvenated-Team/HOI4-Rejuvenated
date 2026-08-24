@@ -1,0 +1,5153 @@
+focus_tree = {
+	id = guangxi_focus_cotf
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = GXC
+		}
+	}
+
+	shared_focus = CHI_sea_invite_foreign_investors
+	shared_focus = GXC_the_japanese_visit
+	shared_focus = GXC_the_wealth_beneath_the_mountains
+	shared_focus = GDC_revisit_the_three_year_plan
+
+	focus = {
+		id = GXC_kneel_before_chiang
+		icon = GFX_focus_CZE_german_puppet
+		x = 0
+		y = 3
+
+		#prerequisite = { focus = GXC_declare_opposition }
+		relative_position_id = GXC_declare_opposition 
+		mutually_exclusive = { focus = GXC_the_southern_twin_dragons }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = -9.5
+				GDC = {
+					exists = yes
+					is_subject = no
+				}
+			}
+		}
+
+		available = {
+			has_completed_focus = GXC_declare_opposition
+			NOT = {
+				owns_state = 592
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GXC_kneel_before_chiang
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					CHI = {
+						exists = yes
+						is_in_faction = yes
+					}
+					NOT = {
+						is_in_faction_with = CHI
+						has_war_with = CHI
+					}
+				}
+				if = {
+					limit = {
+						is_in_faction = yes
+					}
+					leave_faction = yes
+				}
+				CHI = {
+					country_event = {
+						id = generic.2
+						hours = 6
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = SHX_CHI_faction
+			}
+			effect_tooltip = {
+				custom_effect_tooltip = generic_skip_one_line_tt
+				set_capital = {
+					state = 599
+					remember_old_capital = no
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						owns_state = 599
+						controls_state = 599
+					}
+					set_capital = {
+						state = 599
+						remember_old_capital = no
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_the_southern_twin_dragons
+		icon = GFX_focus_JAP_ally_the_dragon_king
+		x = 14
+		y = 3
+
+		#prerequisite = { focus = GXC_declare_opposition }
+		relative_position_id = GXC_declare_opposition 
+		mutually_exclusive = { focus = GXC_kneel_before_chiang }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_completed_focus = GXC_declare_opposition
+			owns_state = 592
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			army_experience = 30
+			add_doctrine_cost_reduction = {
+				name = GXC_the_southern_twin_dragons
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			effect_tooltip = {
+				custom_effect_tooltip = generic_skip_one_line_tt
+				set_capital = {
+					state = 592
+					remember_old_capital = no
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						owns_state = 592
+						controls_state = 592
+					}
+					set_capital = {
+						state = 592
+						remember_old_capital = no
+					}
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			set_variable = { GXC_the_liangguang_crisis_war_support_factor = -0.5 }
+			add_dynamic_modifier = {
+				modifier = GXC_the_liangguang_crisis
+			}
+			if = {
+				limit = {
+					has_idea = GXC_opium_dependent_economy
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				swap_ideas = {
+					remove_idea = GXC_opium_dependent_economy
+					add_idea = GXC_opium_dependent_economy_small
+				} 
+			}
+			if = {
+				limit = {
+					has_idea = GXC_opium_dependent_economy_local
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				swap_ideas = {
+					remove_idea = GXC_opium_dependent_economy_local
+					add_idea = GXC_opium_dependent_economy_small
+				} 
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.3
+			}
+			set_party_name = {
+				ideology = democratic
+				long_name = CHI_left_kmt_party_long
+				name = CHI_left_kmt_party
+			}
+			set_party_name = {
+				ideology = communism
+				long_name = GXC_PPP_long
+				name = GXC_PPP
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = volunteer_only
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = GXC_chen_jitang_advisor
+		}
+	}
+
+	focus = {
+		id = GXC_negotiations_in_guangdong
+		icon = GFX_focus_CHI_tongzi_jun
+		x = 4
+		y = 1
+
+		prerequisite = {
+			focus = GXC_kneel_before_chiang
+			focus = GXC_the_southern_twin_dragons
+		}
+		relative_position_id = GXC_kneel_before_chiang 
+		#mutually_exclusive = { focus = GXC_the_southern_twin_dragons }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			effect_tooltip = {
+				custom_effect_tooltip = GXC_modify_the_triumvirate_dynamic_modifier_tt
+				add_to_variable = {
+					GXC_the_triumvirate_political_power_factor = 0.1
+					tooltip = political_power_factor_tt
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_dynamic_modifier = GXC_the_triumvirate
+					}
+					add_to_variable = {
+						GXC_the_triumvirate_political_power_factor = 0.1
+					}
+					force_update_dynamic_modifier = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_offsite_building = { type = industrial_complex level = 1 }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_enemies_of_enemies
+		icon = GFX_focus_jap_cast_the_die
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_negotiations_in_guangdong
+		}
+		relative_position_id = GXC_negotiations_in_guangdong 
+		#mutually_exclusive = { focus = GXC_the_southern_twin_dragons }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			effect_tooltip = {
+				custom_effect_tooltip = GXC_modify_the_triumvirate_dynamic_modifier_tt
+				add_to_variable = {
+					GXC_the_triumvirate_political_power_factor = 0.05
+					tooltip = political_power_factor_tt
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_dynamic_modifier = GXC_the_triumvirate
+					}
+					add_to_variable = {
+						GXC_the_triumvirate_political_power_factor = 0.05
+					}
+					force_update_dynamic_modifier = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				name = GXC_enemies_of_enemies
+				bonus = 0.75
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = GXC_enemies_of_enemies
+				bonus = 0.75
+				uses = 1
+				category = artillery
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_director_li_zongren
+		icon = GFX_GXC_kmt_guard
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_enemies_of_enemies
+		}
+		relative_position_id = GXC_enemies_of_enemies
+		mutually_exclusive = { focus = GXC_deputy_bai_chongxi focus = GXC_chairman_huang_xuchu }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			democratic < 0.05
+			NOT = {
+				has_completed_focus = GXC_huang_xuchu_and_a_gang_of_four
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_country_leader_trait = camarilla_leader
+		}
+	}
+
+	focus = {
+		id = GXC_the_three_yu
+		icon = GFX_focus_CHI_enforce_virtues
+		x = 2
+		y = 1
+
+		prerequisite = {
+			focus = GXC_kneel_before_chiang
+			focus = GXC_the_southern_twin_dragons
+		}
+		relative_position_id = GXC_kneel_before_chiang 
+		#mutually_exclusive = { focus = GXC_the_southern_twin_dragons }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_completed_focus = GXC_a_day_without_blood
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_training_time_factor = -0.1
+				tooltip = training_time_factor_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_army_leader_cost_factor = -0.15
+				tooltip = army_leader_cost_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			effect_tooltip = {
+				custom_effect_tooltip = GXC_modify_the_triumvirate_dynamic_modifier_tt
+				add_to_variable = {
+					GXC_the_triumvirate_command_power_gain_mult = 0.1
+					tooltip = command_power_gain_mult_tt
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_dynamic_modifier = GXC_the_triumvirate
+					}
+					add_to_variable = {
+						GXC_the_triumvirate_command_power_gain_mult = 0.1
+					}
+					force_update_dynamic_modifier = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.1
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_the_three_in_one_system
+		icon = GFX_focus_CHI_a_chapter_in_every_village
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_the_three_yu
+		}
+		relative_position_id = GXC_the_three_yu 
+		#mutually_exclusive = { focus = GXC_the_southern_twin_dragons }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war_support > 0.7
+			NOT = {
+				has_completed_focus = GXC_a_day_without_blood
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_war_support = 0.1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = tot_economic_mobilisation
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.1
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_deputy_bai_chongxi
+		icon = GFX_focus_CHI_military_affairs_commission
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_the_three_in_one_system
+		}
+		relative_position_id = GXC_the_three_in_one_system
+		mutually_exclusive = { focus = GXC_director_li_zongren focus = GXC_chairman_huang_xuchu }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		available = {
+			democratic < 0.05
+			NOT = {
+				has_completed_focus = GXC_huang_xuchu_and_a_gang_of_four
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_country_leader_role = {
+				character = GXC_bai_chongxi
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism
+					traits = { prince_of_terror }
+					expire = "1965.1.1.1"
+					id = -1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_the_organization_and_training_committee
+		icon = GFX_focus_generic_secret_service_agency
+		x = 6
+		y = 1
+
+		prerequisite = {
+			focus = GXC_kneel_before_chiang
+			focus = GXC_the_southern_twin_dragons
+		}
+		relative_position_id = GXC_kneel_before_chiang 
+		#mutually_exclusive = { focus = GXC_the_southern_twin_dragons }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_ideas = GXC_organization_and_training_committee
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GXC_wang_gongdu
+		}
+	}
+
+	focus = {
+		id = GXC_invest_into_the_xiang_gui_railway
+		icon = GFX_focus_generic_supply_line
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_the_organization_and_training_committee
+		}
+		relative_position_id = GXC_the_organization_and_training_committee 
+		#mutually_exclusive = { focus = GXC_the_southern_twin_dragons }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_stability = 0.1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_supply_consumption_factor = -0.1
+				tooltip = supply_consumption_factor_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_supply_node_range = 0.15
+				tooltip = supply_node_range_tt
+			}
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = generic_skip_one_line_tt
+			build_railway = {
+				path = {
+					10404
+					12407
+					4125
+					7159
+					12350
+					13143
+					7097
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_chairman_huang_xuchu
+		icon = GFX_focus_CHI_lay_the_foundation_for_a_united_china
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_invest_into_the_xiang_gui_railway
+		}
+		relative_position_id = GXC_invest_into_the_xiang_gui_railway
+		mutually_exclusive = { focus = GXC_director_li_zongren focus = GXC_deputy_bai_chongxi }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		available = {
+			NOT = {
+				has_completed_focus = GXC_huang_xuchu_and_a_gang_of_four
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_country_leader_role = {
+				character = GXC_huang_xuchu
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism
+					traits = { silent_workhorse }
+					expire = "1965.1.1.1"
+					id = -1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_organize_the_student_armies
+		icon = GFX_focus_generic_military_academy
+		x = 0
+		y = 1
+
+		prerequisite = { focus = GXC_kneel_before_chiang focus = GXC_the_southern_twin_dragons }
+		relative_position_id = GXC_kneel_before_chiang 
+		#mutually_exclusive = { focus = GXC_the_southern_twin_dragons }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = GXC_kneel_before_chiang
+				has_completed_focus = GXC_a_triumvirate
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_conscription_factor = 0.1
+				tooltip = conscription_factor_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_resistance_target_on_our_occupied_states = 0.1
+				tooltip = resistance_target_on_our_occupied_states_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_compliance_growth_on_our_occupied_states = -0.2
+				tooltip = compliance_growth_on_our_occupied_states_tt
+			}
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_recruit_female_volunteers
+		icon = GFX_focus_JAP_women_in_industry
+		x = -1
+		y = 1
+
+		prerequisite = { focus = GXC_organize_the_student_armies }
+		relative_position_id = GXC_organize_the_student_armies 
+		#mutually_exclusive = { focus = GXC_the_southern_twin_dragons }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_conscription = 0.01
+				tooltip = conscription_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_weekly_casualties_war_support = 0.003
+				tooltip = weekly_casualties_war_support_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_supply_node_range = 0.05
+				tooltip = supply_node_range_tt
+			}
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	focus = {
+		id = GXC_a_triumvirate
+		icon = GFX_focus_generic_advisors
+		x = -6
+		y = 1
+
+		prerequisite = { focus = GXC_the_southern_twin_dragons }
+		relative_position_id = GXC_the_southern_twin_dragons
+		mutually_exclusive = { focus = GXC_huang_xuchu_and_a_gang_of_four }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			custom_effect_tooltip = GXC_modify_the_liangguang_crisis_dynamic_modifier_tt
+			add_to_variable = {
+				GXC_the_liangguang_crisis_war_support_factor = 0.15
+				tooltip = war_support_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			effect_tooltip = {
+				custom_effect_tooltip = GXC_modify_the_triumvirate_dynamic_modifier_tt
+				add_to_variable = {
+					GXC_the_triumvirate_democratic_drift = -0.1
+					tooltip = democratic_drift_tt
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_dynamic_modifier = GXC_the_triumvirate
+					}
+					add_to_variable = {
+						GXC_the_triumvirate_democratic_drift = -0.1
+					}
+					force_update_dynamic_modifier = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_huang_xuchu_and_a_gang_of_four
+		icon = GFX_focus_SIA_the_midnight_meeting
+		x = 0
+		y = 1
+
+		prerequisite = { focus = GXC_the_southern_twin_dragons }
+		relative_position_id = GXC_the_southern_twin_dragons
+		mutually_exclusive = { focus = GXC_a_triumvirate }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			hidden_effect = {
+				add_country_leader_role = {
+					character = GXC_li_jishen
+					promote_leader = yes
+					country_leader = {
+						ideology = socialism
+						traits = {
+							tenacious_negotiator
+							democratic_reformer
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_integrate_the_banks_of_guangdong
+		icon = GFX_focus_RAJ_war_taxes
+		x = 0
+		y = 1
+
+		prerequisite = { focus = GXC_a_triumvirate }
+		relative_position_id = GXC_a_triumvirate 
+		#mutually_exclusive = { focus = GXC_paralize_the_banks }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			custom_effect_tooltip = GXC_modify_the_liangguang_crisis_dynamic_modifier_tt
+			add_to_variable = {
+				GXC_the_liangguang_crisis_war_support_factor = 0.05
+				tooltip = war_support_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_consumer_goods_factor = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+#	focus = {
+#		id = GXC_paralize_the_banks
+#		icon = GFX_focus_eng_concessions_to_the_trade_unions
+#		x = -4
+#		y = 1
+#
+#		prerequisite = { focus = GXC_the_southern_twin_dragons }
+#		relative_position_id = GXC_the_southern_twin_dragons
+#		mutually_exclusive = { focus = GXC_integrate_the_banks_of_guangdong }
+#
+#		cost = 1
+#
+#		ai_will_do = {
+#			factor = 10
+#		}
+#
+#		available = {
+#			
+#		}
+#
+#		bypass = {
+#			
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+#		completion_reward = {
+#			add_political_power = 25
+#			custom_effect_tooltip = GXC_modify_the_liangguang_crisis_dynamic_modifier_tt
+#			add_to_variable = {
+#				GXC_the_liangguang_crisis_war_support_factor = 0.05
+#				tooltip = war_support_factor_tt
+#			}
+#			add_to_variable = {
+#				GXC_the_liangguang_crisis_democratic_drift = 0.05
+#				tooltip = democratic_drift_tt
+#			}
+#
+#			force_update_dynamic_modifier = yes
+#		}
+#	}
+
+	focus = {
+		id = GXC_rally_the_federalists
+		icon = GFX_KMT_ZGD_negotiations
+		x = -2
+		y = 1
+
+		prerequisite = { focus = GXC_huang_xuchu_and_a_gang_of_four }
+		relative_position_id = GXC_huang_xuchu_and_a_gang_of_four
+		#mutually_exclusive = { focus = GXC_paralize_the_banks }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_political_power = 100
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = GXC_modify_the_liangguang_crisis_dynamic_modifier_tt
+			add_to_variable = {
+				GXC_the_liangguang_crisis_war_support_factor = 0.05
+				tooltip = war_support_factor_tt
+			}
+			add_to_variable = {
+				GXC_the_liangguang_crisis_democratic_drift = 0.15
+				tooltip = democratic_drift_tt
+			}
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	focus = {
+		id = GXC_welcome_the_fujian_exiles
+		icon = GFX_focus_CHI_glorify_deng_yanda
+		x = 2
+		y = 1
+
+		prerequisite = { focus = GXC_huang_xuchu_and_a_gang_of_four }
+		relative_position_id = GXC_huang_xuchu_and_a_gang_of_four
+		#mutually_exclusive = { focus = GXC_paralize_the_banks }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_political_power = 50
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					CHI = {
+						NOT = {
+							has_completed_focus = CHI_revive_the_chinese_action_committee
+						}
+					}
+				}
+				CHI = {
+					CHI_jiang_guangnai = {
+						set_nationality = GXC
+					}
+					CHI_cai_tingkai = {
+						set_nationality = GXC
+					}
+				}
+				add_corps_commander_role = {
+					character = CHI_jiang_guangnai
+					skill = 3
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 3
+					logistics_skill = 3
+					legacy_id = -1
+					traits = { infantry_leader urban_assault_specialist war_hero }
+				}
+				add_corps_commander_role = {
+					character = CHI_cai_tingkai
+					skill = 3
+					attack_skill = 2
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 2
+					legacy_id = -1
+					traits = { brave urban_assault_specialist war_hero }
+				}
+				#add_corps_commander_role = {
+				#	character = CHI_chen_mingshu
+				#	skill = 3
+				#	attack_skill = 3
+				#	defense_skill = 3
+				#	planning_skill = 2
+				#	logistics_skill = 2
+				#	legacy_id = -1
+				#}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = GXC_modify_the_liangguang_crisis_dynamic_modifier_tt
+			add_to_variable = {
+				GXC_the_liangguang_crisis_war_support_factor = 0.15
+				tooltip = war_support_factor_tt
+			}
+			add_to_variable = {
+				GXC_the_liangguang_crisis_democratic_drift = 0.1
+				tooltip = democratic_drift_tt
+			}
+			force_update_dynamic_modifier = yes
+			
+		}
+	}
+
+	focus = {
+		id = GXC_denounce_the_baojia_system
+		icon = GFX_focus_generic_university_3
+		x = 0
+		y = 1
+
+		prerequisite = { focus = GXC_huang_xuchu_and_a_gang_of_four }
+		relative_position_id = GXC_huang_xuchu_and_a_gang_of_four
+		#mutually_exclusive = { focus = GXC_paralize_the_banks }
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_completed_focus = GXC_the_three_yu
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_research_speed_factor = 0.05
+				tooltip = research_speed_factor_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_production_speed_industrial_complex_factor = 0.1
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_conscription_factor = -0.1
+				tooltip = conscription_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = GXC_modify_the_liangguang_crisis_dynamic_modifier_tt
+			add_to_variable = {
+				GXC_the_liangguang_crisis_war_support_factor = 0.1
+				tooltip = war_support_factor_tt
+			}
+			add_to_variable = {
+				GXC_the_liangguang_crisis_democratic_drift = 0.1
+				tooltip = democratic_drift_tt
+			}
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	focus = {
+		id = GXC_the_guangzhou_incident
+		icon = GFX_focus_SOV_military_purge
+		x = 0
+		y = 1
+
+		prerequisite = { focus = GXC_integrate_the_banks_of_guangdong }
+		relative_position_id = GXC_integrate_the_banks_of_guangdong
+		#mutually_exclusive = { focus = GXC_paralize_the_banks }
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			democratic < 0.1
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_stability = 0.1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			effect_tooltip = {
+				remove_dynamic_modifier = {
+					modifier = GXC_the_liangguang_crisis
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = {
+				localization_key = remove_character_as_tt
+				CHARACTER = GXC_chen_jitang
+				ROLE = political_advisor
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.2
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			country_event = { id = cotf_gxc.10 }
+		}
+	}
+
+	focus = {
+		id = GXC_a_day_without_blood
+		icon = GFX_focus_JAP_gather_royal_pacifists_support
+		x = 0
+		y = 1
+
+		prerequisite = { focus = GXC_welcome_the_fujian_exiles }
+		prerequisite = { focus = GXC_rally_the_federalists }
+		prerequisite = { focus = GXC_denounce_the_baojia_system }
+		relative_position_id = GXC_denounce_the_baojia_system
+		#mutually_exclusive = { focus = GXC_paralize_the_banks }
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			democratic > 0.5
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			custom_effect_tooltip = GXC_chen_jitang_leader
+			hidden_effect = {
+			#	promote_character = {
+			#		character = GXC_chen_jitang
+			#		ideology = despotism
+			#	}
+				GXC_chen_jitang = {
+					remove_country_leader_trait = heavenly_king_of_the_south
+					add_country_leader_trait = heavenly_king_of_the_south_small
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			effect_tooltip = {
+				remove_dynamic_modifier = {
+					modifier = GXC_the_liangguang_crisis
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				#hidden_effect = {
+				#	remove_dynamic_modifier = {
+				#	modifier = GXC_baojia_militarism
+				#	}
+				#	add_dynamic_modifier = {
+				#		modifier = GXC_the_pearl_river_valley_revolution
+				#	}
+				#}
+				if = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = GXC_baojia_militarism
+						}
+					}
+					custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+				}
+				else_if = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = GXC_the_pearl_river_valley_revolution
+						}
+					}
+					custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+				}
+				add_to_variable = {
+					GXC_baojia_militarism_minimum_training_level = 0.05
+					tooltip = minimum_training_level_tt
+				}
+				add_to_variable = {
+					GXC_baojia_militarism_consumer_goods_factor = -0.1
+					tooltip = consumer_goods_factor_tt
+				}
+				add_to_variable = {
+					GXC_baojia_militarism_war_support_factor = -0.15
+					tooltip = war_support_factor_tt
+				}
+				if = {
+					limit = {
+						has_completed_focus = GXC_the_three_yu
+					}
+					#add_to_variable = {
+					#	GXC_baojia_militarism_training_time_factor = 0.05
+					#	tooltip = training_time_factor_tt
+					#}
+					add_to_variable = {
+						GXC_baojia_militarism_army_leader_cost_factor = 0.15
+						tooltip = army_leader_cost_factor_tt
+					}
+				}
+				force_update_dynamic_modifier = yes
+				custom_effect_tooltip = generic_skip_one_line_tt
+				remove_dynamic_modifier = {
+					modifier = GXC_the_triumvirate
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				GXC_bai_chongxi = {
+					set_nationality = CHI
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = {
+				localization_key = remove_character_as_tt
+				CHARACTER = GXC_bai_chongxi
+				ROLE = political_advisor
+			}
+			custom_effect_tooltip = {
+				localization_key = remove_character_as_tt
+				CHARACTER = GXC_wang_gongdu
+				ROLE = political_advisor
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			country_event = { id = cotf_gxc.11 }
+		}
+	}
+
+	focus = {
+		id = GXC_execute_wang_gongdu
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_deputy_bai_chongxi
+			focus = GXC_director_li_zongren
+			focus = GXC_chairman_huang_xuchu
+		}
+		relative_position_id = GXC_the_guangzhou_incident
+		#mutually_exclusive = { focus = GXC_paralize_the_banks }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_dynamic_modifier = GXC_the_liangguang_crisis
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_stability = 0.1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.2
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = {
+				localization_key = remove_character_as_tt
+				CHARACTER = GXC_wang_gongdu
+				ROLE = political_advisor
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_rally_the_KMT_RCA
+		icon = GFX_focus_CHI_strengthening_our_resolve
+		x = -8
+		y = 1
+
+		prerequisite = {
+			focus = GXC_deputy_bai_chongxi
+			focus = GXC_director_li_zongren
+		}
+		prerequisite = { focus = GXC_organize_the_student_armies }
+		relative_position_id = GXC_the_guangzhou_incident
+		mutually_exclusive = { focus = GXC_execute_wang_gongdu }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			NOT = {
+				has_dynamic_modifier = GXC_the_liangguang_crisis
+			}
+			OR = {
+				has_country_leader  = {
+					ruling_only  = yes 
+					character  = GXC_li_zongren
+				}
+				has_country_leader  = {
+					ruling_only  = yes 
+					character  = GXC_bai_chongxi
+				}
+			}
+			fascism > 0.4
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_war_support = 0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_country_leader = {
+						ruling_only = yes
+						character = GXC_bai_chongxi
+					}
+				}
+				add_country_leader_role = {
+					character = GXC_bai_chongxi
+					promote_leader = yes
+					country_leader = {
+						ideology = fascism_ideology
+						traits = { prince_of_terror }
+						expire = "1965.1.1.1"
+						id = -1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_leader = {
+						ruling_only = yes
+						character = GXC_li_zongren
+					}
+				}
+				add_country_leader_role = {
+					character = GXC_li_zongren
+					promote_leader = yes
+					country_leader = {
+						ideology = fascism_ideology
+						traits = { camarilla_leader }
+						expire = "1965.1.1.1"
+						id = -1
+					}
+				}
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+				last_election = "1936.01.01"
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_denounce_the_central_government
+		icon = GFX_focus_prc_remove_chiang_kai_shek
+		x = 4
+		y = 1
+
+		prerequisite = {
+			focus = GXC_execute_wang_gongdu
+			focus = GXC_rally_the_KMT_RCA
+			focus = GXC_director_chen_jitang
+		}
+		relative_position_id = GXC_rally_the_KMT_RCA
+		#mutually_exclusive = { focus = GXC_paralize_the_banks }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				CHI = { is_subject = no }
+			}
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			if = {
+				limit = {
+					YUN = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				YUN = {
+					country_event = { id = cotf_shx.6 }
+				}
+			}
+			if = {
+				limit = {
+					GDC = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				GDC = {
+					country_event = { id = cotf_shx.6 }
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 595
+					}
+				}
+				add_state_core = 595
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 600
+					}
+				}
+				add_state_core = 600
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 602
+					}
+				}
+				add_state_core = 602
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 750
+					}
+				}
+				add_state_core = 750
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 603
+					}
+				}
+				add_state_core = 603
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 748
+					}
+				}
+				add_state_core = 748
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 325
+					}
+				}
+				add_state_core = 325
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 747
+					}
+				}
+				add_state_core = 747
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 1033
+					}
+				}
+				add_state_core = 1033
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 592
+					}
+				}
+				add_state_core = 592
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 593
+					}
+				}
+				add_state_core = 593
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 591
+					}
+				}
+				add_state_core = 591
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = GXC_huang_xuchu_and_a_gang_of_four
+					}
+				}
+				set_cosmetic_tag = GXC_BAO
+			}
+			else = {
+				set_cosmetic_tag = GXC_LNG
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_march_into_nanjing
+		icon = GFX_focus_CHI_tour_the_south
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_denounce_the_central_government
+		}
+		relative_position_id = GXC_denounce_the_central_government
+		#mutually_exclusive = { focus = GXC_paralize_the_banks }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_literally_china = yes
+					is_subject = no
+				}
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+			add_timed_idea = {
+				idea = MAN_southern_expedition
+				days = 550
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_the_strengthened_republic
+		icon = GFX_chi_one_china_policy_KMT
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_march_into_nanjing
+		}
+		relative_position_id = GXC_march_into_nanjing
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+			OR = {
+				1035 = {
+					controller = {
+						surrender_progress > 0.8
+						NOT = {
+							original_tag = ROOT
+						}
+					}
+				}
+				608 = {
+					controller = {
+						surrender_progress > 0.8
+						NOT = {
+							original_tag = ROOT
+						}
+					}
+				}
+				AND = {
+					1035 = {
+						is_controlled_by = ROOT
+					}
+					608 = {
+						is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			remove_ideas = CHI_warlord_state_idea
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_state = {
+				limit = { is_core_of = CHI }
+				add_core_of = ROOT
+			}
+			every_state = {
+				limit = { is_claimed_by = CHI }
+				add_claim_by = ROOT
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = GXC_huang_xuchu_and_a_gang_of_four
+					}
+				}
+				set_cosmetic_tag = GXC_CHI_TMV
+			}
+			else = {
+				set_cosmetic_tag = GXC_CHI_CJ
+			}
+			#custom_effect_tooltip = generic_skip_one_line_tt
+			#set_capital = {
+			#	state = 608
+			#	remember_old_capital = no
+			#}
+			#hidden_effect = {
+			#	set_province_name = { id = 9843 name = PRC_beijing_capital_name }
+			#	608 = {
+			#		set_state_name = PRC_beijing_capital_name
+			#	}
+			#}
+		}
+	}
+
+	focus = {
+		id = GXC_second_northeast_flag_replacement
+		icon = GFX_focus_generic_attack_manchukuo
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_the_strengthened_republic
+		}
+		relative_position_id = GXC_the_strengthened_republic
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			MEN = {
+				exists = no
+			}
+			MAN = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = MAN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MEN
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_erradicate_communism
+		icon = GFX_focus_GER_end_european_communism
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_second_northeast_flag_replacement
+		}
+		
+		relative_position_id = GXC_second_northeast_flag_replacement
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			every_other_country = {
+				# TODO_JNS Have a thunk about interactions
+				limit = {
+					has_government = communism
+					NOT = {
+						tag = PRC
+						is_in_faction_with = ROOT
+						is_guaranteed_by = ROOT
+						has_non_aggression_pact_with = ROOT
+						ROOT = {
+							has_wargoal_against = PREV
+						}
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_director_chen_jitang
+		icon = GFX_focus_generic_military_dictatorship
+		x = -3
+		y = 1
+
+		prerequisite = {
+			focus = GXC_a_day_without_blood
+		}
+		relative_position_id = GXC_a_day_without_blood
+		mutually_exclusive = { focus = GXC_chairman_li_jishen }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.3
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_chairman_li_jishen
+		icon = GFX_focus_AFG_parliamentary_democracy
+		x = 3
+		y = 1
+
+		prerequisite = {
+			focus = GXC_a_day_without_blood
+		}
+		relative_position_id = GXC_a_day_without_blood
+		mutually_exclusive = { focus = GXC_director_chen_jitang }
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_country_leader_role = {
+				character = GXC_li_jishen
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism
+					expire = "1965.1.1.1"
+					traits = {
+						tenacious_negotiator
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_tax_foreign_goods
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = GXC_director_chen_jitang
+		}
+		relative_position_id = GXC_director_chen_jitang
+		#mutually_exclusive = { focus = GXC_chairman_li_jishen }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_stability = -0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_global_building_slots_factor = 0.15
+				tooltip = global_building_slots_factor_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_local_resources_factor = 0.05
+				tooltip = local_resources_factor_tt
+			}
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	focus = {
+		id = GXC_expand_the_ren_ai_shantang
+		icon = GFX_generic_taoism
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = GXC_director_chen_jitang
+		}
+		relative_position_id = GXC_director_chen_jitang
+		#mutually_exclusive = { focus = GXC_chairman_li_jishen }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_stability = 0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				name = GXC_expand_the_ren_ai_shantang
+				bonus = 1
+				uses = 1
+				category = hospital_tech
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_political_power_gain = 0.1
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_weekly_casualties_war_support = 0.003
+				tooltip = weekly_casualties_war_support_tt
+			}
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	focus = {
+		id = GXC_victory_for_the_KMT_RC
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		x = -2
+		y = 1
+
+		prerequisite = {
+			focus = GXC_chairman_li_jishen
+		}
+		relative_position_id = GXC_chairman_li_jishen
+		mutually_exclusive = {
+			focus = GXC_victory_for_the_PPP
+			focus = GXC_victory_for_the_ZGD
+		}
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.5
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			effect_tooltip = {
+				set_party_name = {
+					ideology = democratic
+					long_name = CHI_left_kmt_party_long
+					name = CHI_left_kmt_party
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_victory_for_the_PPP
+		icon = GFX_china_ppp_fujian_deal
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_chairman_li_jishen
+		}
+		relative_position_id = GXC_chairman_li_jishen
+		mutually_exclusive = {
+			focus = GXC_victory_for_the_KMT_RC
+			focus = GXC_victory_for_the_ZGD
+		}
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			set_party_name = {
+				ideology = democratic
+				long_name = GXC_PPP_long
+				name = GXC_PPP
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_victory_for_the_ZGD
+		icon = GFX_china_federalist_deal
+		x = 2
+		y = 1
+
+		prerequisite = {
+			focus = GXC_chairman_li_jishen
+		}
+		relative_position_id = GXC_chairman_li_jishen
+		mutually_exclusive = {
+			focus = GXC_victory_for_the_PPP
+			focus = GXC_victory_for_the_KMT_RC
+		}
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			set_party_name = {
+				ideology = democratic
+				long_name = GXC_ZGD_long
+				name = GXC_ZGD
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_soong_ching_lings_premiership
+		icon = GFX_China_LKMT
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = GXC_victory_for_the_KMT_RC
+			#focus = GXC_victory_for_the_PPP
+			#focus = GXC_victory_for_the_ZGD
+		}
+		relative_position_id = GXC_victory_for_the_KMT_RC
+		mutually_exclusive = {
+			focus = GXC_li_jishens_premiership
+			focus = GXC_chen_mingshus_premiership
+			focus = GXC_chen_qiyous_premiership
+			focus = GXC_zhao_hengtis_premiership
+		}
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			CHI = {
+				OR = {
+					has_completed_focus = CHI_dang_guo
+					has_completed_focus = CHI_strengthening_our_resolve
+					has_completed_focus = CHI_victory_for_the_CDSP
+					has_completed_focus = CHI_victory_for_the_CDL
+					has_completed_focus = CHI_victory_for_the_KMT
+					has_completed_focus = CHI_victory_for_the_YCP
+				}
+			}
+			MAN = {
+				OR = {
+					has_completed_focus = MAN_tsr_obedience
+					has_completed_focus = MAN_tsr_bolster_nationalism
+					has_completed_focus = MAN_the_good_government
+					has_completed_focus = MAN_zhou_enlais_premiership
+					has_completed_focus = MAN_zhang_xueliangs_premiership
+				}
+			}
+			SHX = {
+				OR = {
+					has_completed_focus = SHX_shanxi_prevails
+					has_completed_focus = SHX_the_only_way
+					has_completed_focus = SHX_feng_yuxiangs_premiership
+					has_completed_focus = SHX_li_dequans_premiership
+				}
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_stability = 0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					CHI = {
+						has_character = CHI_soong_ching_ling
+					}
+				}
+				CHI = {
+					CHI_soong_ching_ling = {
+						set_nationality = ROOT
+					}
+				}
+			}
+			promote_character = {
+				character = CHI_soong_ching_ling
+				ideology = socialism
+			}
+			
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				election_frequency = 48
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = CHI_flag_KMTRC
+			custom_effect_tooltip = generic_skip_one_line_tt
+			set_cosmetic_tag =  GXC_CHI_CJ
+		}
+	}
+
+	focus = {
+		id = GXC_li_jishens_premiership
+		icon = GFX_CHI_paramilitary_double
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = GXC_victory_for_the_KMT_RC
+			focus = GXC_victory_for_the_PPP
+			#focus = GXC_victory_for_the_ZGD
+		}
+		relative_position_id = GXC_victory_for_the_KMT_RC
+		mutually_exclusive = {
+			focus = GXC_soong_ching_lings_premiership
+			focus = GXC_chen_mingshus_premiership
+			focus = GXC_chen_qiyous_premiership
+			focus = GXC_zhao_hengtis_premiership
+		}
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_stability = 0.1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			effect_tooltip = {
+				add_country_leader_role = {
+					character = GXC_li_jishen
+					promote_leader = yes
+					country_leader = {
+						ideology = socialism
+						traits = {
+							tenacious_negotiator
+							democratic_reformer
+						}
+					}
+				}
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				election_frequency = 48
+			}
+			if = {
+				limit = {
+					has_completed_focus = GXC_victory_for_the_PPP
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = CHI_flag_PPP
+				custom_effect_tooltip = generic_skip_one_line_tt
+				set_cosmetic_tag = GXC_CHI_PPP
+			}
+			else = {
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = CHI_flag_KMTRC
+				custom_effect_tooltip = generic_skip_one_line_tt
+				set_cosmetic_tag =  GXC_CHI_CJ
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_chen_mingshus_premiership
+		icon = GFX_RUS_socialist_democracy
+		x = 3
+		y = 1
+
+		prerequisite = {
+			#focus = GXC_victory_for_the_KMT_RC
+			focus = GXC_victory_for_the_PPP
+			#focus = GXC_victory_for_the_ZGD
+		}
+		relative_position_id = GXC_victory_for_the_KMT_RC
+		mutually_exclusive = {
+			focus = GXC_soong_ching_lings_premiership
+			focus = GXC_li_jishens_premiership
+			focus = GXC_chen_qiyous_premiership
+			focus = GXC_zhao_hengtis_premiership
+		}
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_character = CHI_chen_mingshu
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_stability = 0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					CHI = {
+						has_character = CHI_chen_mingshu
+					}
+				}
+				CHI = {
+					CHI_chen_mingshu = {
+						set_nationality = ROOT
+					}
+				}
+			}
+			if = {
+				limit = {
+					GXC = {
+						has_character = CHI_chen_mingshu
+					}
+				}
+				add_country_leader_role = {
+					character = CHI_chen_mingshu
+					country_leader = {
+						ideology = socialism
+						expire = "1965.1.1.1"
+						traits = { anti_soviet_socialist }
+					}
+					promote_leader = yes
+				}
+			}
+			else = {
+				effect_tooltip = {
+					add_country_leader_trait = anti_soviet_socialist
+				}
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				election_frequency = 48
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = CHI_flag_PPP
+			custom_effect_tooltip = generic_skip_one_line_tt
+			set_cosmetic_tag = GXC_CHI_PPP
+		}
+	}
+
+	focus = {
+		id = GXC_chen_qiyous_premiership
+		icon = GFX_china_federalism
+		x = 5
+		y = 1
+
+		prerequisite = {
+			#focus = GXC_victory_for_the_KMT_RC
+			#focus = GXC_victory_for_the_PPP
+			focus = GXC_victory_for_the_ZGD
+		}
+		relative_position_id = GXC_victory_for_the_KMT_RC
+		mutually_exclusive = {
+			focus = GXC_soong_ching_lings_premiership
+			focus = GXC_li_jishens_premiership
+			focus = GXC_chen_mingshus_premiership
+			focus = GXC_zhao_hengtis_premiership
+		}
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			MAN = {
+				OR = {
+					has_completed_focus = MAN_tsr_obedience
+					has_completed_focus = MAN_tsr_bolster_nationalism
+					has_completed_focus = MAN_the_warlord_of_manchuria
+					has_completed_focus = MAN_victory_for_the_HZF
+					has_completed_focus = MAN_victory_for_the_CDSP
+				}
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_stability = 0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
+			promote_character = {
+				character = GXC_chen_qiyou
+				ideology = liberalism
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				election_frequency = 48
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = CHI_flag_ZGD
+			custom_effect_tooltip = generic_skip_one_line_tt
+			set_cosmetic_tag = GXC_CHI_ZGD
+		}
+	}
+
+	focus = {
+		id = GXC_zhao_hengtis_premiership
+		icon = GFX_GXC_CZGP
+		x = 7
+		y = 1
+
+		prerequisite = {
+			#focus = GXC_victory_for_the_KMT_RC
+			#focus = GXC_victory_for_the_PPP
+			focus = GXC_victory_for_the_ZGD
+		}
+		relative_position_id = GXC_victory_for_the_KMT_RC
+		mutually_exclusive = {
+			focus = GXC_soong_ching_lings_premiership
+			focus = GXC_li_jishens_premiership
+			focus = GXC_chen_mingshus_premiership
+			focus = GXC_chen_qiyous_premiership
+		}
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_stability = 0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
+			promote_character = {
+				character = GXC_zhao_hengti
+				ideology = liberalism
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				election_frequency = 48
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = CHI_flag_ZGD
+			custom_effect_tooltip = generic_skip_one_line_tt
+			set_cosmetic_tag = GXC_CHI_ZGD
+		}
+	}
+
+	focus = {
+		id = GXC_denounce_the_illegitimate_revolution
+		icon = GFX_focus_CHI_denounce_feudalism
+		x = 0
+		y = 2
+
+		prerequisite = {
+			focus = GXC_soong_ching_lings_premiership
+			focus = GXC_li_jishens_premiership
+			focus = GXC_chen_mingshus_premiership
+		}
+		relative_position_id = GXC_li_jishens_premiership
+		#mutually_exclusive = { focus = GXC_paralize_the_banks }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			if = {
+				limit = {
+					YUN = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				YUN = {
+					country_event = { id = cotf_shx.6 }
+				}
+			}
+			if = {
+				limit = {
+					GDC = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				GDC = {
+					country_event = { id = cotf_shx.6 }
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 595
+					}
+				}
+				add_state_core = 595
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 600
+					}
+				}
+				add_state_core = 600
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 602
+					}
+				}
+				add_state_core = 602
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 750
+					}
+				}
+				add_state_core = 750
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 603
+					}
+				}
+				add_state_core = 603
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 748
+					}
+				}
+				add_state_core = 748
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 325
+					}
+				}
+				add_state_core = 325
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 747
+					}
+				}
+				add_state_core = 747
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 1033
+					}
+				}
+				add_state_core = 1033
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 592
+					}
+				}
+				add_state_core = 592
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 593
+					}
+				}
+				add_state_core = 593
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_state_core = 591
+					}
+				}
+				add_state_core = 591
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_liberate_the_people_of_nanjing
+		icon = GFX_YUN_Deal_with_the_Left_KMT
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_denounce_the_illegitimate_revolution
+		}
+		relative_position_id = GXC_denounce_the_illegitimate_revolution
+		#mutually_exclusive = { focus = GXC_paralize_the_banks }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_literally_china = yes
+					is_subject = no
+				}
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+			add_timed_idea = {
+				idea = MAN_southern_expedition
+				days = 550
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_the_true_republic
+		icon = GFX_chi_one_china_policy_KMT
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_liberate_the_people_of_nanjing
+		}
+		relative_position_id = GXC_liberate_the_people_of_nanjing
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+			OR = {
+				1035 = {
+					controller = {
+						surrender_progress > 0.8
+						NOT = {
+							original_tag = ROOT
+						}
+					}
+				}
+				608 = {
+					controller = {
+						surrender_progress > 0.8
+						NOT = {
+							original_tag = ROOT
+						}
+					}
+				}
+				AND = {
+					1035 = {
+						is_controlled_by = ROOT
+					}
+					608 = {
+						is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			remove_ideas = CHI_warlord_state_idea
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_state = {
+				limit = { is_core_of = CHI }
+				add_core_of = ROOT
+			}
+			every_state = {
+				limit = { is_claimed_by = CHI }
+				add_claim_by = ROOT
+			}
+			#custom_effect_tooltip = generic_skip_one_line_tt
+			#set_capital = {
+			#	state = 608
+			#	remember_old_capital = no
+			#}
+			#hidden_effect = {
+			#	set_province_name = { id = 9843 name = PRC_beijing_capital_name }
+			#	608 = {
+			#		set_state_name = PRC_beijing_capital_name
+			#	}
+			#}
+		}
+	}
+
+	focus = {
+		id = GXC_liberate_the_northeast
+		icon = GFX_focus_generic_spur_communist_revolutions
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_the_true_republic
+		}
+		relative_position_id = GXC_the_true_republic
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			MEN = {
+				exists = no
+			}
+			MAN = {
+				exists = no
+			}
+			KOR = {
+				exists = yes
+				is_subject = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = MAN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MEN
+			}
+			if = {
+				limit = {
+					KOR = {
+						is_subject = yes
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = KOR
+				}
+			}
+			if = {
+				limit = {
+					525 = {
+						owner = {
+							NOT = {
+								original_tag = KOR
+							}
+						}
+					}
+				}
+				525 = {
+					owner = {
+						ROOT = {
+							create_wargoal = {
+								type = annex_everything
+								target = PREV
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_second_preliminary_agreement
+		icon = GFX_focus_PRC_yanan_rectification_movement
+		x = 2
+		y = 1
+
+		prerequisite = {
+			focus = GXC_soong_ching_lings_premiership
+			focus = GXC_li_jishens_premiership
+		}
+		relative_position_id = GXC_li_jishens_premiership
+		mutually_exclusive = { focus = GXC_the_principle_of_minquan }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			PRC = {
+				country_event = {
+					id = cotf_man.8
+					hours = 4
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_the_principle_of_minquan
+		icon = GFX_focus_generic_vote
+		x = -2
+		y = 1
+
+		prerequisite = {
+			focus = GXC_soong_ching_lings_premiership
+			focus = GXC_li_jishens_premiership
+		}
+		relative_position_id = GXC_li_jishens_premiership
+		mutually_exclusive = { focus = GXC_second_preliminary_agreement }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_political_power_gain = 0.1
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_democratic_drift = 0.05
+				tooltip = democratic_drift_tt
+			}
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	focus = {
+		id = GXC_the_principle_of_minsheng
+		icon = GFX_focus_generic_welfare
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_the_principle_of_minquan
+		}
+		relative_position_id = GXC_the_principle_of_minquan
+		#mutually_exclusive = { focus = GXC_the_coalition_government }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_stability_factor = 0.05
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	focus = {
+		id = GXC_the_principle_of_minzu
+		icon = GFX_focus_CHI_baojia_system
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_the_principle_of_minsheng
+		}
+		relative_position_id = GXC_the_principle_of_minsheng
+		#mutually_exclusive = { focus = GXC_the_coalition_government }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_war_support_factor = 0.1
+				tooltip = war_support_factor_tt
+			}
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	focus = {
+		id = GXC_sun_yat_sens_dream
+		icon = GFX_focus_PRC_reestablish_moscow_sun_yat_sen_university
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_the_principle_of_minzu
+		}
+		relative_position_id = GXC_the_principle_of_minzu
+		#mutually_exclusive = { focus = GXC_the_coalition_government }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_stability_factor = 0.1
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_research_speed_factor = 0.05
+				tooltip = research_speed_factor_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_democratic_drift = 0.05
+				tooltip = democratic_drift_tt
+			}
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	focus = {
+		id = GXC_socialist_economy
+		icon = GFX_focus_generic_price_controls
+		x = -4
+		y = 1
+
+		prerequisite = {
+			focus = GXC_soong_ching_lings_premiership
+			focus = GXC_li_jishens_premiership
+		}
+		relative_position_id = GXC_li_jishens_premiership
+		#mutually_exclusive = { focus = GXC_second_preliminary_agreement }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			random_core_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_consumer_goods_factor = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	focus = {
+		id = GXC_revisit_the_class_struggle
+		icon = GFX_focus_RAJ_union_busting
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_second_preliminary_agreement
+		}
+		relative_position_id = GXC_second_preliminary_agreement
+		#mutually_exclusive = { focus = GXC_the_principle_of_minquan }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_political_power_gain = 0.1
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_democratic_drift = 0.05
+				tooltip = democratic_drift_tt
+			}
+			force_update_dynamic_modifier = yes
+		}
+	}
+	focus = {
+		id = GXC_expropiate_foreign_companies
+		icon = GFX_focus_DEN_heavy_regulations
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_revisit_the_class_struggle
+		}
+		relative_position_id = GXC_revisit_the_class_struggle
+		#mutually_exclusive = { focus = GXC_the_principle_of_minquan }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_stability = -0.1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_consumer_goods_factor = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_production_speed_buildings_factor = 0.1
+				tooltip = production_speed_buildings_factor_tt
+			}
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	focus = {
+		id = GXC_the_agrarian_reform
+		icon = GFX_focus_CHI_students_to_the_countryside
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_expropiate_foreign_companies
+		}
+		relative_position_id = GXC_expropiate_foreign_companies
+		#mutually_exclusive = { focus = GXC_the_principle_of_minquan }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_stability_factor = 0.05
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_global_building_slots_factor = 0.15
+				tooltip = global_building_slots_factor_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_local_resources_factor = 0.05
+				tooltip = local_resources_factor_tt
+			}
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	focus = {
+		id = GXC_the_three_constructions
+		icon = GFX_federalist_conference
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = GXC_chen_qiyous_premiership
+			focus = GXC_zhao_hengtis_premiership
+		}
+		relative_position_id = GXC_chen_qiyous_premiership
+		#mutually_exclusive = { focus = GXC_paralize_the_banks }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+			has_stability > 0.75
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_state = {
+				limit = { is_core_of = CHI }
+				add_core_of = ROOT
+			}
+			every_state = {
+				limit = { is_claimed_by = CHI }
+				add_claim_by = ROOT
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = GXC_federation_decision
+		}
+	}
+
+	focus = {
+		id = GXC_strike_at_the_kuomintang
+		icon = GFX_GXC_kmt_civil_war
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = GXC_the_three_constructions
+		}
+		relative_position_id = GXC_the_three_constructions
+		#mutually_exclusive = { focus = GXC_paralize_the_banks }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_literally_china = yes
+					is_subject = no
+				}
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+			add_timed_idea = {
+				idea = MAN_southern_expedition
+				days = 550
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_the_federation
+		icon = GFX_chi_one_china_policy_KMT
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_strike_at_the_kuomintang
+		}
+		relative_position_id = GXC_strike_at_the_kuomintang
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+			OR = {
+				1035 = {
+					controller = {
+						surrender_progress > 0.8
+						NOT = {
+							original_tag = ROOT
+						}
+					}
+				}
+				608 = {
+					controller = {
+						surrender_progress > 0.8
+						NOT = {
+							original_tag = ROOT
+						}
+					}
+				}
+				AND = {
+					1035 = {
+						is_controlled_by = ROOT
+					}
+					608 = {
+						is_controlled_by = ROOT
+					}
+				}
+			}
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_political_power_gain = 0.1
+				tooltip = political_power_factor_tt
+			}
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = generic_skip_one_line_tt
+			remove_ideas = CHI_warlord_state_idea
+			
+			#custom_effect_tooltip = generic_skip_one_line_tt
+			#set_capital = {
+			#	state = 608
+			#	remember_old_capital = no
+			#}
+			#hidden_effect = {
+			#	set_province_name = { id = 9843 name = PRC_beijing_capital_name }
+			#	608 = {
+			#		set_state_name = PRC_beijing_capital_name
+			#	}
+			#}
+		}
+	}
+
+	focus = {
+		id = GXC_the_missing_piece
+		icon = GFX_china_federalist_army
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_the_federation
+		}
+		relative_position_id = GXC_the_federation
+		#mutually_exclusive = { focus = SHX_cooperate_with_the_KMT }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			MEN = {
+				exists = no
+			}
+			MAN = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = MAN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MEN
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_draw_support_from_the_overseas_chinese
+		icon = GFX_focus_CHI_fund_marine_corp
+		x = 3
+		y = 1
+
+		prerequisite = {
+			focus = GXC_chen_qiyous_premiership
+			focus = GXC_zhao_hengtis_premiership
+		}
+		relative_position_id = GXC_chen_qiyous_premiership
+		#mutually_exclusive = { focus = GXC_paralize_the_banks }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_research_speed_factor = 0.05
+				tooltip = research_speed_factor_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_monthly_population = 0.1
+				tooltip = monthly_population_tt
+			}
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	focus = {
+		id = GXC_attract_private_initiatives
+		icon = GFX_focus_CHI_registry_of_property
+		x = 5
+		y = 1
+
+		prerequisite = {
+			focus = GXC_chen_qiyous_premiership
+			focus = GXC_zhao_hengtis_premiership
+		}
+		relative_position_id = GXC_chen_qiyous_premiership
+		#mutually_exclusive = { focus = GXC_paralize_the_banks }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_production_speed_industrial_complex_factor = 0.1
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_global_building_slots = 1
+				tooltip = global_building_slots_tt
+			}
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	focus = {
+		id = GXC_the_construction_of_jianguo
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = GXC_the_three_constructions
+		}
+		relative_position_id = GXC_the_three_constructions
+		#mutually_exclusive = { focus = GXC_paralize_the_banks }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_stability_factor = 0.05
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_surrender_limit = 0.15
+				tooltip = surrender_limit_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_army_core_defence_factor = 0.1
+				tooltip = army_core_defence_factor_tt
+			}
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	focus = {
+		id = GXC_the_construction_of_jianya
+		icon = GFX_focus_generic_democratic_asia
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_the_construction_of_jianguo
+		}
+		relative_position_id = GXC_the_construction_of_jianguo
+		#mutually_exclusive = { focus = GXC_paralize_the_banks }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_democratic_drift = 0.1
+				tooltip = democratic_drift_tt
+			}
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = generic_skip_one_line_tt
+			reduce_focus_completion_cost = {
+				focus = {
+					CHI_sea_anti_imperialism
+					CHI_sea_commit_to_korean_independence
+					CHI_sea_indian_cooperation
+					CHI_sea_influence_mongolia
+				}
+				cost = 14
+			}
+			reduce_focus_completion_cost = {
+				focus = { CHI_sea_guidance_and_support }
+				cost = 35
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_the_construction_of_jianshi
+		icon = GFX_focus_generic_world_peace
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = GXC_the_construction_of_jianya
+		}
+		prerequisite = {
+			focus = GXC_the_federation
+		}
+		relative_position_id = GXC_the_construction_of_jianya
+		#mutually_exclusive = { focus = GXC_paralize_the_banks }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_compliance_growth = 0.05
+				tooltip = compliance_growth_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_compliance_gain = 0.001
+				tooltip = GXC_compliance_gain_decimal_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_political_power_gain = 0.05
+				tooltip = political_power_factor_tt
+			}
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	focus = {
+		id = GXC_chen_jiaomings_dream
+		icon = GFX_GXC_chen_jiongmings_legacy
+		x = 0
+		y = 2
+
+		prerequisite = {
+			focus = GXC_the_construction_of_jianshi
+		}
+		relative_position_id = GXC_the_construction_of_jianshi
+		#mutually_exclusive = { focus = GXC_paralize_the_banks }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				any_country = {
+					exists = yes
+					NOT = { tag = ROOT }
+					OR = {
+						is_literally_china = yes
+						tag = MEN
+						tag = MAN
+						tag = MON
+						tag = TAN
+						tag = TIB
+					}
+				}
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_baojia_militarism
+					}
+				}
+				custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+			}
+			else_if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = GXC_the_pearl_river_valley_revolution
+					}
+				}
+				custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_drift_defence_factor = 0.3
+				tooltip = drift_defence_factor_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_generate_wargoal_tension = -0.5
+				tooltip = generate_wargoal_tension_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_join_faction_tension = -0.4
+				tooltip = join_faction_tension_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_send_volunteers_tension = -0.4
+				tooltip = send_volunteers_tension_tt
+			}
+			add_to_variable = {
+				GXC_baojia_militarism_guarantee_tension = -0.4
+				tooltip = guarantee_tension_tt
+			}
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	focus = {
+		id = GXC_welcome_the_koreans
+		icon = GFX_focus_JAP_build_up_korean_industries
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = GXC_the_construction_of_jianshi
+		}
+		relative_position_id = GXC_the_construction_of_jianshi
+		#mutually_exclusive = { focus = GXC_paralize_the_banks }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			525 = {
+				is_owned_and_controlled_by = ROOT
+				compliance > 59
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			every_state = {
+				limit = { is_core_of = KOR }
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_invite_the_overseas_chinese
+		icon = GFX_focus_CHI_connections_with_shanghai_elites
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = GXC_the_construction_of_jianshi
+		}
+		relative_position_id = GXC_the_construction_of_jianshi
+		#mutually_exclusive = { focus = GXC_paralize_the_banks }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			1021 = {
+				is_owned_and_controlled_by = ROOT
+				compliance > 59
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			336 = { add_core_of = ROOT }
+			1060 = { add_core_of = ROOT }
+			1021 = { add_core_of = ROOT }
+		}
+	}
+
+	focus = {
+		id = GXC_expand_the_baojia
+		icon = GFX_focus_CHI_weaponise_the_faithful
+		x = 0
+		y = 0
+
+		#prerequisite = { focus = GXC_declare_opposition }
+		#relative_position_id = GXC_declare_opposition 
+		mutually_exclusive = { focus = GXC_adopt_the_guangdong_reforms }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_political_power = 75
+			custom_effect_tooltip = generic_skip_one_line_tt
+			army_experience = 20
+			custom_effect_tooltip = generic_skip_one_line_tt
+			IF = {
+				limit = {
+					has_doctrine = peoples_war
+				}
+				add_daily_mastery = {
+					amount = 1
+					days = 75
+					name = SHX_expand_the_militias
+					track = infantry
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_subdoctrine_in_track = infantry
+				}
+				add_daily_mastery = {
+					amount = 1
+					days = 50
+					name = SHX_expand_the_militias
+					track = infantry
+				}
+			}
+			ELSE = {
+				set_sub_doctrine = peoples_war
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			reduce_focus_completion_cost = {
+				focus = { GXC_fight_behind_their_lines }
+				cost = 35
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_adopt_the_guangdong_reforms
+		icon = GFX_focus_generic_advanced_military_studies
+		x = 10
+		y = 0
+
+		#prerequisite = { focus = GXC_declare_opposition }
+		#relative_position_id = GXC_declare_opposition 
+		mutually_exclusive = { focus = GXC_expand_the_baojia }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_political_power = 150
+			custom_effect_tooltip = generic_skip_one_line_tt
+			army_experience = 100
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_stability = -0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			reduce_focus_completion_cost = {
+				focus = { GXC_study_western_designs }
+				cost = 35
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_guerrilla_warfare
+		icon = GFX_focus_CHI_guerrilla_warfare
+		x = 4
+		y = 1
+
+		prerequisite = {
+			focus = GXC_expand_the_baojia
+			focus = GXC_adopt_the_guangdong_reforms
+		}
+		relative_position_id = GXC_expand_the_baojia
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			custom_effect_tooltip = GXC_modify_the_southern_bastion_dynamic_modifier_tt
+			add_to_variable = {
+				GXC_the_southern_bastion_max_dig_in = 1
+				tooltip = max_dig_in_tt
+			}
+			add_to_variable = {
+				GXC_the_southern_bastion_dig_in_speed_factor = 0.2
+				tooltip = dig_in_speed_factor_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = GXC_the_southern_bastion
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = GXC_the_southern_bastion
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_utilize_the_terrain
+		icon = GFX_focus_CHI_utilize_the_terrain
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = GXC_guerrilla_warfare
+		}
+		relative_position_id = GXC_guerrilla_warfare
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			custom_effect_tooltip = GXC_modify_the_southern_bastion_dynamic_modifier_tt
+			add_to_variable = {
+				GXC_the_southern_bastion_max_dig_in = 2
+				tooltip = max_dig_in_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = GXC_the_southern_bastion
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = GXC_the_southern_bastion
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_fight_behind_their_lines
+		icon = GFX_focus_prc_infiltration
+		overlay = GFX_focus_fast_overlay_generic_clock
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = GXC_utilize_the_terrain
+		}
+		relative_position_id = GXC_utilize_the_terrain
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			custom_effect_tooltip = GXC_modify_the_southern_bastion_dynamic_modifier_tt
+			add_to_variable = {
+				GXC_the_southern_bastion_equipment_capture_factor = 0.1
+				tooltip = equipment_capture_factor_tt
+			}
+			add_to_variable = {
+				GXC_the_southern_bastion_army_core_defence_factor = 0.1
+				tooltip = army_core_defence_factor_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = GXC_the_southern_bastion
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = GXC_the_southern_bastion
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_defend_from_our_mountains
+		icon = GFX_focus_generic_mountain_training
+		x = 6
+		y = 1
+
+		prerequisite = {
+			focus = GXC_expand_the_baojia
+			focus = GXC_adopt_the_guangdong_reforms
+		}
+		relative_position_id = GXC_expand_the_baojia
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			army_experience = 15
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_tech_bonus = {
+				name = GXC_fight_in_our_mountains
+				bonus = 1
+				uses = 1
+				category = mountaineers_tech
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				add_doctrine_cost_reduction = {
+					name = GXC_fight_in_our_mountains
+					cost_reduction = 0.25
+					uses = 2
+					category = cat_mountaineers_doctrine
+				}
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_strike_from_the_jungles
+		icon = GFX_focus_generic_jungle_training
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = GXC_defend_from_our_mountains
+		}
+		relative_position_id = GXC_defend_from_our_mountains
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			army_experience = 15
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_tech_bonus = {
+				name = GXC_strike_from_the_jungles
+				bonus = 1
+				uses = 1
+				category = rangers_tech_cat
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				add_doctrine_cost_reduction = {
+					name = GXC_strike_from_the_jungles
+					cost_reduction = 0.25
+					uses = 2
+					category = cat_rangers_doctrine
+				}
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_terrain_specialization
+		icon = GFX_focus_GRE_a_land_of_mountains
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = GXC_strike_from_the_jungles
+		}
+		relative_position_id = GXC_strike_from_the_jungles 
+		#mutually_exclusive = { focus = SHX_expand_the_taiyuan_arsenal }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_ARMY_XP }
+		completion_reward = {
+			custom_effect_tooltip = GXC_modify_the_southern_bastion_dynamic_modifier_tt
+			add_to_variable = {
+				GXC_the_southern_bastion_special_forces_cap = 0.05
+				tooltip = special_forces_cap_tt
+			}
+			add_to_variable = {
+				GXC_the_southern_bastion_special_forces_out_of_supply_factor = -0.05
+				tooltip = special_forces_out_of_supply_factor_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = GXC_the_southern_bastion
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = GXC_the_southern_bastion
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_build_a_provincial_air_force
+		icon = GFX_goal_generic_air_fighter
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = GXC_guangdong_anti_air_production
+		}
+		relative_position_id = GXC_guangdong_anti_air_production
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			air_experience = 15
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				bonus = 0.15
+				uses = 5
+				category = air_equipment
+				name = GXC_italian_fighter_imports
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_0
+					amount = 100
+					producer = ITA
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = small_plane_airframe_0
+					amount = 100
+					producer = ITA
+					variant_name = "CR.32"
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_study_western_designs
+		icon = GFX_focus_SIA_reverse_engineer_allied_tanks
+		overlay = GFX_focus_fast_overlay_generic_clock
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = GXC_guangdong_anti_air_production
+		}
+		relative_position_id = GXC_guangdong_anti_air_production
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			army_experience = 50
+			add_tech_bonus = {
+				name = SHX_modernize_our_army
+				bonus = 0.75
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = SHX_modernize_our_army
+				bonus = 0.75
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_guangdong_anti_air_production
+		icon = GFX_focus_generic_air_defense
+		x = 5
+		y = 2
+
+		prerequisite = {
+			focus = GXC_expand_the_baojia
+			focus = GXC_adopt_the_guangdong_reforms
+		}
+		relative_position_id = GXC_expand_the_baojia
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_anti_air
+				name = GXC_acquire_the_guangdong_anti_air
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = GXC_modify_the_southern_bastion_dynamic_modifier_tt
+			add_to_variable = {
+				GXC_the_southern_bastion_cas_damage_reduction = 0.05
+				tooltip = cas_damage_reduction_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = GXC_the_southern_bastion
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = GXC_the_southern_bastion
+					}
+				}
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+
+	focus = {
+		id = GXC_promote_national_designers
+		icon = GFX_focus_research2
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = GXC_build_a_provincial_air_force
+		}
+		prerequisite = {
+			focus = GXC_study_western_designs
+		}
+		relative_position_id = GXC_build_a_provincial_air_force
+		#mutually_exclusive = { focus = SHX_finish_off_mengjiang }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		#search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+}

@@ -1,0 +1,85 @@
+ideas = {
+	country = {
+		SHX_the_opium_hypocrisy = {
+			picture = CHI_illicit_trade_1
+			allowed = {
+				tag = SHX
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.15
+				stability_factor = -0.25
+				war_support_factor = -0.15
+				production_speed_buildings_factor = 0.1
+				drift_defence_factor = -0.15
+			}
+		}
+
+		PRC_infiltration_in_shanxi = {
+			picture = idea_chi_army_corruption2
+			allowed = {
+				tag = PRC
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			cancel = {
+				owns_state = 615 #shanxi
+			}
+			modifier = {
+				recruitable_population_factor = 0.1
+				mobilization_speed = 0.1
+			}
+		}
+
+		SHX_japanese_investments = {
+			picture = idea_jap_zaibatsu
+			allowed = {
+				tag = SHX
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			cancel = {
+				has_war_with = JAP
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.1
+				trade_opinion_factor = 0.2
+			}
+		}
+
+		SHX_fragile_neutrality = {
+			picture = idea_generic_japanese_conflict
+			allowed = {
+				tag = SHX
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			cancel = {
+				OR = {
+					JAP = {
+						NOT = {
+							has_government = fascism
+						}
+					}
+					JAP = {
+						has_idea = the_fading_sun
+					}
+					JAP = {
+						has_idea = the_fading_sun_alliance
+					}
+					has_war_with = JAP
+				}
+			}
+			modifier = {
+				ai_call_ally_desire_factor = -100
+				ai_join_ally_desire_factor = -100
+			}
+		}
+	}
+}

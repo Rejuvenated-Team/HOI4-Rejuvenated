@@ -1,0 +1,104 @@
+GXC_federalist_integration = {
+
+	GXC_invite_country_to_the_federation = {
+		icon = GFX_decision_generic_form_nation
+		priority = 50
+		cost = 100
+		fire_only_once = yes
+		cancel_if_not_visible = yes
+		on_map_mode = decision_view_only
+
+		target_array = global.asian_countries
+
+		target_root_trigger = {
+			is_subject = no
+		}
+
+		target_trigger = {
+			FROM = {
+				exists = yes
+				is_subject = no
+				NOT = { has_war_with = ROOT }
+				OR = {
+					tag = SIK
+					tag = KHM
+					tag = NXM
+					tag = GSM
+					tag = XSM
+					tag = SHX
+					tag = MEN
+					tag = MAN
+					tag = HBC
+					tag = SND
+					tag = SIC
+					tag = YUN
+					tag = GDC
+					tag = MON
+					tag = TAN
+					tag = TIB
+				}
+			}
+		}
+
+		visible = {
+			is_subject = no
+			FROM = {
+				exists = yes
+				is_subject = no
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		available = {
+			is_subject = no
+			FROM = {
+				exists = yes
+				is_subject = no
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		complete_effect = {
+			FROM = {
+				country_event = { id = cotf_gxc.13 }
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+
+	GXC_proclaim_the_asian_federation = {
+		icon = GFX_decision_generic_form_nation
+		priority = 100
+		cost = 0
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = GXC_chen_jiaomings_dream
+		}
+
+		available = {
+			NOT = {
+				any_country = {
+					exists = yes
+					NOT = { tag = ROOT }
+					OR = {
+						is_literally_china = yes
+						tag = MEN
+						tag = MAN
+						tag = MON
+						tag = TAN
+						tag = TIB
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			add_stability = 0.05
+			set_cosmetic_tag = FED
+		}
+
+		ai_will_do = { base = 0 }
+	}
+}

@@ -1,0 +1,17 @@
+SHX_suiyuan_campaign_category = {
+	icon = GFX_decision_category_jap_intervene_in_china
+	picture = GFX_decision_cat_picture_generic_border_conflicts
+	priority = 100
+	visible_when_empty = no
+
+	allowed = {
+		OR = {
+			tag = SHX
+			tag = MEN
+		}
+	}
+
+	visible = {
+		always = yes
+	}
+}

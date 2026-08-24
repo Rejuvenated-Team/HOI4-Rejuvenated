@@ -32,7 +32,7 @@ characters = {
 			name=CHI_chiang_kaishek
 			portraits={
 				civilian={
-					large = "gfx/leaders/CHI/Portrait_CHI_chiang_kai_shek.dds"
+					large=GFX_portrait_CHI_chiang_kaishek
 				}
 			}
 			country_leader={
@@ -74,12 +74,12 @@ characters = {
 				}
 			}
 
-			country_leader={
-				ideology=fascism_ideology
-				traits={ spymaster }
-				expire="1965.1.1.1"
-				id=-1
-			}
+			#country_leader={
+			#	ideology=fascism_ideology
+			#	traits={ spymaster }
+			#	expire="1965.1.1.1"
+			#	id=-1
+			#}
 
 			advisor={
 				slot = political_advisor
@@ -120,16 +120,19 @@ characters = {
 				}
 			}
 
-			country_leader={
-				ideology=fascism_ideology
-				traits={ spymaster_no_lar }
-				expire="1965.1.1.1"
-				id=-1
-			}
+			#country_leader={
+			#	ideology=fascism_ideology
+			#	traits={ spymaster_no_lar }
+			#	expire="1965.1.1.1"
+			#	id=-1
+			#}
 
 			advisor={
 				slot = political_advisor
 				available  = {
+					is_country_leader = no 
+				}
+				visible = {
 					is_country_leader = no 
 				}
 				idea_token = CHI_dai_li
@@ -157,8 +160,12 @@ characters = {
 					}
 				}
 				available  = {
+					is_country_leader = no 
 					has_intelligence_agency  = yes 
 					has_completed_focus  = CHI_bureau_of_investigation_and_statistics
+				}
+				visible = {
+					is_country_leader = no 
 				}
 				idea_token = CHI_dai_li
 				traits  = {
@@ -185,7 +192,11 @@ characters = {
 					}
 				}
 				available  = {
+					is_country_leader = no 
 					has_completed_focus = CHI_bureau_of_investigation_and_statistics
+				}
+				visible = {
+					is_country_leader = no 
 				}
 				idea_token = CHI_dai_li
 				traits  = {
@@ -219,12 +230,12 @@ characters = {
 				small = GFX_portrait_CHI_soong_ching_ling_small
 			}
 		}
-		#country_leader={
-		#	ideology=socialism
-		#	traits={ bridgebuilder }
-		#	expire="1965.1.1.1"
-		#	id=-1
-		#}
+		country_leader={
+			ideology=socialism
+			traits={ bridgebuilder }
+			expire="1965.1.1.1"
+			id=-1
+		}
 	}
 
 	CHI_zhang_lan = {
@@ -234,12 +245,12 @@ characters = {
 				large = GFX_portrait_prc_zhang_lan
 			}
 		}
-		#country_leader={
-		#	ideology=socialism
-		#	traits={  }
-		#	expire="1965.1.1.1"
-		#	id=-1
-		#}
+		country_leader={
+			ideology=socialism
+			traits={ JAP_democratic_socialist }
+			expire="1965.1.1.1"
+			id=-1
+		}
 	}
 
 	CHI_soong_mei_ling={
@@ -589,10 +600,11 @@ characters = {
 				id=-1
 			}
 			field_marshal={
+				traits = { trait_cautious hill_fighter media_personality }
 				skill=3
-				attack_skill=3
-				defense_skill=3
-				planning_skill=2
+				attack_skill=1
+				defense_skill=4
+				planning_skill=3
 				logistics_skill=2
 				legacy_id=-1
 			}
@@ -609,10 +621,11 @@ characters = {
 				}
 			}
 			field_marshal={
+				traits = { trait_cautious hill_fighter media_personality }
 				skill=3
-				attack_skill=3
-				defense_skill=3
-				planning_skill=2
+				attack_skill=1
+				defense_skill=4
+				planning_skill=3
 				logistics_skill=2
 				legacy_id=-1
 			}
@@ -628,6 +641,7 @@ characters = {
 			}
 		}
 		corps_commander={
+			traits = { inflexible_strategist war_hero }
 			skill=3
 			attack_skill=3
 			defense_skill=3
@@ -729,12 +743,16 @@ characters = {
 	CHI_feng_yuxiang={
 		name=CHI_feng_yuxiang
 		portraits={
+			civilian={
+				large = GFX_portrait_CHI_feng_yuxiang
+			}
 			army={
 				large = GFX_portrait_CHI_feng_yuxiang
 				small = GFX_portrait_CHI_feng_yuxiang_small
 			}
 		}
 		corps_commander={
+			traits = { trait_mountaineer organizer }
 			skill=3
 			attack_skill=3
 			defense_skill=3
@@ -755,17 +773,6 @@ characters = {
 				small = GFX_portrait_CHI_jiang_guangnai_civilian_small
 			}
 		}
-		corps_commander={
-			visible = {
-				has_completed_focus = CHI_revive_the_chinese_action_committee
-			}
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=-1
-		}
 	}
 
 	CHI_cai_tingkai={
@@ -775,17 +782,6 @@ characters = {
 				large= GFX_portrait_CHI_cai_tingkai
 				small= GFX_portrait_CHI_cai_tingkai_small
 			}
-		}
-		corps_commander={
-			visible = {
-				has_completed_focus = CHI_revive_the_chinese_action_committee
-			}
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=-1
 		}
 	}
 
@@ -797,19 +793,9 @@ characters = {
 				small = GFX_portrait_CHI_chen_mingxu_military_small
 			}
 			civilian = {
+				large = GFX_portrait_CHI_chen_mingxu
 				small = GFX_portrait_CHI_chen_mingxu_civilian_small
 			}
-		}
-		corps_commander={
-			visible = {
-				has_completed_focus = CHI_revive_the_chinese_action_committee
-			}
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=-1
 		}
 		#country_leader = {
 		#	ideology = socialism
@@ -1213,8 +1199,8 @@ characters = {
 		name=CHI_chen_jitang
 		portraits={
 			army={
-				large=GFX_rj_portrait_GXC_chen_jitang
-				small=GFX_rj_portrait_GXC_chen_jitang_small
+				large=GFX_portrait_GXC_chen_jitang 
+				small="GFX_idea_generic_army_asia_5"
 			}
 		}
 		advisor={
@@ -1262,6 +1248,7 @@ characters = {
 		name=CHI_he_yingqin
 		portraits={
 			army={
+				large = GFX_portrait_chi_he_yingqin
 				small="GFX_idea_CHI_he_yingqin"
 			}
 		}
@@ -1281,6 +1268,17 @@ characters = {
 					factor = 2
 					has_war = yes
 				}
+			}
+		}
+		corps_commander = {
+			traits = { organizer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+			visible = {
+				has_completed_focus = CHI_crackdown_on_corruption_in_recruitment
 			}
 		}
 	}
@@ -1364,17 +1362,17 @@ characters = {
 	name=CHI_bai_chongxi
 	portraits={
 		army={
-			small="GFX_rj_portrait_GXC_bai_chongxi_small"
+			small="GFX_idea_generic_navy_asia_2"
 		}
 	}
 	advisor={
-		slot = army_chief
+		slot = navy_chief
 		idea_token = CHI_bai_chongxi
 		allowed = {
 			original_tag = CHI
 		}
 		traits = {
-			army_chief_maneuver_3
+			navy_chief_reform_2
 		}
 		cost = 100
 		ai_will_do = {
@@ -2411,6 +2409,7 @@ characters = {
 		name = CHI_sun_fo
 		portraits = {
 			civilian = {
+				large = GFX_portrait_CHI_sun_fo
 				small = GFX_portrait_CHI_sun_fo_small
 			}
 		}
@@ -2424,6 +2423,7 @@ characters = {
 			}
 			available  = {
 				has_completed_focus = CHI_accelerate_the_tutelage
+				is_country_leader = no
 			}
 			traits  = {
 				CHI_kuomintang_liberal
@@ -2956,8 +2956,9 @@ characters = {
 						has_completed_focus = CHI_scout_for_air_experts
 						has_completed_focus = CHI_sea_hire_chennault
 						has_completed_focus = CHI_aeronautical_expertise
-					}
-					NOT = { is_hired_as_advisor = yes }
+					}	
+					not_already_hired_except_as = air_chief
+
 					NOT = { has_war_with = USA }
 				}
 				idea_token = CHI_claire_lee_chennault_ground_support
@@ -2976,7 +2977,7 @@ characters = {
 						has_completed_focus = CHI_aeronautical_expertise
 						has_completed_focus = CHI_scout_for_air_experts
 					}
-					NOT = { is_hired_as_advisor = yes }
+					not_already_hired_except_as = theorist
 					NOT = { has_war_with = USA }
 				}
 				idea_token = CHI_claire_lee_chennault_theorist
@@ -3258,5 +3259,44 @@ characters = {
 		}
 	}
 
+	###################
+	### Rejuvenated ###
+	###################
+
+	CHI_he_zhonghan={
+		name=CHI_he_zhonghan
+		portraits={
+			civilian={
+				large = GFX_CHI_he_zhonghan
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits={ AUS_fascist_propaganda_artist }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	CHI_sun_lianzhong = {
+		name = CHI_sun_lianzhong
+
+		portraits = {
+			army = {
+				large = GFX_portrait_CHI_sun_lianzhong
+				small = GFX_idea_generic_army_asia_3
+			}
+		}
+
+		corps_commander = {
+			traits = { urban_assault_specialist }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
 }
 

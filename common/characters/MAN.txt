@@ -361,7 +361,12 @@ characters = {
 		gender = female
 
 		corps_commander = {
-			traits = { cavalry_officer }
+			traits = {
+				cavalry_officer
+				trickster
+				media_personality
+				trait_reckless
+			}
 			skill = 3
 			attack_skill = 3
 			defense_skill = 3
@@ -403,20 +408,20 @@ characters = {
 			}
 		}
 
-		country_leader = {
-			ideology = conservatism
-			traits = { generallissimo guerilla_warfare_expert }
-			expire = "1956.1.1.12"
-			id = -1
-		}
+		#country_leader = {
+		#	ideology = conservatism
+		#	traits = { generallissimo guerilla_warfare_expert }
+		#	expire = "1956.1.1.12"
+		#	id = -1
+		#}
 
 		corps_commander = {
-			traits = { organizer guerilla_fighter cavalry_officer }
+			traits = { organizer trickster guerilla_fighter cavalry_leader }
 			skill = 3
 			attack_skill = 3
-			defense_skill = 2
+			defense_skill = 1
 			planning_skill = 2
-			logistics_skill = 3
+			logistics_skill = 4
 			legacy_id = -1
 			visible = {
 				OR = {
@@ -427,6 +432,128 @@ characters = {
 			}
 		}
 
+	}
+
+	MAN_luo_wengan = { #mod character
+		name = MAN_luo_wengan
+
+		portraits = {
+			civilian = {
+				large = GFX_MAN_luo_wengan
+				small = GFX_idea_generic_political_advisor_asia_3
+			}
+		}
+
+		country_leader = {
+			ideology = liberalism
+			traits = { SWI_pragmatic_democrat }
+			expire = "1956.1.1.12"
+			id = -1
+		}
+
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = MAN_luo_wengan
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				has_completed_focus = MAN_the_good_government
+				is_country_leader = no
+			}
+			traits = {
+				SWI_pragmatic_democrat 
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	MAN_hu_shi = { #mod character
+		name = MAN_hu_shi
+
+		portraits = {
+			civilian = {
+				large = GFX_MAN_hu_shi
+				small = GFX_idea_generic_political_advisor_asia_2
+			}
+		}
+
+		country_leader = {
+			ideology = liberalism
+			traits = { liberal_professor  }
+			expire = "1956.1.1.12"
+			id = -1
+		}
+
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = MAN_hu_shi
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				has_completed_focus = MAN_the_good_government
+				is_country_leader = no
+			}
+			traits = {
+				liberal_professor 
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	MAN_wellington_koo = { #mod character
+		name = MAN_wellington_koo
+
+		portraits = {
+			civilian = {
+				large = GFX_MAN_wellington_koo
+				small = GFX_idea_generic_political_advisor_asia_1
+			}
+		}
+
+		country_leader = {
+			ideology = liberalism
+			traits = { skillful_diplomat tenacious_negotiator }
+			expire = "1956.1.1.12"
+			id = -1
+		}
+
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = MAN_wellington_koo
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				has_completed_focus = MAN_constitutionalism
+				is_country_leader = no
+			}
+			traits = {
+				skillful_diplomat tenacious_negotiator
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	MAN_wu_peifu = { #mod character
+		name = MAN_wu_peifu
+
+		portraits = {
+			civilian = {
+				large = GFX_MAN_wu_peifu
+			}
+		}
 	}
 
 	MAN_changlin_linge = {
@@ -1122,5 +1249,5 @@ characters = {
 	# Generic Fortification Engineer generated in generic_advisors file
 	# Generic War Industrialist generated in generic_advisors file
 
-
+	
 }

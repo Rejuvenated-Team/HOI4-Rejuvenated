@@ -52,6 +52,12 @@ IF = {
 	}
 }
 
+<<<<<<< Updated upstream
+=======
+recruit_character = GSM_ma_lu
+recruit_character = GSM_han_qilu
+
+>>>>>>> Stashed changes
 
 if = { 
 	limit = {
@@ -170,4 +176,8 @@ set_politics = {
 }
 set_popularities = {
 	neutrality = 100
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

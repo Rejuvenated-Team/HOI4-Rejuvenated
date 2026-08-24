@@ -1,0 +1,32 @@
+﻿l_english:
+ #custom_effect_tooltip = generic_skip_one_line_tt
+ cotf_WIP: "§RThis branch is currently WIP§!"
+ stability_weekly_tt: " $MODIFIER_STABILITY_WEEKLY$: $RIGHT|+=%3$"
+ war_support_weekly_tt: " $MODIFIER_WAR_SUPPORT_WEEKLY$: $RIGHT|+=%3$"
+ #JAPAN
+ JAP_tojo_or_yamamoto_resigned_flag: "§YTojo§! or §YYamamoto§! have resigned."
+ JAP_declare_war_for_shanghai: "If they accept, we will become owners of §YShanghai§!. If they refuse, we will §Rdeclare war§! on them."
+ JAP_fading_sun_stuff: "We'll be able to §Gjoin factions§!, §Gdeclare wars§! and §Gcreate factions§! again."
+ #PRC CHINA
+ PRC_provoking_the_japanese: "\n\n§RThis will force Japan to declare war on us after a month.§!"
+ #MANCHUKUO
+ MAN_will_be_annexed_by_PRC: "§GIf they accept, we'll be annexed by the PRC.§!"
+ MAN_will_be_annexed_by_PRC_player: "We'll control the CCP from now on."
+ MAN_will_be_annexed_by_CHI: "§GIf they accept, we'll be annexed by China.§!"
+ MAN_will_be_annexed_by_CHI_player: "We'll control the Chinese government from now on."
+ CHI_zhang_xueliang_is_in_jail: "§YZhang Xueliang§! was arrested by Nanjing."
+ MAN_wu_peifu_health: "§RSome may argue Wu Peifu is too old for the role. However, he's our best bet for leadership at the moment.§!"
+ MAN_wu_peifu_succesor: "§GIf all goes well, this should give us a clear line of succesion in case something happened to Wu Peifu.§!"
+ #GUANGXI
+ generate_wargoal_tension_tt: " $MODIFIER_GENERATE_WARGOAL_TENSION_LIMIT$: $RIGHT|-=%1$"
+ GXC_compliance_gain_decimal_tt: " $MODIFIER_COMPLIANCE_GAIN_ADD$: $RIGHT|+=%1$"
+ SHX_stability_weekly_decimal_tt: " $MODIFIER_STABILITY_WEEKLY$: $RIGHT|+=%1$"
+ SHX_war_support_weekly_decimal_tt: " $MODIFIER_WAR_SUPPORT_WEEKLY$: $RIGHT|+=%2$"
+ GXC_chen_jitang_advisor: "§GAvailable§! as §YPolitical Advisor§!:\n§Y$GXC_chen_jitang$§!, which grants\n$MODIFIER_STABILITY_FACTOR$: §G+15.00%§!."
+ GXC_chen_jitang_leader: "§Y$GXC_chen_jitang$§! becomes leader for the §YNon-Aligned§! party.\n  §Y$heavenly_king_of_the_south_small$§!\n   - $MODIFIER_STABILITY_FACTOR$: §G+15.00%§!"
+ GXC_federation_decision: "§GWe'll be able to offer the old members of the Republic Of China of 1912 to join the Federation. Having a higher stability or they having more democratic support will make them more likely to join us.§!"
+ #SHANXI
+ SHX_suiyuan_war: "The army of §YMengjiang§! will begin an offensive against our forces in the north. After the war ends, §Rany state lost to our enemy will be transfered to them§!, §Gwhile any state controlled by us will remain under our rule.§!"
+ SHX_CHI_faction: "We will ask §YChina§! to join its faction if it has one."
+ SHX_beef_yummy_MEN: "§GAny state controlled by us and cored by Mengjiang will get one building slot.§!"
+ SHX_cows: "Any controlled state that is a core of §YMengjiang§! will recieve civilian factories."

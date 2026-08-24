@@ -1,0 +1,74 @@
+ideas = {
+	country = {
+		CHI_asian_unifier_and_liberator = {
+			picture = idea_chi_warlord_integration5
+			allowed = {
+				tag = CHI
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				subjects_autonomy_gain = -0.08
+				political_power_factor = 0.05
+				annex_subject_cost_factor = -0.25
+				compliance_gain = 0.01
+				surrender_limit = 0.1
+			}
+		}
+		CHI_victorious_war_of_resistance = {
+			picture = idea_CHI_baojia_system
+			allowed = {
+				tag = CHI
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.1
+				command_power_gain_mult = 0.1
+			}
+		}
+		CHI_the_ticking_clock = {
+			picture = idea_JAP_imperial_army
+			allowed = {
+				tag = CHI
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			cancel = {
+				has_war_with = JAP
+			}
+			modifier = {
+				stability_factor = -0.1
+				industrial_capacity_factory = 0.1
+				political_power_factor = -0.1
+				production_speed_rail_way_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.3
+			}
+		}
+		CHI_war_is_peace = {
+			picture = idea_CHI_decisive_battle
+			allowed = {
+				tag = CHI
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			cancel = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			modifier = {
+				defensive_war_stability_factor = 0.15
+				offensive_war_stability_factor = 0.15
+				weekly_casualties_war_support = 0.005
+				weekly_convoys_war_support = 0.003
+				weekly_bombing_war_support = 0.001
+				mobilization_speed = 0.1
+			}
+		}
+	}
+}

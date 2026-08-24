@@ -1,5 +1,14 @@
 ﻿capital = 592 # Guangdong province, Guangzhou city
 
+<<<<<<< Updated upstream
+=======
+add_state_core = 728 #mod
+add_state_core = 729 #mod
+add_state_core = 326 #mod
+
+add_ideas = GDC_opium_revenues #mod
+
+>>>>>>> Stashed changes
 set_variable = { CHI_warlord_army_political_power_gain = 0 }
 set_variable = { CHI_warlord_army_army_core_attack_factor = 0 }
 set_variable = { CHI_warlord_army_army_core_defence_factor = 0 }
@@ -42,7 +51,11 @@ if = {
 	}
 }
 
+<<<<<<< Updated upstream
 set_stability = 0.6
+=======
+set_stability = 0.75 #mod
+>>>>>>> Stashed changes
 set_war_support = 0.4
 
 # Starting tech
@@ -62,6 +75,12 @@ IF = {
 	}
 }
 
+<<<<<<< Updated upstream
+=======
+recruit_character = GDC_deng_longguang
+recruit_character = GDC_li_hanhun
+
+>>>>>>> Stashed changes
 
 if = { 
 	limit = {
@@ -170,4 +189,8 @@ set_politics = {
 }
 set_popularities = {
 	neutrality = 100
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

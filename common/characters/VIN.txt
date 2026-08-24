@@ -50,13 +50,13 @@ characters = {
 		name = VIN_ho_chi_minh
 		portraits = {
 			civilian = {
-				large = GFX_portrait_Ho_Chi_Minh
+				large = GFX_portrait_VIN_ho_chi_minh
 			}
 			
 		}
 		country_leader = {
 			ideology = marxism
-			traits = { renowned_revolutionary_poet }
+			traits = { renowned_revolutionary_poet guerilla_expert }
 			expire = "1960.1.1.1"
 			id = -1
 		}

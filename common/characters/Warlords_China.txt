@@ -7,14 +7,14 @@ characters={
 # |_____||_||_|_||_,_||_||__,||_|_||_  |
 #                                  |___|
 
-	SIK_sheng_shicai={
+	SIK_sheng_shicai={ #mod
 		name=SIK_sheng_shicai
 		portraits={
 			civilian={
 				large=GFX_portrait_SIK_sheng_shicai
 			}
 			army={
-				large="GFX_portrait_sheng_shicai"
+				large=GFX_portrait_SIK_sheng_shicai
 				small=GFX_portrait_SIK_sheng_shicai_small
 			}
 		}
@@ -24,14 +24,29 @@ characters={
 			traits = { SIK_communist_in_name_only SIK_duban }
 			id=-1
 		}
+		field_marshal={
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+			traits = {
+				career_officer
+				war_hero
+			}
+			visible = {
+				
+			}
+		}
 	}
 
 	SIK_chiang_yufen={
 		name=SIK_chiang_yufen
 		portraits={
 			army={
-				large=GFX_portrait_SIK_chiang_yufen
-				small=GFX_portrait_SIK_chiang_yufen_small
+				large=GFX_portrait_asia_generic_land_8
+				small=GFX_portrait_asia_generic_land_8_small
 			}
 		}
 		corps_commander={
@@ -41,6 +56,7 @@ characters={
 			planning_skill=2
 			logistics_skill=2
 			legacy_id=-1
+			traits = { desert_fox }
 		}
 	}
 
@@ -64,6 +80,8 @@ characters={
 			legacy_id=-1
 			traits = {
 				organizer
+				cavalry_officer
+				career_officer
 			}
 		}
 	}
@@ -85,6 +103,8 @@ characters={
 			legacy_id=-1
 			traits = {
 				trait_mountaineer
+				trickster
+				career_officer
 			}
 		}
 	}
@@ -565,7 +585,7 @@ characters={
 #   |_|  |___||_|_||_|_||__,||_|_|
 #                                 
 
-	YUN_long_yun={
+	YUN_long_yun={ #mod
 		name=YUN_long_yun
 		portraits={
 			civilian={
@@ -581,6 +601,20 @@ characters={
 			traits = { YUN_king_of_yunnan }
 			expire="1965.1.1.1"
 			id=-1
+		}
+		field_marshal={
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+			traits = {
+				trait_mountaineer
+			}
+			visible = {
+				
+			}
 		}
 	}
 
@@ -1091,7 +1125,7 @@ characters={
 			planning_skill = 2
 			logistics_skill = 2
 			skill = 3
-			traits = { cavalry_leader }
+			traits = { cavalry_leader harsh_leader }
 			legacy_id=-1
 		}
 	}
@@ -1110,7 +1144,7 @@ characters={
 			planning_skill = 2
 			logistics_skill = 3
 			skill = 3
-			traits = { cavalry_leader }
+			traits = { cavalry_leader brave trait_mountaineer }
 			legacy_id = -1
 			visible = {
 				has_completed_focus = XSM_recruit_salar_officers
@@ -1132,7 +1166,7 @@ characters={
 			planning_skill = 2
 			logistics_skill = 2
 			skill = 2
-			traits = { infantry_officer }
+			traits = { trait_mountaineer trickster }
 			legacy_id = -1
 			visible = {
 				has_completed_focus = XSM_recruit_salar_officers
@@ -1211,7 +1245,7 @@ characters={
 			}
 
 			corps_commander={
-				traits = { XSM_dubious_loyalty }
+				traits = { XSM_dubious_loyalty infantry_leader }
 				skill=3
 				attack_skill=2
 				defense_skill=3
@@ -1341,11 +1375,12 @@ characters={
 
 			field_marshal={
 				skill=3
-				attack_skill=2
-				defense_skill=3
-				planning_skill=3
-				logistics_skill=2
+				attack_skill=4
+				defense_skill=1
+				planning_skill=2
+				logistics_skill=3
 				legacy_id=-1
+				traits = { harsh_leader war_hero desert_fox }
 			}
 		}
 	}
@@ -1399,11 +1434,14 @@ characters={
 
 			field_marshal={
 				skill=3
-				attack_skill=2
-				defense_skill=3
-				planning_skill=3
-				logistics_skill=2
+				attack_skill=4
+				defense_skill=1
+				planning_skill=2
+				logistics_skill=3
 				legacy_id=-1
+				traits = {
+					desert_fox cavalry_leader war_hero
+				}
 			}
 
 			country_leader={
@@ -1699,6 +1737,9 @@ characters={
 			defense_skill=3
 			planning_skill=3
 			logistics_skill=2
+			traits = {
+				old_guard politically_connected
+			}
 			legacy_id=-1
 		}
 
@@ -1716,7 +1757,7 @@ characters={
 #|_____||_|_||__,||_|_||_,_||_|
 #                              
 
-	SHX_yan_xishan={
+	SHX_yan_xishan={ #mod
 		name=SHX_yan_xishan
 		portraits={
 			civilian={
@@ -1747,6 +1788,23 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
+		field_marshal={
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+			traits = {
+				#inflexible_strategist
+				war_hero
+				career_officer
+				harsh_leader
+			}
+			visible = {
+				
+			}
+		}
 	}
 
 	SHX_wang_jingguo={
@@ -1758,12 +1816,88 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ politically_connected }
+			traits={ politically_connected hill_fighter }
 			skill=3
 			attack_skill=2
 			defense_skill=3
 			planning_skill=3
 			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+	SHX_dong_qiwu={ #mod
+		name=SHX_dong_qiwu
+		portraits={
+			army={
+				large = GFX_portrait_SHX_dong_qiwu
+				small = GFX_idea_generic_army_asia_2
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist war_hero trickster }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+
+	SHX_zhao_chengshou={ #mod
+		name=SHX_zhao_chengshou
+		portraits={
+			army={
+				large = GFX_portrait_SHX_zhao_chengshou
+				small = GFX_idea_generic_army_asia_4
+			}
+		}
+		corps_commander={
+			traits={ cavalry_leader war_hero }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+
+	SHX_imamura_hosaku={ #mod
+		name=SHX_imamura_hosaku
+		portraits={
+			army={
+				large = GFX_portrait_SHX_imamura_hosaku
+				small = GFX_idea_generic_army_asia_1
+			}
+		}
+		corps_commander={
+			traits={ organizer infantry_leader }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+	SHX_kaoru_motoizumi={ #mod
+		name=SHX_kaoru_motoizumi
+		portraits={
+			army={
+				large = GFX_portrait_SHX_kaoru_motoizumi
+				small = GFX_idea_generic_army_asia_5
+			}
+		}
+		corps_commander={
+			traits={ harsh_leader urban_assault_specialist  }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
 			legacy_id=-1
 		}
 	}
@@ -2176,6 +2310,53 @@ characters={
 		}
 	}
 
+	SHX_fan_xiangli={
+		name=SHX_fan_xiangli
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_1"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SHX_fan_xiangli
+			allowed  = {
+				original_tag  = SHX
+			}
+			traits  = {
+				captain_of_industry
+			}
+		}
+	}
+
+	SHX_wang_ping={
+		name=SHX_wang_ping
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_2"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SHX_wang_ping
+			allowed  = {
+				original_tag  = SHX
+			}
+			traits  = {
+				war_industrialist
+			}
+		}
+	}
+
+	SHX_li_dequan={
+		name=SHX_li_dequan
+		portraits={
+			civilian={
+				large=GFX_portrait_SHX_li_dequan
+			}
+		}
+	}
+
 #  _____                           _ 
 # |   __| _ _  ___  ___  ___  _ _ |_|
 # |  |  || | || .'||   || . ||_'_|| |
@@ -2189,7 +2370,7 @@ characters={
 				large= GFX_portrait_GXC_li_zongren
 			}
 			army={
-				small=GFX_rj_portrait_GXC_li_zongren_small
+				small=GFX_portrait_GXC_li_zongren_small
 				large= GFX_portrait_GXC_li_zongren #"GFX_portrait_li_zongren"
 			}
 		}
@@ -2202,27 +2383,32 @@ characters={
 					original_tag  = GDC
 				}
 			}
-			traits  = {
-				prince_of_terror 
+			available = {
+				is_country_leader = no
 			}
+			traits  = {
+				#prince_of_terror
+				camarilla_leader
+			}
+			cost = 100
 		}
 
 		country_leader={
 			ideology=despotism
 			expire="1965.1.1.1"
-			traits={ GXC_fierce_leader }
+			#traits={ GXC_fierce_leader }
 			id=-1
 		}
 
-		field_marshal = {
-			skill = 6
+		corps_commander = {
+			skill = 3
 			attack_skill = 3
-			defense_skill = 5
-			planning_skill = 4
-			logistics_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
 			legacy_id = -1
 			traits = {
-				inflexible_strategist unyielding_defender
+				inflexible_strategist organizer war_hero
 			}
 			visible = {
 				
@@ -2240,33 +2426,30 @@ characters={
 			name=GXC_chen_jitang
 			portraits={
 				army={
-					large= GFX_rj_portrait_GXC_chen_jitang
-					small=GFX_rj_portrait_GXC_chen_jitang_small
+					large= GFX_portrait_GXC_chen_jitang
+					small=GFX_portrait_GXC_chen_jitang_small
 				}
 			}
 			advisor={
-				slot = army_chief
+				slot = political_advisor
 				idea_token = GXC_chen_jitang
 				allowed = {
 					original_tag = GXC
 				}
-				traits = {
-					army_chief_organizational_2
+				available = {
+					is_country_leader = no
+					has_completed_focus = GXC_the_southern_twin_dragons
+					NOT = {
+						has_completed_focus = GXC_the_guangzhou_incident
+					}
 				}
-					cost = 100
+				traits = {
+					#army_chief_defensive_2
+					heavenly_king_of_the_south_small
+				}
 				ai_will_do = {
 					base = 1.000
 				}
-			}
-			field_marshal={
-				skill=4
-				attack_skill=4
-				defense_skill=3
-				planning_skill=3
-				logistics_skill=2
-				legacy_id=-1
-
-				traits = { inspirational_leader infantry_leader	}
 			}
 		}
 		instance = {
@@ -2287,6 +2470,9 @@ characters={
 				planning_skill=3
 				logistics_skill=2
 				legacy_id=-1
+				traits = {
+					organizer
+				}
 				visible = {
 					#OR = {
 					#	has_completed_focus = CHI_personal_leadership
@@ -2297,9 +2483,31 @@ characters={
 
 			country_leader={
 				ideology=despotism
-				traits={ GDC_king_of_the_southern_skies }
+				#traits={ GDC_king_of_the_southern_skies } #Did Paradox use Google translate???
+				traits = { heavenly_king_of_the_south } #mod
 				expire="1965.1.1.1"
 				id=-1
+			}
+
+			advisor = {
+				slot = political_advisor
+				idea_token = GXC_chen_jitang
+				allowed = {
+					original_tag = GXC
+				}
+				available = {
+					is_country_leader = no
+					has_completed_focus = GXC_the_southern_twin_dragons
+					NOT = {
+						has_completed_focus = GXC_the_guangzhou_incident
+					}
+				}
+				traits = {
+					heavenly_king_of_the_south_small
+				}
+				ai_will_do = {
+					base = 1.000
+				}
 			}
 		}
 	}
@@ -2317,8 +2525,8 @@ characters={
 			traits = { infantry_leader }
 			skill = 2
 			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 2
+			defense_skill = 3
+			planning_skill = 1
 			logistics_skill = 1
 			legacy_id = -1
 		}
@@ -2355,9 +2563,9 @@ characters={
 
 		corps_commander = {
 			traits = { infantry_leader war_hero }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 1
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 2
 			legacy_id = -1
@@ -2543,25 +2751,48 @@ characters={
 		}
 	}
 
+	GXC_zhang_zhiying={
+		name=GXC_zhang_zhiying
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_asia_3"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = GXC_zhang_zhiying
+			allowed = {
+				original_tag = GXC
+			}
+			traits = {
+				navy_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+
 	GXC_bai_chongxi={
 		name=GXC_bai_chongxi
 		portraits={
 			army = {
-				large = GFX_rj_portrait_GXC_bai_chongxi
-				small = GFX_rj_portrait_GXC_bai_chongxi_small
+				large = GFX_portrait_GXC_bai_chongxi
+				small = GFX_portrait_GXC_bai_chongxi_small
 			}
 		}
 		corps_commander={
-			traits = { organizer trickster brilliant_strategist }
-			skill=6
-			attack_skill=5
-			defense_skill=3
-			planning_skill=6
-			logistics_skill=4
+			traits = { organizer brilliant_strategist war_hero }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=2
 			legacy_id=-1
 		}
 		advisor={
-			slot = army_chief
+			slot = political_advisor
 			idea_token = GXC_bai_chongxi
 			allowed = {
 				OR = {
@@ -2569,10 +2800,17 @@ characters={
 					original_tag = GDC
 				}
 			}
-			traits = {
-				army_chief_maneuver_3
+			available = {
+				is_country_leader = no
+				NOT = {
+					has_completed_focus = GXC_a_day_without_blood
+				}
 			}
-			cost = 100
+			traits = {
+				#navy_chief_reform_2
+				prince_of_terror
+			}
+			cost = 150
 			ai_will_do = {
 				base = 1.000
 			}
@@ -2745,7 +2983,11 @@ characters={
 		name=GXC_li_jishen
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_asia_2"
+				small = GFX_idea_generic_political_advisor_asia_1
+				large = GFX_GXC_li_jishen
+			}
+			civilian = {
+				large = GFX_GXC_li_jishen_civilian
 			}
 		}
 		advisor={
@@ -2754,8 +2996,13 @@ characters={
 			allowed  = {
 				original_tag  = GXC
 			}
+			available = {
+				is_country_leader = no
+			}
 			traits  = {
-				smooth_talking_charmer 
+				#smooth_talking_charmer
+				tenacious_negotiator
+				democratic_reformer
 			}
 		}
 	}
@@ -2767,16 +3014,16 @@ characters={
 				small="GFX_idea_generic_political_advisor_asia_3"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = GXC_lei_zhong
-			allowed  = {
-				original_tag  = GXC
-			}
-			traits  = {
-				popular_figurehead 
-			}
-		}
+		#advisor={
+		#	slot = political_advisor
+		#	idea_token = GXC_lei_zhong
+		#	allowed  = {
+		#		original_tag  = GXC
+		#	}
+		#	traits  = {
+		#		popular_figurehead
+		#	}
+		#}
 	}
 # _____  _       _                  
 #|   __||_| ___ | |_  _ _  ___  ___ 
@@ -2804,7 +3051,7 @@ characters={
 
 		country_leader={
 			ideology=despotism
-			traits = { SIC_reckless_commander }
+			traits = { SIC_reckless_commander armor_officer }
 			expire="1965.1.1.1"
 			id=-1
 		}
@@ -2823,7 +3070,7 @@ characters={
 		}
 		
 		corps_commander={
-		traits = { organizer }
+		traits = { organizer war_hero }
 			skill=3
 			attack_skill=2
 			defense_skill=2
@@ -2844,13 +3091,13 @@ characters={
 		name=SIC_liu_wenhui
 		portraits={
 			army={
-				large = GFX_portrait_SIC_liu_wenhui
-				small = GFX_portrait_SIC_liu_wenhui_small
+				large = GFX_rj_portrait_SIC_liu_wenhui
+				small = GFX_rj_portrait_SIC_liu_wenhui_small
 			}
 		}
 		
 		corps_commander={
-		traits = { harsh_leader SIC_dubious_loyalty }
+		traits = { harsh_leader SIC_dubious_loyalty trait_mountaineer }
 			skill=2
 			attack_skill=3
 			defense_skill=1
@@ -2859,6 +3106,21 @@ characters={
 			legacy_id=-1
 		}
 
+	}
+
+	RJ_SIC_liu_wenhui = { # Historical Governor General of Malta at the start of the game. Dies on March 12, 1936.
+		name = "Liu Wenhui"
+		portraits={
+			civilian={
+				large = "gfx/leaders/SIC/Liu_Wenhui.dds"
+			}
+		}
+		country_leader={
+			ideology= despotism
+			traits={ }
+			expire="1965.1.1.12"
+			id=-1
+		}
 	}
 
 # _____  _                _                
@@ -2887,7 +3149,7 @@ characters={
 
 		country_leader={
 			ideology=despotism
-			traits = { SND_unreliable_opportunist }
+			traits = { SND_unreliable_opportunist trait_cautious}
 			expire="1965.1.1.1"
 			id=-1
 		}
@@ -2915,6 +3177,9 @@ characters={
 			planning_skill=3
 			logistics_skill=2
 			legacy_id=-1
+			traits = {
+				cavalry_leader desert_fox trait_reckless
+			}
 		}
 
 		country_leader={
@@ -2941,6 +3206,9 @@ characters={
 			planning_skill=3
 			logistics_skill=1
 			legacy_id=-1
+			traits = {
+				trickster
+			}
 		}
 	}
 
@@ -2961,7 +3229,7 @@ characters={
 			logistics_skill=1
 			legacy_id=-1
 			traits = {
-				hill_fighter
+				hill_fighter 
 			}
 		}
 	}
@@ -3033,6 +3301,27 @@ characters={
 
 		}
 
+	}
+
+	HBC_zhang_zizhong = { #mod
+		name = HBC_zhang_zizhong
+
+		portraits = {
+			army = {
+				large = GFX_portrait_HBC_zhang_zizhong
+				small = GFX_idea_generic_army_asia_2
+			}
+		}
+
+		corps_commander = {
+			traits = { trait_reckless brave war_hero }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+		}
 	}
 
 	GSM_ma_yuanxiang = {
@@ -3260,5 +3549,388 @@ characters={
 
 	}
 
+
+	#mod
+	GXC_liao_lei = { #mod
+		name = GXC_liao_lei
+		portraits={
+			army={
+				large = GFX_GXC_liao_lei
+				small = GFX_idea_generic_army_asia_1
+			}
+		}
+		corps_commander = {
+			traits = { war_hero urban_assault_specialist }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+
+	#mod
+	GXC_xia_wei = { #mod
+		name = GXC_xia_wei
+		portraits={
+			army={
+				large = GFX_GXC_xia_wei
+				small = GFX_idea_generic_army_asia_2
+			}
+		}
+		corps_commander = {
+			traits = { war_hero infantry_leader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+		}
+	}
+
+	#mod
+	GDC_deng_longguang = { #mod
+		name = GDC_deng_longguang
+		portraits={
+			army={
+				large = GFX_GDC_deng_longguang
+				small = GFX_idea_generic_army_asia_3
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer war_hero }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+
+	#mod
+	GDC_li_hanhun = { #mod
+		name = GDC_li_hanhun
+		portraits={
+			army={
+				large = GFX_GDC_li_hanhun
+				small = GFX_idea_generic_army_asia_4
+			}
+		}
+		corps_commander = {
+			traits = { urban_assault_specialist war_hero }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+
+	#mod
+	GXC_zhao_hengti = {
+		name = GXC_zhao_hengti
+		portraits = {
+			civilian = {
+				large = GFX_GXC_zhao_hengti_civilian
+				small = GFX_GXC_zhao_hengti_civilian_small
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			traits = { SHX_model_governor }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+	#mod
+	GXC_chen_qiyou = {
+		name = GXC_chen_qiyou
+		portraits = {
+			civilian = {
+				large = GFX_GXC_chen_qiyou
+				small = GFX_GXC_chen_qiyou_small
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			traits = { compassionate_gentleman }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+	#mod
+	GXC_huang_xuchu = {
+		name = GXC_huang_xuchu
+		portraits = {
+			civilian = {
+				large = GFX_GXC_huang_xuchu
+				small = GFX_idea_generic_political_advisor_asia_2
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = GXC_huang_xuchu
+			allowed = {
+				original_tag = GXC
+			}
+			available = {
+				is_country_leader = no
+			}
+			traits = {
+				silent_workhorse
+			}
+			cost = 150
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+
+	#mod
+	GXC_wang_gongdu = {
+		name = GXC_wang_gongdu
+		portraits = {
+			civilian = {
+				small = GFX_idea_generic_political_advisor_asia_1
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = GXC_wang_gongdu
+			allowed = {
+				original_tag = GXC
+			}
+			available = {
+				has_completed_focus = GXC_the_organization_and_training_committee
+				NOT = {
+					has_completed_focus = GXC_execute_wang_gongdu
+				}
+				NOT = {
+					has_completed_focus = GXC_a_day_without_blood
+				}
+			}
+			traits = {
+				head_of_intelligence
+				fascist_demagogue
+			}
+			cost = 150
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+
+	#mod
+	GSM_ma_lu = { #mod
+		name = GSM_ma_lu
+		portraits={
+			army={
+				large = GFX_GSM_ma_lu
+				small = GFX_idea_generic_army_asia_5
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_leader trait_reckless }
+			skill = 2
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+
+	#mod
+	GSM_han_qilu = { #mod
+		name = GSM_han_qilu
+		portraits={
+			army={
+				large = GFX_portrait_asia_generic_land_8
+				small = GFX_idea_generic_army_asia_1
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_leader trait_mountaineer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+
+	#mod
+	NXM_ma_tengjiao = { #mod
+		name = NXM_ma_tengjiao
+		portraits={
+			army={
+				large = GFX_NXM_ma_tengjiao
+				small = GFX_idea_generic_army_asia_2
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_leader reckless war_hero }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+
+	#mod
+	NXM_lu_zhongliang = { #mod
+		name = NXM_lu_zhongliang
+		portraits={
+			army={
+				large = GFX_NXM_lu_zhongliang
+				small = GFX_idea_generic_army_asia_3
+			}
+		}
+		corps_commander = {
+			traits = { brilliant_strategist war_hero }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+		}
+	}
+
+	#mod
+	XSM_ma_biao = { #mod
+		name = XSM_ma_biao
+		portraits={
+			army={
+				large = GFX_XSM_ma_biao
+				small = GFX_idea_generic_army_asia_4
+			}
+		}
+		corps_commander = {
+			traits = { brave cavalry_leader trait_mountaineer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
+
+	#mod
+	XSM_ma_jirong = { #mod
+		name = XSM_ma_jirong
+		portraits={
+			army={
+				large = GFX_portrait_asia_generic_land_8
+				small = GFX_idea_generic_army_asia_5
+			}
+		}
+		corps_commander = {
+			traits = { infantry_leader trait_cautious }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			legacy_id = -1
+		}
+	}
+
+	#mod
+	XIC_yu_xuezhong = { #mod
+		name = XIC_yu_xuezhong
+		portraits={
+			army={
+				large = GFX_XIC_yu_xuezhong
+				small = GFX_idea_generic_army_asia_1
+			}
+		}
+		corps_commander = {
+			traits = { harsh_leader trait_engineer urban_assault_specialist }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+
+	#mod
+	XIC_wang_yizhe = { #mod
+		name = XIC_wang_yizhe
+		portraits={
+			army={
+				large = GFX_XIC_wang_yizhe
+				small = GFX_idea_generic_army_asia_2
+			}
+		}
+		corps_commander = {
+			traits = { trait_mountaineer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+
+	#mod
+	XIC_he_zhuguo = { #mod
+		name = XIC_he_zhuguo
+		portraits={
+			army={
+				large = GFX_XIC_he_zhuguo
+				small = GFX_idea_generic_army_asia_3
+			}
+		}
+		corps_commander = {
+			traits = { career_officer cavalry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+
+	#mod
+	XIC_fengtian_army = {
+		name = XIC_fengtian_army
+		portraits = {
+			civilian = {
+				large = GFX_XIC_fengtian_army
+				small = GFX_XIC_fengtian_army_small
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+	#mod
+	VIN_vu_hong_khanh = {
+		name = VIN_vu_hong_khanh
+		portraits = {
+			civilian = {
+				large = GFX_VIN_vu_hong_khanh_civilian
+				small = GFX_VIN_vu_hong_khanh_civilian
+			}
+		}
+	}
 
 }

@@ -170,6 +170,10 @@ recruit_character = CHI_hsueh_yueh
 recruit_character = CHI_tai_anlan
 recruit_character = CHI_wang_yaowu
 recruit_character = CHI_sun_li_jen
+<<<<<<< Updated upstream
+=======
+recruit_character = CHI_sun_lianzhong
+>>>>>>> Stashed changes
 recruit_character = CHI_hu_zongnan
 recruit_character = CHI_wei_lihuang
 recruit_character = CHI_chen_cheng
@@ -178,6 +182,10 @@ recruit_character = CHI_zhou_zhirou # Shared in pre-sea
 recruit_character = CHI_xiao_yisu
 recruit_character = CHI_chen_shaokuan
 recruit_character = CHI_he_yingqin
+<<<<<<< Updated upstream
+=======
+recruit_character = CHI_he_zhonghan #mod character
+>>>>>>> Stashed changes
 recruit_character = CHI_gao_zhihang
 recruit_character = CHI_h_h_kung
 recruit_character = CHI_chen_guofu
@@ -966,4 +974,8 @@ if = {
 		}
 		obsolete = yes
 	}
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

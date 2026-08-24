@@ -1,0 +1,302 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_BEL_Catholic_construction"
+		texturefile = "gfx/interface/goals/BEL_Catholic_construction.dds"
+	}
+	spriteType = {
+		name = "GFX_BEL_Improve_Catholic_Relations"
+		texturefile = "gfx/interface/goals/BEL_Improve_Catholic_Relations.dds"
+	}
+	spriteType = {
+		name = "GFX_BEL_Reinforce_Belgicism"
+		texturefile = "gfx/interface/goals/BEL_Reinforce_Belgicism.dds"
+	}
+	spriteType = {
+		name = "GFX_BRA_catholic_education"
+		texturefile = "gfx/interface/goals/BRA_catholic_education.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_NFA_deal_with_the_devil"
+		texturefile = "gfx/interface/goals/NFA_deal_with_the_devil.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_NFA_france_first"
+		texturefile = "gfx/interface/goals/NFA_france_first.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_NFA_french_unity"
+		texturefile = "gfx/interface/goals/NFA_french_unity.dds"
+	}
+	spriteType = {
+		name = "GFX_China_Beiyang_Air_Force"
+		texturefile = "gfx/interface/goals/China_Beiyang_Air_Force.dds"
+	}
+	spriteType = {
+		name = "GFX_China_Beiyang_Army"
+		texturefile = "gfx/interface/goals/China_Beiyang_Army.dds"
+	}
+	spriteType = {
+		name = "GFX_china_beiyang_cooporation"
+		texturefile = "gfx/interface/goals/china_beiyang_cooporation.dds"
+	}
+	spriteType = {
+		name = "GFX_China_Beiyang_Navy"
+		texturefile = "gfx/interface/goals/China_Beiyang_Navy.dds"
+	}
+	spriteType = {
+		name = "GFX_China_Beiyang_soldier"
+		texturefile = "gfx/interface/goals/China_Beiyang_soldier.dds"
+	}
+	spriteType = {
+		name = "GFX_China_Beiyang_soldier_five_colour_flag"
+		texturefile = "gfx/interface/goals/China_Beiyang_soldier_five_colour_flag.dds"
+	}
+	spriteType = {
+		name = "GFX_China_Beiyang_training"
+		texturefile = "gfx/interface/goals/China_Beiyang_training.dds"
+	}
+	spriteType = {
+		name = "GFX_china_federalism"
+		texturefile = "gfx/interface/goals/china_federalism.dds"
+	}
+	spriteType = {
+		name = "GFX_china_federalist_army"
+		texturefile = "gfx/interface/goals/china_federalist_army.dds"
+	}
+	spriteType = {
+		name = "GFX_china_federalist_deal"
+		texturefile = "gfx/interface/goals/china_federalist_deal.dds"
+	}
+	spriteType = {
+		name = "GFX_china_feng_yuxiang"
+		texturefile = "gfx/interface/goals/china_feng_yuxiang.dds"
+	}
+	spriteType = {
+		name = "GFX_China_kuomintang_soldier"
+		texturefile = "gfx/interface/goals/China_kuomintang_soldier.dds"
+	}
+	spriteType = {
+		name = "GFX_China_five_colour_beiyang_star_auth"
+		texturefile = "gfx/interface/goals/China_five_colour_beiyang_star_auth.dds"
+	}
+	spriteType = {
+		name = "GFX_China_five_races_flag"
+		texturefile = "gfx/interface/goals/China_five_races_flag.dds"
+	}
+	spriteType = {
+		name = "GFX_China_five_races_star"
+		texturefile = "gfx/interface/goals/China_five_races_star.dds"
+	}
+	spriteType = {
+		name = "GFX_China_GRA"
+		texturefile = "gfx/interface/goals/China_GRA.dds"
+	}
+	spriteType = {
+		name = "GFX_China_LKMT"
+		texturefile = "gfx/interface/goals/China_LKMT.dds"
+	}
+	spriteType = {
+		name = "GFX_china_negotiations"
+		texturefile = "gfx/interface/goals/china_negotiations.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_federalist_compromise"
+		texturefile = "gfx/interface/goals/CHI_federalist_compromise.dds"
+	}
+	spriteType = {
+		name = "GFX_chi_one_china_policy_KMT"
+		texturefile = "gfx/interface/goals/chi_one_china_policy_KMT.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_paramilitary_double"
+		texturefile = "gfx/interface/goals/CHI_paramilitary_double.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_republic"
+		texturefile = "gfx/interface/goals/CHI_republic.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_the_party_state"
+		texturefile = "gfx/interface/goals/CHI_the_party_state.dds"
+	}
+	spriteType = {
+		name = "GFX_CHN_china_beiyang_militarism"
+		texturefile = "gfx/interface/goals/CHN_china_beiyang_militarism.dds"
+	}
+	spriteType = {
+		name = "GFX_CHN_china_federalist_militarism"
+		texturefile = "gfx/interface/goals/CHN_china_federalist_militarism.dds"
+	}
+	spriteType = {
+		name = "GFX_federalist_conference"
+		texturefile = "gfx/interface/goals/federalist_conference.dds"
+	}
+	spriteType = {
+		name = "GFX_FNG_beiyang_airforce"
+		texturefile = "gfx/interface/goals/FNG_beiyang_airforce.dds"
+	}
+	spriteType = {
+		name = "GFX_FNG_beiyang_navy"
+		texturefile = "gfx/interface/goals/FNG_beiyang_navy.dds"
+	}
+	spriteType = {
+		name = "GFX_FNG_chinese_flying_corps"
+		texturefile = "gfx/interface/goals/FNG_chinese_flying_corps.dds"
+	}
+	spriteType = {
+		name = "GFX_FNG_fengtian_army"
+		texturefile = "gfx/interface/goals/FNG_fengtian_army.dds"
+	}
+	spriteType = {
+		name = "GFX_FNG_unification_conference"
+		texturefile = "gfx/interface/goals/FNG_unification_conference.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_chi_one_china_policy_5n"
+		texturefile = "gfx/interface/goals/focus_chi_one_china_policy_5n.dds"
+	}
+	spriteType = {
+		name = "GFX_GXC_kmt_civil_war"
+		texturefile = "gfx/interface/goals/GXC_kmt_civil_war.dds"
+	}
+	spriteType = {
+		name = "GFX_GXC_kmt_guard"
+		texturefile = "gfx/interface/goals/GXC_kmt_guard.dds"
+	}
+	spriteType = {
+		name = "GFX_GXC_rehabilitating_beiyang"
+		texturefile = "gfx/interface/goals/GXC_rehabilitating_beiyang.dds"
+	}
+	spriteType = {
+		name = "GFX_LEP_kmt_encirclement"
+		texturefile = "gfx/interface/goals/LEP_kmt_encirclement.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_paternal_autocrat"
+		texturefile = "gfx/interface/goals/ideology_paternal_autocrat.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_radical_socialist"
+		texturefile = "gfx/interface/goals/ideology_radical_socialist.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_social_conservative"
+		texturefile = "gfx/interface/goals/ideology_social_conservative.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_social_democrat"
+		texturefile = "gfx/interface/goals/ideology_social_democrat.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_social_liberal"
+		texturefile = "gfx/interface/goals/ideology_social_liberal.dds"
+	}
+	spriteType = {
+		name = "GFX_QIE_beijing_government"
+		texturefile = "gfx/interface/goals/QIE_beijing_government.dds"
+	}
+	spriteType = {
+		name = "GFX_QIE_coin"
+		texturefile = "gfx/interface/goals/QIE_coin.dds"
+	}
+	spriteType = {
+		name = "GFX_QIE_manchu_unite_china"
+		texturefile = "gfx/interface/goals/QIE_manchu_unite_china.dds"
+	}
+	spriteType = {
+		name = "GFX_QIE_confucianism"
+		texturefile = "gfx/interface/goals/QIE_confucianism.dds"
+	}
+	spriteType = {
+		name = "GFX_QIE_forbiddenpalace"
+		texturefile = "gfx/interface/goals/QIE_forbiddenpalace.dds"
+	}
+	spriteType = {
+		name = "GFX_QIE_glory"
+		texturefile = "gfx/interface/goals/QIE_glory.dds"
+	}
+	spriteType = {
+		name = "GFX_QIE_Imperial_Air_Force_1"
+		texturefile = "gfx/interface/goals/QIE_Imperial_Air_Force_1.dds"
+	}
+	spriteType = {
+		name = "GFX_QIE_Imperial_Army_1"
+		texturefile = "gfx/interface/goals/QIE_Imperial_Army_1.dds"
+	}
+	spriteType = {
+		name = "GFX_QIE_Imperial_Navy_1"
+		texturefile = "gfx/interface/goals/QIE_Imperial_Navy_1.dds"
+	}
+	spriteType = {
+		name = "GFX_QIE_modernize_monarchy"
+		texturefile = "gfx/interface/goals/QIE_modernize_monarchy.dds"
+	}
+	spriteType = {
+		name = "GFX_QIE_puyi_restored"
+		texturefile = "gfx/interface/goals/QIE_puyi_restored.dds"
+	}
+	spriteType = {
+		name = "GFX_SHD_confucianism"
+		texturefile = "gfx/interface/goals/SHD_confucianism.dds"
+	}
+	spriteType = {
+		name = "GFX_SHX_Destiny.cavalry_MAN"
+		texturefile = "gfx/interface/goals/SHX_Destiny.cavalry_MAN.dds"
+	}
+	spriteType = {
+		name = "GFX_SHX_Taiyuan_Arsenal"
+		texturefile = "gfx/interface/goals/SHX_Taiyuan_Arsenal.dds"
+	}
+	spriteType = {
+		name = "GFX_SHX_united_front.MAN_CHI"
+		texturefile = "gfx/interface/goals/SHX_united_front.MAN_CHI.dds"
+	}
+	spriteType = {
+		name = "GFX_SHX_yan_xishan"
+		texturefile = "gfx/interface/goals/SHX_yan_xishan.dds"
+	}
+	spriteType = {
+		name = "GFX_RUS_socialist_democracy"
+		texturefile = "gfx/interface/goals/RUS_socialist_democracy.dds"
+	}
+	spriteType = {
+		name = "GFX_socialist_constitution"
+		texturefile = "gfx/interface/goals/socialist_constitution.dds"
+	}
+	spriteType = {
+		name = "GFX_Socialist_Law"
+		texturefile = "gfx/interface/goals/Socialist_Law.dds"
+	}
+	spriteType = {
+		name = "GFX_YUN_Deal_with_the_Left_KMT"
+		texturefile = "gfx/interface/goals/YUN_Deal_with_the_Left_KMT.dds"
+	}
+	spriteType = {
+		name = "GFX_GXC_chen_jiongmings_legacy"
+		texturefile = "gfx/interface/goals/GXC_chen_jiongmings_legacy.dds"
+	}
+	spriteType = {
+		name = "GFX_GXC_CZGP"
+		texturefile = "gfx/interface/goals/GXC_CZGP.dds"
+	}
+	spriteType = {
+		name = "GFX_GXC_federalist_republic"
+		texturefile = "gfx/interface/goals/GXC_federalist_republic.dds"
+	}
+	spriteType = {
+		name = "GFX_GXC_KMT_training"
+		texturefile = "gfx/interface/goals/GXC_KMT_training.dds"
+	}
+	spriteType = {
+		name = "GFX_KMT_ZGD_negotiations"
+		texturefile = "gfx/interface/goals/KMT_ZGD_negotiations.dds"
+	}
+	spriteType = {
+		name = "GFX_generic_taoism"
+		texturefile = "gfx/interface/goals/generic_taoism.dds"
+	}
+	spriteType = {
+		name = "GFX_china_ppp_fujian_deal"
+		texturefile = "gfx/interface/goals/china_ppp_fujian_deal.dds"
+	}
+}

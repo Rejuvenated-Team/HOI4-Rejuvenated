@@ -20,6 +20,51 @@ set_variable = { RNG_state_shintoism_research_speed_factor = 0 }
 set_variable = { RNG_state_shintoism_recruitable_population_factor = 0 }
 set_variable = { RNG_state_shintoism_political_power_gain = 0 }
 
+<<<<<<< Updated upstream
+=======
+set_variable = { GXC_the_triumvirate_political_power_factor = -0.1 } #mod
+set_variable = { GXC_the_triumvirate_command_power_gain_mult = -0.1 } #mod
+set_variable = { GXC_the_triumvirate_production_speed_rail_way_factor = 0 } #mod
+set_variable = { GXC_the_liangguang_crisis_war_support_factor = -0.5 } #mod
+set_variable = { GXC_the_liangguang_crisis_democratic_drift = 0 } #mod
+set_variable = { GXC_baojia_militarism_conscription_factor = 0.25 } #mod
+set_variable = { GXC_baojia_militarism_conscription = 0 } #mod
+set_variable = { GXC_baojia_militarism_army_leader_cost_factor = 0 } #mod
+set_variable = { GXC_baojia_militarism_training_time_factor = 0 } #mod
+set_variable = { GXC_baojia_militarism_minimum_training_level = -0.10 } #mod
+set_variable = { GXC_baojia_militarism_war_support_factor = 0.15 } #mod
+set_variable = { GXC_baojia_militarism_stability_factor = 0.15 } #mod
+set_variable = { GXC_baojia_militarism_democratic_drift = 0 } #mod
+set_variable = { GXC_baojia_militarism_consumer_goods_factor = 0.1 } #mod
+set_variable = { GXC_baojia_militarism_global_building_slots_factor = 0 } #mod
+set_variable = { GXC_baojia_militarism_surrender_limit = 0 } #mod
+set_variable = { GXC_baojia_militarism_political_power_gain = 0 } #mod
+set_variable = { GXC_baojia_militarism_production_speed_industrial_complex_factor = -0.1 } #mod
+set_variable = { GXC_baojia_militarism_production_speed_buildings_factor = 0 } #mod
+set_variable = { GXC_baojia_militarism_resistance_target_on_our_occupied_states = 0 } #mod
+set_variable = { GXC_baojia_militarism_compliance_growth_on_our_occupied_states = 0 } #mod
+set_variable = { GXC_baojia_militarism_compliance_growth = 0 } #mod
+set_variable = { GXC_baojia_militarism_compliance_gain = 0 } #mod
+set_variable = { GXC_baojia_militarism_weekly_casualties_war_support = 0 } #mod
+set_variable = { GXC_baojia_militarism_supply_consumption_factor = 0 } #mod
+set_variable = { GXC_baojia_militarism_supply_node_range = 0 } #mod
+set_variable = { GXC_baojia_militarism_research_speed_factor = -0.05 } #mod
+set_variable = { GXC_baojia_militarism_local_resources_factor = 0 } #mod
+set_variable = { GXC_baojia_militarism_monthly_population = 0 } #mod
+set_variable = { GXC_baojia_militarism_global_building_slots = 0 } #mod
+set_variable = { GXC_baojia_militarism_army_core_defence_factor = 0 } #mod
+set_variable = { GXC_baojia_militarism_generate_wargoal_tension = 0 } #mod
+set_variable = { GXC_baojia_militarism_join_faction_tension = 0 } #mod
+set_variable = { GXC_baojia_militarism_send_volunteers_tension = 0 } #mod
+set_variable = { GXC_baojia_militarism_guarantee_tension = 0 } #mod
+set_variable = { GXC_baojia_militarism_drift_defence_factor = 0 } #mod
+add_dynamic_modifier = { modifier = GXC_baojia_militarism } #mod
+add_dynamic_modifier = { modifier = GXC_the_triumvirate } #mod
+add_ideas = GXC_opium_dependent_economy #mod
+add_ideas = GXC_japanese_officer_training #mod
+add_ideas = extensive_conscription #mod
+
+>>>>>>> Stashed changes
 IF = {
 	limit = {
 		has_dlc = "No Compromise, No Surrender"
@@ -30,12 +75,21 @@ IF = {
 	}
 } 
 
+<<<<<<< Updated upstream
 set_stability = 0.5
 set_war_support = 0.55
+=======
+set_stability = 0.35 #mod
+set_war_support = 0.50 #mod
+>>>>>>> Stashed changes
 
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
+<<<<<<< Updated upstream
+=======
+	militia_tech = 1 #mod
+>>>>>>> Stashed changes
 }
 
 set_grand_doctrine = mass_assault
@@ -46,7 +100,11 @@ IF = {
 	}
 	add_ideas = {
 		GXC_uneasy_minds_idea
+<<<<<<< Updated upstream
 		CHI_warlord_looting_idea
+=======
+		#CHI_warlord_looting_idea
+>>>>>>> Stashed changes
 	}
 	ELSE = {
 		recruit_character = GXC_wang_shuming
@@ -69,7 +127,18 @@ recruit_character = GXC_do_liang
 recruit_character = GXC_huang_shaohong
 recruit_character = GXC_yang_hulin
 recruit_character = GXC_li_jishen
+<<<<<<< Updated upstream
 recruit_character = GXC_lei_zhong
+=======
+recruit_character = GXC_chen_qiyou
+recruit_character = GXC_zhao_hengti
+recruit_character = GXC_huang_xuchu
+recruit_character = GXC_wang_gongdu
+recruit_character = GXC_zhang_zhiying
+recruit_character = GXC_lei_zhong
+recruit_character = GXC_liao_lei
+recruit_character = GXC_xia_wei
+>>>>>>> Stashed changes
 
 
 if = {
@@ -77,8 +146,13 @@ if = {
 		has_dlc = "Waking the Tiger"
 	}
 	add_ideas = {
+<<<<<<< Updated upstream
 		PRC_government_corruption
 		CHI_ineffective_bureaucracy_warlord
+=======
+		#PRC_government_corruption
+		#CHI_ineffective_bureaucracy_warlord
+>>>>>>> Stashed changes
 		CHI_warlord_state_idea
 	}
 }
@@ -165,4 +239,8 @@ set_politics = {
 }
 set_popularities = {
 	neutrality = 100
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

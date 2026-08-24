@@ -1,0 +1,1381 @@
+joint_focus = {
+	id = GXC_the_japanese_visit #change loc to Turn The Enemy's Own Fist Against Him
+	icon = GFX_focus_JAP_integrate_the_great_manchurian_empire
+
+	x = 31
+	y = 0
+	offset = {
+		x = -18
+		y = 0
+		trigger = {
+			tag = GXC
+		}
+	}
+
+	cost = 5
+
+	text_icon = GXC_GDC_focus_style
+
+	available = {
+		OR = {
+			original_tag = GDC
+			original_tag = GXC
+		}
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	bypass = {
+
+	}
+
+	ai_will_do = {
+		factor = 35
+	}
+
+	search_filters = {FOCUS_FILTER_POLITICAL}
+
+	allow_branch = {
+		has_dlc = "No Compromise, No Surrender"
+		OR = {
+			tag = GXC
+			tag = GDC
+		}
+	}
+
+	completion_reward_joint_originator = {
+		army_experience = 25
+	}
+
+	completion_reward = {
+		IF = {
+			limit = {
+				OR = {
+					tag = GXC
+					tag = GDC
+				}
+			}
+			#add_political_power = 25
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = 1000 
+				producer = JAP
+			}	
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 125
+				producer = JAP
+			}
+		}
+	}
+}
+
+#joint_focus = {
+#	id = GXC_question_chiangs_authority
+#	icon = GFX_focus_generic_support_the_left_right
+#
+#	prerequisite = { focus = GXC_the_japanese_visit }
+#
+#	relative_position_id = GXC_the_japanese_visit
+#
+#
+#	x = -1
+#	y = 1
+#
+#	cost = 5
+#
+#	text_icon = GXC_focus_style
+#
+#	available = {
+#		original_tag = GXC
+#	}
+#
+#    cancel_if_invalid = yes
+#    continue_if_invalid = no
+#    available_if_capitulated = no
+#
+#	bypass = {
+#
+#	}
+#
+#	ai_will_do = {
+#		factor = 35
+#	}
+#
+#	search_filters = {FOCUS_FILTER_POLITICAL}
+#
+#	completion_reward_joint_originator = {
+#		GXC = {
+#			add_opinion_modifier = {
+#				target = CHI
+#				modifier = small_decrease
+#			}
+#		}
+#		add_political_power = 25
+#		add_stability = 0.05
+#	}
+#
+#	completion_reward = {
+#		IF = {
+#			limit = {
+#				OR = {
+#					tag = GXC
+#					tag = GDC
+#				}
+#			}
+#			add_political_power = 25
+#		}
+#	}
+#}
+
+#joint_focus = {
+#	id = GXC_rumors_of_deposition
+#	icon = GFX_focus_PRC_arms_recovery_efforts
+#
+#	prerequisite = { focus = GXC_the_japanese_visit }
+#
+#	relative_position_id = GXC_the_japanese_visit
+#
+#
+#	x = 1
+#	y = 1
+#
+#	cost = 5
+#
+#	text_icon = GDC_focus_style
+#
+#	available = {
+#		original_tag = GDC
+#	}
+#
+#    cancel_if_invalid = yes
+#    continue_if_invalid = no
+#    available_if_capitulated = no
+#
+#	bypass = {
+#
+#	}
+#
+#	ai_will_do = {
+#		factor = 35
+#	}
+#
+#	search_filters = {FOCUS_FILTER_POLITICAL}
+#
+#	completion_reward_joint_originator = {
+#		add_war_support = 0.1
+#		add_tech_bonus = {
+#			name = GXC_rumors_of_deposition
+#			bonus = 0.75
+#			uses = 1
+#			category = infantry_weapons
+#		}
+#	}
+#
+#	completion_reward = {
+#		IF = {
+#			limit = {
+#				OR = {
+#					tag = GXC
+#					tag = GDC
+#				}
+#			}
+#			ROOT = {
+#				add_opinion_modifier = {
+#					target = CHI
+#					modifier = small_decrease
+#				}
+#			}
+#		}
+#	}
+#}
+
+joint_focus = {
+	id = GXC_the_scorched_earth_speech
+	icon = GFX_focus_AST_war_japan
+
+	prerequisite = { focus = GXC_the_japanese_visit }
+
+	relative_position_id = GXC_the_japanese_visit
+
+
+	x = -1
+	y = 1
+
+	cost = 10 #mod
+
+	text_icon = GXC_focus_style
+
+	available = {
+		original_tag = GXC
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	bypass = {
+
+	}
+
+	ai_will_do = {
+		factor = 35
+	}
+
+	search_filters = {FOCUS_FILTER_POLITICAL}
+
+	completion_reward_joint_originator = {
+		#GXC = {
+		#	add_opinion_modifier = {
+		#		target = CHI
+		#		modifier = small_decrease
+		#	}
+		#}
+		#add_ideas = GXC_scorched_earth_policy
+		remove_ideas = GXC_japanese_officer_training #mod
+	}
+
+	completion_reward = {
+		IF = {
+			limit = {
+				OR = {
+					tag = GXC
+					tag = GDC
+				}
+			}
+			add_political_power = 50 #mod
+			IF = {
+				limit = {
+					OR = {
+						has_idea = civilian_economy
+						has_idea = low_economic_mobilisation
+					}
+				}
+				add_ideas = partial_economic_mobilisation
+			}
+
+			#add_war_support = 0.1
+		}
+	}
+}
+
+joint_focus = {
+	id = GXC_denounce_chiang #change loc to The Death Of Hu Hanmin
+	icon = GFX_focus_CHI_mend_the_rift_with_hu
+
+	prerequisite = { focus = GXC_the_japanese_visit }
+
+	relative_position_id = GXC_the_japanese_visit
+
+
+	x = 1
+	y = 1
+
+	cost = 10 #mod
+
+	text_icon = GDC_focus_style
+
+	available = {
+		original_tag = GDC
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	bypass = {
+
+	}
+
+	ai_will_do = {
+		factor = 35
+	}
+
+	search_filters = {FOCUS_FILTER_POLITICAL}
+
+	completion_reward_joint_originator = {
+		add_political_power = 50
+		add_stability = 0.1 #mod
+		add_war_support = 0.1 #mod
+	}
+
+	completion_reward = {
+		#IF = {
+		#	limit = {
+		#		OR = {
+		#			tag = GXC
+		#			tag = GDC
+		#		}
+		#	}
+		#	CHI = {
+		#		add_opinion_modifier = {
+		#			target = ROOT
+		#			modifier = medium_decrease
+		#		}
+		#	}
+		#}
+		add_stability = 0.05
+	}
+}
+
+joint_focus = {
+	id = GXC_formation_of_the_nraja #change loc to The National Salvation Army
+	icon = GFX_focus_CHI_weaponise_the_faithful
+
+	prerequisite = { focus = GXC_denounce_chiang }
+	prerequisite = { focus = GXC_the_scorched_earth_speech }
+
+	relative_position_id = GXC_denounce_chiang
+
+
+	x = -1
+	y = 1
+
+	cost = 5
+
+	text_icon = GXC_GDC_focus_style
+
+	available = {
+		OR = {
+			original_tag = GDC
+			original_tag = GXC
+		}
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	bypass = {
+
+	}
+
+	ai_will_do = {
+		factor = 35
+	}
+
+	search_filters = {FOCUS_FILTER_POLITICAL}
+
+	completion_reward_joint_originator = {
+		hidden_effect = {
+			division_template = {
+				name = "Anti-Japanese Volunteers"
+				priority = 1
+				division_names_group = CHI_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+	   			 	infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+			}
+		}
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			create_unit = {
+				division = "name = \"1. Anti-Japanese Volunteers\" division_template = \"Anti-Japanese Volunteers\" start_experience_factor = 0.3" 
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"2. Anti-Japanese Volunteers\" division_template = \"Anti-Japanese Volunteers\" start_experience_factor = 0.3" 
+				owner = ROOT
+			}
+		}
+	}
+
+	completion_reward = {
+	IF = {
+		limit = {
+			OR = {
+				tag = GXC
+				tag = GDC
+			}
+		}
+		hidden_effect = {
+			division_template = {
+				name = "Anti-Japanese Volunteers"
+				priority = 1
+				division_names_group = CHI_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+	   			 	infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+			}
+		}
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			create_unit = {
+				division = "name = \"1. Anti-Japanese Volunteers\" division_template = \"Anti-Japanese Volunteers\" start_experience_factor = 0.3" 
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"2. Anti-Japanese Volunteers\" division_template = \"Anti-Japanese Volunteers\" start_experience_factor = 0.3" 
+				owner = ROOT
+			}
+		}
+		}
+	}
+}
+
+joint_focus = {
+	id = GXC_declare_opposition #change loc to March Into Hunan
+	icon = GFX_focus_prc_remove_chiang_kai_shek
+
+	prerequisite = { focus = GXC_formation_of_the_nraja }
+
+	relative_position_id = GXC_formation_of_the_nraja
+
+
+	x = 0
+	y = 1
+
+	cost = 10 #mod
+
+	text_icon = GXC_GDC_focus_style
+
+	available = {
+		OR = {
+			original_tag = GDC
+			original_tag = GXC
+		}
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	bypass = {
+
+	}
+
+	ai_will_do = {
+		factor = 35
+	}
+
+	search_filters = {FOCUS_FILTER_POLITICAL}
+
+	completion_reward = {
+		army_experience = 25
+		IF = {
+			limit = {
+				OR = {
+					tag = GXC
+					tag = GDC
+				}
+			}
+			add_political_power = 100	
+			IF = {
+				limit = {
+					has_idea = GXC_uneasy_minds_idea
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				remove_ideas = GXC_uneasy_minds_idea
+			}
+		}
+	}
+	completion_reward_joint_originator = {
+		CHI = {
+			country_event = {
+				id = cotf_gxc.1
+				hours = 6
+			}
+		}
+	}
+
+}
+
+###MOD FOCUS TREE STARTS HERE
+joint_focus = {
+	id = GXC_the_wealth_beneath_the_mountains
+	icon = GFX_focus_generic_expand_gold_mining
+
+	x = 38
+	y = 0
+	offset = {
+		x = -18
+		y = 0
+		trigger = {
+			tag = GXC
+		}
+	}
+
+	cost = 10
+
+	text_icon = GXC_GDC_focus_style
+
+	available = {
+		OR = {
+			original_tag = GDC
+			original_tag = GXC
+		}
+		controls_state = 594
+		controls_state = 599
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	bypass = {
+
+	}
+
+	ai_will_do = {
+		factor = 2
+	}
+
+	search_filters = {FOCUS_FILTER_POLITICAL}
+
+	allow_branch = {
+		has_dlc = "No Compromise, No Surrender"
+		OR = {
+			tag = GXC
+			tag = GDC
+		}
+	}
+
+	completion_reward_joint_originator = {
+		594 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		599 = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+
+	#completion_reward = {
+	#	
+	#}
+}
+
+joint_focus = {
+	id = GXC_the_babu_powerplant
+	icon = GFX_focus_generic_coal_mining
+
+	prerequisite = { focus = GXC_the_wealth_beneath_the_mountains }
+	relative_position_id = GXC_the_wealth_beneath_the_mountains
+
+	x = 3
+	y = 1
+
+	cost = 5
+
+	text_icon = GXC_GDC_focus_style
+
+	available = {
+		OR = {
+			original_tag = GDC
+			original_tag = GXC
+		}
+		controls_state = 599
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	bypass = {
+
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	search_filters = {FOCUS_FILTER_POLITICAL}
+
+	allow_branch = {
+		has_dlc = "No Compromise, No Surrender"
+		OR = {
+			tag = GXC
+			tag = GDC
+		}
+	}
+
+	completion_reward_joint_originator = {
+		599 = {
+			add_resource = {
+				type = coal
+				amount = 7
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+
+	#completion_reward = {
+	#	
+	#}
+}
+
+joint_focus = {
+	id = GXC_ask_investments_from_the_chinese_overseas
+	icon = GFX_focus_generic_industrial_experts
+
+	prerequisite = { focus = GXC_the_wealth_beneath_the_mountains }
+	relative_position_id = GXC_the_wealth_beneath_the_mountains
+
+	x = -3
+	y = 1
+
+	cost = 5
+
+	text_icon = GXC_GDC_focus_style
+
+	available = {
+		OR = {
+			original_tag = GDC
+			original_tag = GXC
+		}
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	bypass = {
+
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	search_filters = {FOCUS_FILTER_POLITICAL}
+
+	allow_branch = {
+		has_dlc = "No Compromise, No Surrender"
+		OR = {
+			tag = GXC
+			tag = GDC
+		}
+	}
+
+	completion_reward_joint_originator = {
+		add_tech_bonus = {
+			name = GXC_ask_investments_from_the_chinese_overseas
+			bonus = 1.0
+			uses = 2
+			category = industry
+		}
+	}
+
+	completion_reward = {
+		
+	}
+}
+
+joint_focus = {
+	id = GXC_mechanize_the_mining_industry
+	icon = GFX_focus_generic_modernize_industry
+
+	prerequisite = { focus = GXC_the_wealth_beneath_the_mountains }
+	relative_position_id = GXC_the_wealth_beneath_the_mountains
+
+	x = -1
+	y = 1
+
+	cost = 10
+
+	text_icon = GXC_GDC_focus_style
+
+	available = {
+		OR = {
+			original_tag = GDC
+			original_tag = GXC
+		}
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	bypass = {
+
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	search_filters = {FOCUS_FILTER_POLITICAL}
+
+	allow_branch = {
+		has_dlc = "No Compromise, No Surrender"
+		OR = {
+			tag = GXC
+			tag = GDC
+		}
+	}
+
+	#completion_reward_joint_originator = {
+	#	
+	#}
+
+	completion_reward = {
+		add_ideas = GXC_the_wealth_beneath_the_mountains_	
+	}
+}
+
+joint_focus = {
+	id = GXC_expand_the_port_of_wuzhou
+	icon = GFX_goal_generic_positive_trade_relations
+
+	prerequisite = { focus = GXC_the_wealth_beneath_the_mountains }
+	relative_position_id = GXC_the_wealth_beneath_the_mountains
+
+	x = 1
+	y = 1
+
+	cost = 10
+
+	text_icon = GXC_GDC_focus_style
+
+	available = {
+		OR = {
+			original_tag = GDC
+			original_tag = GXC
+		}
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	bypass = {
+
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	search_filters = {FOCUS_FILTER_POLITICAL}
+
+	allow_branch = {
+		has_dlc = "No Compromise, No Surrender"
+		OR = {
+			tag = GXC
+			tag = GDC
+		}
+	}
+
+	completion_reward_joint_originator = {
+		add_offsite_building = { type = industrial_complex level = 2 }
+	}
+
+	completion_reward = {
+		
+	}
+}
+
+joint_focus = {
+	id = GXC_the_arsenals_of_guangxi
+	icon = GFX_focus_generic_military_industry
+
+	prerequisite = {
+		focus = GXC_the_babu_powerplant
+		focus = GXC_ask_investments_from_the_chinese_overseas
+	}
+	prerequisite = {
+		focus = GXC_mechanize_the_mining_industry
+		focus = GXC_expand_the_port_of_wuzhou
+	}
+	relative_position_id = GXC_the_wealth_beneath_the_mountains
+
+	x = 0
+	y = 2
+
+	cost = 10
+
+	text_icon = GXC_GDC_focus_style
+
+	available = {
+		OR = {
+			original_tag = GDC
+			original_tag = GXC
+		}
+		controls_state = 599
+		controls_state = 594
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	bypass = {
+
+	}
+
+	ai_will_do = {
+		factor = 2
+	}
+
+	search_filters = {FOCUS_FILTER_POLITICAL}
+
+	allow_branch = {
+		has_dlc = "No Compromise, No Surrender"
+		OR = {
+			tag = GXC
+			tag = GDC
+		}
+	}
+
+	completion_reward_joint_originator = {
+		599 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		594 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+	completion_reward = {
+		
+	}
+}
+
+joint_focus = {
+	id = GXC_our_own_opium_fields
+	icon = GFX_focus_RAJ_legalize_the_opium_trade
+	
+	prerequisite = {
+		focus = GXC_the_arsenals_of_guangxi
+	}
+	relative_position_id = GXC_the_arsenals_of_guangxi
+	#mutually_exclusive = { focus =  GXC_get_rid_of_the_poison }
+
+	x = 0
+	y = 1
+
+	cost = 5
+
+	text_icon = GXC_focus_style
+
+	available = {
+		original_tag = GXC
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	bypass = {
+		OR = {
+			has_idea = GXC_opium_dependent_economy_small
+			AND = {
+				NOT = {
+					has_idea = GXC_opium_dependent_economy
+					has_idea = GXC_opium_dependent_economy_small
+				}
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 9
+	}
+
+	search_filters = {FOCUS_FILTER_POLITICAL}
+
+	allow_branch = {
+		has_dlc = "No Compromise, No Surrender"
+		OR = {
+			tag = GXC
+			tag = GDC
+		}
+	}
+
+	completion_reward_joint_originator = {
+		swap_ideas = {
+			remove_idea = GXC_opium_dependent_economy
+			add_idea = GXC_opium_dependent_economy_local
+		}
+	}
+
+	#completion_reward = {
+	#	
+	#}
+}
+
+joint_focus = {
+	id = GXC_expand_public_education
+	icon = GFX_focus_research
+	
+	prerequisite = {
+		focus = GXC_our_own_opium_fields
+		#focus = GXC_get_rid_of_the_poison
+	}
+	relative_position_id = GXC_our_own_opium_fields
+
+	x = 0
+	y = 1
+
+	cost = 10
+
+	text_icon = GXC_focus_style
+
+	available = {
+		original_tag = GXC
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	bypass = {
+
+	}
+
+	ai_will_do = {
+		factor = 2
+	}
+
+	search_filters = {FOCUS_FILTER_POLITICAL}
+
+	allow_branch = {
+		has_dlc = "No Compromise, No Surrender"
+		OR = {
+			tag = GXC
+			tag = GDC
+		}
+	}
+
+	completion_reward_joint_originator = {
+		add_research_slot = 1
+	}
+
+	#completion_reward = {
+	#	
+	#}
+}
+
+joint_focus = {
+	id = GXC_get_rid_of_the_poison
+	icon = GFX_focus_PRC_ban_special_goods_trade
+	
+	prerequisite = {
+		focus = GXC_expand_public_education
+	}
+	relative_position_id = GXC_expand_public_education
+	#mutually_exclusive = { focus =  GXC_our_own_opium_fields }
+
+	x = 0
+	y = 1
+
+	cost = 10
+
+	text_icon = GXC_focus_style
+
+	available = {
+		original_tag = GXC
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	bypass = {
+		NOT = {
+			OR = {
+				has_idea = GXC_opium_dependent_economy
+				has_idea = GXC_opium_dependent_economy_local
+				has_idea = GXC_opium_dependent_economy_small
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	search_filters = {FOCUS_FILTER_POLITICAL}
+
+	allow_branch = {
+		has_dlc = "No Compromise, No Surrender"
+		OR = {
+			tag = GXC
+			tag = GDC
+		}
+	}
+
+	completion_reward_joint_originator = {
+		if = {
+			limit = { has_idea = GXC_opium_dependent_economy }
+			remove_ideas = GXC_opium_dependent_economy
+		}
+		else_if = {
+			limit = { has_idea = GXC_opium_dependent_economy_local }
+			remove_ideas = GXC_opium_dependent_economy_local
+		}
+		else_if = {
+			limit = { has_idea = GXC_opium_dependent_economy_small }
+			remove_ideas = GXC_opium_dependent_economy_small
+		}
+		else = {
+			effect_tooltip = {
+				remove_ideas = GXC_opium_dependent_economy
+			}
+		}
+	}
+
+	#completion_reward = {
+	#	
+	#}
+}
+
+joint_focus = {
+	id = GDC_revisit_the_three_year_plan
+	icon = GFX_focus_PRC_establish_shorter_market_plans
+
+
+	x = 46
+	y = 0
+	offset = {
+		x = -18
+		y = 0
+		trigger = {
+			tag = GXC
+		}
+	}
+
+	cost = 10
+
+	text_icon = GXC_GDC_focus_style
+
+	available = {
+		OR = {
+			original_tag = GDC
+			original_tag = GXC
+		}
+		controls_state = 592
+		controls_state = 593
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	bypass = {
+
+	}
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	search_filters = {FOCUS_FILTER_POLITICAL}
+
+	allow_branch = {
+		has_dlc = "No Compromise, No Surrender"
+		OR = {
+			tag = GXC
+			tag = GDC
+		}
+	}
+
+	completion_reward_joint_originator = {
+		592 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		593 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		add_tech_bonus = {
+			name = GDC_revisit_the_three_year_plan
+			bonus = 1.0
+			uses = 2
+			category = industry
+		}
+	}
+
+	#completion_reward = {
+	#	
+	#}
+}
+
+joint_focus = {
+	id = GDC_the_silk_of_guangzhou
+	icon = GFX_focus_generic_monetary_union
+
+	prerequisite = { focus = GDC_revisit_the_three_year_plan }
+	relative_position_id = GDC_revisit_the_three_year_plan
+
+	x = 2
+	y = 1
+
+	cost = 10
+
+	text_icon = GXC_GDC_focus_style
+
+	available = {
+		OR = {
+			original_tag = GDC
+			original_tag = GXC
+		}
+		controls_state = 592
+		controls_state = 593
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	bypass = {
+
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	search_filters = {FOCUS_FILTER_POLITICAL}
+
+	allow_branch = {
+		has_dlc = "No Compromise, No Surrender"
+		OR = {
+			tag = GXC
+			tag = GDC
+		}
+	}
+
+	completion_reward_joint_originator = {
+		592 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		593 = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+
+	#completion_reward = {
+	#	
+	#}
+}
+
+joint_focus = {
+	id = GDC_the_arsenals_of_guangdong
+	icon = GFX_goal_generic_construct_mil_factory
+
+	prerequisite = { focus = GDC_revisit_the_three_year_plan }
+	relative_position_id = GDC_revisit_the_three_year_plan
+
+	x = -2
+	y = 1
+
+	cost = 10
+
+	text_icon = GXC_GDC_focus_style
+
+	available = {
+		OR = {
+			original_tag = GDC
+			original_tag = GXC
+		}
+		controls_state = 592
+		controls_state = 593
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	bypass = {
+
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	search_filters = {FOCUS_FILTER_POLITICAL}
+
+	allow_branch = {
+		has_dlc = "No Compromise, No Surrender"
+		OR = {
+			tag = GXC
+			tag = GDC
+		}
+	}
+
+	completion_reward_joint_originator = {
+		592 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		593 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+	#completion_reward = {
+	#	
+	#}
+}
+
+joint_focus = {
+	id = GDC_finish_the_donglang_steel_works
+	icon = GFX_focus_generic_steel_mill
+
+	prerequisite = { focus = GDC_revisit_the_three_year_plan }
+	relative_position_id = GDC_revisit_the_three_year_plan
+
+	x = 0
+	y = 1
+
+	cost = 5
+
+	text_icon = GXC_GDC_focus_style
+
+	available = {
+		OR = {
+			original_tag = GDC
+			original_tag = GXC
+		}
+		controls_state = 592
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	bypass = {
+
+	}
+
+	ai_will_do = {
+		factor = 100
+	}
+
+	search_filters = {FOCUS_FILTER_POLITICAL}
+
+	allow_branch = {
+		has_dlc = "No Compromise, No Surrender"
+		OR = {
+			tag = GXC
+			tag = GDC
+		}
+	}
+
+	completion_reward_joint_originator = {
+		592 = {
+			add_resource = {
+				type = steel
+				amount = 8
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+	#completion_reward = {
+	#	
+	#}
+}
+
+joint_focus = {
+	id = GDC_the_jewel_of_the_south
+	icon = GFX_focus_generic_university_2
+
+	prerequisite = { focus = GDC_finish_the_donglang_steel_works }
+	prerequisite = { focus = GDC_the_arsenals_of_guangdong }
+	prerequisite = { focus = GDC_the_silk_of_guangzhou }
+	relative_position_id = GDC_finish_the_donglang_steel_works
+
+	x = 0
+	y = 1
+
+	cost = 10
+
+	text_icon = GXC_GDC_focus_style
+
+	available = {
+		OR = {
+			original_tag = GDC
+			original_tag = GXC
+		}
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	bypass = {
+
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	search_filters = {FOCUS_FILTER_POLITICAL}
+
+	allow_branch = {
+		has_dlc = "No Compromise, No Surrender"
+		OR = {
+			tag = GXC
+			tag = GDC
+		}
+	}
+
+	#completion_reward_joint_originator = {
+	#	
+	#}
+
+	completion_reward = {
+		add_research_slot = 1
+	}
+}

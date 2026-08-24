@@ -40,6 +40,14 @@ IF = {
 	}
 }
 
+<<<<<<< Updated upstream
+=======
+recruit_character = XIC_yu_xuezhong
+recruit_character = XIC_wang_yizhe
+recruit_character = XIC_he_zhuguo
+recruit_character = XIC_fengtian_army
+
+>>>>>>> Stashed changes
 PRC = {
 	add_opinion_modifier = {
 		target = XIC
@@ -157,4 +165,8 @@ set_politics = {
 }
 set_popularities = {
 	neutrality = 100
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

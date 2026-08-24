@@ -284,6 +284,96 @@ bookmarks = {
 			label = { rj_label_new_content }
 		}
 
+		CHI = {
+			minor = yes
+			history = "CHI_GATHERING_STORM_DESC"
+			required_dlc = { "No Compromise, No Surrender" }
+			ideology = neutrality
+			version = no_compromise_no_surrender
+			ideas = {
+				CHI_neglected_countryside_fake_ns
+				CHI_corruption_in_the_armed_forces_fake_ns
+				CHI_nine_power_treaty_sea_fake_ns
+			}
+			focuses = {
+				CHI_prepare_for_a_change_in_leadership
+				CHI_strengthening_our_resolve
+				CHI_denounce_feudalism
+			}
+			label = { rj_label_new_content }
+		}
+		MAN = {
+			minor = yes
+			history = "MAN_TSR_GATHERING_STORM_DESC"
+			required_dlc = { "No Compromise, No Surrender" }
+			ideology = fascism
+			version = no_compromise_no_surrender
+			ideas = {
+				MAN_banditry
+				MAN_the_kangde_emperor
+				MAN_low_legitimacy_5
+			}
+			focuses = {
+				MAN_tsr_obedience
+				MAN_the_jade_marshal
+				MAN_tsr_claim_the_mandate_of_heaven
+			}
+			label = { rj_label_new_content }
+		}
+		GDC = {
+			minor = yes
+			required_dlc = { "No Compromise, No Surrender" }
+			history = "WARLORDS_GATHERING_STORM_DESC"
+			ideology = neutrality
+			version = no_compromise_no_surrender
+			ideas = {
+				GDC_opium_revenues
+				CHI_ineffective_bureaucracy_warlord
+				CHI_warlord_state_idea
+			}
+			focuses = {
+				GXC_denounce_chiang
+				GXC_declare_opposition
+				GXC_the_japanese_visit
+			}
+			label = { rj_label_new_content }
+		}
+		GXC = {
+			minor = yes
+			required_dlc = { "No Compromise, No Surrender" }
+			history = "WARLORDS_GATHERING_STORM_DESC"
+			ideology = neutrality
+			version = no_compromise_no_surrender
+			ideas = {
+				GXC_opium_dependent_economy
+				GXC_japanese_officer_training
+				CHI_warlord_state_idea
+			}
+			focuses = {
+				GXC_sun_yat_sens_dream
+				GXC_rally_the_KMT_RCA
+				GXC_chen_jiaomings_dream
+			}
+			label = { rj_label_new_content }
+		}
+		SHX = {
+			minor = yes
+			required_dlc = { "No Compromise, No Surrender" }
+			history = "WARLORDS_GATHERING_STORM_DESC"
+			ideology = neutrality
+			version = no_compromise_no_surrender
+			ideas = {
+				SHX_the_opium_hypocrisy
+				CHI_warlord_state_idea
+			}
+			focuses = {
+				SHX_guominjun_reborn
+				SHX_the_suiyuan_campaign
+				SHX_shanxi_prevails
+			}
+			label = { rj_label_new_content }
+		}
+
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }

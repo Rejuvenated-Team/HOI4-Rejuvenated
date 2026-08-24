@@ -20,6 +20,65 @@ set_variable = { RNG_state_shintoism_research_speed_factor = 0 }
 set_variable = { RNG_state_shintoism_recruitable_population_factor = 0 }
 set_variable = { RNG_state_shintoism_political_power_gain = 0 }
 
+<<<<<<< Updated upstream
+=======
+set_variable = { SHX_anti_japanese_intellectuals_communism_drift = 0.01 }
+set_variable = { SHX_citizen_army_conscription_factor = 0.15 }
+set_variable = { SHX_citizen_army_conscription = 0 }
+set_variable = { SHX_citizen_army_research_speed_factor = 0 }
+set_variable = { SHX_citizen_army_stability_factor = 0 }
+set_variable = { SHX_citizen_army_stability_weekly = 0 }
+set_variable = { SHX_citizen_army_consumer_goods_factor = 0 }
+set_variable = { SHX_citizen_army_political_power_factor = -0.1 }
+set_variable = { SHX_citizen_army_production_speed_buildings_factor = 0 }
+set_variable = { SHX_citizen_army_global_building_slots_factor = 0 }
+set_variable = { SHX_citizen_army_resistance_target_on_our_occupied_states = 0 }
+set_variable = { SHX_citizen_army_compliance_growth_on_our_occupied_states = 0 }
+set_variable = { SHX_citizen_army_command_power_gain_mult = 0 }
+set_variable = { SHX_citizen_army_war_support_factor = 0 }
+set_variable = { SHX_citizen_army_defensive_war_stability_factor = 0 }
+set_variable = { SHX_citizen_army_experience_gain_army_factor = 0 }
+set_variable = { SHX_citizen_army_army_attack_factor = -0.05 }
+set_variable = { SHX_citizen_army_army_core_attack_factor = 0 }
+set_variable = { SHX_citizen_army_army_org_factor = 0 }
+set_variable = { SHX_citizen_army_army_morale_factor = 0 }
+set_variable = { SHX_citizen_army_org_loss_when_moving = 0 }
+set_variable = { SHX_citizen_army_attrition = 0 }
+set_variable = { SHX_citizen_army_acclimatization_cold_climate_gain_factor = 0 }
+set_variable = { SHX_citizen_army_acclimatization_hot_climate_gain_factor = 0 }
+set_variable = { SHX_citizen_army_training_time_factor = 0 }
+set_variable = { SHX_citizen_army_supply_consumption_factor = 0 }
+set_variable = { SHX_citizen_army_pocket_penalty = 0 }
+set_variable = { SHX_citizen_army_democratic_drift = 0 }
+set_variable = { SHX_citizen_army_drift_defence_factor = 0 }
+set_variable = { SHX_citizen_army_war_support_weekly = 0 }
+set_variable = { SHX_citizen_army_max_planning_factor = 0 }
+set_variable = { SHX_the_northern_frontier_surrender_limit = 0.1 }
+set_variable = { SHX_the_northern_frontier_equipment_capture_factor = 0 }
+set_variable = { SHX_the_northern_frontier_max_dig_in = 0 }
+set_variable = { SHX_the_northern_frontier_dig_in_speed_factor = 0 }
+set_variable = { SHX_the_northern_frontier_special_forces_cap = 0 }
+set_variable = { SHX_the_northern_frontier_special_forces_out_of_supply_factor = 0 }
+add_dynamic_modifier = { modifier = SHX_the_northern_frontier }
+add_dynamic_modifier = { modifier = SHX_anti_japanese_intellectuals }
+add_dynamic_modifier = { modifier = SHX_citizen_army }
+add_ideas = SHX_the_opium_hypocrisy
+set_variable = { SHX_taiyuan_arsenal_dynamic_modifier_industrial_capacity_factory = 0 }
+set_variable = { SHX_taiyuan_arsenal_dynamic_modifier_industrial_capacity_dockyard = 0 }
+set_variable = { SHX_taiyuan_arsenal_dynamic_modifier_equipment_conversion_speed = 0 }
+set_variable = { SHX_taiyuan_arsenal_dynamic_modifier_research_speed_factor = 0 }
+set_variable = { SHX_taiyuan_arsenal_dynamic_modifier_production_factory_max_efficiency_factor = 0 }
+add_dynamic_modifier = { modifier = SHX_taiyuan_arsenal_dynamic_modifier }
+
+set_variable = { SHX_the_three_new_principles_of_the_people_dynamic_modifier_political_power_gain = 0 }
+set_variable = { SHX_the_three_new_principles_of_the_people_dynamic_modifier_consumer_goods_factor = 0 }
+set_variable = { SHX_the_three_new_principles_of_the_people_dynamic_modifier_global_building_slots_factor = 0 }
+set_variable = { SHX_the_three_new_principles_of_the_people_dynamic_modifier_stability_factor = 0 }
+set_variable = { SHX_the_three_new_principles_of_the_people_dynamic_modifier_war_support_factor = 0 }
+set_variable = { SHX_the_three_new_principles_of_the_people_dynamic_modifier_research_speed_factor = 0 }
+set_variable = { SHX_the_three_new_principles_of_the_people_dynamic_modifier_drift_defence_factor = 0 }
+
+>>>>>>> Stashed changes
 IF = {
 	limit = {
 		has_dlc = "No Compromise, No Surrender"
@@ -30,12 +89,21 @@ IF = {
 	}
 }
 
+<<<<<<< Updated upstream
 set_stability = 0.65
+=======
+set_stability = 0.5
+>>>>>>> Stashed changes
 set_war_support = 0.4
 
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
+<<<<<<< Updated upstream
+=======
+	militia_tech = 1
+	gw_artillery = 1
+>>>>>>> Stashed changes
 }
 
 IF = {
@@ -43,6 +111,7 @@ IF = {
 		has_dlc = "No Compromise, No Surrender"
 	}
 	recruit_character = CHI_fu_zuoyi
+<<<<<<< Updated upstream
 	set_technology = {
 		gw_artillery = 1
 	}
@@ -52,6 +121,13 @@ IF = {
 }
 recruit_character = SHX_yan_xishan
 recruit_character = SHX_wang_jingguo
+=======
+}
+recruit_character = SHX_yan_xishan
+recruit_character = SHX_wang_jingguo
+recruit_character = SHX_dong_qiwu
+recruit_character = SHX_zhao_chengshou
+>>>>>>> Stashed changes
 recruit_character = SHX_zhang_shen
 recruit_character = SHX_luo_zhao
 recruit_character = SHX_liao_ting
@@ -69,6 +145,7 @@ recruit_character = SHX_sun_li
 recruit_character = SHX_wang_zuanxu
 recruit_character = SHX_fu_zuoyi
 recruit_character = SHX_qu_yangke
+<<<<<<< Updated upstream
 
 
 if = {
@@ -168,6 +245,14 @@ set_grand_doctrine = new_strategic_destruction
 	complete_special_project = {
 		project = sp:sp_air_radar
 	}
+=======
+recruit_character = SHX_fan_xiangli
+recruit_character = SHX_wang_ping
+recruit_character = SHX_li_dequan
+
+add_ideas = {
+	CHI_warlord_state_idea
+>>>>>>> Stashed changes
 }
 
 set_politics = {
@@ -178,4 +263,8 @@ set_politics = {
 }
 set_popularities = {
 	neutrality = 100
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

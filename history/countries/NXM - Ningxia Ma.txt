@@ -52,6 +52,12 @@ IF = {
 	}
 }
 
+<<<<<<< Updated upstream
+=======
+recruit_character = NXM_ma_tengjiao
+recruit_character = NXM_lu_zhongliang
+
+>>>>>>> Stashed changes
 if = { 
 	limit = {
 		has_dlc = "Waking the Tiger"
@@ -169,4 +175,8 @@ set_politics = {
 }
 set_popularities = {
 	neutrality = 100
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

@@ -1,0 +1,24 @@
+﻿l_english:
+ #CHINA
+ CHI_prepare_for_a_change_in_leadership: "Recall Wang Jingwei"
+ CHI_prepare_for_a_change_in_leadership_desc: "Since the cowardly assassination attempt of 1935, Wang Jingwei has been recuperating abroad, in Europe. However, with the growing instability in China and the ever-present risks to Generalissimo Chiang Kai-shek's safety, the Kuomintang needs a clear line of succession. It is time to recall him to Nanjing and reintegrate him into the leadership."
+ CHI_nationalize: "Chinese Industry!"
+ CHI_militarize: "Chinese Army!"
+ CHI_productive: "Chinese Production!"
+ #MANCHUKUO
+ MAN_tsr_zhao_shangzhis_coup: "Communist Counter-Coup" 
+ MAN_tsr_assertiveness: "Reignite the Resistance"
+ MAN_tsr_reclaim_our_lost_possessions: "Our Lost Subjects"
+ #GUANGXI GUANGDONG
+ GXC_the_japanese_visit: "Turn The Enemy's Own Fist Against Him"
+ GXC_the_japanese_visit_desc: "Since 1934 the southern provinces have been of interest to Japan, being visited by military missions and diplomatic delegations. As the Triumvirate said, this is just the wait for the moment to turn the enemy's own fist against him. This cooperation strengthens the provincial army and grants access to military expertise, but it also gives Japan influence within the southern provinces..."
+ GXC_the_scorched_earth_speech: "The Scorched Earth Speech"
+ GXC_the_scorched_earth_speech_desc: "Li Zongren has publicly called for a total war of national liberation against Japanese aggression, declaring that China must be prepared to see the entire country reduced to scorched earth rather than accept submission. His words describe not the destruction of territory, but the mobilization of a entire nation for a prolonged and uncompromising resistance."
+ GXC_denounce_chiang: "The Death Of Hu Hanmin"
+ GXC_denounce_chiang_desc: "Hu Hanmin has suddenly died in Guangzhou. Though his prestige lent legitimacy to our opposition against Nanjing, his ambitions frequently restricted our freedom of action. Guangdong may now act without deferring to an uneasy political partner, leaving Chen Jitang as the undisputed master of the province. Yet Hu's passing has also left Chiang Kai-shek without a true rival within the Kuomintang..."
+ GXC_formation_of_the_nraja: "The National Salvation Army"
+ GXC_formation_of_the_nraja_desc: "Chen Jitang and the Triumvirate have began the organization of the National Revolutionary Anti-Japanese National Salvation Army, placing their existing forces beneath a common command and a single banner. Its formation is also an armed challenge to Chiang Kai-shek, whose government must now either accept the demands of the southern provinces or prepare to suppress them by force."
+ GXC_declare_opposition: "March Into Hunan"
+ GXC_declare_opposition_desc: "The armies of Guangxi and Guangdong have crossed into southern Hunan, occupying Chenzhou and Yongzhou as the first stage of their proclaimed march north. What the we present as a patriotic expedition against Japan is understood in Nanjing as an open military rebellion against the central government. The die is cast."
+ #WARLORDS
+ CHI_sea_push_into_manchuria: "Our Lost Territories"

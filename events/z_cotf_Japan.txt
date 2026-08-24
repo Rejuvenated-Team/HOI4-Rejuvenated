@@ -1,0 +1,30 @@
+add_namespace = cotf_jap
+country_event = {
+	id = cotf_jap.1
+	title = "Japan Declares War Against The CCP"
+	desc = cotf_jap.1.d
+	picture = GFX_report_event_japanese_chinese_surrender
+	timeout_days = 14
+	is_triggered_only = yes
+	option = {
+		#name = cotf_jap.1.a
+		name = "This is our opportunity!"
+		ai_chance = {
+			factor = 100
+		}
+		declare_war_on = {
+			target = PRC
+			type = take_state_focus
+			generator = {
+				622
+			}
+		}
+	}
+	option = {
+		name = "Do they think China is their backyard or something?"
+		#name = cotf_jap.1.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

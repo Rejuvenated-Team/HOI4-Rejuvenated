@@ -1,0 +1,131 @@
+#foreign_politics = {
+#
+#	FRA_vietnam_war = {
+#
+#		icon = generic_army_support
+#
+#		allowed = {
+#			original_tag = FRA
+#		}
+#
+#		available = {
+#			OR = {
+#				VIN = { has_capitulated = yes }
+#				NOT = { has_war_with = VIN }
+#			}
+#		}
+#
+#		priority = 10
+#
+#		fire_only_once = yes
+#
+#		days_mission_timeout = 90
+#
+#		is_good = no
+#
+#		cancel_if_not_visible = yes
+#
+#		activation = {
+#			NOT = { has_idea = the_vietnam_war }
+#			has_war_with = VIN
+#		}
+#
+#		timeout_effect = {
+#			VIN = { transfer_state = 671 }
+#			VIN = { transfer_state = 741 }
+#			VIN = { transfer_state = 670 }
+#			white_peace = VIN
+#		}
+#
+#	}
+#
+#	FRA_vietnam_surrender = {
+#
+#		icon = decision_eng_support_imperialist_coup
+#
+#		allowed = {
+#			original_tag = FRA
+#		}
+#		available = {
+#			VIN = { is_subject = no }
+#			has_war_with = VIN		
+#		}
+#		visible = {
+#			NOT = { has_idea = the_vietnam_war }
+#			VIN = { is_subject = no }
+#			has_war_with = VIN
+#		}
+#		cost = 0
+#		fire_only_once = yes
+#		ai_will_do = {
+#			base = 1
+#			modifier = {
+#				VIN = { surrender_progress > 0.5 }
+#				factor = 0
+#			}
+#			modifier = {
+#				has_war_support > 0.5
+#				factor = 0
+#			}
+#			modifier = {
+#				NOT = {
+#					controls_state = 670
+#					controls_state = 671
+#					controls_state = 741
+#					controls_state = 286
+#				}
+#				add = 100
+#			}
+#		}
+#		complete_effect = {
+#			VIN = { transfer_state = 671 }
+#			VIN = { transfer_state = 741 }
+#			VIN = { transfer_state = 670 }
+#			white_peace = VIN
+#		}
+#	}
+#}
+#
+#war_measures = {
+#
+#	FRA_they_shall_not_pass = {
+#
+#		icon = GFX_decision_generic_military
+#
+#		allowed = {
+#			OR = {
+#				original_tag = FRA
+#			}
+#		}
+#
+#		available = {
+#			OR = {
+#				has_war_with = GER
+#				has_defensive_war = yes
+#			}
+#		}
+#
+#		visible = {
+#			has_completed_focus = FRA_collaborate_with_the_maquis
+#		}
+#
+#		cost = 25
+#		fire_only_once = no
+#		ai_will_do = {
+#			factor = 1000
+#		}
+#
+#		days_remove = 120
+#		days_re_enable = 365
+#
+#		complete_effect = {
+#			add_war_support = 0.05
+#		}
+#
+#		modifier = {
+#			army_core_defence_factor = 0.1
+#			army_morale_factor = 0.05
+#		}
+#	}
+#
+#}

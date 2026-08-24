@@ -32,15 +32,20 @@ set_variable = { RNG_state_shintoism_political_power_gain = 0 }
 
 oob = "SIC_1936_sea"
 
-set_stability = 0.7
+set_stability = 0.5
 set_war_support = 0.4
 set_research_slots = 3
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
 }
 
-recruit_character = RJ_SIC_liu_wenhui
+recruit_character = SIC_liu_wenhui
+
+SIC_liu_wenhui = {
+	set_character_flag = can_flip_to_prc
+}
 
 IF = {
 	limit = {
@@ -50,12 +55,9 @@ IF = {
 	recruit_character = SIC_yang_sen
 	recruit_character = CHI_gu_zhutong
 
-	SIC_liu_wenhui = {
-		set_character_flag = can_flip_to_prc
-	}
-
 	add_ideas = {
 		SIC_a_loose_unity
+		CHI_warlord_looting_idea
 	}
 
 }

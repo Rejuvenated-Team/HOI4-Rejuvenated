@@ -1,0 +1,89 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = COTF_starting_state_cores_added }
+				}
+				set_global_flag = COTF_starting_state_cores_added
+
+				604 = { add_core_of = TIB }
+				752 = { add_core_of = TIB }
+				183 = {
+					add_core_of = GRE
+					add_core_of = TUR
+				}
+
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = TIB
+							is_core_of = MON
+							is_core_of = TAN
+						}
+						NOT = {
+							is_core_of = CHI
+						}
+					}
+					add_claim_by = CHI
+				}
+			}
+		}
+	}
+
+	#on_startup = {
+	#	effect = {
+	#		MAN = {
+	#			if = {
+	#				limit = {
+	#					has_dlc = "No Compromise, No Surrender"
+	#					has_country_flag = MAN_AI_RANDOM_INDEPENDENCE_NEU
+	#					OR = {
+	#						AND = {
+	#							is_historical_focus_on = no
+	#							has_game_rule = {
+	#								rule = MAN_ai_behavior
+	#								option = DEFAULT
+	#							}
+	#						}
+	#						has_game_rule = {
+	#							rule = MAN_ai_behavior
+	#							option = RANDOM
+	#						}
+	#					}
+	#				}
+	#				random_list = {
+	#					1 = { }
+	#					1 = {
+	#						clr_country_flag = MAN_AI_RANDOM_INDEPENDENCE_NEU
+	#						set_country_flag = MAN_AI_RANDOM_INDEPENDENCE_NEU_ZHANG_XUELIANG
+	#					}
+	#					1 = {
+	#						clr_country_flag = MAN_AI_RANDOM_INDEPENDENCE_NEU
+	#						set_country_flag = MAN_AI_RANDOM_INDEPENDENCE_NEU_WU_PEIFU
+	#					}
+	#				}
+	#			}
+	#		}
+	#	}
+	#}
+
+	on_subject_annexed = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { original_tag = CHI }
+					ROOT = { is_chinese_warlord = yes }
+				}
+
+				ROOT = {
+					every_unit_leader = {
+						set_nationality = FROM
+					}
+				}
+			}
+		}
+	}
+
+	
+}

@@ -99,6 +99,11 @@ recruit_character = XSM_keng_shoushan
 recruit_character = XSM_li_shiqun
 recruit_character = XSM_fang_jing
 recruit_character = XSM_zi_shen
+<<<<<<< Updated upstream
+=======
+recruit_character = XSM_ma_biao
+recruit_character = XSM_ma_jirong
+>>>>>>> Stashed changes
 
 set_stability = 0.5
 set_war_support = 0.5
@@ -229,4 +234,8 @@ set_politics = {
 }
 set_popularities = {
 	neutrality = 100
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

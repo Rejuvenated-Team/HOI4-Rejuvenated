@@ -1,0 +1,63 @@
+ideas = {
+	country = {
+		the_fading_sun = {
+			picture = fading_sun
+			allowed = {
+				tag = JAP
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			cancel = {
+				OR = {
+					is_subject = yes
+					has_government = democratic
+					has_government = communism
+				}
+			}
+			removal_cost = -1
+			rule = {
+				can_join_factions = no
+				can_create_factions = no
+				can_not_declare_war = yes
+			}
+			modifier = {
+				justify_war_goal_time = 1
+				stability_factor = -0.1
+				war_support_factor = -0.5
+				fascism_drift = -0.25
+				ai_focus_peaceful_factor = 1
+				ai_focus_defense_factor = 1
+			}
+		}
+
+		the_fading_sun_alliance = {
+			picture = fading_sun_alliance
+			allowed = {
+				tag = JAP
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			cancel = {
+				OR = {
+					is_subject = yes
+					has_government = democratic
+					has_government = communism
+				}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = 1
+				stability_factor = -0.1
+				war_support_factor = -0.3
+				fascism_drift = -0.25
+				ai_focus_peaceful_factor = 1
+				ai_focus_defense_factor = 1
+			}
+		}
+	}
+}

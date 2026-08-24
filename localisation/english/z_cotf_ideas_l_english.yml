@@ -1,0 +1,106 @@
+﻿l_english:
+ #JAPAN
+ the_fading_sun: "The Fading Sun"
+ the_fading_sun_desc: "The IJA has evacuated Manchuria and Korea after Chinese forces pushed us out of the region. The rising sun is fading..."
+
+ the_fading_sun_alliance: "The Fading Sun"
+ the_fading_sun_alliance_desc: "The IJA has evacuated Manchuria and Korea after Chinese forces pushed us out of the region. Japan is no longer absolutely isolated, but the shame of defeat still weighs heavily on the nation."
+
+ #MANCHUKUO
+ MAN_rising_anti_japanese_sentiments: "Rising Anti-Japanese Sentiments"
+ MAN_rising_anti_japanese_sentiments_desc: "Years of occupation, humiliation, and broken promises have left Manchuria restless. Anti-Japanese feeling now spreads through barracks, villages, and city streets alike."
+
+ MAN_manchurian_guerrillas: "Manchurian Guerrillas"
+ MAN_manchurian_guerrillas_desc: "Partisan bands across Manchuria know the terrain, the railways, and the weaknesses of foreign garrisons. Their war is irregular, but their cause is clear."
+
+ MAN_white_russian_advisers_cotf: "$MAN_white_russian_advisers$"
+ MAN_white_russian_advisers_cotf_desc: "$MAN_white_russian_advisers_desc$"
+
+ MAN_haozhengfu1: "A Government of Good Men"
+ MAN_haozhengfu2: "A Government of Good Men"
+ MAN_haozhengfu3: "A Government of Good Men"
+
+ MAN_confucianism1: "Ingrained Confucianism"
+ MAN_confucianism2: "Ingrained Confucianism"
+ MAN_confucianism3: "Ingrained Confucianism"
+
+ MAN_agrarian_reform: "Agrarian Reform"
+
+ MAN_new_democratic_economy: "New Democratic Economy"
+
+ MAN_the_legitimate_successor_cotf: "$MAN_the_legitimate_successor$"
+
+ #SHANXI
+ SHX_the_northern_frontier: "The Northern Frontier"
+ SHX_the_northern_frontier_desc: "Since the Japanese occupation of Manchuria and the expansion of their influence beyond the Great Wall, northern Shanxi has become one of the bulwarks against Japanese forces. We must be always ready, for Japanese invaders, Mongol forces, and now even the Communists all threaten to turn the north of China into the first battlefield of the next war."
+ SHX_modify_the_northern_frontier_dynamic_modifier_tt: "Modify §Y$SHX_the_northern_frontier$§! by:"
+
+ SHX_citizen_army: "Citizen Army"
+ SHX_citizen_army_desc: "Yan Xishan has long sought to defend Shanxi through local mobilization rather than relying solely on a costly professional army. Village militias, reserve training, and locally recruited forces form the backbone of provincial defense, allowing Shanxi to call upon its own people in times of crisis."
+ SHX_dare_to_die_corps: "Dare-to-die Corps"
+ SHX_dare_to_die_corps_desc: "The Ximenghui has turned Shanxi's local citizen militias into a corps of disciplined volunteers, bound by anti-Japanese fervor and prepared to hold the line at any cost. However, the new army's ideology has been getting increasingly influenced by our communist allies, which may make us lose control over it in the future."
+ SHX_new_shanxi_army: "New Shanxi Army"
+ SHX_new_shanxi_army_desc: "Shanxi's citizen militias and provincial formations have been reorganized into a more cohesive provincial army, preserving local mobilization while improving discipline, coordination, and operational readiness in order to defend China from any invader."
+ SHX_national_peoples_army: "National People's Army"
+ SHX_national_peoples_army_desc: "The old Guominjun spirit has been fused with Shanxi's citizen militias, Christian associations, and provincial defense networks into a national people's army under Feng Yuxiang's banner. Its soldiers are expected to fight not only for the province, but for the moral and national salvation of China."
+ SHX_modify_citizen_army_dynamic_modifier_tt: "Modify §Y$SHX_citizen_army$§! by:"
+ SHX_modify_dare_to_die_corps_dynamic_modifier_tt: "Modify §Y$SHX_dare_to_die_corps$§! by:"
+ SHX_modify_new_shanxi_army_dynamic_modifier_tt: "Modify §Y$SHX_new_shanxi_army$§! by:"
+ SHX_modify_national_peoples_army_dynamic_modifier_tt: "Modify §Y$SHX_national_peoples_army$§! by:"
+
+ SHX_anti_japanese_intellectuals: "Anti-Japanese Intellectuals"
+ SHX_anti_japanese_intellectuals_desc: "The loss of Manchuria and the weakness of the Nanjing government have stirred students, teachers, journalists, and young activists all across Shanxi to call for resistance against Japan. Their influence strengthens the region's resolve against foreign aggression, but it also brings radical ideas into a province long ruled by military authority."
+ SHX_modify_anti_japanese_intellectuals_dynamic_modifier_tt: "Modify §Y$SHX_anti_japanese_intellectuals$§! by:"
+
+ SHX_the_opium_hypocrisy: "The Opium Hypocrisy"
+ SHX_the_opium_hypocrisy_desc: "Yan Xishan’s government has long claimed to fight the scourge of opium, presenting Shanxi as a model province of discipline and moral reform. Yet behind the rhetoric, the provincial authorities continue to profit from a state-controlled opium trade, disguised as medical treatment for addicts and enforced through local officials. These revenues help finance reconstruction and industry, but the contradiction corrodes public trust and binds the administration to the very vice it claims to eradicate."
+
+ SHX_taiyuan_arsenal_dynamic_modifier: "The Taiyuan Arsenal"
+ SHX_modify_taiyuan_arsenal_dynamic_modifier_tt: "Modify §Y$SHX_taiyuan_arsenal_dynamic_modifier$§! by:"
+
+ SHX_the_three_new_principles_of_the_people_dynamic_modifier: "The New Three Principles of the People"
+ SHX_modify_the_three_new_principles_of_the_people_dynamic_modifier_tt: "Modify §Y$SHX_the_three_new_principles_of_the_people_dynamic_modifier$§! by:"
+
+ PRC_infiltration_in_shanxi: "Communist Infiltration in Shanxi"
+ PRC_infiltration_in_shanxi_desc: "§RWill be removed once Shanxi is fully controlled by Communist forces.§!"
+
+ SHX_japanese_investments: "Japanese Investments"
+ SHX_fragile_neutrality: "Fragile Neutrality"
+
+ #GUANGXI
+ GXC_the_triumvirate: "The Triumvirate"
+ GXC_the_triumvirate_desc: "Guangxi is not ruled by a single warlord, but by a careful balance between Li Zongren, Bai Chongxi, and Huang Xuchu. Their division of military, administrative, and political duties has given the province a rare degree of stability, allowing it to survive where less disciplined cliques collapsed into corruption and infighting. So long as the three leaders move as one, Guangxi can resist any menace to its sovereignty; should their interests diverge, the machinery of government may grind against itself."
+ GXC_modify_the_triumvirate_dynamic_modifier_tt: "Modify §Y$GXC_the_triumvirate$§! by:"
+ GXC_the_southern_bastion: "The Southern Bastion"
+ GXC_modify_the_southern_bastion_dynamic_modifier_tt: "Modify §Y$GXC_the_southern_bastion$§! by:"
+ GXC_baojia_militarism: "Baojia Militarism"
+ GXC_baojia_militarism_desc: "Through the baojia system, militia organization, and military training woven into local life, the New Guangxi Clique has turned villages, schools, and households into extensions of the provincial army. This system has allowed the region to suppress banditry, strengthen local control, and give Guangxi a deep pool of disciplined manpower despite its poverty. But such militarization comes at a cost: families lose labor, education bends toward warfare, and the economy must carry the weight of a province forever preparing for war."
+ GXC_modify_baojia_militarism_dynamic_modifier_tt: "Modify §Y$GXC_baojia_militarism$§! by:"
+ GXC_the_pearl_river_valley_revolution: "The Pearl River Valley Revolution"
+ GXC_the_pearl_river_valley_revolution_desc: "From the villages of Guangdong that produced Hong Xiuquan and Sun Yat-sen, to the mountains of Guangxi where the Taiping first raised their banners, the Pearl River Valley has repeatedly given birth to movements that challenged the old order. Guangzhou would later become the stronghold of the republican revolution and the starting point of the Northern Expedition. To the people of Liangguang, revolution is no foreign doctrine, but a regional inheritance, whenever China has fallen into stagnation, the south has risen first."
+ GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt: "Modify §Y$GXC_the_pearl_river_valley_revolution$§! by:"
+ GXC_opium_dependent_economy: "Opium Dependent Economy"
+ GXC_opium_dependent_economy_desc: "The New Guangxi Clique presents its rule as disciplined, reformist, and devoted to provincial reconstruction, yet much of this state-building rests on the opium trade passing through Guangxi. So-called opium suppression fines account for more than 35% of provincial revenue, and related transit taxes helped fund the clique's militia system, administration, and military buildup. These revenues give Guangxi the means to build a model province, but they also leave the regime dangerously tied to the very traffic it claims to root out."
+ GXC_opium_dependent_economy_local: "Opium Dependent Economy"
+ GXC_opium_dependent_economy_local_desc: "The New Guangxi Clique presents its rule as disciplined, reformist, and devoted to provincial reconstruction, yet much of this state-building rests on the opium trade passing through and produced in Guangxi. So-called opium suppression fines account for more than 35% of provincial revenue, and related transit taxes helped fund the clique's militia system, administration, and military buildup. These revenues give Guangxi the means to build a model province, but they also leave the regime dangerously tied to the very traffic it claims to root out."
+ GXC_opium_dependent_economy_small: "Opium Revenues"
+ GXC_opium_dependent_economy_small_desc: "Liangguang's wealth does not rest on opium alone, but its government has made the drug an indispensable source of fiscal strength. Opium taxes make up more than 20% of provincial revenues, of course, this income helps finance Liangguang's factories, roads, air force, and autonomy from Nanjing, but it also stains the regime's modernizing image with corruption and dependence on vice."
+ GXC_japanese_officer_training: "Japanese Officer Training"
+ GXC_japanese_officer_training_desc: "Beginning in 1934, the New Guangxi Clique began employing Japanese military instructors and technicians to train its forces in artillery, military communications, and aviation, while selected pilots and mechanics were sent to Japan for further instruction. Their expertise helps remedy Guangxi's shortage of qualified specialists and strengthens an army intended to resist both Nanjing's encroachment and future foreign aggression. Yet dependence on Japanese training exposes the clique to accusations of collaboration and threatens the credibility of its increasingly forceful calls for resistance against Japan."
+ GXC_the_wealth_beneath_the_mountains: "The Wealth Beneath the Mountains"
+ GXC_organization_and_training_committee: "Organization and Training Committee"
+ GXC_the_liangguang_crisis: "The Liangguang Crisis"
+ GXC_the_liangguang_crisis_desc: "The arrival of Guangxi troops in Guangzhou has been met with suspicion rather than celebration. Despite having resisted Nanjing together, many in Guangdong and Hunan now fear that they were always seen as subjects instead of brothers in the struggle. Military authority remains concentrated in the hands of Guangxi officers, plans are being drawn up to integrate the provincial banks into Guangxi's financial system, and schools and universities are being subjected to an increasingly severe programme of military training. Chen Jitang has emerged as the natural counterweight to the Guangxi Triumvirate, gathering support among provincial political opponents in an effort to prevent Li Zongren, Bai Chongxi and Huang Xuchu from consolidating complete control over the south."
+ GXC_modify_the_liangguang_crisis_dynamic_modifier_tt: "Modify §Y$GXC_the_liangguang_crisis$§! by:"
+ GXC_the_wealth_beneath_the_mountains_: "The Wealth Beneath The Mountains"
+
+ #GUANGDONG
+ GDC_opium_revenues: "Opium Revenues"
+ GDC_opium_revenues_desc: "Guangdong's wealth does not rest on opium alone, but Chen Jitang's government has made the drug an indispensable source of fiscal strength. Opium taxes make up around 20% of provincial revenues, of course, this income helps finance Guangdong's factories, roads, air force, and autonomy from Nanjing, but it also stains the regime's modernizing image with corruption and dependence on vice.\n\n§GWe will stop needing the revenue of opium once we have 50 factories in our nation.§!"
+
+ #FRANCE
+ FRA_maquis_vichy: "Maquis"
+ FRA_la_deluge_weaker: "Le Déluge"
+ FRA_national_corporatism: "National Corporatism"
+ FRA_monarchist_sentiment: "Monarchist Sentiment"
+ FRA_viceroyalty_of_bresil: "Viceroyalty of Brésil"

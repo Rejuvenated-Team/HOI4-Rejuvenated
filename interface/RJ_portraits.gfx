@@ -80,6 +80,15 @@ spriteTypes = {
 		texturefile = "gfx/leaders/GER/rj_portrait_GER_gunther_von_kluge.dds"
 	}
 
+	#####################
+	### SIC - Sichuan ###
+	#####################
+
+	spriteType = {
+		name = "GFX_rj_portrait_SIC_liu_wenhui"
+		texturefile = "gfx/leaders/SIC/rj_portrait_SIC_liu_wenhui.dds"
+	}
+
 	##########################
 	### SOV - Soviet Union ###
 	##########################

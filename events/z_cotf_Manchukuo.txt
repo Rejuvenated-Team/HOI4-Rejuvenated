@@ -1,0 +1,646 @@
+add_namespace = cotf_man
+
+country_event = {
+	id = cotf_man.1
+	title = "[FROM.GetLeader] Proposes Unification"
+	desc = cotf_man.1.d
+	picture = GFX_report_event_china_politicians_captured
+
+	is_triggered_only = yes
+	
+	#sure why not
+	option = {
+		name = "The Nationalists will not be able to defeat our great union!"
+		ai_chance = { 
+			base = 100
+		}
+		if = {
+			limit = {
+				ROOT = {
+					is_ai = yes
+				}
+				MAN = {
+					is_ai = no
+				}
+			}
+			ROOT = {
+				change_tag_from = MAN
+			}
+		}
+		if = {
+			limit = {
+				KOR = {
+					exists = yes
+					is_subject_of = MAN
+				}
+			}
+			MAN = {
+				set_autonomy = {
+					target = KOR
+					autonomy_state = autonomy_free
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+			ROOT = {
+				puppet = KOR
+			}
+		}
+		MAN = {
+			every_unit_leader = {
+				set_nationality = ROOT
+			}
+		}
+		ROOT = {
+			annex_country = {
+				target = MAN
+				transfer_troops = yes
+			}
+		}
+	}
+
+	#nah
+	option = {
+		name = "We don't have time for this."
+		ai_chance = { 
+			base = 0
+		}
+	}
+}
+
+country_event = {
+	id = cotf_man.111
+	title = "[FROM.GetLeader] Proposes Unification"
+	desc = cotf_man.111.d
+	picture = GFX_report_event_china_politicians_captured
+
+	is_triggered_only = yes
+	
+	#sure why not
+	option = {
+		name = "The Communists will not be able to defeat us after this!"
+		ai_chance = { 
+			base = 100
+		}
+		if = {
+			limit = {
+				ROOT = {
+					is_ai = yes
+				}
+				MAN = {
+					is_ai = no
+				}
+			}
+			ROOT = {
+				change_tag_from = MAN
+			}
+		}
+		if = {
+			limit = {
+				KOR = {
+					exists = yes
+					is_subject_of = MAN
+				}
+			}
+			MAN = {
+				set_autonomy = {
+					target = KOR
+					autonomy_state = autonomy_free
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+			ROOT = {
+				puppet = KOR
+			}
+		}
+		MAN = {
+			every_unit_leader = {
+				set_nationality = ROOT
+			}
+		}
+		ROOT = {
+			annex_country = {
+				target = MAN
+				transfer_troops = yes
+			}
+		}
+	}
+
+	#nah
+	option = {
+		name = "They think we trust them after what they've done?"
+		ai_chance = { 
+			base = 0
+		}
+	}
+}
+
+country_event = {
+	id = cotf_man.2
+	title = "The Jade Marshal Falls Ill"
+	desc = cotf_man.2.d
+	picture = GFX_report_event_china_ledo_road
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Force him to go to the foreign concession now!"
+		ai_chance = { 
+			base = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = MAN_AI_RANDOM_INDEPENDENCE_NEU_ZHANG_XUELIANG
+					has_game_rule = {
+						rule = MAN_ai_behavior
+						option = INDEPENDENCE_NEU_ZHANG_XUELIANG
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = MAN_AI_RANDOM_INDEPENDENCE_DEM
+					has_game_rule = {
+						rule = MAN_ai_behavior
+						option = INDEPENDENCE_DEM
+					}
+					has_game_rule = {
+						rule = MAN_ai_behavior
+						option = INDEPENDENCE_DEM_GOOD_GOVERNMENT
+					}
+				}
+			}
+		}
+		add_political_power = -50
+	}
+
+	option = {
+		name = "He's old enough to know the likely consequences."
+		trigger = {
+			NOT = { has_completed_focus = MAN_the_jade_marshal }
+		}
+		ai_chance = { 
+			base = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = MAN_AI_RANDOM_INDEPENDENCE_NEU_WU_PEIFU
+					has_game_rule = {
+						rule = MAN_ai_behavior
+						option = INDEPENDENCE_NEU_WU_PEIFU
+					}
+				}
+			}
+		}
+		country_event = {
+			id = cotf_man.3
+			hours = 36
+		}
+	}
+}
+
+country_event = {
+	id = cotf_man.3
+	title = "The Death Of Wu Peifu"
+	desc = cotf_man.3.d
+	picture = GFX_report_event_generic_military_parade
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Zhang Xueliang should be named interim marshal of Manchuria."
+		trigger = {
+			has_country_flag = MAN_zhang_xueliang_in_machuria
+		}
+		ai_chance = {
+			base = 1
+		}
+		if = {
+			limit = {
+				NOT = { can_be_country_leader = CHI_zhang_xueliang }
+			}
+			add_country_leader_role = {
+				character = CHI_zhang_xueliang
+				country_leader = {
+					ideology = despotism
+					traits = { headstrong XIC_young_marshall }
+					expire = "1965.1.1.1"
+					id = -1
+				}
+			}
+		}
+		promote_character = {
+			character = CHI_zhang_xueliang
+			ideology = despotism
+		}
+		remove_country_leader_role = {
+			character = MAN_wu_peifu
+			ideology = despotism
+		}
+		set_cosmetic_tag = MAN_FNG
+		hidden_effect = {
+			if = {
+				limit = {
+					XIC = {
+						is_subject_of = MAN
+					}
+				}
+				XIC = {
+					set_cosmetic_tag = XIC_FNG
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "We must fill this power vacuum before the Nanjing government learns of this."
+		trigger = {
+			NOT = { has_country_flag = MAN_zhang_xueliang_in_machuria }
+		}
+		ai_chance = {
+			base = 1
+		}
+		remove_country_leader_role = {
+			character = MAN_wu_peifu
+			ideology = despotism
+		}
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+			election_frequency = 48
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.3
+		}
+	}
+
+}
+
+country_event = {
+	id = cotf_man.4
+	title = "[FROM.GetLeader]'s Offering"
+	desc = cotf_man.4.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "The army of Fengtian returns to Manchuria."
+		ai_chance = { 
+			base = 100
+		}
+		every_state = {
+			limit = {
+				is_core_of = XIC
+			}
+			add_core_of = MAN
+		}
+		MAN = {
+			puppet = XIC
+			country_event = {
+				id = cotf_man.5
+				hours = 1
+			}
+			set_country_flag = MAN_zhang_xueliang_in_machuria
+		}
+		set_cosmetic_tag = XIC_BYN
+		hidden_effect = {
+			XIC = {
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.3
+				}
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = XIC_fengtian_long
+				name = XIC_fengtian
+			}
+		}
+	}
+
+	option = {
+		name = "Our loyalty is to the Kuomintang now."
+		ai_chance = { 
+			base = 0
+		}
+		MAN = {
+			country_event = {
+				id = cotf_man.6
+				hours = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = cotf_man.5
+	title = "The Fengtian Army Returns Home"
+	desc = cotf_man.5.d
+	picture = GFX_report_event_chinese_soldiers_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Their forces will be under our direct control."
+		ai_chance = { 
+			base = 0
+		}
+		XIC = {
+			CHI_zhang_xueliang = {
+				set_nationality = MAN
+			}
+			XIC_yu_xuezhong = {
+				set_nationality = MAN
+			}
+			XIC_wang_yizhe = {
+				set_nationality = MAN
+			}
+			XIC_he_zhuguo = {
+				set_nationality = MAN
+			}
+		}
+		annex_country = {
+			target = XIC
+			transfer_troops = yes
+		}
+		every_state = {
+			limit = {
+				is_core_of = XIC
+			}
+			add_core_of = MAN
+		}
+	}
+
+	option = {
+		name = "They should hold some autonomy, just until we defeat the Nationalists."
+		ai_chance = { 
+			base = 1
+		}
+		XIC = {
+			CHI_zhang_xueliang = {
+				set_nationality = MAN
+			}
+			XIC_yu_xuezhong = {
+				set_nationality = MAN
+			}
+			XIC_wang_yizhe = {
+				set_nationality = MAN
+			}
+			XIC_he_zhuguo = {
+				set_nationality = MAN
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = XIC
+			}
+			add_core_of = MAN
+		}
+		hidden_effect = {
+			XIC = {
+				if = {
+					limit = {
+						has_character = XIC_fengtian_army
+					}
+					promote_character = {
+						character = XIC_fengtian_army
+						ideology = oligarchism
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = cotf_man.6
+	title = "[FROM.GetLeader] Refuses"
+	desc = cotf_man.6.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "How dare they!?"
+		ai_chance = { 
+			base = 100
+		}
+	}
+}
+
+country_event = {
+	id = cotf_man.7
+	title = "Luo Wengan Asks For His Resignation"
+	desc = cotf_man.7.d
+	picture = GFX_report_event_china_politicians_captured
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Luo Wengan must continue to lead our nation."
+		ai_chance = {
+			base = 0
+		}
+		add_country_leader_role = {
+			character = MAN_luo_wengan
+			country_leader = {
+				ideology = socialism
+				traits = { SWI_pragmatic_democrat }
+				expire = "1956.1.1.12"
+				id = -1
+			}
+		}
+		promote_character = {
+			character = MAN_luo_wengan
+			ideology = socialism
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = CHI_CDSP_long
+			name = CHI_CDSP
+		}
+	}
+
+	option = {
+		name = "Hu Shi, the philosopher, will guide us to a better future."
+		ai_chance = {
+			base = 1
+		}
+		promote_character = {
+			character = MAN_hu_shi
+			ideology = liberalism
+		}
+	}
+
+	option = {
+		name = "Wellington Koo, the diplomat, is what the new China needs."
+		ai_chance = {
+			base = 0
+		}
+		promote_character = {
+			character = MAN_wellington_koo
+			ideology = liberalism
+		}
+	}
+}
+
+country_event = {
+	id = cotf_man.8
+	title = "[FROM.GetLeader]'s Offering"
+	desc = cotf_man.4.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "We'll do it, if they accept our demands."
+		ai_chance = { 
+			base = 100
+		}
+		FROM = {
+			add_state_core = 1032
+			add_state_core = 622
+			add_state_core = 1046
+			puppet = PRC
+			country_event = {
+				id = cotf_man.9
+				hours = 1
+			}
+		}
+		hidden_effect = {
+			PRC = {
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "We will only accept full control of the government"
+		ai_chance = { 
+			base = 0
+		}
+		FROM = {
+			country_event = {
+				id = cotf_man.10
+				hours = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = cotf_man.9
+	title = "The Communists Join Our Government!"
+	desc = cotf_man.5.d
+	picture = GFX_report_event_chinese_soldiers_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Their forces will be under our direct control."
+		ai_chance = { 
+			base = 0
+		}
+		PRC = {
+			every_unit_leader = {
+				set_nationality = ROOT
+			}
+		}
+		annex_country = {
+			target = PRC
+			transfer_troops = yes
+		}
+	}
+
+	option = {
+		name = "They should hold some autonomy, just until we defeat Nanjing."
+		ai_chance = { 
+			base = 1
+		}
+		PRC = {
+			every_unit_leader = {
+				set_nationality = ROOT
+			}
+		}
+		set_country_flag = MAN_PRC_IFUCKINGHATECHARACTERS
+	}
+}
+
+country_event = {
+	id = cotf_man.10
+	title = "[FROM.GetLeader] Refuses"
+	desc = cotf_man.6.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "We'll have to do this alone."
+		ai_chance = { 
+			base = 100
+		}
+	}
+}
+
+country_event = {
+	id = cotf_man.11
+	title = "The Northeastern Army Defects To Manchuria"
+	desc = cotf_man.11.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Damn traitors!"
+		ai_chance = {
+			base = 100
+		}
+		CHI = {
+			CHI_zhang_xueliang = {
+				remove_trait = { trait = CHI_dubious_loyalty }
+				clr_character_flag = can_flip_to_prc
+				set_nationality = MAN
+			}
+			XIC_yu_xuezhong = {
+				remove_trait = { trait = CHI_dubious_loyalty }
+				clr_character_flag = can_flip_to_prc
+				set_nationality = MAN
+			}
+			XIC_wang_yizhe = {
+				remove_trait = { trait = CHI_dubious_loyalty }
+				clr_character_flag = can_flip_to_prc
+				set_nationality = MAN
+			}
+			XIC_he_zhuguo = {
+				remove_trait = { trait = CHI_dubious_loyalty }
+				clr_character_flag = can_flip_to_prc
+				set_nationality = MAN
+			}
+		}
+		effect_tooltip = {
+			MAN = {
+				add_equipment_to_stockpile = { 
+					type = infantry_equipment
+					amount = 2000 
+				}
+				add_manpower = 98000
+			}
+		}
+		#set_country_flag = MAN_northeastern_generals_defected
+	}
+}

@@ -1,0 +1,135 @@
+ideas = {
+
+	country = {
+		FRA_maquis_vichy = {
+			picture = MEX_politicised_army
+			allowed = {
+				original_tag = FRA 
+				always = no
+			}
+
+			cancel = {
+				has_war_with = FRA
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_growth_on_our_occupied_states  = 0.2
+			}
+		}
+
+		FRA_la_deluge_weaker = {
+			picture = fra_deluge
+
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				generate_wargoal_tension = -0.5
+				war_support_factor = 0.1
+				division_training_time = -0.1
+				conscription = 0.01
+			}
+		}
+
+		FRA_la_deluge_stronger = {
+			picture = fra_deluge
+
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				generate_wargoal_tension = -0.5
+				war_support_factor = 0.1
+				division_training_time = -0.2
+				conscription = 0.03
+				recruitable_population_factor = 0.25
+			}
+		}
+
+		FRA_national_corporatism = {
+			picture = generic_fascist_workers
+
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				#stability_weekly = 0.005
+				war_support_factor = 0.1
+				#political_power_factor = 0.1
+				global_building_slots_factor = 0.1
+			}
+		}
+
+		FRA_monarchist_sentiment = {
+			picture = generic_monarchist_uprising
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.05
+			}
+		}
+
+		FRA_viceroyalty_of_bresil = {
+			picture = por_monarchist_uprising
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			cancel = {
+				NOT = { is_subject_of = FRA }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.1
+				autonomy_gain = -0.3
+			}
+		}
+	}
+
+}

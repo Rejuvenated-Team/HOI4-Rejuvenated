@@ -1,0 +1,1061 @@
+add_namespace = cotf_gxc
+
+country_event = {
+	id = cotf_gxc.1
+	title = "The Liangguang Incident"
+	desc = cotf_gxc.1.d
+	picture = GFX_report_event_chinese_soldiers
+	is_triggered_only = yes
+	#ok
+	option = {
+		ai_chance = {
+			base = 50
+		}
+		name = "They hang a sheep's head, but sell dog meat."
+		GDC = {
+			country_event = {
+				id = cotf_gxc.2
+				hours = 6
+			}
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		GXC = {
+			country_event = {
+				id = cotf_gxc.3
+				hours = 6
+			}
+		}
+		hidden_effect = {
+			set_global_flag = lingguang_incident_active
+		}
+	}
+}
+
+country_event = {
+	id = cotf_gxc.2
+	title = "Abandoned By Followers And Deserted By Allies"
+	desc = cotf_gxc.2.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+	#ok
+	option = {
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				GXC = {
+					is_ai = no
+				}
+			}
+		}
+		name = "Everyone pushes the falling wall..."
+		if = {
+			limit = {
+				NOT = {
+					has_dlc = "By Blood Alone"
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_0
+				amount = -125
+			}
+			CHI = {
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_0
+					amount = 125
+					producer = ROOT
+				}
+			}
+		}
+		else = {
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe_0
+				amount = -125
+			}
+			CHI = {
+				add_equipment_to_stockpile = {
+					type = small_plane_airframe_0
+					amount = 125
+					producer = ROOT
+					variant_name = "CR.32"
+				}
+			}
+		}
+		retire_character = GXC_chen_jitang
+		CHI = {
+			country_event = {
+				id = cotf_gxc.5
+				hours = 6
+			}
+			IF = {
+				limit = {
+					ROOT = {
+						is_subject_of = CHI
+					}
+				}
+				add_faction_influence_ratio = 0.05
+				IF = {
+					limit = {
+						ROOT = {
+							has_autonomy_state = autonomy_sea_integrated_warlord_subject
+						}
+					}
+					add_faction_influence_ratio = 0.1
+				}
+			}
+			ELSE = {
+				set_autonomy = {
+					target = ROOT
+					autonomy_state = autonomy_sea_warlord_subject
+					freedom_level = 0.5
+				}
+			}
+			add_to_array = {
+				warlord_subjects = ROOT
+			}
+		}
+		hidden_effect = {
+			add_country_leader_role = {
+				character = GND_yu_hanmou
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism
+					expire = "1965.1.1.1"
+					traits = {
+						SIC_reckless_commander
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				GXC = {
+					is_ai = yes
+				}
+			}
+		}
+		name = "Better to bow to our brothers than to a tyrant!"
+		if = {
+			limit = {
+				NOT = {
+					has_dlc = "By Blood Alone"
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_0
+				amount = -125
+			}
+			CHI = {
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_0
+					amount = 125
+					producer = ROOT
+				}
+			}
+		}
+		else = {
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe_0
+				amount = -125
+			}
+			CHI = {
+				add_equipment_to_stockpile = {
+					type = small_plane_airframe_0
+					amount = 125
+					producer = ROOT
+					variant_name = "CR.32"
+				}
+			}
+		}
+		effect_tooltip = {
+			GND_yu_hanmou = {
+				set_nationality = CHI
+			}
+			GDC_li_hanhun = {
+				set_nationality = CHI
+			}
+			GDC_deng_longguang = {
+				set_nationality = CHI
+			}
+		}
+		hidden_effect = {
+			GND_yu_hanmou = {
+				set_nationality = CHI
+				remove_trait = { trait = war_hero }
+				remove_trait = { trait = politically_connected }
+			}
+			GDC_li_hanhun = {
+				set_nationality = CHI
+				remove_trait = { trait = war_hero }
+				remove_trait = { trait = politically_connected }
+			}
+			GDC_deng_longguang = {
+				set_nationality = CHI
+				remove_trait = { trait = war_hero }
+				remove_trait = { trait = politically_connected }
+			}
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		GXC = {
+			country_event = {
+				id = cotf_gxc.7
+				days = 3
+			}
+		}
+		##custom_effect_tooltip = SEA_warlords.36.tt
+		custom_effect_tooltip = GAME_OVER_TT
+		hidden_effect = {
+			set_country_flag = GDC_sought_to_forming_liangguang_to_defend_agaisnt_china_flag
+		}
+	}
+}
+
+country_event = {
+	id = cotf_gxc.3
+	title = "The Fight For Guangxi"
+	desc = cotf_gxc.3.d
+	picture = GFX_report_event_nationalist_china_machinegun_firing
+	is_triggered_only = yes
+	#the struggle begins
+	option = {
+		ai_chance = {
+			base = 50
+		}
+		name = "We will not bow to anyone!"
+		CHI = {
+			country_event = {
+				id = cotf_gxc.6
+				hours = 6
+			}
+		}
+		hidden_effect = {
+			set_country_flag = GXC_the_struggle_for_independence
+			activate_mission = CHI_growing_impatience
+			CHI = {
+				activate_mission = CHI_growing_impatience_dummy
+			}
+		}
+	}
+	#oh no
+	option = {
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		name = "It's over."
+		add_stability = -0.05
+		CHI = {
+			IF = {
+				limit = {
+					ROOT = {
+						is_subject_of = CHI
+					}
+				}
+				add_faction_influence_ratio = 0.05
+				IF = {
+					limit = {
+						ROOT = {
+							has_autonomy_state = autonomy_sea_integrated_warlord_subject
+						}
+					}
+					add_faction_influence_ratio = 0.1
+				}
+			}
+			ELSE = {
+				set_autonomy = {
+					target = ROOT
+					autonomy_state = autonomy_sea_warlord_subject
+					freedom_level = 0.5
+				}
+			}
+			country_event = {
+				id = cotf_gxc.4
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = cotf_gxc.4
+	title = "The Guangxi Clique Surrenders"
+	desc = cotf_gxc.4.d
+	picture = GFX_report_event_chinese_soldiers_02
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			base = 50
+		}
+		name = "Perfect."
+		hidden_effect = {
+			IF = {
+				limit = {
+					GXC = {
+						is_subject_of = CHI
+					}
+					GDC = {
+						is_subject_of = CHI
+					}
+				}
+				clr_global_flag = lingguang_incident_active
+			}
+		}
+	}
+}
+
+country_event = {
+	id = cotf_gxc.5
+	title = "The Collapse Of The Guangdong Clique"
+	desc = cotf_gxc.5.d
+	picture = GFX_report_event_china_soviet_volunteers
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			base = 50
+		}
+		name = "United we grow stronger."
+		add_political_power = -150
+		effect_tooltip = {
+			GDC = {
+				GND_yu_hanmou = {
+					set_nationality = CHI
+				}
+				GDC_li_hanhun = {
+					set_nationality = CHI
+				}
+				GDC_deng_longguang = {
+					set_nationality = CHI
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_0
+					amount = -125
+				}
+				CHI = {
+					add_equipment_to_stockpile = {
+						type = fighter_equipment_0
+						amount = 125
+						producer = ROOT
+					}
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = small_plane_airframe_0
+					amount = -125
+				}
+				CHI = {
+					add_equipment_to_stockpile = {
+						type = small_plane_airframe_0
+						amount = 125
+						producer = ROOT
+						variant_name = "CR.32"
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			GDC = {
+				GND_yu_hanmou = {
+					set_nationality = CHI
+					remove_trait = { trait = war_hero }
+					remove_trait = { trait = politically_connected }
+				}
+				GDC_li_hanhun = {
+					set_nationality = CHI
+					remove_trait = { trait = war_hero }
+					remove_trait = { trait = politically_connected }
+				}
+				GDC_deng_longguang = {
+					set_nationality = CHI
+					remove_trait = { trait = war_hero }
+					remove_trait = { trait = politically_connected }
+				}
+			}
+		}
+		annex_country = {
+			target = GDC
+			transfer_troops = yes
+		}
+	}
+	option = {
+		ai_chance = {
+			base = 0
+		}
+		name = "We'll deal with their administration later."
+		effect_tooltip = {
+			set_autonomy = {
+				target = FROM
+				autonomy_state = autonomy_sea_warlord_subject
+				freedom_level = 0.5
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_0
+					amount = -125
+				}
+				CHI = {
+					add_equipment_to_stockpile = {
+						type = fighter_equipment_0
+						amount = 125
+						producer = ROOT
+					}
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = small_plane_airframe_0
+					amount = -125
+				}
+				CHI = {
+					add_equipment_to_stockpile = {
+						type = small_plane_airframe_0
+						amount = 125
+						producer = ROOT
+						variant_name = "CR.32"
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			IF = {
+				limit = {
+					GXC = {
+						is_subject_of = CHI
+					}
+					GDC = {
+						is_subject_of = CHI
+					}
+				}
+				clr_global_flag = lingguang_incident_active
+			}
+		}
+	}
+}
+
+country_event = {
+	id = cotf_gxc.6
+	title = "The Guangxi Clique Stands Defiant"
+	desc = cotf_gxc.6.d
+	picture = GFX_report_event_chinese_soldiers_mountain
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			base = 50
+		}
+		name = "Let's mobilize the troops."
+		effect_tooltip = {
+			activate_mission = CHI_growing_impatience
+		}
+	}
+}
+
+# [FROM.GetLeader] Proposes Unification of Liangguang - event for GXC 
+country_event = {
+	id = cotf_gxc.7
+	title = "Chen Jitang Proposes Unification Against Nanjing"
+	desc = cotf_gxc.7.d
+	picture = GFX_report_event_chinese_soldiers_mountain
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "United, we shall be unconquerable!"
+		GDC = {
+			GXC_chen_jitang = {
+				set_nationality = GXC
+			}
+		}
+		GXC_chen_jitang = {
+			remove_trait = { trait = heavenly_king_of_the_south }
+			add_trait = { trait = heavenly_king_of_the_south_small }
+		}
+		annex_country = {
+			target = GDC
+			transfer_troops = yes
+		}
+		add_state_core = 593
+		add_state_core = 592
+		add_state_core = 1033
+		add_state_core = 591
+		add_state_core = 602
+		add_state_core = 750
+		set_cosmetic_tag = liangguang_clique
+		CHI = {
+			country_event = {
+				id = cotf_gxc.8
+				hours = 6
+			}
+		}
+	}
+}
+
+# The South Rallies Against Us - event for CHI
+
+country_event = {
+	id = cotf_gxc.8
+	title = "The South Rallies Against Us"
+	desc = cotf_gxc.8.d
+	picture = GFX_report_event_chinese_soldiers_mountain
+	is_triggered_only = yes
+	option = {
+		name = "Punish them for their arrogance!"
+		ai_chance = {
+			base = 100
+		}
+		declare_war_on = {
+			target = GXC
+			type = annex_everything
+		}
+		effect_tooltip = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_0
+					amount = -125
+				}
+				CHI = {
+					add_equipment_to_stockpile = {
+						type = fighter_equipment_0
+						amount = 125
+						producer = ROOT
+					}
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = small_plane_airframe_0
+					amount = -125
+				}
+				CHI = {
+					add_equipment_to_stockpile = {
+						type = small_plane_airframe_0
+						amount = 125
+						producer = ROOT
+						variant_name = "CR.32"
+					}
+				}
+			}
+			GDC = {
+				GND_yu_hanmou = {
+					set_nationality = CHI
+				}
+				GDC_li_hanhun = {
+					set_nationality = CHI
+				}
+				GDC_deng_longguang = {
+					set_nationality = CHI
+				}
+			}
+			GXC = {
+				GND_yu_hanmou = {
+					set_nationality = CHI
+				}
+				GDC_li_hanhun = {
+					set_nationality = CHI
+				}
+				GDC_deng_longguang = {
+					set_nationality = CHI
+				}
+			}
+		}
+		hidden_effect = {
+			GDC = {
+				GND_yu_hanmou = {
+					set_nationality = CHI
+					remove_trait = { trait = war_hero }
+					remove_trait = { trait = politically_connected }
+				}
+				GDC_li_hanhun = {
+					set_nationality = CHI
+					remove_trait = { trait = war_hero }
+					remove_trait = { trait = politically_connected }
+				}
+				GDC_deng_longguang = {
+					set_nationality = CHI
+					remove_trait = { trait = war_hero }
+					remove_trait = { trait = politically_connected }
+				}
+			}
+			GXC = {
+				GND_yu_hanmou = {
+					set_nationality = CHI
+					remove_trait = { trait = war_hero }
+					remove_trait = { trait = politically_connected }
+				}
+				GDC_li_hanhun = {
+					set_nationality = CHI
+					remove_trait = { trait = war_hero }
+					remove_trait = { trait = politically_connected }
+				}
+				GDC_deng_longguang = {
+					set_nationality = CHI
+					remove_trait = { trait = war_hero }
+					remove_trait = { trait = politically_connected }
+				}
+			}
+		}
+		activate_mission = GXC_GDC_CHI_war_in_south_halting
+		hidden_effect = {
+			GXC = {
+				activate_mission = GXC_GDC_holding_out
+			}
+		}
+		custom_effect_tooltip = SEA_warlords.48.tt
+	}
+	option = {
+		name = "We have bigger problems right now."
+		ai_chance = {
+			base = 0
+		}
+		effect_tooltip = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_0
+					amount = -125
+				}
+				CHI = {
+					add_equipment_to_stockpile = {
+						type = fighter_equipment_0
+						amount = 125
+						producer = ROOT
+					}
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = small_plane_airframe_0
+					amount = -125
+				}
+				CHI = {
+					add_equipment_to_stockpile = {
+						type = small_plane_airframe_0
+						amount = 125
+						producer = ROOT
+						variant_name = "CR.32"
+					}
+				}
+			}
+			GDC = {
+				GND_yu_hanmou = {
+					set_nationality = CHI
+				}
+				GDC_li_hanhun = {
+					set_nationality = CHI
+				}
+				GDC_deng_longguang = {
+					set_nationality = CHI
+				}
+			}
+			GXC = {
+				GND_yu_hanmou = {
+					set_nationality = CHI
+				}
+				GDC_li_hanhun = {
+					set_nationality = CHI
+				}
+				GDC_deng_longguang = {
+					set_nationality = CHI
+				}
+			}
+		}
+		hidden_effect = {
+			GDC = {
+				GND_yu_hanmou = {
+					set_nationality = CHI
+					remove_trait = { trait = war_hero }
+					remove_trait = { trait = politically_connected }
+				}
+				GDC_li_hanhun = {
+					set_nationality = CHI
+					remove_trait = { trait = war_hero }
+					remove_trait = { trait = politically_connected }
+				}
+				GDC_deng_longguang = {
+					set_nationality = CHI
+					remove_trait = { trait = war_hero }
+					remove_trait = { trait = politically_connected }
+				}
+			}
+			GXC = {
+				GND_yu_hanmou = {
+					set_nationality = CHI
+					remove_trait = { trait = war_hero }
+					remove_trait = { trait = politically_connected }
+				}
+				GDC_li_hanhun = {
+					set_nationality = CHI
+					remove_trait = { trait = war_hero }
+					remove_trait = { trait = politically_connected }
+				}
+				GDC_deng_longguang = {
+					set_nationality = CHI
+					remove_trait = { trait = war_hero }
+					remove_trait = { trait = politically_connected }
+				}
+			}
+		}
+		if = {
+			limit = {
+				602 = {
+					is_owned_by = ROOT
+				}
+			}
+			602 = {
+				transfer_state_to = GXC
+			}
+		}
+		add_war_support = -0.03
+		add_political_power = 50
+	}
+}
+
+# A Stagnating Conflict - event for CHI
+
+country_event = {
+	id = cotf_gxc.9
+	title = "Widespread Strikes In Central China"
+	desc = cotf_gxc.9.d
+	picture = GFX_report_event_china_infiltration
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			IF = {
+				limit = {
+					603 = {
+						is_controlled_by = GXC
+					}
+				}
+				603 = {
+					transfer_state_to = GXC
+				}
+			}
+			IF = {
+				limit = {
+					602 = {
+						#is_controlled_by = GXC
+						is_owned_by = CHI
+					}
+				}
+				602 = {
+					transfer_state_to = GXC
+				}
+			}
+			IF = {
+				limit = {
+					600 = {
+						is_controlled_by = GXC
+					}
+				}
+				600 = {
+					transfer_state_to = GXC
+				}
+			}
+			IF = {
+				limit = {
+					595 = {
+						is_controlled_by = GXC
+					}
+				}
+				595 = {
+					transfer_state_to = GXC
+				}
+			}
+			IF = {
+				limit = {
+					748 = {
+						is_controlled_by = GXC
+					}
+				}
+				748 = {
+					transfer_state_to = GXC
+				}
+			}
+		}
+		IF = {
+			limit = {
+				has_war_with = GXC
+			}
+			white_peace = {
+				tag = GXC
+			}
+		}
+		every_country = {
+			limit = {
+				is_ally_with = ROOT
+				has_war_with = GXC
+			}
+			white_peace = {
+				tag = GXC
+			}
+		}
+	}
+	
+	option = {
+		name = "Then we shall bide our time..."
+		add_war_support = -0.05
+		set_truce = {
+			target = GXC
+			days = 365
+		}
+	}
+}
+
+country_event = {
+	id = cotf_gxc.10
+	title = "The Guangzhou Incident"
+	desc = cotf_gxc.10.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = "..."
+		add_manpower = -500
+		GXC_chen_jitang = {
+			remove_unit_leader_role = yes
+		}
+		remove_dynamic_modifier = {
+			modifier = GXC_the_liangguang_crisis
+		}
+	}
+}
+
+country_event = {
+	id = cotf_gxc.11
+	title = "A Day Without Blood"
+	desc = cotf_gxc.11.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = "A new day shines upon Liangguang."
+		promote_character = {
+			character = GXC_chen_jitang
+			ideology = despotism
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		remove_dynamic_modifier = {
+			modifier = GXC_the_liangguang_crisis
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		hidden_effect = {
+			remove_dynamic_modifier = {
+			modifier = GXC_baojia_militarism
+			}
+			add_dynamic_modifier = {
+				modifier = GXC_the_pearl_river_valley_revolution
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = GXC_baojia_militarism
+				}
+			}
+			custom_effect_tooltip = GXC_modify_baojia_militarism_dynamic_modifier_tt
+		}
+		else_if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = GXC_the_pearl_river_valley_revolution
+				}
+			}
+			custom_effect_tooltip = GXC_modify_the_pearl_river_valley_revolution_dynamic_modifier_tt
+		}
+		add_to_variable = {
+			GXC_baojia_militarism_minimum_training_level = 0.05
+			tooltip = minimum_training_level_tt
+		}
+		add_to_variable = {
+			GXC_baojia_militarism_consumer_goods_factor = -0.1
+			tooltip = consumer_goods_factor_tt
+		}
+		add_to_variable = {
+			GXC_baojia_militarism_war_support_factor = -0.15
+			tooltip = war_support_factor_tt
+		}
+		if = {
+			limit = {
+				has_completed_focus = GXC_the_three_yu
+			}
+			#add_to_variable = {
+			#	GXC_baojia_militarism_training_time_factor = 0.05
+			#	tooltip = training_time_factor_tt
+			#}
+			add_to_variable = {
+				GXC_baojia_militarism_army_leader_cost_factor = 0.15
+				tooltip = army_leader_cost_factor_tt
+			}
+		}
+		force_update_dynamic_modifier = yes
+		custom_effect_tooltip = generic_skip_one_line_tt
+		remove_dynamic_modifier = {
+			modifier = GXC_the_triumvirate
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		effect_tooltip = {
+			GXC_bai_chongxi = {
+				set_nationality = CHI
+			}
+		}
+		CHI = {
+			country_event = { id = cotf_gxc.12 }
+		}
+	}
+}
+
+country_event = {
+	id = cotf_gxc.12
+	title = "A Telegram From Guangzhou"
+	desc = cotf_gxc.12.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = "It's not the first time a Chinese general changes his allegiance."
+		GXC = {
+			GXC_bai_chongxi = {
+				set_nationality = CHI
+				remove_trait = { trait = politically_connected }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = cotf_gxc.13
+	title = "[FROM.GetLeader] Invites Us To The Federation"
+	desc = cotf_gxc.13.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_variable = { GXC_federalist_accept_chance = 50 }
+
+			if = {
+				limit = {
+					OR = {
+						has_government = fascism
+						has_government = communism
+					}
+				}
+				subtract_from_variable = { GXC_federalist_accept_chance = 25 }
+			}
+			if = {
+				limit = { has_government = democratic }
+				add_to_variable = { GXC_federalist_accept_chance = 25 }
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = YUN
+						tag = GDC
+						tag = SIC
+						tag = SHX
+					}
+				}
+				add_to_variable = { GXC_federalist_accept_chance = 25 }
+			}
+			if = {
+				limit = {
+					is_in_faction = yes
+					NOT = { is_in_faction_with = FROM }
+				}
+				subtract_from_variable = { GXC_federalist_accept_chance = 15 }
+			}
+			if = {
+				limit = { FROM = { has_stability > 0.79 } }
+				add_to_variable = { GXC_federalist_accept_chance = 5 }
+			}
+			if = {
+				limit = { FROM = { has_stability > 0.89 } }
+				add_to_variable = { GXC_federalist_accept_chance = 5 }
+			}
+			if = {
+				limit = { FROM = { has_stability > 0.99 } }
+				add_to_variable = { GXC_federalist_accept_chance = 15 }
+			}
+
+			set_temp_variable = {
+				GXC_federalist_democratic_support_bonus = party_popularity@democratic
+			}
+			multiply_temp_variable = {
+				GXC_federalist_democratic_support_bonus = 10
+			}
+			add_to_variable = {
+				GXC_federalist_accept_chance = GXC_federalist_democratic_support_bonus
+			}
+
+			clamp_variable = {
+				var = GXC_federalist_accept_chance
+				min = 0
+				max = 100
+			}
+			set_variable = { GXC_federalist_reject_chance = 100 }
+			subtract_from_variable = { GXC_federalist_reject_chance = GXC_federalist_accept_chance }
+		}
+	}
+
+	option = {
+		name = "I always believed in the federalists."
+		ai_chance = { base = GXC_federalist_accept_chance }
+
+		clear_variable = GXC_federalist_accept_chance
+		clear_variable = GXC_federalist_reject_chance
+		every_unit_leader = {
+			set_nationality = FROM
+		}
+		FROM = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = yes
+			}
+		}
+	}
+
+	option = {
+		name = "These guys are still around?"
+		ai_chance = { base = GXC_federalist_reject_chance }
+
+		FROM = {
+			create_wargoal = {
+				type = annex_everything
+				target = ROOT
+			}
+		}
+		clear_variable = GXC_federalist_accept_chance
+		clear_variable = GXC_federalist_reject_chance
+	}
+}
