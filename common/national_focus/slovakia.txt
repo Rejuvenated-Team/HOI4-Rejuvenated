@@ -4,10 +4,10 @@ focus_tree = {
 	country = {
 		factor = 0
 		
-		modifier = {
-			add = 10
-			tag = SLO
-		}
+		#modifier = { #Disabled - Should be revisited - Error Free - WIP
+		#	add = 10
+		#	tag = SLO
+		#}
 	}
 
 	focus = {

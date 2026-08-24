@@ -7,7 +7,7 @@ add_namespace = rj_slovakia
 # Germans Demand the Explusion of Nástup
 country_event = {
 	id = rj_slovakia.1
-	title = rj_slovakia.1.t
+	title = rj_slovakia.1.title
 	desc = rj_slovakia.1.desc
 	#picture = GFX_
 
@@ -56,7 +56,7 @@ country_event = {
 # Slovaks Accepted
 country_event = {
 	id = rj_slovakia.2
-	title = rj_slovakia.2.t
+	title = rj_slovakia.2.title
 	desc = rj_slovakia.2.desc
 	#picture = GFX_
 
@@ -70,7 +70,7 @@ country_event = {
 # Slovaks Rejected
 country_event = {
 	id = rj_slovakia.3
-	title = rj_slovakia.3.t
+	title = rj_slovakia.3.title
 	desc = rj_slovakia.3.desc
 	#picture = GFX_
 
