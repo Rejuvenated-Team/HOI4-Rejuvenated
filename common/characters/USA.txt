@@ -2100,4 +2100,118 @@ characters={
 		}
 	}
 
+	###################
+	### Rejuvenated ###
+	###################
+
+	USA_john_j_mccloy = {
+		name = USA_john_j_mccloy
+		portraits = {
+			civilian = {
+				small = GFX_rj_portrait_USA_john_j_mccloy_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_john_j_mccloy
+			allowed = {
+				original_tag = USA
+			}
+			traits = {
+				prince_of_terror
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+
+	USA_william_friedman = {
+		name = USA_william_friedman
+		portraits = {
+			civilian = {
+				small = GFX_rj_portrait_USA_william_friedman_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_william_friedman
+			allowed = {
+				original_tag = USA
+				has_dlc = "La Resistance"
+			}
+			available = {
+				has_intelligence_agency = yes
+				custom_trigger_tooltip = {
+					tooltip = cyptology_tooltip_tt
+					has_done_agency_upgrade = upgrade_form_department 
+				}
+			}
+			traits = {
+				mastermind_code_cracker
+			}
+			cost = 250
+			ai_will_do = {
+				base = 1
+				modifier = {
+					has_political_power < 400
+					factor = 0
+				}
+			}
+		}
+	}
+
+	USA_elizebeth_friedman = {
+		name = USA_elizebeth_friedman
+		portraits = {
+			civilian = {
+				small = GFX_rj_portrait_USA_elizebeth_friedman_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_elizebeth_friedman
+			allowed = {
+				original_tag = USA
+				has_dlc = "La Resistance"
+			}
+			available = {
+				has_intelligence_agency = yes
+			}
+			traits = {
+				expert_code_cracker
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+
+	USA_jack_h_taylor = {
+		name = USA_jack_h_taylor
+		portraits = {
+			army = {
+				small = GFX_rj_portrait_USA_jack_h_taylor_small
+			}
+		}
+		advisor = {
+			slot = high_command
+			ledger = army
+			idea_token = USA_jack_h_taylor
+			allowed = {
+				original_tag = USA
+			}
+			available = {
+				has_completed_focus = USA_first_special_service_force
+			}
+			traits = {
+				army_specops_instructor_1
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+
 }

@@ -173,4 +173,16 @@ on_actions = {
 			}
 		}
 	}
+
+    on_monthly = {
+        effect = {
+            if = {
+                limit = { has_war = yes }
+                add_to_variable = { months_at_war = 1 }
+            }
+            else = {
+                set_variable = { months_at_war = 0 }
+            }
+        }
+    }
 }

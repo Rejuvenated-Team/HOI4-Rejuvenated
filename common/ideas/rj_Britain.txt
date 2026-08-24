@@ -59,6 +59,27 @@ ideas = {
 			}
 		}
 
+		ENG_mi6_no_lar_ns = {
+			removal_cost = -1
+
+			name = ENG_mi6_ns
+
+			picture = generic_spy_intel
+				
+			allowed = {
+				original_tag = ENG
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+					
+			modifier = {
+				encryption_factor = 0.15
+				decryption_factor = 0.15
+			}
+		}
+
 		ENG_air_rearmament_idea = {
 			picture = RJ_idea_USA_air_corps_expansion_program
 
@@ -442,7 +463,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				original_tag = ENG
+				always = yes
 			}
 
 			removal_cost = -1
@@ -461,7 +482,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				original_tag = ENG
+				always = yes
 			}
 
 			removal_cost = -1
@@ -482,7 +503,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				original_tag = ENG
+				always = yes
 			}
 
 			removal_cost = -1
@@ -505,7 +526,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				original_tag = ENG
+				always = yes
 			}
 
 			removal_cost = -1
@@ -531,7 +552,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				original_tag = ENG
+				always = yes
 			}
 
 			removal_cost = -1
@@ -550,7 +571,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				original_tag = ENG
+				always = yes
 			}
 
 			removal_cost = -1
@@ -607,7 +628,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				original_tag = ENG
+				always = yes
 			}
 
 			removal_cost = -1
@@ -626,7 +647,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				original_tag = ENG
+				always = yes
 			}
 
 			removal_cost = -1
@@ -652,7 +673,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				original_tag = ENG
+				always = yes
 			}
 
 			removal_cost = -1
@@ -670,7 +691,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				original_tag = ENG
+				always = yes
 			}
 
 			removal_cost = -1

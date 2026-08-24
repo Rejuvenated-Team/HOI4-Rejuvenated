@@ -691,7 +691,6 @@ ideas = {
 			}
 					
 			modifier = {
-				stability_factor = 0.05
 				operative_slot = 1
 				civilian_intel_to_others = -5
 				enemy_operative_detection_chance = 0.05
