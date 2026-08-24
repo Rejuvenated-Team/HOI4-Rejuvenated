@@ -58,7 +58,7 @@ bookmarks = {
 			history = "rj_USA_GATHERING_STORM_DESC"
 			ideology = democratic
 			version = base_game
-			label = { new_content }
+			label = { rj_label_new_content }
 			ideas = {
 				home_of_the_free
 				great_depression
@@ -74,7 +74,7 @@ bookmarks = {
 			history = "ENG_GATHERING_STORM_DESC"
 			ideology = democratic
 			version = base_game
-			label = { new_content }
+			label = { rj_label_new_content }
 			ideas = {
 				stiff_upper_lip
 				ENG_the_war_to_end_all_wars
@@ -202,7 +202,8 @@ bookmarks = {
 				SOV_behead_the_snake
 				SOV_the_supreme_soviet
 				SOV_reconvene_the_zemsky_sobor
-			}	
+			}
+			label = { rj_label_new_content }
 		}
 		"SOV"={
 			history = "SOV_GATHERING_STORM_DESC"
@@ -218,7 +219,8 @@ bookmarks = {
 				SOV_behead_the_snake
 				SOV_father_of_nations
 				SOV_the_supreme_soviet
-			}	
+			}
+			label = { rj_label_new_content }
 		}
 
 		"---"={

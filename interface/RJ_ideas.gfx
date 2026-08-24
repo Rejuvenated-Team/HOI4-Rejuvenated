@@ -579,4 +579,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/usa/RJ_idea_USA_mechanize_the_army.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_RJ_idea_warlord_uplift_the_cavalry"
+		texturefile = "gfx/interface/ideas/warlords/RJ_idea_warlord_uplift_the_cavalry.dds"
+	}
+	
 }

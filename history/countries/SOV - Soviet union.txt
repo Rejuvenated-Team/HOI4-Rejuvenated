@@ -167,6 +167,11 @@ if = {
 #RJ Characters
 recruit_character = SOV_viktor_chernov
 recruit_character = SOV_pavel_milyukov
+recruit_character = SOV_yan_karlovich_berzin
+recruit_character = SOV_pavel_sudoplatov
+recruit_character = SOV_viktor_abakumov
+recruit_character = SOV_viktor_leonov
+recruit_character = SOV_vasily_zaitsev
 
 #Initialize character flags Part I (aka who's safe)
 SOV_mikhail_kalinin = {
@@ -203,6 +208,12 @@ SOV_lev_trotsky = { #Not in the country
 	set_character_flag = SOV_exiled_flag
 }
 SOV_patriarch_sergy = { #Priests are not political enemies at this point
+	set_character_flag = SOV_safe_from_purge_flag
+}
+SOV_viktor_leonov = { #rj Irelevant until WW2
+	set_character_flag = SOV_safe_from_purge_flag
+}
+SOV_vasily_zaitsev = { #rj Irelevant until WW2
 	set_character_flag = SOV_safe_from_purge_flag
 }
 if = {
@@ -767,7 +778,7 @@ if = {
 	}
 }
 
-set_research_slots = 3
+set_research_slots = 4
 set_stability = 0.5
 set_war_support = 0.3
 

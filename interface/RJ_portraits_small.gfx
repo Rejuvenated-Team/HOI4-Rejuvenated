@@ -15,9 +15,13 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_kr_portrait_BRA_eurico_gaspar_dutra_small"
-		#texturefile = "gfx/interface/ideas/bra/advisors/kr_advisor_BRA_eurico_gaspar_dutra.dds"
-		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
+		name = "GFX_rj_portrait_BRA_eurico_gaspar_dutra_small"
+		texturefile = "gfx/interface/ideas/bra/advisors/rj_portrait_BRA_eurico_gaspar_dutra.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_BRA_francisco_morato_small"
+		texturefile = "gfx/interface/ideas/bra/advisors/rj_portrait_BRA_francisco_morato.dds"
 	}
 
 	spriteType = {
@@ -47,6 +51,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
 	}
 
+	####################
+	### EGY - Egypt ###
+	####################
+
+	spriteType = {
+		name = "GFX_rj_portrait_EGY_farouk_i_small"
+		#texturefile = "gfx/interface/ideas/egy/advisors/rj_advisor_EGY_farouk_i.dds"
+		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
+	}
+
 	############################
 	### ENG - United Kingdom ###
 	############################
@@ -56,14 +70,37 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/eng/advisors/rj_advisor_ENG_bernard_montgomery.dds"
 	}
 
+	spriteType = {
+		name = "GFX_rj_portrait_ENG_eric_roberts_small"
+		texturefile = "gfx/interface/ideas/eng/advisors/rj_advisor_ENG_eric_roberts.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_ENG_william_fairbairn_small"
+		texturefile = "gfx/interface/ideas/eng/advisors/rj_advisor_ENG_william_fairbairn.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_ENG_william_stephenson_small"
+		texturefile = "gfx/interface/ideas/eng/advisors/rj_advisor_ENG_william_stephenson.dds"
+	}
+
+	#####################
+	### FIN - Finland ###
+	#####################
+
+	spriteType = {
+		name = "GFX_rj_portrait_FIN_simo_hayha_small"
+		texturefile = "gfx/interface/ideas/fin/advisors/rj_advisor_FIN_simo_hayha.dds"
+	}
+
 	####################
-	### EGY - Egypt ###
+	### FRA - France ###
 	####################
 
 	spriteType = {
-		name = "GFX_rj_portrait_EGY_farouk_i_small"
-		#texturefile = "gfx/interface/ideas/egy/advisors/rj_advisor_EGY_farouk_i.dds"
-		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
+		name = "GFX_rj_portrait_FRA_louis_rivet_small"
+		texturefile = "gfx/interface/ideas/fra/advisors/rj_advisor_FRA_louis_rivet.dds"
 	}
 
 	#####################
@@ -83,6 +120,30 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_rj_portrait_GER_gunther_von_kluge_small"
 		texturefile = "gfx/interface/ideas/ger/advisors/rj_advisor_GER_gunther_von_kluge.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_GER_otto_skorzeny_small"
+		texturefile = "gfx/interface/ideas/ger/advisors/rj_advisor_GER_otto_skorzeny.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_GER_theodor_von_hippel_small"
+		texturefile = "gfx/interface/ideas/ger/advisors/rj_advisor_GER_theodor_von_hippel.dds"
+	}
+
+	###################
+	### ITA - Italy ###
+	###################
+
+	spriteType = {
+		name = "GFX_rj_portrait_ITA_cesare_ame_small"
+		texturefile = "gfx/interface/ideas/ita/advisors/rj_advisor_ITA_cesare_ame.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_ITA_paolo_aloisi_small"
+		texturefile = "gfx/interface/ideas/ita/advisors/rj_advisor_ITA_paolo_aloisi.dds"
 	}
 
 	##########################
@@ -107,9 +168,86 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_rj_portrait_SOV_pavel_sudoplatov"
+		texturefile = "gfx/interface/ideas/sov/advisors/rj_advisor_SOV_pavel_sudoplatov.dds"
+	}
+
+	spriteType = {
 		name = "GFX_rj_portrait_SOV_peter_struve_small"
 		#texturefile = "gfx/interface/ideas/sov/advisors/rj_advisor_SOV_peter_struve.dds"
 		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_SOV_vasily_zaitsev"
+		texturefile = "gfx/interface/ideas/sov/advisors/rj_advisor_SOV_vasily_zaitsev.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_SOV_viktor_abakumov"
+		texturefile = "gfx/interface/ideas/sov/advisors/rj_advisor_SOV_viktor_abakumov.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_SOV_viktor_leonov"
+		texturefile = "gfx/interface/ideas/sov/advisors/rj_advisor_SOV_viktor_leonov.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_SOV_yan_karlovich_berzin"
+		texturefile = "gfx/interface/ideas/sov/advisors/rj_advisor_SOV_yan_karlovich_berzin.dds"
+	}
+
+	####################
+	### TUR - Turkey ###
+	####################
+
+	spriteType = {
+		name = "GFX_rj_portrait_TUR_sukru_ali_ogel_small"
+		texturefile = "gfx/interface/ideas/tur/advisors/rj_advisor_TUR_sukru_ali_ogel.dds"
+	}
+
+	###########################
+	### USA - United States ###
+	###########################
+
+	spriteType = {
+		name = "GFX_rj_portrait_USA_elizebeth_friedman_small"
+		texturefile = "gfx/interface/ideas/usa/advisors/rj_advisor_USA_elizebeth_friedman.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_USA_jack_h_taylor_small"
+		texturefile = "gfx/interface/ideas/usa/advisors/rj_advisor_USA_jack_h_taylor.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_USA_john_j_mccloy_small"
+		texturefile = "gfx/interface/ideas/usa/advisors/rj_advisor_USA_john_j_mccloyy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_USA_william_friedman_small"
+		texturefile = "gfx/interface/ideas/usa/advisors/rj_advisor_USA_william_friedman.dds"
+	}
+
+	################################
+	### CHINA + WARLORDS ###########
+	################################
+
+	spriteType = {
+		name = "GFX_rj_portrait_GXC_li_zongren_small"
+		texturefile = "gfx/interface/ideas/warlords/advisors/rj_portrait_GXC_li_zongren.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_GXC_bai_chongxi_small"
+		texturefile = "gfx/interface/ideas/warlords/advisors/rj_portrait_GXC_bai_chongxi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_GXC_chen_jitang_small"
+		texturefile = "gfx/interface/ideas/warlords/advisors/rj_portrait_GXC_chen_jitang.dds"
 	}
 
 }
