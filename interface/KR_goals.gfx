@@ -72,7 +72,7 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_military_research_old"
-		texturefile = "gfx/interface/goals/military_research_old.dds"
+		texturefile = "gfx/interface/goals/kr/military_research_old.dds"
 	}
 
 	SpriteType = {
@@ -108,6 +108,31 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_IRE_the_restoration"
 		texturefile = "gfx/interface/goals/kr/IRE_the_restoration.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_central_powers"
+		texturefile = "gfx/interface/goals/kr/goal_central_powers.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_MOR_sultan"
+		texturefile = "gfx/interface/goals/kr/MOR_sultan.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_OTT_caliph"
+		texturefile = "gfx/interface/goals/kr/OTT_caliph.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_OTT_Association_of_Muslim_Nations"
+		texturefile = "gfx/interface/goals/kr/OTT_Association_of_Muslim_Nations.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_OTT_opda"
+		texturefile = "gfx/interface/goals/kr/OTT_opda.dds"
 	}
 
 }
