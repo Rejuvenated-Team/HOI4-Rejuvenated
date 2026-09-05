@@ -1065,10 +1065,10 @@ technologies = {
 	main_battle_tank_chassis = { #E-50
 	
 		enable_equipments = {
-			medium_tank_chassis_4
-			medium_tank_destroyer_chassis_4
-			medium_tank_artillery_chassis_4
-			medium_tank_aa_chassis_4
+			modern_tank_chassis_1
+			modern_tank_destroyer_chassis_4
+			modern_tank_artillery_chassis_4
+			modern_tank_aa_chassis_4
 		}
 	
 		research_cost = 2.5
@@ -1112,6 +1112,7 @@ technologies = {
 			mio_cat_tech_medium_armor_and_modules
 			tanks_tech
 			tank_chassis_tech
+			medium_tank_tech
 			modern_tank_tech
 		}
 		special_project_specialization = { specialization_land }

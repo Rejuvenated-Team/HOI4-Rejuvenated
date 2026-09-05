@@ -414,13 +414,11 @@ script_enum_equipment_bonus_type = {
 	medium_tank_chassis_1
 	medium_tank_chassis_2
 	medium_tank_chassis_3
-	medium_tank_chassis_4
 	heavy_tank_chassis
 	heavy_tank_chassis_0
 	heavy_tank_chassis_1
 	heavy_tank_chassis_2
 	heavy_tank_chassis_3
-	modern_tank_chassis
 	modern_tank_chassis_1
 	super_heavy_tank_chassis
 	super_heavy_tank_chassis_1
@@ -561,9 +559,6 @@ script_enum_equipment_bonus_type = {
 	super_heavy_tank_aa_chassis
 	super_heavy_tank_artillery_chassis
 	super_heavy_tank_destroyer_chassis
-	modern_tank_aa_chassis
-	modern_tank_artillery_chassis
-	modern_tank_destroyer_chassis
 	light_tank_aa_chassis_0
 	light_tank_aa_chassis_1
 	light_tank_aa_chassis_2
@@ -598,22 +593,18 @@ script_enum_equipment_bonus_type = {
 	medium_tank_artillery_chassis_1
 	medium_tank_artillery_chassis_2
 	medium_tank_artillery_chassis_3
-	medium_tank_artillery_chassis_4
 	medium_tank_destroyer_chassis_0
 	medium_tank_destroyer_chassis_1
 	medium_tank_destroyer_chassis_2
 	medium_tank_destroyer_chassis_3
-	medium_tank_destroyer_chassis_4
 	medium_tank_amphibious_chassis_0
 	medium_tank_amphibious_chassis_1
 	medium_tank_amphibious_chassis_2
 	medium_tank_amphibious_chassis_3
-	medium_tank_amphibious_chassis_4
 	medium_tank_flame_chassis_0
 	medium_tank_flame_chassis_1
 	medium_tank_flame_chassis_2
 	medium_tank_flame_chassis_3
-	medium_tank_flame_chassis_4
 	heavy_tank_aa_chassis_0
 	heavy_tank_aa_chassis_1
 	heavy_tank_aa_chassis_2
@@ -659,19 +650,15 @@ script_enum_equipment_bonus_type = {
 	medium_tank_equipment_1
 	medium_tank_equipment_2
 	medium_tank_equipment_3
-	medium_tank_equipment_4
 	medium_tank_artillery_equipment_1
 	medium_tank_artillery_equipment_2
 	medium_tank_artillery_equipment_3
-	medium_tank_artillery_equipment_4
 	medium_tank_destroyer_equipment_1
 	medium_tank_destroyer_equipment_2
 	medium_tank_destroyer_equipment_3
-	medium_tank_destroyer_equipment_4
 	medium_tank_aa_equipment_1
 	medium_tank_aa_equipment_2
 	medium_tank_aa_equipment_3
-	medium_tank_aa_equipment_4
 	heavy_tank_equipment_1
 	heavy_tank_equipment_2
 	heavy_tank_equipment_3
