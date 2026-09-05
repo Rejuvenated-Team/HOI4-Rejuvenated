@@ -2513,10 +2513,9 @@ country_event = {
 			}
 		}
 	}
-
-	
 }
 
+# Event for POR after integrating Timor (via decision) 
 country_event = {
 	id = lar_portugal_overseas_provinces.3
 	title = lar_portugal_overseas_provinces.3.t

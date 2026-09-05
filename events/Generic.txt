@@ -245,6 +245,11 @@ country_event = {
 				original_tag = SOV 
 				FROM = { has_completed_focus = wuw_HUN_join_the_comintern }
 			}
+			modifier = {
+				factor = 10
+				original_tag = SOV 
+				FROM = { has_completed_focus = PER_soviet_alignment }
+			}
 		}
 		add_to_faction = FROM
 		FROM = { country_event = { id = generic.3 hours = 6 } }
@@ -427,6 +432,17 @@ country_event = {
 				FROM = {
 					original_tag = HUN
 					has_completed_focus = wuw_HUN_join_the_comintern
+				}
+			}
+
+			modifier = { # It ruins the entire path if SOV says no so just don't
+				factor = 0
+				FROM = {
+					original_tag = SIA
+					OR = {
+						has_completed_focus = SIA_join_the_allies
+						has_completed_focus = SIA_unseat_the_government
+					}
 				}
 			}
 
@@ -1048,6 +1064,12 @@ country_event = {
 				factor = 0
 				FROM = { original_tag = JAP }
 				original_tag = ETH 
+			}
+
+			modifier = {
+				factor = 0.5
+				has_country_flag = SIA_weight_towards_accepting_invite_to_alliance
+				FROM = { original_tag = SIA } 
 			}
 		}
 		#Lone Wolf Finland can't join any factions - Tooltip for player
