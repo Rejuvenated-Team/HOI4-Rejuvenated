@@ -9,7 +9,7 @@ country_event = {
 	id = rj_slovakia.1
 	title = rj_slovakia.1.title
 	desc = rj_slovakia.1.desc
-	#picture = GFX_
+	picture = GFX_report_event_soldiers_parade
 
 	is_triggered_only = yes
 
@@ -58,7 +58,7 @@ country_event = {
 	id = rj_slovakia.2
 	title = rj_slovakia.2.title
 	desc = rj_slovakia.2.desc
-	#picture = GFX_
+	picture = GFX_report_event_generic_handshake
 
 	is_triggered_only = yes
 
@@ -72,7 +72,7 @@ country_event = {
 	id = rj_slovakia.3
 	title = rj_slovakia.3.title
 	desc = rj_slovakia.3.desc
-	#picture = GFX_
+	picture = GFX_report_event_german_troops
 
 	is_triggered_only = yes
 
