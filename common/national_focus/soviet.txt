@@ -7921,7 +7921,7 @@ focus_tree = {
 
 	focus = {
 		id = rj_SOV_reinvite_the_zinovyevites_into_the_party
-		icon = GFX_focus_SOV_purge_zinovyevists
+		icon = GFX_focus_SOV_zinovyevists
 		prerequisite = { focus = SOV_the_stalin_constitution }
 		mutually_exclusive = { focus = SOV_the_zinovyevite_terrorist_center }
 		x = 1
@@ -7929,7 +7929,7 @@ focus_tree = {
 		relative_position_id = SOV_the_stalin_constitution
 		cost = 5
 		
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
 
 		completion_reward = {
 			SOV_remove_paranoia_effect = yes
@@ -8295,7 +8295,7 @@ focus_tree = {
 
 	focus = {
 		id = rj_SOV_get_back_the_trotskyists
-		icon = GFX_focus_SOV_purge_trotskyists
+		icon = GFX_focus_fra_loyalty_trotzky
 		prerequisite = { focus = rj_SOV_reinvite_the_zinovyevites_into_the_party }
 		mutually_exclusive = { focus = SOV_the_anti_soviet_trotskyist_center }
 		x = 0
@@ -8303,22 +8303,50 @@ focus_tree = {
 		relative_position_id = rj_SOV_reinvite_the_zinovyevites_into_the_party
 		cost = 5
 
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
 
 		completion_reward = {
 
 			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SOV_lev_trotsky
 			show_ideas_tooltip = SOV_karl_radek
 			show_ideas_tooltip = SOV_ivar_smilga
 			show_ideas_tooltip = SOV_yevgeny_preobrazhensky
 			show_ideas_tooltip = SOV_martemyan_ryutin
 			show_ideas_tooltip = SOV_nikolay_ustryalov
 			hidden_effect = {
+				if = {
+					limit = { has_global_flag = AAT_trotsky_in_mexico }
+					set_global_flag = flag_trotsky_returning_to_ussr_from_mexico
+					MEX = { country_event = { id = mexico.22 } } #TODO Needs rewrite
+				}
+				else_if = {
+					limit = { has_global_flag = NOR_trotsky_in_norway }
+					set_global_flag = flag_trotsky_returning_to_ussr_from_norway
+					set_global_flag = NOR_trotsky_in_soviet
+					clr_global_flag = NOR_trotsky_in_norway
+					NOR = { country_event = { id = mexico.22 } } #TODO Needs rewrite
+				}
+				SOV_lev_trotsky = {
+					clr_character_flag = SOV_exiled_flag
+				}
 				#SOV_karl_radek
 				#SOV_ivar_smilga
 				#SOV_yevgeny_preobrazhensky
 				#SOV_martemyan_ryutin
 				#SOV_nikolay_ustryalov
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_field_marshal_role = {
+				character = SOV_lev_trotsky
+				traits = { media_personality organisational_leader }
+				skill = 4
+				attack_skill = 3
+				defense_skill = 1
+				planning_skill = 4
+				logistics_skill = 4
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -8578,102 +8606,25 @@ focus_tree = {
 
 	focus = {
 		id = rj_SOV_invite_the_white_exiles
-		icon = GFX_focus_SOV_military_purge
+		icon = GFX_goal_align_russia
 		prerequisite = { focus = rj_SOV_get_back_the_trotskyists }
 		mutually_exclusive = { focus = SOV_the_military_conspiracy }
 		x = 0
 		y = 2
 		relative_position_id = rj_SOV_get_back_the_trotskyists
 		cost = 5
-
-		available = {
-			has_country_flag = {
-				flag = SOV_second_moscow_trial_flag
-				days > 175
-			}
-			custom_trigger_tooltip = {
-				tooltip = SOV_last_purge_focus_days_military_tt
-				has_country_flag = {
-					flag = SOV_second_moscow_trial_flag
-					days > 175
-				}
-			}
-		}
 		
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
-
-		select_effect = {
-			set_country_flag = SOV_paranoia_do_not_cancel_focus_flag #This focus cannot be canceled
-		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
 
 		completion_reward = {
-			clr_country_flag = SOV_paranoia_do_not_cancel_focus_flag
-			set_country_flag = { flag = SOV_paranoia_random_purge_cooldown_from_focus_flag days = 15 } #Used to prevent random purges from popping up while this is active
-			set_country_flag = SOV_trial_of_the_generals_flag #Used to unlock the next purge focus
 
-			add_political_power = 25
-
-			SOV_paranoia_high_increase_effect = yes
-
-			#Historical
-			if = {
-				limit = {
-					has_character = SOV_mikhail_tukhachevsky
-				}
-				SOV_mikhail_tukhachevsky = {
-					set_character_flag = SOV_targeted_for_purge_flag
-				}
-			}
-			else = {
-				SOV_add_random_character_to_purge_targets_effect = yes
-			}
-			#NOT-SO-HISTORICAL
-			#Yegorov
-			if = {
-				limit = {
-					has_character = SOV_aleksandr_yegorov
-				}
-				SOV_aleksandr_yegorov = {
-					set_character_flag = SOV_targeted_for_purge_flag
-				}
-			}
-			else = {
-				SOV_add_random_character_to_purge_targets_effect = yes
-			}
-			#Blyukher
-			if = {
-				limit = {
-					has_character = SOV_vasily_blyukher
-				}
-				SOV_vasily_blyukher = {
-					set_character_flag = SOV_targeted_for_purge_flag
-				}
-			}
-			else = {
-				SOV_add_random_character_to_purge_targets_effect = yes
-			}
-			#Primakov
-			if = {
-				limit = {
-					has_character = SOV_vitaly_primakov
-				}
-				SOV_vitaly_primakov = {
-					set_character_flag = SOV_targeted_for_purge_flag
-				}
-			}
-			else = {
-				SOV_add_random_character_to_purge_targets_effect = yes
-			}			
-
-			custom_effect_tooltip = SOV_will_trigger_a_great_purge_tt
+			custom_effect_tooltip = available_political_advisor
 			hidden_effect = {
-				set_country_flag = SOV_purge_event_unavoidable_flag #No way to avoid this purge. This people are about to be purged and there's nothing you can do for them.
-				SOV_great_purge_army_trial_of_the_generals_effect = yes #TRIAL OF THE GENERALS -> Tukhachevsky
+				#
 			}
 
-			set_country_flag = SOV_stalinist_military_flag #New Generals have more chances of being Stalinists after this
+			custom_effect_tooltip = generic_skip_one_line_tt
 
-			custom_effect_tooltip = newline_tt
 			if = {
 				limit = { NOT = { has_completed_focus = SOV_lessons_of_war } }
 				
@@ -8691,6 +8642,7 @@ focus_tree = {
 		id = SOV_the_bloc_of_rights_and_trotskyites
 		icon = GFX_focus_SOV_purge_bukharinists
 		prerequisite = { focus = SOV_the_military_conspiracy }
+		mutually_exclusive = { focus = rj_SOV_appeal_to_the_right_bloc }
 		x = 0
 		y = 1
 		relative_position_id = SOV_the_military_conspiracy
@@ -8798,6 +8750,44 @@ focus_tree = {
 	}
 
 	focus = {
+		id = rj_SOV_appeal_to_the_right_bloc
+		icon = GFX_focus_SOV_bukharinists
+		prerequisite = { focus = rj_SOV_invite_the_white_exiles }
+		mutually_exclusive = { focus = SOV_the_bloc_of_rights_and_trotskyites }
+		x = 0
+		y = 1
+		relative_position_id = rj_SOV_invite_the_white_exiles
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SOV_nikolay_bukharin
+			show_ideas_tooltip = SOV_aleksey_rykov
+			show_ideas_tooltip = SOV_mikhail_tomsky
+			hidden_effect = {
+				#SOV_nikolay_bukharin
+				#SOV_aleksey_rykov
+				#SOV_mikhail_tomsky
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = {
+				limit = { NOT = { has_completed_focus = SOV_lessons_of_war } }
+				
+				custom_effect_tooltip = modify_the_red_army_tt
+				add_to_variable = { SOV_the_red_army_mastery_loss_factor = -0.05 tooltip = land_mastery_gain_factor_tt }
+
+				#Need for tooltip
+				set_variable = { SOV_the_red_army_mastery_loss_factor_inverted = SOV_the_red_army_mastery_loss_factor }
+				multiply_variable = { SOV_the_red_army_mastery_loss_factor_inverted = -1 }
+			}
+		}
+	}
+
+	focus = {
 		id = SOV_behead_the_snake
 		icon = GFX_focus_SOV_behead_the_snake
 		prerequisite = { focus = SOV_the_military_conspiracy }
@@ -8844,7 +8834,7 @@ focus_tree = {
 	focus = {
 		id = SOV_stalins_cult_of_personality
 		icon = GFX_focus_SOV_stalins_cult_of_personality
-		prerequisite = { focus = SOV_the_bloc_of_rights_and_trotskyites }
+		prerequisite = { focus = SOV_the_bloc_of_rights_and_trotskyites focus = rj_SOV_appeal_to_the_right_bloc }
 		x = 1
 		y = 1
 		relative_position_id = SOV_the_bloc_of_rights_and_trotskyites

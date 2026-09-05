@@ -2670,13 +2670,21 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-				}
-				OR = {
-					has_completed_focus = SOV_integrate_smirnovs_bloc
-					has_completed_focus = SOV_return_democracy_to_the_party
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_get_back_the_trotskyists
+					else = {
+						OR = {
+							has_global_flag = SOV_soviet_civil_war
+							has_global_flag = SOV_soviet_civil_war_over
+						}
+						OR = {
+							has_completed_focus = SOV_integrate_smirnovs_bloc
+							has_completed_focus = SOV_return_democracy_to_the_party
+						}
+					}
 				}
 				is_country_leader = no
 				if = {
@@ -3096,11 +3104,19 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					SOV_is_right_opposition = yes 
-					AND = {
-						SOV_is_left_opposition = yes 
-						has_completed_focus = SOV_cooperation_against_stalin 
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_appeal_to_the_right_bloc
+					else = {
+						OR = {
+							SOV_is_right_opposition = yes 
+							AND = {
+								SOV_is_left_opposition = yes 
+								has_completed_focus = SOV_cooperation_against_stalin 
+							}
+						}
 					}
 				}
 				is_country_leader = no
@@ -3158,11 +3174,19 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					SOV_is_right_opposition = yes 
-					AND = {
-						SOV_is_left_opposition = yes 
-						has_completed_focus = SOV_cooperation_against_stalin 
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_appeal_to_the_right_bloc
+					else = {
+						OR = {
+							SOV_is_right_opposition = yes 
+							AND = {
+								SOV_is_left_opposition = yes 
+								has_completed_focus = SOV_cooperation_against_stalin 
+							}
+						}
 					}
 				}
 				is_country_leader = no
@@ -3215,9 +3239,17 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					SOV_is_right_opposition = yes
-					has_completed_focus = SOV_return_democracy_to_the_party
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_appeal_to_the_right_bloc
+					else = {
+						OR = {
+							SOV_is_right_opposition = yes 
+							has_completed_focus = SOV_return_democracy_to_the_party
+						}
+					}
 				}
 				if = {
 					limit = {
