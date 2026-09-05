@@ -1,5 +1,3 @@
-#!gfx:interface/RJ_goals.gfx
-#!gfx:interface/KR_goals.gfx
 focus_tree = {
 	id = cuban_focus
 	country = {
