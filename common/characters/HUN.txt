@@ -1,0 +1,844 @@
+characters={
+	HUN_miklos_horthy={
+		instance = {
+			allowed = {
+				has_dlc = "Death or Dishonor"
+			}
+			name=HUN_miklos_horthy
+			portraits={
+				navy = { #Can become Navy leader and therefore navy advisor
+					large = "GFX_Portrait_hungary_miklos_horthy_admiral"
+					small = "gfx/interface/ideas/hun/HUN_idea_miklos_horthy_admiral.dds"
+
+				}
+				civilian={
+					large="gfx/leaders/HUN/Portrait_Hungary_Miklos_Horthy.dds"
+				}
+			}
+			country_leader={
+				ideology=oligarchism
+				traits={ fascist_sympathies anti_communist }
+				expire="1965.1.1.1"
+				id=500
+			}
+			country_leader={
+				ideology=fascism_ideology
+				traits={ anti_communist }
+				expire="1965.1.1.1"
+				id=503
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Death or Dishonor" }
+			}
+			name=HUN_miklos_horthy
+			portraits={
+				civilian={
+					large="gfx/leaders/HUN/Portrait_Hungary_Miklos_Horthy.dds"
+				}
+			}
+			country_leader={
+				ideology=oligarchism
+				expire="1965.1.1.1"
+				id=500
+			}
+			country_leader={
+				ideology=fascism_ideology
+				expire="1965.1.1.1"
+				id=500
+			}
+		}
+	}
+
+	HUN_otto_von_habsburg={
+		name=HUN_otto_von_habsburg
+		portraits={
+			civilian={
+				large="GFX_Portrait_hungary_otto_von_hapsburg"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	HUN_matyas_rakosi={
+		name=HUN_matyas_rakosi
+		portraits={
+			civilian={
+				large="gfx/leaders/HUN/Portrait_Hungary_Matyas_Rakoski.dds"
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	HUN_arpad_szakasits={
+		name=HUN_arpad_szakasits
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	HUN_franz_friedrich = { #Can be given country leader roles later
+		name = HUN_franz_friedrich
+		portraits = {
+			army = {
+				large = "GFX_Portrait_hungary_friedrich_franz"
+			}
+			civilian = {
+				large = "GFX_Portrait_hungary_friedrich_franz"
+			}
+		}
+	}
+
+	HUN_istvan_szechenyi={
+		name=HUN_istvan_szechenyi
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_europe_generic_7.dds"
+			}
+		}
+		country_leader={
+			ideology=falangism
+			expire="1948.1.1.12"
+			id=-1
+		}
+	}
+
+	HUN_geza_lakatos={
+		name=HUN_geza_lakatos
+		portraits={
+			army={
+				large="GFX_Portrait_hungary_geza_lakatos"
+				small="gfx/interface/ideas/idea_HUN_geza_lakatos.dds"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+	HUN_ivan_hindy={
+		name=HUN_ivan_hindy
+		portraits={
+			army={
+				large="GFX_Portrait_hungary_ivan_hindy"
+				small="gfx/interface/ideas/idea_HUN_ivan_hindy.dds"
+			}
+		}
+		corps_commander={
+			traits={ trickster }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+
+	HUN_karoly_beregfy={
+		name=HUN_karoly_beregfy
+		portraits={
+			army={
+				large="GFX_Portrait_hungary_karoly_beregfy"
+				small="gfx/interface/ideas/idea_HUN_karoly_beregfy.dds"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+
+	HUN_lajos_veress={
+		name=HUN_lajos_veress
+		portraits={
+			army={
+				large="GFX_Portrait_hungary_lajos_veress"
+				small="gfx/interface/ideas/idea_HUN_lajos_veress.dds"
+			}
+		}
+		corps_commander={
+			traits={ armor_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+	HUN_ferenc_feketehalmyczeydner={
+		name=HUN_ferenc_feketehalmyczeydner
+		portraits={
+			army={
+				large="GFX_Portrait_hungary_ferenc_feketehalmy_czeydner"
+				small="gfx/interface/ideas/idea_HUN_ferenc_feketehalmy_czeydner.dds"
+			}
+		}
+		field_marshal={
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	HUN_Vilmos_Nagy_de_Nagybaczon=  { # fought the serbs in WW1, retired as a general in '41, later reinstated as a general in the capacity of minister of defence 41-45
+		name = "Vilmos Nagy de Nagybaczon"
+		portraits = {
+			army = {
+				large="gfx/leaders/HUN/Portrait_HUN_Vilmos_Nagy_de_Nagybaczon.png"
+				small="gfx/interface/ideas/idea_HUN_Vilmos_Nagy_de_Nagybaczon.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				old_guard
+				fortress_buster
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	HUN_Bela_Miklos=  { # career officer from '36, rose to rank of general defected in '44, and became prime minister of the interim govt.
+		name = "Béla Miklós"
+		portraits = {
+			army = {
+				large="gfx/leaders/HUN/Portrait_HUN_Bela_Miklos.png"
+				small="gfx/interface/ideas/idea_HUN_Bela_Miklos.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				panzer_leader
+				trait_engineer
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	HUN_Dezso_Laszlo=  { # general throughout the war, exected by the communists
+		name = "Dezső László"
+		portraits = {
+			army = {
+				large="gfx/leaders/HUN/Portrait_HUN_Dezso_Laszlo.png"
+				small="gfx/interface/ideas/idea_HUN_Dezso_Laszlo.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = HUN_dezso_laszlo
+			ledger = army
+			traits = {
+				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	HUN_Jany_Gusztav=  { # commanded the 2nd army at Stalingrad
+		name = "Gusztáv Jány"
+		portraits = {
+			army = {
+				large="gfx/leaders/HUN/Portrait_HUN_Gusztav_Jany.png"
+				small="gfx/interface/ideas/idea_HUN_Jany_Gusztav.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = HUN_gusztav_jany
+			ledger = army
+			traits = {
+				army_armored_1
+			}
+			cost =  50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = {
+				old_guard
+				trait_engineer
+				skilled_staffer
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	HUN_Szilard_Bakay=  { # division commander '39-'42 corps commander from '43
+		name = "Szilárd Bakay"
+		portraits = {
+			army = {
+				large="gfx/leaders/HUN/Portrait_HUN_Szilard_Bakay.png"
+				small="gfx/interface/ideas/idea_HUN_Szilard_Bakay.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				career_officer
+				organizer
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	HUN_Karoly_Bartha=  { # minster of defence '38-'42 played a role in the vojvodina massacres. fired for being too pro-german
+		name = "Károly Bartha"
+		portraits = {
+			army = {
+				large="gfx/leaders/HUN/Portrait_HUN_Karoly_Bartha.tga"
+				small="gfx/interface/ideas/idea_HUN_Karoly_Bartha.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				old_guard
+				trait_engineer
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	
+	HUN_joseph_Habsburg_Lothringen={ # archduke joseph august of austria - HU cmdr on the eastern front in ww1, and later regent of hungary
+			name = "Joseph von Habsburg-Lothringen"
+		portraits={
+			army={
+				large="gfx/leaders/AUS/Portrait_AUS_Joseph_August_von_Habsburg.png"
+				small="gfx/interface/ideas/idea_AUS_Joseph_August_von_Habsburg.dds"
+			}
+		}
+		advisor={
+			slot = army_chief
+				visible = {
+					has_country_leader = {
+						character = HUN_otto_von_habsburg
+					}
+				}
+				traits = {
+					army_chief_drill_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		field_marshal = {
+			traits = {
+				war_hero
+				trait_reckless
+				politically_connected
+				inflexible_strategist
+				unyielding_defender
+				inspirational_leader
+			}
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 4
+			visible = {
+				has_country_leader = {
+					character = HUN_otto_von_habsburg
+				}
+			}	
+		}
+	}
+
+
+
+	### THEORISTS ###
+
+	HUN_shvoy_kalman={
+		name=HUN_shvoy_kalman
+		portraits={
+			army={
+				small=GFX_idea_HUN_shvoy_kalman
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = HUN_shvoy_kalman
+			ledger = army
+			
+			traits = {
+				military_theorist
+			}
+		}
+	}
+
+	HUN_gyorgy_jendrassik={
+		name=HUN_gyorgy_jendrassik
+		portraits={
+			army={
+				small="GFX_idea_HUN_gyorgy_jendrassik"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = HUN_gyorgy_jendrassik
+			ledger = air
+			traits = {
+				air_warfare_theorist
+			}
+		}
+	}
+
+
+	### ARMY CHIEFS ###
+
+	HUN_ferenc_szombathelyi={
+		name=HUN_ferenc_szombathelyi
+		portraits={
+			army={
+				small="GFX_idea_HUN_ferenc_szombathelyi"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = HUN_ferenc_szombathelyi
+			traits = {
+				army_chief_defensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	HUN_hugo_sonyi={
+		name=HUN_hugo_sonyi
+		portraits={
+			army={
+				large = "gfx/leaders/HUN/Portrait_HUN_Hugo_Sonyi.tga"
+				small="GFX_idea_HUN_hugo_sonyi"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = HUN_hugo_sonyi
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		field_marshal = {
+			traits = {
+				defensive_doctrine
+				old_guard
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+
+	}
+
+
+	### NAVY CHIEFS ###
+
+	HUN_francois_deak={
+		name=HUN_francois_deak
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_europe_1"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = HUN_francois_deak
+			traits = {
+				navy_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	HUN_reszo_kastner={  # jewish government minister who helped some jews escape to switzerland, though also co-operated with the SS sending others to the camps. Nothing to do with the navy
+		name=HUN_reszo_kastner
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_HUN_reszo_kastner.dds"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = HUN_reszo_kastner
+			traits = {
+				navy_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+	### AIR CHIEFS ###
+
+	HUN_bela_rakosi={
+		name=HUN_bela_rakosi
+		portraits={
+			army={
+				small="GFX_idea_HUN_bela_rakosi"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = HUN_bela_rakosi
+			traits = {
+				air_chief_ground_support_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	HUN_sandor_magyarossy={
+		name=HUN_sandor_magyarossy
+		portraits={
+			army={
+				small="GFX_idea_HUN_sandor_magyarossy"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = HUN_sandor_magyarossy
+			traits = {
+				air_air_combat_training_1
+			}
+			cost =  50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+	### MILITARY HIGH COMMAND ###
+
+	#laszlo above
+	
+	#jany above
+
+
+	HUN_jeno_ratz={ # general and army cheif. later minister of defence. PDX give him an air role for some reason.
+		name=HUN_jeno_ratz
+		portraits={
+			army={
+				small="GFX_idea_HUN_jeno_ratz"
+				large="gfx/leaders/HUN/Portrait_HUN_Jeno_Ratz.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				politically_connected
+				organizer
+				skilled_staffer
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor={
+			slot = high_command
+			idea_token = HUN_jeno_ratz
+			ledger = air
+			traits = {
+				air_air_combat_training_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	HUN_henrik_werth={
+		name=HUN_henrik_werth
+		portraits={
+			army={
+				small="GFX_idea_HUN_henrik_werth"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = HUN_henrik_werth
+			ledger = army
+			traits = {
+				army_cavalry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+	### POLITICAL ADVISORS ###
+	
+	HUN_kalman_kanya={
+		name=HUN_kalman_kanya
+		portraits={
+			army={
+				small="GFX_idea_HUN_kalman_kanya"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = HUN_kalman_kanya
+			traits = {
+				compassionate_gentleman 
+			}
+		}
+	}
+
+	HUN_lajos_remenyi_schneller={
+		name=HUN_lajos_remenyi_schneller
+		portraits={
+			army={
+				small="GFX_idea_HUN_lajos_remenyi_schneller"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = HUN_lajos_remenyi_schneller
+			traits = {
+				captain_of_industry 
+			}
+		}
+	}
+
+	HUN_vilmos_roder={
+		name=HUN_vilmos_roder
+		portraits={
+			army={
+				small="GFX_idea_HUN_vilmos_roder"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = HUN_vilmos_roder
+			traits = {
+				war_industrialist 
+			}
+		}
+	}
+
+	HUN_gusztav_gratz={
+		name=HUN_gusztav_gratz
+		portraits={
+			army={
+				small="GFX_idea_HUN_gusztav_gratz"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = HUN_gusztav_gratz
+			allowed = {
+				has_dlc = "Death or Dishonor"
+			}
+			visible = {
+				NOT = {
+					has_cosmetic_tag = vojvodina
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state = autonomy_supervised_state
+					}
+				}
+			}
+			traits = {
+				staunch_monarchist 
+			}
+		}
+	}
+
+	HUN_kalman_daranyi={
+		name=HUN_kalman_daranyi
+		portraits={
+			army={
+				small="GFX_idea_HUN_kalman_daranyi"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = HUN_kalman_daranyi
+			traits = {
+				smooth_talking_charmer 
+			}
+		}
+	}
+
+	HUN_zoltan_tildy={
+		name=HUN_zoltan_tildy
+		portraits={
+			army={
+				small="GFX_idea_HUN_zoltan_tildy"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = HUN_zoltan_tildy
+			traits = {
+				silent_workhorse 
+			}
+		}
+	}
+
+	HUN_laszlo_rajk={
+		name=HUN_laszlo_rajk
+		portraits={
+			army={
+				small="GFX_idea_HUN_laszlo_rajk"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = HUN_laszlo_rajk
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state = autonomy_supervised_state
+					}
+				}
+			}
+			traits = {
+				communist_revolutionary 
+			}
+		}
+	}
+
+	HUN_jozsef_szell={
+		name=HUN_jozsef_szell
+		portraits={
+			army={
+				small="GFX_idea_HUN_jozsef_szell"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = HUN_jozsef_szell
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state = autonomy_supervised_state
+					}
+				}
+			}
+			traits = {
+				democratic_reformer 
+			}
+		}
+	}
+	
+	HUN_gyula_gombos_de_jakfa={
+		name=HUN_gyula_gombos_de_jakfa
+		portraits={
+			army={
+				small="GFX_idea_HUN_gyula_gombos_de_jakfa"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = HUN_gyula_gombos_de_jakfa
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state = autonomy_supervised_state
+					}
+				}
+			}
+			traits = {
+				fascist_demagogue 
+			}
+		}
+	}
+
+	# Illusive Gentleman auto-generated
+}

@@ -1273,3 +1273,14 @@ FRI = {
 	color = rgb { 51 153 255 }
 	color_ui = rgb { 51 153 255 }
 }
+
+#### Improved Austria-Hungary Import ####
+
+RHN = {
+	color = rgb { 78 147 202 }
+	color_ui = rgb { 78 147 202 }
+}
+EMI = {
+	color = rgb { 22 126 29 }
+	color_ui = rgb { 22 126 29 }
+}

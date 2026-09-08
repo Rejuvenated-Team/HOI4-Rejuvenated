@@ -4,3 +4,6 @@ SMR = "countries/Spanish Morocco.txt"
 #Asia
 XIK = "countries/Xikang Clique.txt"
 FRI = "countries/French Indochina.txt"
+
+RHN = "countries/Hesse.txt"
+EMI = "countries/Emilia Romagna.txt"

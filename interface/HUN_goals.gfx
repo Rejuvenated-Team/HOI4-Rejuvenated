@@ -1,0 +1,6 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_goal_AUH_Federation"
+		texturefile = "gfx/interface/goals/AUS_federation.tga"
+	}
+}

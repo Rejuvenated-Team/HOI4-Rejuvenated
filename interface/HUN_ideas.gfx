@@ -1,0 +1,429 @@
+spriteTypes = {
+
+	# ideas we need to override in DLC go in this file
+
+	SpriteType = {
+		name = "GFX_idea_HUN_hosting_german_monarch_kaiser"
+		texturefile = "gfx//interface//ideas//idea_hosting_kaiser_in_exile.dds"
+	}	
+	SpriteType = {
+		name = "GFX_idea_HUN_hosting_german_royalty"
+		texturefile = "gfx//interface//ideas//idea_hosting_german_royalty.dds"
+	}	
+	SpriteType = {
+		name = "GFX_idea_HUN_hosting_ottoman_sultan"
+		texturefile = "gfx//interface//ideas//idea_hosting_sultan_in_exile.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_idea_AUS_arthur_seyss-inquart"
+		texturefile = "gfx//interface//ideas//idea_AUS_arthur_seyss-inquart.dds"
+	}	
+	SpriteType = {
+		name = "GFX_idea_AUS_leopold_figl"
+		texturefile = "gfx//interface//ideas//idea_AUS_leopold_figl.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_AUS_julius_raab"
+		texturefile = "gfx//interface//ideas//idea_AUS_julius_raab.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_AUS_ernst_rudiger"
+		texturefile = "gfx//interface//ideas//idea_AUS_ernst_rudiger.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_AUS_eduard_freiherr"
+		texturefile = "gfx//interface//ideas//idea_AUS_eduard_freiherr.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_AUS_alfed_jansa"
+		texturefile = "gfx//interface//ideas//idea_AUS_alfed_jansa.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_AUS_franz_bohme"
+		texturefile = "gfx//interface//ideas//idea_AUS_franz_bohme.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_AUS_sigismund_schilhawsky"
+		texturefile = "gfx//interface//ideas//idea_AUS_sigismund_schilhawsky.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_AUS_alexander_lohr"
+		texturefile = "gfx//interface//ideas//idea_AUS_alexander_lohr.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_AUS_lothar_rendulic"
+		texturefile = "gfx//interface//ideas//idea_AUS_lothar_rendulic.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_AUS_wilhelm_zehner"
+		texturefile = "gfx//interface//ideas//idea_AUS_wilhelm_zehner.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_AUS_anton_kienbauer"
+		texturefile = "gfx//interface//ideas//idea_AUS_anton_kienbauer.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_AUS_alois_schonburg_hartenstein"
+		texturefile = "gfx//interface//ideas//idea_AUS_alois_schonburg_hartenstein.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_AUS_julius_yllam"
+		texturefile = "gfx//interface//ideas//idea_AUS_julius_yllam.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_austria_montage"
+		texturefile = "gfx//interface//ideas//austria_montage.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_kapsch"
+		texturefile = "gfx//interface//ideas//kapsch.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_semperit"
+		texturefile = "gfx//interface//ideas//semperit.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_steyr_daimler_puch"
+		texturefile = "gfx//interface//ideas//steyr.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_steyr"
+		texturefile = "gfx//interface//ideas//steyr.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_bohler"
+		texturefile = "gfx//interface//ideas//AUS_bohler.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_sauerwerke"
+		texturefile = "gfx//interface//ideas//AUS_sauerwerke.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_lohner"
+		texturefile = "gfx//interface//ideas//AUS_lohner.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_simmering_graz_pauker"
+		texturefile = "gfx//interface//ideas//simmering_graz.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_wiener_neu_lokomotiv"
+		texturefile = "gfx//interface//ideas//wiener_neu_lokomotiv.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_graef_stift"
+		texturefile = "gfx//interface//ideas//graef_stift.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_leopold_gasser_waffenfabrik"
+		texturefile = "gfx//interface//ideas//leopold_gasser_waffenfabrik.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_hirtenberger"
+		texturefile = "gfx//interface//ideas//hirtenberger.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_puch"
+		texturefile = "gfx//interface//ideas//puch.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_AUS_crda"
+		texturefile = "gfx//interface//ideas//idea_crda.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_phoenix"
+		texturefile = "gfx//interface//ideas//phoenix.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_wiener_neu_flugzeug"
+		texturefile = "gfx//interface//ideas//wiener_neu_flugzeug.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_AUS_georg_von_trapp"
+		texturefile = "gfx//interface//ideas//idea_AUS_georg_von_trapp.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_ganz_danubius"
+		texturefile = "gfx//interface//ideas//ganz_danubius.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_arthur_seyss-inquart"
+		texturefile = "gfx//interface//ideas//idea_AUS_arthur_seyss-inquart.dds"
+	}	
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_leopold_figl"
+		texturefile = "gfx//interface//ideas//idea_AUS_leopold_figl.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_julius_raab"
+		texturefile = "gfx//interface//ideas//idea_AUS_julius_raab.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_ernst_rudiger"
+		texturefile = "gfx//interface//ideas//idea_AUS_ernst_rudiger.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_eduard_freiherr"
+		texturefile = "gfx//interface//ideas//idea_AUS_eduard_freiherr.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_alfed_jansa"
+		texturefile = "gfx//interface//ideas//idea_AUS_alfed_jansa.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_franz_bohme"
+		texturefile = "gfx//interface//ideas//idea_AUS_franz_bohme.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_sigismund_schilhawsky"
+		texturefile = "gfx//interface//ideas//idea_AUS_sigismund_schilhawsky.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_alexander_lohr"
+		texturefile = "gfx//interface//ideas//idea_AUS_alexander_lohr.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_lothar_rendulic"
+		texturefile = "gfx//interface//ideas//idea_AUS_lothar_rendulic.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_wilhelm_zehner"
+		texturefile = "gfx//interface//ideas//idea_AUS_wilhelm_zehner.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_anton_kienbauer"
+		texturefile = "gfx//interface//ideas//idea_AUS_anton_kienbauer.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_alois_schonburg_hartenstein"
+		texturefile = "gfx//interface//ideas//idea_AUS_alois_schonburg_hartenstein.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_julius_yllam"
+		texturefile = "gfx//interface//ideas//idea_AUS_julius_yllam.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_georg_von_trapp"
+		texturefile = "gfx//interface//ideas//idea_AUS_georg_von_trapp.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_austria_montage"
+		texturefile = "gfx//interface//ideas//austria_montage.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_kapsch"
+		texturefile = "gfx//interface//ideas//kapsch.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_semperit"
+		texturefile = "gfx//interface//ideas//semperit.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_steyr_daimler_puch"
+		texturefile = "gfx//interface//ideas//steyr.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_simmering_graz_pauker"
+		texturefile = "gfx//interface//ideas//simmering_graz.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_wiener_neu_lokomotiv"
+		texturefile = "gfx//interface//ideas//wiener_neu_lokomotiv.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_graef_stift"
+		texturefile = "gfx//interface//ideas//graef_stift.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_leopold_gasser_waffenfabrik"
+		texturefile = "gfx//interface//ideas//leopold_gasser_waffenfabrik.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_hirtenberger"
+		texturefile = "gfx//interface//ideas//hirtenberger.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_puch"
+		texturefile = "gfx//interface//ideas//puch.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_crda"
+		texturefile = "gfx//interface//ideas//idea_crda.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_phoenix"
+		texturefile = "gfx//interface//ideas//phoenix.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_wiener_neu_flugzeug"
+		texturefile = "gfx//interface//ideas//wiener_neu_flugzeug.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_AUS_georg_von_trapp"
+		texturefile = "gfx//interface//ideas//idea_AUS_georg_von_trapp.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_HUN_AUS_ganz_danubius"
+		texturefile = "gfx//interface//ideas//ganz_danubius.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_skoda_works"
+		texturefile = "gfx/interface/ideas/idea_cze_skoda_works.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_konrad_henlein"
+		texturefile = "gfx/interface/ideas/idea_cze_konrad_henlein.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_gustav_husak"
+		texturefile = "gfx/interface/ideas/idea_cze_gustav_husak.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_ferdinand_catlos"
+		texturefile = "gfx/interface/ideas/idea_cze_ferdinand_catlos.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_stefan_osusky"
+		texturefile = "gfx/interface/ideas/idea_cze_stefan_osusky.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_jozef_tiso"
+		texturefile = "gfx/interface/ideas/idea_cze_jozef_tiso.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_vojtech_tuka"
+		texturefile = "gfx/interface/ideas/idea_cze_vojtech_tuka.dds"
+	}
+	
+	# Military advisors #
+
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_frantisek_havel"
+		texturefile = "gfx/interface/ideas/idea_cze_frantisek_havel.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_josef_frantisek"
+		texturefile = "gfx/interface/ideas/idea_cze_josef_frantisek.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_karel_kuttelwascher"
+		texturefile = "gfx/interface/ideas/idea_cze_karel_kuttelwascher.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_jan_golian"
+		texturefile = "gfx/interface/ideas/idea_cze_jan_golian.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_alois_vicherek"
+		texturefile = "gfx/interface/ideas/idea_cze_alois_vicherek.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_karel_vaclav_petrik"
+		texturefile = "gfx/interface/ideas/idea_cze_karel_vaclav_petric.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_rudolf_viest"
+		texturefile = "gfx/interface/ideas/idea_cze_rudolf_viest.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_ludvik_krejci"
+		texturefile = "gfx/interface/ideas/idea_cze_ludvik_krejci.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_ludvik_svoboda"
+		texturefile = "gfx/interface/ideas/idea_cze_ludvik_svoboda.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_karel_janousek"
+		texturefile = "gfx/interface/ideas/idea_cze_karel_janousek.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_jaroslav_fajfr"
+		texturefile = "gfx/interface/ideas/idea_cze_jaroslav_fajfr.dds"
+	}
+	
+	# Design Companies #
+
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_elektra"
+		texturefile = "gfx/interface/ideas/idea_cze_elektra.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_tatra"
+		texturefile = "gfx/interface/ideas/idea_cze_tatra.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_ckd_praga"
+		texturefile = "gfx/interface/ideas/idea_cze_ckd_praga.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_ckd"
+		texturefile = "gfx/interface/ideas/idea_cze_ckd.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_skoda_artillery"
+		texturefile = "gfx/interface/ideas/idea_cze_skoda_artillery.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_skoda_shipyards"
+		texturefile = "gfx/interface/ideas/idea_cze_skoda_shipyards.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_skoda_armor"
+		texturefile = "gfx/interface/ideas/idea_cze_skoda_armor.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_skoda_works_2"
+		texturefile = "gfx/interface/ideas/idea_cze_skoda_works_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_zbrojovka_brno"
+		texturefile = "gfx/interface/ideas/idea_cze_zbrojovka_brno.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_praga"
+		texturefile = "gfx/interface/ideas/idea_cze_praga.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_avia"
+		texturefile = "gfx/interface/ideas/idea_cze_avia.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_aero"
+		texturefile = "gfx/interface/ideas/idea_cze_aero.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HUN_CZE_letov"
+		texturefile = "gfx/interface/ideas/idea_cze_letov.dds"
+	}
+		
+}	

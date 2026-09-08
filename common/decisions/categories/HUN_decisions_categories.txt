@@ -1,0 +1,75 @@
+HUN_unit_naming = {
+	visible = {
+		has_cosmetic_tag = HUN_EMPIRE
+	}
+}	
+HUN_move_capital = {
+	visible = {
+		OR = {
+			has_cosmetic_tag = HUN_EMPIRE
+			has_cosmetic_tag = HUN_federation
+		}
+	}
+}	
+HUN_reclaim_the_empire = {
+	visible = {
+		tag = HUN
+		OR = {
+			has_cosmetic_tag = HUN_EMPIRE
+			has_cosmetic_tag = HUN_federation
+		}
+	}
+}
+HUN_form_hre_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_hre
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+	visible = {
+		has_country_flag = HUN_HRE
+	}
+}
+HUN_trialist_expansion_category = {
+	visible = {
+		tag = HUN
+		OR = {
+			has_cosmetic_tag = HUN_EMPIRE
+			has_cosmetic_tag = HUN_federation
+		}
+		has_country_flag = HUN_trialism
+	}
+}
+HUN_restoring_foreign_sphere_category = {
+	visible = {
+		tag = HUN
+		OR = {
+			has_cosmetic_tag = HUN_EMPIRE
+			has_cosmetic_tag = HUN_federation
+		}
+	}
+}
+HUN_GER_revolt_kaiser_category = {
+	visible = {
+		tag = HUN
+		has_idea = HUN_hosting_german_monarch_kaiser
+		country_exists = GER
+	}
+}
+HUN_GER_revolt_nobility_category = {
+	visible = {
+		tag = HUN
+		has_idea = HUN_hosting_german_royalty
+		country_exists = GER
+	}
+}
+HUN_TUR_ottoman_revolt_category = {
+	visible = {
+		tag = HUN
+		has_idea = HUN_hosting_ottoman_sultan
+		country_exists = TUR
+	}
+}
