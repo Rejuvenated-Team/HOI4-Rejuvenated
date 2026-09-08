@@ -47,7 +47,7 @@ NZL_alternate_democratic = {
 		#1939						
 		NZL_think_big
 		NZL_constitution_amendment_act												
-		NZL_expand_the_nzpaf										
+		RJ_NZL_air_force_review									
 		NZL_maori_affairs_act
 		NZL_independent_new_zealand										
 		#1940
@@ -153,7 +153,7 @@ NZL_alternate_fascist = {
 		#1939						
 		NZL_think_big
 		NZL_in_the_darkness												
-		NZL_expand_the_nzpaf										
+		RJ_NZL_air_force_review										
 		NZL_maori_affairs_act
 		NZL_befriend_japan									
 		#1940
@@ -260,7 +260,7 @@ NZL_alternate_communist = {
 		#1939						
 		NZL_think_big
 		NZL_the_lee_affair												
-		NZL_expand_the_nzpaf										
+		RJ_NZL_air_force_review									
 		NZL_maori_affairs_act
 		NZL_empower_the_working_class									
 		#1940

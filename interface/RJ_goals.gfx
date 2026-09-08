@@ -1283,4 +1283,20 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/warlords/RJ_warlord_uplift_the_cavalry.dds"
 	}
 
+
+
+
+
+
+	################################################
+	### NEW ZEALAND ################################
+	################################################
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_RNZAF"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_RNZAF.dds"
+	}
+
+
+
 }

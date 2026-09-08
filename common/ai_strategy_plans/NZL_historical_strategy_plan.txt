@@ -35,9 +35,9 @@ NZL_historical = {
 		NZL_restart_the_onekaka_ironworks									
 		NZL_bureau_of_industry										
 		NZL_wairarapa_sheep_farms
+		RJ_NZL_air_force_review
 		#1937									
-		NZL_ratana_alliance											
-		NZL_expand_the_nzpaf										
+		NZL_ratana_alliance																					
 		NZL_form_the_rnzaf											
 		NZL_social_security_act										
 		NZL_defend_our_islands

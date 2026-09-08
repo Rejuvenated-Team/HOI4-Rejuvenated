@@ -66,7 +66,7 @@
 	focus = {
 		id = NZL_transfer_the_new_zealand_division
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		x = 17
+		x = 19
 		y = 0
 
 		cost = 10
@@ -483,12 +483,12 @@
 	############################
 
 	focus = {
-		id = NZL_expand_the_nzpaf
+		id = RJ_NZL_air_force_review
 		icon = GFX_goal_generic_air_doctrine
-		x = 23
+		x = 25
 		y = 0
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 2
@@ -499,81 +499,33 @@
 		}
 
 		bypass = {
-
+			OR = {
+				NOT = {
+					is_in_faction_with = ENG
+				}
+				NOT = {
+					is_subject_of = ENG
+				}
+			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
 		completion_reward = {
-			if = {
-				limit = { has_dlc = "By Blood Alone" }
-				create_equipment_variant = {
-					name = "Bristol Blenheim"
-					type = medium_plane_airframe_1
-					allow_without_tech = yes #Allowing since it comes from the UK
-					modules = {
-						fixed_main_weapon_slot = medium_bomb_bay
-						fixed_auxiliary_weapon_slot_1 = torpedo_mounting
-						fixed_auxiliary_weapon_slot_2 = bomb_locks
-						engine_type_slot = engine_3_2x
-						special_type_slot_1 = empty
-					}
-					icon = "GFX_ENG_tactical_bomber1_medium"
-				}
-				add_equipment_to_stockpile = {
-					type = medium_plane_airframe_1
-					producer = ENG
-					amount = 116
-					variant_name = "Bristol Blenheim"
-				}
-			}
-			else = {
-				add_equipment_to_stockpile = {
-					type = nav_bomber_equipment_1
-					amount = 56
-					producer = ENG
-				}
-				
-				if = {
-					limit = {
-						ENG = { has_tech = tactical_bomber1 }
-					}
-					add_equipment_to_stockpile = {
-						type = tac_bomber_equipment_1
-						amount = 30
-						producer = ENG
-					}
-					else = {
-						add_equipment_to_stockpile = {
-							type = tac_bomber_equipment_0
-							amount = 30
-							producer = ENG
-						}	
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				add_equipment_subsidy = {
-					cic = 1000
-					equipment_type = medium_plane_airframe
-					seller_tags = { ENG }
-				}
+			air_experience = 100
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				uses = 1
+				category = air_doctrine
 			}
 		}
 	}
 
 	focus = {
 		id = NZL_form_the_rnzaf
-		icon = GFX_goal_generic_build_airforce
-		prerequisite = { focus = NZL_expand_the_nzpaf }
+		icon = GFX_focus_RJ_NZL_RNZAF
+		prerequisite = { focus = RJ_NZL_air_force_review }
 		x = 0
 		y = 1
-		relative_position_id = NZL_expand_the_nzpaf
+		relative_position_id = RJ_NZL_air_force_review
 
 		cost = 10
 
@@ -589,9 +541,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		complete_tooltip = {
@@ -601,9 +550,6 @@
 				value = 0.25
 			}
 			random_state = {				
-				limit = {
-					has_state_flag = NZL_expand_the_nzpaf_AB
-				}
 				add_building_construction = {
 					type = air_base
 					level = 2
@@ -636,7 +582,6 @@
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = NZL_expand_the_nzpaf_AB
 			}
 			add_doctrine_cost_reduction = {
 				name = NZL_form_the_rnzaf
@@ -653,8 +598,8 @@
 		prerequisite = { focus = NZL_form_the_rnzaf }
 		mutually_exclusive = { focus = NZL_bomber_focus }
 		x = -1
-		y = 2
-		relative_position_id = NZL_expand_the_nzpaf
+		y = 1
+		relative_position_id = NZL_form_the_rnzaf
 
 		cost = 10
 
@@ -670,8 +615,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -691,8 +634,8 @@
 		prerequisite = { focus = NZL_form_the_rnzaf }
 		mutually_exclusive = { focus = NZL_fighter_focus }
 		x = 1
-		y = 2
-		relative_position_id = NZL_expand_the_nzpaf
+		y = 1
+		relative_position_id = NZL_form_the_rnzaf
 
 		cost = 10
 
@@ -708,8 +651,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -728,9 +669,9 @@
 		id = NZL_defend_our_islands
 		icon = GFX_goal_generic_air_naval_bomber
 		prerequisite = { focus = NZL_form_the_rnzaf focus = NZL_coastal_defense }
-		x = -3
-		y = 3
-		relative_position_id = NZL_expand_the_nzpaf
+		x = 0
+		y = 1
+		relative_position_id = NZL_coastal_defense
 
 		cost = 10
 
@@ -746,8 +687,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -766,9 +705,9 @@
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = NZL_fighter_focus focus = NZL_bomber_focus }
 		mutually_exclusive = { focus = NZL_heavy_bombers }
-		x = -1
-		y = 3
-		relative_position_id = NZL_expand_the_nzpaf
+		x = 0
+		y = 1
+		relative_position_id = NZL_fighter_focus
 
 		cost = 10
 
@@ -784,8 +723,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -805,9 +742,9 @@
 		icon = GFX_goal_generic_air_bomber
 		prerequisite = { focus = NZL_fighter_focus focus = NZL_bomber_focus }
 		mutually_exclusive = { focus = NZL_modern_fighters }
-		x = 1
-		y = 3
-		relative_position_id = NZL_expand_the_nzpaf
+		x = 0
+		y = 1
+		relative_position_id = NZL_bomber_focus
 
 		cost = 10
 
@@ -823,8 +760,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -878,7 +813,7 @@
 	focus = {
 		id = NZL_ministry_of_public_works
 		icon = GFX_focus_generic_improve_the_administration
-		x = 36
+		x = 39
 		y = 0
 
 		cost = 10
@@ -3179,7 +3114,7 @@
 		icon = GFX_goal_support_fascism
 		prerequisite = { focus = NZL_statute_of_westminster }
 		mutually_exclusive = { focus = NZL_the_lee_affair focus = NZL_constitution_amendment_act }
-		x = -3
+		x = 3
 		y = 1
 		relative_position_id = NZL_statute_of_westminster
 
@@ -3337,7 +3272,7 @@
 		icon = GFX_goal_tfv_sever_ties_with_uk
 		prerequisite = { focus = NZL_statute_of_westminster }
 		mutually_exclusive = { focus = NZL_the_lee_affair focus = NZL_in_the_darkness }
-		x = 3
+		x = -2
 		y = 1
 		relative_position_id = NZL_statute_of_westminster
 
