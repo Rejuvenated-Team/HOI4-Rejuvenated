@@ -3,7 +3,7 @@ state = {
 	name = "STATE_2" # Latium
 	manpower = 2781971
 	
-	state_category = city
+	state_category = metropolis
 
 	history = {
 		owner = ITA
@@ -47,5 +47,5 @@ state = {
 		923 6862 9794 9904 11751 11846 11882 13413 
  	}
 
-	local_supplies = 0.0 
+	local_supplies = 15.0 
 }

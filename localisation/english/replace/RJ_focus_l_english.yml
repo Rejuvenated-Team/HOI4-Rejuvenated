@@ -37,3 +37,4 @@
 #nsb_focus_l_english
  SOV_keep_commissars_organization: "[GetKeepCommissarsOrganizationName]"
  SOV_keep_commissars_organization_desc: "[GetKeepCommissarsOrganizationDesc]"
+ SOV_improve_railway_network: "Improve the Railway Network"

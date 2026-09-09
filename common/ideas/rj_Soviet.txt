@@ -291,6 +291,22 @@ ideas = {
 			}
 		}
 
+		SOV_assembly_line_heavy_tanks_idea = {
+
+			picture = man_five_year_plan_tank
+
+			allowed = {
+				always = no
+			}
+
+			equipment_bonus = {
+				heavy_tank_chassis = {
+					build_cost_ic = -0.10
+					reliability = 0.10
+				}
+			}
+		}
+
 	}
 
 }

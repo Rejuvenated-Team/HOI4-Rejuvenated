@@ -4,7 +4,7 @@ state={
 	manpower = 47232
 
 
-	state_category = enclave
+	state_category = rural
 
 	history={
 		owner = FRA
@@ -27,5 +27,5 @@ state={
 		4985 8124
  	}
 
-	local_supplies=0.0 
+	local_supplies=1.0 
 }

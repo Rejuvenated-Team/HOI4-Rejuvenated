@@ -4,7 +4,7 @@ state = {
 	name = "STATE_111" # UUSIMA
 	manpower = 559000
 	
-	state_category = large_town
+	state_category = large_city
 	
 	history = {
 		owner = FIN
@@ -37,5 +37,5 @@ state = {
 		204 3161 6009 6108 6144 9129 11105 11211 
 	}
 
-	local_supplies=0.0 
+	local_supplies=15.0 
 }

@@ -418,6 +418,12 @@ recruit_character = USA_andrew_mckee
 recruit_character = USA_john_walter_christie
 recruit_character = USA_vannevar_bush
 
+#RJ Characters
+recruit_character = USA_john_j_mccloy
+recruit_character = USA_william_friedman
+recruit_character = USA_elizebeth_friedman
+recruit_character = USA_jack_h_taylor
+
 if = {
 	limit = { not = { has_dlc = "No Compromise, No Surrender" } }
 	recruit_character = USA_jonathan_wainwright

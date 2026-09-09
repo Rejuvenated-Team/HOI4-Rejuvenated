@@ -489,6 +489,9 @@ recruit_character = FRA_louis_renault
 recruit_character = FRA_henri_edmond_fouche
 recruit_character = FRA_joseph_bethenod
 
+#RJ Characters
+recruit_character = FRA_louis_rivet
+
 if = {
 	limit = {
 		OR = {

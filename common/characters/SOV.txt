@@ -4305,5 +4305,137 @@ characters = {
 		}
 	}
 
+	###################
+	### Rejuvenated ###
+	###################
+
+	SOV_yan_karlovich_berzin={
+		name=SOV_yan_karlovich_berzin
+		portraits={
+			army={
+				small="GFX_rj_portrait_SOV_yan_karlovich_berzin"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SOV_yan_karlovich_berzin
+			allowed = {
+				original_tag = SOV
+				has_dlc = "La Resistance"
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag
+				}
+			}
+			available = {
+				has_intelligence_agency = yes
+			}
+			traits = {
+				spymaster
+			}
+		}
+	}
+	SOV_pavel_sudoplatov={
+		name=SOV_pavel_sudoplatov
+		portraits={
+			army={
+				small="GFX_rj_portrait_SOV_pavel_sudoplatov"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SOV_pavel_sudoplatov
+			allowed = {
+				original_tag = SOV
+				has_dlc = "La Resistance"
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag
+				}
+			}
+			available = {
+				has_intelligence_agency = yes
+			}
+			traits = {
+				spymaster
+			}
+		}
+	}
+	SOV_viktor_abakumov={
+		name=SOV_viktor_abakumov
+		portraits={
+			army={
+				small="GFX_rj_portrait_SOV_viktor_abakumov"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SOV_viktor_abakumov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag
+				}
+			}
+			available = {
+				has_completed_focus = SOV_smersh
+			}
+			traits = {
+				baron_of_terror
+			}
+		}
+	}
+	SOV_viktor_leonov={
+		name=SOV_viktor_leonov
+		portraits={
+			army={
+				small="GFX_rj_portrait_SOV_viktor_leonov"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = SOV_viktor_leonov
+			ledger = army
+			allowed = {
+				original_tag = SOV
+			}
+			traits = {
+				army_commando_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.2000
+			}
+		}
+	}
+	SOV_vasily_zaitsev={
+		name=SOV_vasily_zaitsev
+		portraits={
+			army={
+				small="GFX_rj_portrait_SOV_vasily_zaitsev"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = SOV_vasily_zaitsev
+			ledger = army
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				has_completed_focus = SOV_lessons_of_war
+			}
+			traits = {
+				army_sniper_adherent
+			}
+			ai_will_do = {
+				factor = 0.3000
+			}
+		}
+	}
 
 }
