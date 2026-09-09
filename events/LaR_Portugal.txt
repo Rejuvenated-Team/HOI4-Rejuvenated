@@ -1759,7 +1759,7 @@ country_event = {
 				#BRA_renato_de_almeida_guillobel = { set_nationality = FROM }
 				#BRA_alvaro_alberto_da_motta_e_silva = { set_nationality = FROM }
 				#BRA_henrique_aristides_guilhem = { set_nationality = FROM }
-				BRA_protogenes_guimaraes_vfb = { set_nationality = FROM }
+				BRA_protogenes_guimaraes = { set_nationality = FROM }
 				BRA_eduardo_gomes = { set_nationality = FROM }
 			}
 			annex_country = { 

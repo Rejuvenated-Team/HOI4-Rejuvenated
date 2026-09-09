@@ -78,7 +78,7 @@ recruit_character = BRA_francisco_correa_vfb
 recruit_character = BRA_joao_neves_da_fontoura_vfb
 recruit_character = BRA_armando_trompowsky_vfb
 recruit_character = BRA_joao_candido_vfb
-recruit_character = BRA_protogenes_guimaraes_vfb
+recruit_character = BRA_protogenes_guimaraes
 recruit_character = BRA_pedro_max_vfb
 
 ###### Generals & Admirals ######
