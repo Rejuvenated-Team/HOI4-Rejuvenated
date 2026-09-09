@@ -9,29 +9,10 @@
  MLT_chose_italian: "Chose Italian"
  MLT_chose_maltese: "Chose Maltese"
  MLT_chose_compromise: "Choosed a Compromise"
-
-
- ###############################################################
- ################# EVENTS ######################################
- ###############################################################
- malta.1.t: "The Language Question"
- malta.1.d: "For such a seemingly simple matter, the question of which language or languages should be used officially in Malta has caused a lot of political strain & divides. Many view it as picking a side. Those who prefer English tend to believe we should maintain our current ties with the crown of England. Some prefer Italian, wishing us to have closer cultural ties to Italy. Others yet emphasize Maltese & a need for independence! What option shall we go with?"
-
-
-
-
- ################################################
- ################### IDEAS ######################
- ################################################
+#Ideas
  MLT_the_language_question_idea: "The Language Question"
  MLT_the_language_question_idea_desc: "The Maltese people have had many languages over the centuries due to numerous groups ruling over them. The matter of which language(s) should be used officially has caused a surprising amount of political turmoil, as it divides the people. Many view the issue as choosing an external loyalty, versus loyalty to the Maltese people themselves."
-
-
-
- ###################################################################################
- ##################### FOCUSES #####################################################
- ###################################################################################
-
+#Focuses
  MLT_answer_the_language_question: "Answer the Language Question"
  MLT_answer_the_language_question_desc: "The question of official language in Malta has plagued us for well over a century now. It's time we settle matters regarding such a question, once & for all!"
  MLT_an_english_answer: "An English Answer"
@@ -42,3 +23,10 @@
  MLT_an_italian_answer_desc: "Italian shall be our official language!"
  MLT_a_maltese_answer: "A Maltese Answer"
  MLT_a_maltese_answer_desc: "Maltese shall be our official language!"
+#Events
+ malta.1.title: "The Language Question"
+ malta.1.desc: "For such a seemingly simple matter, the question of which language or languages should be used officially in Malta has caused a lot of political strain & divides. Many view it as picking a side. Those who prefer English tend to believe we should maintain our current ties with the crown of England. Some prefer Italian, wishing us to have closer cultural ties to Italy. Others yet emphasize Maltese & a need for independence! What option shall we go with?"
+ malta.1.a: "English, for the crown!"
+ malta.1.b: "Italian is the way!"
+ malta.1.c: "We should be proud of the Maltese language!"
+ malta.1.d: "Perhaps a compromise of Maltese & English?"
