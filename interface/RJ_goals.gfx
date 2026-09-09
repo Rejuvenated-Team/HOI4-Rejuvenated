@@ -731,6 +731,20 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/eng/RJ_ENG_ally_with_browder.dds"
 	}
 
+	#############
+	### MALTA ###
+	#############
+
+	SpriteType = {
+		name = "GFX_focus_RJ_MLT_answer_the_language_question"
+		texturefile = "gfx/interface/goals/mlt/RJ_MLT_answer_the_language_question.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_MLT_on_our_own"
+		texturefile = "gfx/interface/goals/mlt/RJ_MLT_on_our_own.dds"
+	}
+
 	####################
 	### SOVIET UNION ###
 	####################
@@ -849,8 +863,6 @@ spriteTypes = {
 		name = "GFX_focus_RJ_SOV_deep_operations"
 		texturefile = "gfx/interface/goals/sov/RJ_SOV_deep_operations.dds"
 	}
-
-
 
 	###########
 	### USA ###

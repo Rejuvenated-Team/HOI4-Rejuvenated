@@ -458,7 +458,7 @@ spriteTypes = {
 	#############
 
 	spriteType = {
-		name = "GFX_idea_RJ_idea_MLT_the_language_question"
+		name = "GFX_idea_RJ_MLT_the_language_question"
 		texturefile = "gfx/interface/ideas/mlt/RJ_idea_MLT_the_language_question.dds"
 	}
 

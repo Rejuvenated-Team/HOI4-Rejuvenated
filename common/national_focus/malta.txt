@@ -145,7 +145,7 @@ focus_tree = {
 
 	focus = {
 		id = MLT_on_our_own
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_RJ_MLT_on_our_own
 		x = 0
 		y = 1
 		cost = 5
