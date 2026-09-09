@@ -191,28 +191,6 @@ characters={
 		}		
 	}
 
-	NZL_r_a_cochrane={
-		name=NZL_r_a_cochrane
-		portraits={
-			army={
-				small="GFX_idea_NZL_r_a_cochrane" #small="GFX_idea_generic_air_europe_1"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = NZL_r_a_cochrane
-			ledger = air
-			allowed = {
-				original_tag = NZL
-			}
-			
-			traits = {
-				air_warfare_theorist
-			}
-		}		
-	}
-
 	NZL_arthur_dawes={
 		name=NZL_arthur_dawes
 		portraits={
@@ -447,6 +425,39 @@ characters={
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
+			}
+		}		
+	}
+
+	NZL_r_a_cochrane={
+		name="Ralph Cochrane"
+		portraits={
+			army={
+				small="GFX_rj_portrait_NZL_william_friedman_small"
+			}
+		}
+		advisor={
+			cost = 50
+			slot = air_chief
+			idea_token = NZL_ralph_cochrane
+			ledger = air
+			allowed = {
+				original_tag = NZL
+			}
+
+			available = {
+				has_completed_focus = NZL_form_the_rnzaf
+			}
+			
+			traits = {
+				air_chief_training_2
+			}
+			ai_will_do = {
+				base = 2
+				modifier = {
+					is_historical_focus_on = yes
+					factor = 100
+				}
 			}
 		}		
 	}

@@ -61,7 +61,7 @@ NZL_alternate_democratic = {
 		NZL_maori_volunteers										
 		NZL_expand_the_university_of_auckland						
 		NZL_long_range_patrol
-		NZL_fighter_focus											
+		#NZL_fighter_focus											
 		#1942
 		NZL_destroyer_effort										
 		NZL_defend_our_islands
@@ -167,7 +167,7 @@ NZL_alternate_fascist = {
 		NZL_maori_conscription										
 		NZL_expand_the_university_of_auckland						
 		NZL_long_range_patrol
-		NZL_fighter_focus											
+		#NZL_fighter_focus											
 		#1942
 		NZL_destroyer_effort										
 		NZL_defend_our_islands
@@ -276,7 +276,7 @@ NZL_alternate_communist = {
 		NZL_expand_the_university_of_auckland						
 		NZL_long_range_patrol
 		#1942
-		NZL_fighter_focus											
+		#NZL_fighter_focus											
 		NZL_destroyer_effort										
 		NZL_defend_our_islands
 		NZL_coastal_defense											

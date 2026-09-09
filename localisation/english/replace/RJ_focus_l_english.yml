@@ -38,3 +38,5 @@
  SOV_keep_commissars_organization: "[GetKeepCommissarsOrganizationName]"
  SOV_keep_commissars_organization_desc: "[GetKeepCommissarsOrganizationDesc]"
  SOV_improve_railway_network: "Improve the Railway Network"
+ NZL_form_the_rnzaf: "The Air Force Act"
+ NZL_form_the_rnzaf_desc: "Passing the Air Force Act will grant New Zealand a completely separate & independent air force, apart from the other branches of our armed forces.  This will allow a greater degree of organization as well as self-governance for our air forces going forward."

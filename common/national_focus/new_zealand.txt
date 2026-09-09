@@ -484,7 +484,7 @@
 
 	focus = {
 		id = RJ_NZL_air_force_review
-		icon = GFX_goal_generic_air_doctrine
+		icon = GFX_focus_RJ_NZL_air_force_review
 		x = 25
 		y = 0
 
@@ -495,7 +495,10 @@
 		}
 
 		available = {
-
+			OR = {
+				is_in_faction_with = ENG
+				is_subject_of = ENG
+			}
 		}
 
 		bypass = {
@@ -534,105 +537,46 @@
 		}
 
 		available = {
-
+			
 		}
 
 		bypass = {
-
+			
 		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
-		complete_tooltip = {
-			air_experience = 25
-			add_breakthrough_progress = {
-				specialization = specialization_air
-				value = 0.25
-			}
-			random_state = {				
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-			}
-			add_doctrine_cost_reduction = {
-				name = NZL_form_the_rnzaf
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-			}
-		}
-
 		completion_reward = {
-			air_experience = 25
 			add_breakthrough_progress = {
 				specialization = specialization_air
-				value = 0.25
+				value = 0.50
 			}
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
 						building = air_base
-						size > 1
+						size > 2
 					}
 				}
 				add_building_construction = {
 					type = air_base
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
-			add_doctrine_cost_reduction = {
-				name = NZL_form_the_rnzaf
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NZL_ralph_cochrane
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = RJ_NZL_idea_RNZAF
 		}
 	}
 
 	focus = {
-		id = NZL_fighter_focus
-		icon = GFX_goal_generic_air_fighter2
+		id = RJ_NZL_commonwealth_air_training_plan
+		icon = GFX_focus_RJ_NZL_commonwealth_air_training
 		prerequisite = { focus = NZL_form_the_rnzaf }
-		mutually_exclusive = { focus = NZL_bomber_focus }
-		x = -1
-		y = 1
-		relative_position_id = NZL_form_the_rnzaf
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = NZL_fighter_focus
-				bonus = 1.0
-				uses = 1
-				category = light_fighter
-			}
-		}
-	}
-
-	focus = {
-		id = NZL_bomber_focus
-		icon = GFX_goal_generic_occupy_start_war
-		prerequisite = { focus = NZL_form_the_rnzaf }
-		mutually_exclusive = { focus = NZL_fighter_focus }
 		x = 1
 		y = 1
 		relative_position_id = NZL_form_the_rnzaf
@@ -640,27 +584,201 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 
 		available = {
-
+			is_ally_with = ENG
 		}
-
+		
 		bypass = {
 
 		}
 
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = RJ_NZL_idea_commonwealth_air_training
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_acquire_british_planes
+		icon = GFX_focus_RJ_NZL_acquire_british_planes
+		prerequisite = { focus = RJ_NZL_commonwealth_air_training_plan }
+		x = 0
+		y = 2
+		relative_position_id = RJ_NZL_commonwealth_air_training_plan
+
+		cost = 5
+
+		ai_will_do = {
+			base = 10
+		}
+
+		available = {
+			NOT = {
+				has_war_with = ENG
+			}
+		}
+		
+		bypass = {
+
+		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = NZL_bomber_focus
-				bonus = 1.00
-				uses = 1
-				category = cat_strategic_bomber
-				category = tactical_bomber
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				create_equipment_variant = {
+					name = "Vickers Vildebeest"
+					type = medium_plane_airframe_1
+					allow_without_tech = yes #Allowing since it comes from the UK
+					modules = {
+						fixed_main_weapon_slot = medium_bomb_bay
+						fixed_auxiliary_weapon_slot_1 = torpedo_mounting
+						fixed_auxiliary_weapon_slot_2 = bomb_locks
+						engine_type_slot = engine_3_2x
+						special_type_slot_1 = empty
+					}
+					icon = "GFX_ENG_tactical_bomber1_medium"
+				}
+				add_equipment_to_stockpile = {
+					type = medium_plane_airframe_1
+					producer = ENG
+					amount = 100
+					variant_name = "Vickers Vildebeest"
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = nav_bomber_equipment_1
+					amount = 50
+					producer = ENG
+				}
+				
+				if = {
+					limit = {
+						ENG = { has_tech = tactical_bomber1 }
+					}
+					add_equipment_to_stockpile = {
+						type = tac_bomber_equipment_1
+						amount = 30
+						producer = ENG
+					}
+					else = {
+						add_equipment_to_stockpile = {
+							type = tac_bomber_equipment_0
+							amount = 30
+							producer = ENG
+						}	
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				add_equipment_subsidy = {
+					cic = 1000
+					equipment_type = medium_plane_airframe
+					seller_tags = { ENG }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_new_air_bases
+		icon = GFX_focus_RJ_airstrip
+		prerequisite = { focus = NZL_form_the_rnzaf }
+		x = -1
+		y = 1
+		relative_position_id = NZL_form_the_rnzaf
+
+		cost = 5
+
+		ai_will_do = {
+			base = 10
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		completion_reward = {
+			284 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+				}
+			}
+			1079 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_begin_recruiting_efforts
+		icon = GFX_focus_RJ_NZL_begin_recruiting_efforts
+		prerequisite = { focus = NZL_form_the_rnzaf }
+		x = 0
+		y = 2
+		relative_position_id = NZL_form_the_rnzaf
+
+		cost = 5
+
+		ai_will_do = {
+			base = 10
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RJ_NZL_idea_RNZAF
+				add_idea = RJ_NZL_idea_RNZAF_2
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_training_school_expansions
+		icon = GFX_focus_generic_pilot_training
+		prerequisite = { focus = RJ_NZL_begin_recruiting_efforts }
+		x = 0
+		y = 2
+		relative_position_id = RJ_NZL_begin_recruiting_efforts
+
+		cost = 7.2
+
+		ai_will_do = {
+			base = 10
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RJ_NZL_idea_RNZAF_2
+				add_idea = RJ_NZL_idea_RNZAF_3
 			}
 		}
 	}
@@ -699,110 +817,7 @@
 			}
 		}
 	}
-
-	focus = {
-		id = NZL_modern_fighters
-		icon = GFX_goal_generic_air_fighter
-		prerequisite = { focus = NZL_fighter_focus focus = NZL_bomber_focus }
-		mutually_exclusive = { focus = NZL_heavy_bombers }
-		x = 0
-		y = 1
-		relative_position_id = NZL_fighter_focus
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = NZL_modern_fighters
-				bonus = 1.0
-				uses = 1
-				category = light_fighter
-				category = cat_heavy_fighter
-			}
-		}
-	}
-
-	focus = {
-		id = NZL_heavy_bombers
-		icon = GFX_goal_generic_air_bomber
-		prerequisite = { focus = NZL_fighter_focus focus = NZL_bomber_focus }
-		mutually_exclusive = { focus = NZL_modern_fighters }
-		x = 0
-		y = 1
-		relative_position_id = NZL_bomber_focus
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 2
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = NZL_heavy_bombers
-				bonus = 1.0
-				uses = 2
-				category = cat_strategic_bomber
-			}
-		}
-	}
-
-	focus = {
-		id = NZL_the_plan
-		icon = GFX_focus_generic_air_partners
-		prerequisite = { focus = NZL_heavy_bombers focus = NZL_modern_fighters }
-		x = 1
-		y = 1
-		relative_position_id = NZL_modern_fighters
-
-		cost = 10
-
-		ai_will_do = {
-			base = 10
-		}
-
-		available = {
-			is_ally_with = ENG
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = CAN_the_plan
-		}
-	}
+	
 
 	
 	############################
@@ -1659,9 +1674,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
@@ -1697,10 +1709,6 @@
 
 		ai_will_do = {
 			factor = 35
-			modifier = {
-				factor = 2
-				has_completed_focus = NZL_heavy_bombers
-			}
 		}
 
 		available = {
@@ -1724,7 +1732,6 @@
 	focus = {
 		id = NZL_project_seal
 		icon = GFX_focus_generic_nuclear_development
-		prerequisite = { focus = NZL_heavy_bombers focus = NZL_modern_fighters }
 		prerequisite = { focus = NZL_department_of_scientific_and_industrial_research }
 		x = 0
 		y = 1
@@ -1744,9 +1751,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {

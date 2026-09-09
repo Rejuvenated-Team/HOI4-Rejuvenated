@@ -60,7 +60,7 @@ NZL_historical = {
 		NZL_long_range_patrol										
 		NZL_bob_semple_tank											
 		#1941
-		NZL_fighter_focus											
+		#NZL_fighter_focus											
 		NZL_think_big												
 		NZL_expand_the_university_of_auckland						
 		NZL_expand_devonport_naval_base								

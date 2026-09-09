@@ -1,3 +1,28 @@
 ﻿l_english:
+
+ ##################################################
+ ### FOCUSES ######################################
+ ##################################################
+
  RJ_NZL_air_force_review: "Air Force Review"
  RJ_NZL_air_force_review_desc: "England has sent us RAF wing commander Ralph Cochrane at our request. He's here to review the state of our air force & to make recommendations on how to best develop our air force going forward."
+ RJ_NZL_commonwealth_air_training_plan: "Commonwealth Air Training Plan"
+ RJ_NZL_commonwealth_air_training_plan_desc: "By organizing training exercises with our fellow commonwealth members, we can share expertise & learn from one another, greatly improving the effectiveness of our aerial forces."
+ RJ_NZL_new_air_bases: "New Air Bases"
+ RJ_NZL_new_air_bases_desc: "New air bases are slated for development in an effort to expand our fledgling air force. Whenuapai & Ōhakea are ideal locations for these new bases."
+ RJ_NZL_begin_recruiting_efforts: "Begin Recruiting Efforts"
+ RJ_NZL_begin_recruiting_efforts_desc: "A current issue we face with this fledgling air force, is getting enough pilots to fly the planes, & experienced officers to organize & teach them. Active recruitment efforts will help to alleviate this issue."
+ RJ_NZL_acquire_british_planes: "Acquire British Planes"
+ RJ_NZL_acquire_british_planes_desc: "The British have ample planes to spare, & they're more than willing to help us out. We should ask them for some of their old Vickers Vildebeests, which would be prudent for our coastal patrols."
+ RJ_NZL_training_school_expansions: "Training School Expansions"
+ RJ_NZL_training_school_expansions_desc: "Now that we have new recruits, we need to expand our training schools to accomodate them all."
+
+
+
+ ##################################################
+ ### IDEAS ########################################
+ ##################################################
+ RJ_NZL_idea_RNZAF: "Royal New Zealand Air Force"
+ RJ_NZL_idea_RNZAF_2: "Royal New Zealand Air Force"
+ RJ_NZL_idea_RNZAF_3: "Royal New Zealand Air Force"
+ RJ_NZL_idea_commonwealth_air_training: "Commonwealth Air Training"

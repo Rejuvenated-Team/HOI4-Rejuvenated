@@ -574,5 +574,23 @@ spriteTypes = {
 		name = "GFX_idea_RJ_idea_warlord_uplift_the_cavalry"
 		texturefile = "gfx/interface/ideas/warlords/RJ_idea_warlord_uplift_the_cavalry.dds"
 	}
+
+
+
+	##############################################
+	### NEW ZEALAND ##############################
+	##############################################
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_RNZAF"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_RNZAF.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_commonwealth_air_training"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_commonwealth_air_training.dds"
+	}
+
+
 	
 }

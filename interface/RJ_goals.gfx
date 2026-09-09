@@ -1297,6 +1297,26 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/nzl/RJ_NZL_RNZAF.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_air_force_review"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_air_force_review.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_commonwealth_air_training"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_commonwealth_air_training.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_begin_recruiting_efforts"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_begin_recruiting_efforts.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_acquire_british_planes"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_acquire_british_planes.dds"
+	}
+
 
 
 }

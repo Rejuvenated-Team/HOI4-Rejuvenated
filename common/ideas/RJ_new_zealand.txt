@@ -1,0 +1,156 @@
+ideas = {
+	country = {
+		RJ_NZL_idea_RNZAF = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_RNZAF
+
+			modifier = {
+				experience_gain_air_factor = 0.15
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_small_plane = {
+					build_cost_ic = -0.10
+				}
+				mio_cat_eq_all_medium_plane = {
+					build_cost_ic = -0.10
+				}
+				mio_cat_eq_all_large_plane = {
+					build_cost_ic = -0.10
+				}
+			}
+
+		}
+
+		RJ_NZL_idea_RNZAF_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_RNZAF
+
+			modifier = {
+				experience_gain_air_factor = 0.15
+				recruitable_population_factor = 0.10
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_small_plane = {
+					build_cost_ic = -0.10
+				}
+				mio_cat_eq_all_medium_plane = {
+					build_cost_ic = -0.10
+				}
+				mio_cat_eq_all_large_plane = {
+					build_cost_ic = -0.10
+				}
+			}
+
+		}
+
+		RJ_NZL_idea_RNZAF_3 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_RNZAF
+
+			modifier = {
+				experience_gain_air_factor = 0.15
+				recruitable_population_factor = 0.10
+				air_accidents_factor = -0.05
+				air_training_xp_gain_factor = 0.10
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_small_plane = {
+					build_cost_ic = -0.10
+				}
+				mio_cat_eq_all_medium_plane = {
+					build_cost_ic = -0.10
+				}
+				mio_cat_eq_all_large_plane = {
+					build_cost_ic = -0.10
+				}
+			}
+
+		}
+
+
+		RJ_NZL_idea_commonwealth_air_training = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_commonwealth_air_training
+
+			equipment_bonus = {
+				mio_cat_eq_all_small_plane = {
+					air_range = 0.10
+				}
+				mio_cat_eq_all_medium_plane = {
+					air_range = 0.10
+				}
+				mio_cat_eq_all_large_plane = {
+					air_range = 0.10
+				}
+				fighter = {
+					air_attack = 0.05
+					air_agility = 0.05
+				}
+				heavy_fighter = {
+					air_attack = 0.05
+					air_agility = 0.05
+				}
+				naval_bomber = {
+					air_agility = 0.05
+					naval_strike_targetting = 0.05
+				}
+				strategic_bomber = {
+					air_defence = 0.05
+					air_bombing = 0.05
+				}
+				cas = {
+					air_ground_attack = 0.05
+					air_agility = 0.05
+				}
+				tactical_bomber = {
+					air_bombing = 0.05
+					air_defence = 0.05
+				}
+			}
+
+		}
+	}
+}

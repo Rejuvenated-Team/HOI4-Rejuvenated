@@ -13,4 +13,40 @@ leader_traits = {
 		industrial_capacity_factory = 0.10
 		sprite = 13
 	}
+
+	air_chief_training_1 = {
+		sprite = 1
+		air_training_xp_gain_factor = 0.15
+		air_accidents_factor = -0.10
+
+		command_cap_increase = 15
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	air_chief_training_2 = {
+		sprite = 1
+		air_training_xp_gain_factor = 0.20
+		air_accidents_factor = -0.15
+
+		command_cap_increase = 20
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	air_chief_training_3 = {
+		sprite = 1
+		air_training_xp_gain_factor = 0.25
+		air_accidents_factor = -0.20
+
+		command_cap_increase = 25
+
+		ai_will_do = {
+			base = 3
+		}
+	}
 }

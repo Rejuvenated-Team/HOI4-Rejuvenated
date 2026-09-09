@@ -279,4 +279,17 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/warlords/advisors/rj_portrait_GXC_chen_jitang.dds"
 	}
 
+
+
+
+
+	#################################
+	### NEW ZEALAND #################
+	#################################
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_william_friedman_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_ralph_cochrane.dds"
+	}
+
 }
