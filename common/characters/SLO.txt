@@ -1,0 +1,685 @@
+characters = {
+
+	### COUNTRY LEADERS ###
+
+	SLO_jozef_tiso = {
+		name = SLO_jozef_tiso
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Jozef_Tiso
+				small="GFX_idea_CZE_jozef_tiso"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1965.1.1"
+			id = -1
+			traits = {
+				SLO_vodca_trait
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1965.1.1"
+			id = -1
+			traits = {
+				SLO_nationalist_catholic_priest
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CZE_jozef_tiso
+			allowed = {
+				original_tag = SLO
+			}
+			available = {
+				is_country_leader = no
+				NOT = {
+					has_government = communism
+				}
+			}
+			visible = {
+			}
+			traits = {
+				nationalist_catholic_priest
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}	
+	}
+
+	SLO_vojtech_tuka = {
+		name = CZE_vojtech_tuka
+		portraits = {
+			civilian = {
+				large = GFX_rj_portrait_SLO_vojtech_tuka
+				small = GFX_rj_portrait_SLO_vojtech_tuka_small
+			}
+		}
+		country_leader = {
+			ideology = gen_nazism
+			expire = "1965.1.1"
+			id = -1
+			traits = {
+				SLO_head_of_the_radical_wing
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SLO_vojtech_tuka
+			allowed = {
+				original_tag = SLO
+			}
+			available = {
+				is_country_leader = no
+				has_government = fascism
+				NOT = {
+					is_subject_of = CZE
+				}
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			visible = {
+				is_country_leader = no
+				NOT = {
+					is_subject_of = CZE
+				}
+			}
+			traits = {
+				SLO_head_of_the_radical_wing
+			}
+		}
+		field_marshal = {
+			traits = { old_guard politically_connected harsh_leader militias_officer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+			visible = {
+				has_country_flag = SLO_revenge_of_the_radical_wing_flag
+				#is_country_leader = yes
+			}
+		}
+	}
+
+	SLO_karol_smidke = {
+		name = SLO_karol_smidke
+		portraits = {
+			civilian = {
+				large = GFX_rj_portrait_SLO_karol_smidke
+				small = GFX_rj_portrait_SLO_karol_smidke_small
+			}
+		}
+		country_leader = {
+			ideology = stalinism
+			expire = "1965.1.1"
+			id = -1
+			traits = {
+				veteran_communist
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SLO_karol_smidke
+			allowed = {
+				original_tag = SLO
+			}
+			visible = {
+				is_country_leader = no
+			}
+			available = {
+				is_country_leader = no
+				has_government = communism
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			traits = {
+				veteran_communist
+			}
+		}
+	}
+
+	SLO_jan_ursiny = {
+		name = SLO_jan_ursiny
+		portraits = {
+			civilian = {
+				large = GFX_rj_portrait_SLO_jan_ursiny
+				small = GFX_rj_portrait_SLO_jan_ursiny_small
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1965.1.1"
+			id = -1
+			traits = {
+				agrarian_old_guard
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SLO_jan_ursiny
+			allowed = {
+				original_tag = SLO
+			}
+			visible = {
+				is_country_leader = no
+			}
+			available = {
+				is_country_leader = no
+				NOT = {
+					has_government = fascism
+					has_government = communism
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			traits = {
+				agrarian_old_guard
+			}
+		}
+	}
+
+	### POLITCAL ADVISORS ###
+
+	SLO_frano_kral = {
+		name = SLO_frano_kral
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_political_advisor_europe_5"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SLO_frano_kral
+			allowed = {
+				original_tag = SLO
+			}
+			traits = {
+				popular_figurehead
+			}
+		}
+	}
+
+	SLO_stefan_tiso = {
+		name = SLO_stefan_tiso
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SLO_stefan_tiso
+			allowed = {
+				original_tag = SLO
+			}
+			traits = {
+				backroom_backstabber
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
+	}
+
+	SLO_karol_sidor = {
+		name = SLO_karol_sidor
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_political_advisor_europe_1"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SLO_karol_sidor
+			allowed = {
+				original_tag = SLO
+			}
+			traits = {
+				silent_workhorse
+			}
+		}
+	}
+
+	SLO_janko_jesensky = {
+		name = SLO_janko_jesensky
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_political_advisor_europe_6"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SLO_janko_jesensky
+			allowed = {
+				original_tag = SLO
+			}
+			traits = {
+				compassionate_gentleman
+			}
+		}
+	}
+
+	### GENERALS ###
+
+	SLO_jozef_turanec = {
+		name = SLO_jozef_turanec
+		portraits = {
+			army = {
+				large = GFX_rj_portrait_SLO_jozef_turanec
+				small = GFX_rj_portrait_SLO_jozef_turanec_small
+			}
+		}
+		corps_commander = {
+			traits = { armor_officer career_officer harsh_leader }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = -1
+			visible = {
+				NOT = {
+					has_character_flag = SLO_imprisoned_flag
+				}
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SLO_jozef_turanec
+			ledger = army
+			allowed = {
+				original_tag = SLO
+			}
+			traits = {
+				army_armored_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SLO_stefan_jurech = {
+		name=SLO_stefan_jurech
+		portraits = {
+			army = {
+				large = GFX_portrait_SLO_stefan_jurech
+				small = GFX_portrait_SLO_stefan_jurech_small
+			}
+		}
+		field_marshal = {
+			traits = { career_officer infantry_officer }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+			visible = {
+				NOT = {
+					is_subject_of = CZE
+				}
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SLO_stefan_jurech
+			ledger = army
+			allowed = {
+				original_tag = SLO
+			}
+			available = {
+				NOT = {
+					is_subject_of = CZE
+				}
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SLO_augustin_malar = {
+		name=SLO_augustin_malar
+		portraits = {
+			army = {
+				large=GFX_portrait_SLO_augustin_malar
+				small=GFX_portrait_SLO_augustin_malar_small
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer trickster }
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SLO_augustin_malar
+			ledger = army
+			allowed = {
+				original_tag = SLO
+			}
+			traits = {
+				surveyor
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SLO_rudolf_viest = {
+		name = SLO_rudolf_viest
+		portraits = {
+			army = {
+				large = GFX_rj_portrait_SLO_rudolf_viest
+				small = GFX_rj_portrait_SLO_rudolf_viest_small
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = SLO_rudolf_viest
+			allowed = {
+				original_tag = SLO
+			}
+			available = {
+				NOT = {
+					is_subject_of = CZE
+					has_government = fascism
+				}
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { career_officer organizer }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=1
+			legacy_id=-1
+			visible = {
+				CZE = {
+					OR = {
+						exists = no
+						is_subject_of = ROOT
+					}
+				}
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+	}
+
+	### THEORISTS ###
+
+	SLO_vojtech_daubner = {
+		name = SLO_vojtech_daubner
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_air_europe_1"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = SLO_vojtech_daubner
+			ledger = air
+			allowed = {
+				original_tag = SLO
+			}
+			traits = {
+				air_warfare_theorist
+			}
+		}
+	}
+
+	SLO_jozef_hora = {
+		name = SLO_jozef_hora
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_political_advisor_europe_1"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = SLO_jozef_hora
+			ledger = navy
+			allowed = {
+				original_tag = SLO
+			}
+			traits = {
+				naval_theorist
+			}
+		}
+	}
+
+	SLO_emil_lendvay = {
+		name = SLO_emil_lendvay
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_army_europe_6"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = SLO_emil_lendvay
+			ledger = army
+			allowed = {
+				original_tag = SLO
+			}
+			traits = {
+				military_theorist
+			}
+		}
+	}
+
+	### ARMY CHIEFS ###
+
+	SLO_gustav_malar = {
+		name = SLO_gustav_malar
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_army_europe_3"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = SLO_gustav_malar
+			allowed = {
+				original_tag = SLO
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SLO_ferdinand_catlos = {
+		name = SLO_ferdinand_catlos
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_army_europe_2"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = SLO_ferdinand_catlos
+			allowed = {
+				original_tag = SLO
+			}
+			traits = {
+				army_chief_organizational_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	### NAVY CHIEFS ###
+
+	SLO_jindrich_honzl = {
+		name = SLO_jindrich_honzl
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_navy_europe_3"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = SLO_jindrich_honzl
+			allowed = {
+				original_tag = SLO
+			}
+			traits = {
+				navy_chief_maneuver_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SLO_julius_thorzo = {
+		name = SLO_julius_thorzo
+		portraits = {
+			army = {
+				small="GFX_idea_generic_navy_europe_3"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = SLO_julius_thorzo
+			allowed = {
+				original_tag = SLO
+			}
+			traits = {
+				navy_chief_reform_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	### AIR CHIEFS ###
+
+	SLO_frantisek_straka = {
+		name = SLO_frantisek_straka
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_air_europe_1"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = SLO_frantisek_straka
+			allowed = {
+				original_tag = SLO
+			}
+			traits = {
+				air_chief_safety_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SLO_anton_pulanick = {
+		name = SLO_anton_pulanick
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_air_europe_2"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = SLO_anton_pulanick
+			allowed = {
+				original_tag = SLO
+			}
+			traits = {
+				air_chief_ground_support_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+	}
+
+	### MILITARY HIGH COMMAND ###
+
+	SLO_fritz_gejza = {
+		name = SLO_fritz_gejza
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_air_europe_3"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SLO_fritz_gejza
+			ledger = air
+			allowed = {
+				original_tag = SLO
+			}
+			traits = {
+				air_strategic_bombing_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SLO_cyril_kuchta = {
+		name = SLO_cyril_kuchta
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_air_europe_1"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SLO_cyril_kuchta
+			ledger = air
+			allowed = {
+				original_tag = SLO
+			}
+			traits = {
+				air_bomber_interception_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+}
