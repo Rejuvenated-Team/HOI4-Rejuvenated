@@ -658,7 +658,15 @@ focus_tree = {
 				
 			}
 			
-			hidden_effect = { set_capital = { state = 505} }
+			hidden_effect = {
+				set_capital = {
+					state = 505
+				}
+				set_province_name = {
+					id = 5208
+					name = VICTORY_POINTS_BRASILIA
+				}
+			}
 			
 			custom_effect_tooltip = bra_brasilia_tooltip
 			
