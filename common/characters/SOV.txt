@@ -3582,10 +3582,21 @@ characters = {
 				original_tag = SOV
 			}
 			visible = {
-				has_completed_focus = SOV_beaten_but_not_defeated
+				OR = {
+					has_completed_focus = SOV_beaten_but_not_defeated
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+				}
 			}
 			available = {
-				has_completed_focus = SOV_return_of_the_rocor
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+					else = {
+						has_completed_focus = SOV_return_of_the_rocor
+					}
+				}
 			}
 			traits = {
 				orthodox_rabblerouser
@@ -3669,8 +3680,9 @@ characters = {
 	SOV_anastasy_vonsyatsky = {
 		name = SOV_anastasy_vonsyatsky
 		portraits = {
-			army = {
-				small = "GFX_idea_SOV_anastasy_vonsyatsky"
+			civilian = {
+				large = "GFX_kr_portrait_SOV_anastasy_vonsyatsky"
+				small = "GFX_kr_portrait_SOV_anastasy_vonsyatsky_small"
 			}
 		}
 		allowed_civil_war = {
@@ -3712,8 +3724,8 @@ characters = {
 		name = SOV_grigory_semyonov
 		portraits = {
 			army = {
-				small = "GFX_idea_SOV_grigory_semyonov"
-				large = "GFX_portrait_SOV_grigory_semyonov"
+				small = "GFX_kr_portrait_SOV_grigory_semyonov_small"
+				large = "GFX_kr_portrait_SOV_grigory_semyonov"
 			}
 		}
 
@@ -3729,6 +3741,7 @@ characters = {
 				OR = {
 					has_idea = SOV_grigory_semyonov
 					has_completed_focus = SOV_approach_semyonov
+					has_completed_focus = rj_SOV_invite_the_white_exiles
 				}
 			}
 		}
@@ -3760,7 +3773,15 @@ characters = {
 				
 				if = {
 					limit = { original_tag = SOV }
-					has_completed_focus = SOV_approach_semyonov
+					if = {
+						limit = {
+							has_country_flag = SOV_the_all_russian_united_front_cflg
+						}
+						has_completed_focus = rj_SOV_invite_the_white_exiles
+						else = {
+							has_completed_focus = SOV_approach_semyonov
+						}
+					}
 				}
 				if = {
 					limit = {

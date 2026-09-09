@@ -8617,9 +8617,26 @@ focus_tree = {
 		completion_reward = {
 
 			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SOV_anastasy_vonsyatsky
+			show_ideas_tooltip = SOV_grigory_semyonov
+			show_ideas_tooltip = SOV_metropolitan_anastasy
+
 			hidden_effect = {
-				#
+				SOV_anastasy_vonsyatsky = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				#SOV_grigory_semyonov - below
+				MAN = {
+					country_event = {
+						id = NSB_Soviet_fascist_civil_war.004 # TODO Rewrite
+						days = 0
+					}
+				}
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			show_unit_leaders_tooltip = SOV_grigory_semyonov
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 

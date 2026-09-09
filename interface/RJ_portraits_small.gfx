@@ -192,6 +192,18 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_kr_portrait_SOV_anastasy_vonsyatsky_small"
+		#texturefile = "gfx/interface/ideas/sov/advisors/kr_advisor_SOV_anastasy_vonsyatsky.dds"
+		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kr_portrait_SOV_grigory_semyonov_small"
+		#texturefile = "gfx/interface/ideas/sov/advisors/kr_advisor_SOV_grigory_semyonov.dds"
+		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
+	}
+
+	spriteType = {
 		name = "GFX_rj_portrait_SOV_joseph_stalin_small"
 		texturefile = "gfx/interface/ideas/sov/advisors/rj_advisor_SOV_joseph_stalin.dds"
 	}
