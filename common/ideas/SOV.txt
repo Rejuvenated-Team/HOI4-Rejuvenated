@@ -3635,6 +3635,9 @@ ideas = {
 				heavy_tank_chassis = {
 					reliability = -0.1 instant = yes
 				}
+				modern_tank_chassis = {
+					reliability = -0.1 instant = yes
+				}
 				super_heavy_tank_chassis = {
 					reliability = -0.1 instant = yes
 				}
@@ -3686,6 +3689,9 @@ ideas = {
 				heavy_tank_chassis = {
 					reliability = -0.2 instant = yes
 				}
+				modern_tank_chassis = {
+					reliability = -0.2 instant = yes
+				}
 				super_heavy_tank_chassis = {
 					reliability = -0.2 instant = yes
 				}
@@ -3735,6 +3741,9 @@ ideas = {
 					reliability = -0.3 instant = yes
 				}
 				heavy_tank_chassis = {
+					reliability = -0.3 instant = yes
+				}
+				modern_tank_chassis = {
 					reliability = -0.3 instant = yes
 				}
 				super_heavy_tank_chassis = {
