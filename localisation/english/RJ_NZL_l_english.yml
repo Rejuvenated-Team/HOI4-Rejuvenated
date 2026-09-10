@@ -16,6 +16,12 @@
  RJ_NZL_acquire_british_planes_desc: "The British have ample planes to spare, & they're more than willing to help us out. We should ask them for some of their old Vickers Vildebeests, which would be prudent for our coastal patrols."
  RJ_NZL_training_school_expansions: "Training School Expansions"
  RJ_NZL_training_school_expansions_desc: "Now that we have new recruits, we need to expand our training schools to accomodate them all."
+ RJ_NZL_air_base_expansions: "Air Base Expansions"
+ RJ_NZL_air_base_expansions_desc: "Our current air bases are still small & inadequate in the case of war. We ought to expand our current bases to better ready ourselves."
+ RJ_NZL_womens_auxiliary_air_force: "Women's Auxiliary Air Force"
+ RJ_NZL_womens_auxiliary_air_force_desc: "Developing our own Women's Auxiliary Air Force will allow our men to focus more on ground combat roles, while we train women to help out in the air."
+ RJ_NZL_new_zealand_bomber_command: "New Zealand Bomber Command"
+ RJ_NZL_new_zealand_bomber_command_desc: "Setting up a proper Bomber Command will increase the effectiveness of our operations."
 
 
 
@@ -25,4 +31,6 @@
  RJ_NZL_idea_RNZAF: "Royal New Zealand Air Force"
  RJ_NZL_idea_RNZAF_2: "Royal New Zealand Air Force"
  RJ_NZL_idea_RNZAF_3: "Royal New Zealand Air Force"
+ RJ_NZL_idea_RNZAF_4: "Royal New Zealand Air Force"
  RJ_NZL_idea_commonwealth_air_training: "Commonwealth Air Training"
+ RJ_NZL_idea_bomber_command: "Bomber Command"

@@ -21,12 +21,15 @@ ideas = {
 			equipment_bonus = {
 				mio_cat_eq_all_small_plane = {
 					build_cost_ic = -0.10
+					instant = yes
 				}
 				mio_cat_eq_all_medium_plane = {
 					build_cost_ic = -0.10
+					instant = yes
 				}
 				mio_cat_eq_all_large_plane = {
 					build_cost_ic = -0.10
+					instant = yes
 				}
 			}
 
@@ -54,12 +57,15 @@ ideas = {
 			equipment_bonus = {
 				mio_cat_eq_all_small_plane = {
 					build_cost_ic = -0.10
+					instant = yes
 				}
 				mio_cat_eq_all_medium_plane = {
 					build_cost_ic = -0.10
+					instant = yes
 				}
 				mio_cat_eq_all_large_plane = {
 					build_cost_ic = -0.10
+					instant = yes
 				}
 			}
 
@@ -89,12 +95,54 @@ ideas = {
 			equipment_bonus = {
 				mio_cat_eq_all_small_plane = {
 					build_cost_ic = -0.10
+					instant = yes
 				}
 				mio_cat_eq_all_medium_plane = {
 					build_cost_ic = -0.10
+					instant = yes
 				}
 				mio_cat_eq_all_large_plane = {
 					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+
+		}
+
+		RJ_NZL_idea_RNZAF_4 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_RNZAF
+
+			modifier = {
+				experience_gain_air_factor = 0.15
+				recruitable_population_factor = 0.20
+				conscription = 0.01
+				air_accidents_factor = -0.05
+				air_training_xp_gain_factor = 0.10
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_small_plane = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				mio_cat_eq_all_medium_plane = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				mio_cat_eq_all_large_plane = {
+					build_cost_ic = -0.10
+					instant = yes
 				}
 			}
 
@@ -118,36 +166,86 @@ ideas = {
 			equipment_bonus = {
 				mio_cat_eq_all_small_plane = {
 					air_range = 0.10
+					instant = yes
 				}
 				mio_cat_eq_all_medium_plane = {
 					air_range = 0.10
+					instant = yes
 				}
 				mio_cat_eq_all_large_plane = {
 					air_range = 0.10
+					instant = yes
 				}
 				fighter = {
 					air_attack = 0.05
 					air_agility = 0.05
+					instant = yes
 				}
 				heavy_fighter = {
 					air_attack = 0.05
 					air_agility = 0.05
+					instant = yes
 				}
 				naval_bomber = {
 					air_agility = 0.05
 					naval_strike_targetting = 0.05
+					instant = yes
 				}
 				strategic_bomber = {
 					air_defence = 0.05
 					air_bombing = 0.05
+					instant = yes
 				}
 				cas = {
 					air_ground_attack = 0.05
 					air_agility = 0.05
+					instant = yes
 				}
 				tactical_bomber = {
 					air_bombing = 0.05
 					air_defence = 0.05
+					instant = yes
+				}
+			}
+
+		}
+
+		RJ_NZL_idea_bomber_command = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = SWE_marauder_bombers
+
+			equipment_bonus = {
+				naval_bomber = {
+					naval_strike_targetting = 0.05
+					naval_strike_attack = 0.10
+					air_range = 0.05
+					instant = yes
+				}
+				maritime_patrol_plane = {
+					naval_strike_targetting = 0.05
+					naval_strike_attack = 0.10
+					air_range = 0.15
+					instant = yes
+				}
+				strategic_bomber = {
+					air_bombing = 0.05
+					air_range = 0.05
+					instant = yes
+				}
+				tactical_bomber = {
+					air_bombing = 0.05
+					air_range = 0.05
+					instant = yes
 				}
 			}
 

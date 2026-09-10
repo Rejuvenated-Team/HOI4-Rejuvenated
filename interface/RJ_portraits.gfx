@@ -148,4 +148,15 @@ spriteTypes = {
 		texturefile = "gfx/leaders/GXC/rj_portrait_GXC_chen_jitang.dds"
 	}
 
+
+
+
+	##############################
+	### NZL -  New Zealand #######
+	##############################
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_michael_savage"
+		texturefile = "gfx/leaders/NZL/rj_portrait_NZL_michael_savage.dds"
+	}
 }

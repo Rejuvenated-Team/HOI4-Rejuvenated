@@ -724,6 +724,44 @@
 	}
 
 	focus = {
+		id = RJ_NZL_air_base_expansions
+		icon = GFX_focus_generic_air_bases
+		prerequisite = { focus = RJ_NZL_new_air_bases }
+		x = 0
+		y = 2
+		relative_position_id = RJ_NZL_new_air_bases
+
+		cost = 5
+
+		ai_will_do = {
+			base = 5
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		completion_reward = {
+			284 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+				}
+			}
+			723 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+				}
+			}
+		}
+	}
+
+	focus = {
 		id = RJ_NZL_begin_recruiting_efforts
 		icon = GFX_focus_RJ_NZL_begin_recruiting_efforts
 		prerequisite = { focus = NZL_form_the_rnzaf }
@@ -780,6 +818,71 @@
 				remove_idea = RJ_NZL_idea_RNZAF_2
 				add_idea = RJ_NZL_idea_RNZAF_3
 			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_womens_auxiliary_air_force
+		icon = GFX_focus_SOV_women_in_aviation
+		prerequisite = { focus = RJ_NZL_training_school_expansions }
+		x = -1
+		y = 1
+		relative_position_id = RJ_NZL_training_school_expansions
+
+		cost = 7.2
+
+		ai_will_do = {
+			base = 10
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		completion_reward = {
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+
+			swap_ideas = {
+				remove_idea = RJ_NZL_idea_RNZAF_3
+				add_idea = RJ_NZL_idea_RNZAF_4
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_new_zealand_bomber_command
+		icon = GFX_focus_RJ_naval_bomber
+		prerequisite = { focus = RJ_NZL_training_school_expansions }
+		x = 1
+		y = 1
+		relative_position_id = RJ_NZL_training_school_expansions
+
+		cost = 7.2
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RJ_NZL_idea_bomber_command
 		}
 	}
 
