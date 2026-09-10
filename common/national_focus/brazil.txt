@@ -656,7 +656,15 @@ focus_tree = {
 				
 			}
 			
-			hidden_effect = { set_capital = { state = 505} }
+			hidden_effect = {
+				set_capital = {
+					state = 505
+				}
+				set_province_name = {
+					id = 5208
+					name = VICTORY_POINTS_BRASILIA
+				}
+			}
 			
 			custom_effect_tooltip = bra_brasilia_tooltip
 			
@@ -2726,9 +2734,9 @@ focus_tree = {
 		cost = 14.4
 		completion_reward = {
 			hidden_effect = {
-				set_technology = { selva_tech = 1 }
+				set_technology = { BRA_jungle_warfare_instruction_center = 1 }
 			}
-			custom_effect_tooltip = BRA_selva_tech_effect
+			custom_effect_tooltip = BRA_jungle_warfare_instruction_center_effect
 			
 			hidden_effect = { if = { limit = { BRA = { AND = { is_ai = no has_country_flag = bra_voz_ligada_flag } } } sound_effect = bra_sentinela_brasil_so_2 } }
 		}
@@ -3425,7 +3433,7 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			set_technology = { selva_tech = 1 }
+			set_technology = { BRA_jungle_warfare_instruction_center = 1 }
 			remove_ideas = bra_1930_2
 			add_popularity = { ideology = neutrality popularity = 0.025 }
 			add_popularity = { ideology = fascism popularity = 0.025 }
