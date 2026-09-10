@@ -4,9 +4,11 @@ state = {
 	manpower = 127198
 	resources={
 		coal = 28
+		tungsten = 3
+		chromium = 1
 	}
 
-	state_category = rural
+	state_category = town
 
 
 	history = {
@@ -29,5 +31,5 @@ state = {
 		12632 10650 4819 8204 7839 
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 3.0 
 }

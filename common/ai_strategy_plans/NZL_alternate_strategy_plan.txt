@@ -64,7 +64,7 @@ NZL_alternate_democratic = {
 		#NZL_fighter_focus											
 		#1942
 		NZL_destroyer_effort										
-		NZL_defend_our_islands
+		#NZL_defend_our_islands
 		NZL_coastal_defense											
 		NZL_light_cruiser_effort									
 		NZL_schofield_tank											
@@ -170,7 +170,7 @@ NZL_alternate_fascist = {
 		#NZL_fighter_focus											
 		#1942
 		NZL_destroyer_effort										
-		NZL_defend_our_islands
+		#NZL_defend_our_islands
 		NZL_coastal_defense											
 		NZL_light_cruiser_effort									
 		NZL_schofield_tank											
@@ -278,7 +278,7 @@ NZL_alternate_communist = {
 		#1942
 		#NZL_fighter_focus											
 		NZL_destroyer_effort										
-		NZL_defend_our_islands
+		#NZL_defend_our_islands
 		NZL_coastal_defense											
 		NZL_light_cruiser_effort									
 		#1943

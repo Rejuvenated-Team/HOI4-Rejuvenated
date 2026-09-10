@@ -40,7 +40,7 @@ NZL_historical = {
 		NZL_ratana_alliance																					
 		NZL_form_the_rnzaf											
 		NZL_social_security_act										
-		NZL_defend_our_islands
+		#NZL_defend_our_islands
 		#1938										
 		NZL_army_reforms											
 		NZL_charlton_automatic_rifle

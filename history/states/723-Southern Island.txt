@@ -6,7 +6,7 @@ state = {
 		coal = 34
 	}
 
-	state_category = rural
+	state_category = city
 
 
 	history = {
@@ -17,9 +17,13 @@ state = {
 		buildings = {
 			infrastructure = 2
 			air_base = 1
+			industrial_complex = 1
 
 			2197 = {
-				naval_base = 1
+				naval_base = 3
+			}
+			2203 = { #Waitaki Hydroelectric Dam
+				dam = 1
 			}
 
 		}
@@ -33,5 +37,5 @@ state = {
 		2197 2203 5195 8212 12966 12974   
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 6.0 
 }

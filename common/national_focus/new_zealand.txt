@@ -252,7 +252,7 @@
 
 	focus = {
 		id = NZL_coastal_defense
-		icon = GFX_goal_generic_fortify_city
+		icon = GFX_focus_FIN_coastal_defense
 		prerequisite = { focus = NZL_form_the_rnzn }
 		x = 2
 		y = 2
@@ -274,11 +274,11 @@
 			NOT = {
 				controls_state = 723
 			}
+			NOT = {
+				controls_state = 1079
+			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			every_owned_state = {
@@ -287,6 +287,7 @@
 					OR = {
 						state = 284
 						state = 723
+						state = 1079
 					}
 				}
 				add_building_construction = {
@@ -295,7 +296,7 @@
 						all_provinces = yes
 						limit_to_coastal = yes
 					}
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 
@@ -306,7 +307,7 @@
 						all_provinces = yes
 						limit_to_naval_base = yes
 					}
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -315,7 +316,7 @@
 						all_provinces = yes
 						limit_to_naval_base = yes
 					}
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
