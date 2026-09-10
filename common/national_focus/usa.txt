@@ -7,8 +7,6 @@
 ### search_filters = {FOCUS_FILTER_ANNEXATION}
 ### search_filters = {FOCUS_FILTER_USA_CONGRESS}
 
-#!gfx:interface/RJ_goals.gfx
-#!gfx:interface/KR_goals.gfx
 focus_tree = {
 	id = usa_focus
 
@@ -1149,7 +1147,6 @@ focus_tree = {
 		mutually_exclusive = { focus = USA_secure_china }
 		
 		available = {
-			is_in_faction = no
 			not = { has_war_with = SOU }
 			SOV_comintern_joinable = yes 
 		}
@@ -1450,8 +1447,8 @@ focus_tree = {
 		}
 
 		available = {
-			any_country = {
-				SOV_is_free_chinese_tag = yes
+			any_country_with_original_tag_of = {
+				target = constant:country_groups.chinese_nations
 				has_war_with = JAP
 			}
 			is_subject = no

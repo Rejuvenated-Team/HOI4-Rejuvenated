@@ -9,72 +9,245 @@ continuous_focus_palette = {
 	reset_on_civilwar = no
 			
 	position = { x = 50 y = 1000 }
-	
-		
+
 	focus = {
-		id = continuous_bra_politicagem
+		id = DEN_undermine_overlord_continuous_focus
 		
-		icon = GFX_goal_continuous_bra_politicagem
+		icon = GFX_focus_DEN_undermine_overlord_continuous_focus
 		
 		available = {
-			original_tag = BRA
+			is_subject = yes
+			hidden_trigger = { 
+				has_dlc = "Arms Against Tyranny"
+				original_tag = DEN
+			}
 		}
 
 		enable = {
-			original_tag = BRA
-			BRA = { has_war = no has_civil_war = no }
+			has_power_balance = {
+				id = DEN_occupation_balance
+			}
 		}
 
 		modifier = {
-			custom_modifier_tooltip = continuous_bra_politicagem_tooltip
-			political_power_gain = 2
-			stability_weekly = -0.005
-			civilian_factory_use = 5
+			power_balance_weekly = 0.01
 		}
 		
 		ai_will_do = {
-			factor = 0
+			base = 10
+			modifier = {
+				factor = 10
+				has_completed_focus = DEN_escalate_the_sabotages
+				has_completed_focus = DEN_expand_the_resistance
+			}
+			modifier = {
+				factor = 10
+				power_balance_value = {
+					id = DEN_occupation_balance
+					value < 0.9
+				}
+			}
+			modifier = {
+				factor = 0	
+				has_completed_focus = DEN_declare_independence
+				power_balance_value = {
+					id = DEN_occupation_balance
+					value > 0.9
+				}
+			}
 		}
 		
-		#supports_ai_strategy = ai_focus_military_advancements
+		supports_ai_strategy = ai_focus_defense
 		
-		daily_cost = 0
+		daily_cost = 1
+				
+		available_if_capitulated = yes
+
+		select_effect = {
+
+		}
+		
+
+		cancel_effect = {
+		
+		}
+	}
+
+	focus = {
+		id = ETH_strengthen_the_black_lions
+		
+		icon = GFX_focus_ETH_continuous_strengthen_the_black_lions
+		
+		available = {
+			hidden_trigger = { 
+				has_dlc = "By Blood Alone" 
+				original_tag = ETH 
+			}
+			has_completed_focus = ETH_anti-italian_propaganda
+			OR = {
+				is_government_in_exile = yes 
+				has_country_leader_with_trait = imperator_absentis
+			}
+		}
+
+		enable = {
+			any_owned_state = { NOT = { is_controlled_by = ROOT } }
+			
+		}
+
+		modifier = {
+			compliance_growth_on_our_occupied_states = -0.1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				
+				all_owned_state = { is_controlled_by = ROOT }
+			}
+		}
+		
+		supports_ai_strategy = ai_focus_military_advancements
+		
+		daily_cost = 1
+		
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = ETH_supporting_the_arbegnoch
+		
+		icon = GFX_focus_ETH_continuous_supporting_the_arbegnoch
+		
+		available = {
+			hidden_trigger = { 
+				has_dlc = "By Blood Alone" 
+				original_tag = ETH 
+			}
+			has_completed_focus = ETH_the_patriots
+			OR = {
+				is_government_in_exile = yes 
+				has_country_leader_with_trait = imperator_absentis
+			}
+		}
+
+		enable = {
+			any_owned_state = { NOT = { is_controlled_by = ROOT } }
+			
+		}
+
+		modifier = {
+			resistance_growth_on_our_occupied_states = 0.1
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0		
+				all_owned_state = { is_controlled_by = ROOT }
+			}
+		}
+		
+		supports_ai_strategy = ai_focus_military_advancements
+		
+		daily_cost = 1
 		
 		available_if_capitulated = yes
 	}
 	
 	focus = {
-		id = continuous_bra_welfare
+		id = SWI_build_up_military_readiness
 		
-		icon = GFX_goal_continuous_bra_welfare
+		icon = GFX_focus_SWI_continuous_build_up_military_readiness
 		
 		available = {
-			original_tag = BRA
+			hidden_trigger = { 
+				has_dlc = "By Blood Alone" 
+				original_tag = SWI 
+			}
 		}
 
 		enable = {
-			original_tag = BRA
-			BRA = { has_war = no has_civil_war = no }
+			has_completed_focus = SWI_armed_neutrality
 		}
 
 		modifier = {
-			custom_modifier_tooltip = continuous_bra_politicagem_tooltip
-			political_power_gain = -2
-			stability_weekly = 0.005
-			civilian_factory_use = 5
+			
 		}
 		
 		ai_will_do = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 0		
+				all_owned_state = { is_controlled_by = ROOT }
+			}
 		}
 		
-		#supports_ai_strategy = ai_focus_military_advancements
+		supports_ai_strategy = ai_focus_military_advancements
 		
-		daily_cost = 0
-		
+		daily_cost = 1
+				
 		available_if_capitulated = yes
+
+		select_effect = {
+			activate_mission = SWI_building_up_military_readiness_mission
+			set_country_flag = SWI_building_up_mr_cont_focus_active
+		}
+		
+
+		cancel_effect = {
+			clr_country_flag = SWI_building_up_mr_cont_focus_active
+		}
 	}
 	
+	focus = {
+		id = SWI_support_active_militias_continuous_focus
+		
+		icon = GFX_focus_SWI_continuous_support_active_militias
+		
+		available = {
+			hidden_trigger = { 
+				has_dlc = "By Blood Alone" 
+				original_tag = SWI
+			}
+		}
+
+		enable = {
+			has_dynamic_modifier = { modifier = SWI_active_citizen_militia }
+		}
+
+		modifier = {
+			modifier_army_sub_unit_militia_attack_factor = 0.3
+			modifier_army_sub_unit_militia_defence_factor = 0.3
+			modifier_army_sub_unit_militia_speed_factor = 0.3
+			modifier_army_sub_unit_militia_max_org_factor = 0.15
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0		
+				all_owned_state = { is_controlled_by = ROOT }
+			}
+		}
+		
+		supports_ai_strategy = ai_focus_military_advancements
+		
+		daily_cost = 1
+				
+		available_if_capitulated = yes
+
+		select_effect = {
+
+		}
+		
+
+		cancel_effect = {
+		
+		}
+	}
+
 	focus = {
 		id = continuous_naval_production
 		
@@ -87,6 +260,11 @@ continuous_focus_palette = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0.25		
+				is_government_in_exile = yes 
+				original_tag = ETH
+			}
 		}
 		
 		supports_ai_strategy = ai_focus_naval
@@ -108,6 +286,11 @@ continuous_focus_palette = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0.25		
+				is_government_in_exile = yes 
+				original_tag = ETH 
+			}
 		}
 		
 		supports_ai_strategy = ai_focus_aviation
@@ -128,6 +311,8 @@ continuous_focus_palette = {
 		
 		modifier = {
 			production_speed_infrastructure_factor = 0.1
+			production_speed_rail_way_factor = 0.1
+			production_speed_supply_node_factor = 0.1
 			production_speed_air_base_factor = 0.1
 			production_speed_naval_base_factor = 0.1
 			#production_speed_synthetic_refinery_factor = 0.1
@@ -138,11 +323,15 @@ continuous_focus_palette = {
 			production_speed_coastal_bunker_factor = 0.2
 			production_speed_anti_air_building_factor = 0.2
 			production_speed_radar_station_factor = 0.2	
-				
 		}
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0.25		
+				is_government_in_exile = yes 
+				original_tag = ETH 
+			}
 		}
 		
 		supports_ai_strategy = ai_focus_defense
@@ -166,6 +355,11 @@ continuous_focus_palette = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0.25		
+				is_government_in_exile = yes  
+				original_tag = ETH
+			}
 		}
 		
 		supports_ai_strategy = ai_focus_defense
@@ -213,7 +407,6 @@ continuous_focus_palette = {
 				
 		modifier = {
 			industry_repair_factor = 0.5
-			industry_free_repair_factor = 1.0
 		}
 		
 		ai_will_do = {
@@ -331,4 +524,69 @@ continuous_focus_palette = {
 		available_if_capitulated = yes
 	}
 
+	### REJUVENATED ###
+
+	focus = {
+		id = continuous_bra_politicagem
+		
+		icon = GFX_goal_continuous_bra_politicagem
+		
+		available = {
+			original_tag = BRA
+		}
+
+		enable = {
+			original_tag = BRA
+			BRA = { has_war = no has_civil_war = no }
+		}
+
+		modifier = {
+			custom_modifier_tooltip = continuous_bra_politicagem_tooltip
+			political_power_gain = 2
+			stability_weekly = -0.005
+			civilian_factory_use = 5
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		#supports_ai_strategy = ai_focus_military_advancements
+		
+		daily_cost = 0
+		
+		available_if_capitulated = yes
+	}
+	
+	focus = {
+		id = continuous_bra_welfare
+		
+		icon = GFX_goal_continuous_bra_welfare
+		
+		available = {
+			original_tag = BRA
+		}
+
+		enable = {
+			original_tag = BRA
+			BRA = { has_war = no has_civil_war = no }
+		}
+
+		modifier = {
+			custom_modifier_tooltip = continuous_bra_politicagem_tooltip
+			political_power_gain = -2
+			stability_weekly = 0.005
+			civilian_factory_use = 5
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		#supports_ai_strategy = ai_focus_military_advancements
+		
+		daily_cost = 0
+		
+		available_if_capitulated = yes
+	}
 }

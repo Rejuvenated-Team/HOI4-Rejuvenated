@@ -1317,8 +1317,8 @@ characters={
 		}
 	}
 
-	BRA_protogenes_guimaraes_vfb = {
-		name = "Protogenes Guimaraes"
+	BRA_protogenes_guimaraes = {
+		name = BRA_protogenes_guimaraes
 		portraits={
 			army={
 				small="GFX_idea_advisor_protogenes"
