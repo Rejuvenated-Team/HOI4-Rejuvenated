@@ -880,9 +880,9 @@ on_actions = {
 					original_tag = SPR
 
 				}
-				random_country = {
+				random_country_with_original_tag = {
+					original_tag_to_check = FRA
 					limit = {
-						original_tag = FRA
 						OR = {
 							has_completed_focus = FRA_right_wing_rhetoric
 							has_completed_focus = FRA_utilize_the_leagues

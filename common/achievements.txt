@@ -315,20 +315,20 @@ northern_light = {
 	
 	happened = {
 		is_faction_leader = yes
-		any_country = {
-			original_tag = NOR
+		any_country_with_original_tag = {
+			original_tag_to_check = NOR
 			is_in_faction_with = ROOT
 		}
-		any_country = {
-			original_tag = DEN
+		any_country_with_original_tag = {
+			original_tag_to_check = DEN
 			is_in_faction_with = ROOT
 		}
-		any_country = {
-			original_tag = SWE
+		any_country_with_original_tag = {
+			original_tag_to_check = SWE
 			is_in_faction_with = ROOT
 		}
-		any_country = {
-			original_tag = FIN
+		any_country_with_original_tag = {
+			original_tag_to_check = FIN
 			is_in_faction_with = ROOT
 		}
 	}
@@ -2032,8 +2032,8 @@ putting_the_raid_on_the_medway_to_shame = {
 		custom_trigger_tooltip = {
 			tooltip = putting_the_raid_on_the_medway_to_shame_tt
 			NOT = {
-				any_country = {
-					original_tag = ENG
+				any_country_with_original_tag = {
+					original_tag_to_check = ENG
 					has_navy_size = {
 						type = capital_ship
 						size > 0
@@ -2254,16 +2254,8 @@ portugal_macau_my_day = {
 	happened = {
 		custom_trigger_tooltip = {
 			tooltip = portugal_macau_my_day_tt
-			any_country = {
-				OR = {
-					original_tag = CHI
-					original_tag = PRC
-					original_tag = GXC
-					original_tag = YUN
-					original_tag = SHX
-					original_tag = XSM
-					original_tag = SIK
-				}
+			any_country_of = {
+				target = constant:country_groups.chinese_nations
 				is_subject_of = POR
 				has_autonomy_state = autonomy_collaboration_government
 				729 = {
@@ -2335,8 +2327,8 @@ why_die_for_danzig = {
 	happened = {
 		custom_trigger_tooltip = {
 			tooltip = why_die_for_danzig_tt
-			any_country = {
-				original_tag = FRA
+			any_country_with_original_tag = {
+				original_tag_to_check = FRA
 				has_government = fascism
 				NOT = { has_war_with = ROOT }
 			}
@@ -2538,8 +2530,8 @@ i_didnt_vote_for_you = {
 			tooltip = i_didnt_vote_tt
 			tag = SPC
 			NOT = {
-				any_country = {
-					original_tag = SPR
+				any_country_with_original_tag = {
+					original_tag_to_check = SPR
 					NOT = { tag = SPC }
 					exists = yes
 				}
