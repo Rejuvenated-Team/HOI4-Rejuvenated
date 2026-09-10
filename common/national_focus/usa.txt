@@ -1147,7 +1147,6 @@ focus_tree = {
 		mutually_exclusive = { focus = USA_secure_china }
 		
 		available = {
-			is_in_faction = no
 			not = { has_war_with = SOU }
 			SOV_comintern_joinable = yes 
 		}
