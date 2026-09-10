@@ -82,7 +82,7 @@ units = {
 	}
 	division= {	
 		name = "5o Batalhão de Infantaria"
-		location = 8242 # Belo Horizonte
+		location = 8242 # Petrolina
 		division_template = "Batalhão de Infantaria"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.5
