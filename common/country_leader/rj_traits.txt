@@ -1,13 +1,6 @@
 leader_traits = {
 	### Country Leader / Advisor Traits ###
 
-	spymaster = {
-		random = no
-		sprite = 15
-		operative_slot = 2
-		operation_outcome = 0.2
-	}
-
 	spy_hunter = {
 		random = no
 		sprite = 15
