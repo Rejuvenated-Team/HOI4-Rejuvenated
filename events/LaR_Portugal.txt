@@ -1160,9 +1160,9 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			random_country = {
+			random_country_with_original_tag = {
+				original_tag_to_check = SPR
 				limit = {
-					original_tag = SPR
 					has_country_flag = POR_got_portuguese_mutineers_flag
 				}
 				country_event = lar_portugal_navy_mutiny.6
@@ -1848,9 +1848,9 @@ country_event = {
 					capital = 501
 					states = { 495 497 498 499 280 502 503 504 505 }
 				}
-				random_country = {
+				random_country_with_original_tag = {
+					original_tag_to_check = BRA
 					limit = {
-						original_tag = BRA
 						has_government = fascism
 					}
 					POR = { 
@@ -1915,9 +1915,9 @@ country_event = {
 						ruling_party = neutrality
 					}
 				}
-				random_country = {
+				random_country_with_original_tag = {
+					original_tag_to_check = BRA
 					limit = {
-						original_tag = BRA
 						has_government = neutrality
 					}
 					set_country_flag = EOB_empire_of_brazil_flag
@@ -2006,9 +2006,9 @@ country_event = {
 			start_civil_war = {
 				ideology = fascism
 			}
-			random_country = {
+			random_country_with_original_tag = {
+				original_tag_to_check = BRA
 				limit = {
-					original_tag = BRA
 					has_government = fascism
 				}
 				POR = { 
@@ -2046,9 +2046,9 @@ country_event = {
 					ruling_party = neutrality
 				}
 			}
-			random_country = {
+			random_country_with_original_tag = {
+				original_tag_to_check = BRA
 				limit = {
-					original_tag = BRA
 					has_government = neutrality
 				}
 				set_country_flag = EOB_empire_of_brazil_flag

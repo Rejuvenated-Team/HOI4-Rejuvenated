@@ -230,4 +230,10 @@ country_groups = {
 		UKR
 		KAR
 	}
+
+	baltics = {
+		LIT
+		LAT
+		EST
+	}
 }

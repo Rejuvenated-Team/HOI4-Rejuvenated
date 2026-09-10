@@ -7897,9 +7897,9 @@ SOV_start_civil_war = {
 	}
 
 	# Set Up Stalinist Soviet Union ( tag = SOS )
-	random_country = {
+	random_country_with_original_tag = {
+		original_tag_to_check = SOV
 		limit = {
-			original_tag = SOV
 			has_war_with = ROOT
 			has_government = communism
 		}

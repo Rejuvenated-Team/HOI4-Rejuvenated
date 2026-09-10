@@ -3331,9 +3331,9 @@ focus_tree = {
 			}
 			#Non-Aligned Portugal joins SPA
 			hidden_effect = {
-				random_country = {
+				random_country_with_original_tag = {
+					original_tag_to_check = POR
 					limit = {
-						original_tag = POR
 						has_government = neutrality
 					}
 					set_country_flag = POR_non_aligned_portugal_supports_SPA_flag

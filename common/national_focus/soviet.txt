@@ -13236,9 +13236,9 @@ focus_tree = {
 				effect_tooltip = { add_timed_idea = {idea = SOV_soviet_advisors_spr days = 1095 } }
 			}
 			else = {
-				random_country = {
+				random_country_with_original_tag = {
+					original_tag_to_check = spr
 					limit = {
-						original_tag = SPR
 						has_civil_war = yes
 						OR = {
 							has_government = communism

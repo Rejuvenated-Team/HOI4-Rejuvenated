@@ -1888,10 +1888,9 @@ technologies = {
 									}
 								}
 							}
-							random_country = {
+							random_country_with_original_tag = {
+								original_tag_to_check = ITA
 								limit = {
-									original_tag = ITA
-								}
 								set_country_flag = ITA_late_to_the_atomic_party_flag
 							}
 						}

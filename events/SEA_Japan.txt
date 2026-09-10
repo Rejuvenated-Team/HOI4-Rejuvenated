@@ -7954,9 +7954,8 @@ country_event = {
 			} 
 		}
 		effect_tooltip = {
-			random_country = {
+			random_subject_country = {
 				limit = {
-					is_subject_of = ROOT
 					has_country_flag = JAP_this_is_the_country_being_negotiated_at_the_moment
 				}
 				FROM = {
@@ -8696,9 +8695,9 @@ country_event = {
 			}
 		}
 
-		random_country = {
+		random_country_with_original_tag = {
+			original_tag_to_check = KOR
 			limit = {
-				original_tag = KOR
 				has_government = communism
 				is_subject = no
 			}
@@ -8712,9 +8711,9 @@ country_event = {
 		}
 
 		hidden_effect = {
-			random_country = {
+			random_country_with_original_tag = {
+				original_tag_to_check = KOR
 				limit = {
-					original_tag = KOR
 					NOT = {
 						has_government = communism
 					}
@@ -8801,9 +8800,9 @@ country_event = {
 			}
 		}
 
-		random_country = {
+		random_country_with_original_tag = {
+			original_tag_to_check = KOR
 			limit = {
-				original_tag = KOR
 				has_government = communism
 				is_subject = no
 			}
@@ -8817,9 +8816,9 @@ country_event = {
 		}
 
 		hidden_effect = {
-			random_country = {
+			random_country_with_original_tag = {
+				original_tag_to_check = KOR
 				limit = {
-					original_tag = KOR
 					NOT = {
 						has_government = communism
 					}
@@ -10798,9 +10797,9 @@ country_event = {
 						num_divisions < 20
 					}
 				}
-				random_country = {
+				random_country_with_original_tag = {
+					original_tag_to_check = JAP
 					limit = {
-						original_tag = JAP
 						has_government = fascism
 					}
 					random_state = {
@@ -11307,7 +11306,8 @@ country_event = {
 	after = {
 
 		hidden_effect = {
-			random_country = {
+			random_country_with_original_tag = {
+				original_tag_to_check = JAP
 				limit = {
 					original_tag = JAP
 					has_government = democratic
