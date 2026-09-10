@@ -11751,16 +11751,17 @@ country_event = {
 		IF = {
 			limit = {
 				NOT = {
-					any_country = {
-						original_tag = GER 
+					any_country_with_original_tag = {
+						original_tag_to_check = GER
 						has_government = democratic
 						is_subject = yes 
 						exists = yes 
 					}
 				}
 				SOV = {
-					any_subject_country = {
-						original_tag = GER 
+					any_country_with_original_tag = {
+						original_tag_to_check = GER
+						is_subject = yes
 					}
 				}
 			}
@@ -11832,16 +11833,17 @@ country_event = {
 		IF = {
 			limit = {
 				NOT = {
-					any_country = {
-						original_tag = GER 
+					any_country_with_original_tag = {
+						original_tag_to_check = GER
 						has_government = democratic
 						is_subject = yes 
 						exists = yes 
 					}
 				}
 				SOV = {
-					any_subject_country = {
-						original_tag = GER 
+					any_country_with_original_tag = {
+						original_tag_to_check = GER
+						is_subject = yes
 					}
 				}
 			}

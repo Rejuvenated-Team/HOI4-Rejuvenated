@@ -1882,8 +1882,8 @@ technologies = {
 							limit = {
 								check_variable = { global.atomic_research_race = 3 }
 								NOT = {
-									any_country = {
-										original_tag = ITA
+									any_country_with_original_tag = {
+										original_tag_to_check = ITA
 										has_country_flag = ITA_pioneer_in_atomic_research_flag
 									}
 								}

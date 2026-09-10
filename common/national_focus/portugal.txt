@@ -3443,15 +3443,9 @@ focus_tree = {
 				custom_effect_tooltip = POR_the_iberian_socialist_union_cores_tt
 				if = { # Any Spanish Puppet will get annexed
 					limit = {
-						any_country = {
-							OR = {
-								original_tag = SPR
-								tag = GLC
-								tag = NAV
-								tag = CAT
-								tag = ADU
-							}
-							is_puppet_of = ROOT
+						any_country_with_original_tag_of = {
+							target = { SPR GLC NAV CAT ADU }
+							is_subject_of = ROOT
 						}
 					}
 					hidden_effect = {
@@ -3464,7 +3458,7 @@ focus_tree = {
 									tag = CAT
 									tag = ADU
 								}
-								is_puppet_of = ROOT
+								is_subject_of = ROOT
 							}
 							ROOT = {
 								annex_country = {
@@ -3670,19 +3664,8 @@ focus_tree = {
 		available = {
 			has_global_flag = scw_over
 			has_government = communism
-			any_country = {
-				OR = {
-					TAG = BRA TAG = MEX
-					TAG = COL TAG = ARG
-					TAG = PRU TAG = VEN
-					TAG = CHL TAG = GUA
-					TAG = ECU TAG = CUB
-					TAG = BOL TAG = HAI
-					TAG = DOM TAG = HON
-					TAG = PAR TAG = ELS
-					TAG = NIC TAG = COS
-					TAG = PAN TAG = URG						
-				}
+			any_country_of = {
+				target = constant:country_groups.latin_america
 				has_government = communism
 			}
 		}
@@ -3932,8 +3915,8 @@ focus_tree = {
 				has_government = democratic
 				has_government = communism
 			}
-			any_country = {
-				original_tag = SPR
+			any_country_with_original_tag = {
+				original_tag_to_check = SPR
 				NOT = { has_government = ROOT }
 				NOT = { is_in_faction_with = ROOT }
 			}
@@ -4910,8 +4893,8 @@ focus_tree = {
 
 		available = {	
 			has_global_flag = scw_over
-			any_country = {
-				original_tag = SPR
+			any_country_with_original_tag = {
+				original_tag_to_check = SPR
 				NOT = { has_government = ROOT }
 				NOT = { is_in_faction_with = ROOT }
 			}

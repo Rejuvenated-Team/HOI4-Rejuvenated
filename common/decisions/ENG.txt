@@ -9913,9 +9913,9 @@ operations = {
 			modifier = {
 				# Norway has already fallen, we are too late
 				factor = 6
-				any_country = {
+				any_country_with_original_tag = {
+					original_tag_to_check = NOR 
 					has_government = democratic
-					original_tag = NOR
 					is_in_faction_with = ROOT
 					has_capitulated = yes
 				}

@@ -651,8 +651,8 @@ focus_tree = {
 		cost = 10
 		prerequisite = {focus = CUB_american_air_bases focus = CUB_gift_sugar_to_the_british focus = CUB_winning_the_battle_of_the_caribbean }
 		available = {
-			any_country = {
-				original_tag = SPR
+			any_country_with_original_tag = {
+				original_tag_to_check = SPR
 				has_government = fascism
 				NOT = {
 					has_war_with = ROOT
