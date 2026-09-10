@@ -6,8 +6,6 @@
 ### search_filters = {FOCUS_FILTER_MANPOWER}
 ### search_filters = {FOCUS_FILTER_ANNEXATION}
 
-#!gfx:interface/RJ_goals.gfx
-#!gfx:interface/KR_goals.gfx
 focus_tree = {
 	id = british_focus
 	
