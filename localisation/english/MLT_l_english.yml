@@ -37,7 +37,7 @@
  MLT_make_ourselves_useful_desc: "Make Ourselfves Useful"
  MLT_a_new_colonial_administration: "A New Colonial Administration"
  MLT_the_libyan_colonial_administration: "The [LBA.GetAdjective] Colonial Administration"
- MLT_the_eritrean_colonial_administration: "The [LBA.GetAdjective] Colonial Administration"
+ MLT_the_eritrean_colonial_administration: "The [ERI.GetAdjective] Colonial Administration"
  MLT_the_somalian_colonial_administration: "The [SOM.GetAdjective] Colonial Administration"
  MLT_the_abbyssinian_colonial_administration: "The [ETH.GetAdjective] Colonial Administration"
  MLT_model_colonies_everywhere: "Here, There And Everywhere"
