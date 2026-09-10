@@ -1829,15 +1829,17 @@ country_event = {
 				add_popularity = { ideology = neutrality popularity = 0.5 }
 				set_country_flag = EOB_empire_of_brazil_flag
 				set_cosmetic_tag = EOB_empire_brazil_neutrality
-				create_country_leader = {
-					name = "Prince Pedro Henrique"
-					desc = "POLITICS_PRINCE_PEDRO_HENRIQUE_DESC"
-					picture = GFX_portrait_Prince_Pedro_Henrique
-					expire = "1981.07.05"
-					ideology = despotism
-					traits = {
-						inexperienced_monarch
-					}					
+				BRA_pedro_henrique = {
+					set_nationality = PREV
+					add_country_leader_role = {
+						country_leader = {
+							expire = 1981.07.05
+							ideology = despotism
+							traits = {
+								inexperienced_monarch
+							}
+						}
+					}
 				}
 				set_temp_variable = { POR_bra_monarchist_cw_opposition = party_popularity@fascism }
 				add_to_temp_variable = { POR_bra_monarchist_cw_opposition = party_popularity@communism }
@@ -1922,15 +1924,17 @@ country_event = {
 					}
 					set_country_flag = EOB_empire_of_brazil_flag
 					set_cosmetic_tag = EOB_empire_brazil_neutrality
-					create_country_leader = {
-						name = "Prince Pedro Henrique"
-						desc = "POLITICS_PRINCE_PEDRO_HENRIQUE_DESC"
-						picture = GFX_portrait_Prince_Pedro_Henrique
-						expire = "1981.07.05"
-						ideology = despotism
-						traits = {
-							inexperienced_monarch
-						}					
+					BRA_pedro_henrique = {
+						set_nationality = PREV
+						add_country_leader_role = {
+							country_leader = {
+								expire = 1981.07.05
+								ideology = despotism
+								traits = {
+									inexperienced_monarch
+								}
+							}
+						}
 					}
 					create_country_leader = {
 						name = "Plínio Salgado"
@@ -1993,15 +1997,17 @@ country_event = {
 			add_popularity = { ideology = neutrality popularity = 0.5 }
 			set_country_flag = EOB_empire_of_brazil_flag
 			set_cosmetic_tag = EOB_empire_brazil_neutrality
-			create_country_leader = {
-				name = "Prince Pedro Henrique"
-				desc = "POLITICS_PRINCE_PEDRO_HENRIQUE_DESC"
-				picture = GFX_portrait_Prince_Pedro_Henrique
-				expire = "1981.07.05"
-				ideology = despotism
-				traits = {
-					inexperienced_monarch
-				}					
+			BRA_pedro_henrique = {
+				set_nationality = PREV
+				add_country_leader_role = {
+					country_leader = {
+						expire = 1981.07.05
+						ideology = despotism
+						traits = {
+							inexperienced_monarch
+						}
+					}
+				}
 			}
 			start_civil_war = {
 				ideology = fascism
@@ -2053,15 +2059,17 @@ country_event = {
 				}
 				set_country_flag = EOB_empire_of_brazil_flag
 				set_cosmetic_tag = EOB_empire_brazil_neutrality
-				create_country_leader = {
-					name = "Prince Pedro Henrique"
-					desc = "POLITICS_PRINCE_PEDRO_HENRIQUE_DESC"
-					picture = GFX_portrait_Prince_Pedro_Henrique
-					expire = "1981.07.05"
-					ideology = despotism
-					traits = {
-						inexperienced_monarch
-					}					
+				BRA_pedro_henrique = {
+					set_nationality = PREV
+					add_country_leader_role = {
+						country_leader = {
+							expire = 1981.07.05
+							ideology = despotism
+							traits = {
+								inexperienced_monarch
+							}
+						}
+					}
 				}
 				POR = { 
 					add_to_war = { targeted_alliance = PREV enemy = BRA hostility_reason = asked_to_join }
@@ -2093,15 +2101,17 @@ country_event = {
 		add_stability = -0.2
 		set_country_flag = EOB_empire_of_brazil_flag
 		set_cosmetic_tag = EOB_empire_brazil_neutrality
-		create_country_leader = {
-			name = "Prince Pedro Henrique"
-			desc = "POLITICS_PRINCE_PEDRO_HENRIQUE_DESC"
-			picture = GFX_portrait_Prince_Pedro_Henrique
-			expire = "1981.07.05"
-			ideology = despotism
-			traits = {
-				inexperienced_monarch
-			}					
+		BRA_pedro_henrique = {
+			set_nationality = PREV
+			add_country_leader_role = {
+				country_leader = {
+					expire = 1981.07.05
+					ideology = despotism
+					traits = {
+						inexperienced_monarch
+					}
+				}
+			}
 		}
 		if = {
 			limit = { NOT = { has_government = neutrality } }
