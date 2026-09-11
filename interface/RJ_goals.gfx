@@ -732,6 +732,20 @@ spriteTypes = {
 	}
 
 	#############
+	### ITALY ###
+	#############
+
+	SpriteType = {
+		name = "GFX_focus_RJ_ITA_investments"
+		texturefile = "gfx/interface/goals/ita/RJ_ITA_investments.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_ITA_trade"
+		texturefile = "gfx/interface/goals/ita/RJ_ITA_trade.dds"
+	}
+
+	#############
 	### MALTA ###
 	#############
 

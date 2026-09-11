@@ -5,7 +5,7 @@ MLT_italy_infiltration = {
 	picture = GFX_decision_cat_picture_organize_the_blackshirts
 	
 	allowed = {
-		tag = MLT
+		original_tag = MLT
 	}
 
 	on_map_area = {
@@ -15,11 +15,7 @@ MLT_italy_infiltration = {
 	}
 
 	priority = {
-		base = 0
-		modifier = {
-			add = 10
-			has_completed_focus = MLT_the_grand_plan
-		}
+		base = 10
 	}
 
 	visible = {
