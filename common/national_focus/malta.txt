@@ -314,7 +314,7 @@ focus_tree = {
 		relative_position_id = MLT_subjogation_by_italy
 		prerequisite = { focus = MLT_subjogation_by_italy }
 		available = {
-			has_political_power > 500
+			has_political_power > 499
 		}
 
 		completion_reward = {
@@ -466,6 +466,10 @@ focus_tree = {
 		prerequisite = { focus = MLT_subjogation_by_italy }
 
 		completion_reward = {
+			add_timed_idea = {
+				idea = MLT_italian_investments_idea
+				days = 360
+			}
 		}
 	}
 	

@@ -64,6 +64,26 @@ ideas = {
 			}
 		}
 
+		MLT_italian_investments_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RAJ_external_investments
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
 	}
 
 }
