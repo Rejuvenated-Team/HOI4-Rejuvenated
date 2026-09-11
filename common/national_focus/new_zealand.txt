@@ -2393,7 +2393,7 @@
 
 	focus = {
 		id = NZL_the_first_labor_government
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		x = 4
 		y = 0
 
@@ -2427,7 +2427,7 @@
 
 	focus = {
 		id = NZL_ratana_alliance
-		icon = GFX_goal_anschluss
+		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = NZL_the_first_labor_government }
 		x = -3
 		y = 1
@@ -2497,7 +2497,7 @@
 
 	focus = {
 		id = NZL_social_security_act
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_focus_hol_the_foundations_of_defense
 		prerequisite = { focus = NZL_ratana_alliance }
 		x = 1
 		y = 1
@@ -2561,7 +2561,7 @@
 
 	focus = {
 		id = NZL_amend_the_maori_affairs_act
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_focus_generic_self_management
 		prerequisite = { focus = NZL_the_manpower_act }
 		mutually_exclusive = { focus = NZL_waitangi_tribunal }
 		x = -1
@@ -2599,7 +2599,7 @@
 
 	focus = {
 		id = NZL_waitangi_tribunal
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_focus_generic_concessions
 		prerequisite = { focus = NZL_the_manpower_act }
 		mutually_exclusive = { focus = NZL_amend_the_maori_affairs_act }
 		x = 1
@@ -2632,7 +2632,7 @@
 
 	focus = {
 		id = NZL_maori_conscription
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_focus_generic_manpower
 		prerequisite = { focus = NZL_amend_the_maori_affairs_act }
 		x = -1
 		y = 4
@@ -2664,7 +2664,7 @@
 
 	focus = {
 		id = NZL_maori_volunteers
-		icon = GFX_goal_generic_propaganda
+		icon = GFX_focus_generic_diverse_army
 		prerequisite = { focus = NZL_waitangi_tribunal }
 		x = 1
 		y = 4
@@ -2801,7 +2801,7 @@
 
 	focus = {
 		id = NZL_2nzef
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_generic_military_mission
 		prerequisite = { focus = NZL_strengthen_the_commonwealth }
 		x = 0
 		y = 1
@@ -3102,7 +3102,7 @@
 
 	focus = {
 		id = NZL_befriend_japan
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_chi_collaboration_with_the_japanese
 		prerequisite = { focus = NZL_in_the_darkness }
 		mutually_exclusive = { focus = NZL_rule_them_all }		
 		x = 0
