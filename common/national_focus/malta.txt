@@ -14,127 +14,17 @@ focus_tree = {
 
 	continuous_focus_position = { x = 50 y = 1500 }
 
-#	focus = {
-#		id = MLT_answer_the_language_question
-#		icon = GFX_focus_RJ_MLT_answer_the_language_question
-#		x = 0
-#		y = 0
-#		cost = 7.2
-#
-#		available_if_capitulated = yes
-#		available = {
-#			
-#		}
-#
-#		completion_reward = {
-#			country_event = { id = malta.1 hours = 3 }
-#		}
-#
-#		search_filters = { FOCUS_FILTER_POLITICAL }
-#	}
-#
-#	focus = {
-#		id = MLT_an_english_answer
-#		icon = GFX_focus_chi_british_cooperation
-#		prerequisite = { focus = MLT_answer_the_language_question }
-#		mutually_exclusive = { focus = MLT_a_maltese_answer }
-#		mutually_exclusive = { focus = MLT_a_compromise }
-#		mutually_exclusive = { focus = MLT_an_italian_answer }
-#		relative_position_id = MLT_answer_the_language_question
-#		x = -7
-#		y = 1
-#		cost = 1
-#
-#		available_if_capitulated = yes
-#		available = {
-#			has_country_flag = MLT_chose_english
-#		}
-#
-#		completion_reward = {
-#			
-#		}
-#
-#		search_filters = { FOCUS_FILTER_POLITICAL }
-#	}
-#
-#	focus = {
-#		id = MLT_a_compromise
-#		icon = GFX_focus_chi_british_cooperation
-#		prerequisite = { focus = MLT_answer_the_language_question }
-#		mutually_exclusive = { focus = MLT_a_maltese_answer }
-#		mutually_exclusive = { focus = MLT_an_english_answer }
-#		mutually_exclusive = { focus = MLT_an_italian_answer }
-#		relative_position_id = MLT_answer_the_language_question
-#		x = -3
-#		y = 1
-#		cost = 1
-#
-#		available_if_capitulated = yes
-#		available = {
-#			has_country_flag = MLT_chose_compromise
-#		}
-#
-#		completion_reward = {
-#			
-#		}
-#
-#		search_filters = { FOCUS_FILTER_POLITICAL }
-#	}
-#
-#	focus = {
-#		id = MLT_an_italian_answer
-#		icon = GFX_focus_ITA_italian_irredentism
-#		prerequisite = { focus = MLT_answer_the_language_question }
-#		mutually_exclusive = { focus = MLT_a_maltese_answer }
-#		mutually_exclusive = { focus = MLT_an_english_answer }
-#		mutually_exclusive = { focus = MLT_a_compromise }
-#		relative_position_id = MLT_answer_the_language_question
-#		x = 3
-#		y = 1
-#		cost = 1
-#
-#		available_if_capitulated = yes
-#		available = {
-#			has_country_flag = MLT_chose_italian
-#		}
-#
-#		completion_reward = {
-#			
-#		}
-#
-#		search_filters = { FOCUS_FILTER_POLITICAL }
-#	}
-#
-#	focus = {
-#		id = MLT_a_maltese_answer
-#		icon = GFX_focus_ITA_italian_irredentism
-#		prerequisite = { focus = MLT_answer_the_language_question }
-#		mutually_exclusive = { focus = MLT_an_italian_answer }
-#		mutually_exclusive = { focus = MLT_an_english_answer }
-#		mutually_exclusive = { focus = MLT_a_compromise }
-#		relative_position_id = MLT_answer_the_language_question
-#		x = 7
-#		y = 1
-#		cost = 1
-#
-#		available_if_capitulated = yes
-#		available = {
-#			has_country_flag = MLT_chose_maltese
-#		}
-#
-#		completion_reward = {
-#			
-#		}
-#
-#		search_filters = { FOCUS_FILTER_POLITICAL }
-#	}
-
 	focus = {
 		id = MLT_answer_the_language_question
 		icon = GFX_focus_RJ_MLT_answer_the_language_question
-		x = 6
+		x = 0
 		y = 0
-		cost = 10
+		cost = 7.2
+
+		available_if_capitulated = yes
+		available = {
+			
+		}
 
 		completion_reward = {
 			country_event = { id = malta.1 hours = 3 }
@@ -144,79 +34,109 @@ focus_tree = {
 	}
 
 	focus = {
-		id = MLT_on_our_own
-		icon = GFX_focus_RJ_MLT_on_our_own
-		x = 0
-		y = 1
-		cost = 5
-		mutually_exclusive = { focus = MLT_follow_britain focus = MLT_italian_irredentism }
-		relative_position_id = MLT_answer_the_language_question
+		id = MLT_an_english_answer
+		icon = GFX_focus_chi_british_cooperation
 		prerequisite = { focus = MLT_answer_the_language_question }
+		mutually_exclusive = { focus = MLT_a_maltese_answer }
+		mutually_exclusive = { focus = MLT_a_compromise }
+		mutually_exclusive = { focus = MLT_an_italian_answer }
+		relative_position_id = MLT_answer_the_language_question
+		x = -7
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
 		available = {
-			hidden_trigger = {
-				always = no
-			}
+			has_country_flag = MLT_chose_english
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = generic_focus_unlocked_by_event_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
-			OVERLORD = {
-				country_event = {
-					id = malta.2
-					hours = 3
-				}
-			}
-			custom_effect_tooltip = generic_further_escalation_effects_tt
-			effect_tooltip = {
-				OVERLORD = {
-					set_autonomy = {
-						target = ROOT
-						autonomy_state = autonomy_free
-					}
-					create_wargoal = {
-						target = ROOT
-						type = annex_everything
-					}
-				}
-			}
-			custom_effect_tooltip = generic_no_further_escalation_effects_tt
-			effect_tooltip = {
-				OVERLORD = {
-					set_autonomy = {
-						target = ROOT
-						autonomy_state = autonomy_free
-					}
-				}
-			}
+			
 		}
-		search_filters = { FOCUS_FILTER_COMPLETED_BY_EVENT }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
-		id = MLT_delcare_neutrality
-		text = neutrality_focus
-		icon = GFX_focus_SWI_neutrality_on_the_move
-		x = 0
+		id = MLT_a_compromise
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = MLT_answer_the_language_question }
+		mutually_exclusive = { focus = MLT_a_maltese_answer }
+		mutually_exclusive = { focus = MLT_an_english_answer }
+		mutually_exclusive = { focus = MLT_an_italian_answer }
+		relative_position_id = MLT_answer_the_language_question
+		x = -3
 		y = 1
-		cost = 5
-		relative_position_id = MLT_on_our_own
-		prerequisite = { focus = MLT_on_our_own }
+		cost = 1
+
+		available_if_capitulated = yes
+		available = {
+			has_country_flag = MLT_chose_compromise
+		}
 
 		completion_reward = {
-			add_ideas = neutrality_idea
+			
 		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = MLT_an_italian_answer
+		icon = GFX_focus_ITA_italian_irredentism
+		prerequisite = { focus = MLT_answer_the_language_question }
+		mutually_exclusive = { focus = MLT_a_maltese_answer }
+		mutually_exclusive = { focus = MLT_an_english_answer }
+		mutually_exclusive = { focus = MLT_a_compromise }
+		relative_position_id = MLT_answer_the_language_question
+		x = 3
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+		available = {
+			has_country_flag = MLT_chose_italian
+		}
+
+		completion_reward = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = MLT_a_maltese_answer
+		icon = GFX_focus_ITA_italian_irredentism
+		prerequisite = { focus = MLT_answer_the_language_question }
+		mutually_exclusive = { focus = MLT_an_italian_answer }
+		mutually_exclusive = { focus = MLT_an_english_answer }
+		mutually_exclusive = { focus = MLT_a_compromise }
+		relative_position_id = MLT_answer_the_language_question
+		x = 7
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+		available = {
+			has_country_flag = MLT_chose_maltese
+		}
+
+		completion_reward = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	
 	focus = {
 		id = MLT_italian_irredentism
 		icon = GFX_focus_ITA_italian_irredentism
-		x = 5
+		x = 0
 		y = 1
 		cost = 5
-		mutually_exclusive = { focus = MLT_follow_britain focus = MLT_on_our_own }
-		relative_position_id = MLT_answer_the_language_question
-		prerequisite = { focus = MLT_answer_the_language_question }
+		relative_position_id = MLT_an_italian_answer
+		prerequisite = { focus = MLT_an_italian_answer }
 		available = {
 			hidden_trigger = {
 				always = no
@@ -224,12 +144,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = generic_focus_unlocked_by_event_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
-			give_guarantee = ITA
-			ITA = {
-				give_guarantee = MLT
-			}
+			
 		}
 		search_filters = { FOCUS_FILTER_COMPLETED_BY_EVENT }
 	}
@@ -852,91 +767,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = MLT_here_tere_and_everyhwere_idea
-		}
-	}
-
-	focus = {
-		id = MLT_follow_britain
-		icon = GFX_focus_chi_british_cooperation
-		x = -5
-		y = 1
-		cost = 5
-		mutually_exclusive = { focus = MLT_on_our_own focus = MLT_italian_irredentism }
-		relative_position_id = MLT_answer_the_language_question
-		prerequisite = { focus = MLT_answer_the_language_question }
-		available = {
-			hidden_trigger = {
-				always = no
-			}
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = generic_focus_unlocked_by_event_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
-		}
-		search_filters = { FOCUS_FILTER_COMPLETED_BY_EVENT }
-	}
-	
-	focus = {
-		id = MLT_the_british_lead
-		icon = GFX_focus_eng_the_sun_never_sets
-		x = 0
-		y = 1
-		cost = 5
-		relative_position_id = MLT_follow_britain
-		prerequisite = { focus = MLT_follow_britain }
-
-		completion_reward = {
-		
-		}
-	}
-	
-	focus = {
-		id = MLT_welcome_italians_fleeing_fascism
-		icon = GFX_focus_ETH_invite_italian_settlers
-		x = 0
-		y = 1
-		cost = 5
-		relative_position_id = MLT_the_british_lead
-		prerequisite = { focus = MLT_the_british_lead }
-
-		completion_reward = {
-		}
-	}
-	
-	focus = {
-		id = MLT_lease_british_drydocks
-		icon = GFX_goal_generic_construct_naval_dockyard
-		x = -1
-		y = 1
-		cost = 5
-		relative_position_id = MLT_welcome_italians_fleeing_fascism
-		prerequisite = { focus = MLT_welcome_italians_fleeing_fascism }
-
-		completion_reward = {
-			add_offsite_building = {
-				type = dockyard
-				level = 3
-			}
-		}
-	}
-	
-	focus = {
-		id = MLT_build_steelworks
-		icon = GFX_focus_generic_steel
-		x = 1
-		y = 1
-		cost = 5
-		relative_position_id = MLT_welcome_italians_fleeing_fascism
-		prerequisite = { focus = MLT_welcome_italians_fleeing_fascism }
-
-		completion_reward = {
-			add_resource = {
-				type = steel
-				amount = 24
-				state = 116
-			}
-		
 		}
 	}
 }
