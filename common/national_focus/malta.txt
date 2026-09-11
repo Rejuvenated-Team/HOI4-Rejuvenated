@@ -206,7 +206,6 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = neutrality_idea
 		}
-		search_filters = { FOCUS_FILTER_COMPLETED_BY_EVENT }
 	}
 	
 	focus = {
