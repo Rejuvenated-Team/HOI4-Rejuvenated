@@ -501,17 +501,31 @@ focus_tree = {
 		relative_position_id = MLT_subjogation_by_italy
 		prerequisite = { focus = MLT_subjogation_by_italy }
 		available = {
-			448 = {
-				is_fully_controlled_by = ITA
-			}
-			661 = {
-				is_fully_controlled_by = ITA
+			OR = {
+				448 = {
+					is_controlled_by = OVERLORD
+				}
+				661 = {
+					is_controlled_by = OVERLORD
+				}
 			}
 		}
 
 		completion_reward = {
-			MLT = {
+			if = {
+				limit = {
+					448 = {
+						is_controlled_by = OVERLORD
+					}
+				}
 				transfer_state = 448
+			}
+			if = {
+				limit = {
+					661 = {
+						is_controlled_by = OVERLORD
+					}
+				}
 				transfer_state = 661
 			}
 		}
@@ -526,6 +540,7 @@ focus_tree = {
 		relative_position_id = MLT_make_ourselves_useful
 		prerequisite = { focus = MLT_make_ourselves_useful }
 		completion_reward = {
+			add_ideas = MLT_colonial_administration_idea
 		}
 	}
 	
@@ -538,42 +553,76 @@ focus_tree = {
 		relative_position_id = MLT_a_new_colonial_administration
 		prerequisite = { focus = MLT_a_new_colonial_administration }
 		available = {
-		449 = {
-			is_fully_controlled_by = ITA
-		}
-		
-		450 = {
-			is_fully_controlled_by = ITA
-		}
-		
-		451 = {
-			is_fully_controlled_by = ITA
-		}
-		
-		662 = {
-			is_fully_controlled_by = ITA
-		}
-		
-		663 = {
-			is_fully_controlled_by = ITA
-		}
-		
-		1113 = {
-			is_fully_controlled_by = ITA
-		}
-		
-		
+			OR = {
+				449 = {
+					is_controlled_by = OVERLORD
+				}
+				450 = {
+					is_controlled_by = OVERLORD
+				}
+				451 = {
+					is_controlled_by = OVERLORD
+				}
+				662 = {
+					is_controlled_by = OVERLORD
+				}
+				663 = {
+					is_controlled_by = OVERLORD
+				}
+				1113 = {
+					is_controlled_by = OVERLORD
+				}
+			}
 		}
 
 		completion_reward = {
-		MLT = {
-		     transfer_state = 449
-			 transfer_state = 450
-			 transfer_state = 451
-			 transfer_state = 662
-			 transfer_state = 663
-			 transfer_state = 1113
-			 
+			if = {
+				limit = {
+					449 = {
+						is_controlled_by = OVERLORD
+					}
+				}
+				transfer_state = 449
+			}
+			if = {
+				limit = {
+					450 = {
+						is_controlled_by = OVERLORD
+					}
+				}
+				transfer_state = 450
+			}
+			if = {
+				limit = {
+					451 = {
+						is_controlled_by = OVERLORD
+					}
+				}
+				transfer_state = 451
+			}
+			if = {
+				limit = {
+					662 = {
+						is_controlled_by = OVERLORD
+					}
+				}
+				transfer_state = 662
+			}
+			if = {
+				limit = {
+					663 = {
+						is_controlled_by = OVERLORD
+					}
+				}
+				transfer_state = 663
+			}
+			if = {
+				limit = {
+					1113 = {
+						is_controlled_by = OVERLORD
+					}
+				}
+				transfer_state = 1113
 			}
 		}
 	}
@@ -587,14 +636,19 @@ focus_tree = {
 		relative_position_id = MLT_the_libyan_colonial_administration
 		prerequisite = { focus = MLT_the_libyan_colonial_administration }
 		available = {
-		550 = {
-			is_fully_controlled_by = ITA
-		}
+			550 = {
+				is_controlled_by = OVERLORD
+			}
 		}
 
 		completion_reward = {
-		MLT = {
-		     transfer_state = 550
+			if = {
+				limit = {
+					550 = {
+						is_controlled_by = OVERLORD
+					}
+				}
+				transfer_state = 550
 			}
 		}
 	}
@@ -608,19 +662,32 @@ focus_tree = {
 		relative_position_id = MLT_the_libyan_colonial_administration
 		prerequisite = { focus = MLT_the_libyan_colonial_administration }
 		available = {
-		559 = {
-			is_fully_controlled_by = ITA
-		}
-		
-		844 = {
-			is_fully_controlled_by = ITA
-		}
+			OR = {
+				559 = {
+					is_controlled_by = OVERLORD
+				}
+				844 = {
+					is_controlled_by = OVERLORD
+				}
+			}
 		}
 
 		completion_reward = {
-		MLT = {
-		     transfer_state = 559
-			 transfer_state = 844 
+			if = {
+				limit = {
+					559 = {
+						is_controlled_by = OVERLORD
+					}
+				}
+				transfer_state = 559
+			}
+			if = {
+				limit = {
+					844 = {
+						is_controlled_by = OVERLORD
+					}
+				}
+				transfer_state = 844
 			}
 		}
 	}
@@ -635,69 +702,135 @@ focus_tree = {
 		prerequisite = { focus = MLT_the_eritrean_colonial_administration}
 		prerequisite = { focus = MLT_the_somalian_colonial_administration}
 		available = {
-		908 = {
-			is_fully_controlled_by = ITA
-		}
-		
-		842 = {
-			is_fully_controlled_by = ITA
-		}
-		
-		841 = {
-			is_fully_controlled_by = ITA
-		}
-		
-		840 = {
-			is_fully_controlled_by = ITA
-		}
-		
-		843 = {
-			is_fully_controlled_by = ITA
-		}
-		
-		835 = {
-			is_fully_controlled_by = ITA
-		}
-		
-		836 = {
-			is_fully_controlled_by = ITA
-		}
-		
-		837 = {
-			is_fully_controlled_by = ITA
-		}
-		
-		838 = {
-			is_fully_controlled_by = ITA
-		}
-		
-		839 = {
-			is_fully_controlled_by = ITA
-		}
-		
-		271 = {
-			is_fully_controlled_by = ITA
-		}
+			OR = {
+				908 = {
+					is_controlled_by = OVERLORD
+				}
+				842 = {
+					is_controlled_by = OVERLORD
+				}
+				841 = {
+					is_controlled_by = OVERLORD
+				}
+				840 = {
+					is_controlled_by = OVERLORD
+				}
+				843 = {
+					is_controlled_by = OVERLORD
+				}
+				835 = {
+					is_controlled_by = OVERLORD
+				}
+				836 = {
+					is_controlled_by = OVERLORD
+				}
+				837 = {
+					is_controlled_by = OVERLORD
+				}
+				838 = {
+					is_controlled_by = OVERLORD
+				}
+				839 = {
+					is_controlled_by = OVERLORD
+				}
+				271 = {
+					is_controlled_by = OVERLORD
+				}
+			}
 		}
 
 		completion_reward = {
-		MLT = {
-		     transfer_state = 908
-			 transfer_state = 842
-			 transfer_state = 841
-			 transfer_state = 840
-			 transfer_state = 843
-			 transfer_state = 835
-			 transfer_state = 836
-			 transfer_state = 837
-			 transfer_state = 838
-			 transfer_state = 839
-			 transfer_state = 271
-			 
+			if = {
+				limit = {
+					908 = {
+						is_controlled_by = OVERLORD
+					}
+				}
+				transfer_state = 908
+			}
+			if = {
+				limit = {
+					842 = {
+						is_controlled_by = OVERLORD
+					}
+				}
+				transfer_state = 842
+			}
+			if = {
+				limit = {
+					841 = {
+						is_controlled_by = OVERLORD
+					}
+				}
+				transfer_state = 841
+			}
+			if = {
+				limit = {
+					840 = {
+						is_controlled_by = OVERLORD
+					}
+				}
+				transfer_state = 840
+			}
+			if = {
+				limit = {
+					843 = {
+						is_controlled_by = OVERLORD
+					}
+				}
+				transfer_state = 843
+			}
+			if = {
+				limit = {
+					835 = {
+						is_controlled_by = OVERLORD
+					}
+				}
+				transfer_state = 835
+			}
+			if = {
+				limit = {
+					836 = {
+						is_controlled_by = OVERLORD
+					}
+				}
+				transfer_state = 836
+			}
+			if = {
+				limit = {
+					837 = {
+						is_controlled_by = OVERLORD
+					}
+				}
+				transfer_state = 837
+			}
+			if = {
+				limit = {
+					838 = {
+						is_controlled_by = OVERLORD
+					}
+				}
+				transfer_state = 838
+			}
+			if = {
+				limit = {
+					839 = {
+						is_controlled_by = OVERLORD
+					}
+				}
+				transfer_state = 839
+			}
+			if = {
+				limit = {
+					271 = {
+						is_controlled_by = OVERLORD
+					}
+				}
+				transfer_state = 271
 			}
 		}
 	}
-	
+
 	focus = {
 		id = MLT_model_colonies_everywhere
 		icon = GFX_focus_generic_industry_3
@@ -708,9 +841,10 @@ focus_tree = {
 		prerequisite = { focus = MLT_the_abbyssinian_colonial_administration }
 
 		completion_reward = {
+			add_ideas = MLT_here_tere_and_everyhwere_idea
 		}
 	}
-	
+
 	focus = {
 		id = MLT_follow_britain
 		icon = GFX_focus_chi_british_cooperation
