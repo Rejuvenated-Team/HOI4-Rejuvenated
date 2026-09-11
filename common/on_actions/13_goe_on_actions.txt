@@ -336,7 +336,7 @@ on_actions = {
 					min = 3000 # optional 
 					max = 6500 # optional 
 				}
-				round_variable = global.RAJ_GOE_william_rhodes_davis_fuelvariable_name
+				round_variable = global.RAJ_GOE_william_rhodes_davis_fuel
 				GER = { #ready for duty, C-80
 
 					add_fuel = var:global.RAJ_GOE_william_rhodes_davis_fuel
