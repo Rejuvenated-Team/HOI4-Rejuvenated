@@ -1,4 +1,4 @@
 ﻿l_english:
- generic_further_escalation_effects_tt: "§YIf [FROM.GetNameDef] decide to escalate:\n§!"
- generic_no_further_escalation_effects_tt: "§YIf [FROM.GetNameDef] decide not to escalate:\n§!"
+ generic_further_escalation_effects_tt: "§YIf [FROM.GetNameDef] decide to escalate:§!"
+ generic_no_further_escalation_effects_tt: "§YIf [FROM.GetNameDef] decide not to escalate:§!"
  generic_focus_unlocked_by_event_tt: "§GThis focus will be automatically unlocked via event.§!"

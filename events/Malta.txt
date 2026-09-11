@@ -159,3 +159,21 @@ country_event = {
 		}
 	}
 }
+
+# Malta Becomes Our Puppet (Italy)
+country_event = {
+	id = malta.5
+	title = malta.5.title
+	desc = malta.5.desc
+	picture = GFX_rj_report_event_MLT_language_question
+
+	is_triggered_only = yes
+
+	option = {
+		name = malta.5.a
+		set_autonomy = {
+			target = MLT
+			autonomy_state = autonomy_dominion
+		}
+	}
+}
