@@ -1,6 +1,7 @@
 ideas = {
-	
+
 	country = {
+
 		military_training_act_idea = {
 			picture = AFG_adopt_nufus
 			
@@ -16,6 +17,30 @@ ideas = {
 			
 			modifier = {
 				conscription_factor = 0.15
+			}
+		}
+
+		ENG_secret_weapons_idea = {
+
+			picture = generic_rocket_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = { has_government = communism }
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				special_project_speed_factor = 0.10
+				scientist_breakthrough_bonus_factor = 0.05
+			}
+			research_bonus = {
+				rocketry = 0.25
+				nuclear = 0.25
 			}
 		}
 
