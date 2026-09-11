@@ -57,3 +57,105 @@ country_event = {
 		complete_national_focus = MLT_follow_britain
 	}
 }
+
+# Malta Demands Freedom (For Overlord)
+country_event = {
+	id = malta.2
+	title = malta.2.title
+	desc = malta.2.desc
+	picture = GFX_rj_report_event_MLT_language_question
+
+	is_triggered_only = yes
+
+	option = {
+		name = malta.2.a
+		ai_chance = {
+			base = 10
+		}
+		set_autonomy = {
+			target = FROM
+			autonomy_state = autonomy_free
+		}
+		hidden_effect = {
+			MLT = {
+				country_event = {
+					id = malta.3
+					hours = 3
+				}
+			}
+		}
+	}
+
+	option = {
+		name = malta.2.b
+		ai_chance = {
+			base = 10
+		}
+		set_autonomy = {
+			target = MLT
+			autonomy_state = autonomy_free
+		}
+		create_wargoal = {
+			target = MLT
+			type = annex_everything
+		}
+		hidden_effect = {
+			MLT = {
+				country_event = {
+					id = malta.4
+					hours = 3
+				}
+			}
+		}
+	}
+}
+
+# We Are Free!
+country_event = {
+	id = malta.3
+	title = malta.3.title
+	desc = malta.3.desc
+	picture = GFX_rj_report_event_MLT_language_question
+
+	is_triggered_only = yes
+
+	option = {
+		name = malta.3.a
+		ai_chance = {
+			base = 10
+		}
+		FROM = {
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = autonomy_free
+			}
+		}
+	}
+}
+
+# It Will Be a Bitter Fight
+country_event = {
+	id = malta.4
+	title = malta.4.title
+	desc = malta.4.desc
+	picture = GFX_rj_report_event_MLT_language_question
+
+	is_triggered_only = yes
+
+	option = {
+		name = malta.4.a
+		ai_chance = {
+			base = 10
+		}
+		FROM = {
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = autonomy_free
+			}
+			create_wargoal = {
+				target = ROOT
+				type = annex_everything
+			}
+		}
+	}
+}

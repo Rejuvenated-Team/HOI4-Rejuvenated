@@ -161,7 +161,34 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = generic_focus_unlocked_by_event_tt
 			custom_effect_tooltip = generic_skip_one_line_tt
-			#TODO Demand freedom event
+			OVERLORD = {
+				country_event = {
+					id = malta.2
+					hours = 3
+				}
+			}
+			custom_effect_tooltip = generic_further_escalation_effects_tt
+			effect_tooltip = {
+				OVERLORD = {
+					set_autonomy = {
+						target = ROOT
+						autonomy_state = autonomy_free
+					}
+					create_wargoal = {
+						target = ROOT
+						type = annex_everything
+					}
+				}
+			}
+			custom_effect_tooltip = generic_no_further_escalation_effects_tt
+			effect_tooltip = {
+				OVERLORD = {
+					set_autonomy = {
+						target = ROOT
+						autonomy_state = autonomy_free
+					}
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_COMPLETED_BY_EVENT }
 	}
@@ -202,7 +229,34 @@ focus_tree = {
 		prerequisite = { focus = MLT_italian_irredentism }
 
 		completion_reward = {
-
+			OVERLORD = {
+				country_event = {
+					id = malta.2
+					hours = 3
+				}
+			}
+			custom_effect_tooltip = generic_further_escalation_effects_tt
+			effect_tooltip = {
+				OVERLORD = {
+					set_autonomy = {
+						target = ROOT
+						autonomy_state = autonomy_free
+					}
+					create_wargoal = {
+						target = ROOT
+						type = annex_everything
+					}
+				}
+			}
+			custom_effect_tooltip = generic_no_further_escalation_effects_tt
+			effect_tooltip = {
+				OVERLORD = {
+					set_autonomy = {
+						target = ROOT
+						autonomy_state = autonomy_free
+					}
+				}
+			}
 		}
 	}
 	
