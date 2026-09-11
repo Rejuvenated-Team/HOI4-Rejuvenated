@@ -267,6 +267,22 @@ bookmarks = {
 			label = { rj_label_new_content }
 		}
 
+		MLT = {
+			minor = yes
+			history = "rj_MLT_GATHERING_STORM_DESC"
+			ideology = neutrality
+			version = base_game
+			ideas = {
+				MLT_the_language_question_idea
+			}
+			focuses = {
+				MLT_answer_the_language_question
+				MLT_a_new_colonial_administration
+				MLT_integrate_italy
+			}
+			label = { rj_label_new_content }
+		}
+
 		EGY = {
 			minor = yes
 			history = "EGY_GATHERING_STORM_DESC"
