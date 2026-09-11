@@ -1317,6 +1317,31 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/nzl/RJ_NZL_acquire_british_planes.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_transfer_the_nzl_division"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_transfer_the_nzl_division.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_the_rnzn"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_the_rnzn.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_naval_defense_amendment_act"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_naval_defense_amendment_act.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_purchase_ships"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_purchase_ships.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_kauri_point_naval_depot"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_kauri_point_naval_depot.dds"
+	}
+
 
 
 }

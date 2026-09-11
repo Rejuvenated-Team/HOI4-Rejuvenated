@@ -65,11 +65,11 @@
 
 	focus = {
 		id = NZL_transfer_the_new_zealand_division
-		icon = GFX_goal_generic_navy_doctrines_tactics
-		x = 19
+		icon = GFX_focus_RJ_NZL_transfer_the_nzl_division
+		x = 18
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -82,10 +82,6 @@
 		bypass = {
 			NOT = { is_subject_of = ENG }
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			custom_effect_tooltip = NZL_transfer_ships_tt
@@ -105,10 +101,130 @@
 	}
 
 	focus = {
-		id = NZL_form_the_rnzn
+		id = RJ_NZL_the_naval_defense_amendment_act
+		icon = GFX_focus_RJ_NZL_naval_defense_amendment_act
+		x = 20
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_ideas = RJ_NZL_idea_naval_defense_amendment_act
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_devonport_naval_base_improvements
 		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = NZL_transfer_the_new_zealand_division }
+		prerequisite = { focus = RJ_NZL_the_naval_defense_amendment_act }
+		relative_position_id = RJ_NZL_the_naval_defense_amendment_act
 		x = 0
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			controls_state = 1079
+			owns_state = 1079
+		}
+
+
+		completion_reward = {
+			1079 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					province = 4543
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_supply_hub
+					level = 1
+					province = 4543
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_stanley_bay_reclamation_project
+		icon = GFX_focus_RJ_warlord_coastal_economics
+		prerequisite = { focus = RJ_NZL_devonport_naval_base_improvements }
+		relative_position_id = RJ_NZL_devonport_naval_base_improvements
+		x = 1
+		y = 1
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			controls_state = 1079
+			owns_state = 1079
+		}
+
+
+		completion_reward = {
+			1079 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = fuel_silo
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_kauri_point_naval_depot
+		icon = GFX_focus_RJ_NZL_kauri_point_naval_depot
+		prerequisite = { focus = RJ_NZL_devonport_naval_base_improvements }
+		relative_position_id = RJ_NZL_devonport_naval_base_improvements
+		x = -1
+		y = 1
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			controls_state = 1079
+			owns_state = 1079
+		}
+
+
+		completion_reward = {
+			add_ideas = RJ_NZL_idea_kauri_point_depot
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_royal_new_zealand_navy
+		icon = GFX_focus_RJ_NZL_the_rnzn
+		prerequisite = { focus = NZL_transfer_the_new_zealand_division focus = RJ_NZL_the_naval_defense_amendment_act }
+		x = 1
 		y = 1
 		relative_position_id = NZL_transfer_the_new_zealand_division
 
@@ -126,9 +242,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
@@ -147,83 +260,12 @@
 	}
 
 	focus = {
-		id = NZL_expand_devonport_naval_base
-		icon = GFX_goal_generic_construct_naval_dockyard
-		prerequisite = { focus = NZL_form_the_rnzn }
-		x = -2
-		y = 2
-		relative_position_id = NZL_transfer_the_new_zealand_division
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = NZL_expand_devonport_naval_base_DY
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 284 }
-				limit = {
-					is_coastal = yes
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = NZL_expand_devonport_naval_base_DY
-			}
-			284 = {
-				add_building_construction = {
-					type = naval_base
-					province = 4543
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = NZL_purchase_old_ships
-		icon = GFX_focus_generic_destroyer
-		prerequisite = { focus = NZL_form_the_rnzn }
-		x = 0
-		y = 2
-		relative_position_id = NZL_transfer_the_new_zealand_division
+		icon = GFX_focus_RJ_NZL_purchase_ships
+		prerequisite = { focus = RJ_NZL_royal_new_zealand_navy }
+		x = -1
+		y = 1
+		relative_position_id = RJ_NZL_royal_new_zealand_navy
 
 		cost = 5
 
@@ -239,9 +281,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
@@ -253,30 +292,27 @@
 	focus = {
 		id = NZL_coastal_defense
 		icon = GFX_focus_FIN_coastal_defense
-		prerequisite = { focus = NZL_form_the_rnzn }
-		x = 2
-		y = 2
-		relative_position_id = NZL_transfer_the_new_zealand_division
+		prerequisite = { focus = RJ_NZL_the_naval_defense_amendment_act }
+		x = 1
+		y = 1
+		relative_position_id = RJ_NZL_the_naval_defense_amendment_act
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 25
 		}
 
 		available = {
+			OR = {
+				controls_state = 284
+				controls_state = 723
+				controls_state = 1079
+			}
 		}
 
 		bypass = {
-			NOT = {
-				controls_state = 284
-			}
-			NOT = {
-				controls_state = 723
-			}
-			NOT = {
-				controls_state = 1079
-			}
+			
 		}
 
 
@@ -319,161 +355,6 @@
 					level = 3
 					instant_build = yes
 				}
-			}
-		}
-	}
-
-	focus = {
-		id = NZL_destroyer_effort
-		icon = GFX_goal_generic_navy_anti_submarine
-		prerequisite = { focus = NZL_expand_devonport_naval_base }
-		mutually_exclusive = { focus = NZL_submarine_effort }
-		x = -2
-		y = 3
-		relative_position_id = NZL_transfer_the_new_zealand_division
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 20
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = NZL_destroyer_effort
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 1
-				category = dd_tech
-			}
-		}
-	}
-
-	focus = {
-		id = NZL_submarine_effort
-		icon = GFX_goal_generic_navy_submarine
-		prerequisite = { focus = NZL_expand_devonport_naval_base }
-		mutually_exclusive = { focus = NZL_destroyer_effort }
-		x = 0
-		y = 3
-		relative_position_id = NZL_transfer_the_new_zealand_division
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 2
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = NZL_submarine_effort
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 1
-				category = ss_tech
-			}
-		}
-	}
-
-	focus = {
-		id = NZL_light_cruiser_effort
-		icon = GFX_goal_generic_navy_cruiser
-		prerequisite = { focus = NZL_destroyer_effort focus = NZL_submarine_effort }
-		x = -2
-		y = 4
-		relative_position_id = NZL_transfer_the_new_zealand_division
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = NZL_light_cruiser_effort
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 1
-				category = ca_tech
-			}
-		}
-	}
-
-	focus = {
-		id = NZL_capital_ship_effort
-		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = NZL_destroyer_effort focus = NZL_submarine_effort }
-		x = 0
-		y = 4
-		relative_position_id = NZL_transfer_the_new_zealand_division
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = NZL_capital_ship_effort
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 1
-				category = bb_tech
-				category = cv_tech
 			}
 		}
 	}

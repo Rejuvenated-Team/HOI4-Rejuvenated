@@ -52,8 +52,8 @@ NZL_alternate_democratic = {
 		NZL_independent_new_zealand										
 		#1940
 		NZL_bob_semple_tank											
-		NZL_form_the_rnzn											
-		NZL_expand_devonport_naval_base								
+		#NZL_form_the_rnzn											
+		#NZL_expand_devonport_naval_base								
 		NZL_form_the_rnzaf											
 		NZL_the_manpower_act										
 		#1941
@@ -63,10 +63,10 @@ NZL_alternate_democratic = {
 		NZL_long_range_patrol
 		#NZL_fighter_focus											
 		#1942
-		NZL_destroyer_effort										
+		#NZL_destroyer_effort										
 		#NZL_defend_our_islands
 		NZL_coastal_defense											
-		NZL_light_cruiser_effort									
+		#NZL_light_cruiser_effort									
 		NZL_schofield_tank											
 		#1943
 		NZL_artillery_focus											
@@ -158,8 +158,8 @@ NZL_alternate_fascist = {
 		NZL_befriend_japan									
 		#1940
 		NZL_bob_semple_tank											
-		NZL_form_the_rnzn											
-		NZL_expand_devonport_naval_base								
+		#NZL_form_the_rnzn											
+		#NZL_expand_devonport_naval_base								
 		NZL_form_the_rnzaf											
 		NZL_the_manpower_act										
 		#1941
@@ -169,10 +169,10 @@ NZL_alternate_fascist = {
 		NZL_long_range_patrol
 		#NZL_fighter_focus											
 		#1942
-		NZL_destroyer_effort										
+		#NZL_destroyer_effort										
 		#NZL_defend_our_islands
 		NZL_coastal_defense											
-		NZL_light_cruiser_effort									
+		#NZL_light_cruiser_effort									
 		NZL_schofield_tank											
 		#1943
 		NZL_artillery_focus											
@@ -265,8 +265,8 @@ NZL_alternate_communist = {
 		NZL_empower_the_working_class									
 		#1940
 		NZL_bob_semple_tank											
-		NZL_form_the_rnzn											
-		NZL_expand_devonport_naval_base								
+		#NZL_form_the_rnzn											
+		#NZL_expand_devonport_naval_base								
 		NZL_join_comintern
 		NZL_form_the_rnzaf											
 		#1941
@@ -277,10 +277,10 @@ NZL_alternate_communist = {
 		NZL_long_range_patrol
 		#1942
 		#NZL_fighter_focus											
-		NZL_destroyer_effort										
+		#NZL_destroyer_effort										
 		#NZL_defend_our_islands
 		NZL_coastal_defense											
-		NZL_light_cruiser_effort									
+		#NZL_light_cruiser_effort									
 		#1943
 		NZL_schofield_tank											
 		NZL_artillery_focus											

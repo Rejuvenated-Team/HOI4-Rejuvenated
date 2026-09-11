@@ -22,6 +22,16 @@
  RJ_NZL_womens_auxiliary_air_force_desc: "Developing our own Women's Auxiliary Air Force will allow our men to focus more on ground combat roles, while we train women to help out in the air."
  RJ_NZL_new_zealand_bomber_command: "New Zealand Bomber Command"
  RJ_NZL_new_zealand_bomber_command_desc: "Setting up a proper Bomber Command will increase the effectiveness of our operations."
+ RJ_NZL_devonport_naval_base_improvements: "Devonport Naval Base Improvements"
+ RJ_NZL_devonport_naval_base_improvements_desc: "The naval base at Devonport will need some improvements to help accomodate new ships going forward, such as the extension of Calliope Dock."
+ RJ_NZL_the_naval_defense_amendment_act: "The Naval Defense Amendment Act"
+ RJ_NZL_the_naval_defense_amendment_act_desc: "The Naval Defense Amendment Act is a replacement for our previous Naval Defense Act of 1913. It will set up a naval board to manage our forces, as well as our expansion efforts."
+ RJ_NZL_royal_new_zealand_navy: "Royal New Zealand Navy"
+ RJ_NZL_royal_new_zealand_navy_desc: "Our navy should be formalized into the Royal New Zealand Navy, in homage & respect to the British Royal Navy that gave us our start. This will mark a new era for our navy!"
+ RJ_NZL_stanley_bay_reclamation_project: "Stanley Bay Reclamation Project"
+ RJ_NZL_stanley_bay_reclamation_project_desc: "The Stanley Bay reclamation project has been ongoing for some years now. With some of the newly available shoreline, we can expand the project into new shipbuilding facilities & oil storage."
+ RJ_NZL_kauri_point_naval_depot: "Kauri Point Naval Depot"
+ RJ_NZL_kauri_point_naval_depot_desc: "Establishing a new naval depot at Kauri Point will help us greatly in the event of war, allowing for increased production & quicker distribution of war-time naval supplies."
 
 
 
@@ -34,3 +44,5 @@
  RJ_NZL_idea_RNZAF_4: "Royal New Zealand Air Force"
  RJ_NZL_idea_commonwealth_air_training: "Commonwealth Air Training"
  RJ_NZL_idea_bomber_command: "Bomber Command"
+ RJ_NZL_idea_naval_defense_amendment_act: "Naval Defense Amendment Act"
+ RJ_NZL_idea_kauri_point_depot: "Kauri Point Naval Depot"

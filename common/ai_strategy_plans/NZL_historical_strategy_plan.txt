@@ -52,7 +52,7 @@ NZL_historical = {
 		NZL_technology_sharing_with_britain							
 		NZL_transfer_the_new_zealand_division						
 		NZL_maori_affairs_act										
-		NZL_form_the_rnzn											
+		#NZL_form_the_rnzn											
 		#1940
 		NZL_taranaki_oil											
 		#NZL_industrial_conscription									
@@ -63,11 +63,11 @@ NZL_historical = {
 		#NZL_fighter_focus											
 		NZL_think_big												
 		NZL_expand_the_university_of_auckland						
-		NZL_expand_devonport_naval_base								
-		NZL_destroyer_effort										
+		#NZL_expand_devonport_naval_base								
+		#NZL_destroyer_effort										
 		#1942
 		NZL_coastal_defense											
-		NZL_light_cruiser_effort									
+		#NZL_light_cruiser_effort									
 		NZL_schofield_tank											
 		NZL_artillery_focus											
 		NZL_the_manpower_act										
