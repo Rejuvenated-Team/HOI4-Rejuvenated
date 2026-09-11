@@ -6,8 +6,6 @@
 ### search_filters = {FOCUS_FILTER_MANPOWER}
 ### search_filters = {FOCUS_FILTER_ANNEXATION}
 
-#!gfx:interface/RJ_goals.gfx
-#!gfx:interface/KR_goals.gfx
 focus_tree = {
 	id = british_focus
 	
@@ -347,10 +345,6 @@ focus_tree = {
 		dynamic = yes
 
 		available = {
-		} 
-
-		allow_branch = {
-			has_dlc = "La Resistance"
 		}
 
 		icon = GFX_focus_RJ_ENG_SIS
@@ -364,15 +358,23 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
+			if = {
 				limit = {
-					has_intelligence_agency = no
+					has_dlc = "La Resistance"
 				}
-				create_intelligence_agency = yes
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
+				IF = {
+					limit = {
+						has_intelligence_agency = no
+					}
+					create_intelligence_agency = yes
+					custom_effect_tooltip = generic_skip_one_line_tt
+				}
 
-			add_ideas = ENG_mi6_ns
+				add_ideas = ENG_mi6_ns
+			}
+			else = {
+				add_ideas = ENG_mi6_no_lar_ns
+			}
 
 		}
 	}
@@ -910,9 +912,6 @@ focus_tree = {
 	focus = {
 		id = ENG_parachute_regiments
 		prerequisite = { focus = ENG_special_air_service }
-		allow_branch = {
-			has_dlc = "Arms Against Tyranny"
-		}
 		continue_if_invalid = yes
 
 		icon = GFX_focus_generic_paratrooper
@@ -924,12 +923,25 @@ focus_tree = {
 			factor = 1
 		}	
 		completion_reward = {
-			add_potential_special_forces_tree = yes
-			add_doctrine_cost_reduction = {
-				name = ENG_parachute_regiments
-				cost_reduction = 0.25
-				uses = 2
-				category = special_forces_doctrine
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				add_potential_special_forces_tree = yes
+				add_doctrine_cost_reduction = {
+					name = ENG_parachute_regiments
+					cost_reduction = 0.25
+					uses = 2
+					category = special_forces_doctrine
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = ENG_parachute_regiments
+					bonus = 0.25
+					uses = 2
+					category = cat_special_forces_generic
+				}
 			}
 		}
 	}
@@ -2913,44 +2925,44 @@ focus_tree = {
 
 		available = {
 			OR = {
-				any_country = {
-					original_tag = NZL
+				any_country_with_original_tag = {
+					original_tag_to_check = NZL
 					is_in_faction_with = ROOT
 				}
-				any_country = {
-					original_tag = SAF
+				any_country_with_original_tag = {
+					original_tag_to_check = SAF
 					is_in_faction_with = ROOT
 				}
-				any_country = {
-					original_tag = RAJ
+				any_country_with_original_tag = {
+					original_tag_to_check = RAJ
 					is_in_faction_with = ROOT
 				}
-				any_country = {
-					original_tag = AST
+				any_country_with_original_tag = {
+					original_tag_to_check = AST
 					is_in_faction_with = ROOT
 				}
-				any_country = {
-					original_tag = CAN
+				any_country_with_original_tag = {
+					original_tag_to_check = CAN
 					is_in_faction_with = ROOT
 				}
-				any_country = {
-					original_tag = MAL
+				any_country_with_original_tag = {
+					original_tag_to_check = MAL
 					is_in_faction_with = ROOT
 				}
-				any_country = {
-					original_tag = PAL
+				any_country_with_original_tag = {
+					original_tag_to_check = PAL
 					is_in_faction_with = ROOT
 				}
-				any_country = {
-					original_tag = JOR
+				any_country_with_original_tag = {
+					original_tag_to_check = JOR
 					is_in_faction_with = ROOT
 				}
-				any_country = {
-					original_tag = KUW
+				any_country_with_original_tag = {
+					original_tag_to_check = KUW
 					is_in_faction_with = ROOT
 				}
-				any_country = {
-					original_tag = BRM
+				any_country_with_original_tag = {
+					original_tag_to_check = BRM
 					is_in_faction_with = ROOT
 				}
 			}
@@ -3019,90 +3031,90 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			random_country = {
+			random_country_with_original_tag = {
+				original_tag_to_check = CAN
 				limit = {
-					original_tag = CAN
 					exists = yes
 					is_in_faction_with = ROOT
 				}
 				add_political_power = 50
 				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
-			random_country = {
+			random_country_with_original_tag = {
+				original_tag_to_check = AST
 				limit = {
-					original_tag = AST
 					exists = yes
 					is_in_faction_with = ROOT
 				}
 				add_political_power = 50
 				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
-			random_country = {
+			random_country_with_original_tag = {
+				original_tag_to_check = RAJ
 				limit = {
-					original_tag = RAJ
 					exists = yes
 					is_in_faction_with = ROOT
 				}
 				add_political_power = 50
 				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
-			random_country = {
+			random_country_with_original_tag = {
+				original_tag_to_check = NZL
 				limit = {
-					original_tag = NZL
 					exists = yes
 					is_in_faction_with = ROOT
 				}
 				add_political_power = 50
 				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
-			random_country = {
+			random_country_with_original_tag = {
+				original_tag_to_check = SAF
 				limit = {
-					original_tag = SAF
 					exists = yes
 					is_in_faction_with = ROOT
 				}
 				add_political_power = 50
 				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
-			random_country = {
+			random_country_with_original_tag = {
+				original_tag_to_check = MAL
 				limit = {
-					original_tag = MAL
 					exists = yes
 					is_in_faction_with = ROOT
 				}
 				add_political_power = 50
 				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
-			random_country = {
+			random_country_with_original_tag = {
+				original_tag_to_check = PAL
 				limit = {
-					original_tag = PAL
 					exists = yes
 					is_in_faction_with = ROOT
 				}
 				add_political_power = 50
 				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
-			random_country = {
+			random_country_with_original_tag = {
+				original_tag_to_check = JOR
 				limit = {
-					original_tag = JOR
 					exists = yes
 					is_in_faction_with = ROOT
 				}
 				add_political_power = 50
 				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
-			random_country = {
+			random_country_with_original_tag = {
+				original_tag_to_check = KUW
 				limit = {
-					original_tag = KUW
 					exists = yes
 					is_in_faction_with = ROOT
 				}
 				add_political_power = 50
 				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
-			random_country = {
+			random_country_with_original_tag = {
+				original_tag_to_check = BRM
 				limit = {
-					original_tag = BRM
 					exists = yes
 					is_in_faction_with = ROOT
 				}
@@ -3146,8 +3158,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			any_country = {
-				original_tag = SAF
+			any_country_with_original_tag = {
+				original_tag_to_check = SAF
 				OR = {
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
@@ -3255,8 +3267,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			any_country = {
-				original_tag = SAF
+			any_country_with_original_tag = {
+				original_tag_to_check = SAF
 				OR = {
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
@@ -3350,8 +3362,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			any_country = {
-				original_tag = SAF
+			any_country_with_original_tag = {
+				original_tag_to_check = SAF
 				OR = {
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
@@ -3427,8 +3439,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			any_country = {
-				original_tag = CAN
+			any_country_with_original_tag = {
+				original_tag_to_check = CAN
 				OR = {
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
@@ -3536,8 +3548,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			any_country = {
-				original_tag = CAN
+			any_country_with_original_tag = {
+				original_tag_to_check = CAN
 				OR = {
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
@@ -3631,8 +3643,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			any_country = {
-				original_tag = CAN
+			any_country_with_original_tag = {
+				original_tag_to_check = CAN
 				OR = {
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
@@ -3668,8 +3680,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			any_country = {
-				original_tag = NZL
+			any_country_with_original_tag = {
+				original_tag_to_check = NZL
 				OR = {
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
@@ -3777,8 +3789,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			any_country = {
-				original_tag = CAN
+			any_country_with_original_tag = {
+				original_tag_to_check = CAN
 				OR = {
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
@@ -3872,8 +3884,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			any_country = {
-				original_tag = AST
+			any_country_with_original_tag = {
+				original_tag_to_check = AST
 				OR = {
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
@@ -3981,8 +3993,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			any_country = {
-				original_tag = AST
+			any_country_with_original_tag = {
+				original_tag_to_check = AST
 				OR = {
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
@@ -4076,8 +4088,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			any_country = {
-				original_tag = MAL
+			any_country_with_original_tag = {
+				original_tag_to_check = MAL
 				OR = {
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
@@ -4185,8 +4197,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			any_country = {
-				original_tag = MAL
+			any_country_with_original_tag = {
+				original_tag_to_check = MAL
 				OR = {
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
@@ -4280,8 +4292,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			any_country = {
-				original_tag = RAJ
+			any_country_with_original_tag = {
+				original_tag_to_check = RAJ
 				OR = {
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
@@ -4395,8 +4407,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			any_country = {
-				original_tag = RAJ
+			any_country_with_original_tag = {
+				original_tag_to_check = RAJ
 				OR = {
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
@@ -6130,8 +6142,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			any_country = {
-				original_tag = OMA
+			any_country_with_original_tag = {
+				original_tag_to_check = OMA
 				OR = {
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
@@ -6234,8 +6246,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			any_country = {
-				original_tag = OMA
+			any_country_with_original_tag = {
+				original_tag_to_check = OMA
 				OR = {
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
@@ -8719,9 +8731,9 @@ focus_tree = {
 #				limit = {
 #					NOT = { has_dlc = "La Resistance" }
 #				}
-#				random_country = {
+#				random_country_with_original_tag = {
+#					original_tag_to_check = SPR
 #					limit = {
-#						original_tag = SPR
 #						has_government = fascism
 #					}
 #					country_event = { id = mtg_britain.40 hours = 6 }

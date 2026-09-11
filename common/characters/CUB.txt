@@ -577,7 +577,7 @@ characters={
 				original_tag = CUB
 			}
 			traits = {
-				army_chief_offensive_3
+				army_chief_drill_3
 			}
 			ai_will_do = {
 				factor = 1
@@ -591,12 +591,12 @@ characters={
 		}
 		
 		field_marshal = {
-			traits = { media_personality politically_connected brilliant_strategist urban_assault_specialist }
-			skill = 5
+			traits = { media_personality politically_connected urban_assault_specialist skilled_staffer }
+			skill = 6
 			attack_skill = 3
 			defense_skill = 4
-			planning_skill = 3
-			logistics_skill = 3
+			planning_skill = 4
+			logistics_skill = 4
 		}
 	}	
 	
