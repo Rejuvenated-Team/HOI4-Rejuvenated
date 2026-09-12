@@ -224,7 +224,7 @@
 		id = RJ_NZL_royal_new_zealand_navy
 		icon = GFX_focus_RJ_NZL_the_rnzn
 		prerequisite = { focus = NZL_transfer_the_new_zealand_division focus = RJ_NZL_the_naval_defense_amendment_act }
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = NZL_transfer_the_new_zealand_division
 
@@ -286,6 +286,64 @@
 		completion_reward = {
 			custom_effect_tooltip = ETH_purchase_obsolete_ships_tt
 			set_country_flag = generic_purchase_old_ships_flag
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_cruiser_specialty
+		icon = GFX_focus_generic_cruiser2
+		prerequisite = { focus = RJ_NZL_royal_new_zealand_navy }
+		x = 1
+		y = 1
+		relative_position_id = RJ_NZL_royal_new_zealand_navy
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_minesweepers_of_the_pacific
+		icon = GFX_focus_generic_mine_warfare
+		prerequisite = { focus = RJ_NZL_royal_new_zealand_navy }
+		x = 0
+		y = 2
+		relative_position_id = RJ_NZL_royal_new_zealand_navy
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+
+		completion_reward = {
+			
 		}
 	}
 

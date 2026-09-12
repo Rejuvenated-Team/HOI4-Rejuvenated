@@ -17,6 +17,7 @@ leader_traits = {
 	air_chief_training_1 = {
 		sprite = 1
 		air_training_xp_gain_factor = 0.15
+		experience_gain_air = 0.20
 		air_accidents_factor = -0.10
 
 		command_cap_increase = 15
@@ -29,6 +30,7 @@ leader_traits = {
 	air_chief_training_2 = {
 		sprite = 1
 		air_training_xp_gain_factor = 0.20
+		experience_gain_air = 0.30
 		air_accidents_factor = -0.15
 
 		command_cap_increase = 20
@@ -41,6 +43,7 @@ leader_traits = {
 	air_chief_training_3 = {
 		sprite = 1
 		air_training_xp_gain_factor = 0.25
+		experience_gain_air = 0.40
 		air_accidents_factor = -0.20
 
 		command_cap_increase = 25
