@@ -1329,10 +1329,8 @@ ideas = {
 				conscription_factor = 0.25
 			}			
 		}
-	
-	}
 
-	ABDA_maintain_strategic_flexibility_spirit = {
+		ABDA_maintain_strategic_flexibility_spirit = {
 
 			allowed = {
 				always = no
