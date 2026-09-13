@@ -1,1567 +1,1171 @@
-ARG_intervenciones_federales_decisions = {
-	
-	ARG_federal_intervention_in_state = {
+political_actions = {
 
-		icon = GFX_decision_eng_trade_unions_demand
+	ARG_assimilate_the_malvinenses = {
 
-		ai_will_do = {
-			base = 20
-		}
-	
+		icon = GFX_decision_hol_radio_oranje
+
 		allowed = {
 			original_tag = ARG
 		}
 
 		available = {
-		} 
-
-		visible = { 
-			has_completed_focus = ARG_intervenciones_federales 
+			owns_state = 299
+			owns_state = 720
 		}
-		state_target = any_owned_state
-		target_trigger = {
-	        FROM = {
-	           	has_dynamic_modifier = {
-					modifier = ARG_military_owned_state
-				}
-	        }
-	    }
-
-	    on_map_mode = map_and_decisions_view 
-		cost = 50
-		
-		fire_only_once = yes
-		days_remove = 35
-		
-		modifier = {
-			command_power_gain_mult = -0.1
-		}
-
-		remove_effect = {
-
-			custom_effect_tooltip = ARG_federal_intervention_tt
-			custom_effect_tooltip = CHL_skip_one_line_tt
-
-			add_popularity = {
-				ideology = neutrality 
-				popularity = 0.02
-			}
-
-			IF = {
-				limit = {
-					FROM = {
-						has_dynamic_modifier = {
-							modifier = ARG_military_owned_state
-						}
-					}
-				}
-				FROM = {
-					remove_dynamic_modifier = {
-						modifier = ARG_military_owned_state
-					}
-				}
-			}
-
-			FROM = {
-				add_dynamic_modifier = {
-						modifier = ARG_federal_intervention_modifier
-				}
-			}
-
-			hidden_effect = {
-				IF = {
-					limit = {
-						has_country_flag = ARG_no_fedint_decision_done
-					}
-					clr_country_flag = ARG_no_fedint_decision_done
-					set_country_flag = ARG_1_fedint_decision_done
-					}
-				ELSE_IF = {
-					limit = {
-						has_country_flag = ARG_1_fedint_decision_done
-					}
-					clr_country_flag = ARG_1_fedint_decision_done
-					set_country_flag = ARG_2_fedint_decision_done
-					}
-				ELSE_IF = {
-					limit = {
-						has_country_flag = ARG_2_fedint_decision_done
-					}
-					clr_country_flag = ARG_2_fedint_decision_done
-					set_country_flag = ARG_3_fedint_decision_done
-				}
-			}
-		}
-	}
-}
-
-ARG_international_loan_decisions = {
-	
-	ARG_loan_from_britain = {
-
-		icon = GFX_decision_gre_paying_ifc_debt
-
-		ai_will_do = {
-			base = 40
-		}
-	
-		allowed = {
-			OR = {
-				original_tag = ARG
-			}
-		}
-
-		available = {
-			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
-			}
-			ENG = {
-				has_opinion = {
-					target = ROOT
-					value > 49
-				} 
-			}
-		} 
-
-		visible = { 
-			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
-			}
-			NOT = {
-				has_country_flag = ARG_british_loan_flag
-			}
-		}
-
-		cost = 75
-		
-		days_remove = 70
-
-		modifier = {
-			consumer_goods_factor = 0.15
-			political_power_factor = -0.1
-		}
-
-		remove_effect = {
-				IF = {
-					limit = {
-						NOT = {
-							has_dynamic_modifier = {
-								modifier = ARG_international_loan_modifier
-							}	
-						}	
-					}
-
-					custom_effect_tooltip = ARG_international_loan_tt
-					hidden_effect = {
-					add_dynamic_modifier = {
-						modifier = ARG_international_loan_modifier
-					}
-
-					set_variable = { ARG_loan_political_power_cost = 0.2 }
-					set_variable = { ARG_loan_local_resources_factor = 0.05 }
-					set_variable = { ARG_loan_production_speed_buildings_factor = 0.02 }
-					set_variable = { ARG_loan_industrial_capacity_factory = 0.03 }
-					set_variable = { ARG_loan_industrial_capacity_dockyard = 0.03 }
-
-					}
-				}
-
-				ELSE_IF = {
-					limit = {
-						has_dynamic_modifier = {
-							modifier = ARG_international_loan_modifier		
-						}
-					}
-					custom_effect_tooltip = ARG_modify_international_loan_intro
-						add_to_variable = { ARG_loan_political_power_cost = 0.2 tooltip = political_power_cost_tt }
-						add_to_variable = { ARG_loan_local_resources_factor = 0.05 tooltip = local_resources_factor_tt }
-						add_to_variable = { ARG_loan_production_speed_buildings_factor = 0.02 tooltip = production_speed_buildings_factor_tt }
-						add_to_variable = { ARG_loan_industrial_capacity_factory = 0.03 tooltip = industrial_capacity_factory_tt }
-						add_to_variable = { ARG_loan_industrial_capacity_dockyard = 0.03 tooltip = industrial_capacity_dockyard_tt }
-				}
-
-			hidden_effect = {
-				set_country_flag = ARG_british_loan_flag
-
-			}
-		}
-	}
-
-	ARG_pay_back_britain = {
-
-		icon = GFX_decision_gre_paying_ifc_debt
-
-		ai_will_do = {
-			base = 40
-		}
-	
-		allowed = {
-			OR = {
-				original_tag = ARG
-			}
-		}
-
-		available = {
-			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
-			}
-			#ENG = {
-			#	has_opinion = {
-			#		target = ROOT
-			#		value > 49
-			#	} 
-			#}
-		} 
-
-		visible = { 
-			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
-			}
-			has_country_flag = ARG_british_loan_flag
-			NOT = {
-				has_country_flag = ARG_british_loan_repaid_flag
-			}
-		}
-
-		cost = 75
-		
-		days_remove = 70
-
-		modifier = {
-			consumer_goods_factor = 0.15
-			political_power_factor = -0.1
-		}
-
-		remove_effect = {
-
-				IF = {
-					limit = {
-						has_dynamic_modifier = {
-							modifier = ARG_international_loan_modifier		
-						}
-					}
-					custom_effect_tooltip = ARG_modify_international_loan_intro
-						add_to_variable = { ARG_loan_political_power_cost = -0.2 tooltip = political_power_cost_tt }
-						add_to_variable = { ARG_loan_local_resources_factor = -0.05 tooltip = local_resources_factor_tt }
-						add_to_variable = { ARG_loan_production_speed_buildings_factor = -0.02 tooltip = production_speed_buildings_factor_tt }
-						add_to_variable = { ARG_loan_industrial_capacity_factory = -0.03 tooltip = industrial_capacity_factory_tt }
-						add_to_variable = { ARG_loan_industrial_capacity_dockyard = -0.03 tooltip = industrial_capacity_dockyard_tt }
-				}
-
-			hidden_effect = {
-				set_country_flag = ARG_british_loan_repaid_flag
-
-			}
-		}
-	}
-
-	ARG_loan_from_germany = {
-
-		icon = GFX_decision_gre_paying_ifc_debt
-
-		ai_will_do = {
-			base = 40
-		}
-	
-		allowed = {
-			OR = {
-				original_tag = ARG
-			}
-		}
-
-		available = {
-			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
-			}
-			GER = {
-				has_opinion = {
-					target = ROOT
-					value > 49
-				} 
-			}
-		} 
-
-		visible = { 
-			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
-			}
-			NOT = {
-				has_country_flag = ARG_german_loan_flag
-			}
-		}
-
-		cost = 75
-		
-		days_remove = 70
-
-		modifier = {
-			consumer_goods_factor = 0.15
-			political_power_factor = -0.1
-		}
-
-		remove_effect = {
-				IF = {
-					limit = {
-						NOT = {
-							has_dynamic_modifier = {
-								modifier = ARG_international_loan_modifier
-							}	
-						}	
-					}
-
-					custom_effect_tooltip = ARG_international_loan_tt
-					hidden_effect = {
-					add_dynamic_modifier = {
-						modifier = ARG_international_loan_modifier
-					}
-
-					set_variable = { ARG_loan_political_power_cost = 0.2 }
-					set_variable = { ARG_loan_local_resources_factor = 0.05 }
-					set_variable = { ARG_loan_production_speed_buildings_factor = 0.02 }
-					set_variable = { ARG_loan_industrial_capacity_factory = 0.03 }
-					set_variable = { ARG_loan_industrial_capacity_dockyard = 0.03 }
-
-					}
-				}
-
-				ELSE_IF = {
-					limit = {
-						has_dynamic_modifier = {
-							modifier = ARG_international_loan_modifier		
-						}
-					}
-					custom_effect_tooltip = ARG_modify_international_loan_intro
-						add_to_variable = { ARG_loan_political_power_cost = 0.2 tooltip = political_power_cost_tt }
-						add_to_variable = { ARG_loan_local_resources_factor = 0.05 tooltip = local_resources_factor_tt }
-						add_to_variable = { ARG_loan_production_speed_buildings_factor = 0.02 tooltip = production_speed_buildings_factor_tt }
-						add_to_variable = { ARG_loan_industrial_capacity_factory = 0.03 tooltip = industrial_capacity_factory_tt }
-						add_to_variable = { ARG_loan_industrial_capacity_dockyard = 0.03 tooltip = industrial_capacity_dockyard_tt }
-				}
-
-			hidden_effect = {
-				set_country_flag = ARG_german_loan_flag
-
-			}
-		}
-	}
-
-	ARG_pay_back_germany = {
-
-		icon = GFX_decision_gre_paying_ifc_debt
-
-		ai_will_do = {
-			base = 40
-		}
-	
-		allowed = {
-			OR = {
-				original_tag = ARG
-				original_tag = BRA
-			}
-		}
-
-		available = {
-			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
-			}
-			#GER = {
-			#	has_opinion = {
-			#		target = ROOT
-			#		value > 49
-			#	} 
-			#}
-		} 
-
-		visible = { 
-			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
-			} 
-			has_country_flag = ARG_german_loan_flag
-			NOT = {
-				has_country_flag = ARG_german_loan_repaid_flag
-			}
-		}
-
-		cost = 75
-		
-		days_remove = 70
-
-		modifier = {
-			consumer_goods_factor = 0.15
-			political_power_factor = -0.1
-		}
-
-		remove_effect = {
-
-				IF = {
-					limit = {
-						has_dynamic_modifier = {
-							modifier = ARG_international_loan_modifier		
-						}
-					}
-					custom_effect_tooltip = ARG_modify_international_loan_intro
-						add_to_variable = { ARG_loan_political_power_cost = -0.2 tooltip = political_power_cost_tt }
-						add_to_variable = { ARG_loan_local_resources_factor = -0.05 tooltip = local_resources_factor_tt }
-						add_to_variable = { ARG_loan_production_speed_buildings_factor = -0.02 tooltip = production_speed_buildings_factor_tt }
-						add_to_variable = { ARG_loan_industrial_capacity_factory = -0.03 tooltip = industrial_capacity_factory_tt }
-						add_to_variable = { ARG_loan_industrial_capacity_dockyard = -0.03 tooltip = industrial_capacity_dockyard_tt }
-				}
-
-			hidden_effect = {
-				set_country_flag = ARG_german_loan_repaid_flag
-
-			}
-		}
-	}
-
-	ARG_loan_from_usa = {
-
-		icon = GFX_decision_gre_paying_ifc_debt
-
-		ai_will_do = {
-			base = 40
-		}
-	
-		allowed = {
-			OR = {
-				original_tag = ARG
-			}
-		}
-
-		available = {
-			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
-			}
-			USA = {
-				has_opinion = {
-					target = ROOT
-					value > 49
-				} 
-			}
-		} 
-
-		visible = { 
-			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
-			}
-			NOT = {
-				has_country_flag = ARG_usa_loan_flag
-			}
-		}
-
-		cost = 75
-		
-		days_remove = 70
-
-		modifier = {
-			consumer_goods_factor = 0.15
-			political_power_factor = -0.1
-		}
-
-		remove_effect = {
-				IF = {
-					limit = {
-						NOT = {
-							has_dynamic_modifier = {
-								modifier = ARG_international_loan_modifier
-							}	
-						}	
-					}
-
-					custom_effect_tooltip = ARG_international_loan_tt
-					hidden_effect = {
-					add_dynamic_modifier = {
-						modifier = ARG_international_loan_modifier
-					}
-
-					set_variable = { ARG_loan_political_power_cost = 0.2 }
-					set_variable = { ARG_loan_local_resources_factor = 0.05 }
-					set_variable = { ARG_loan_production_speed_buildings_factor = 0.02 }
-					set_variable = { ARG_loan_industrial_capacity_factory = 0.03 }
-					set_variable = { ARG_loan_industrial_capacity_dockyard = 0.03 }
-
-					}
-				}
-
-				ELSE_IF = {
-					limit = {
-						has_dynamic_modifier = {
-							modifier = ARG_international_loan_modifier		
-						}
-					}
-					custom_effect_tooltip = ARG_modify_international_loan_intro
-						add_to_variable = { ARG_loan_political_power_cost = 0.2 tooltip = political_power_cost_tt }
-						add_to_variable = { ARG_loan_local_resources_factor = 0.05 tooltip = local_resources_factor_tt }
-						add_to_variable = { ARG_loan_production_speed_buildings_factor = 0.02 tooltip = production_speed_buildings_factor_tt }
-						add_to_variable = { ARG_loan_industrial_capacity_factory = 0.03 tooltip = industrial_capacity_factory_tt }
-						add_to_variable = { ARG_loan_industrial_capacity_dockyard = 0.03 tooltip = industrial_capacity_dockyard_tt }
-				}
-
-			hidden_effect = {
-				set_country_flag = ARG_usa_loan_flag
-
-			}
-		}
-	}
-
-	ARG_pay_back_usa = {
-
-		icon = GFX_decision_gre_paying_ifc_debt
-
-		ai_will_do = {
-			base = 40
-		}
-	
-		allowed = {
-			OR = {
-				original_tag = ARG
-			}
-		}
-
-		available = {
-			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
-			}
-			#USA = {
-			#	has_opinion = {
-			#		target = ROOT
-			#		value > 49
-			#	} 
-			#}
-		} 
-
-		visible = { 
-			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
-			} 
-			has_country_flag = ARG_usa_loan_flag
-			NOT = {
-				has_country_flag = ARG_usa_loan_repaid_flag
-			}
-		}
-
-		cost = 75
-		
-		days_remove = 70
-
-		modifier = {
-			consumer_goods_factor = 0.15
-			political_power_factor = -0.1
-		}
-
-		remove_effect = {
-
-				IF = {
-					limit = {
-						has_dynamic_modifier = {
-							modifier = ARG_international_loan_modifier		
-						}
-					}
-					custom_effect_tooltip = ARG_modify_international_loan_intro
-						add_to_variable = { ARG_loan_political_power_cost = -0.2 tooltip = political_power_cost_tt }
-						add_to_variable = { ARG_loan_local_resources_factor = -0.05 tooltip = local_resources_factor_tt }
-						add_to_variable = { ARG_loan_production_speed_buildings_factor = -0.02 tooltip = production_speed_buildings_factor_tt }
-						add_to_variable = { ARG_loan_industrial_capacity_factory = -0.03 tooltip = industrial_capacity_factory_tt }
-						add_to_variable = { ARG_loan_industrial_capacity_dockyard = -0.03 tooltip = industrial_capacity_dockyard_tt }
-				}
-
-			hidden_effect = {
-				set_country_flag = ARG_usa_loan_repaid_flag
-
-			}
-		}
-	}
-
-	ARG_loan_from_italy = {
-
-		icon = GFX_decision_gre_paying_ifc_debt
-
-		ai_will_do = {
-			base = 40
-		}
-	
-		allowed = {
-			OR = {
-				original_tag = ARG
-			}
-		}
-
-		available = {
-			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
-			}
-			ITA = {
-				has_opinion = {
-					target = ROOT
-					value > 49
-				} 
-			}
-		} 
-
-		visible = { 
-			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
-			}
-			NOT = {
-				has_country_flag = ARG_italy_loan_flag
-			}
-		}
-
-		cost = 75
-		
-		days_remove = 70
-
-		modifier = {
-			consumer_goods_factor = 0.15
-			political_power_factor = -0.1
-		}
-
-		remove_effect = {
-				IF = {
-					limit = {
-						NOT = {
-							has_dynamic_modifier = {
-								modifier = ARG_international_loan_modifier
-							}	
-						}	
-					}
-
-					custom_effect_tooltip = ARG_international_loan_tt
-					hidden_effect = {
-					add_dynamic_modifier = {
-						modifier = ARG_international_loan_modifier
-					}
-
-					set_variable = { ARG_loan_political_power_cost = 0.2 }
-					set_variable = { ARG_loan_local_resources_factor = 0.05 }
-					set_variable = { ARG_loan_production_speed_buildings_factor = 0.02 }
-					set_variable = { ARG_loan_industrial_capacity_factory = 0.03 }
-					set_variable = { ARG_loan_industrial_capacity_dockyard = 0.03 }
-
-					}
-				}
-
-				ELSE_IF = {
-					limit = {
-						has_dynamic_modifier = {
-							modifier = ARG_international_loan_modifier		
-						}
-					}
-					custom_effect_tooltip = ARG_modify_international_loan_intro
-						add_to_variable = { ARG_loan_political_power_cost = 0.2 tooltip = political_power_cost_tt }
-						add_to_variable = { ARG_loan_local_resources_factor = 0.05 tooltip = local_resources_factor_tt }
-						add_to_variable = { ARG_loan_production_speed_buildings_factor = 0.02 tooltip = production_speed_buildings_factor_tt }
-						add_to_variable = { ARG_loan_industrial_capacity_factory = 0.03 tooltip = industrial_capacity_factory_tt }
-						add_to_variable = { ARG_loan_industrial_capacity_dockyard = 0.03 tooltip = industrial_capacity_dockyard_tt }
-				}
-
-			hidden_effect = {
-				set_country_flag = ARG_italy_loan_flag
-
-			}
-		}
-	}
-
-	ARG_pay_back_italy = {
-
-		icon = GFX_decision_gre_paying_ifc_debt
-
-		ai_will_do = {
-			base = 40
-		}
-	
-		allowed = {
-			OR = {
-				original_tag = ARG
-			}
-		}
-
-		available = {
-			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
-			}
-			#ITA = {
-			#	has_opinion = {
-			#		target = ROOT
-			#		value > 49
-			#	} 
-			#}
-		} 
-
-		visible = { 
-			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
-			} 
-			has_country_flag = ARG_italy_loan_flag
-			NOT = {
-				has_country_flag = ARG_italy_loan_repaid_flag
-			}
-		}
-
-		cost = 75
-		
-		days_remove = 70
-
-		modifier = {
-			consumer_goods_factor = 0.15
-			political_power_factor = -0.1
-		}
-
-		remove_effect = {
-
-				IF = {
-					limit = {
-						has_dynamic_modifier = {
-							modifier = ARG_international_loan_modifier		
-						}
-					}
-					custom_effect_tooltip = ARG_modify_international_loan_intro
-						add_to_variable = { ARG_loan_political_power_cost = -0.2 tooltip = political_power_cost_tt }
-						add_to_variable = { ARG_loan_local_resources_factor = -0.05 tooltip = local_resources_factor_tt }
-						add_to_variable = { ARG_loan_production_speed_buildings_factor = -0.02 tooltip = production_speed_buildings_factor_tt }
-						add_to_variable = { ARG_loan_industrial_capacity_factory = -0.03 tooltip = industrial_capacity_factory_tt }
-						add_to_variable = { ARG_loan_industrial_capacity_dockyard = -0.03 tooltip = industrial_capacity_dockyard_tt }
-				}
-
-			hidden_effect = {
-				set_country_flag = ARG_italy_loan_repaid_flag
-
-			}
-		}
-	}
-}
-
-
-
-prospect_for_resources = {
-	
-	# Exploit La Vaca Muerta
-	ARG_exploit_la_vaca_muerta = { #512
-
-		icon = oil 
-
-		allowed = {
-
-		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 512
-			}
-		}
-		available = {
-			has_tech = excavation3
-			num_of_civilian_factories_available_for_projects > 4
-			512 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			511 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			958 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			has_completed_focus = ARG_yacimientos_petroliferos_fiscales
-		}
-
-		visible = {
-			512 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			511 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			958 = {
-				is_owned_and_controlled_by = ROOT
-			}
-			
-			NOT = {
-				has_country_flag = drill_for_oil_in_vaca_muerta_done
-			}
-
-			original_tag = ARG
-
-			has_completed_focus = ARG_yacimientos_petroliferos_fiscales
-			
-		}
-
-		fire_only_once = yes
 
 		cost = 50
-		days_remove = 60
-
-		modifier = {
-			civilian_factory_use = 5
-		}
-
 		ai_will_do = {
-			base = 10
-			modifier = {  # Too low PP
-				factor = 0.5
-				has_political_power < 75
-			}
-			modifier = { #We have plenty of PP, avanti!
-				factor = 3
-				has_political_power > 200
-			}
-			modifier = { #Running out of the stuff, need more!
-				factor = 5
-				has_resources_in_country = {
-					resource = oil
-					amount < 1
-				}
-			}
+			factor = 100
 		}
-
-		remove_effect = {
-			set_country_flag = drill_for_oil_in_vaca_muerta_done
-			512 = {
-				add_resource = {
-					type = oil
-					amount = 10
-				}
-			}
-			511 = {
-				add_resource = {
-					type = oil
-					amount = 3
-				}
-			}
-			958 = {
-				add_resource = {
-					type = oil
-					amount = 2
-				}
-			}
-		}
-	}
-
-}
-
-ARG_balancing_act_decisions = {
-	
-	ARG_appease_the_allies = {
-
-		icon = GFX_decision_SWI_swiss_democratic_tradition_campaign
-
-		ai_will_do = {
-			base = 20
-		}
-	
-		allowed = {
-			original_tag = ARG
-		}
-
-		available = {
-			has_completed_focus = ARG_balancing_act
-		} 
-
-		visible = { 
-			has_completed_focus = ARG_balancing_act 
-		}
-		 
-		cost = 100
-		
-		days_remove = 70
-
-		modifier = {
-			political_power_factor = -0.2
-		}
-
-		remove_effect = {
-			USA = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = large_increase
-				}	
-			}
-			ENG = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = large_increase 
-				}	
-			}
-			GER = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = medium_decrease
-				}	
-			}
-			ITA = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = medium_decrease 
-				}	
-			}
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				add_equipment_subsidy = {
-					cic = 1500
-					equipment_type = small_plane_airframe
-					seller_tags = { USA ENG } 
-				}
-				add_equipment_subsidy = {
-					cic = 1500
-					equipment_type = motorized_equipment
-					seller_tags = { USA ENG } 
-				}
-				add_equipment_subsidy = {
-					cic = 1500
-					equipment_type = artillery_equipment
-					seller_tags = { USA ENG } 
-				}
-			}
-		}
-	}
-
-	ARG_appease_the_axis = {
-
-		icon = GFX_decision_ger_reichskommissariats
-
-		ai_will_do = {
-			base = 20
-		}
-	
-		allowed = {
-			original_tag = ARG
-		}
-
-		available = {
-			has_completed_focus = ARG_balancing_act
-		} 
-
-		visible = { 
-			has_completed_focus = ARG_balancing_act 
-		}
-		 
-		cost = 100
-		
-		days_remove = 70
-
-		modifier = {
-			political_power_factor = -0.2
-		}
-
-		remove_effect = {
-			GER = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = large_increase
-				}	
-			}
-			ITA = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = large_increase 
-				}	
-			}
-			USA = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = medium_decrease 
-				}	
-			}
-			ENG = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = medium_decrease 
-				}	
-			}
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				add_equipment_subsidy = {
-					cic = 1500
-					equipment_type = light_tank_chassis
-					seller_tags = { ITA GER } 
-				}
-				add_equipment_subsidy = {
-					cic = 1500
-					equipment_type = medium_tank_chassis
-					seller_tags = { ITA GER } 
-				}
-				add_equipment_subsidy = {
-					cic = 1500
-					equipment_type = infantry_equipment
-					seller_tags = { ITA GER } 
-				}
-			}
-		}
-	}
-}
-
-ARG_military_coup_decisions = {
-	
-	### MISSIONS ###
-
-	ARG_military_coup_attempt = {
-
-		priority = 100
-
-		icon = generic_ignite_civil_war 
-
-		available = {
-			hidden_trigger = { always = no }
-		}
-
-		days_mission_timeout = 365
-
 		fire_only_once = yes
 
-		activation = {
-			original_tag = ARG
-			has_completed_focus = ARG_the_castillo_cabinet
-			NOT = {
-				has_government = fascism
-			}
-			NOT = { has_global_flag = military_coup_attempt_happened }
-			NOT = { has_completed_focus = ARG_subdue_dissension }
+		visible = {
+			always = yes
 		}
 
+		complete_effect = {
+			add_state_core = 299
+			add_state_core = 720
+		}		
+	}
+
+	ARG_integrate_alto_peru = {
+
+		icon = GFX_decision_hol_radio_oranje
+
+		allowed = {
+			original_tag = ARG
+		}
+
+		available = {
+			owns_state = 302
+			302 = { compliance > 50 }
+		}
+
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+
 		visible = {
+			has_completed_focus = ARG_la_plata_reborn
+		}
+
+		complete_effect = {
+			add_state_core = 302
+			add_state_core = 487
+		}		
+	}
+
+	ARG_pardon_the_generals = {
+
+		icon = generic_army_support
+
+		allowed = {
+			original_tag = ARG
+		}
+		available = {
+					
+		}
+		visible = {
+			has_completed_focus = ARG_third_patagonia_rebelde
+			has_completed_focus = ARG_we_are_all_peronists
+		}
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			add_stability = -0.05
+			create_corps_commander = {
+				name = "Enrique Mosconi"
+				desc = "ARG_Enrique_Mosconi_desc"
+				portrait_path = "gfx/leaders/ARG/Portrait_ARG_Mosconi.tga"
+				traits = {
+					infantry_officer
+					career_officer
+					trait_engineer
+					expert_improviser
+				}
+				skill = 4
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 4
+			}
+			create_corps_commander = {
+				name = "Carlos von der Becke"
+				desc = "ARG_Manuel_Savio_desc"
+				portrait_path = "gfx/leaders/ARG/Portrait_ARG_Manuel_Savio.tga"
+				traits = {
+					career_officer
+					infantry_officer
+					organizer
+				}
+				skill = 3
+				attack_skill = 3
+				defense_skill = 2
+				planning_skill = 4
+				logistics_skill = 1
+			}
+			create_navy_leader = {
+				name = "Alberto Teisaire"
+				portrait_path = "gfx/leaders/ARG/Portrait_ARG_Isaac_Rojas.tga"
+				traits = { chief_engineer }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 1
+				maneuvering_skill = 2
+				coordination_skill = 2
+			}
+			
+			create_navy_leader = {
+				name = "Manuel Domecq García"
+				portrait_path = "gfx/leaders/ARG/Portrait_ARG_Domecq_Garcia.tga"
+				traits = { green_water_expert }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				maneuvering_skill = 2
+				coordination_skill = 1
+			}
+			
+			create_navy_leader = {
+				name = "Eleazar Videla"
+				portrait_path = "gfx/leaders/ARG/Portrait_Argentine_Eleazar_Videla.tga"
+				traits = { }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				maneuvering_skill = 1
+				coordination_skill = 2
+			}
+		}
+	}
+
+	ARG_integrate_chile = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			original_tag = ARG
+		}
+
+		available = {
+			OR = {
+				owns_state = 279
+				AND = {
+					controls_state = 279
+					OR = { 
+						ARG = { has_capitulated = yes }
+						ARG = { exists = no }
+					}
+				}
+			}
+		}
+
+		cost = 75
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ARG_the_andesia_republic
+			279 = { NOT = { is_core_of = ARG } }
+		}
+
+		complete_effect = {
+			if = { limit = { NOT = { has_idea = andesian_federation has_country_flag = wehatetheusa } }
+				add_ideas = andesian_federation_ARG
+			}
+			every_state = {
+				limit = {
+					is_core_of = CHL
+				}
+				add_core_of = ARG
+			}
+		}		
+	}
+	
+	ARG_integrate_bolivia = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			original_tag = ARG
+		}
+
+		available = {
+			OR = {
+				owns_state = 302
+				AND = {
+					controls_state = 302
+					OR = { 
+						BOL = { has_capitulated = yes }
+						BOL = { exists = no }
+					}
+				}
+			}
+		}
+
+		cost = 75
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ARG_the_andesia_republic
+			302 = { NOT = { is_core_of = ARG } }
+		}
+
+		complete_effect = {
+			if = { limit = { NOT = { has_idea = andesian_federation has_country_flag = wehatetheusa } }
+				add_ideas = andesian_federation_ARG
+			}
+			every_state = {
+				limit = {
+					is_core_of = BOL
+				}
+				add_core_of = ARG
+			}
+		}		
+	}
+
+	ARG_integrate_paraguay = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			original_tag = ARG
+		}
+
+		available = {
+			OR = {
+				owns_state = 301
+				AND = {
+					controls_state = 301
+					OR = { 
+						PAR = { has_capitulated = yes }
+						PAR = { exists = no }
+					}
+				}
+			}
+		}
+
+		cost = 25
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ARG_the_andesia_republic
+			301 = { NOT = { is_core_of = ARG } }
+		}
+
+		complete_effect = {
+			if = { limit = { NOT = { has_idea = andesian_federation has_country_flag = wehatetheusa } }
+				add_ideas = andesian_federation_ARG
+			}
+			every_state = {
+				limit = {
+					is_core_of = PAR
+				}
+				add_core_of = ARG
+			}
+		}		
+	}
+	
+	ARG_integrate_uruguay = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+			original_tag = ARG
+		}
+
+		available = {
+			OR = {
+				owns_state = 300
+				AND = {
+					controls_state = 300
+					OR = { 
+						URG = { has_capitulated = yes }
+						URG = { exists = no }
+					}
+				}
+			}
+		}
+
+		cost = 25
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ARG_the_andesia_republic
+			300 = { NOT = { is_core_of = ARG } }
+		}
+
+		complete_effect = {
+			if = { limit = { NOT = { has_idea = andesian_federation has_country_flag = wehatetheusa } }
+				add_ideas = andesian_federation_ARG
+			}
+			every_state = {
+				limit = {
+					is_core_of = URG
+				}
+				add_core_of = ARG
+			}
+		}		
+	}
+
+}
+
+ARG_standoff_in_argentina = {
+
+	ARG_massive_worker_strikes = {
+
+		icon = GFX_decision_generic_political_rally
+
+		allowed = {
 			tag = ARG
-			NOT = {
-				has_government = fascism
-			}
-			NOT = { has_global_flag = military_coup_attempt_happened }
-			NOT = { has_completed_focus = ARG_subdue_dissension } 
-			NOT = { has_completed_focus = ARG_march_to_la_casa_rosada } 
 		}
 
-		cancel_if_not_visible = yes
+		available = {
+			OR = {
+			communism < 0.05
+			has_civil_war = yes
+			}
+		}
+
+		priority = 10
+
+		fire_only_once = yes
+
+		days_mission_timeout = 60
 
 		is_good = no
 
-		timeout_effect = {
-			IF = {
-				limit = {
-					has_completed_focus = ARG_consolidating_power
-				}
-				country_event = ARG_political_events.9
-			}
-			ELSE_IF = {
-				limit = {
-					has_completed_focus = ARG_subdue_dissension
-				}
-				country_event = ARG_political_events.10
-			}
-			ELSE = {
-				country_event = ARG_political_events.11
-			}
-		}
-	}
-
-	ARG_military_state_absorption_mission = {
-
-		priority = 99
-
-		icon = GFX_decision_eng_blackshirt_speech 
-
-		available = {
-			hidden_trigger = { always = no }
-		}
-
-		days_mission_timeout = 75
-		days_re_enable = 1
-
-		fire_only_once = no
+		cancel_if_not_visible = yes
 
 		activation = {
-			original_tag = ARG
-			has_completed_focus = ARG_the_castillo_cabinet
-			NOT = {
-				has_government = fascism
-			}
-			NOT = { has_global_flag = military_coup_attempt_happened }
-			NOT = { has_completed_focus = ARG_subdue_dissension }
-			NOT = { has_completed_focus = ARG_march_to_la_casa_rosada }
+			has_completed_focus = ARG_march_in_buenos_aires
 		}
 
-		visible = {
-			tag = ARG 
-			NOT = {
-				has_government = fascism
+		complete_effect = {
+			remove_ideas = ARG_worker_strikes
+			hidden_effect = {
+				if = { limit = { has_country_flag = redzones_arg_fascist }
+					508 = { set_demilitarized_zone = no }
+					509 = { set_demilitarized_zone = no }
+					823 = { set_demilitarized_zone = no }
+					828 = { set_demilitarized_zone = no }
+					512 = { set_demilitarized_zone = no }
+				}
 			}
-			NOT = { has_global_flag = military_coup_attempt_happened }
-			NOT = { has_completed_focus = ARG_subdue_dissension } 
-			NOT = { has_completed_focus = ARG_march_to_la_casa_rosada }  
-
 		}
+
+		timeout_effect = {
+			hidden_effect = {
+				if = { limit = { has_country_flag = redzones_arg_fascist }
+					508 = { set_demilitarized_zone = no }
+					509 = { set_demilitarized_zone = no }
+					823 = { set_demilitarized_zone = no }
+					828 = { set_demilitarized_zone = no }
+					512 = { set_demilitarized_zone = no }
+				}
+			}
+
+			remove_ideas = ARG_worker_strikes
+			start_civil_war = { 
+				ideology = communism
+				size = 0.5
+				capital = 512
+				states = { 
+					512 509 823 828 508
+				}
+				keep_political_leader = no
+				keep_unit_leaders = {
+					43430 43431 43432 43433 43434 43435 43436 43437 43438 43439
+				}
+			}
+
+			hidden_effect = {
+				create_country_leader = {
+					name = "Juan Domingo Perón"
+					desc = ""
+					picture = "gfx/leaders/ARG/Portrait_Argentina_Juan_Peron_General.tga"
+					expire = "1965.1.1"
+					ideology = authsocialism
+					traits = {
+						#
+					}
+				}
+
+				set_party_name = { 
+					ideology = communism
+					name = ARG_peron_p
+					long_name = ARG_peron_p_long
+				}
+
+				random_other_country = {
+					limit = {
+						original_tag = ARG
+						has_government = communism
+					}
+					set_cosmetic_tag = ARG_names
+					set_party_name = { 
+						ideology = communism
+						name = ARG_syndie
+						long_name = ARG_syndie_long
+					}
+					add_war_support = 0.25
+					add_ideas = { ARG_anarchist_militias extensive_conscription }
+					remove_ideas = {
+						infamous_decade roca_runciman_pact ARG_worker_strikes
+					}
+					add_offsite_building = { type = arms_factory level = 2 }
+					kill_country_leader = yes
+					create_country_leader = {
+						name = "Antonio Soto"
+						desc = ""
+						picture = "gfx/leaders/ARG/Portrait_FOP_Antonio_Soto.tga"
+						expire = "1953.3.1"
+						ideology = anarchist_communism
+						traits = {
+							
+						}
+					}
+					create_field_marshal = {
+						name = "Antonio Soto"
+						portrait_path = "gfx/leaders/ARG/Portrait_FOP_Antonio_Soto.tga"
+						traits = { war_hero media_personality trait_JOS_anarchist logistics_wizard inspirational_leader }
+						skill = 4
+						attack_skill = 2
+						defense_skill = 4
+						planning_skill = 2
+						logistics_skill = 5
+					}
+					create_corps_commander = {
+						name = "Liborio Justo"
+						portrait_path = "gfx/leaders/ARG/Portrait_FOP_Liborio_Justo.tga"
+						traits = {
+							JAP_communist_sympathizer career_officer
+						}
+						skill = 2
+						attack_skill = 2
+						defense_skill = 1
+						planning_skill = 2
+						logistics_skill = 2
+					}
+					create_corps_commander = {
+						name = "Fanny Jabcovsky"
+						portrait_path = "gfx/leaders/ARG/Portrait_FOP_Fanny_Jabcovsky.tga"
+						traits = {
+							JAP_communist_sympathizer trickster
+						}
+						skill = 2
+						attack_skill = 1
+						defense_skill = 2
+						planning_skill = 2
+						logistics_skill = 2
+						female = yes
+					}
+					create_corps_commander = {
+						name = "Esteban Lucich"
+						portrait_path = "gfx/leaders/ARG/Portrait_FOP_Severino_di_Giovanni.tga"
+						traits = {
+							trait_JOS_anarchist harsh_leader
+						}
+						skill = 1
+						attack_skill = 1
+						defense_skill = 1
+						planning_skill = 1
+						logistics_skill = 1
+					}
+					create_corps_commander = {
+						name = "Micaela Feldman"
+						picture = "Portrait_FOP_Micaela_Feldman.tga"
+						traits = {
+							JAP_communist_sympathizer
+						}
+						skill = 1
+						attack_skill = 1
+						defense_skill = 1
+						planning_skill = 1
+						logistics_skill = 1
+						female = yes
+					}
+					create_navy_leader = {
+						name = "Luis Alberto Quesada"
+						picture = "Portrait_FOP_Luis_Alberto_Quesada.tga"
+						traits = { air_controller }
+						skill = 1
+						attack_skill = 1
+						defense_skill = 1
+						maneuvering_skill = 1
+						coordination_skill = 1
+					}
+				}
+			}
+		}
+
+	}
+
+	ARG_red_terrorism = {
+
+		icon = GFX_decision_generic_scorched_earth
+
+		allowed = {
+			tag = ARG
+		}
+
+		available = {
+			OR = {
+			communism > 0.65
+			has_civil_war = yes
+			}
+		}
+
+		priority = 10
+
+		fire_only_once = yes
+
+		days_mission_timeout = 60
+
+		is_good = no
 
 		cancel_if_not_visible = yes
 
-		timeout_effect = {
-			custom_effect_tooltip = ARG_military_state_absorption_timer_tt
+		activation = {
+			has_completed_focus = ARG_third_patagonia_rebelde
+		}
 
-			random_owned_state = {
-				limit = {
-					NOT = {
-						OR = {
-							has_dynamic_modifier = {
-							modifier = ARG_military_owned_state
-							}
-							has_dynamic_modifier = {
-								modifier = ARG_federal_intervention_modifier
-							}
+		complete_effect = {
+			set_politics = { ruling_party = communism elections_allowed = no }
+			remove_ideas = third_patagonia_rebelde
+			hidden_effect = {
+				if = { limit = { has_country_flag = redzones_arg_commie }
+				278 = { set_demilitarized_zone = no }
+				510 = { set_demilitarized_zone = no }
+				824 = { set_demilitarized_zone = no }
+				}
+			}
+		}
+
+		timeout_effect = {
+			set_politics = { ruling_party = communism elections_allowed = no }
+			hidden_effect = {
+				if = { limit = { has_country_flag = redzones_arg_commie }
+				278 = { set_demilitarized_zone = no }
+				510 = { set_demilitarized_zone = no }
+				824 = { set_demilitarized_zone = no }
+				}
+			}
+
+			swap_ideas = {
+				remove_idea = third_patagonia_rebelde
+				add_idea = third_patagonia_rebelde_2
+			}
+			if = { limit = { NOT = { has_idea = tot_economic_mobilisation has_idea = war_economy } }
+				add_ideas = partial_economic_mobilisation
+			}
+			if = { limit = { OR = { has_idea = volunteer_only has_idea = disarmed_nation } }
+				add_ideas = limited_conscription
+			}
+			set_capital = 512
+			start_civil_war = { 
+				ideology = neutrality
+				size = 0.50
+				capital = 278
+				states = { 
+					278 510 824
+				}
+				keep_political_leader = no
+				keep_unit_leaders = {
+					43434
+				}
+			}
+
+			hidden_effect = {
+
+				remove_unit_leader = 43430
+				remove_unit_leader = 43431
+				remove_unit_leader = 43432
+				remove_unit_leader = 43433
+				remove_unit_leader = 43435
+				remove_unit_leader = 43436
+				remove_unit_leader = 43437
+				remove_unit_leader = 43438
+				remove_unit_leader = 43439
+				create_field_marshal = {
+					name = "Antonio Soto"
+					portrait_path = "gfx/leaders/ARG/Portrait_FOP_Antonio_Soto.tga"
+					traits = { war_hero media_personality trait_JOS_anarchist logistics_wizard inspirational_leader }
+					skill = 4
+					attack_skill = 2
+					defense_skill = 4
+					planning_skill = 2
+					logistics_skill = 5
+				}
+				create_corps_commander = {
+					name = "Liborio Justo"
+					portrait_path = "gfx/leaders/ARG/Portrait_FOP_Liborio_Justo.tga"
+					traits = {
+						JAP_communist_sympathizer career_officer media_personality
+					}
+					skill = 2
+					attack_skill = 2
+					defense_skill = 1
+					planning_skill = 2
+					logistics_skill = 2
+				}
+				create_corps_commander = {
+					name = "Fanny Jabcovsky"
+					portrait_path = "gfx/leaders/ARG/Portrait_FOP_Fanny_Jabcovsky.tga"
+					traits = {
+						JAP_communist_sympathizer media_personality trickster
+					}
+					skill = 2
+					attack_skill = 1
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 2
+					female = yes
+				}
+				create_corps_commander = {
+					name = "Esteban Lucich"
+					portrait_path = "gfx/leaders/ARG/Portrait_FOP_Severino_di_Giovanni.tga"
+					traits = {
+						trait_JOS_anarchist harsh_leader
+					}
+					id = 9890
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+				}
+				create_corps_commander = {
+					name = "Micaela Feldman"
+					picture = "Portrait_FOP_Micaela_Feldman.tga"
+					traits = {
+						JAP_communist_sympathizer
+					}
+					id = 9891
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+					female = yes
+				}
+				create_navy_leader = {
+					name = "Luis Alberto Quesada"
+					picture = "Portrait_FOP_Luis_Alberto_Quesada.tga"
+					traits = { air_controller }
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					maneuvering_skill = 1
+					coordination_skill = 1
+				}
+				create_country_leader = {
+					name = "Juan Domingo Perón"
+					desc = ""
+					picture = "gfx/leaders/ARG/Portrait_Argentina_Juan_Peron_General.tga"
+					expire = "1965.1.1"
+					ideology = left_nationalism
+					traits = {
+						#
+					}
+				}
+
+				set_party_name = { 
+					ideology = fascism
+					name = ARG_peron_p
+					long_name = ARG_peron_p_long
+				}
+
+				random_other_country = {
+					limit = {
+						original_tag = ARG
+						has_government = neutrality
+					}
+					set_cosmetic_tag = ARG_names
+					add_war_support = 0.2
+					remove_ideas = third_patagonia_rebelde_2
+					kill_country_leader = yes
+					create_country_leader = {
+						name = "Pedro Pablo Ramírez"
+						desc = ""
+						picture = "gfx/leaders/ARG/Portrait_Argentine_Pablo_Ramirez.tga"
+						expire = "1953.3.1"
+						ideology = despotism
+						traits = {
+							
 						}
 					}
-
-					NOT = { state = 278 }
+					create_field_marshal = {
+						name = "Pedro Pablo Ramírez"
+						desc = "ARG_Pedro_Pablo_Ramirez_desc"
+						portrait_path = "gfx/leaders/ARG/Portrait_Argentine_Pablo_Ramirez.tga"
+						traits = {
+							infantry_leader
+						}
+						skill = 3
+						attack_skill = 4
+						defense_skill = 2
+						planning_skill = 2
+						logistics_skill = 2
+					}
+					create_corps_commander = {
+						name = "Enrique Mosconi"
+						desc = "ARG_Enrique_Mosconi_desc"
+						portrait_path = "gfx/leaders/ARG/Portrait_ARG_Mosconi.tga"
+						traits = {
+							infantry_officer
+							career_officer
+							trait_engineer
+							expert_improviser
+						}
+						skill = 4
+						attack_skill = 3
+						defense_skill = 3
+						planning_skill = 3
+						logistics_skill = 4
+					}
+					create_corps_commander = {
+						name = "Juan Pistarini"
+						portrait_path = "gfx/leaders/ARG/Portrait_ARG_Juan_Pistarini.dds"
+						traits = { career_officer }
+						skill = 3
+						attack_skill = 2
+						defense_skill = 2
+						planning_skill = 4
+						logistics_skill = 2
+					}
+					create_corps_commander = {
+						name = "Carlos von der Becke"
+						desc = "ARG_Manuel_Savio_desc"
+						portrait_path = "gfx/leaders/ARG/Portrait_ARG_Manuel_Savio.tga"
+						traits = {
+							career_officer
+							infantry_officer
+							organizer
+						}
+						skill = 3
+						attack_skill = 3
+						defense_skill = 2
+						planning_skill = 4
+						logistics_skill = 1
+					}
+					create_corps_commander = {
+						name = "Arturo Rawson"
+						desc = "ARG_Arturo_Rawson_desc"
+						portrait_path = "gfx/leaders/ARG/Portrait_ARG_Arturo_Rawson.tga"
+						traits = {
+							cavalry_officer
+							ranger
+						}
+						skill = 3
+						attack_skill = 4
+						defense_skill = 2
+						planning_skill = 1
+						logistics_skill = 3
+					}
+					create_corps_commander = {
+						name = "Edelmiro Julián Farrell"
+						desc = "ARG_Edelmiro_Julian_Farrel_desc"
+						portrait_path = "gfx/leaders/ARG/Portrait_Argentine_Edelmiro_Farrell.tga"
+						traits = {
+							career_officer
+							infantry_officer
+							trait_mountaineer
+						}
+						skill = 3
+						attack_skill = 3
+						defense_skill = 3
+						planning_skill = 2
+						logistics_skill = 2
+					}
+					create_navy_leader = {
+						name = "Alberto Teisaire"
+						portrait_path = "gfx/leaders/ARG/Portrait_ARG_Isaac_Rojas.tga"
+						traits = { chief_engineer }
+						skill = 2
+						attack_skill = 2
+						defense_skill = 1
+						maneuvering_skill = 2
+						coordination_skill = 2
+					}
+					create_navy_leader = {
+						name = "Manuel Domecq García"
+						portrait_path = "gfx/leaders/ARG/Portrait_ARG_Domecq_Garcia.tga"
+						traits = { green_water_expert }
+						skill = 2
+						attack_skill = 2
+						defense_skill = 2
+						maneuvering_skill = 2
+						coordination_skill = 1
+					}
+					create_navy_leader = {
+						name = "Eleazar Videla"
+						portrait_path = "gfx/leaders/ARG/Portrait_Argentine_Eleazar_Videla.tga"
+						traits = { }
+						skill = 2
+						attack_skill = 2
+						defense_skill = 2
+						maneuvering_skill = 1
+						coordination_skill = 2
+					}
 				}
-
-				add_dynamic_modifier = {
-					modifier = ARG_military_owned_state
-				}
 			}
 		}
+
 	}
 
-		### DECISIONS ###
-
-	ARG_sanction_the_generals = {
-
-		priority = 98
-
-		icon = GFX_decision_eng_trade_unions_support
-
-		ai_will_do = {
-			base = 50
-		}
-
-		allowed = {
-			original_tag = ARG
-		}
-
-		available = {
-			has_completed_focus = ARG_the_castillo_cabinet
-			NOT = { has_government = fascism }
-			NOT = { has_global_flag = military_coup_attempt_happened }
-			NOT = { has_completed_focus = ARG_subdue_dissension } 
-			NOT = { has_completed_focus = ARG_march_to_la_casa_rosada } 
-		}
-
-		visible = {
-			tag = ARG
-			has_completed_focus = ARG_the_castillo_cabinet
-			NOT = { has_government = fascism }
-			NOT = { has_global_flag = military_coup_attempt_happened }
-			NOT = { has_completed_focus = ARG_subdue_dissension } 
-			NOT = { has_completed_focus = ARG_march_to_la_casa_rosada }   
-		}
-
-		days_remove = 50
-
-		cost = 100
-
-		complete_effect = {
-
-		}
-
-		modifier = {
-			political_power_factor = -0.15
-		}
-
-		remove_effect = {
-
-			add_popularity = {
-				ideology = fascism
-				popularity = -0.05
-			}
-
-			custom_effect_tooltip = CHL_skip_one_line_tt
-
-			add_days_mission_timeout = {
-				mission = ARG_military_coup_attempt
-				days = 75
-			}
-
-			custom_effect_tooltip = ARG_sanction_the_generals_tt
-		}
-	}
-
-	ARG_increase_military_salaries = {
-
-		priority = 97
-
-		icon = GFX_decision_eng_trade_unions_support 
-
-		ai_will_do = {
-			base = 50
-		}
-
-		allowed = {
-			original_tag = ARG
-		}
-
-		available = {
-			has_completed_focus = ARG_the_castillo_cabinet
-			NOT = { has_government = fascism }
-			NOT = { has_global_flag = military_coup_attempt_happened }
-			NOT = { has_completed_focus = ARG_subdue_dissension } 
-			NOT = { has_completed_focus = ARG_march_to_la_casa_rosada } 
-		}
-
-		visible = {
-			tag = ARG
-			has_completed_focus = ARG_the_castillo_cabinet
-			NOT = { has_government = fascism }
-			NOT = { has_global_flag = military_coup_attempt_happened }
-			NOT = { has_completed_focus = ARG_subdue_dissension } 
-			NOT = { has_completed_focus = ARG_march_to_la_casa_rosada }   
-		}
-
-		days_remove = 50
-
-		cost = 50
-
-		complete_effect = {
-
-		}
-
-		modifier = {
-			consumer_goods_factor = 0.15
-		}
-
-		remove_effect = {
-
-			add_popularity = {
-				ideology = fascism
-				popularity = -0.05
-			}
-
-			custom_effect_tooltip = CHL_skip_one_line_tt
-
-			add_days_mission_timeout = {
-				mission = ARG_military_coup_attempt
-				days = 75
-			}
-
-			custom_effect_tooltip = ARG_sanction_the_generals_tt
-		}
-	}
 }
 
-ARG_south_american_unity_decisions = {
-	
-	ARG_core_conquered_state = {
+economy_decisions = {
 
-		icon = GFX_decision_generic_form_nation
+	ARG_discuss_investment_possibilities_with_FROM = {
 
-		ai_will_do = {
-			base = 50
-		}
-	
-		allowed = {
-			original_tag = ARG
+		icon = generic_construction
+
+		allowed = { 
+			#original_tag = TUR
 		}
 
 		available = {
-			OR = {
-				has_completed_focus = ARG_south_american_unity
-				has_completed_focus = ARG_integrate_the_motherland
+			NOT = {
+				FROM = { has_war_with = ROOT }
+				has_capitulated = yes
+				is_puppet = yes
 			}
-		} 
-
-		visible = { 
-			OR = {
-				has_completed_focus = ARG_south_american_unity
-				has_completed_focus = ARG_integrate_the_motherland
-			} 
 		}
-
-		state_target = any_owned_state
 
 		target_trigger = {
 			FROM = {
-				impassable = no	
-				AND = {
-					OR = {
-						is_on_continent = south_america
-						state = 948
+				is_major = yes
+				OR = {
+					capital_scope = { is_on_continent = europe }
+					tag = USA
+				}
+			}
+		}
+
+		days_remove = 45
+
+		cost = 75
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0
+				has_country_flag = TUR_investment_pursued
+			}
+			modifier = {
+				factor = 5
+				is_historical_focus_on = yes
+			}
+		}
+
+		visible = {
+			has_completed_focus = ARG_promote_foreign_investiment
+			NOT = {
+				has_country_flag = TUR_investment_pursued
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = TUR_investment_pursued
+		}
+
+		remove_effect = {
+			FROM = { country_event = { id = arg.9 } }
+			custom_effect_tooltip = TUR_investment_opinion_tt
+			clr_country_flag = TUR_investment_pursued
+		}
+	}
+
+	ROOT_invest_in_argentine_state_building = {
+
+		icon = generic_construction
+
+		allowed = { 
+			always = no
+		}
+
+		available = {
+			NOT = {
+				ROOT = { has_war_with = FROM }
+				has_capitulated = yes
+			}
+		}
+
+		target_trigger = {
+			tag = ARG
+		}
+
+		days_remove = 60
+
+		cost = 25
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_opinion = {
+					target = ARG
+					value > 75
+				}
+			}
+			modifier = {
+				factor = 30
+				has_opinion = {
+					target = ARG
+					value < 50
+				}
+			}
+		}
+
+		visible = {	
+			NOT = { ROOT = { has_war_with = FROM } }
+		}
+
+		complete_effect = {
+			add_ideas = { CHL_investment_financing_spirit }
+			hidden_effect = {
+				remove_targeted_decision = { target = ARG decision = ROOT_invest_in_argentine_state_light_industry }
+				remove_targeted_decision = { target = ARG decision = ROOT_invest_in_argentine_state_heavy_industry }
+				FROM = { country_event = { id = bftb_turkey.128 } }
+			}
+		}
+
+		remove_effect = {
+			remove_ideas = { CHL_investment_financing_spirit }
+			effect_tooltip = {
+				ARG = {
+					random_owned_state = {
+						random_list = {
+							40 = {
+								add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+							}
+							30 = {
+								add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+							}
+							30 = {
+								add_building_construction = {
+									type = anti_air_building
+									level = 1
+									instant_build = yes
+								}
+							}
+						}
 					}
-					is_owned_and_controlled_by = ROOT
-				}
-				NOT = {
-					is_core_of = ROOT
 				}
 			}
-		}
-
-	    on_map_mode = map_and_decisions_view 
-		cost = 75
-		
-		fire_only_once = yes
-		days_remove = 35
-
-		modifier = {
-			political_power_factor = -0.15
-		}
-
-		remove_effect = {
-			FROM = {
-				add_core_of = ROOT
+			custom_effect_tooltip = ROOT_turkish_investment_ai_tt
+			hidden_effect = {
+				remove_targeted_decision = { target = ARG decision = ROOT_invest_in_argentine_state_building }
 			}
 		}
 	}
-}
 
-ARG_island_negotiations_decisions = {
-	
-	ARG_peace_out = {
+	ROOT_invest_in_argentine_state_light_industry = {
 
-		icon = GFX_decision_eng_trade_unions_support
+		icon = generic_construction
 
-		ai_will_do = {
-			base = 50
-		}
-	
-		allowed = {
-			original_tag = ARG
+		allowed = { 
+			always = no
 		}
 
 		available = {
-			has_completed_focus = ARG_argentine_island_sovereignty
-			299 = { is_controlled_by = ARG }
-			720 = { is_controlled_by = ARG }
-		} 
-
-		visible = { 
-			has_completed_focus = ARG_argentine_island_sovereignty 
+			NOT = {
+				ROOT = { has_war_with = FROM }
+				has_capitulated = yes
+			}
 		}
 
-	    on_map_mode = map_and_decisions_view 
-		cost = 75
-		
-		fire_only_once = yes
-		days_remove = 5
+		target_trigger = {
+			tag = ARG
+		}
 
-		modifier = {
-			political_power_factor = -0.15
+		days_remove = 90
+
+		cost = 30
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				has_opinion = {
+					target = ARG
+					value > 75
+				}
+			}
+		}
+
+		visible = {	
+			NOT = { ROOT = { has_war_with = FROM } }
+		}
+
+		complete_effect = {
+			add_ideas = { CHL_investment_financing_spirit }
+			hidden_effect = {
+				remove_targeted_decision = { target = ARG decision = ROOT_invest_in_argentine_state_building }
+				remove_targeted_decision = { target = ARG decision = ROOT_invest_in_argentine_state_heavy_industry }
+				FROM = { country_event = { id = bftb_turkey.129 } }
+			}
 		}
 
 		remove_effect = {
-
-			ENG = {
-				country_event = {
-				id = ARG_political_events.32
-				hours = 1
+			remove_ideas = { CHL_investment_financing_spirit }
+			effect_tooltip = {
+				ARG = {
+					random_owned_state = {
+						random_list = {
+							50 = {
+								add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+								add_extra_state_shared_building_slots = 1
+							}
+							35 = {
+								add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+								add_extra_state_shared_building_slots = 2
+							}
+							15 = {
+								add_building_construction = {
+									type = industrial_complex
+									level = 3
+									instant_build = yes
+								}
+								add_extra_state_shared_building_slots = 3
+							}
+						}
+					}
 				}
+			}
+			custom_effect_tooltip = ROOT_turkish_investment_ai_tt
+			hidden_effect = {
+				remove_targeted_decision = { target = ARG decision = ROOT_invest_in_argentine_state_light_industry }
 			}
 		}
 	}
 
-	ARG_england_demands_peace = {
+	ROOT_invest_in_argentine_state_heavy_industry = {
 
-		icon = GFX_decision_eng_propaganda_campaigns
+		icon = generic_construction
 
-		ai_will_do = {
-			base = 50
-		}
-	
-		allowed = {
-			original_tag = ENG
+		allowed = { 
+			always = no
 		}
 
 		available = {
-			299 = { is_controlled_by = ARG }
-			720 = { is_controlled_by = ARG }
-		} 
-
-		visible = { 
-			ARG = {
-				has_completed_focus = ARG_argentine_island_sovereignty
+			NOT = {
+				ROOT = { has_war_with = FROM }
+				has_capitulated = yes
 			}
 		}
 
-	    on_map_mode = map_and_decisions_view 
-		cost = 100
-		
-		fire_only_once = yes
-		days_remove = 5
+		target_trigger = {
+			tag = ARG
+		}
 
-		modifier = {
-			political_power_factor = -0.15
+		days_remove = 120
+
+		cost = 50
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0.35
+				num_of_available_civilian_factories < 10
+			}
+		}
+
+		visible = {	
+			NOT = { ROOT = { has_war_with = FROM } }
+		}
+
+		complete_effect = {
+			add_ideas = { CHL_investment_financing_spirit }
+			hidden_effect = {
+				remove_targeted_decision = { target = ARG decision = ROOT_invest_in_argentine_state_building }
+				remove_targeted_decision = { target = ARG decision = ROOT_invest_in_argentine_state_light_industry }
+				FROM = { country_event = { id = bftb_turkey.130 } }
+			}
 		}
 
 		remove_effect = {
-
-			ARG = {
-				country_event = {
-				id = ARG_political_events.35
-				hours = 1
+			remove_ideas = { CHL_investment_financing_spirit }
+			effect_tooltip = {
+				ARG = {
+					random_owned_state = {
+						random_list = {
+							50 = {
+								add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+								add_extra_state_shared_building_slots = 1
+							}
+							35 = {
+								add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+								add_extra_state_shared_building_slots = 2
+							}
+							15 = {
+								add_building_construction = {
+									type = arms_factory
+									level = 3
+									instant_build = yes
+								}
+								add_extra_state_shared_building_slots = 3
+							}
+						}
+					}
 				}
+			}
+			custom_effect_tooltip = ROOT_turkish_investment_ai_tt
+			hidden_effect = {
+				remove_targeted_decision = { target = ARG decision = ROOT_invest_in_argentine_state_heavy_industry }
 			}
 		}
 	}
+
 }
-
-#ARG_unite_the_workers_decisions = {
-#	
-#	ARG_instigate_worker_strike = {
-#
-#		icon = GFX_decision_gre_paying_ifc_debt
-#
-#		ai_will_do = {
-#			base = 50
-#		}
-#	
-#		allowed = {
-#			original_tag = ARG
-#		}
-#
-#		available = {
-#			NOT = {
-#				has_country_flag = ARG_uniting_workers_in_progress
-#			}
-#		} 
-#
-#		visible = { 
-#			has_completed_focus = ARG_unite_the_workers_of_argentina 
-#		}
-#
-#		state_target = yes
-#
-#		target_trigger = {
-#			FROM = {
-#		    	is_fully_controlled_by = ROOT
-#		       	NOT = {
-#		       		has_state_flag = ARG_united_workers
-#		       	}
-#		       	OR = {
-#		       		state = 278
-#	           		state = 956
-#	           		state = 958
-#	           		state = 511
-#	           		state = 508
-#		       	} 
-#		    }
-#		}
-#
-#	    on_map_mode = map_and_decisions_view 
-#		cost = 50
-#		
-#		fire_only_once = yes
-#		days_remove = 10
-#
-#		complete_effect = {
-#			set_country_flag = ARG_uniting_workers_in_progress
-#		}
-#
-#		remove_effect = {
-#
-#			FROM = {
-#				set_state_flag = ARG_united_workers
-#			}
-#
-#			random_list = {
-#				# Bad Rally
-#				35 = {
-#					country_event = { id = ARG_political_events.50 days = 1 }
-#					effect_tooltip = {
-#						add_popularity = { ideology = communism popularity = #0.01 }
-#						add_manpower = 1000
-#					}
-#				}
-#				# Average Rally
-#				50 = {
-#					country_event = { id = ARG_political_events.51 days = 1 }
-#					effect_tooltip = {
-#						add_popularity = { ideology = communism popularity = #0.03 }
-#						add_manpower = 2000
-#					}
-#				}
-#				# Good Rally
-#				15 = {
-#					country_event = { id = ARG_political_events.52 days = 1 }
-#					effect_tooltip = {
-#						add_popularity = { ideology = communism popularity = #0.05 }
-#						add_manpower = 3000
-#					}
-#				}
-#			}	
-#		}
-#	}
-#}
-
-#ARG_support_the_farmers_decisions = {
-#	
-#	ARG_implement_rural_reforms = {
-#		
-#		icon = GFX_decision_POL_looming_peasants_strike
-#		cost = 100
-#		allowed = {
-#			original_tag = ARG
-#		}
-#		available = {
-#			has_completed_focus = ARG_support_the_farmers
-#			NOT = { 
-#				has_country_flag = ARG_implemented_rural_reforms
-#			}
-#		}
-#		
-#		visible = {
-#			has_completed_focus = ARG_support_the_farmers
-#		}
-#
-#		complete_effect = {
-#			custom_effect_tooltip = SWE_implemented_rural_reforms_tt
-#			add_stability = 0.05
-#			hidden_effect = {
-#				set_country_flag = ARG_implemented_rural_reforms
-#				random_owned_state = {
-#					limit = {
-#						is_controlled_by = ROOT
-#						OR = {
-#							has_state_category = wasteland
-#							has_state_category = pastoral
-#							has_state_category = rural
-#							has_state_category = town
-#						}
-#					}
-#					add_building_construction = {
-#						type = infrastructure
-#						level = 1
-#						instant_build = yes
-#					}
-#					add_extra_state_shared_building_slots = 1
-#				}
-#				random_owned_state = {
-#					limit = {
-#						is_controlled_by = ROOT
-#						OR = {
-#							has_state_category = wasteland
-#							has_state_category = pastoral
-#							has_state_category = rural
-#							has_state_category = town
-#						}
-#					}
-#					add_building_construction = {
-#						type = infrastructure
-#						level = 1
-#						instant_build = yes
-#					}
-#					add_extra_state_shared_building_slots = 1
-#				}
-#				random_owned_state = {
-#					limit = {
-#						is_controlled_by = ROOT
-#						OR = {
-#							has_state_category = wasteland
-#							has_state_category = pastoral
-#							has_state_category = rural
-#							has_state_category = town
-#						}
-#					}
-#					add_building_construction = {
-#						type = infrastructure
-#						level = 1
-#						instant_build = yes
-#					}
-#					add_extra_state_shared_building_slots = 1
-#				}
-#			}
-#		}	
-#}	}
-#

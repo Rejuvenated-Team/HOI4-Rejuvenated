@@ -1937,3 +1937,23 @@ SOV_UNION_SOVEREIGN_STATES = {
 	color = rgb { 78 93 135 }
 	color_ui = rgb { 78 93 135 }
 }
+
+ARG_LPT = {
+	color = rgb { 158 171 255 }
+	color_ui = rgb { 189 204 255 }
+}
+
+ARG_commie = {
+	color = rgb { 180 10 10 }
+	color_ui = rgb { 150 71 71 }
+}
+
+ARG_commie_2 = {
+	color = rgb { 180 10 10 }
+	color_ui = rgb { 150 71 71 }
+}
+
+ARG_andesia = {
+	color = rgb { 180 10 10 }
+	color_ui = rgb { 150 71 71 }
+}
