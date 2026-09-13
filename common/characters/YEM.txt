@@ -1,16 +1,16 @@
 characters={
 	YEM_imam_yahya={
-		name="Imam Yahya"
+		name= YEM_imam_yahya
 		portraits={
 			civilian={
 				large="GFX_portrait_yemen_imam_yahya"
 			}
 		}
 		country_leader={
-			ideology= theocratic_monarchy
+			ideology=theocratic_monarchy
 			expire="1965.1.1.1"
+			traits = { YEM_supreme_imam_trait }
 			id=-1
-			traits = { imam_of_yemen }
 		}
 	}
 	YEM_chandler_ibn_khalid={

@@ -4,7 +4,7 @@ state={
 	name="STATE_450"
 	manpower = 82535
 	
-	state_category = wasteland
+	state_category = city
 
 	history={
 		owner = ITA
@@ -26,5 +26,5 @@ state={
 		1127 4120 10123 11954 
 	}
 
-	local_supplies=0.0 
+	local_supplies=6.0 
 }

@@ -2789,6 +2789,14 @@ characters = {
 					small = GFX_portrait_GER_reinhard_heydrich_small
 				}
 			}
+			#country_leader = { #rj
+			#	ideology = nazism
+			#	expire = 1942.6.4
+			#	traits = {
+			#		iron_heart
+			#	}
+			#	id = -1
+			#}
 			advisor = {
 				slot = political_advisor
 				idea_token = GER_reinhard_heydrich
@@ -2826,6 +2834,14 @@ characters = {
 					small = GFX_portrait_GER_reinhard_heydrich_small
 				}
 			}
+			#country_leader = { #rj
+			#	ideology = nazism
+			#	expire = 1942.6.4
+			#	traits = {
+			#		iron_heart
+			#	}
+			#	id = -1
+			#}
 			advisor = {
 				slot = political_advisor
 				idea_token = GER_reinhard_heydrich
@@ -4178,4 +4194,72 @@ characters = {
 		}
 	}
 
+	###################
+	### Rejuvenated ###
+	###################
+
+	GER_otto_skorzeny = {
+		name = GER_otto_skorzeny
+		portraits = {
+			civilian = {
+				large = GFX_portrait_otto_skorenzy
+				small = GFX_rj_portrait_GER_otto_skorzeny_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_otto_skorzeny
+			allowed = {
+				original_tag = GER
+				has_dlc = "La Resistance"
+			}
+			visible = {
+				OR = {
+					has_country_flag = GER_reinstated_nazi_leadership
+					NOT = {
+						OR = {
+							has_completed_focus = GER_oppose_hitler
+							has_completed_focus = GER_oppose_hitler_ww
+						}
+					}
+				}
+			}
+			available = {
+				has_intelligence_agency = yes
+				OR = {
+					has_government = fascism 
+					has_country_flag = GER_reinstated_nazi_leadership 
+				}
+			}
+			traits = {
+				spymaster
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+
+	GER_theodor_von_hippel = {
+		name = GER_theodor_von_hippel
+		portraits = {
+			civilian = {
+				small = GFX_rj_portrait_GER_theodor_von_hippel_small
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = GER_theodor_von_hippel
+			ledger = army
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				army_commando_2
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
 }

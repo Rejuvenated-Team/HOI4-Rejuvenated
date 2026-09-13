@@ -12,8 +12,6 @@
 ### search_filters = {FOCUS_FILTER_AIR_XP}
 # Reminder that focus filters prio has to be handled in the generic focus file :)
 
-#!gfx:interface/RJ_goals.gfx
-#!gfx:interface/KR_goals.gfx
 focus_tree = {
 	id = soviet_focus
 
@@ -6987,6 +6985,11 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = SOV_vasily_zaitsev
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			custom_effect_tooltip = SOV_desperate_measures_decisions_unlocked_tt
 		}
 	}
@@ -7226,6 +7229,13 @@ focus_tree = {
 			else = {
 				add_ideas = SOV_smersh_no_lar
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SOV_viktor_abakumov
+
+			custom_effect_tooltip = generic_skip_one_line_tt
 
 			if = {
 				limit = {
@@ -13224,9 +13234,9 @@ focus_tree = {
 				effect_tooltip = { add_timed_idea = {idea = SOV_soviet_advisors_spr days = 1095 } }
 			}
 			else = {
-				random_country = {
+				random_country_with_original_tag = {
+					original_tag_to_check = spr
 					limit = {
-						original_tag = SPR
 						has_civil_war = yes
 						OR = {
 							has_government = communism
@@ -13506,13 +13516,8 @@ focus_tree = {
 		
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
-			any_country = {
-				OR = {
-					tag = ENG
-					tag = FRA
-					tag = GER
-					tag = ITA
-				}
+			any_country_of = {
+				target = { ENG FRA GER ITA }
 				has_government = fascism
 				is_major = yes
 			}
@@ -13941,13 +13946,8 @@ focus_tree = {
 		
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
-			any_country = {
-				OR = {
-					tag = ENG
-					tag = FRA
-					tag = GER
-					tag = ITA
-				}
+			any_country_of = {
+				target = { ENG FRA GER ITA }
 				has_government = democratic
 				is_major = yes
 				is_subject = no
@@ -15708,8 +15708,8 @@ focus_tree = {
 		mutually_exclusive = { focus = SOV_reconcile_japan }
 
 		available = {
-			any_country = {
-				SOV_is_free_chinese_tag = yes
+			any_country_with_original_tag_of = {
+				target = constant:country_groups.chinese_nations
 				has_war_with = JAP
 			}
 			is_subject = no

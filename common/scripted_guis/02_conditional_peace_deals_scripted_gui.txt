@@ -151,35 +151,5 @@ scripted_gui = {
 			ai_enabled = { always = no }
 		}
 
-	CPD_built_peace_deal = {
-			# Parser emits an "Unexpected token: context_type" warning in the
-			# error log for this value, but the GUI works correctly at runtime
-			# — the warning is a known false positive. Do not change this to
-			# player_context; that breaks the diplomatic-action entry point.
-			context_type = diplomatic_action
-
-			window_name = "CPD_built_peace_deal"
-
-			dirty = global.CPD_dirty
-
-			dynamic_lists = {
-				CPD_current_deal_gridbox_CONCESSIONS_TO_RECEIVER = {
-					array = ROOT.CPD_current_deal_list_CONCESSIONS
-					change_scope = yes
-					entry_container = "CPD_current_peace_deal_entry"
-				}
-				CPD_current_deal_gridbox_DEMANDS_TO_RECEIVER = {
-					array = ROOT.CPD_current_deal_list_DEMANDS
-					change_scope = yes
-					entry_container = "CPD_current_peace_deal_entry"
-				}
-			}
-
-			properties = {
-				CPD_built_peace_deal_flag_SENDER = { image = "[ROOT.GetFlag]" }
-				CPD_built_peace_deal_flag_RECEIVER = { image = "[THIS.GetFlag]" }
-			}
-
-			ai_enabled = { always = no }
-		}
+	
 }

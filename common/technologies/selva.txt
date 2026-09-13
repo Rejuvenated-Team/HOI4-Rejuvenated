@@ -1,6 +1,6 @@
 technologies = {
 
-	selva_tech = {
+	BRA_jungle_warfare_instruction_center = {
 
 		research_cost = 1
 
