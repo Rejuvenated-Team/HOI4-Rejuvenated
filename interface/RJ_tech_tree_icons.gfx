@@ -274,4 +274,30 @@ spriteTypes = {
 		name = "GFX_air_rockets_4_medium"
 		texturefile = "gfx/interface/technologies/RJ_tech/RJ_aerial_rockets_4.dds"
 	}
+
+
+
+	#####################################
+	### DESIGNER ICONS ##################
+	#####################################
+
+	SpriteType = {
+		name = "GFX_EMI_lc_radio_4"
+		texturefile = "gfx/interface/technologies/designer_icons/lc_radio_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_lc_radio_5"
+		texturefile = "gfx/interface/technologies/designer_icons/lc_radio_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_tank_radio_4"
+		texturefile = "gfx/interface/technologies/designer_icons/tank_radio_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_tank_radio_5"
+		texturefile = "gfx/interface/technologies/designer_icons/tank_radio_5.dds"
+	}
 }
