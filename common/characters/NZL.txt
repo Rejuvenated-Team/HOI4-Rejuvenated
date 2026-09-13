@@ -433,7 +433,7 @@ characters={
 		name="Ralph Cochrane"
 		portraits={
 			army={
-				small="GFX_rj_portrait_NZL_william_friedman_small"
+				small="GFX_rj_portrait_NZL_ralph_cochrane_small"
 			}
 		}
 		advisor={
@@ -625,7 +625,7 @@ characters={
 		name=NZL_bob_semple
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_europe_3"
+				small="GFX_rj_portrait_NZL_bob_semple_small"
 			}
 		}
 		advisor={

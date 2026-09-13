@@ -288,7 +288,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_railroads
+			picture = RJ_idea_NZL_rail_board
 
 			modifier = {
 				political_power_factor = -0.1

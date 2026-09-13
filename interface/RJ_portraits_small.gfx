@@ -288,8 +288,13 @@ spriteTypes = {
 	#################################
 
 	spriteType = {
-		name = "GFX_rj_portrait_NZL_william_friedman_small"
+		name = "GFX_rj_portrait_NZL_ralph_cochrane_small"
 		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_ralph_cochrane.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_bob_semple_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_bob_semple.dds"
 	}
 
 }

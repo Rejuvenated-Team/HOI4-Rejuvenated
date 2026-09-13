@@ -601,6 +601,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_kauri_point.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_rail_board"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_rail_board.dds"
+	}
+
 
 	
 }
