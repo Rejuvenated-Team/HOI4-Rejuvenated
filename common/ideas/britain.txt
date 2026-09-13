@@ -805,19 +805,19 @@ ideas = {
 
 			equipment_bonus = {
 				screen_ship = {
-					naval_speed = 0.1 naval_range = 0.30
+					naval_speed = 0.1 naval_range = 0.25
 					instant = yes
 				}
 				carrier = {
-					naval_speed = 0.1 naval_range = 0.30
+					naval_speed = 0.1 naval_range = 0.25
 					instant = yes
 				}
 				capital_ship = {
-					naval_speed = 0.1 naval_range = 0.30
+					naval_speed = 0.1 naval_range = 0.25
 					instant = yes
 				}
 				submarine = {
-					naval_speed = 0.1 naval_range = 0.30
+					naval_speed = 0.1 naval_range = 0.25
 					instant = yes
 				}
 			}
@@ -1914,35 +1914,7 @@ ideas = {
 			}
 		}
 
-		ENG_secret_weapons_idea = {
-
-			picture = generic_rocket_bonus
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				NOT = { has_government = communism }
-			}
-			
-			removal_cost = -1
-						
-			modifier = {
-				special_project_speed_factor = 0.10
-				scientist_breakthrough_bonus_factor = 0.05
-			}
-			research_bonus = {
-				rocketry = 0.25
-				nuclear = 0.25
-			}
-		}
-
 	}
-
-##########################################################################################################
-##########################################################################################################
-##########################################################################################################
 	
 	naval_manufacturer = {
 		
