@@ -305,5 +305,88 @@ ideas = {
 				}
 			}
 		}
+
+		RJ_NZL_idea_royal_new_zealand_navy = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_RNZN
+
+			modifier = {
+				experience_gain_navy_factor = 0.15
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_ships_no_convoys = {
+					build_cost_ic = -0.10
+				}
+				mio_cat_eq_all_cruiser = {
+					
+				}
+			}
+		}
+
+		RJ_NZL_idea_royal_new_zealand_navy_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_RNZN
+
+			modifier = {
+				experience_gain_navy_factor = 0.15
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_ships_no_convoys = {
+					build_cost_ic = -0.10
+				}
+				mio_cat_eq_all_cruiser = {
+					build_cost_ic = -0.10
+					naval_speed = 0.10
+					reliability = 0.05
+				}
+			}
+		}
+
+		RJ_NZL_idea_pacific_minesweepers = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = SOV_mine_warfare
+
+			modifier = {
+				naval_mine_hit_chance = -0.10
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_ships_no_convoys = {
+					mines_sweeping = 0.15
+				}
+			}
+		}
 	}
 }

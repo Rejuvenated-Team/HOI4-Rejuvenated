@@ -587,6 +587,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_RNZN"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_RNZN.dds"
+	}
+
+	spriteType = {
 		name = "GFX_idea_RJ_idea_NZL_commonwealth_air_training"
 		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_commonwealth_air_training.dds"
 	}

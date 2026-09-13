@@ -245,17 +245,14 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			navy_experience = 25
-			add_breakthrough_progress = {
-				specialization = specialization_naval
-				value = 0.25
-			}
+			navy_experience = 75
 			add_doctrine_cost_reduction = {
 				name = NZL_form_the_rnzn
 				cost_reduction = 0.5
 				uses = 2
 				category = naval_doctrine
 			}
+			add_ideas = RJ_NZL_idea_royal_new_zealand_navy
 		}
 	}
 
@@ -297,7 +294,7 @@
 		y = 1
 		relative_position_id = RJ_NZL_royal_new_zealand_navy
 
-		cost = 7.2
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
@@ -314,7 +311,16 @@
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = NZL_cruiser_bonus
+				uses = 2
+				bonus = 0.5
+				category = mio_cat_tech_all_cruiser_and_modules
+			}
+			swap_ideas = {
+				remove_idea = RJ_NZL_idea_royal_new_zealand_navy
+				add_idea = RJ_NZL_idea_royal_new_zealand_navy_2
+			}
 		}
 	}
 
@@ -343,7 +349,13 @@
 		search_filters = { FOCUS_FILTER_NAVY_XP }
 
 		completion_reward = {
-			
+			add_ideas = RJ_NZL_idea_pacific_minesweepers
+			add_tech_bonus = {
+				name = NZL_mines_bonus
+				uses = 1
+				bonus = 1.5
+				category = naval_mines
+			}
 		}
 	}
 
