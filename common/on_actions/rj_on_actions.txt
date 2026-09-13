@@ -1,5 +1,34 @@
 on_actions = {
 
+	on_startup = {
+		effect = {
+			ENG = {
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Arms Against Tyranny"
+						}
+					}
+					reduce_focus_completion_cost = { #Worse effects w/o AAT
+						focus = ENG_parachute_regiments
+						cost = 15
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "La Resistance"
+						}
+					}
+					reduce_focus_completion_cost = { #Worse effects w/o LaR
+						focus = ENG_expand_the_secret_intelligence_service_focus
+						cost = 20
+					}
+				}
+			}
+		}
+	}
+
 	on_puppet = {
 		effect = {
 			if = {
