@@ -2007,4 +2007,35 @@ characters={
 			}
 		}
 	}
+
+	###################
+	### Rejuvenated ###
+	###################
+
+	FRA_louis_rivet={
+		name=FRA_louis_rivet
+		portraits={
+			army={
+				small="GFX_rj_portrait_FRA_louis_rivet_small"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_louis_rivet
+			available = {
+				has_intelligence_agency = yes
+			}
+			allowed = {
+				original_tag = FRA
+				has_dlc = "La Resistance"
+			}
+			traits = {
+				spymaster
+			}
+			ai_will_do = {
+				factor = 0.25
+			}
+		}
+	}
+
 }

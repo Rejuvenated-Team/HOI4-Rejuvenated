@@ -3685,4 +3685,58 @@ characters = {
 			}
 		}
 	}
+
+	###################
+	### Rejuvenated ###
+	###################
+
+	ITA_cesare_ame={
+		name=ITA_cesare_ame
+		portraits={
+			army={
+				small="GFX_rj_portrait_ITA_cesare_ame_small"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ITA_cesare_ame
+			available = {
+				has_intelligence_agency = yes
+			}
+			allowed = {
+				ITA_is_italian_tag = yes
+				has_dlc = "La Resistance"
+			}
+			traits = {
+				spymaster
+			}
+			ai_will_do = {
+				factor = 0.25
+			}
+		}
+	}
+
+	ITA_paolo_aloisi={
+		name=ITA_paolo_aloisi
+		portraits={
+			army={
+				small="GFX_rj_portrait_ITA_paolo_aloisi_small"
+			}
+		}
+		advisor={
+			slot = high_command
+			ledger = army
+			idea_token = ITA_paolo_aloisi
+			allowed = {
+				ITA_is_italian_tag = yes
+			}
+			traits = {
+				army_commando_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.1
+			}
+		}
+	}
 }

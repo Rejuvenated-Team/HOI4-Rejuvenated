@@ -1996,7 +1996,7 @@ leader_traits = {
 	head_of_intelligence = { #rj buff
 		random = no
 		sprite = 15
-		operative_slot = 2
+		operative_slot = 1
 		agency_upgrade_time = -0.15
 		intelligence_operation_speed = 0.10
 	}
@@ -2013,13 +2013,11 @@ leader_traits = {
 		decryption_power = 10
 	}
 
-	spymaster = {
+	spymaster = { #rj rework
 		random = no
 		sprite = 15
-		operative_slot = 1
-		agency_upgrade_time = -0.15
-		intelligence_agency_defense = 1
-		intel_network_gain_factor = 0.2
+		operative_slot = 2
+		operation_outcome = 0.2
 	}
 
 	spymaster_no_lar = {

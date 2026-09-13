@@ -2,7 +2,7 @@
 	id = china_warlord_focus
 	
 	country = {
-		factor = 0
+		base = 0
 		
 		modifier = {
 			add = 10
@@ -75,7 +75,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			base = 20
 		}
 
 		available = {
@@ -113,7 +113,7 @@
 		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 			modifier = {
 				factor = 10
 				OR = {
@@ -122,6 +122,7 @@
 					original_tag = GDC
 					original_tag = XIC
 					original_tag = SND
+					original_tag = HBC
 				}
 			}
 		}
@@ -147,6 +148,10 @@
 			custom_effect_tooltip = CHI_cooperation_with_the_nationalists_effect_tooltip
 			CHI = { add_opinion_modifier = { modifier = CHI_cooperation_with_the_nationalists_positive target = ROOT } }
 			PRC = { add_opinion_modifier = { modifier = CHI_cooperation_with_the_nationalists_negative target = ROOT } }
+			add_relation_rule_override = {
+				target = CHI
+				can_send_volunteers = yes
+			}
 		}
 	}
 
@@ -161,7 +166,7 @@
 		cost = 7.2
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
@@ -188,6 +193,13 @@
 				}
 				custom_effect_tooltip = CHI_anti_opposition_campaigns_effect_tooltip_no_nationalists
 			}
+			IF = {
+				limit = {
+					is_in_faction = yes
+					has_dlc = "No Compromise, No Surrender"
+				}
+				add_faction_influence_ratio = 0.01
+			}
 		}
 
 		completion_reward = {
@@ -210,6 +222,13 @@
 				}
 				custom_effect_tooltip = CHI_anti_opposition_campaigns_effect_tooltip_no_nationalists
 			}
+			IF = {
+				limit = {
+					is_in_faction = yes
+					has_dlc = "No Compromise, No Surrender"
+				}
+				add_faction_influence_ratio = 0.01
+			}
 		}
 	}
 
@@ -224,7 +243,7 @@
 		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
@@ -259,7 +278,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
@@ -273,6 +292,13 @@
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			add_stability = 0.1
+			IF = {
+				limit = {
+					is_in_faction = yes
+					has_dlc = "No Compromise, No Surrender"
+				}
+				add_faction_influence_ratio = 0.01
+			}
 		}
 	}
 
@@ -288,11 +314,17 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 5
+			base = 5
 		}
 
 		available = {
+			has_idea = PRC_government_corruption
+		}
 
+		bypass = {
+			NOT = {
+				has_idea = PRC_government_corruption
+			}
 		}
 		
 
@@ -315,7 +347,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
@@ -333,7 +365,7 @@
 
 	focus = {
 		id = CHI_land_reform
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_generic_land_redistribution
 		prerequisite = { focus = CHI_root_out_corruption }
 		x = 0
 		y = 1
@@ -342,7 +374,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
@@ -375,17 +407,32 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
+			has_idea = CHI_ineffective_bureaucracy_warlord
+		}
 
+		bypass = {
+			NOT = {
+				has_idea = CHI_ineffective_bureaucracy_warlord
+			}
 		}
 
 		completion_reward = {
+
 			swap_ideas = {
 				remove_idea = CHI_ineffective_bureaucracy_warlord
 				add_idea = RJ_CHI_reformed_administration_idea
+			}
+
+			IF = {
+				limit = {
+					is_in_faction = yes
+					has_dlc = "No Compromise, No Surrender"
+				}
+				add_faction_influence_ratio = 0.02
 			}
 		}
 	}
@@ -401,7 +448,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes 
@@ -459,7 +506,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes 
@@ -512,7 +559,7 @@
 		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 			modifier = {
 				factor = 10
 				OR = {
@@ -579,7 +626,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 4
+			base = 4
 		}
 
 		available = {
@@ -608,7 +655,7 @@
 		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
@@ -628,7 +675,7 @@
 
 	focus = {
 		id = CHI_land_value_tax
-		icon = GFX_focus_PRC_rural_region_development
+		icon = GFX_focus_PRC_land_revolution_expedited
 		prerequisite = { focus = CHI_land_redistribution }
 		x = 1
 		y = 1
@@ -637,7 +684,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 4
+			base = 4
 		}
 
 		available = {
@@ -661,11 +708,17 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
+			has_idea = PRC_government_corruption
+		}
 
+		bypass = {
+			NOT = {
+				has_idea = PRC_government_corruption
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -685,11 +738,17 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
+			has_idea = CHI_ineffective_bureaucracy_warlord
+		}
 
+		bypass = {
+			NOT = {
+				has_idea = CHI_ineffective_bureaucracy_warlord
+			}
 		}
 
 		completion_reward = {
@@ -711,7 +770,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 			modifier = {
 				factor = 0
 				event_target:WTT_communist_china = {
@@ -783,7 +842,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 			modifier = {
 				factor = 0.1
 				is_historical_focus_on = yes
@@ -835,7 +894,7 @@
 		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 			modifier = {
 				factor = 10
 				original_tag = GXC
@@ -898,7 +957,7 @@
 		cost = 7.2
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
@@ -922,7 +981,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
@@ -946,7 +1005,7 @@
 		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
@@ -974,7 +1033,7 @@
 		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
@@ -1031,7 +1090,7 @@
 		cost = 7.2
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
@@ -1057,7 +1116,7 @@
 		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
@@ -1082,7 +1141,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
@@ -1105,7 +1164,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
@@ -1131,7 +1190,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
@@ -1157,7 +1216,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
@@ -1204,7 +1263,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 4
+			base = 4
 		}
 
 		available = {
@@ -1265,7 +1324,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 4
+			base = 4
 		}
 
 		available = {
@@ -1324,7 +1383,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 10
+			base = 10
 		}
 
 		available = {
@@ -1348,7 +1407,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 4
+			base = 4
 		}
 
 		available = {
@@ -1405,7 +1464,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 4
+			base = 4
 		}
 
 		available = {
@@ -1429,7 +1488,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
@@ -1453,7 +1512,7 @@
 		cost = 7.2
 
 		ai_will_do = {
-			factor = 3
+			base = 3
 		}
 
 		available = {
@@ -1490,7 +1549,7 @@
 		cost = 5
 
 		ai_will_do = {
-			factor = 2
+			base = 2
 		}
 
 		available = {
@@ -1518,7 +1577,7 @@
 		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
@@ -1552,7 +1611,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
@@ -1584,7 +1643,7 @@
 		relative_position_id = CHI_secure_internal_politics
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
@@ -1622,7 +1681,7 @@
 		}
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
@@ -1652,7 +1711,7 @@
 		}
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {

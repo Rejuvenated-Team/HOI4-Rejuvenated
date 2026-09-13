@@ -80,6 +80,35 @@ spriteTypes = {
 		texturefile = "gfx/leaders/GER/rj_portrait_GER_gunther_von_kluge.dds"
 	}
 
+	######################
+	### SLO - Slovakia ###
+	######################
+
+	spriteType = {
+		name = "GFX_rj_portrait_SLO_jan_ursiny"
+		texturefile = "gfx/leaders/SLO/rj_portrait_SLO_jan_ursiny.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_SLO_jozef_turanec"
+		texturefile = "gfx/leaders/SLO/rj_portrait_SLO_jozef_turanec.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_SLO_karol_smidke"
+		texturefile = "gfx/leaders/SLO/rj_portrait_SLO_karol_smidke.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_SLO_rudolf_viest"
+		texturefile = "gfx/leaders/SLO/rj_portrait_SLO_rudolf_viest.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_SLO_vojtech_tuka"
+		texturefile = "gfx/leaders/SLO/rj_portrait_SLO_vojtech_tuka.dds"
+	}
+
 	##########################
 	### SOV - Soviet Union ###
 	##########################

@@ -4268,8 +4268,7 @@ CHL_mapuche_nationalism_decisions = {
 					RAP = {
 						exists = no
 					}
-					any_country = {
-						is_subject_of = ROOT
+					any_subject_country = {
 						controls_state = 948
 					}
 				}
@@ -4294,9 +4293,10 @@ CHL_mapuche_nationalism_decisions = {
 					948 = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 					}
@@ -4322,9 +4322,10 @@ CHL_mapuche_nationalism_decisions = {
 					270 = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 					}
@@ -4443,8 +4444,7 @@ CHL_mapuche_nationalism_decisions = {
 					TAH = {
 						exists = no
 					}
-					any_country = {
-						is_subject_of = ROOT
+					any_subject_country = {
 						controls_state = 641
 					}
 				}
@@ -4469,9 +4469,10 @@ CHL_mapuche_nationalism_decisions = {
 					is_core_of = TAH
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
+						OWNER = {
+							any_subject_country = {
+								controls_state = PREV.PREV
+							}
 						}
 					}
 				}
@@ -4594,8 +4595,7 @@ CHL_mapuche_nationalism_decisions = {
 					SAM = {
 						exists = no
 					}
-					any_country = {
-						is_subject_of = ROOT
+					any_subject_country = {
 						controls_state = 726
 					}
 				}
@@ -4731,8 +4731,7 @@ CHL_mapuche_nationalism_decisions = {
 					HAW = {
 						exists = no
 					}
-					any_country = {
-						is_subject_of = ROOT
+					any_subject_country = {
 						controls_state = 629 
 					}
 				}
@@ -4757,9 +4756,10 @@ CHL_mapuche_nationalism_decisions = {
 				limit = {
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
+						OWNER = {
+							any_subject_country = {
+								controls_state = PREV.PREV
+							}
 						}
 					}
 					is_core_of = HAW
@@ -4880,8 +4880,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 301 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 301 
 				}
 			}
@@ -4889,8 +4888,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 688 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 688 
 				}
 			}
@@ -4898,8 +4896,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 957 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 957 
 				}
 			}
@@ -4907,8 +4904,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 510 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 510 
 				}
 			}
@@ -4916,8 +4912,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 504 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 504 
 				}
 			}
@@ -4925,8 +4920,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 944 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 944 
 				}
 			}
@@ -4934,8 +4928,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 503 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 503 
 				}
 			}
@@ -4943,8 +4936,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 502 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 502 
 				}
 			}
@@ -4968,9 +4960,10 @@ CHL_mapuche_nationalism_decisions = {
 				limit = {
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
+						OWNER = {
+							any_subject_country = {
+								controls_state = PREV.PREV
+							}
 						}
 					}
 					OR = {
@@ -5129,8 +5122,7 @@ CHL_mapuche_nationalism_decisions = {
 				OR = {
 					controls_state = 494 
 						
-					any_country = {
-						is_subject_of = ROOT
+					any_subject_country = {
 						controls_state = 494 
 					}
 				}
@@ -5138,8 +5130,7 @@ CHL_mapuche_nationalism_decisions = {
 				OR = {
 					controls_state = 492 
 						
-					any_country = {
-						is_subject_of = ROOT
+					any_subject_country = {
 						controls_state = 492 
 					}
 				}
@@ -5147,8 +5138,7 @@ CHL_mapuche_nationalism_decisions = {
 				OR = {
 					controls_state = 947 
 						
-					any_country = {
-						is_subject_of = ROOT
+					any_subject_country = {
 						controls_state = 947 
 					}
 				}
@@ -5156,8 +5146,7 @@ CHL_mapuche_nationalism_decisions = {
 				OR = {
 					controls_state = 303 
 						
-					any_country = {
-						is_subject_of = ROOT
+					any_subject_country = {
 						controls_state = 303 
 					}
 				}
@@ -5165,8 +5154,7 @@ CHL_mapuche_nationalism_decisions = {
 				OR = {
 					controls_state = 491 
 						
-					any_country = {
-						is_subject_of = ROOT
+					any_subject_country = {
 						controls_state = 491 
 					}
 				}
@@ -5178,8 +5166,7 @@ CHL_mapuche_nationalism_decisions = {
 				OR = {
 					controls_state = 490 
 						
-					any_country = {
-						is_subject_of = ROOT
+					any_subject_country = {
 						controls_state = 490 
 					}
 				}
@@ -5187,8 +5174,7 @@ CHL_mapuche_nationalism_decisions = {
 				OR = {
 					controls_state = 305 
 						
-					any_country = {
-						is_subject_of = ROOT
+					any_subject_country = {
 						controls_state = 305 
 					}
 				}
@@ -5198,8 +5184,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 951 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 951 
 				}
 			}
@@ -5207,8 +5192,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 506 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 506 
 				}
 			}
@@ -5216,8 +5200,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 940 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 940 
 				}
 			}
@@ -5241,9 +5224,10 @@ CHL_mapuche_nationalism_decisions = {
 				limit = {
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
+						OWNER = {
+							any_subject_country = {
+								controls_state = PREV.PREV
+							}
 						}
 					}
 					OR = {
@@ -5268,9 +5252,10 @@ CHL_mapuche_nationalism_decisions = {
 					649 = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 					}
@@ -5415,8 +5400,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 312 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 312 
 				}
 			}
@@ -5424,8 +5408,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 317 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 317 
 				}
 			}
@@ -5456,9 +5439,10 @@ CHL_mapuche_nationalism_decisions = {
 				limit = {
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
+						OWNER = {
+							any_subject_country = {
+								controls_state = PREV.PREV
+							}
 						}
 					}
 					OR = {
@@ -5589,8 +5573,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 313 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 313 
 				}
 			}
@@ -5598,8 +5581,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 475 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 475 
 				}
 			}
@@ -5607,8 +5589,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 476 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 476 
 				}
 			}
@@ -5616,8 +5597,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 474 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 474 
 				}
 			}
@@ -5641,9 +5621,10 @@ CHL_mapuche_nationalism_decisions = {
 				limit = {
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
+						OWNER = {
+							any_subject_country = {
+								controls_state = PREV.PREV
+							}
 						}
 					}
 					OR = {
@@ -5784,8 +5765,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 463 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 463 
 				}
 			}
@@ -5793,8 +5773,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 864 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 864 
 				}
 			}
@@ -5802,8 +5781,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 472 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 472 
 				}
 			}
@@ -5811,8 +5789,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 683 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 683 
 				}
 			}
@@ -5820,8 +5797,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 466 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 466 
 				}
 			}
@@ -5829,8 +5805,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 332 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 332 
 				}
 			}
@@ -5838,8 +5813,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 101 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 101 
 				}
 			}
@@ -5847,8 +5821,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 861 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 861 
 				}
 			}
@@ -5872,9 +5845,10 @@ CHL_mapuche_nationalism_decisions = {
 				limit = {
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
+						OWNER = {
+							any_subject_country = {
+								controls_state = PREV.PREV
+							}
 						}
 					}
 					OR = {
@@ -5897,9 +5871,10 @@ CHL_mapuche_nationalism_decisions = {
 					875 = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 					}
@@ -5918,9 +5893,10 @@ CHL_mapuche_nationalism_decisions = {
 					650 = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 					}
@@ -6060,8 +6036,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 300 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 300 
 				}
 			}
@@ -6069,8 +6044,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 945 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 945 
 				}
 			}
@@ -6078,8 +6052,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 946 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 946 
 				}
 			}
@@ -6103,9 +6076,10 @@ CHL_mapuche_nationalism_decisions = {
 				limit = {
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
+						OWNER = {
+							any_subject_country = {
+								controls_state = PREV.PREV
+							}
 						}
 					}
 					OR = {
@@ -6234,8 +6208,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 311 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 311 
 				}
 			}
@@ -6270,9 +6243,10 @@ CHL_mapuche_nationalism_decisions = {
 				limit = {
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
+						OWNER = {
+							any_subject_country = {
+								controls_state = PREV.PREV
+							}
 						}
 					}
 					
@@ -6385,8 +6359,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 314 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 314 
 				}
 			}
@@ -6410,9 +6383,10 @@ CHL_mapuche_nationalism_decisions = {
 				limit = {
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
+						OWNER = {
+							any_subject_country = {
+								controls_state = PREV.PREV
+							}
 						}
 					}
 					
@@ -6536,8 +6510,7 @@ CHL_mapuche_nationalism_decisions = {
 				OR = {
 					controls_state = 493 
 						
-					any_country = {
-						is_subject_of = ROOT
+					any_subject_country = {
 						controls_state = 493 
 					}
 				}
@@ -6545,8 +6518,7 @@ CHL_mapuche_nationalism_decisions = {
 				OR = {
 					controls_state = 306 
 						
-					any_country = {
-						is_subject_of = ROOT
+					any_subject_country = {
 						controls_state = 306 
 					}
 				}
@@ -6554,8 +6526,7 @@ CHL_mapuche_nationalism_decisions = {
 				OR = {
 					controls_state = 486 
 						
-					any_country = {
-						is_subject_of = ROOT
+					any_subject_country = {
 						controls_state = 486 
 					}
 				}
@@ -6564,8 +6535,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 307 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 307 
 				}
 			}
@@ -6573,8 +6543,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 489 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 489 
 				}
 			}
@@ -6582,8 +6551,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 304 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 304 
 				}
 			}
@@ -6591,8 +6559,7 @@ CHL_mapuche_nationalism_decisions = {
 			OR = {
 				controls_state = 316 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 316 
 				}
 			}
@@ -6616,9 +6583,10 @@ CHL_mapuche_nationalism_decisions = {
 				limit = {
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
+						OWNER = {
+							any_subject_country = {
+								controls_state = PREV.PREV
+							}
 						}
 					}
 					OR = {
@@ -6651,9 +6619,10 @@ CHL_mapuche_nationalism_decisions = {
 					685 = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 					}
@@ -6668,9 +6637,10 @@ CHL_mapuche_nationalism_decisions = {
 					695 = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 					}
@@ -6685,9 +6655,10 @@ CHL_mapuche_nationalism_decisions = {
 					691 = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 					}
@@ -6839,48 +6810,42 @@ CHL_mapuche_nationalism_decisions = {
 					OR = {
 						controls_state = 487 
 							
-						any_country = {
-							is_subject_of = ROOT
+						any_subject_country = {
 							controls_state = 487 
 						}
 					}
 					OR = {
 						controls_state = 302 
 							
-						any_country = {
-							is_subject_of = ROOT
+						any_subject_country = {
 							controls_state = 302 
 						}
 					}
 					OR = {
 						controls_state = 1142 
 							
-						any_country = {
-							is_subject_of = ROOT
+						any_subject_country = {
 							controls_state = 1142 
 						}
 					}
 					OR = {
 						controls_state = 1143 
 							
-						any_country = {
-							is_subject_of = ROOT
+						any_subject_country = {
 							controls_state = 1143 
 						}
 					}
 					OR = {
 						controls_state = 1144 
 							
-						any_country = {
-							is_subject_of = ROOT
+						any_subject_country = {
 							controls_state = 1144 
 						}
 					}
 					OR = {
 						controls_state = 1145 
 							
-						any_country = {
-							is_subject_of = ROOT
+						any_subject_country = {
 							controls_state = 1145 
 						}
 					}
@@ -6906,9 +6871,10 @@ CHL_mapuche_nationalism_decisions = {
 				limit = {
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
+						OWNER = {
+							any_subject_country = {
+								controls_state = PREV.PREV
+							}
 						}
 					}
 					OR = {
@@ -6929,9 +6895,10 @@ CHL_mapuche_nationalism_decisions = {
 					942 = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 					}
@@ -7132,8 +7099,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 495 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 495 
 							}
 						}
@@ -7141,8 +7107,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 938 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 938 
 							}
 						}
@@ -7150,8 +7115,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 280 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 280 
 							}
 						}
@@ -7159,8 +7123,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 497 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 497 
 							}
 						}
@@ -7168,8 +7131,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 941 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 941 
 							}
 						}
@@ -7177,8 +7139,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 937 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 937 
 							}
 						}
@@ -7186,8 +7147,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 935 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 935 
 							}
 						}
@@ -7195,8 +7155,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 498 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 498 
 							}
 						}
@@ -7204,8 +7163,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 936 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 936 
 							}
 						}
@@ -7213,8 +7171,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 499 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 499 
 							}
 						}
@@ -7222,8 +7179,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 505 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 505 
 							}
 						}
@@ -7231,8 +7187,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 496 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 496 
 							}
 						}
@@ -7240,8 +7195,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 943 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 943 
 							}
 						}
@@ -7249,8 +7203,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 500 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 500 
 							}
 						}
@@ -7258,8 +7211,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 501 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 501 
 							}
 						}
@@ -7288,9 +7240,10 @@ CHL_mapuche_nationalism_decisions = {
 					limit = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 						OR = {
@@ -7502,8 +7455,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 477 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 477 
 							}
 						}
@@ -7511,8 +7463,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 485 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 485 
 							}
 						}
@@ -7520,8 +7471,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 277 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 277 
 							}
 						}
@@ -7529,8 +7479,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 478 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 478 
 							}
 						}
@@ -7538,8 +7487,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 479 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 479 
 							}
 						}
@@ -7547,8 +7495,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 480 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 480 
 							}
 						}
@@ -7556,8 +7503,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 481 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 481 
 							}
 						}
@@ -7565,8 +7511,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 482 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 482 
 							}
 						}
@@ -7574,8 +7519,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 483 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 483 
 							}
 						}
@@ -7583,8 +7527,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 484 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 484 
 							}
 						}
@@ -7613,9 +7556,10 @@ CHL_mapuche_nationalism_decisions = {
 					limit = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 						OR = {
@@ -7813,8 +7757,7 @@ CHL_mapuche_nationalism_decisions = {
 					OR = {
 						controls_state = 310 
 							
-						any_country = {
-							is_subject_of = ROOT
+						any_subject_country = {
 							controls_state = 310 
 						}
 					}
@@ -7822,8 +7765,7 @@ CHL_mapuche_nationalism_decisions = {
 					OR = {
 						controls_state = 309 
 							
-						any_country = {
-							is_subject_of = ROOT
+						any_subject_country = {
 							controls_state = 309 
 						}
 					}
@@ -7831,8 +7773,7 @@ CHL_mapuche_nationalism_decisions = {
 					OR = {
 						controls_state = 687 
 							
-						any_country = {
-							is_subject_of = ROOT
+						any_subject_country = {
 							controls_state = 687 
 						}
 					}
@@ -7840,8 +7781,7 @@ CHL_mapuche_nationalism_decisions = {
 					OR = {
 						controls_state = 488 
 							
-						any_country = {
-							is_subject_of = ROOT
+						any_subject_country = {
 							controls_state = 488 
 						}
 					}
@@ -7849,8 +7789,7 @@ CHL_mapuche_nationalism_decisions = {
 					OR = {
 						controls_state = 939 
 							
-						any_country = {
-							is_subject_of = ROOT
+						any_subject_country = {
 							controls_state = 939 
 						}
 					}
@@ -7858,8 +7797,7 @@ CHL_mapuche_nationalism_decisions = {
 					OR = {
 						controls_state = 969
 							
-						any_country = {
-							is_subject_of = ROOT
+						any_subject_country = {
 							controls_state = 939 
 						}
 					}
@@ -7886,9 +7824,10 @@ CHL_mapuche_nationalism_decisions = {
 					limit = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 						OR = {
@@ -8094,8 +8033,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 860 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 860 
 							}
 						}
@@ -8103,8 +8041,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 863 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 863 
 							}
 						}
@@ -8112,8 +8049,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 862 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 862 
 							}
 						}
@@ -8121,8 +8057,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 468 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 468 
 							}
 						}
@@ -8130,8 +8065,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 465 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 465 
 							}
 						}
@@ -8139,8 +8073,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 464 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 464 
 							}
 						}
@@ -8148,8 +8081,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 276 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 276 
 							}
 						}
@@ -8157,8 +8089,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 682 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 682 
 							}
 						}
@@ -8166,8 +8097,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 866 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 866 
 							}
 						}
@@ -8175,8 +8105,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 867 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 867 
 							}
 						}
@@ -8184,8 +8113,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 467 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 467 
 							}
 						}
@@ -8193,8 +8121,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 865 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 865 
 							}
 						}
@@ -8202,8 +8129,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 469 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 469 
 							}
 						}
@@ -8211,8 +8137,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 470 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 470 
 							}
 						}
@@ -8220,8 +8145,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 473 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 473 
 							}
 						}
@@ -8229,8 +8153,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 471 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 471 
 							}
 						}
@@ -8238,8 +8161,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 740 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 740 
 							}
 						}
@@ -8268,9 +8190,10 @@ CHL_mapuche_nationalism_decisions = {
 					limit = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 						OR = {
@@ -8303,9 +8226,10 @@ CHL_mapuche_nationalism_decisions = {
 					739 = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 					}
@@ -8320,9 +8244,10 @@ CHL_mapuche_nationalism_decisions = {
 					331 = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 					}
@@ -8337,9 +8262,10 @@ CHL_mapuche_nationalism_decisions = {
 					730 = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 					}
@@ -8567,8 +8493,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 386 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 386 
 							}
 						}
@@ -8576,8 +8501,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 385 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 385 
 							}
 						}
@@ -8585,8 +8509,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 378 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 378 
 							}
 						}
@@ -8594,8 +8517,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 379 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 379 
 							}
 						}
@@ -8603,8 +8525,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 387 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 387 
 							}
 						}
@@ -8612,8 +8533,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 388 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 388 
 							}
 						}
@@ -8621,8 +8541,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 381 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 381 
 							}
 						}
@@ -8630,8 +8549,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 380 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 380 
 							}
 						}
@@ -8639,8 +8557,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 382 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 382 
 							}
 						}
@@ -8648,8 +8565,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 377 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 377 
 							}
 						}
@@ -8657,8 +8573,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 376 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 376 
 							}
 						}
@@ -8666,8 +8581,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 389 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 389 
 							}
 						}
@@ -8675,8 +8589,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 390 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 390 
 							}
 						}
@@ -8684,8 +8597,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 384 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 384 
 							}
 						}
@@ -8693,8 +8605,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 383 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 383 
 							}
 						}
@@ -8702,8 +8613,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 374 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 374 
 							}
 						}
@@ -8711,8 +8621,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 375 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 375 
 							}
 						}
@@ -8720,8 +8629,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 391 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 391 
 							}
 						}
@@ -8729,8 +8637,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 392 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 392 
 							}
 						}
@@ -8738,8 +8645,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 373 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 373 
 							}
 						}
@@ -8747,8 +8653,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 372 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 372 
 							}
 						}
@@ -8756,8 +8661,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 371 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 371 
 							}
 						}
@@ -8765,8 +8669,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 394 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 394 
 							}
 						}
@@ -8774,8 +8677,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 395 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 395 
 							}
 						}
@@ -8783,8 +8685,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 393 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 393 
 							}
 						}
@@ -8792,8 +8693,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 396 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 396 
 							}
 						}
@@ -8801,8 +8701,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 261 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 261 
 							}
 						}
@@ -8810,8 +8709,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 369 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 369 
 							}
 						}
@@ -8819,8 +8717,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 368 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 368 
 							}
 						}
@@ -8828,8 +8725,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 370 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 370 
 							}
 						}
@@ -8837,8 +8733,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 367 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 367 
 							}
 						}
@@ -8846,8 +8741,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 365 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 365 
 							}
 						}
@@ -8855,8 +8749,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 366 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 366 
 							}
 						}
@@ -8864,8 +8757,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 364 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 364 
 							}
 						}
@@ -8873,8 +8765,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 363 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 363 
 							}
 						}
@@ -8882,8 +8773,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 362 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 362 
 							}
 						}
@@ -8891,8 +8781,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 816 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 816 
 							}
 						}
@@ -8900,8 +8789,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 361 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 361 
 							}
 						}
@@ -8909,8 +8797,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 360 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 360 
 							}
 						}
@@ -8918,8 +8805,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 359 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 359 
 							}
 						}
@@ -8927,8 +8813,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 358 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 358 
 							}
 						}
@@ -8936,8 +8821,7 @@ CHL_mapuche_nationalism_decisions = {
 						OR = {
 							controls_state = 357 
 								
-							any_country = {
-								is_subject_of = ROOT
+							any_subject_country = {
 								controls_state = 357 
 							}
 						}
@@ -8966,9 +8850,10 @@ CHL_mapuche_nationalism_decisions = {
 					limit = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 						OR = {
@@ -10029,8 +9914,7 @@ CHL_monarchist_decisions = {
 				OR = {
 					controls_state = 494 
 						
-					any_country = {
-						is_subject_of = ROOT
+					any_subject_country = {
 						controls_state = 494 
 					}
 				}
@@ -10038,8 +9922,7 @@ CHL_monarchist_decisions = {
 				OR = {
 					controls_state = 492 
 						
-					any_country = {
-						is_subject_of = ROOT
+					any_subject_country = {
 						controls_state = 492 
 					}
 				}
@@ -10047,8 +9930,7 @@ CHL_monarchist_decisions = {
 				OR = {
 					controls_state = 947 
 						
-					any_country = {
-						is_subject_of = ROOT
+					any_subject_country = {
 						controls_state = 947 
 					}
 				}
@@ -10056,8 +9938,7 @@ CHL_monarchist_decisions = {
 				OR = {
 					controls_state = 303 
 						
-					any_country = {
-						is_subject_of = ROOT
+					any_subject_country = {
 						controls_state = 303 
 					}
 				}
@@ -10065,8 +9946,7 @@ CHL_monarchist_decisions = {
 				OR = {
 					controls_state = 491 
 						
-					any_country = {
-						is_subject_of = ROOT
+					any_subject_country = {
 						controls_state = 491 
 					}
 				}
@@ -10078,8 +9958,7 @@ CHL_monarchist_decisions = {
 				OR = {
 					controls_state = 490 
 						
-					any_country = {
-						is_subject_of = ROOT
+					any_subject_country = {
 						controls_state = 490 
 					}
 				}
@@ -10087,8 +9966,7 @@ CHL_monarchist_decisions = {
 				OR = {
 					controls_state = 305 
 						
-					any_country = {
-						is_subject_of = ROOT
+					any_subject_country = {
 						controls_state = 305 
 					}
 				}
@@ -10098,8 +9976,7 @@ CHL_monarchist_decisions = {
 			OR = {
 				controls_state = 951 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 951 
 				}
 			}
@@ -10107,8 +9984,7 @@ CHL_monarchist_decisions = {
 			OR = {
 				controls_state = 506 
 					
-				any_country = {
-					is_subject_of = ROOT
+				any_subject_country = {
 					controls_state = 506 
 				}
 			}
@@ -10116,8 +9992,7 @@ CHL_monarchist_decisions = {
 			#OR = {
 			#	controls_state = 940 
 			#		
-			#	any_country = {
-			#		is_subject_of = ROOT
+			#	any_subject_country = {
 			#		controls_state = 940 
 			#	}
 			#}
@@ -10141,9 +10016,10 @@ CHL_monarchist_decisions = {
 				limit = {
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
+						OWNER = {
+							any_subject_country = {
+								controls_state = PREV.PREV
+							}
 						}
 					}
 					OR = {
@@ -10168,9 +10044,10 @@ CHL_monarchist_decisions = {
 					649 = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 					}
@@ -10185,9 +10062,10 @@ CHL_monarchist_decisions = {
 					940 = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 					}
@@ -10475,8 +10353,7 @@ CHL_monarchist_decisions = {
 					OR = {
 						controls_state = 310 
 							
-						any_country = {
-							is_subject_of = ROOT
+						any_subject_country = {
 							controls_state = 310 
 						}
 					}
@@ -10484,8 +10361,7 @@ CHL_monarchist_decisions = {
 					OR = {
 						controls_state = 309 
 							
-						any_country = {
-							is_subject_of = ROOT
+						any_subject_country = {
 							controls_state = 309 
 						}
 					}
@@ -10493,8 +10369,7 @@ CHL_monarchist_decisions = {
 					OR = {
 						controls_state = 687 
 							
-						any_country = {
-							is_subject_of = ROOT
+						any_subject_country = {
 							controls_state = 687 
 						}
 					}
@@ -10502,8 +10377,7 @@ CHL_monarchist_decisions = {
 					OR = {
 						controls_state = 488 
 							
-						any_country = {
-							is_subject_of = ROOT
+						any_subject_country = {
 							controls_state = 488 
 						}
 					}
@@ -10511,8 +10385,7 @@ CHL_monarchist_decisions = {
 					OR = {
 						controls_state = 939 
 							
-						any_country = {
-							is_subject_of = ROOT
+						any_subject_country = {
 							controls_state = 939 
 						}
 					}
@@ -10520,8 +10393,7 @@ CHL_monarchist_decisions = {
 					OR = {
 						controls_state = 969 
 							
-						any_country = {
-							is_subject_of = ROOT
+						any_subject_country = {
 							controls_state = 939 
 						}
 					}
@@ -10548,9 +10420,10 @@ CHL_monarchist_decisions = {
 				limit = {
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
+						OWNER = {
+							any_subject_country = {
+								controls_state = PREV.PREV
+							}
 						}
 					}
 					OR = {
@@ -10695,8 +10568,7 @@ CHL_monarchist_decisions = {
 					OR = {
 						controls_state = 318 
 							
-						any_country = {
-							is_subject_of = ROOT
+						any_subject_country = {
 							controls_state = 318 
 						}
 					}
@@ -10704,8 +10576,7 @@ CHL_monarchist_decisions = {
 					OR = {
 						controls_state = 319 
 							
-						any_country = {
-							is_subject_of = ROOT
+						any_subject_country = {
 							controls_state = 319 
 						}
 					}
@@ -10732,9 +10603,10 @@ CHL_monarchist_decisions = {
 				limit = {
 					OR = {
 						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
+						OWNER = {
+							any_subject_country = {
+								controls_state = PREV.PREV
+							}
 						}
 					}
 					OR = {
@@ -10764,9 +10636,10 @@ CHL_monarchist_decisions = {
 					315 = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 					}
@@ -10781,9 +10654,10 @@ CHL_monarchist_decisions = {
 					689 = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 					}
@@ -10798,9 +10672,10 @@ CHL_monarchist_decisions = {
 					693 = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 					}
@@ -10815,9 +10690,10 @@ CHL_monarchist_decisions = {
 					690 = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 					}
@@ -10832,9 +10708,10 @@ CHL_monarchist_decisions = {
 					686 = {
 						OR = {
 							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
+							OWNER = {
+								any_subject_country = {
+									controls_state = PREV.PREV
+								}
 							}
 						}
 					}

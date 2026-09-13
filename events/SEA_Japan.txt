@@ -7954,9 +7954,8 @@ country_event = {
 			} 
 		}
 		effect_tooltip = {
-			random_country = {
+			random_subject_country = {
 				limit = {
-					is_subject_of = ROOT
 					has_country_flag = JAP_this_is_the_country_being_negotiated_at_the_moment
 				}
 				FROM = {
@@ -8696,9 +8695,9 @@ country_event = {
 			}
 		}
 
-		random_country = {
+		random_country_with_original_tag = {
+			original_tag_to_check = KOR
 			limit = {
-				original_tag = KOR
 				has_government = communism
 				is_subject = no
 			}
@@ -8712,9 +8711,9 @@ country_event = {
 		}
 
 		hidden_effect = {
-			random_country = {
+			random_country_with_original_tag = {
+				original_tag_to_check = KOR
 				limit = {
-					original_tag = KOR
 					NOT = {
 						has_government = communism
 					}
@@ -8801,9 +8800,9 @@ country_event = {
 			}
 		}
 
-		random_country = {
+		random_country_with_original_tag = {
+			original_tag_to_check = KOR
 			limit = {
-				original_tag = KOR
 				has_government = communism
 				is_subject = no
 			}
@@ -8817,9 +8816,9 @@ country_event = {
 		}
 
 		hidden_effect = {
-			random_country = {
+			random_country_with_original_tag = {
+				original_tag_to_check = KOR
 				limit = {
-					original_tag = KOR
 					NOT = {
 						has_government = communism
 					}
@@ -10792,15 +10791,15 @@ country_event = {
 		hidden_effect = {
 			IF = {
 				limit = {
-					any_country = {
-						original_tag = JAP
+					any_country_with_original_tag = {
+						original_tag_to_check = JAP
 						has_government = fascism
 						num_divisions < 20
 					}
 				}
-				random_country = {
+				random_country_with_original_tag = {
+					original_tag_to_check = JAP
 					limit = {
-						original_tag = JAP
 						has_government = fascism
 					}
 					random_state = {
@@ -11307,7 +11306,8 @@ country_event = {
 	after = {
 
 		hidden_effect = {
-			random_country = {
+			random_country_with_original_tag = {
+				original_tag_to_check = JAP
 				limit = {
 					original_tag = JAP
 					has_government = democratic
@@ -11339,15 +11339,15 @@ country_event = {
 
 			IF = {
 				limit = {
-					any_country = {
-						original_tag = JAP
+					any_country_with_original_tag = {
+						original_tag_to_check = JAP
 						has_government = fascism
 						num_divisions < 20
 					}
 				}
-				random_country = {
+				random_country_with_original_tag = {
+					original_tag_to_check = JAP
 					limit = {
-						original_tag = JAP
 						has_government = fascism
 					}
 					random_state = {
@@ -11994,8 +11994,8 @@ country_event = {
 			is_subject = no
 			has_added_tension_amount > 10 
 			has_offensive_war = yes
-			any_country = {
-				is_literally_china = yes
+			any_country_with_original_tag_of = {
+				target = constant:country_groups.literally_china
 				has_war_with = PREV
 			}
 		}

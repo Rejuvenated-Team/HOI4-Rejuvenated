@@ -2741,4 +2741,34 @@ characters={
 		#}
 	}
 
+	###################
+	### Rejuvenated ###
+	###################
+
+	TUR_sukru_ali_ogel = {
+		name = TUR_sukru_ali_ogel
+		portraits = {
+			civilian = {
+				small = GFX_rj_portrait_TUR_sukru_ali_ogel_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TUR_sukru_ali_ogel
+			allowed = {
+				original_tag = TUR
+				has_dlc = "La Resistance"
+			}
+			available = {
+				has_intelligence_agency = yes
+			}
+			traits = {
+				spymaster
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+
 }

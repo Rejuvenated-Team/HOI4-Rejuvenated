@@ -26,4 +26,5 @@ ideas = {
 				political_power_factor = -0.05
 			}
 		}
+	}
 }

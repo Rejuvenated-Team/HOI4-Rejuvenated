@@ -2552,4 +2552,32 @@ characters = {
 		#Country Leader added when completing appropriate focus
 	} 
 
+	###################
+	### Rejuvenated ###
+	###################
+
+	FIN_simo_hayha = {
+		name = FIN_simo_hayha
+		portraits = {
+			army = {
+				small = GFX_rj_portrait_FIN_simo_hayha_small
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = FIN_simo_hayha
+			ledger = army
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				army_sniper_adherent
+			}
+			cost = 150
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+
 }

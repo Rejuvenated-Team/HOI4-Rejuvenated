@@ -873,6 +873,10 @@ recruit_character = ITA_giovanni_giorgi
 recruit_character = ITA_filippo_bonfiglietti
 recruit_character = ITA_curio_bernardis
 
+#RJ Characters
+recruit_character = ITA_cesare_ame
+recruit_character = ITA_paolo_aloisi
+
 
 ########################################
 ##### MISSIOLINIS - TRIGGER EVENTS #####

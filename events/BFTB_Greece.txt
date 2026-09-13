@@ -6995,9 +6995,9 @@ country_event = {
 				var = GRE_fascist_loyalty
 				value = -2
 			}
-			random_country = { 
-				limit = { 
-					original_tag = GRE 
+			random_country_with_original_tag = {
+				original_tag_to_check = GRE
+				limit = {
 					has_government = fascism 
 				}
 				set_cosmetic_tag = GRE_byz_republic
