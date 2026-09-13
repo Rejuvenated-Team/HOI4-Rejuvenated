@@ -1,11 +1,29 @@
 ﻿capital = 278
 
 oob = "ARG_1936"
-if = {
+
+IF = {
 	limit = { has_dlc = "Man the Guns" }
 		set_naval_oob = "ARG_1936_naval_mtg"
-	else = {
+	ELSE = {
 		set_naval_oob = "ARG_1936_naval_legacy"
+	}
+}
+IF = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "ARG_1936_air_bba"
+		set_technology = {
+			iw_small_airframe = 1
+			aa_lmg = 1
+			engines_1 = 1
+			early_bombs = 1
+		}
+	ELSE = {
+		set_air_oob = "ARG_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
 	}
 }
 
@@ -24,12 +42,14 @@ set_cosmetic_tag = ARG_names
 set_technology = {
 	infantry_weapons = 1
 	tech_mountaineers = 1
+	tech_trucks = 1
+	motorised_infantry = 1
 	gw_artillery = 1
 	interwar_antiair = 1
-	early_fighter = 1
-	CAS1 = 1
+	basic_train = 1
 }
-if = {
+
+IF = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	set_technology = {
 		early_submarine = 1
@@ -40,7 +60,7 @@ if = {
 		transport = 1
 	}
 }
-if = {
+IF = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
 		basic_naval_mines = 1
@@ -51,7 +71,6 @@ if = {
 		early_ship_hull_cruiser = 1
 		early_ship_hull_heavy = 1
 		basic_battery = 1
-		basic_secondary_battery = 1
 		basic_cruiser_armor_scheme = 1
 		basic_torpedo = 1
 		basic_depth_charges = 1
@@ -60,6 +79,7 @@ if = {
 	}
 }
 
+set_country_flag = hispanic
 set_country_flag = monroe_doctrine
 
 set_convoys = 120
@@ -285,11 +305,24 @@ create_navy_leader = {
 	coordination_skill = 2
 }
 
-
 ### VARIANTS ###
 # 1936 Start #
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
+IF = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "FMA D.21" #
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+}
+IF = {
+	limit = { NOT = { has_dlc = "Man the Guns" } }
 	### Ship Variants ###
 	create_equipment_variant = {
 		name = "Cervantes Class"
@@ -313,7 +346,7 @@ if = {
 	}
 
 }
-if = {
+IF = {
 	limit = { has_dlc = "Man the Guns" }
 	# Submarines #
 	create_equipment_variant = {
