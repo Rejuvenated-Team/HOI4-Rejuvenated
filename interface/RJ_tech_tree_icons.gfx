@@ -300,4 +300,19 @@ spriteTypes = {
 		name = "GFX_EMI_tank_radio_5"
 		texturefile = "gfx/interface/technologies/designer_icons/tank_radio_5.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_EMI_radio_navigation_3"
+		texturefile = "gfx/interface/technologies/designer_icons/radio_navigation_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_air_air_radar_3"
+		texturefile = "gfx/interface/technologies/designer_icons/air_air_radar_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_air_ground_radar_3"
+		texturefile = "gfx/interface/technologies/designer_icons/air_ground_radar_3.dds"
+	}
 }
