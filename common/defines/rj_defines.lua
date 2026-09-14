@@ -5,6 +5,7 @@ NDefines.NGame.END_DATE = "1959.1.1.1"
 NDefines.NCountry.LOCAL_MANPOWER_ACCESSIBLE_NON_CORE_FACTOR = 0.03 -- accessible recruitable factor base
 NDefines.NCountry.STARTING_COMMAND_POWER = 10.0 -- starting command power for every country
 NDefines.NCountry.BASE_MAX_COMMAND_POWER = 300.0 -- base value for maximum command power
+NDefines.NCountry.BASE_RESEARCH_SLOTS = 3,						-- Base number of research slots per country.
 
 -- NProduction
 NDefines.NProduction.DEFAULT_MAX_NAV_FACTORIES_PER_LINE = 15
@@ -148,3 +149,7 @@ NDefines.NProject.BASIC_RESEARCH_TECHNOLOGY_BONUS_DIMINISHING_RETURN_FACTOR = 0.
 NDefines.NDoctrines.MAX_MONTHLY_MASTERY_GAIN = 50.0 -- Monthly mastery gain will not exceed this value
 NDefines.NDoctrines.MASTERY_BAR_ANIMATION_SPEED_PER_DAILY_MASTERY = 5.0 -- Multiplier of how fast the mastery bar animates based on daily mastery gain
 NDefines.NDoctrines.MASTERY_BAR_MAX_ANIMATION_SPEED = 50.0 -- Max speed of the mastery bar animation
+
+
+-- NBuildings
+NDefines.NBuildings.MAX_SHARED_SLOTS = 30,				-- Max slots shared by factories
