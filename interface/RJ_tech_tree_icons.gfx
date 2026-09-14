@@ -385,5 +385,65 @@ spriteTypes = {
 		name = "GFX_EMI_torpedo_mounting_4"
 		texturefile = "gfx/interface/technologies/designer_icons/torpedo_mounting_4.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_1"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_2"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_3"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_4"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_1g"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_1g.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_2g"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_2g.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_3g"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_3g.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_4g"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_4g.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_1s"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_1s.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_2s"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_2s.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_3s"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_3s.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_4s"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_4s.dds"
+	}
 	
 }
