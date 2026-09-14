@@ -238,7 +238,7 @@ sp_land_land_cruiser = {
 	complexity = sp_complexity.insane
 
 	breakthrough_cost = {
-		specialization_land = 3
+		specialization_land = 2
 	}
 
 	resource_cost = {

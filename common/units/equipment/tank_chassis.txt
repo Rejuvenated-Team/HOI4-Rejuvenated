@@ -1378,7 +1378,7 @@ equipments = {
 	###################################
 
 	land_cruiser_chassis = {
-		year = 1945
+		year = 1941
 		is_archetype = yes
 		is_buildable = no
 		can_be_produced = {
@@ -1402,7 +1402,7 @@ equipments = {
 		interface_category = interface_category_armor
 		priority = 2000
 
-		max_military_factories = 5
+		max_military_factories = 10
 
 		module_slots = {
 			lc_main_armament_slot = {
@@ -1547,8 +1547,8 @@ equipments = {
 		maximum_speed = 5 #shouldn't be slower than infantry, or we ran into problems
 		build_cost_ic = 330
 		reliability = 1
-		armor_value = 150
-		defense = 12
+		armor_value = 200
+		defense = 15
 		hardness = 0 #Hardness doesn't apply to support companies, this must be changed if they every become a line battalion. #Was 10
 		
 		resources = {
