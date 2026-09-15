@@ -87,15 +87,15 @@ characters={
 
 	CUB_fulgencio_batista={ #Democratic Historical Leader for 1940 - Alt-history Authoritarian leader.
 
-		name = "Fulgencio Batista"
+		name = CUB_fulgencio_batista
 		portraits={
 			civilian={
 				large = "gfx/leaders/CUB/Fulgencio_Batista.dds"
-				small = "GFX_idea_CUB_fulgencio_batista"
+				small = "GFX_rj_portrait_CUB_fulgencio_batista_small"
 			}
 			army={
 				large = "gfx/leaders/CUB/Fulgencio_Batista.dds"
-				small = "GFX_idea_CUB_fulgencio_batista"
+				small = "GFX_rj_portrait_CUB_fulgencio_batista_small"
 			}
 		}
 		country_leader = {
@@ -562,11 +562,11 @@ characters={
 ###Military#############################################################################################################################################################
 
 	CUB_genovevo_perez_damera={ #Field Marshal in-game. Army Chief of Staff.
-		name="Genovevo Perez Damera"
+		name=CUB_genovevo_perez_damera
 		portraits={
 			army={
-				small="GFX_idea_CUB_genovevo"
 				large="gfx/leaders/CUB/Genovevo_Perez_Damera.dds"
+				small = "GFX_rj_portrait_CUB_genovevo_perez_damera_small"
 			}
 		}
 		advisor={	

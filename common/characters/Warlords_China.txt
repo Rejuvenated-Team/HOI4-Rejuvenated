@@ -2844,8 +2844,8 @@ characters={
 		name=SIC_liu_wenhui
 		portraits={
 			army={
-				large = GFX_portrait_SIC_liu_wenhui
-				small = GFX_portrait_SIC_liu_wenhui_small
+				large = GFX_rj_portrait_SIC_liu_wenhui
+				small = GFX_rj_portrait_SIC_liu_wenhui_small
 			}
 		}
 		
