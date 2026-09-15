@@ -345,6 +345,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/RJ_tech/rocket_artillery7.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_antiair6_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/antiair6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_antiair7_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/antiair7.dds"
+	}
+
 
 
 	#####################################
