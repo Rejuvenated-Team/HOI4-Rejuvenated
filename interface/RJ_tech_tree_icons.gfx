@@ -300,6 +300,21 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/RJ_tech/air_torpedoe_4.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_modern_dp_light_battery_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/modern_dp_light_battery.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_modern_heavy_battery_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/modern_heavy_battery.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_modern_light_battery_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/modern_light_battery.dds"
+	}
+
 
 
 	#####################################
@@ -444,6 +459,36 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_EMI_aerial_rockets_4s"
 		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_4s.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SMI_ship_light_battery_5"
+		texturefile = "gfx/interface/technologies/designer_icons/ship_light_battery_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SMI_ship_light_medium_battery_5"
+		texturefile = "gfx/interface/technologies/designer_icons/ship_light_medium_battery_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SMI_ship_medium_battery_5"
+		texturefile = "gfx/interface/technologies/designer_icons/ship_medium_battery_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SMI_dp_ship_secondaries_5"
+		texturefile = "gfx/interface/technologies/designer_icons/dp_ship_secondaries_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SMI_dp_light_battery_5"
+		texturefile = "gfx/interface/technologies/designer_icons/dp_light_battery_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SMI_dp_ship_medium_2"
+		texturefile = "gfx/interface/technologies/designer_icons/dp_ship_medium_2.dds"
 	}
 	
 }
