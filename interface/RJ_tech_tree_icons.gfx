@@ -330,6 +330,21 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/RJ_tech/artillery8.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_rocket_artillery5_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/rocket_artillery5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rocket_artillery6_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/rocket_artillery6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rocket_artillery7_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/rocket_artillery7.dds"
+	}
+
 
 
 	#####################################
@@ -524,6 +539,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_EMI_tank_super_heavy_howitzer_2"
 		textureFile = "gfx/interface/technologies/designer_icons/tank_super_heavy_howitzer_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_tank_rocket_launcher_3"
+		textureFile = "gfx/interface/technologies/designer_icons/tank_rocket_launcher_3.dds"
 	}
 	
 }
