@@ -315,6 +315,21 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/RJ_tech/modern_light_battery.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_artillery6_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/artillery6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_artillery7_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/artillery7.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_artillery8_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/artillery8.dds"
+	}
+
 
 
 	#####################################
@@ -489,6 +504,26 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_SMI_dp_ship_medium_2"
 		texturefile = "gfx/interface/technologies/designer_icons/dp_ship_medium_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_tank_medium_howitzer_3"
+		textureFile = "gfx/interface/technologies/designer_icons/tank_medium_howitzer_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_tank_medium_cannon_3"
+		textureFile = "gfx/interface/technologies/designer_icons/tank_medium_cannon_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_tank_super_heavy_howitzer"
+		textureFile = "gfx/interface/technologies/designer_icons/tank_super_heavy_howitzer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_tank_super_heavy_howitzer_2"
+		textureFile = "gfx/interface/technologies/designer_icons/tank_super_heavy_howitzer_2.dds"
 	}
 	
 }
