@@ -375,6 +375,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/RJ_tech/antitank8.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_super_heavy_tank_chassis_2_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/super_heavy_tank_chassis_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_modern_light_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/modern_light_tank_chassis.dds"
+	}
+
 
 
 	#####################################
@@ -589,6 +599,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_EMI_tank_high_velocity_cannon_4"
 		textureFile = "gfx/interface/technologies/designer_icons/tank_high_velocity_cannon_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_tank_super_heavy_cannon_2"
+		textureFile = "gfx/interface/technologies/designer_icons/tank_super_heavy_cannon_2.dds"
 	}
 	
 }
