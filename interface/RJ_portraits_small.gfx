@@ -147,6 +147,25 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/ger/advisors/rj_advisor_GER_theodor_von_hippel.dds"
 	}
 
+	##############
+	### GUANXI ###
+	##############
+
+	spriteType = {
+		name = "GFX_rj_portrait_GXC_li_zongren_small"
+		texturefile = "gfx/interface/ideas/gxc/advisors/rj_portrait_GXC_li_zongren.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_GXC_bai_chongxi_small"
+		texturefile = "gfx/interface/ideas/gxc/advisors/rj_portrait_GXC_bai_chongxi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_GXC_chen_jitang_small"
+		texturefile = "gfx/interface/ideas/gxc/advisors/rj_portrait_GXC_chen_jitang.dds"
+	}
+
 	###################
 	### ITA - Italy ###
 	###################
@@ -159,6 +178,15 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_rj_portrait_ITA_paolo_aloisi_small"
 		texturefile = "gfx/interface/ideas/ita/advisors/rj_advisor_ITA_paolo_aloisi.dds"
+	}
+
+	#####################
+	### SIC - Sichuan ###
+	#####################
+
+	spriteType = {
+		name = "GFX_rj_portrait_SIC_liu_wenhui_small"
+		texturefile = "gfx/interface/ideas/sic/advisors/rj_advisor_SIC_liu_wenhui.dds"
 	}
 
 	######################
@@ -273,25 +301,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_rj_portrait_USA_william_friedman_small"
 		texturefile = "gfx/interface/ideas/usa/advisors/rj_advisor_USA_william_friedman.dds"
-	}
-
-	################################
-	### CHINA + WARLORDS ###########
-	################################
-
-	spriteType = {
-		name = "GFX_rj_portrait_GXC_li_zongren_small"
-		texturefile = "gfx/interface/ideas/warlords/advisors/rj_portrait_GXC_li_zongren.dds"
-	}
-
-	spriteType = {
-		name = "GFX_rj_portrait_GXC_bai_chongxi_small"
-		texturefile = "gfx/interface/ideas/warlords/advisors/rj_portrait_GXC_bai_chongxi.dds"
-	}
-
-	spriteType = {
-		name = "GFX_rj_portrait_GXC_chen_jitang_small"
-		texturefile = "gfx/interface/ideas/warlords/advisors/rj_portrait_GXC_chen_jitang.dds"
 	}
 
 }
