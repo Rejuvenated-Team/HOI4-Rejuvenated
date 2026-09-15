@@ -51,6 +51,21 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
 	}
 
+	spriteType = {
+		name = "GFX_rj_portrait_CUB_fulgencio_batista_small"
+		texturefile = "gfx/interface/ideas/cub/advisors/rj_advisor_CUB_fulgencio_batista.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_CUB_meyer_lansky_small"
+		texturefile = "gfx/interface/ideas/cub/advisors/rj_advisor_CUB_meyer_lansky.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_CUB_genovevo_perez_damera_small"
+		texturefile = "gfx/interface/ideas/cub/advisors/rj_advisor_CUB_genovevo_perez_damera.dds"
+	}
+
 	####################
 	### EGY - Egypt ###
 	####################
