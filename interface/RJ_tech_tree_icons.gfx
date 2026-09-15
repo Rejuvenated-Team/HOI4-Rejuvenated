@@ -355,6 +355,26 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/RJ_tech/antiair7.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_antiair8_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/antiair8.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_antitank6_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/antitank6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_antitank7_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/antitank7.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_antitank8_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/antitank8.dds"
+	}
+
 
 
 	#####################################
@@ -531,6 +551,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/designer_icons/dp_ship_medium_2.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_SMI_ship_anti_air_5"
+		texturefile = "gfx/interface/technologies/designer_icons/ship_anti_air_5.dds"
+	}
+
 	spriteType = {
 		name = "GFX_EMI_tank_medium_howitzer_3"
 		textureFile = "gfx/interface/technologies/designer_icons/tank_medium_howitzer_3.dds"
@@ -554,6 +579,16 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_EMI_tank_rocket_launcher_3"
 		textureFile = "gfx/interface/technologies/designer_icons/tank_rocket_launcher_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_tank_heavy_cannon_4"
+		textureFile = "gfx/interface/technologies/designer_icons/tank_heavy_cannon_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_tank_high_velocity_cannon_4"
+		textureFile = "gfx/interface/technologies/designer_icons/tank_high_velocity_cannon_4.dds"
 	}
 	
 }
