@@ -753,11 +753,11 @@ technologies = {
 	tech_military_police2 = {
 
 		military_police = {
-			suppression_factor = 0.1
+			suppression_factor = 0.12
 		}
 
 		motorized_military_police = {
-			suppression_factor = 0.1
+			suppression_factor = 0.12
 			battalion_mult = {
 				category = category_vehicle_infantry
 				default_morale = 0.05
@@ -794,11 +794,11 @@ technologies = {
 	tech_military_police3 = {
 
 		military_police = {
-			suppression_factor = 0.1
+			suppression_factor = 0.12
 		}
 
 		motorized_military_police = {
-			suppression_factor = 0.1
+			suppression_factor = 0.12
 			battalion_mult = {
 				category = category_vehicle_infantry
 				default_morale = 0.05
@@ -834,11 +834,11 @@ technologies = {
 	tech_military_police4 = {
 
 		military_police = {
-			suppression_factor = 0.1
+			suppression_factor = 0.12
 		}
 
 		motorized_military_police = {
-			suppression_factor = 0.1
+			suppression_factor = 0.12
 			battalion_mult = {
 				category = category_vehicle_infantry
 				default_morale = 0.05
@@ -937,7 +937,7 @@ technologies = {
 		}
 
 		armored_maintenance = {
-			reliability_factor = 0.02
+			reliability_factor = 0.03
 			recovery = 0.03
 			equipment_capture_factor = 0.1
 		}
@@ -988,26 +988,28 @@ technologies = {
 
 		maintenance_company = {
 			reliability_factor = 0.05
+			equipment_capture_factor = 0.05
 
-			battalion_mult = {
-				category = category_all_armor
-				equipment_capture_factor = 0.01
-				add = yes
-				display_as_percentage = yes
-			}
+			#battalion_mult = {
+			#	category = category_all_armor
+			#	equipment_capture_factor = 0.01
+			#	add = yes
+			#	display_as_percentage = yes
+			#}
 
 		}
 
 		armored_maintenance = {
-			reliability_factor = 0.02
+			reliability_factor = 0.03
 			recovery = 0.03
+			equipment_capture_factor = 0.1
 
-			battalion_mult = {
-				category = category_all_armor
-				equipment_capture_factor = 0.02
-				add = yes
-				display_as_percentage = yes
-			}
+			#battalion_mult = {
+			#	category = category_all_armor
+			#	equipment_capture_factor = 0.02
+			#	add = yes
+			#	display_as_percentage = yes
+			#}
 
 		}
 
@@ -1055,7 +1057,7 @@ technologies = {
 		}
 
 		armored_maintenance = {
-			reliability_factor = 0.02
+			reliability_factor = 0.03
 			recovery = 0.03
 			equipment_capture_factor = 0.1
 		}
@@ -1613,13 +1615,14 @@ technologies = {
 
 		signal_company = {
 			initiative = 0.12
+			breakthrough = 0.01
 		}
 
 		armored_signal = {
-			initiative = 0.08
+			initiative = 0.09
 			battalion_mult = {
 				category = category_all_armor
-				breakthrough = 0.01
+				breakthrough = 0.02
 			}
 		}
 
@@ -1665,13 +1668,14 @@ technologies = {
 
 		signal_company = {
 			initiative = 0.12
+			breakthrough = 0.01
 		}
 
 		armored_signal = {
-			initiative = 0.08
+			initiative = 0.09
 			battalion_mult = {
 				category = category_all_armor
-				breakthrough = 0.01
+				breakthrough = 0.02
 			}
 		}
 
@@ -1716,13 +1720,14 @@ technologies = {
 
 		signal_company = {
 			initiative = 0.12
+			breakthrough = 0.01
 		}
 
 		armored_signal = {
-			initiative = 0.08
+			initiative = 0.09
 			battalion_mult = {
 				category = category_all_armor
-				breakthrough = 0.01
+				breakthrough = 0.02
 			}
 		}
 
