@@ -34,7 +34,7 @@ sub_units = {
 		max_organisation = 0	
 		default_morale = 0.3
 		manpower = 500
-		training_time = 180
+		training_time = 120
 
 		#Misc Abilities
 		weight = 0.1
@@ -42,7 +42,7 @@ sub_units = {
 		can_be_parachuted = yes
 		
 		# Important Ability
-		suppression_factor = 0.20
+		suppression_factor = 0.25
 
 		essential = {
 			infantry_equipment

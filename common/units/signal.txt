@@ -40,6 +40,7 @@ sub_units = {
 		
 		# Important Ability
 		initiative = 0.1
+		breakthrough = 0.1
 		
 		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
 		
