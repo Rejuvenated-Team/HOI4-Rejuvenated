@@ -92,6 +92,8 @@ technologies = {
 			}
 
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 
 

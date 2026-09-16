@@ -1668,6 +1668,9 @@ technologies = {
 			cat_fortification #Legacy - Here to prevent breaks.
 		}
 
+		special_project_specialization = { specialization_land }
+		special_project_specialization = { specialization_naval }
+
 	}
 
 
@@ -1700,6 +1703,8 @@ technologies = {
 			fortification_tech
 			cat_fortification #Legacy - Here to prevent breaks.
 		}
+
+		special_project_specialization = { specialization_land }
 		
 
 	}
@@ -1729,6 +1734,8 @@ technologies = {
 			fortification_tech
 			cat_fortification #Legacy - Here to prevent breaks.
 		}
+
+		special_project_specialization = { specialization_land }
 		
 
 	}
@@ -1760,6 +1767,8 @@ technologies = {
 			fortification_tech
 			cat_fortification #Legacy - Here to prevent breaks.
 		}
+
+		special_project_specialization = { specialization_naval }
 		
 
 	}
@@ -1789,6 +1798,8 @@ technologies = {
 			fortification_tech
 			cat_fortification #Legacy - Here to prevent breaks.
 		}
+
+		special_project_specialization = { specialization_naval }
 		
 
 	}
@@ -1814,6 +1825,9 @@ technologies = {
 			fortification_tech
 			cat_fortification #Legacy - Here to prevent breaks.
 		}
+
+		special_project_specialization = { specialization_land }
+		special_project_specialization = { specialization_naval }
 		
 
 	}

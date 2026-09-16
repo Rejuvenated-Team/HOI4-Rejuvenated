@@ -650,5 +650,13 @@ spriteTypes = {
 		name = "GFX_EMI_gun_ramming_mechanism"
 		textureFile = "gfx/interface/technologies/designer_icons/gun_ramming_mechanism.dds"
 	}
+
+
+
+	########################################
+	### BUILDING ICONS #####################
+	########################################
+
+	
 	
 }
