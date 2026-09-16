@@ -1132,6 +1132,7 @@
  AST_ADJ: "Australian"
  AST_autonomy_dominion: "Commonwealth of Australia"
  AST_autonomy_dominion_DEF: "the Commonwealth of Australia"
+ AST_autonomy_dominion_ADJ: "Australian"
  AST_autonomy_associated_dominion: "Commonwealth of Australia"
  AST_autonomy_associated_dominion_DEF: "the Commonwealth of Australia"
  AST_subject: "$OVERLORDADJ$ $AST$"
