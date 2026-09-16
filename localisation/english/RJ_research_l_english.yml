@@ -58,9 +58,13 @@
  efficient_layouts2: "Efficient Layouts II"
  efficient_layouts2_desc: "By reorganizing the inner workings of our factories into more efficient layouts, we can greatly increase our overall efficiency!"
  steelworks_tech: "Steelworks"
+ steelworks_tech_desc: "Allows you to build the Steelworks, which provides a state with 12 base Steel."
  steelworks_tech2: "Steelworks II"
+ steelworks_tech2_desc: "Steelworks steel production: +3"
  steelworks_tech3: "Steelworks III"
+ steelworks_tech3_desc: "Steelworks steel production: +3"
  steelworks_tech4: "Steelworks IV"
+ steelworks_tech4_desc: "Steelworks steel production: +3"
 
  advanced_fortification_engineering: "Advanced Fortification Engineering"
  advanced_fortification_engineering_desc: "By utilizing the latest engineering advancements & material improvements, we can improve the efficacy of our fortifications."

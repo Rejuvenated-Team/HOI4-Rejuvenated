@@ -752,7 +752,7 @@ buildings = {
 	########REJUVINATED BUILDINGS###########
 
 	steelworks = {
-		show_on_map = 6
+		show_on_map = 0
 		base_cost = 12000
 		icon_frame = 34
 		local_resources_steel = 12
