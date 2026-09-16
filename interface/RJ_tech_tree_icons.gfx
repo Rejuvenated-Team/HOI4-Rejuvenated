@@ -605,5 +605,30 @@ spriteTypes = {
 		name = "GFX_EMI_tank_super_heavy_cannon_2"
 		textureFile = "gfx/interface/technologies/designer_icons/tank_super_heavy_cannon_2.dds"
 	}
+
+	spriteType = {
+		name = "GFX_EMI_improved_optics"
+		textureFile = "gfx/interface/technologies/designer_icons/improved_optics.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_binocular_telescope"
+		textureFile = "gfx/interface/technologies/designer_icons/binocular_telescope.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_improved_grousers"
+		textureFile = "gfx/interface/technologies/designer_icons/improved_grousers.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_enhanced_rotation_mechanism"
+		textureFile = "gfx/interface/technologies/designer_icons/enhanced_rotation_mechanism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_gun_ramming_mechanism"
+		textureFile = "gfx/interface/technologies/designer_icons/gun_ramming_mechanism.dds"
+	}
 	
 }
