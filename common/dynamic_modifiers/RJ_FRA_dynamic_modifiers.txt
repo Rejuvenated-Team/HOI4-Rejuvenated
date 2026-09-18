@@ -1,0 +1,6 @@
+RJ_FRA_the_french_economy = {
+	icon = GFX_idea_RJ_idea_FRA_the_french_economy
+
+	industrial_capacity_factory = RJ_FRA_the_french_economy_industrial_capacity_factory
+	industrial_capacity_dockyard = RJ_FRA_the_french_economy_industrial_capacity_dockyard
+}

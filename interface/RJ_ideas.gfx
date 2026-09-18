@@ -574,5 +574,10 @@ spriteTypes = {
 		name = "GFX_idea_RJ_idea_warlord_uplift_the_cavalry"
 		texturefile = "gfx/interface/ideas/warlords/RJ_idea_warlord_uplift_the_cavalry.dds"
 	}
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_FRA_the_french_economy"
+		texturefile = "gfx/interface/ideas/fra/RJ_idea_FRA_the_french_economy.dds"
+	}
 	
 }

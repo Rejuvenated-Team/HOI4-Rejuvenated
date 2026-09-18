@@ -1,3 +1,17 @@
 ﻿l_english:
+
+ #########################################################
+ ### FOCUSES #############################################
+ #########################################################
+
  RJ_FRA_metropolitan_investments: "Metropolitan Investments"
  RJ_FRA_metropolitan_investments_desc: "As a part of our recovery from the Grande Dépression, we must make investments into metropolitan France. This will help us stabilize our economy & rebuild our industries once again."
+ RJ_FRA_reform_the_bank_of_france: "Reform the Bank of France"
+ RJ_FRA_reform_the_bank_of_france_desc: "The Banque de France has become corrupted by a small group of families that have used their positions to wield great economic power over our country. The '200 Families', as they're often called, will be replaced by a new General Council instead."
+
+ #########################################################
+ ### IDEAS ###############################################
+ #########################################################
+
+ RJ_FRA_the_french_economy: "The French Economy"
+ RJ_FRA_the_french_economy_desc: "The French economy has been impacted like everyone else by the Grande Dépression. It will take time & a lot of hard work to get it back into shape again, with our industries kicking at full strength."

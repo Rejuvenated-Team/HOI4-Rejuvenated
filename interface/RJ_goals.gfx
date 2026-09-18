@@ -869,6 +869,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/fra/RJ_FRA_autoroutes.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_FRA_reform_the_bank_of_france"
+		texturefile = "gfx/interface/goals/fra/RJ_FRA_reform_the_bank_of_france.dds"
+	}
+
 
 
 

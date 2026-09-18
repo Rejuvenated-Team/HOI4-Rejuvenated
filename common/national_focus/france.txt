@@ -46,6 +46,35 @@
 	}
 
 	focus = {
+		id = RJ_FRA_reform_the_bank_of_france
+		icon = GFX_focus_RJ_FRA_reform_the_bank_of_france
+		x = 2
+		y = 1
+		
+		prerequisite = { focus = FRA_devalue_the_franc }
+		mutually_exclusive = { }
+		relative_position_id = FRA_devalue_the_franc
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
 		id = RJ_FRA_metropolitan_investments
 		icon = GFX_focus_RJ_FRA_metropolitan_investments
 		x = -2
@@ -150,57 +179,50 @@
 				limit = { 
 					is_core_of = ROOT 
 					infrastructure < 4
-					not = { has_state_flag = FRA_autoroutes_target }
 				}
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = FRA_autoroutes_target
 			}
 			random_owned_state = {
 				limit = { 
 					is_core_of = ROOT 
 					infrastructure < 4
-					not = { has_state_flag = FRA_autoroutes_target }
 				}
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = FRA_autoroutes_target
 			}
 			random_owned_state = {
 				limit = { 
 					is_core_of = ROOT 
 					infrastructure < 4
-					not = { has_state_flag = FRA_autoroutes_target }
 				}
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = FRA_autoroutes_target
 			}
 			random_owned_state = {
 				limit = { 
 					is_core_of = ROOT 
 					infrastructure < 4
-					not = { has_state_flag = FRA_autoroutes_target }
 				}
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = FRA_autoroutes_target
 			}
 			
 		}
 	}
+
 	focus = {
 		id = FRA_invest_in_the_metropole
 		icon = GFX_goal_generic_construct_civilian
@@ -228,7 +250,7 @@
 		completion_reward = {
 			add_stability = 0.05
 		}
-	}	
+	}
 	focus = {
 		id = FRA_metropolitan_france
 		icon = GFX_focus_generic_industry_1
