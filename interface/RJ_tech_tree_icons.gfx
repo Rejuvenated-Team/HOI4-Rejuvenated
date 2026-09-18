@@ -191,6 +191,26 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_steelworks_tech_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/steelworks_tech.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_steelworks_tech2_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/steelworks_tech2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_steelworks_tech3_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/steelworks_tech3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_steelworks_tech4_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/steelworks_tech4.dds"
+	}
+
+	SpriteType = {
 		name = "GFX_modern_fire_control_system_medium"
 		texturefile = "gfx/interface/technologies/RJ_tech/RJ_modern_fire_control_system.dds"
 	}
@@ -630,5 +650,13 @@ spriteTypes = {
 		name = "GFX_EMI_gun_ramming_mechanism"
 		textureFile = "gfx/interface/technologies/designer_icons/gun_ramming_mechanism.dds"
 	}
+
+
+
+	########################################
+	### BUILDING ICONS #####################
+	########################################
+
+	
 	
 }
