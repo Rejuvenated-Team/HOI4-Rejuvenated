@@ -7,7 +7,10 @@ bookmarks = {
 		default_country = "ENG"
 		default = yes
 
-		filters = { rj_label_new_content continent } #new_content
+		filters = { label }
+		label_order = {
+			rj_label_new_content rj_label_europe rj_label_africa rj_label_middle_east rj_label_asia rj_label_oceania rj_label_north_america rj_label_south_america
+		}
 		# filters can also contain 'label'
 		# in that case the countries below can have 'label = { label_1 }' or 'label = { label_1 label_2 }'
 		# all these labels will be gathered and displayed as filter buttons
@@ -37,6 +40,7 @@ bookmarks = {
 				FRA_revive_the_national_bloc
 				FRA_france_leads
 			}
+			label = { rj_label_europe }
 		}
 		"FRA"={
 			history = "FRA_GATHERING_STORM_DESC"
@@ -53,12 +57,12 @@ bookmarks = {
 				FRA_utilize_the_leagues
 				FRA_je_suis_la_deluge
 			}
+			label = { rj_label_europe }
 		}
 		"USA"={
 			history = "rj_USA_GATHERING_STORM_DESC"
 			ideology = democratic
 			version = base_game
-			label = { rj_label_new_content }
 			ideas = {
 				home_of_the_free
 				great_depression
@@ -69,12 +73,12 @@ bookmarks = {
 				USA_wpa
 				USA_reestablish_the_gold_standard
 			}
+			label = { rj_label_north_america rj_label_new_content }
 		}
 		"ENG"={
 			history = "ENG_GATHERING_STORM_DESC"
 			ideology = democratic
 			version = base_game
-			label = { rj_label_new_content }
 			ideas = {
 				stiff_upper_lip
 				ENG_the_war_to_end_all_wars
@@ -85,6 +89,7 @@ bookmarks = {
 				ENG_the_kings_party
 				ENG_organize_the_blackshirts
 			}
+			label = { rj_label_europe rj_label_new_content }
 		}
 
 		GER = {
@@ -102,6 +107,7 @@ bookmarks = {
 				GER_the_peoples_victory
 				GER_glory_to_the_imperial_army
 			}
+			label = { rj_label_europe }
 		}
 
 		GER = {
@@ -119,6 +125,7 @@ bookmarks = {
 				GER_revive_the_kaiserreich
 				GER_reestablish_free_elections
 			}
+			label = { rj_label_europe }
 		}
 
 		"ITA"={
@@ -130,12 +137,13 @@ bookmarks = {
 				vittorio_emanuele
 				ITA_iri_fake_ns
 				ITA_re_fake_ns
-			}	
+			}
 			focuses = {
 				ITA_comandante_diavolo
 				ITA_il_sol_dell_avvenire
 				ITA_a_colonial_empire
-			}		
+			}
+			label = { rj_label_europe }
 		}
 		"ITA"={
 			history = "ITA_GATHERING_STORM_DESC"
@@ -146,12 +154,13 @@ bookmarks = {
 				vittorio_emanuele
 				ITA_iri_fake_ns
 				ITA_re_fake_ns
-			}	
+			}
 			focuses = {
 				ITA_comandante_diavolo
 				ITA_to_live_as_a_lion
 				ITA_a_colonial_empire
-			}		
+			}
+			label = { rj_label_europe }
 		}
 		JAP = {
 			history = "JAP_GATHERING_STORM_DESC"
@@ -169,6 +178,7 @@ bookmarks = {
 				JAP_the_unthinkable_option
 				JAP_support_the_kodoha_faction
 			}
+			label = { rj_label_asia }
 		}
 
 		JAP = {
@@ -187,6 +197,7 @@ bookmarks = {
 				JAP_revere_the_emperor_destroy_the_traitors
 				JAP_okadas_military_purge_speech
 			}
+			label = { rj_label_asia }
 		}
 		"SOV"={
 			history = "SOV_GATHERING_STORM_DESC"
@@ -203,7 +214,7 @@ bookmarks = {
 				SOV_the_supreme_soviet
 				SOV_reconvene_the_zemsky_sobor
 			}
-			label = { rj_label_new_content }
+			label = { rj_label_europe rj_label_new_content }
 		}
 		"SOV"={
 			history = "SOV_GATHERING_STORM_DESC"
@@ -220,7 +231,7 @@ bookmarks = {
 				SOV_father_of_nations
 				SOV_the_supreme_soviet
 			}
-			label = { rj_label_new_content }
+			label = { rj_label_europe rj_label_new_content }
 		}
 
 		"---"={
@@ -246,7 +257,7 @@ bookmarks = {
 				CUB_deal_with_the_mafia
 				CUB_caribbean_dominance
 			}
-			label = { rj_label_new_content }
+			label = { rj_label_south_america rj_label_new_content }
 		}
 
 		BRA = {
@@ -264,7 +275,7 @@ bookmarks = {
 				bra_monarquia_2_focus
 				bra_a_voz_do_brasil
 			}
-			label = { rj_label_new_content }
+			label = { rj_label_south_america rj_label_new_content }
 		}
 
 		EGY = {
@@ -281,7 +292,7 @@ bookmarks = {
 				#EGY_
 				#EGY_
 			}
-			label = { rj_label_new_content }
+			label = { rj_label_africa rj_label_new_content }
 		}
 
 		effect = {

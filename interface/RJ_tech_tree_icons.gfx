@@ -1,0 +1,662 @@
+spriteTypes = {
+
+    SpriteType = {
+		name = "GFX_advanced_fortification_engineering_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_advanced_fortification_engineering.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_semi_modern_radio_medium"
+		texturefile = "gfx/interface/technologies/radio.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_modern_radio_medium"
+		texturefile = "gfx/interface/technologies/radio.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_technical_radio_improvements_medium"
+		texturefile = "gfx/interface/technologies/radio.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_modern_large_airframe_2_medium"
+		texturefile = "gfx/interface/technologies/heavy_plane_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_modern_small_airframe_2_medium"
+		texturefile = "gfx/interface/technologies/GER_jet_plane_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_modern_medium_airframe_2_medium"
+		texturefile = "gfx/interface/technologies/GER_jet_medium_plane_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_FRA_modern_small_airframe_2_medium"
+		texturefile = "gfx/interface/technologies/FRA_light_jet_plane.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_modern_small_airframe_2_medium"
+		texturefile = "gfx/interface/technologies/jet_plane_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_MAN_modern_small_airframe_2_medium"
+		texturefile = "gfx/interface/technologies/JAP_jet_plane_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_modern_medium_airframe_2_medium"
+		texturefile = "gfx/interface/technologies/medium_plane_4.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_semi_modern_rubber_processing_medium"
+		texturefile = "gfx/interface/technologies/modern_rubber_processing.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_semi_modern_oil_processing_medium"
+		texturefile = "gfx/interface/technologies/modern_oil_processing.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_fuel_refining6_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_fuel_refining6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_fuel_refining7_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_fuel_refining7.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_excavation6_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_excavation6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_excavation7_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_excavation7.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_excavation8_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_excavation8.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_excavation9_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_excavation9.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_excavation10_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_excavation10.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_construction6_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_construction6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_construction7_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_construction7.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_construction8_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_construction8.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_construction9_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_construction9.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_construction10_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_construction10.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_concentrated_industry6_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_concentrated_industry6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_concentrated_industry7_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_concentrated_industry7.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_concentrated_industry8_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_concentrated_industry8.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_concentrated_industry9_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_concentrated_industry9.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_concentrated_industry10_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_concentrated_industry10.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_dispersed_industry6_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_dispersed_industry6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_dispersed_industry7_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_dispersed_industry7.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_dispersed_industry8_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_dispersed_industry8.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_dispersed_industry9_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_dispersed_industry9.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_dispersed_industry10_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_dispersed_industry10.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_streamlined_line2_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_streamlined_line2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_flexible_line2_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_flexible_line2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_modern_machine_tools_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_modern_machine_tools.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_steelworks_tech_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/steelworks_tech.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_steelworks_tech2_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/steelworks_tech2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_steelworks_tech3_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/steelworks_tech3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_steelworks_tech4_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/steelworks_tech4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_modern_fire_control_system_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_modern_fire_control_system.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_damage_control_4_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_damage_control_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_efficient_layouts_medium"
+		texturefile = "gfx/interface/technologies/dispersed_industry.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_efficient_layouts2_medium"
+		texturefile = "gfx/interface/technologies/dispersed_industry2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_next_gen_computing_machine_medium"
+		texturefile = "gfx/interface/technologies/advanced_computing_machine.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_advanced_next_gen_computing_machine_medium"
+		texturefile = "gfx/interface/technologies/advanced_computing_machine.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_modern_computing_machine_medium"
+		texturefile = "gfx/interface/technologies/advanced_computing_machine.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_pulse_doppler_radar_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_pulse_doppler_radar.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_technical_radar_improvements_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_technical_radar_improvements.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_identification_friend_or_foe_system_1_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_identification_friend_or_foe_system_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_identification_friend_or_foe_system_2_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_identification_friend_or_foe_system_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_identification_friend_or_foe_system_3_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_identification_friend_or_foe_system_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_landing_gears_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_improved_landing_gears.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_air_rockets_1_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_aerial_rockets_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_air_rockets_2_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_aerial_rockets_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_air_rockets_3_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_aerial_rockets_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_air_rockets_4_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/RJ_aerial_rockets_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_aa_cannon_75mm_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/aa_cannon_75mm.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_aa_cannon_4_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/aa_cannon_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_enhanced_armoring_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/enhanced_armoring.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_bunker_buster_bombs_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/bunker_buster_bombs.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_air_torpedoe_4_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/air_torpedoe_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_modern_dp_light_battery_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/modern_dp_light_battery.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_modern_heavy_battery_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/modern_heavy_battery.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_modern_light_battery_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/modern_light_battery.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_artillery6_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/artillery6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_artillery7_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/artillery7.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_artillery8_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/artillery8.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rocket_artillery5_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/rocket_artillery5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rocket_artillery6_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/rocket_artillery6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rocket_artillery7_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/rocket_artillery7.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_antiair6_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/antiair6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_antiair7_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/antiair7.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_antiair8_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/antiair8.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_antitank6_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/antitank6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_antitank7_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/antitank7.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_antitank8_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/antitank8.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_super_heavy_tank_chassis_2_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/super_heavy_tank_chassis_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_modern_light_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/RJ_tech/modern_light_tank_chassis.dds"
+	}
+
+
+
+	#####################################
+	### DESIGNER ICONS ##################
+	#####################################
+
+	SpriteType = {
+		name = "GFX_EMI_lc_radio_4"
+		texturefile = "gfx/interface/technologies/designer_icons/lc_radio_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_lc_radio_5"
+		texturefile = "gfx/interface/technologies/designer_icons/lc_radio_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_tank_radio_4"
+		texturefile = "gfx/interface/technologies/designer_icons/tank_radio_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_tank_radio_5"
+		texturefile = "gfx/interface/technologies/designer_icons/tank_radio_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_radio_navigation_3"
+		texturefile = "gfx/interface/technologies/designer_icons/radio_navigation_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_air_air_radar_3"
+		texturefile = "gfx/interface/technologies/designer_icons/air_air_radar_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_air_ground_radar_3"
+		texturefile = "gfx/interface/technologies/designer_icons/air_ground_radar_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_improved_landing_gear"
+		texturefile = "gfx/interface/technologies/designer_icons/improved_landing_gear.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aircraft_cannon_75mm"
+		texturefile = "gfx/interface/technologies/designer_icons/aa_cannon_75mm.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aircraft_cannon_4x1"
+		texturefile = "gfx/interface/technologies/designer_icons/aircraft_cannon_4x1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aircraft_cannon_4x2"
+		texturefile = "gfx/interface/technologies/designer_icons/aircraft_cannon_4x2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_armor_plate_small_2"
+		texturefile = "gfx/interface/technologies/designer_icons/armor_plate_small_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_armor_plate_medium_2"
+		texturefile = "gfx/interface/technologies/designer_icons/armor_plate_medium_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_armor_plate_large_2"
+		texturefile = "gfx/interface/technologies/designer_icons/armor_plate_large_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_bunker_buster_bomb_bay"
+		texturefile = "gfx/interface/technologies/designer_icons/bunker_buster_bomb_bay.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_torpedo_mounting_4"
+		texturefile = "gfx/interface/technologies/designer_icons/torpedo_mounting_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_1"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_2"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_3"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_4"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_1g"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_1g.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_2g"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_2g.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_3g"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_3g.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_4g"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_4g.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_1s"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_1s.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_2s"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_2s.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_3s"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_3s.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_EMI_aerial_rockets_4s"
+		texturefile = "gfx/interface/technologies/designer_icons/aerial_rockets_4s.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SMI_ship_light_battery_5"
+		texturefile = "gfx/interface/technologies/designer_icons/ship_light_battery_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SMI_ship_light_medium_battery_5"
+		texturefile = "gfx/interface/technologies/designer_icons/ship_light_medium_battery_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SMI_ship_medium_battery_5"
+		texturefile = "gfx/interface/technologies/designer_icons/ship_medium_battery_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SMI_dp_ship_secondaries_5"
+		texturefile = "gfx/interface/technologies/designer_icons/dp_ship_secondaries_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SMI_dp_light_battery_5"
+		texturefile = "gfx/interface/technologies/designer_icons/dp_light_battery_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SMI_dp_ship_medium_2"
+		texturefile = "gfx/interface/technologies/designer_icons/dp_ship_medium_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SMI_ship_anti_air_5"
+		texturefile = "gfx/interface/technologies/designer_icons/ship_anti_air_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_tank_medium_howitzer_3"
+		textureFile = "gfx/interface/technologies/designer_icons/tank_medium_howitzer_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_tank_medium_cannon_3"
+		textureFile = "gfx/interface/technologies/designer_icons/tank_medium_cannon_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_tank_super_heavy_howitzer"
+		textureFile = "gfx/interface/technologies/designer_icons/tank_super_heavy_howitzer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_tank_super_heavy_howitzer_2"
+		textureFile = "gfx/interface/technologies/designer_icons/tank_super_heavy_howitzer_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_tank_rocket_launcher_3"
+		textureFile = "gfx/interface/technologies/designer_icons/tank_rocket_launcher_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_tank_heavy_cannon_4"
+		textureFile = "gfx/interface/technologies/designer_icons/tank_heavy_cannon_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_tank_high_velocity_cannon_4"
+		textureFile = "gfx/interface/technologies/designer_icons/tank_high_velocity_cannon_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_tank_super_heavy_cannon_2"
+		textureFile = "gfx/interface/technologies/designer_icons/tank_super_heavy_cannon_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_improved_optics"
+		textureFile = "gfx/interface/technologies/designer_icons/improved_optics.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_binocular_telescope"
+		textureFile = "gfx/interface/technologies/designer_icons/binocular_telescope.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_improved_grousers"
+		textureFile = "gfx/interface/technologies/designer_icons/improved_grousers.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_enhanced_rotation_mechanism"
+		textureFile = "gfx/interface/technologies/designer_icons/enhanced_rotation_mechanism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_gun_ramming_mechanism"
+		textureFile = "gfx/interface/technologies/designer_icons/gun_ramming_mechanism.dds"
+	}
+
+
+
+	########################################
+	### BUILDING ICONS #####################
+	########################################
+
+	
+	
+}
