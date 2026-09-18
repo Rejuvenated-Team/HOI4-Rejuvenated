@@ -850,6 +850,29 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/sov/RJ_SOV_deep_operations.dds"
 	}
 
+	#################################
+	### FRANCE ######################
+	#################################
+
+	SpriteType = {
+		name = "GFX_focus_RJ_FRA_devalue_the_franc"
+		texturefile = "gfx/interface/goals/fra/RJ_FRA_devalue_the_franc.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_FRA_metropolitan_investments"
+		texturefile = "gfx/interface/goals/fra/RJ_FRA_metropolitan_investments.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_FRA_autoroutes"
+		texturefile = "gfx/interface/goals/fra/RJ_FRA_autoroutes.dds"
+	}
+
+
+
+
+
 
 
 	###########

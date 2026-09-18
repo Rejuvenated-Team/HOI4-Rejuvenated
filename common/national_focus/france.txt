@@ -19,7 +19,7 @@
 	shared_focus = ABDA_abdacom
 	focus = {
 		id = FRA_devalue_the_franc
-		icon = GFX_focus_fra_devalue_the_franc
+		icon = GFX_focus_RJ_FRA_devalue_the_franc
 		x = 0
 		y = 0
 		
@@ -36,9 +36,6 @@
 		bypass = {
 
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_timed_idea = {
@@ -47,16 +44,90 @@
 			}
 		}
 	}
+
 	focus = {
-		id = FRA_autoroutes
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 2
+		id = RJ_FRA_metropolitan_investments
+		icon = GFX_focus_RJ_FRA_metropolitan_investments
+		x = -2
 		y = 1
 		
 		prerequisite = { focus = FRA_devalue_the_franc }
 		mutually_exclusive = { }
 		relative_position_id = FRA_devalue_the_franc
 		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = FRA
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = FRA
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = FRA
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = FRA
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}	
+
+	focus = {
+		id = FRA_autoroutes
+		icon = GFX_focus_RJ_FRA_autoroutes
+		x = -1
+		y = 1
+		
+		prerequisite = { focus = RJ_FRA_metropolitan_investments }
+		mutually_exclusive = { }
+		relative_position_id = RJ_FRA_metropolitan_investments
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -73,10 +144,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			random_owned_state = {
@@ -135,37 +202,33 @@
 		}
 	}
 	focus = {
-			id = FRA_invest_in_the_metropole
-			icon = GFX_goal_generic_construct_civilian
-			x = 0
-			y = 1
+		id = FRA_invest_in_the_metropole
+		icon = GFX_goal_generic_construct_civilian
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = FRA_devalue_the_franc }
+		mutually_exclusive = { }
+		relative_position_id = FRA_devalue_the_franc
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
 			
-			prerequisite = { focus = FRA_devalue_the_franc }
-			mutually_exclusive = { }
-			relative_position_id = FRA_devalue_the_franc
-			cost = 10
-	
-			ai_will_do = {
-				factor = 1
-			}
-	
-			available = {
-				
-			}
-			
-			bypass = {
-	
-			}
-	
-			cancel_if_invalid = yes
-			continue_if_invalid = no
-			available_if_capitulated = no
-	
-			search_filters = { FOCUS_FILTER_STABILITY }
-			completion_reward = {
-				add_stability = 0.05
-			}
-		}	
+		}
+		
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}	
 	focus = {
 		id = FRA_metropolitan_france
 		icon = GFX_focus_generic_industry_1
