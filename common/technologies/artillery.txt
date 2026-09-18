@@ -704,6 +704,7 @@ technologies = {
 			rocket_artillery_tech
 		}
 		special_project_specialization = { specialization_air }
+		special_project_specialization = { specialization_land }
 	}
 
 	rocket_artillery2 = {
@@ -742,6 +743,7 @@ technologies = {
 			rocket_artillery_tech
 		}
 		special_project_specialization = { specialization_air }
+		special_project_specialization = { specialization_land }
 	}
 
 	rocket_artillery3 = {
@@ -779,6 +781,7 @@ technologies = {
 			mio_cat_all_artillery_equipment
 		}
 		special_project_specialization = { specialization_air }
+		special_project_specialization = { specialization_land }
 	}
 
 	rocket_artillery4 = {
@@ -823,6 +826,7 @@ technologies = {
 			rocket_artillery_tech
 		}
 		special_project_specialization = { specialization_air }
+		special_project_specialization = { specialization_land }
 	}
 
 	rocket_artillery5 = {
@@ -860,6 +864,7 @@ technologies = {
 			mio_cat_all_artillery_equipment
 		}
 		special_project_specialization = { specialization_air }
+		special_project_specialization = { specialization_land }
 	}
 
 	rocket_artillery6 = {
@@ -900,6 +905,7 @@ technologies = {
 			mio_cat_all_artillery_equipment
 		}
 		special_project_specialization = { specialization_air }
+		special_project_specialization = { specialization_land }
 	}
 
 	rocket_artillery7 = {
@@ -936,6 +942,7 @@ technologies = {
 			rocket_artillery_tech
 		}
 		special_project_specialization = { specialization_air }
+		special_project_specialization = { specialization_land }
 	}
 
 	interwar_antiair = {
