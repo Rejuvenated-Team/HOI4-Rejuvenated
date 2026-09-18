@@ -40,6 +40,12 @@ set_technology = {
 	infantry_weapons = 1
 }
 
+recruit_character = SIC_liu_wenhui
+
+SIC_liu_wenhui = {
+	set_character_flag = can_flip_to_prc
+}
+
 IF = {
 	limit = {
 		has_dlc = "No Compromise, No Surrender"
