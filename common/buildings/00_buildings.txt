@@ -139,6 +139,7 @@ buildings = {
 		detecting_intel_type = navy
 		only_display_if_exists = yes
 		special_icon = GFX_specialization_naval
+		infrastructure_construction_effect = yes
 		level_cap = {
 			province_max = 1
 			state_max = 1
@@ -526,6 +527,7 @@ buildings = {
 		#	}
 		#	factor = 10
 		#}
+		infrastructure_construction_effect = yes
 		level_cap = {
 			province_max = 1
 			state_max = 1
@@ -549,6 +551,7 @@ buildings = {
 		disabled_in_dmz = yes
 		only_display_if_exists = yes
 		special_icon = GFX_specialization_air
+		infrastructure_construction_effect = yes
 		level_cap = {
 			province_max = 1
 			state_max = 1
@@ -572,6 +575,7 @@ buildings = {
 		detecting_intel_type = army
 		only_display_if_exists = yes
 		special_icon = GFX_specialization_land
+		infrastructure_construction_effect = yes
 		level_cap = {
 			province_max = 1
 			state_max = 1
@@ -751,19 +755,18 @@ buildings = {
 
 	########REJUVINATED BUILDINGS###########
 
-	#steelworks = {
-	#	show_on_map = 1
-	#	base_cost = 12000
-	#	icon_frame = 34
-	#	local_resources_steel = 12
-	#	refinery = yes
-	#	value = 5
-	#	infrastructure_construction_effect = yes
-	#	level_cap = {
-	#		shares_slots = yes
-	#		state_max = 20
-	#	}
-	#}
+	steelworks = {
+		show_on_map = 0
+		base_cost = 12000
+		icon_frame = 32
+		local_resources_steel = 12
+		value = 5
+		infrastructure_construction_effect = yes
+		level_cap = {
+			shares_slots = yes
+			state_max = 20
+		}
+	}
 }
 
 spawn_points = {
