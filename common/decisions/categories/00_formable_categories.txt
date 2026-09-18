@@ -915,7 +915,10 @@ AST_australia_formables_category = {
 	visible_when_empty = no
 
 	allowed = {
-		original_tag = AST
+		OR = {
+			original_tag = AST
+			original_tag = NZL
+		}
 		has_dlc = "Thunder at Our Gates"
 	}
 }
