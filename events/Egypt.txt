@@ -147,14 +147,14 @@ country_event = { #Egyptian Version
 		}
 		hidden_effect = {
 			ENG = {
-				country_event = egypt.4.british
+				country_event = egypt.4b
 			}
 		}
 	}
 }
 
 country_event = { #British Version
-	id = egypt.4.british
+	id = egypt.4b
 	title = "Completion of the Cairo-Matrouh Railway" #I'm not doing traditional localization since we're not doing any non-English localization. If someone wants to localize the mod for another language, they can change this.
 	desc = egypt.4.d.british
 	picture = GFX_egyptian_rail
