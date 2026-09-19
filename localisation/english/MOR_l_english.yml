@@ -1,6 +1,33 @@
 ﻿l_english:
-#### NATIONAL FOCUSES ####
- 
+#Political Parties
+#Characters
+ MOR_mohammed_v: "Mohammed V"
+ MOR_abdelhadi_tazi: "Abdelhadi Tazi"
+ MOR_abdelkader_hassan_el_assimi: "Abdelkader Hassan El Assimi"
+ MOR_abdelkrim_ghallab: "Abdelkrim Ghallab"
+ MOR_mehdi_ben_barka: "Mehdi Ben Barka"
+ MOR_mohamed_el_yazidi: "Mohamed El Yazidi"
+ MOR_mohamed_meziane: "Mohamed Meziane"
+ MOR_caid_medbough: "Caid Medbough"
+ MOR_mahjoubi_aherdane: "Mahjoubi Aherdane"
+ MOR_mbarek_bekkay: "Mbarek Bekkay"
+ MOR_mohammed_al_mokhtar_soussi: "Mohammed al Mokhtar Soussi"
+ MOR_messaoud_chiguer: "Messaoud Chiguer"
+ MOR_mohamed_el_fassi: "Mohamed El Fassi"
+ MOR_thami_el_glaoui: "Thami El Glaoui"
+#Ideas
+ MOR_resident_general1: "Resident General Veto"
+ MOR_resident_general2: "Resident General Accord"
+ MOR_resident_general3: "Equal Rights"
+ MOR_resident_general4: "Representative Council"
+ MOR_fes_traity1: "Fez Traity"
+ MOR_fes_traity2: "Fez Traity Renegociated"
+ MOR_action_committee: "Action Commitee"
+ MOR_support_france: "Support France"
+ MOR_support_independance: "Support Independence"
+ MOR_bank_reform: "Bank Reform"
+ MOR_dirham: "Monetary Control"
+#Focuses
  MOR_sultan_diplomacy: "Sultan Diplomacy"
  MOR_sultan_diplomacy_desc: "In these trouble times, the government need to affirm this authority. The Sultan will lead the kingdom and try to appease both of the nationalists and the french general resident. But a clear choice must be made for the future of Morocco."
  MOR_nationalist_movement_pressure: "Nationalist Movements Pressure"
@@ -153,39 +180,8 @@
  MOR_casablanca_royal_navy_school_desc: ""
  MOR_control_gibraltar: "Secure Gibraltar Position"
  MOR_control_gibraltar_desc: ""
- 
-#### IDEAS ####
- 	
- MOR_resident_general1: "Resident General Veto"
- MOR_resident_general2: "Resident General Accord"
- MOR_resident_general3: "Equal Rights"
- MOR_resident_general4: "Representative Council"
- MOR_fes_traity1: "Fez Traity"
- MOR_fes_traity2: "Fez Traity Renegociated"
- MOR_action_committee: "Action Commitee"
- MOR_support_france: "Support France"
- MOR_support_independance: "Support Independence"
- MOR_bank_reform: "Bank Reform"
- MOR_dirham: "Monetary Control"
- 
-#### MINISTERS ####
- 
- MOR_abdelhadi_tazi: "Abdelhadi Tazi"
- MOR_abdelkader_hassan_el_assimi: "Abdelkader Hassan El Assimi"
- MOR_abdelkrim_ghallab: "Abdelkrim Ghallab"
- MOR_mehdi_ben_barka: "Mehdi Ben Barka"
- MOR_mohamed_el_yazidi: "Mohamed El Yazidi"
- MOR_mohamed_meziane: "Mohamed Meziane"
- MOR_caid_medbough: "Caid Medbough"
- MOR_mahjoubi_aherdane: "Mahjoubi Aherdane"
- MOR_mbarek_bekkay: "Mbarek Bekkay"
- MOR_mohammed_al_mokhtar_soussi: "Mohammed al Mokhtar Soussi"
- MOR_messaoud_chiguer: "Messaoud Chiguer"
- MOR_mohamed_el_fassi: "Mohamed El Fassi"
- MOR_thami_el_glaoui: "Thami El Glaoui"
- 
-#### EVENTS ####
- 	
+#Decisions
+#Events
  morocco.100.t: "Morocco breaks free"
  morocco.100.d: "A general revolt have occured in Morocco. Independantists lead the Sultan himself by have made a coup and take control of the french government of Rabat."
  morocco.100.a: "We can do anything to stop them."
@@ -194,7 +190,5 @@
  morocco.101.d: ""
  morocco.101.a: "We can do anything to stop them."
  morocco.101.b: "Crush this protest march quickly!"
- 
- rj_MOR_GATHERING_STORM_DESC: "Although being under protectorate, Morocco remained a sovereign state but in reality is under France rules. As opposition to french control rises, nationalism starts growing.\n\nWith no army, weak economy and poor infrastructures, Morocco will need to choose a path to gain this independance in these trouble times."
- MOROCCO_BLITZKRIEG_DESC: "Although being under protectorate, Morocco remained a sovereign state but in reality is under France rules. As opposition to french control rises, nationalism starts growing.\n\nWith no army, weak economy and poor infrastructures, Morocco will need to choose a path to gain this independance in these trouble times."
- 
+#Tooltips
+#Flags
