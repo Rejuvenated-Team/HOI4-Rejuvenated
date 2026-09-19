@@ -117,9 +117,9 @@ upgrades = {
 		build_cost_ic = 0.05
 	}	
 	ac_engine_upgrade = {
-		max_level = 5
+		max_level = 8
 		cost = land
-		maximum_speed = 0.02
+		maximum_speed = 0.03
 	}	
 	tank_reliability_upgrade = {
 		max_level = 5
@@ -131,7 +131,7 @@ upgrades = {
 		max_level = 5
 		cost = land
 		build_cost_ic = -0.1
-		reliability = -0.05
+		reliability = -0.04
 	}
 	tank_aa_upgrade = {
 		max_level = 5
@@ -159,4 +159,14 @@ upgrades = {
 		maximum_speed = -0.02
 		reliability = -0.05
 	}
+
+	##################################
+	### REJUVENATED ##################
+	##################################
+
+	motorized_engine_upgrade = {
+		max_level = 6
+		cost = land
+		maximum_speed = 0.05
+	}	
 }
