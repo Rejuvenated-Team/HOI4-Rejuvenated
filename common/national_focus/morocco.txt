@@ -12,7 +12,7 @@ focus_tree = {
 	
 	default = no
 
-
+	shared_focus = CFRA_rewrite_protectorate_treaties
 
 	############################
 			## POLITICAL SECTION ###
@@ -46,7 +46,7 @@ focus_tree = {
 		cost = 10
 		
 		available = {
-			NOT = { FRA = { has_completed_focus = FRA_rewrite_protectorate_treaties } }
+			NOT = { FRA = { has_completed_focus = CFRA_rewrite_protectorate_treaties } }
 		}
 
 		completion_reward = {
@@ -77,7 +77,7 @@ focus_tree = {
 		}
 		
 		bypass = {
-			 FRA = { has_completed_focus = FRA_rewrite_protectorate_treaties }
+			 FRA = { has_completed_focus = CFRA_rewrite_protectorate_treaties }
 		}
 
 
@@ -130,7 +130,7 @@ focus_tree = {
 		
 		available = {
 			OR = {
-				FRA = { has_completed_focus = FRA_rewrite_protectorate_treaties }
+				FRA = { has_completed_focus = CFRA_rewrite_protectorate_treaties }
 				AND = {
 					compare_autonomy_progress_ratio > 0.50
 					compare_autonomy_state > autonomy_fr_colony
@@ -163,7 +163,7 @@ focus_tree = {
 		
 		available = {
 			OR = {
-				FRA = { has_completed_focus = FRA_rewrite_protectorate_treaties }
+				FRA = { has_completed_focus = CFRA_rewrite_protectorate_treaties }
 				AND = {
 					compare_autonomy_progress_ratio > 0.75
 					compare_autonomy_state > autonomy_fr_colony
@@ -198,7 +198,7 @@ focus_tree = {
 		
 		available = {
 			OR = {
-				FRA = { has_completed_focus = FRA_rewrite_protectorate_treaties }
+				FRA = { has_completed_focus = CFRA_rewrite_protectorate_treaties }
 				compare_autonomy_state > autonomy_protectorate
 			}
 		}
@@ -227,7 +227,7 @@ focus_tree = {
 
 		available = {
 			OR = {
-				FRA = { has_completed_focus = FRA_rewrite_protectorate_treaties }
+				FRA = { has_completed_focus = CFRA_rewrite_protectorate_treaties }
 				AND = {
 					compare_autonomy_progress_ratio > 0.25
 					compare_autonomy_state > autonomy_protectorate
@@ -253,7 +253,7 @@ focus_tree = {
 		
 		available = {
 			OR = {
-				FRA = { has_completed_focus = FRA_rewrite_protectorate_treaties }
+				FRA = { has_completed_focus = CFRA_rewrite_protectorate_treaties }
 				AND = {
 					compare_autonomy_progress_ratio > 0.5
 					compare_autonomy_state > autonomy_protectorate
@@ -291,7 +291,7 @@ focus_tree = {
 		}
 		
 		available = {
-			NOT = { FRA = { has_completed_focus = FRA_rewrite_protectorate_treaties } }
+			NOT = { FRA = { has_completed_focus = CFRA_rewrite_protectorate_treaties } }
 		}
 
 		completion_reward = {
@@ -314,7 +314,7 @@ focus_tree = {
 
 		available = {
 			NOT = { has_war_with = USA }
-			NOT = { FRA = { has_completed_focus = FRA_rewrite_protectorate_treaties } }
+			NOT = { FRA = { has_completed_focus = CFRA_rewrite_protectorate_treaties } }
 		}
 
 		completion_reward = {
@@ -365,7 +365,7 @@ focus_tree = {
 
 		available = {
 			NOT = { has_war_with = SOV }
-			NOT = { FRA = { has_completed_focus = FRA_rewrite_protectorate_treaties } }
+			NOT = { FRA = { has_completed_focus = CFRA_rewrite_protectorate_treaties } }
 		}
 
 		completion_reward = {
@@ -416,7 +416,7 @@ focus_tree = {
 
 		available = {
 			NOT = { has_war_with = GER }
-			NOT = { FRA = { has_completed_focus = FRA_rewrite_protectorate_treaties } }
+			NOT = { FRA = { has_completed_focus = CFRA_rewrite_protectorate_treaties } }
 		}
 		
 		completion_reward = {
@@ -474,7 +474,7 @@ focus_tree = {
 			compare_autonomy_state > autonomy_fr_colony
 			is_subject_of = FRA
 			NOT = { has_idea = HUN_secret_rearmament }
-			NOT = { FRA = { has_completed_focus = FRA_rewrite_protectorate_treaties } }
+			NOT = { FRA = { has_completed_focus = CFRA_rewrite_protectorate_treaties } }
 		}
 
 		completion_reward = {
@@ -658,7 +658,7 @@ focus_tree = {
 		
 		available = {
 			OR = {
-				FRA = { has_completed_focus = FRA_rewrite_protectorate_treaties }
+				FRA = { has_completed_focus = CFRA_rewrite_protectorate_treaties }
 				AND = {
 					compare_autonomy_progress_ratio > 0.5
 					compare_autonomy_state > autonomy_protectorate
@@ -686,7 +686,7 @@ focus_tree = {
 		
 		available = {
 			OR = {
-				FRA = { has_completed_focus = FRA_rewrite_protectorate_treaties }
+				FRA = { has_completed_focus = CFRA_rewrite_protectorate_treaties }
 				AND = {
 					compare_autonomy_progress_ratio > 0.75
 					compare_autonomy_state > autonomy_protectorate
@@ -712,7 +712,7 @@ focus_tree = {
 	
 	focus = {
 		id = MOR_arab_league
-		icon = GFX_goal_anschluss
+		icon = GFX_focus_IRQ_arab_league
 		prerequisite = { focus = MOR_renegociate_fez_traity }
 		mutually_exclusive = { focus = MOR_french_alliance}
 		x = 5
@@ -737,7 +737,7 @@ focus_tree = {
 	
 	focus = {
 		id = MOR_french_alliance
-		icon = GFX_blum_violette
+		icon = GFX_focus_chi_reach_out_to_france
 		prerequisite = { focus = MOR_renegociate_fez_traity }
 		prerequisite = { focus = MOR_representative_councils }
 		mutually_exclusive = { focus = MOR_arab_league}

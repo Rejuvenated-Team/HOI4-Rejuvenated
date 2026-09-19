@@ -4,6 +4,12 @@
  FRA_louis_rivet: "Louis Rivet"
 #Ideas
 #Focuses
+ CFRA_rewrite_protectorate_treaties: "Renegotiate the Protectorates Treaties"
+ CFRA_rewrite_protectorate_treaties_desc: "The treaties that France impose to Morocco and Tunisia were unbalance and don't do along the credo of the Republic. It's time to put the end of the old french imperialistic area."
+ CFRA_rewrite_protectorate_treaties_tooltip: "§YMorocco§! and §YTunisia§! will become §YAssociated State§!. They can also take political focus without conditions and lock them to pro-France diplomacy."
+ CFRA_autonomy_indochina: "Autonomy for Indochina"
+ CFRA_autonomy_indochina_desc: "The countries of the Indochina region are the pearl of the french colonial empire, but nothing as be done on the political level since the colonization. We must remedy to this."
+ CFRA_autonomy_indochina_tooltip: "§YVietnam§!, §YCambodia§! and §YLaos§! will become §YAssociated State§!. They can also take political focus without conditions and lock them to pro-France diplomacy."
 #Decisions
 #Events
 #Tooltips

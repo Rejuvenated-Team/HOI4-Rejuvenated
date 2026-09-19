@@ -1,0 +1,221 @@
+joint_focus = {
+	id = CFRA_rewrite_protectorate_treaties
+	icon = GFX_focus_renounce_the_treaty_of_trianon
+	x = 0
+	y = 0
+	cost = 5
+
+	offset = {
+		x = 10
+		y = 8
+		trigger = {
+			has_focus_tree = french_focus
+		}
+	}
+
+	offset = {
+		x = 30
+		y = 0
+		trigger = {
+			has_focus_tree = morocco_focus
+		}
+	}
+
+	available = {
+		original_tag = FRA
+		OR = {
+			has_subject = MOR
+			has_subject = TUN
+		}
+	}
+	
+	bypass = {
+		NOT = {
+			AND = {
+				has_subject = MOR
+				has_subject = TUN
+			}
+		}
+	}
+
+	available_if_capitulated = yes
+
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		custom_effect_tooltip = CFRA_rewrite_protectorate_treaties_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					MOR = {
+						is_subject_of = FRA
+						compare_autonomy_state < autonomy_associate
+					}
+				}
+				FRA = { 
+					set_autonomy = {
+						target = MOR
+						autonomy_state = autonomy_associate
+					}
+				}
+				hidden_effect = {
+					MOR = {
+						set_politics = {
+							ruling_party = neutrality
+							last_election = "1936.1.1"
+							election_frequency = 48
+							elections_allowed = no
+						}
+						set_popularities = {
+							neutrality = 90
+							democratic = 5
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					TUN = {
+						is_subject_of = FRA
+						compare_autonomy_state < autonomy_associate
+					}
+				}
+				FRA = { 
+					set_autonomy = {
+						target = TUN
+						autonomy_state = autonomy_associate
+					}
+				}
+				hidden_effect = {
+					TUN = {
+						set_politics = {	
+							ruling_party = neutrality
+							last_election = "1936.1.1"
+							election_frequency = 48
+							elections_allowed = no
+						}
+						set_popularities = {
+							neutrality = 70
+							democratic = 30
+						}
+					}
+				}
+			}
+		}
+	}
+}
+joint_focus = {
+	id = CFRA_autonomy_indochina
+	icon = GFX_goal_generic_national_unity
+	x = 3
+	y = 0
+	relative_position_id = CFRA_rewrite_protectorate_treaties
+	cost = 5
+
+	available = {
+		original_tag = FRA
+		has_subject = FRI
+	}
+	
+	bypass = {
+		NOT = {
+			has_subject = FRI
+		}
+	}
+
+	available_if_capitulated = yes
+
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		custom_effect_tooltip = CFRA_autonomy_indochina_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					VIN = {
+						is_subject_of = FRA
+						compare_autonomy_state < autonomy_associate
+					}
+				}
+				FRA = { 
+					set_autonomy = {
+						target = VIN
+						autonomy_state = autonomy_associate
+					}
+				}
+				hidden_effect = {
+					VIN = {
+						set_politics = {
+							ruling_party = neutrality
+							last_election = "1936.1.1"
+							election_frequency = 48
+							elections_allowed = no
+						}
+						set_popularities = {
+							neutrality = 60
+							democratic = 40
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					LAO = {
+						is_subject_of = FRA
+						compare_autonomy_state < autonomy_associate
+					}
+				}
+				FRA = { 
+					set_autonomy = {
+						target = LAO
+						autonomy_state = autonomy_associate
+					}
+				}
+				hidden_effect = {
+					LAO = {
+						set_politics = {	
+							ruling_party = neutrality
+							last_election = "1936.1.1"
+							election_frequency = 48
+							elections_allowed = no
+						}
+						set_popularities = {
+							neutrality = 65
+							democratic = 35
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					CAM = {
+						is_subject_of = FRA
+						compare_autonomy_state < autonomy_associate
+					}
+				}
+				FRA = { 
+					set_autonomy = {
+						target = CAM
+						autonomy_state = autonomy_associate
+					}
+				}
+				hidden_effect = {
+					CAM = {
+						set_politics = {
+							ruling_party = neutrality
+							last_election = "1936.1.1"
+							election_frequency = 48
+							elections_allowed = no
+						}
+						set_popularities = {
+							neutrality = 80
+							democratic = 20
+						}
+					}
+				}					
+			}
+		}
+	}
+}
