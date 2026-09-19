@@ -1,4 +1,5 @@
 spriteTypes = {
+
     SpriteType = {
 		name = "GFX_rubber_plantation"
 		texturefile = "gfx/event_pictures/LIB/rubber_plantation.dds"
@@ -9,8 +10,14 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/ENG/coal_miners.dds"
 	}
 
-	spriteType = {
+	SpriteType = {
 		name = "GFX_rj_report_event_MLT_language_question"
 		texturefile = "gfx/event_pictures/MLT/rj_report_event_MLT_language_question.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_egyptian_rail"
+		texturefile = "gfx/event_pictures/EGY/egyptian_rail.dds"
+	}
+
 }
