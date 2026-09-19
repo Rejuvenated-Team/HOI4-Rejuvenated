@@ -115,3 +115,57 @@ country_event = {
 		}
 	}
 }
+
+country_event = { #Egyptian Version
+	id = egypt.4
+	title = "Completion of the Cairo-Matrouh Railway" #I'm not doing traditional localization since we're not doing any non-English localization. If someone wants to localize the mod for another language, they can change this.
+	desc = egypt.4.d
+	picture = GFX_egyptian_rail
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = EGY
+		date > 1936.02.10
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = "Well, at least it benefits us as well."
+		ROOT = {
+			build_railway = {
+				path = { 1071 11910 10061 }
+				level = 1
+				start_province = 1071
+				target_province = 10061
+			}
+			452 = {
+				increase_state_category = yes
+			}
+		}
+		hidden_effect = {
+			ENG = {
+				country_event = egypt.4.british
+			}
+		}
+	}
+}
+
+country_event = { #British Version
+	id = egypt.4.british
+	title = "Completion of the Cairo-Matrouh Railway" #I'm not doing traditional localization since we're not doing any non-English localization. If someone wants to localize the mod for another language, they can change this.
+	desc = egypt.4.d.british
+	picture = GFX_egyptian_rail
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Smashing!"
+		ENG = {
+			add_political_power = 5
+		}
+	}
+}
