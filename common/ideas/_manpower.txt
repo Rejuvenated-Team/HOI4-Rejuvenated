@@ -92,6 +92,13 @@ ideas = {
 				}
 				NOT = { has_idea = undisturbed_isolation }
 				NOT = { has_idea = isolation }
+
+				if = {
+					limit = {
+						original_tag = MOR
+					}
+					has_completed_focus = MOR_retablish_army
+				}
 			}
 
 			ai_will_do = {
@@ -254,6 +261,13 @@ ideas = {
 						original_tag = AFG
 					}
 					has_completed_focus = AFG_adopt_nufus
+				}
+
+				if = {
+					limit = {
+						original_tag = MOR
+					}
+					has_completed_focus = MOR_retablish_army
 				}
 			}
 
@@ -525,6 +539,13 @@ ideas = {
 					}
 					has_completed_focus = AFG_adopt_nufus
 				}				
+
+				if = {
+					limit = {
+						original_tag = MOR
+					}
+					has_completed_focus = MOR_retablish_army
+				}
 			}
 			ai_will_do = {
    				factor = 1
@@ -796,6 +817,13 @@ ideas = {
 					}
 					has_completed_focus = AFG_adopt_nufus
 				}
+
+				if = {
+					limit = {
+						original_tag = MOR
+					}
+					has_completed_focus = MOR_retablish_army
+				}
 			}
 
 			ai_will_do = {
@@ -1042,6 +1070,13 @@ ideas = {
 					}
 					has_completed_focus = AFG_adopt_nufus
 				}
+
+				if = {
+					limit = {
+						original_tag = MOR
+					}
+					has_completed_focus = MOR_retablish_army
+				}
 			}
 
 			ai_will_do = {
@@ -1274,6 +1309,13 @@ ideas = {
 					}
 					has_completed_focus = AFG_adopt_nufus
 				}	
+
+				if = {
+					limit = {
+						original_tag = MOR
+					}
+					has_completed_focus = MOR_retablish_army
+				}
 			}
 
 			ai_will_do = {
