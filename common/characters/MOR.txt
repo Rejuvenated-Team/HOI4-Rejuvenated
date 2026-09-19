@@ -14,4 +14,219 @@ characters = {
 			id=-1
 		}
 	}
+
+	MOR_messaoud_chiguer={
+		name=MOR_messaoud_chiguer
+		portraits={
+			army={
+				small="GFX_idea_messaoud_chiguer"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MOR_messaoud_chiguer
+			allowed = {
+				original_tag = MOR
+			}
+			available = {
+				OR = {
+					has_completed_focus = MOR_representative_councils
+					has_completed_focus = MOR_american_support
+				}
+			}
+			traits = {
+				democratic_reformer
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	MOR_mehdi_ben_barka={
+		name=MOR_mehdi_ben_barka
+		portraits={
+			army={
+				small="GFX_idea_mehdi_ben_barka"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MOR_mehdi_ben_barka
+			allowed = {
+				original_tag = MOR
+			}
+			available = {
+				has_completed_focus = MOR_comintern_support
+			}
+			traits = {
+				communist_revolutionary
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	MOR_mohamed_el_yazidi={
+		name=MOR_mohamed_el_yazidi
+		portraits={
+			army={
+				small="GFX_idea_mohamed_el_yazidi"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MOR_mohamed_el_yazidi
+			allowed = {
+				original_tag = MOR
+			}
+			available = {
+				has_completed_focus = MOR_axis_support
+			}
+			traits = {
+				fascist_demagogue
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	MOR_abdelhadi_tazi={
+		name=MOR_abdelhadi_tazi
+		portraits={
+			army={
+				small="GFX_idea_abdelhadi_tazi"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MOR_abdelhadi_tazi
+			allowed = {
+				original_tag = MOR
+			}
+			available = {
+				has_completed_focus = MOR_moroccans_advisors
+			}
+			traits = {
+				captain_of_industry
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	MOR_abdelkader_hassan_el_assimi={
+		name=MOR_abdelkader_hassan_el_assimi
+		portraits={
+			army={
+				small="GFX_idea_abdelkader_hassan_el_assimi"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MOR_abdelkader_hassan_el_assimi
+			allowed = {
+				original_tag = MOR
+			}
+			available = {
+				OR = {
+					has_completed_focus = MOR_moroccans_advisors
+					has_completed_focus = MOR_independance
+				}
+			}
+			traits = {
+				smooth_talking_charmer
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	MOR_mohamed_el_fassi={
+		name=MOR_mohamed_el_fassi
+		portraits={
+			army={
+				small="GFX_idea_mohamed_el_fassi"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MOR_mohamed_el_fassi
+			allowed = {
+				original_tag = MOR
+			}
+			available = {
+				OR = {
+					has_completed_focus = MOR_moroccans_advisors
+					has_completed_focus = MOR_independance
+				}
+			}
+			traits = {
+				silent_workhorse
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	MOR_abdelkrim_ghallab={
+		name=MOR_abdelkrim_ghallab
+		portraits={
+			army={
+				small="GFX_idea_abdelkrim_ghallab"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MOR_abdelkrim_ghallab
+			allowed = {
+				original_tag = MOR
+			}
+			available = {
+				OR = {
+					has_completed_focus = MOR_moroccans_advisors
+					has_completed_focus = MOR_independance
+				}
+			}
+			traits = {
+				popular_figurehead
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	MOR_mohamed_meziane={
+		name=MOR_mohamed_meziane
+		portraits={
+			army={
+				small="GFX_idea_mohamed_meziane"
+			}
+		}
+		advisor={
+			slot = theorist
+			ledger = army
+			idea_token = MOR_mohamed_meziane
+			allowed = {
+				original_tag = MOR
+			}
+			available = {
+				has_completed_focus = MOR_military_staff
+			}
+			traits = {
+				military_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
 }

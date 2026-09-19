@@ -1026,8 +1026,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = MOR_military_staff_tooltip
-			add_ideas = MOR_mohamed_meziane
+			army_experience = 15
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = MOR_mohamed_meziane
 		}
 	}
 	

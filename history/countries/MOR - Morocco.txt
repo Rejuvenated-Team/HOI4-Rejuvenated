@@ -27,3 +27,12 @@ set_popularities = {
 
 recruit_character = MOR_mohammed_v
 
+recruit_character = MOR_messaoud_chiguer
+recruit_character = MOR_mehdi_ben_barka
+recruit_character = MOR_mohamed_el_yazidi
+recruit_character = MOR_abdelhadi_tazi
+recruit_character = MOR_abdelkader_hassan_el_assimi
+recruit_character = MOR_mohamed_el_fassi
+recruit_character = MOR_abdelkrim_ghallab
+
+recruit_character = MOR_mohamed_meziane
