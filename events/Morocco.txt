@@ -3,7 +3,82 @@
 ###########################
 
 add_namespace = morocco
+
+#Morocco Requests Advisors
+country_event = {
+	id = morocco.1
+	title = morocco.1.t
+	desc = morocco.1.d
+	picture = GFX_report_event_election_vote
 	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = morocco.1.a
+		ai_chance = {
+			base = 100
+		}
+		effect_tooltip = {
+			FRA_philippe_fequant = {
+				set_nationality = FROM
+			}
+			FRA_jean_marie_abrial = {
+				set_nationality = FROM
+			}
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = { id = morocco.2 hours = 3 }
+			}
+		}
+	}
+	option = { # Refuse
+		name = morocco.1.b
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = { id = morocco.3 hours = 3 }
+			}
+		}
+	}
+}
+
+#France Agrees
+country_event = {
+	id = morocco.2
+	title = morocco.2.t
+	desc = morocco.2.d
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = morocco.2.a
+		FRA_philippe_fequant = {
+			set_nationality = ROOT
+		}
+		FRA_jean_marie_abrial = {
+			set_nationality = ROOT
+		}
+	}
+}
+
+#France Refuses
+country_event = {
+	id = morocco.3
+	title = morocco.3.t
+	desc = morocco.3.d
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = morocco.3.a
+	}
+}
+
 #Independance
 country_event = {
 	id = morocco.100

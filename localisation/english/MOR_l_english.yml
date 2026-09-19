@@ -181,6 +181,16 @@
  MOR_control_gibraltar_desc: ""
 #Decisions
 #Events
+ morocco.1.t: "[FROM.GetNameDefCap] Wants Instructors"
+ morocco.1.d: ""
+ morocco.1.a: "Give em' to them"
+ morocco.1.b: "We need em'"
+ morocco.1.t: "[FROM.GetNameDefCap] Accepted"
+ morocco.1.d: ""
+ morocco.1.a: "noice"
+ morocco.1.t: "[FROM.GetNameDefCap] Rejected"
+ morocco.1.d: ""
+ morocco.1.a: "ok..."
  morocco.100.t: "Morocco breaks free"
  morocco.100.d: "A general revolt have occured in Morocco. Independantists lead the Sultan himself by have made a coup and take control of the french government of Rabat."
  morocco.100.a: "We can do anything to stop them."

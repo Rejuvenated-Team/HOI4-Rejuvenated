@@ -858,8 +858,34 @@ focus_tree = {
 		cost = 10
 
 		completion_reward = {
-			add_ideas =  philippe_fequant
-			add_ideas = jean_marie_abrial
+			FRA = {
+				country_event = { id = morocco.1 hours = 3 }
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				if = {
+					limit = {
+						NOT = {
+							has_character = FRA_philippe_fequant
+							has_character = FRA_jean_marie_abrial
+						}
+					}
+					custom_effect_tooltip = available_chief_of_airforce
+					FRA = {
+						show_ideas_tooltip = philippe_fequant
+					}
+					custom_effect_tooltip = available_chief_of_navy
+					FRA = {
+						show_ideas_tooltip = jean_marie_abrial
+					}
+				}
+				else = {
+					custom_effect_tooltip = available_chief_of_airforce
+					show_ideas_tooltip = philippe_fequant
+					custom_effect_tooltip = available_chief_of_navy
+					show_ideas_tooltip = jean_marie_abrial
+				}
+			}
 		}
 	}
 
