@@ -102,6 +102,10 @@ technologies = {
 		enable_subunits = {
 			engineer
 		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_engineer
+		}
 
 		path = {
 			leads_to_tech = tech_engineers2
@@ -474,6 +478,10 @@ technologies = {
 			armored_car_recon
 			light_tank_recon
 		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_recon
+		}
 
 		path = {
 			leads_to_tech = tech_recon2
@@ -669,6 +677,24 @@ technologies = {
 
 		enable_subunits = {
 			military_police
+		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_military_police
+		}
+
+		on_research_complete = {
+			if = {
+				limit = {
+					has_dlc = "Thunder at Our Gates"
+					tag = ENG
+					is_ai = yes
+				}
+				add_units_to_division_template = {
+					template_name = "Army Headquarters"
+					support = { hq_military_police = 0 }
+				}
+			}
 		}
 
 		path = {
@@ -888,6 +914,24 @@ technologies = {
 		enable_subunits = {
 			maintenance_company
 		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_maintenance
+		}
+
+		on_research_complete = {
+			if = {
+				limit = {
+					has_dlc = "Thunder at Our Gates"
+					tag = FRA
+					is_ai = yes
+				}
+				add_units_to_division_template = {
+					template_name = "Quartier General d'Armee"
+					support = { hq_maintenance = 0 }
+				}
+			}
+		}
 
 		path = {
 			leads_to_tech = tech_maintenance_company2
@@ -927,6 +971,12 @@ technologies = {
 			modifier = {
 				factor = 1.2
 				date > "1939.1.1"
+			}
+
+			modifier = {
+				factor = 10
+				tag = GER
+				date > "1942.1.1"
 			}
 		}
 	}
@@ -1100,6 +1150,10 @@ technologies = {
 
 		enable_subunits = {
 			field_hospital
+		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_field_hospital
 		}
 
 		path = {
@@ -1361,6 +1415,35 @@ technologies = {
 		enable_subunits = {
 			logistics_company
 		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_logistics
+		}
+
+		on_research_complete = {
+			if = {
+				limit = {
+					has_dlc = "Thunder at Our Gates"
+					tag = USA
+					is_ai = yes
+				}
+				add_units_to_division_template = {
+					template_name = "Field Army Headquarters"
+					support = { hq_logistics = 0 }
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "Thunder at Our Gates"
+					tag = SOV
+					is_ai = yes
+				}
+				add_units_to_division_template = {
+					template_name = "Shtab Armii"
+					support = { hq_logistics = 0 }
+				}
+			}
+		}
 
 		path = {
 			leads_to_tech = tech_logistics_company2
@@ -1422,7 +1505,7 @@ technologies = {
 		}
 
 		helicopter_transport = {
-			supply_consumption_factor = -0.12
+			supply_consumption_factor = -0.15
 		}
 
 		path = {
@@ -1477,7 +1560,7 @@ technologies = {
 		}
 
 		helicopter_transport = {
-			supply_consumption_factor = -0.12
+			supply_consumption_factor = -0.15
 		}
 
 		helicopter_brigade = {
@@ -1572,6 +1655,10 @@ technologies = {
 
 		enable_subunits = {
 			signal_company
+		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_signal
 		}
 
 		path = {
