@@ -1,7 +1,7 @@
 #reload countrycolors
 
 GER = {
-	color = HSV { 0.1 0.05 0.3 }
+	color = HSV { 0.1 0.15 0.4 }
 	color_ui = rgb { 138 155 116 }
 }
 ENG = {
@@ -134,7 +134,7 @@ BOL = {
 	color_ui = rgb { 255 234 177 }
 }
 BRA = {
-	color = rgb { 76 175 63 }
+	color = rgb { 76 145 63 }
 	color_ui = rgb { 99 189 82 }
 }
 CAN = {
@@ -259,7 +259,7 @@ USA = {
 }
 MON = {
 	#color = HSV { 0.1 0.15 0.4 }
-	color = rgb { 70 250 85 }
+	color = rgb { 108 140 42 }
 	color_ui = rgb { 209 247 133 }
 }
 MEN = {
@@ -299,7 +299,7 @@ SLO = {
 	color_ui = rgb { 255 255 255 }
 }
 RAJ = {
-	color = rgb { 246  135  40 }
+	color = rgb { 226  135  40 }
 	color_ui = rgb { 226  135  40 }
 }
 
