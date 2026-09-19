@@ -10,7 +10,7 @@ sub_units = {
 		affects_speed = no
 		
 		group = support
-		
+
 		type = {
 			infantry
 			support
