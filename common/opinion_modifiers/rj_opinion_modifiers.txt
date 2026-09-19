@@ -40,5 +40,13 @@ opinion_modifiers = {
 		trade = yes
 		value = 250
 	}
+
+	MOR_support_france = {
+		value = 50
+	}
+	
+	MOR_support_independance = {
+		value = -50
+	}
 	
 }
