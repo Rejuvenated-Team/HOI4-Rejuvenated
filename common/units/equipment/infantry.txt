@@ -38,6 +38,9 @@ equipments = {
 		resources = {
 			steel = 2
 		}
+		upgrades = {
+			tank_reliability_upgrade
+		}
 		
 	}
 

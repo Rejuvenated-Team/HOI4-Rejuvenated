@@ -8,4 +8,9 @@ spriteTypes = {
 		name = "GFX_coal_miners"
 		texturefile = "gfx/event_pictures/ENG/coal_miners.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_egyptian_rail"
+		texturefile = "gfx/event_pictures/EGY/egyptian_rail.dds"
+	}
 }
