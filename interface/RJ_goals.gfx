@@ -1342,6 +1342,19 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/nzl/RJ_NZL_kauri_point_naval_depot.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_study_british_radar"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_study_british_radar.dds"
+	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_taranaki_oil"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_taranaki_oil.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_women_in_the_workforce"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_women_in_the_workforce.dds"
+	}
 
 }

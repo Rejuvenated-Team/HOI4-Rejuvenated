@@ -36,6 +36,10 @@
  RJ_NZL_cruiser_specialty_desc: "Most types of ships are impractical for us to build. Cruisers can handle a large variety of roles & make the best use of our resources."
  RJ_NZL_minesweepers_of_the_pacific: "Minesweepers of the Pacific"
  RJ_NZL_minesweepers_of_the_pacific_desc: "A key duty we can attend to in our reaches of the world is minesweeping. It might not seem as impressive as taking part in large battles, hunting enemy fleets down. But it's important work nonetheless, & we're good at it."
+ RJ_NZL_study_british_radar: "Study British Radar"
+ RJ_NZL_study_british_radar_desc: "The British have done a remarkable job in the relatively new field of Radar technology. It would be most beneficial to us to send a team to study this technology!"
+ RJ_NZL_expand_electrification: "Expand Electrification"
+ RJ_NZL_expand_electrification_desc: "Our country has a great deal of hydroelectric & has embraced electrification. It's time we further our efforts into further projects, such as the completion of the Roaring Meg station, & furthering electrical infrastructure in our land."
 
 
 
@@ -53,3 +57,6 @@
  RJ_NZL_idea_royal_new_zealand_navy: "Royal New Zealand Navy"
  RJ_NZL_idea_royal_new_zealand_navy_2: "Royal New Zealand Navy"
  RJ_NZL_idea_pacific_minesweepers: "Pacific Minesweepers"
+ RJ_NZL_idea_bureau_of_industry: "Bureau of Industry"
+ RJ_NZL_idea_ministry_of_public_works: "Ministry of Public Works"
+ RJ_NZL_idea_ministry_of_public_works_2: "Ministry of Public Works"
