@@ -15,9 +15,38 @@ spriteTypes = {
         texturefile = gfx/interface/ideologies/RJ_monarchy_icon.dds
     }
 
-    #spriteType = {
-    #    name = GFX_ideology_corporatocracy
-    #    texturefile = gfx/interface/ideologies/RJ_corporatocracy_icon.dds
-    #}
-    #This will be for an eventual Corporatocracy that'll be used for the Banana Empire & Firestone in Liberia.
+    spriteType = {
+        name = GFX_ideology_stalinism
+        texturefile = gfx/interface/ideologies/RJ_stalinism_icon.dds
+    }
+
+   #spriteType = {
+   #    name = GFX_ideology_marxism
+   #    texturefile = gfx/interface/ideologies/RJ_marxism_icon.dds
+   #}
+
+    spriteType = {
+        name = GFX_ideology_leninism
+        texturefile = gfx/interface/ideologies/RJ_leninism_icon.dds
+    }
+
+    spriteType = {
+        name = GFX_ideology_gen_nazism
+        texturefile = gfx/interface/ideologies/RJ_gen_nazism_icon.dds
+    }
+
+    spriteType = {
+        name = GFX_ideology_nazism
+        texturefile = gfx/interface/ideologies/RJ_nazism_icon.dds
+    }
+
+    spriteType = {
+        name = GFX_ideology_communism_group
+        texturefile = gfx/interface/ideologies/communism_group.dds
+    }
+
+    spriteType = {
+        name = GFX_ideology_democratic_group
+        texturefile = gfx/interface/ideologies/democratic_group.dds
+    }
 }
