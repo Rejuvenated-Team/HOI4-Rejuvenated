@@ -36,6 +36,7 @@ ideas = {
 				democratic_acceptance = 30
 				communism_acceptance = 30
 				party_popularity_stability_factor = 0.10
+				communism_drift = 0.10
 			}			
 		}
 
