@@ -1200,13 +1200,6 @@ focus_tree = {
 					is_faction_leader = yes
 				}
 			}
-			event_target:WTT_communist_china = {
-				has_rule = can_join_factions
-			}
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
