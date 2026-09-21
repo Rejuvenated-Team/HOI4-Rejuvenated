@@ -3,7 +3,7 @@ state = {
 	name = "STATE_386" # Washington State
 	manpower = 1600000
 	
-	state_category = large_town
+	state_category = city
 
 	history = {
 

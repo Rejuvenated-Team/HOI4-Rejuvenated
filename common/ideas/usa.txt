@@ -1134,6 +1134,7 @@ ideas = {
 				resistance_growth_on_our_occupied_states = 0.25
 				army_core_defence_factor = 0.10
 				supply_combat_penalties_on_core_factor = -0.10
+				surrender_limit = 0.10
 			}
 		}
 
