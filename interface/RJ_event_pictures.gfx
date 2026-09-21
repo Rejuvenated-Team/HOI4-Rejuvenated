@@ -13,4 +13,14 @@ spriteTypes = {
 		name = "GFX_egyptian_rail"
 		texturefile = "gfx/event_pictures/EGY/egyptian_rail.dds"
 	}
+
+	SpriteType = { #News Picture
+		name = "GFX_ahmed_fuad_death"
+		texturefile = "gfx/event_pictures/EGY/ahmed_fuad_death.dds"
+	}
+
+	SpriteType = { #News Picture
+		name = "GFX_ahmed_fuad_death_event"
+		texturefile = "gfx/event_pictures/EGY/death_of_fuad.dds"
+	}
 }

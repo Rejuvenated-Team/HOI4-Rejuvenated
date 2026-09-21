@@ -88,13 +88,9 @@ focus_tree = {
 		bypass = {
 
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		
 		completion_reward = {
-			add_political_power = 150
+			add_political_power = 200
 			hidden_effect = {
 				if = {
 					limit = {
@@ -144,9 +140,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		
 		completion_reward = {
 			add_stability = -0.05
@@ -166,7 +159,7 @@ focus_tree = {
 		    	add_ideas = earl_browder
 		    }
 			country_event = rj_usa.1
-			custom_effect_tooltip = RJ_suspend_the_persecution_tt
+			#custom_effect_tooltip = RJ_suspend_the_persecution_tt
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_EVENT}
@@ -175,7 +168,7 @@ focus_tree = {
 	focus = {
 		id = RJ_USA_the_american_popular_front
 		icon = GFX_focus_RJ_USA_popular_front
-		cost = 5
+		cost = 7.2
 
 		prerequisite = { focus = USA_suspend_the_presecution }
 		relative_position_id = USA_suspend_the_presecution
@@ -224,10 +217,6 @@ focus_tree = {
 		bypass = {
 
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		
 		completion_reward = {
 			custom_effect_tooltip = desegregate_the_armed_forces_DM_tt
@@ -260,9 +249,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_NATIONAL_SPIRIT }
 		completion_reward = {
 			custom_effect_tooltip = full_desegregation_DM_tt
@@ -622,10 +608,6 @@ focus_tree = {
 			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
 		completion_reward = {
 			PHI = {
 				add_ideas = USA_philippine_socialist_influence_idea
@@ -796,11 +778,11 @@ focus_tree = {
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
 			add_stability = 0.1
 			USA_congress_small_opposition = yes
+			add_political_power = 50
 		}
 	}
 
@@ -1200,13 +1182,6 @@ focus_tree = {
 					is_faction_leader = yes
 				}
 			}
-			event_target:WTT_communist_china = {
-				has_rule = can_join_factions
-			}
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
