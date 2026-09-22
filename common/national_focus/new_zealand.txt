@@ -902,7 +902,7 @@
 	focus = {
 		id = NZL_ministry_of_public_works
 		icon = GFX_focus_generic_improve_the_administration
-		x = 43
+		x = 47
 		y = 0
 
 		cost = 10
@@ -940,7 +940,7 @@
 		id = NZL_abolish_the_railways_board
 		icon = GFX_focus_POL_warsaw_main_station
 		prerequisite = { focus = NZL_ministry_of_public_works }
-		x = 0
+		x = 4
 		y = 1
 		relative_position_id = NZL_ministry_of_public_works
 
@@ -958,9 +958,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
@@ -995,9 +992,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
@@ -1031,12 +1025,933 @@
 	}
 
 	focus = {
-		id = NZL_full_employment
-		icon = GFX_focus_generic_full_employment
-		prerequisite = { focus = NZL_rail_standardization focus = NZL_direct_the_coal_industry focus = NZL_new_zealand_steel focus = NZL_domestic_car_industry }
+		id = RJ_NZL_emergency_mining_regulations
+		icon = GFX_focus_generic_coal_mining
+		prerequisite = { focus = NZL_ministry_of_public_works }
+		x = 6
+		y = 1
+		relative_position_id = NZL_ministry_of_public_works
+
+		cost = 7.2
+
+		ai_will_do = {
+
+		}
+
+		available = {
+			controls_state = 723
+			controls_state = 1081
+			controls_state = 1080
+			has_war = yes
+		}
+
+		bypass = {
+
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		cancel_if_invalid = no
+
+		completion_reward = {
+			723 = {
+				add_resource = {
+					type = coal 
+					amount = 7
+				}
+			}
+			1081 = {
+				add_resource = {
+					type = coal 
+					amount = 7
+				}
+				add_resource = {
+					type = tungsten
+					amount = 15
+				}
+			}
+			1080 = {
+				add_resource = {
+					type = coal 
+					amount = 7
+				}
+			}
+			add_ideas = RJ_NZL_idea_mining_controller
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_expand_electrification
+		icon = GFX_focus_generic_hydroelectric_energy
+		prerequisite = { focus = NZL_ministry_of_public_works }
+		x = 8
+		y = 1
+		relative_position_id = NZL_ministry_of_public_works
+
+		cost = 5
+
+		ai_will_do = {
+
+		}
+
+		available = {
+			1081 = { is_owned_and_controlled_by = ROOT }
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			1081 = {
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 10609
+					}
+				}
+			}
+			custom_effect_tooltip = {
+				localization_key = building_state_modifier|dam
+				INDENT = "    "
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			unlock_decision_tooltip = {
+				decision = NZL_mangahao_power_scheme
+			}
+			unlock_decision_tooltip = {
+				decision = NZL_waitaki_power_station
+			}
+			unlock_decision_tooltip = {
+				decision = RJ_NZL_marlborough_electrification
+			}
+			unlock_decision_tooltip = {
+				decision = RJ_NZL_otago_electrification
+			}
+		}
+	}
+
+
+	focus = {
+		id = NZL_bureau_of_industry
+		icon = GFX_focus_generic_industry_investment
+		x = -8
+		y = 0
+		relative_position_id = NZL_ministry_of_public_works
+		cost = 10
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 284 723 1079 }
+				limit = {				
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_ideas = RJ_NZL_idea_bureau_of_industry
+		}
+	}
+
+	focus = {
+		id = NZL_wairarapa_sheep_farms
+		icon = GFX_focus_generic_sheep
+		prerequisite = { focus = NZL_bureau_of_industry }
+		x = -2
+		y = 1
+		relative_position_id = NZL_bureau_of_industry
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_completed_focus = NZL_bureau_of_industry
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = NZL_wairarapa_sheep_farms
+			custom_effect_tooltip = generic_skip_one_line_tt
+			random_owned_controlled_state = {
+				prioritize = { 284 723 }
+				limit = {				
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = NZL_wairarapa_ranches
+		}
+	}
+
+	focus = {
+		id = NZL_support_allies_with_meat
+		icon = GFX_focus_generic_reinforcing_the_supply_network
+		prerequisite = { focus = NZL_wairarapa_sheep_farms }
+		x = 0
+		y = 1
+		relative_position_id = NZL_wairarapa_sheep_farms
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 2
+				is_in_faction_with = USA
+			}
+		}
+
+		available = {
+			has_war = yes
+			is_in_faction = yes
+		}
+
+		bypass = {
+
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = NZL_support_allies_with_meat_tt
+			every_allied_country = {
+				limit = {
+					NOT = {
+						tag = ROOT
+					}
+				}
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+		}
+	}
+
+	focus = {
+		id = NZL_national_roads_board
+		icon = GFX_focus_generic_improve_roads
+		x = 0
+		y = 1
+		relative_position_id = NZL_ministry_of_public_works
+		prerequisite = { focus = NZL_ministry_of_public_works }
+		cost = 5
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = RJ_NZL_idea_national_roads_board
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_south_island_roadways
+		icon = GFX_focus_generic_road_investment
 		x = 1
 		y = 1
-		relative_position_id = NZL_rail_standardization
+		relative_position_id = NZL_national_roads_board
+		prerequisite = { focus = NZL_national_roads_board }
+		cost = 5
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		available = {
+			controls_state = 723
+			controls_state = 1080
+			controls_state = 1081
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			723 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1080 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1081 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_north_island_roadways
+		icon = GFX_focus_generic_road_investment
+		x = -1
+		y = 1
+		relative_position_id = NZL_national_roads_board
+		prerequisite = { focus = NZL_national_roads_board }
+		cost = 5
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		available = {
+			controls_state = 284
+			controls_state = 1086
+			controls_state = 1088
+			controls_state = 1079
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			284 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1086 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1088 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1079 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = NZL_taranaki_oil
+		icon = GFX_focus_RJ_NZL_taranaki_oil
+		prerequisite = { focus = NZL_ministry_of_public_works }
+		prerequisite = { focus = NZL_bureau_of_industry }
+		x = -4
+		y = 1
+		relative_position_id = NZL_ministry_of_public_works
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			controls_state = 1088
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+
+			1088 = {
+				add_resource = {
+					type = oil
+					amount = 8
+				}
+				add_building_construction = {
+					type = fuel_silo
+					level = 2
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = NZL_women_in_the_workforce
+		icon = GFX_focus_RJ_NZL_women_in_the_workforce
+		prerequisite = { focus = NZL_ministry_of_public_works }
+		prerequisite = { focus = NZL_bureau_of_industry }
+		x = 0
+		y = 1
+		relative_position_id = NZL_bureau_of_industry
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RJ_NZL_idea_ministry_of_public_works
+				add_idea = RJ_NZL_idea_ministry_of_public_works_2
+			}
+		}
+	}
+
+	focus = {
+		id = NZL_restart_the_onekaka_ironworks
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = NZL_bureau_of_industry }
+		x = 2
+		y = 1
+		relative_position_id = NZL_bureau_of_industry
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			controls_state = 1080
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			1080 = {
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = NZL_new_zealand_steel
+		icon = GFX_focus_generic_steel_mill
+		prerequisite = { focus = NZL_restart_the_onekaka_ironworks }
+		x = 2
+		y = 1
+		relative_position_id = NZL_restart_the_onekaka_ironworks
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			industrial_complex > 9
+			controls_state = 284
+			controls_state = 1079
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			284 = {
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+				add_building_construction = {
+					type = steelworks
+					level = 1
+				}
+			}
+			1079 = {
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+				add_building_construction = {
+					type = steelworks
+					level = 1
+				}
+			}
+			if = {
+				limit = {
+					NZL = {
+						NOT = {
+							has_tech = steelworks_tech
+						}
+					}
+				}
+				set_technology = {
+					steelworks_tech = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = NZL_national_broadcasting_service
+		icon = GFX_focus_SWE_radiotjanst
+		prerequisite = { focus = NZL_ministry_of_public_works }
+		x = 2
+		y = 1
+		relative_position_id = NZL_ministry_of_public_works
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = NZL_national_broadcasting_service
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+
+	focus = {
+		id = NZL_scrap_metal_recycling
+		icon = GFX_focus_GER_factories_for_resources
+		prerequisite = { focus = NZL_restart_the_onekaka_ironworks }
+		x = 0
+		y = 1
+		relative_position_id = NZL_restart_the_onekaka_ironworks
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			controls_state = 284
+			OR = {
+				has_war = yes
+				has_war_support > 0.5
+			}
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			723 = {
+				add_resource = {
+					type = steel
+					amount = 5
+				}
+				add_resource = {
+					type = rubber
+					amount = 5
+				}
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				name = BRA_oil_industry_bonus
+				bonus = 0.25
+				uses = 1
+				category = synth_resources
+			}
+			add_ideas = RJ_NZL_idea_recycling_program
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_fisher_and_paykel_manufacturing
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = NZL_new_zealand_steel }
+		x = 2
+		y = 1
+		relative_position_id = NZL_new_zealand_steel
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 35
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 1079 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = NZL_department_of_scientific_and_industrial_research
+		icon = GFX_focus_research
+		prerequisite = { focus = NZL_new_zealand_steel }
+		x = 0
+		y = 1
+		relative_position_id = NZL_new_zealand_steel
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 35
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = RJ_NZL_idea_DSIR_funding
+		}
+	}
+
+	focus = {
+		id = NZL_research_collaboration
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = NZL_department_of_scientific_and_industrial_research }
+		x = 1
+		y = 1
+		relative_position_id = NZL_department_of_scientific_and_industrial_research
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			is_subject = no
+			has_war = yes
+			is_in_faction = yes
+			OR = {
+				num_of_factories > 50
+				any_other_country = {
+					is_in_faction_with = ROOT
+					num_of_factories > 50
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = NZL_project_seal
+		icon = GFX_focus_generic_nuclear_development
+		prerequisite = { focus = NZL_department_of_scientific_and_industrial_research }
+		x = -1
+		y = 1
+		relative_position_id = NZL_department_of_scientific_and_industrial_research
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 35
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			IF = {
+				limit = {
+					NOT = {
+						has_tech = atomic_research
+					}
+				}
+				add_tech_bonus = {
+					name = NZL_project_seal
+					bonus = 0.5
+					uses = 1
+					category = nuclear
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.5
+				}
+			}
+			ELSE = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 1 
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = NZL_expand_the_university_of_auckland
+		icon = GFX_focus_generic_university_3
+		prerequisite = { focus = NZL_ministry_of_public_works }
+		x = -2
+		y = 1
+		relative_position_id = NZL_ministry_of_public_works
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 35
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+
+
+###################################################
+
+
+	focus = {
+		id = NZL_domestic_car_industry
+		icon = GFX_focus_GER_kdf_wagen
+		x = 0
+		y = 2
+		relative_position_id = NZL_national_roads_board
+		prerequisite = { focus = NZL_national_roads_board }
+		cost = 10
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = motorization_tech
+				name = NZL_domestic_car_industry
+			}	
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			random_owned_controlled_state = {
+				prioritize = { 284 1079 }
+				limit = {				
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 723  }
+				limit = {				
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 1079 }
+				limit = {				
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = NZL_full_employment
+		icon = GFX_focus_generic_full_employment
+		prerequisite = { focus = NZL_domestic_car_industry }
+		prerequisite = { focus = NZL_new_zealand_steel }
+		x = -1
+		y = 1
+		relative_position_id = NZL_domestic_car_industry
 
 		cost = 10
 
@@ -1095,744 +2010,10 @@
 	}
 
 	focus = {
-		id = NZL_direct_the_coal_industry
-		icon = GFX_focus_generic_coal_mining
-		prerequisite = { focus = NZL_ministry_of_public_works }
-		x = 2
-		y = 1
-		relative_position_id = NZL_ministry_of_public_works
-
-		cost = 10
-
-		ai_will_do = {
-
-		}
-
-		available = {
-			controls_state = 723
-			controls_state = 284
-			controls_state = 1080
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			723 = {
-				add_resource = {
-					type = coal 
-					amount = 3
-				}
-			}
-			284 = {
-				add_resource = {
-					type = coal 
-					amount = 3
-				}
-			}
-			1080 = {
-				add_resource = {
-					type = coal 
-					amount = 3
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = NZL_establish_the_ncb
-		icon = GFX_focus_generic_energy
-		prerequisite = { focus = NZL_direct_the_coal_industry }
-		x = 0
-		y = 1
-		relative_position_id = NZL_direct_the_coal_industry
-
-		cost = 10
-
-		ai_will_do = {
-
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-
-			add_popularity = {
-				ideology = ROOT 
-				popularity = 0.1
-			}	
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			add_ideas = NZL_national_coal_board_idea 
-
-		}
-	}
-
-	focus = {
-		id = RJ_NZL_expand_electrification
-		icon = GFX_focus_generic_hydroelectric_energy
-		prerequisite = { focus = NZL_ministry_of_public_works }
-		x = 4
-		y = 1
-		relative_position_id = NZL_ministry_of_public_works
-
-		cost = 10
-
-		ai_will_do = {
-
-		}
-
-		available = {
-			1081 = { is_owned_and_controlled_by = ROOT }
-		}
-
-		bypass = {
-
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			1081 = {
-				add_building_construction = {
-					type = dam
-					level = 1
-					instant_build = yes
-					province = {
-						id = 10609
-					}
-				}
-			}
-			custom_effect_tooltip = {
-				localization_key = building_state_modifier|dam
-				INDENT = "    "
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			unlock_decision_tooltip = {
-				decision = NZL_mangahao_power_scheme
-			}	
-			unlock_decision_tooltip = {
-				decision = NZL_waitaki_power_station
-			}	
-		}
-	}
-
-
-	focus = {
-		id = NZL_bureau_of_industry
-		icon = GFX_focus_generic_industry_investment
-		x = -8
-		y = 0
-		relative_position_id = NZL_ministry_of_public_works
-		cost = 10
-
-		ai_will_do = {
-			factor = 8
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 284 723 1079 }
-				limit = {				
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			add_ideas = RJ_NZL_idea_bureau_of_industry
-		}
-	}
-
-	focus = {
-		id = NZL_wairarapa_sheep_farms
-		icon = GFX_focus_generic_sheep
-		prerequisite = { focus = NZL_bureau_of_industry }
-		x = -2
-		y = 1
-		relative_position_id = NZL_bureau_of_industry
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 2
-				has_completed_focus = NZL_bureau_of_industry
-			}
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			add_ideas = NZL_wairarapa_sheep_farms
-			custom_effect_tooltip = generic_skip_one_line_tt
-			random_owned_controlled_state = {
-				prioritize = { 284 723 }
-				limit = {				
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = available_industrial_concern
-			show_ideas_tooltip = NZL_wairarapa_ranches
-		}
-	}
-
-	focus = {
-		id = NZL_support_allies_with_meat
-		icon = GFX_focus_generic_reinforcing_the_supply_network
-		prerequisite = { focus = NZL_wairarapa_sheep_farms }
-		x = 0
-		y = 1
-		relative_position_id = NZL_wairarapa_sheep_farms
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 2
-				is_in_faction_with = USA
-			}
-		}
-
-		available = {
-			has_war = yes
-			is_in_faction = yes
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			add_offsite_building = { type = industrial_complex level = 1 }
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = NZL_support_allies_with_meat_tt
-			every_allied_country = {
-				limit = {
-					NOT = {
-						tag = ROOT
-					}
-				}
-				add_offsite_building = { type = industrial_complex level = 1 }
-			}
-		}
-	}
-
-	focus = {
-		id = NZL_national_roads_board
-		icon = GFX_focus_generic_improve_roads
-		x = -2
-		y = 1
-		relative_position_id = NZL_ministry_of_public_works
-		prerequisite = { focus = NZL_ministry_of_public_works }
-		cost = 10
-
-		ai_will_do = {
-			factor = 8
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = NZL_national_roads_board_Inf1
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-
-			random_state = {
-				limit = {
-					has_state_flag = NZL_national_roads_board_Inf2
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-
-			random_state = {
-				limit = {
-					has_state_flag = NZL_national_roads_board_Inf3
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-
-		completion_reward = {
-
-			random_owned_controlled_state = {
-				prioritize = { 284 }
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 1
-					}
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = NZL_national_roads_board_Inf1
-			}
-
-			random_owned_controlled_state = {
-				prioritize = { 723 }
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 1
-					}
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = NZL_national_roads_board_Inf2
-			}
-
-			random_owned_controlled_state = {
-				prioritize = { 1079 }
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 1
-					}
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = NZL_national_roads_board_Inf3
-			}
-
-		}
-	}
-
-	focus = {
-		id = NZL_taranaki_oil
-		icon = GFX_focus_RJ_NZL_taranaki_oil
-		prerequisite = { focus = NZL_ministry_of_public_works }
-		prerequisite = { focus = NZL_bureau_of_industry }
-		x = -4
-		y = 1
-		relative_position_id = NZL_ministry_of_public_works
-
-		cost = 7.2
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-			controls_state = 1088
-		}
-
-		bypass = {
-
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-
-			1088 = {
-				add_resource = {
-					type = oil
-					amount = 8
-				}
-				add_building_construction = {
-					type = fuel_silo
-					level = 2
-					instant_build = yes
-				}
-			}
-
-		}
-	}
-
-	focus = {
-		id = NZL_women_in_the_workforce
-		icon = GFX_focus_RJ_NZL_women_in_the_workforce
-		prerequisite = { focus = NZL_ministry_of_public_works }
-		prerequisite = { focus = NZL_bureau_of_industry }
-		x = 2
-		y = 1
-		relative_position_id = NZL_bureau_of_industry
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-			has_war = yes
-		}
-
-		bypass = {
-
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = RJ_NZL_idea_ministry_of_public_works
-				add_idea = RJ_NZL_idea_ministry_of_public_works_2
-			}
-		}
-	}
-
-	focus = {
-		id = NZL_restart_the_onekaka_ironworks
-		icon = GFX_focus_generic_steel
-		prerequisite = { focus = NZL_bureau_of_industry }
-		x = 0
-		y = 1
-		relative_position_id = NZL_bureau_of_industry
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-			controls_state = 1080
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			1080 = {
-				add_resource = {
-					type = steel
-					amount = 6
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = NZL_new_zealand_steel
-		icon = GFX_focus_generic_steel_mill
-		prerequisite = { focus = NZL_restart_the_onekaka_ironworks }
-		x = 2
-		y = 1
-		relative_position_id = NZL_restart_the_onekaka_ironworks
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-			industrial_complex > 9
-			controls_state = 284
-			controls_state = 1079
-		}
-
-		bypass = {
-
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			284 = {
-				add_resource = {
-					type = steel
-					amount = 4
-				}
-				add_building_construction = {
-					type = steelworks
-					level = 1
-				}
-			}
-			1079 = {
-				add_resource = {
-					type = steel
-					amount = 4
-				}
-				add_building_construction = {
-					type = steelworks
-					level = 1
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = NZL_national_broadcasting_service
-		icon = GFX_focus_SWE_radiotjanst
-		prerequisite = { focus = NZL_national_roads_board }
-		x = 0
-		y = 1
-		relative_position_id = NZL_national_roads_board
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = NZL_national_broadcasting_service
-				bonus = 0.5
-				uses = 1
-				category = electronics
-			}
-		}
-	}
-
-	focus = {
-		id = NZL_scrap_metal_recycling
-		icon = GFX_focus_GER_factories_for_resources
-		prerequisite = { focus = NZL_restart_the_onekaka_ironworks }
-		x = 0
-		y = 1
-		relative_position_id = NZL_restart_the_onekaka_ironworks
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-			controls_state = 284
-			OR = {
-				has_war = yes
-				has_war_support > 0.5
-			}
-		}
-
-		bypass = {
-
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			723 = {
-				add_resource = {
-					type = steel
-					amount = 8
-				}
-				add_resource = {
-					type = rubber
-					amount = 4
-				}
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_tech_bonus = {
-				name = BRA_oil_industry_bonus
-				bonus = 0.25
-				uses = 1
-				category = synth_resources
-			}
-		}
-	}
-
-	focus = {
-		id = NZL_department_of_scientific_and_industrial_research
-		icon = GFX_focus_research
-		prerequisite = { focus = NZL_new_zealand_steel }
-		x = 0
-		y = 1
-		relative_position_id = NZL_new_zealand_steel
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 35
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-
-	focus = {
-		id = NZL_project_seal
-		icon = GFX_focus_generic_nuclear_development
-		prerequisite = { focus = NZL_department_of_scientific_and_industrial_research }
-		x = 0
-		y = 1
-		relative_position_id = NZL_department_of_scientific_and_industrial_research
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 35
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			IF = {
-				limit = {
-					NOT = {
-						has_tech = atomic_research
-					}
-				}
-				add_tech_bonus = {
-					name = NZL_project_seal
-					bonus = 0.5
-					uses = 1
-					category = nuclear
-				}
-				add_breakthrough_progress = {
-					specialization = specialization_nuclear
-					value = 0.5
-				}
-			}
-			ELSE = {
-				add_breakthrough_progress = {
-					specialization = specialization_nuclear
-					value = 1 
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = NZL_think_big
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_RJ_industry1
 		prerequisite = { focus = NZL_full_employment }
-		x = 2
+		x = 0
 		y = 1
 		relative_position_id = NZL_full_employment
 
@@ -1872,7 +2053,6 @@
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = NZL_think_big_IC1
 			}
 			random_owned_controlled_state = {
 				prioritize = { 284 723 }
@@ -1889,133 +2069,11 @@
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = NZL_think_big_AF
 			}
-		}
-	}
-
-	focus = {
-		id = NZL_expand_the_university_of_auckland
-		icon = GFX_focus_generic_university_3
-		prerequisite = { focus = NZL_think_big }
-		prerequisite = { focus = NZL_department_of_scientific_and_industrial_research }
-		x = -4
-		y = 1
-		relative_position_id = NZL_think_big
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 35
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-
-
-
-###################################################
-
-
-	focus = {
-		id = NZL_domestic_car_industry
-		icon = GFX_focus_GER_kdf_wagen
-		x = -2
-		y = 1
-		relative_position_id = NZL_national_roads_board
-		prerequisite = { focus = NZL_national_roads_board }
-		prerequisite = { focus = NZL_restart_the_onekaka_ironworks }
-		cost = 10
-
-		ai_will_do = {
-			factor = 8
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = motorized_equipment
-				name = NZL_domestic_car_industry
-			}	
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			random_owned_controlled_state = {
-				prioritize = { 284 723 }
-				limit = {				
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
+			swap_ideas = {
+				remove_idea = RJ_NZL_idea_bureau_of_industry
+				add_idea = RJ_NZL_idea_bureau_of_industry_2
 			}
-
-		}
-	}	
-
-	focus = {
-		id = NZL_national_defense_institute
-		icon = GFX_focus_research
-		prerequisite = { focus = NZL_project_seal }
-		x = 0
-		y = 1
-		relative_position_id = NZL_project_seal
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 35
-		}
-
-		available = {
-			is_subject = no
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_research_slot = 1
 		}
 	}
 
@@ -2316,44 +2374,6 @@
 				uses = 1
 				category = artillery
 			}
-		}
-	}
-
-	focus = {
-		id = NZL_research_collaboration
-		icon = GFX_goal_generic_scientific_exchange
-		prerequisite = { focus = NZL_think_big }
-		x = -1
-		y = 1
-		relative_position_id = NZL_think_big
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-			is_subject = no
-			has_war = yes
-			is_in_faction = yes
-			OR = {
-				num_of_factories > 50
-				any_other_country = {
-					is_in_faction_with = ROOT
-					num_of_factories > 50
-				}
-			}
-		}
-
-		bypass = {
-
-		}
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_research_slot = 1
 		}
 	}
 

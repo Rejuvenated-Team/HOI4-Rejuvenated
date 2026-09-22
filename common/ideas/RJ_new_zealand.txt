@@ -407,6 +407,31 @@ ideas = {
 				industrial_capacity_factory = 0.08
 				industrial_capacity_dockyard = 0.08
 				production_speed_buildings_factor = 0.05
+				production_speed_industrial_complex_factor = 0.10
+			}
+		}
+
+		RJ_NZL_idea_bureau_of_industry_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ARG_public_works_investment
+
+			modifier = {
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.12
+				production_speed_industrial_complex_factor = 0.20
+				production_lack_of_resource_penalty_factor = -0.10
+				production_factory_max_efficiency_factor = 0.10
 			}
 		}
 
@@ -451,6 +476,89 @@ ideas = {
 				political_power_factor = 0.05
 				recruitable_population_factor = 0.15
 				line_change_production_efficiency_factor = 0.05
+			}
+		}
+
+		RJ_NZL_idea_mining_controller = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_mining_controller
+
+			modifier = {
+				local_resources_factor = 0.25
+				production_speed_steelworks_factor = 0.10
+			}
+		}
+
+		RJ_NZL_idea_national_roads_board = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ARG_invest_in_roads
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.20
+			}
+
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.10
+				}
+			}
+		}
+
+		RJ_NZL_idea_recycling_program = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_recycling_program
+
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.20
+			}
+		}
+
+		RJ_NZL_idea_DSIR_funding = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_research_bonus
+
+			modifier = {
+				research_speed_factor = 0.08
 			}
 		}
 	}

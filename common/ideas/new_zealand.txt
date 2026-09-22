@@ -334,6 +334,7 @@ ideas = {
 			modifier = {
 				stability_factor = 0.1
 				overlord_trade_cost_factor = -0.2 
+				faction_trade_opinion_factor = 0.10
 			}
 		}
 

@@ -42,10 +42,6 @@ economy_decisions = {
 					level = 1
 				}
 			}
-			custom_effect_tooltip = {
-				localization_key = building_state_modifier|dam
-				INDENT = "    "
-			}
 		}
 
 		cancel_trigger = {
@@ -99,14 +95,114 @@ economy_decisions = {
 					level = 1
 				}
 			}
-			custom_effect_tooltip = {
-				localization_key = building_state_modifier|dam
-				INDENT = "    "
-			}
 		}
 
 		cancel_trigger = {
 			723 = {
+				NOT = { is_controlled_by = ROOT }
+			}
+		}
+
+		cancel_effect = {
+		}
+
+	}
+
+	RJ_NZL_otago_electrification = {
+		icon = GFX_decision_generic_construction
+	
+		allowed = {
+			original_tag = NZL
+		}
+		
+		visible = {
+			has_completed_focus = RJ_NZL_expand_electrification
+		}
+		
+		available = {
+			1081 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+	    cost = 50 	
+
+		fire_only_once = yes # Can only be done once per state
+
+		days_remove = 70
+
+		fire_only_once = yes 
+
+		modifier = {
+			civilian_factory_use = 3 
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			1081 = {
+				add_building_construction = {
+					type = industrial_infrastructure
+					level = 1
+				}
+			}
+		}
+
+		cancel_trigger = {
+			1081 = {
+				NOT = { is_controlled_by = ROOT }
+			}
+		}
+
+		cancel_effect = {
+		}
+
+	}
+
+	RJ_NZL_marlborough_electrification = {
+		icon = GFX_decision_generic_construction
+	
+		allowed = {
+			original_tag = NZL
+		}
+		
+		visible = {
+			has_completed_focus = RJ_NZL_expand_electrification
+		}
+		
+		available = {
+			1080 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+	    cost = 50 	
+
+		fire_only_once = yes # Can only be done once per state
+
+		days_remove = 70
+
+		fire_only_once = yes 
+
+		modifier = {
+			civilian_factory_use = 3 
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			1081 = {
+				add_building_construction = {
+					type = industrial_infrastructure
+					level = 1
+				}
+			}
+		}
+
+		cancel_trigger = {
+			1081 = {
 				NOT = { is_controlled_by = ROOT }
 			}
 		}

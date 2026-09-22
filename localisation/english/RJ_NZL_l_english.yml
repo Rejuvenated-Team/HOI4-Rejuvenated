@@ -40,6 +40,14 @@
  RJ_NZL_study_british_radar_desc: "The British have done a remarkable job in the relatively new field of Radar technology. It would be most beneficial to us to send a team to study this technology!"
  RJ_NZL_expand_electrification: "Expand Electrification"
  RJ_NZL_expand_electrification_desc: "Our country has a great deal of hydroelectric & has embraced electrification. It's time we further our efforts into further projects, such as the completion of the Roaring Meg station, & furthering electrical infrastructure in our land."
+ RJ_NZL_emergency_mining_regulations: "Emergency Mining Regulations"
+ RJ_NZL_emergency_mining_regulations_desc: "With the outbreak of war, our mining industry has become even more vital. These regulations will set up a mining controller to guide the industry & help it further develop."
+ RJ_NZL_south_island_roadways: "South Island Roadways"
+ RJ_NZL_south_island_roadways_desc: "Let's work on the development of the roadways of South Island."
+ RJ_NZL_north_island_roadways: "North Island Roadways"
+ RJ_NZL_north_island_roadways_desc: "Let's work on the development of the roadways of North Island."
+ RJ_NZL_fisher_and_paykel_manufacturing: "Fisher & Paykel Manufacturing"
+ RJ_NZL_fisher_and_paykel_manufacturing_desc: "Fisher & Paykel is one of our very own domestic brands. Up until now, they've largely imported their wares for sale here. Now they're looking at setting up some proper domestic production!"
 
 
 
@@ -58,5 +66,18 @@
  RJ_NZL_idea_royal_new_zealand_navy_2: "Royal New Zealand Navy"
  RJ_NZL_idea_pacific_minesweepers: "Pacific Minesweepers"
  RJ_NZL_idea_bureau_of_industry: "Bureau of Industry"
+ RJ_NZL_idea_bureau_of_industry_2: "Bureau of Industry"
  RJ_NZL_idea_ministry_of_public_works: "Ministry of Public Works"
  RJ_NZL_idea_ministry_of_public_works_2: "Ministry of Public Works"
+ RJ_NZL_idea_mining_controller: "Mining Controller"
+ RJ_NZL_idea_national_roads_board: "National Roads Board"
+ RJ_NZL_idea_recycling_program: "Recycling Program"
+ RJ_NZL_idea_DSIR_funding: "DSIR Funding"
+
+
+
+ ##################################################
+ ### DECISIONS ####################################
+ ##################################################
+ RJ_NZL_otago_electrification: "Otago Electrification"
+ RJ_NZL_marlborough_electrification: "Marlborough Electrification"

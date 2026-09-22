@@ -606,6 +606,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_rail_board.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_mining_controller"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_mining_controller.dds"
+	}
 
-	
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_recycling_program"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_recycling_program.dds"
+	}
+
 }

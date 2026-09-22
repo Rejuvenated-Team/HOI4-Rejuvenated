@@ -12,3 +12,13 @@ leader_traits = {
 		}
 	}
 }
+
+wairarapa_ranch_trait = {
+	random = no
+	country_resource_coal = 6
+	local_resources_coal_factor = 0.05
+	trade_deal_opinion_factor = 100
+	ai_will_do = {
+		factor = 1
+	}
+}
