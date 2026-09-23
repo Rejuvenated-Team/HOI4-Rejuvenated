@@ -1357,4 +1357,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/nzl/RJ_NZL_women_in_the_workforce.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_expand_the_reparation_estates"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_expand_the_reparation_estates.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_defense_council"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_defense_council.dds"
+	}
+
 }

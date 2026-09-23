@@ -561,5 +561,64 @@ ideas = {
 				research_speed_factor = 0.08
 			}
 		}
+
+		RJ_NZL_idea_major_financial_investment = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_major_financial_investment
+
+			modifier = {
+				consumer_goods_factor = 0.10
+			}
+		}
+
+		RJ_NZL_idea_defense_council = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = YUG_federal_defense_council
+
+			modifier = {
+				army_core_defence_factor = 0.10
+				experience_gain_army = 0.15
+			}
+		}
+
+		RJ_NZL_idea_army_board = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = chi_army_corruption2
+
+			modifier = {
+				conscription = 0.02
+				max_planning_factor = 0.15
+			}
+		}
 	}
 }

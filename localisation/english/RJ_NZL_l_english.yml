@@ -48,6 +48,24 @@
  RJ_NZL_north_island_roadways_desc: "Let's work on the development of the roadways of North Island."
  RJ_NZL_fisher_and_paykel_manufacturing: "Fisher & Paykel Manufacturing"
  RJ_NZL_fisher_and_paykel_manufacturing_desc: "Fisher & Paykel is one of our very own domestic brands. Up until now, they've largely imported their wares for sale here. Now they're looking at setting up some proper domestic production!"
+ RJ_NZL_samoan_economic_development: "Samoan Economic Development"
+ RJ_NZL_samoan_economic_development_desc: "Since the western parts of Samoa have come under our jurisdiction, their problems have become our problems. While it feels a bit obligatory to help them out, it would likely go a long ways towards resolving issues between us & strengthening both of our economies."
+ RJ_NZL_revitalize_the_rubber_plantations: "Revitalize the Rubber Plantations"
+ RJ_NZL_revitalize_the_rubber_plantations_desc: "The Germans had started rubber plantations in western Samoa, which have since largely been abandoned due to poor economic value. Some new investments should help to revitalize the old plantations, & kick up production levels."
+ RJ_NZL_develop_apia: "Develop Apia"
+ RJ_NZL_develop_apia_desc: "Samoa's capital of Apia would benefit greatly from some industrial support on our part."
+ RJ_NZL_expand_the_reparation_estates: "Expand the Reparation Estates"
+ RJ_NZL_expand_the_reparation_estates_desc: "In the aftermath of the Great War & the ensuing treaties, many German plantations were handed over to our government. Cocoa, bananas, & coconuts primarily. These have proven to be highly beneficial to the Samoan economy, as well as our own. Expanding these estates is a natural progression that can surely be beneficial for us all."
+ RJ_NZL_purchase_american_samoa: "Purchase American Samoa"
+ RJ_NZL_purchase_american_samoa_desc: "The eastern portion of Samoa was given over to the United States via the Tripartite Convention of 1899, but it's only been of serious interest as a naval base far beyond normal American reach. If we offer them financial compensation & naval access to our territory, they may be willing to give it over to us."
+ RJ_NZL_invest_in_the_fishing_industry: "Invest in the Fishing Industry"
+ RJ_NZL_invest_in_the_fishing_industry_desc: "Fishing is one of the key industries in Samoa, & will greatly benefit the population if we invest in expanding it."
+ RJ_NZL_new_medical_complexes: "New Medical Complexes"
+ RJ_NZL_new_medical_complexes_desc: "We have the means to set up new medical facilities that will greatly benefit the Samoan people."
+ RJ_NZL_defense_council: "Defense Council"
+ RJ_NZL_defense_council_desc: "Our military philosophy is that the defense of our islands is the best option for us, especially given our naturally small size & limited population. Setting up a Defense Council will allow us to better coordinate defensive strategies, & potentially fend off any invaders."
+ RJ_NZL_army_board: "Army Board"
+ RJ_NZL_army_board_desc: "Implementing an Army Board will allow us to better coordinate planning & conscription efforts."
 
 
 
@@ -73,6 +91,10 @@
  RJ_NZL_idea_national_roads_board: "National Roads Board"
  RJ_NZL_idea_recycling_program: "Recycling Program"
  RJ_NZL_idea_DSIR_funding: "DSIR Funding"
+ wairarapa_ranch_trait: "Ranch"
+ RJ_NZL_idea_major_financial_investment: "Major Financial Investment"
+ RJ_NZL_idea_defense_council: "Defense Council"
+ RJ_NZL_idea_army_board: "Army Board"
 
 
 
@@ -81,3 +103,11 @@
  ##################################################
  RJ_NZL_otago_electrification: "Otago Electrification"
  RJ_NZL_marlborough_electrification: "Marlborough Electrification"
+
+
+ ##################################################
+ ### EVENTS #######################################
+ ##################################################
+ RJ_NZL.1.d: "The government of New Zealand has approached us with an offer of compensation for New Zealand. They've offered a combination of industrial assets, as well as indefinite naval access within their territory. Our primary use for American Samoa was as a naval base in the furthest reaches of the Pacific. With this deal, we'd have even more access than we had before, at least so long as the New Zealand government remains friendly to us. What shall our response be?"
+ RJ_NZL.1.d_a: "The United States government has agreed to give us American Samoa! This is a great day for us, as well as the Samoan peoples!"
+ RJ_NZL.1.d_b: "The United States government has denied our offer for American Samoa. While unfortunate, we can also understand & respect their position."

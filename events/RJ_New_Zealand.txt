@@ -1,0 +1,82 @@
+add_namespace = RJ_NZL
+
+country_event = {
+	id = RJ_NZL.1
+	title = "New Zealand Makes an Offer for American Samoa"
+	desc = RJ_NZL.1.d
+	picture = GFX_report_event_generic_factory
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Sounds like a good deal!"
+		ai_chance = {
+			base = 12
+			modifier = {
+				has_opinion = {
+					target = NZL
+					value > 29
+				}
+				factor = 2
+			}
+		}
+		NZL = {
+			transfer_state = 1072
+			add_timed_idea = {
+				idea = RJ_NZL_idea_major_financial_investment
+				days = 90
+			}
+			country_event = RJ_NZL.1a
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = 2
+		}
+		diplomatic_relation = {
+			country = NZL
+			relation = docking_rights
+		}
+	}
+
+	option = {
+		name = "We'd rather maintain our management."
+		ai_chance = {
+			base = 3
+		}
+		NZL = {
+			country_event = RJ_NZL.1b
+		}
+	}
+}
+
+country_event = {
+	id = RJ_NZL.1a
+	title = "America Gives Us American Samoa"
+	desc = RJ_NZL.1.d_a
+	picture = GFX_report_event_generic_usa_treaty
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Wonderful!"
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = {
+	id = RJ_NZL.1b
+	title = "America Rejects Our Offer"
+	desc = RJ_NZL.1.d_b
+	picture = GFX_report_event_generic_usa_treaty
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Ah well."
+		ai_chance = {
+			base = 1
+		}
+	}
+}

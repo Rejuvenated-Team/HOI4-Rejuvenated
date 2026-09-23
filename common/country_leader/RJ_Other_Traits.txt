@@ -11,14 +11,15 @@ leader_traits = {
 			factor = 1
 		}
 	}
-}
 
-wairarapa_ranch_trait = {
-	random = no
-	country_resource_coal = 6
-	local_resources_coal_factor = 0.05
-	trade_deal_opinion_factor = 100
-	ai_will_do = {
-		factor = 1
+	wairarapa_ranch_trait = {
+		random = no
+		faction_trade_opinion_factor = 1
+		trade_opinion_factor = 1
+		trade_cost_for_target_factor = -0.5
+		ai_will_do = {
+			factor = 1
+		}
 	}
 }
+

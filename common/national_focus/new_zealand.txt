@@ -902,7 +902,7 @@
 	focus = {
 		id = NZL_ministry_of_public_works
 		icon = GFX_focus_generic_improve_the_administration
-		x = 47
+		x = 51
 		y = 0
 
 		cost = 10
@@ -1135,6 +1135,295 @@
 		}
 	}
 
+	focus = {
+		id = RJ_NZL_samoan_economic_development
+		icon = GFX_focus_RJ_CUB_island_development
+		x = 36
+		y = 0
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			controls_state = 726
+			has_completed_focus = NZL_ministry_of_public_works
+			has_completed_focus = NZL_bureau_of_industry
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			726 = {
+				add_state_modifier = {
+					modifier = { 
+						compliance_gain = 0.05
+						resistance_decay = 0.10
+						production_speed_buildings_factor = 0.10
+						local_building_slots_factor = 0.2
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_revitalize_the_rubber_plantations
+		icon = GFX_focus_generic_rubber_plantations
+		x = 2
+		y = 1
+		prerequisite = { focus = RJ_NZL_samoan_economic_development }
+		relative_position_id = RJ_NZL_samoan_economic_development
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			controls_state = 726
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			726 = {
+				add_resource = {
+					type = rubber
+					amount = 16
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_develop_apia
+		icon = GFX_SOV_restoration_and_development_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		prerequisite = { focus = RJ_NZL_samoan_economic_development }
+		relative_position_id = RJ_NZL_samoan_economic_development
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			controls_state = 726
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			726 = {
+				increase_state_category = yes
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					province = 7290
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_state_modifier = {
+					modifier = { 
+						compliance_gain = 0.05
+						production_speed_naval_base_factor = 0.15
+						production_speed_naval_supply_hub_factor = 0.15
+						production_speed_dockyard_factor = 0.10
+						production_speed_infrastructure_factor = 0.10
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_expand_the_reparation_estates
+		icon = GFX_focus_RJ_NZL_expand_the_reparation_estates
+		x = -2
+		y = 1
+		prerequisite = { focus = RJ_NZL_samoan_economic_development }
+		relative_position_id = RJ_NZL_samoan_economic_development
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			controls_state = 726
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			726 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_purchase_american_samoa
+		icon = GFX_focus_RJ_NZL_expand_the_reparation_estates
+		x = 1
+		y = 1
+		prerequisite = { focus = RJ_NZL_develop_apia }
+		relative_position_id = RJ_NZL_develop_apia
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			NOT = {
+				has_war_with = USA
+				owns_state = 1072
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			USA = {
+				country_event = RJ_NZL.1
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_new_medical_complexes
+		icon = GFX_focus_RJ_hospital
+		x = -1
+		y = 1
+		prerequisite = { focus = RJ_NZL_develop_apia }
+		relative_position_id = RJ_NZL_develop_apia
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			controls_state = 726
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			726 = {
+				add_state_modifier = {
+					modifier = { 
+						monthly_population = 0.5
+						recruitable_population_factor = 0.10
+						compliance_gain = 0.10
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_invest_in_the_fishing_industry
+		icon = GFX_focus_INS_just_a_fisherman
+		x = 0
+		y = 2
+		prerequisite = { focus = RJ_NZL_develop_apia }
+		relative_position_id = RJ_NZL_develop_apia
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			controls_state = 726
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			726 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 1072
+				}
+				1072 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_state_modifier = {
+						modifier = { 
+							compliance_gain = 0.10
+							resistance_decay = 0.10
+						}
+					}
+				}
+			}
+		}
+	}
+
 
 	focus = {
 		id = NZL_bureau_of_industry
@@ -1214,7 +1503,7 @@
 				limit = {				
 					free_building_slots = {
 						building = industrial_complex
-						size > 1
+						size > 0
 						include_locked = yes
 					}
 				}
@@ -1260,7 +1549,7 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_offsite_building = { type = industrial_complex level = 1 }
+			add_offsite_building = { type = industrial_complex level = 3 }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = NZL_support_allies_with_meat_tt
 			every_allied_country = {
@@ -2081,13 +2370,13 @@
 	############################
 	####### ARMY SECTION #######
 	############################
-	
+
 	focus = {
-		id = NZL_army_reforms
-		icon = GFX_goal_generic_army_doctrines
-		x = 29
+		id = RJ_NZL_defense_council
+		icon = GFX_focus_RJ_NZL_defense_council
+		x = 31
 		y = 0
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 2
@@ -2101,18 +2390,104 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 			army_experience = 25
 			add_doctrine_cost_reduction = {
-				name = NZL_army_reforms
+				name = NZL_defense_council_bonus
 				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
+			}
+			add_ideas = RJ_NZL_idea_defense_council
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_army_board
+		icon = GFX_focus_RJ_army_review
+		x = 29
+		y = 0
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_ideas = RJ_NZL_idea_army_board
+		}
+	}
+
+	focus = {
+		id = NZL_domestic_arms_industry
+		icon = GFX_focus_RJ_USA_military_construction
+		prerequisite = { focus = RJ_NZL_army_board focus = RJ_NZL_defense_council }
+		x = 1
+		y = 1
+		relative_position_id = RJ_NZL_army_board
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = NZL_domestic_arms_industry_AF
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = NZL_domestic_arms_industry_AF
 			}
 		}
 	}
@@ -2120,10 +2495,10 @@
 	focus = {
 		id = NZL_charlton_automatic_rifle
 		icon = GFX_goal_generic_small_arms
-		prerequisite = { focus = NZL_army_reforms }
+		prerequisite = { focus = NZL_domestic_arms_industry }
 		x = -1
 		y = 1
-		relative_position_id = NZL_army_reforms
+		relative_position_id = NZL_domestic_arms_industry
 
 		cost = 10
 
@@ -2143,8 +2518,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -2161,10 +2534,10 @@
 	focus = {
 		id = NZL_bob_semple_tank 
 		icon = GFX_focus_NZL_bob_semple_tank		#VEHICLE OF GLORIOUS DESIGN BOB SEMPLE TANK MUST HAVE UNIQUE ICON
-		prerequisite = { focus = NZL_army_reforms }
+		prerequisite = { focus = NZL_domestic_arms_industry }
 		x = 1
 		y = 1
-		relative_position_id = NZL_army_reforms
+		relative_position_id = NZL_domestic_arms_industry
 
 		cost = 10
 
@@ -2183,8 +2556,6 @@
 			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -2214,55 +2585,6 @@
 					uses = 1
 					technology = basic_light_tank_chassis
 				}
-			}
-		}
-	}
-
-	focus = {
-		id = NZL_domestic_arms_industry
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = NZL_charlton_automatic_rifle }
-		x = 0
-		y = 1
-		relative_position_id = NZL_charlton_automatic_rifle
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-			#modifier = {
-			#	factor = 2
-			#	has_completed_focus = NZL_industrial_conscription
-			#}
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 284 723 }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = NZL_domestic_arms_industry_AF
 			}
 		}
 	}
@@ -2301,40 +2623,6 @@
 				bonus = 1.0
 				uses = 1
 				category = cat_light_armor
-			}
-		}
-	}
-
-	focus = {
-		id = NZL_long_range_patrol
-		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = NZL_domestic_arms_industry }
-		x = 0
-		y = 1
-		relative_position_id = NZL_domestic_arms_industry
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = NZL_long_range_patrol
-				bonus = 1.00
-				uses = 2
-				category = marine_tech
 			}
 		}
 	}
@@ -2454,9 +2742,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
@@ -2490,9 +2775,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
@@ -2522,10 +2804,6 @@
 		bypass = {
 
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			284 = {
@@ -2560,9 +2838,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
@@ -2592,9 +2867,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
@@ -2624,10 +2896,6 @@
 		bypass = {
 
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			284 = {
@@ -2663,9 +2931,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
@@ -2695,9 +2960,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
@@ -2726,10 +2988,6 @@
 		bypass = {
 
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			unlock_decision_tooltip = NZL_demand_islands
@@ -2785,9 +3043,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {

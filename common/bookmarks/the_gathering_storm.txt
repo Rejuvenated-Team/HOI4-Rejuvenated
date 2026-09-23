@@ -278,6 +278,24 @@ bookmarks = {
 			label = { rj_label_south_america rj_label_new_content }
 		}
 
+		NZL = {
+			minor = yes
+			history = "rj_NZL_GATHERING_STORM_DESC"
+			ideology = democratic
+			version = base_game
+			ideas = {
+				NZL_railways_board
+				NZL_great_depression
+				NZL_commonwealth_loyalty
+			}
+			focuses = {
+				RJ_NZL_air_force_review
+				NZL_transfer_the_new_zealand_division
+				NZL_taranaki_oil
+			}
+			label = { rj_label_oceania rj_label_new_content }
+		}
+
 		EGY = {
 			minor = yes
 			history = "EGY_GATHERING_STORM_DESC"

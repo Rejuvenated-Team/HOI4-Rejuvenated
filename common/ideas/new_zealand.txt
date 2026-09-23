@@ -419,7 +419,7 @@ ideas = {
 				industry = 0.15
 			}
 
-			traits = { industrial_concern }
+			traits = { wairarapa_ranch_trait }
 
 			modifier = {
 			}
