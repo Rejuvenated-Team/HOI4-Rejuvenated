@@ -3329,7 +3329,7 @@
 		id = NZL_the_lee_affair
 		icon = GFX_goal_support_communism
 		prerequisite = { focus = NZL_statute_of_westminster }
-		mutually_exclusive = { focus = NZL_in_the_darkness focus = NZL_constitution_amendment_act }
+		mutually_exclusive = { focus = NZL_constitution_amendment_act }
 		x = 1
 		y = 1
 		relative_position_id = NZL_statute_of_westminster
@@ -3482,7 +3482,7 @@
 		id = NZL_constitution_amendment_act
 		icon = GFX_goal_tfv_sever_ties_with_uk
 		prerequisite = { focus = NZL_statute_of_westminster }
-		mutually_exclusive = { focus = NZL_the_lee_affair focus = NZL_in_the_darkness }
+		mutually_exclusive = { focus = NZL_the_lee_affair }
 		x = -2
 		y = 1
 		relative_position_id = NZL_statute_of_westminster
