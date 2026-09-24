@@ -171,18 +171,53 @@ set_technology = {
 	basic_train = 1
 }
 
+add_ideas = {
+	DEN_christian_x
+	DEN_recovering_economy
+	DEN_fear_of_the_germans_med
+	DEN_anti_fascist_action
+	DEN_danish_trades
+	DEN_unemployment_issue
+}
+add_dynamic_modifier = DEN_haeren
+
+#HÆREN
+set_variable = { DEN_haeren_experience_gain_army_factor = 0 }
+set_variable = { DEN_haeren_training_time_factor = 0.1 }
+set_variable = { DEN_haeren_land_doctrine_cost_factor = 0 }
+set_variable = { DEN_haeren_command_power_gain_mult = 0 }
+set_variable = { DEN_haeren_surrender_limit = -0.2 }
+set_variable = { DEN_haeren_supply_factor = 0.15 }
+set_variable = { DEN_haeren_land_mastery_gain_factor = 0 }
+set_variable = { DEN_haeren_acclimatization_cold_climate_gain_factor = 0 }
+set_variable = { DEN_haeren_army_attack_factor = 0 }
+set_variable = { DEN_haeren_army_defence_factor = 0 }
+set_variable = { DEN_haeren_army_org_factor = -0.05 }
+set_variable = { DEN_haeren_army_morale_factor = 0 }
+set_variable = { DEN_haeren_planning_speed = -0.2 }
+
+#FOLKEFRONTEN
+set_variable = { DEN_ff_political_power_factor = 0.05 }
+set_variable = { DEN_ff_stability_factor = 0 }
+set_variable = { DEN_ff_war_support_factor = 0 }
+set_variable = { DEN_ff_research_speed_factor = 0 }
+set_variable = { DEN_ff_conscription = 0 }
+set_variable = { DEN_ff_conscription_factor = 0.15 }
+set_variable = { DEN_ff_communism_drift = 0.04 }
+set_variable = { DEN_ff_drift_defence_factor = 0 }
+set_variable = { DEN_ff_production_speed_buildings_factor = 0 }
+set_variable = { DEN_ff_industrial_capacity = 0 }
+set_variable = { DEN_ff_consumer_goods_factor = 0 }
+set_variable = { DEN_ff_surrender_limit = 0.05 }
+set_variable = { DEN_ff_army_core_attack_factor = 0 }
+set_variable = { DEN_ff_army_core_defence_factor = 0 }
+
 #### AAT SET UP ####
 if = {
 	limit = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	set_stability = 0.5
-	add_ideas = {
-		disarmed_nation
-		DEN_haeren
-		DEN_recovering_economy
-		DEN_fear_of_the_germans_med
-	}
 
 	set_power_balance = {
 		id = DEN_balance_of_power

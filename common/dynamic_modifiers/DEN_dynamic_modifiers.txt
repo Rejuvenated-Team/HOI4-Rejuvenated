@@ -1,0 +1,36 @@
+DEN_drti = { #DANISH ROAD TO INDUSTRIALIZATION
+	p
+}
+
+DEN_ff = { #FOLKEFRONTEN
+	political_power_factor = DEN_ff_political_power_factor
+	stability_factor = DEN_ff_stability_factor
+	war_support_factor = DEN_ff_war_support_factor
+	research_speed_factor = DEN_ff_research_speed_factor
+	conscription = DEN_ff_conscription
+	conscription_factor = DEN_ff_conscription_factor
+	communism_drift = DEN_ff_communism_drift
+	drift_defence_factor = DEN_ff_drift_defence_factor
+	production_speed_buildings_factor = DEN_ff_production_speed_buildings_factor
+	industrial_capacity_factory = DEN_ff_industrial_capacity
+	consumer_goods_factor = DEN_ff_consumer_goods_factor
+	surrender_limit = DEN_ff_surrender_limit
+	army_core_attack_factor = DEN_ff_army_core_attack_factor
+	army_core_defence_factor = DEN_ff_army_core_defence_factor
+}
+
+DEN_haeren = {
+	experience_gain_army_factor = DEN_haeren_experience_gain_army_factor
+	training_time_factor = DEN_haeren_training_time_factor
+	land_doctrine_cost_factor = DEN_haeren_land_doctrine_cost_factor
+	command_power_gain_mult = DEN_haeren_command_power_gain_mult
+	surrender_limit = DEN_haeren_surrender_limit
+	supply_factor = DEN_haeren_supply_factor
+	land_mastery_gain_factor = DEN_haeren_land_mastery_gain_factor 
+	acclimatization_cold_climate_gain_factor = DEN_haeren_acclimatization_cold_climate_gain_factor
+	army_attack_factor = DEN_haeren_army_attack_factor
+	army_defence_factor = DEN_haeren_army_defence_factor 
+	army_org_factor = DEN_haeren_army_org_factor
+	army_morale_factor = DEN_haeren_army_morale_factor
+	planning_speed = DEN_haeren_planning_speed
+}

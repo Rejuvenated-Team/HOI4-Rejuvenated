@@ -1,151 +1,130 @@
-add_namespace = denmark_events
+add_namespace = rj_den_events
+add_namespace = rj_com_den_events
+add_namespace = rj_fasc_den_events
+add_namespace = rj_mon_den_events
+add_namespace = rj_mil_gov_den_events
+add_namespace = rj_indust_den_events
+add_namespace = rj_den_army_events
 
-
-country_event = { #Ask for german support
-	id = denmark_events.1
-	title = denmark_events.1.t
-	desc = denmark_events.1.d
-	picture = gfx 
-	is_triggered_only = yes 
-	fire_only_once = yes 
-
-	option = { #Yeah!
-		name = denmark_events.1.a
-		ai_chance = {
-			factor = 100
-		}
-		DEN = {
-			add_popularity = {
-				ideology = fascism 
-				popularity = 0.05
-			}
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 950
-				producer = GER
-			}
-			swap_ideas = {
-				remove_idea = DEN_fear_of_the_germans_med
-				add_idea = DEN_fear_of_the_germans_low
-			}
-			hidden_effect = {
-			DEN = {
-				country_event = denmark_events.3
-			}
-		}
-		}
+### DEMOCRATIC
+country_event = { #Landstinget 1936
+	id = rj_den_events.1
+	title = rj_den_events.1.t
+	desc = rj_den_events.1.d
+	picture = GFX_report_event_generic
+	trigger = {
+		date > 1936.9.15.1
 	}
+	fire_only_once = yes
 
-	option = { #no
-		name = denmark_events.1.b 
-		ai_chance = {
-			factor = 1
-		}
-		add_popularity = {
-			ideology = fascism 
-			popularity = -0.01
-		}
-		hidden_effect = {
-			DEN = {
-				country_event = denmark_events.4
-			}
-		}
+	option = {
+		name = rj_den_events.1.a
 	}
 }
-country_event = { #Denmark wishes to join axis
-	id = denmark_events.2
-	title = denmark_events.2.t
-	desc = denmark_event.2.d 
-	picture = gfx 
+country_event = {
+	id = rj_den_events.2
+	title = rj_den_events.2.t
+	desc = rj_den_events.2.d
+	picture = GFX_report_event_generic
 	is_triggered_only = yes
-	fire_only_once = yes 
+	fire_only_once = yes
 
-	option = { #Sure you can join!
-		name = denmark_events.2.a
-		add_to_faction = DEN
-		ai_chance = {
-			factor = 100
-		}
-		hidden_effect = {
-			DEN = {
-				country_event = denmark_events.5
-			}
-		}
-	}
-
-	option = { #no
-		name = denmark_events.2.b
-		ai_chance = {
-			factor = 1
-		}
-		hidden_effect = {
-			DEN = {
-				country_event = denmark_events.6
-			}
+	option = {
+		name = rj_den_events.2.a
+		FIN = {
+			country_event = rj_den_events.3
 		}
 	}
 }
-country_event = { #Germany gives support
-	id = denmark_events.3
-	title = denmark_events.3.t
-	desc = denmark_events.3.d 
-	picture = gfx 
-	is_triggered_only = yes 
-	fire_only_once = yes 
+country_event = { #Denmark Sends Support
+	id = rj_den_events.3
+	title = rj_den_events.3.t
+	desc = rj_den_events.3.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	fire_only_once = yes
 
-	option = {
-		name = denmark_events.3.a
-		ai_chance = {
-			factor = 100
-		}
+	option = { #Uh, thanks?
+		name = rj_den_events.3.a
+		add_manpower = 550
 	}
 }
-country_event = { #Germany refuses giving support
-	id = denmark_events.4
-	title = denmark_events.4.t
-	desc = denmark_events.4.d 
-	picture = gfx 
-	is_triggered_only = yes 
-	fire_only_once = yes 
+### COMMUNIST
+country_event = { #SOVIET, DKP ASKS FOR SUPPORT
+	id = rj_com_den_events.1
+	title = rj_com_den_events.t
+	desc = rj_com_den_events.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	fire_only_once = yes
 
-	option = {
-		name = denmark_events.4.a
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-country_event = { #Germany lets us in axis
-	id = denmark_events.5
-	title = denmark_events.5.t
-	desc = denmark_events.5.d 
-	picture = gfx 
-	is_triggered_only = yes 
-	fire_only_once = yes 
-
-	option = {
-		name = denmark_events.5.a
-		ai_chance = {
-			factor = 100
-		}
+	option = { #OF COURSE
+		name = rj_com_den_events.a.1
 		DEN = {
-			remove_ideas = DEN_fear_of_the_germans_low
+			country_event = rj_com_den_events.2
+		}
+		ai_chance = {
+		base = 20 
+		modifier = {
+			factor = 4.0
+			FROM = {
+				SOV = {
+					has_government = communism
+				}
+			}
+		}
+	}
+	}
+	option = { #NO STINKY DENMARK
+		name = rj_com_den_events.b.1
+	}
+}
+country_event = { #THEY ACCEPT
+	id = rj_com_den_events.2
+	title = rj_com_den_events.2
+	desc = rj_com_den_events.2
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # WOOHOO!
+		name = rj_com_den_events.a.2
+		add_ideas = DEN_soviet_influence
+		add_offsite_building = {
+			type = industrial_complex
+			level = 1
 		}
 	}
 }
-country_event = { #Germany doesnt let us in axis
-	id = denmark_events.6
-	title = denmark_events.6.t
-	desc = denmark_events.6.d 
-	picture = gfx 
-	is_triggered_only = yes 
-	fire_only_once = yes 
+country_event = { #THEY DONT
+	id = rj_com_den_events.3
+	title = rj_com_den_events.3
+	desc = rj_com_den_events.3
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	fire_only_once = yes
 
-	option = {
-		name = denmark_events.6.a
-		ai_chance = {
-			factor = 100
-		}
+	option = { # FOR HELVEDE!
+		name = rj_com_den_events.a.3
+		add_stability = -0.01
+	}
+}
+country_event = { #DKP's interest in the world
+	id = rj_com_den_events.4
+	title = rj_com_den_events.t.4
+	desc = rj_com_den_events.d.4
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+
+	option = { #We dont need to rely on anyone
+		name = rj_com_den_events.a.4
+		add_war_support = 0.05
+		complete_national_focus = DEN_focus_on_our_own
+	}
+
+	option = { #Interest in Soviet ideals
+		name = rj_com_den_events.b.4
+		add_stability = 0.05
 	}
 }
 

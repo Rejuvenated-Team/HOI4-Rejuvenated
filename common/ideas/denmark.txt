@@ -1,25 +1,11 @@
 ideas = {
 	country = {
-		DEN_haeren = {
-
-			picture = DEN_haeren_1
-
-			allowed = {
-				always = yes 
-			}
-			modifier = {
-				supply_factor = -0.15
-				army_org_factor = -0.1
-				army_defence_factor = 0.05
-				army_attack_factor = -0.05
-			}
-		}
 		DEN_recovering_economy = {
 
 			picture = generic_economic_increase
 
 			allowed = {
-				always = no
+				always = yes
 			}
 
 			modifier = {
@@ -33,7 +19,7 @@ ideas = {
 			picture = hol_caved_to_the_germans
 
 			allowed = {
-				always = no
+				always = yes
 			}
 
 			modifier = {
@@ -49,7 +35,7 @@ ideas = {
 			picture = hol_caved_to_the_germans
 
 			allowed = {
-				always = no
+				always = yes
 			}
 
 			modifier = {
@@ -60,12 +46,36 @@ ideas = {
 				production_speed_bunker_factor = 0.1
 			}
 		}
+		DEN_anti_fascist_action = {
+			
+			picture = generic_fascism_drift_bonus
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				fascism_drift = -0.01
+			}
+		}
+		DEN_anti_fascist_action2 = {
+			
+			picture = generic_fascism_drift_bonus
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				fascism_drift = -0.05
+			}
+		}
 		DEN_fear_of_the_germans_high = {
 
 			picture = hol_caved_to_the_germans
 
 			allowed = {
-				always = no
+				always = yes
 			}
 
 			modifier = {
@@ -81,49 +91,20 @@ ideas = {
 			picture = generic_fascism_drift_bonus
 
 			allowed = {
-				always = no
+				always = yes
 			}
 
 			modifier = {
 				fascism_drift = 0.05
 			}
 		}
-		DEN_frits_regime = {
-
-			picture = SWE_save_denmark
-
-			allowed = {
-				always = no 
-			}
-
-			modifier = {
-				political_power_factor = 0.05
-				stability_factor = 0.02
-				war_support_factor = 0.05
-				fascism_drift = 0.01
-			}
-		}
-		DEN_frits_regime2 = {
-
-			picture = SWE_save_denmark
-
-			allowed = {
-				always = no 
-			}
-
-			modifier = {
-				political_power_factor = 0.1
-				stability_factor = 0.05
-				war_support_factor = 0.1
-				fascism_drift = 0.03
-			}
-		}
+		
 		DEN_conscription_effort = {
 
 			picture = g
 
 			allowed = {
-				always = no
+				always = yes
 			}
 
 			modifier = {
@@ -131,40 +112,188 @@ ideas = {
 				industrial_capacity_factory = 0.05
 			}
 		}
-		DEN_totalkrig = {
+		DEN_danish_trades = {
 
-			picture = totaler_krieg_economy
+			picture = generic_trade_bonus
 
 			allowed = {
-				always = no
+				always = yes
 			}
 
 			modifier = {
-				stability_factor = -0.15
-				production_speed_arms_factory_factor = 0.2
-				production_speed_industrial_complex_factor = -0.15
-				war_support_factor = 0.2
-				production_speed_infrastructure_factor = -0.05
-				production_speed_dockyard_factor = 0.1
-				production_speed_air_base_factor = 0.1
-				industrial_capacity_factory = 0.15
-				industrial_capacity_dockyard = 0.1
-				production_factory_efficiency_gain_factor = 0.05
-				fascism_drift = 0.1
-				political_power_cost = 0.1
+				trade_efficiency_factor = 0.05
+				consumer_goods_factor = -0.05
 			}
 		}
-		DEN_defiant_socialists = {
-
-			picture = FIN_socialist_welfare
+		DEN_beskyttelse_kabinet = {
+			picture = f
 
 			allowed = {
-				always = no
+				always = yes
+			}
+			modifier = {
+				war_support_factor = 0.1 
+				army_org_factor = 0.05
+				army_defence_against_major_factor = 0.05
+				consumer_goods_factor = 0.08
+			}
+		}
+		DEN_lowered_the_old_age_pensions = {
+			picture = f
+
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				political_power_factor = 0.03
+				stability_factor = = 0.05
+				democraft_drift = 0.01
+				conscription_factor = -0.02
+				industrial_capacity_factory = -0.02
+			}
+		}
+		DEN_vaction_act = {
+			picture = f
+
+			allowed = {
+				always = yes
 			}
 
 			modifier = {
-				stability_weekly_factor = -0.0010
-				communism_drift = 0.05
+				political_power_gain = 0.05
+				stability_factor = 0.1
+				democratic_drift = 0.01
+				consumer_goods_factor = 0.1
+			}
+		}
+		DEN_unemployment_issue = {
+			picture = f
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_cost = 0.1
+				stability_factor = -0.1
+				monthly_population = -0.1
+			}
+		}
+		DEN_lowered_army_spending = {
+			picture = f
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				war_support_factor = -0.05
+				consumer_goods_factor = -0.15
+				army_org_factor = -0.05
+				training_time_factor = 0.1
+			}
+		}
+		DEN_christian_x = {
+			picture = ICE_christian_x
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = -0.1
+			}
+		}
+		DEN_christian_x_2 = {
+			picture = ICE_christian_x
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.1
+				war_support_factor
+			}
+		}
+		DEN_armed_workers = {
+			picture = f
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				communism_drift = 0.03
+			}
+		}
+		DEN_strike = {
+			picture = f
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				communism_drift = 0.1
+				consumer_goods_factor = 0.2
+				production_speed_buildings_factor = -0.3
+				industrial_capacity_factory = -0.2
+				production_factory_efficiency_gain_factor = -0.2
+			}
+		}
+		DEN_student_protests = {
+			picture = f
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				research_speed_factor = -0.02
+				communism_drift = 0.1
+			}
+		}
+		DEN_soviet_influence = {
+			picture = f
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_factor = 0.05
+				comsumer_goods_factor = -0.05
+				stability_factor = -0.05
+				communism_drift = 0.1
+			}
+		}
+		DEN_statsbeskyttelsen = {
+			picture = f
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				operative_slot = 1
+				agency_upgrade_time = -0.25
+			}
+		}
+		DEN_spartacus_members = {
+			picture = f
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				communism_drift = 0.1
+				political_power_factor = 0.05
+				experience_gain_army_factor = 0.2
 			}
 		}
 	}
