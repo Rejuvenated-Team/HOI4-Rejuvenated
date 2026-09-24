@@ -21,6 +21,7 @@ state={
 			air_base = 6
 			6984 = {
 				naval_base = 2
+				land_facility = 1
 			}
 			3957 = {
 				naval_base = 1
