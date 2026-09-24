@@ -290,8 +290,8 @@ bookmarks = {
 			}
 			focuses = {
 				RJ_NZL_air_force_review
-				NZL_transfer_the_new_zealand_division
-				NZL_taranaki_oil
+				RJ_NZL_samoan_economic_development
+				RJ_NZL_the_biggest_bob
 			}
 			label = { rj_label_oceania rj_label_new_content }
 		}

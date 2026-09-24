@@ -41,7 +41,7 @@ NZL_alternate_democratic = {
 		#1938										
 		NZL_ratana_alliance											
 		NZL_social_security_act										
-		NZL_army_reforms											
+		#NZL_army_reforms											
 		NZL_charlton_automatic_rifle																					
 		NZL_domestic_arms_industry									
 		#1939						
@@ -60,7 +60,7 @@ NZL_alternate_democratic = {
 		NZL_waitangi_tribunal
 		NZL_maori_volunteers										
 		NZL_expand_the_university_of_auckland						
-		NZL_long_range_patrol
+		#NZL_long_range_patrol
 		#NZL_fighter_focus											
 		#1942
 		#NZL_destroyer_effort										
@@ -69,7 +69,7 @@ NZL_alternate_democratic = {
 		#NZL_light_cruiser_effort									
 		NZL_schofield_tank											
 		#1943
-		NZL_artillery_focus											
+		#NZL_artillery_focus											
 		NZL_big_bob_tank							
 	}
 
@@ -147,15 +147,15 @@ NZL_alternate_fascist = {
 		#1938										
 		NZL_ratana_alliance											
 		NZL_social_security_act										
-		NZL_army_reforms											
+		#NZL_army_reforms											
 		NZL_charlton_automatic_rifle																					
 		NZL_domestic_arms_industry									
 		#1939						
 		NZL_think_big
-		NZL_in_the_darkness												
+		#NZL_in_the_darkness												
 		RJ_NZL_air_force_review										
 		NZL_maori_affairs_act
-		NZL_befriend_japan									
+		#NZL_befriend_japan									
 		#1940
 		NZL_bob_semple_tank											
 		#NZL_form_the_rnzn											
@@ -166,7 +166,7 @@ NZL_alternate_fascist = {
 		NZL_amend_the_maori_affairs_act
 		NZL_maori_conscription										
 		NZL_expand_the_university_of_auckland						
-		NZL_long_range_patrol
+		#NZL_long_range_patrol
 		#NZL_fighter_focus											
 		#1942
 		#NZL_destroyer_effort										
@@ -175,7 +175,7 @@ NZL_alternate_fascist = {
 		#NZL_light_cruiser_effort									
 		NZL_schofield_tank											
 		#1943
-		NZL_artillery_focus											
+		#NZL_artillery_focus											
 		NZL_big_bob_tank							
 	}
 
@@ -254,7 +254,7 @@ NZL_alternate_communist = {
 		#1938										
 		NZL_ratana_alliance											
 		NZL_social_security_act										
-		NZL_army_reforms											
+		#NZL_army_reforms											
 		NZL_charlton_automatic_rifle																					
 		NZL_domestic_arms_industry									
 		#1939						
@@ -274,7 +274,7 @@ NZL_alternate_communist = {
 		NZL_waitangi_tribunal
 		NZL_maori_volunteers										
 		NZL_expand_the_university_of_auckland						
-		NZL_long_range_patrol
+		#NZL_long_range_patrol
 		#1942
 		#NZL_fighter_focus											
 		#NZL_destroyer_effort										
@@ -283,7 +283,7 @@ NZL_alternate_communist = {
 		#NZL_light_cruiser_effort									
 		#1943
 		NZL_schofield_tank											
-		NZL_artillery_focus											
+		#NZL_artillery_focus											
 		NZL_big_bob_tank							
 	}
 

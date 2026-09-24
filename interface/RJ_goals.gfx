@@ -1367,4 +1367,29 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/nzl/RJ_NZL_defense_council.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_charlton_automatic_rifle"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_charlton_automatic_rifle.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_schofield_tank"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_schofield_tank.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_samoan_economic_development"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_samoan_economic_development.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_purchase_american_samoa"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_purchase_american_samoa.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_the_biggest_bob"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_the_biggest_bob.dds"
+	}
+
 }

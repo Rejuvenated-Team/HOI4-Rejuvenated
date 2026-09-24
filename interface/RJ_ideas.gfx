@@ -626,4 +626,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_major_financial_investment.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_schofield_tank"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_schofield_tank.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_the_biggest_bob"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_the_biggest_bob.dds"
+	}
+
 }

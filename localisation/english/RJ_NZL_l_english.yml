@@ -66,6 +66,14 @@
  RJ_NZL_defense_council_desc: "Our military philosophy is that the defense of our islands is the best option for us, especially given our naturally small size & limited population. Setting up a Defense Council will allow us to better coordinate defensive strategies, & potentially fend off any invaders."
  RJ_NZL_army_board: "Army Board"
  RJ_NZL_army_board_desc: "Implementing an Army Board will allow us to better coordinate planning & conscription efforts."
+ RJ_NZL_improve_the_army_schools: "Improve the Army Schools"
+ RJ_NZL_improve_the_army_schools_desc: "There's always room for improvement in the military. Improving our army's schools will provide better troops & officers, giving us an advantage over any would-be enemies."
+ RJ_NZL_equipment_modernization: "Equipment Modernization"
+ RJ_NZL_equipment_modernization_desc: "Given our location & length of time since the Great War, we haven't had much interest in updating our equipment. As such, it's become a bit dated compared to other countries, & needs to be improved."
+ RJ_NZL_wartime_industry: "Wartime Industry"
+ RJ_NZL_wartime_industry_desc: "War has finally come to our home, & we must strengthen our weak military industry to help us deal with the situation."
+ RJ_NZL_the_biggest_bob: "The Biggest Bob"
+ RJ_NZL_the_biggest_bob_desc: "New Zealand has finally achieved the ultimate greatness. It's glory is beyond comparison, & it's might shall make us feared amongst men! BEHOLD: The Biggest Bob... May our enemies tremble in fear at the pinnacle of New Zealand innovation!"
 
 
 
@@ -95,6 +103,10 @@
  RJ_NZL_idea_major_financial_investment: "Major Financial Investment"
  RJ_NZL_idea_defense_council: "Defense Council"
  RJ_NZL_idea_army_board: "Army Board"
+ RJ_NZL_idea_charlton_automatic_rifle: "Charlton Automatic Rifles"
+ RJ_NZL_idea_schofield_tank: "Schofield Tanks"
+ RJ_NZL_idea_improve_the_army_schools: "Improved Army Schools"
+ RJ_NZL_idea_the_biggest_bob: "The Biggest Bob"
 
 
 

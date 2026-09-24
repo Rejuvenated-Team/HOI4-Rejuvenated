@@ -3,3 +3,6 @@
  generic_no_further_escalation_effects_tt: "§YIf [FROM.GetNameDef] decide not to escalate:\n§!"
  modifier_production_speed_steelworks_factor: "Steelworks Construction Speed:"
  motorization_tech: "Motorization Tech"
+ light_tank_tech: "Light Tank Tech"
+ armored_car_tech: "Armored Car Tech"
+ all_artillery_tech: "All Artillery Tech"

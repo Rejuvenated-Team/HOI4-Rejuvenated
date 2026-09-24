@@ -265,7 +265,7 @@ ideas = {
 			picture = generic_the_london_naval_treaty
 
 			modifier = {
-				industrial_capacity_dockyard = 0.10
+				industrial_capacity_dockyard = 0.20
 				production_speed_dockyard_factor = 0.10
 				production_speed_naval_base_factor = 0.10
 				production_speed_naval_supply_hub_factor = 0.10
@@ -274,6 +274,7 @@ ideas = {
 			equipment_bonus = {
 				mio_cat_eq_all_ships_no_convoys = {
 					build_cost_ic = -0.10
+					instant = yes
 				}
 			}
 		}
@@ -302,6 +303,7 @@ ideas = {
 					anti_air_attack = 0.05
 					naval_light_gun_hit_chance_factor = 0.05
 					naval_heavy_gun_hit_chance_factor = 0.05
+					instant = yes
 				}
 			}
 		}
@@ -327,6 +329,7 @@ ideas = {
 			equipment_bonus = {
 				mio_cat_eq_all_ships_no_convoys = {
 					build_cost_ic = -0.10
+					instant = yes
 				}
 				mio_cat_eq_all_cruiser = {
 					
@@ -355,11 +358,13 @@ ideas = {
 			equipment_bonus = {
 				mio_cat_eq_all_ships_no_convoys = {
 					build_cost_ic = -0.10
+					instant = yes
 				}
 				mio_cat_eq_all_cruiser = {
 					build_cost_ic = -0.10
 					naval_speed = 0.10
 					reliability = 0.05
+					instant = yes
 				}
 			}
 		}
@@ -520,6 +525,7 @@ ideas = {
 			equipment_bonus = {
 				motorized_equipment = {
 					build_cost_ic = -0.10
+					instant = yes
 				}
 			}
 		}
@@ -618,6 +624,110 @@ ideas = {
 			modifier = {
 				conscription = 0.02
 				max_planning_factor = 0.15
+			}
+		}
+
+		RJ_NZL_idea_charlton_automatic_rifle = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = raj_rifle_factory_ishapore
+
+			modifier = {
+				army_attack_factor = 0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					soft_attack = 0.20
+					instant = yes
+				}
+			}
+		}
+
+		RJ_NZL_idea_schofield_tank = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_schofield_tank
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+			equipment_bonus = {
+				mio_cat_eq_all_light_tank = {
+					soft_attack = 0.10
+					defense = 0.05
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				armored_car_equipment = {
+					soft_attack = 0.10
+					defense = 0.05
+					build_cost_ic = -0.10
+					maximum_speed = 0.10
+					instant = yes
+				}
+			}
+		}
+
+		RJ_NZL_idea_improve_the_army_schools = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = chi_army_corruption3
+
+			modifier = {
+				army_org_factor = 0.10
+				training_time_army_factor = -0.15
+				experience_gain_army_factor = 0.10
+			}
+		}
+
+		RJ_NZL_idea_the_biggest_bob = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_the_biggest_bob
+
+			equipment_bonus = {
+				land_cruiser = {
+					build_cost_ic = -0.25
+					reliability_factor = 0.15
+					instant = yes
+				}
 			}
 		}
 	}
