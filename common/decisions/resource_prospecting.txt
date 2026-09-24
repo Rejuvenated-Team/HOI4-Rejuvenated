@@ -9397,16 +9397,7 @@ prospect_for_resources = {
 			owns_state = 942
 			controls_state = 942
 			num_of_civilian_factories_available_for_projects > 4
-			IF = {
-				limit = {
-					original_tag = BRA
-					has_dlc = "Trial of Allegiance"
-				}
-				has_completed_focus = BRA_federal_development
-			}
-			ELSE = {
-				has_tech = excavation4
-			}
+			has_tech = excavation4
 		}
 		highlight_states = {
 			highlight_state_targets = {

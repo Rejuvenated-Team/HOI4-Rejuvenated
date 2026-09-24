@@ -92,6 +92,8 @@ technologies = {
 			}
 
 		}
+
+		special_project_specialization = { specialization_land }
 	}
 
 
@@ -99,6 +101,10 @@ technologies = {
 
 		enable_subunits = {
 			engineer
+		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_engineer
 		}
 
 		path = {
@@ -472,6 +478,10 @@ technologies = {
 			armored_car_recon
 			light_tank_recon
 		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_recon
+		}
 
 		path = {
 			leads_to_tech = tech_recon2
@@ -668,6 +678,24 @@ technologies = {
 		enable_subunits = {
 			military_police
 		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_military_police
+		}
+
+		on_research_complete = {
+			if = {
+				limit = {
+					has_dlc = "Thunder at Our Gates"
+					tag = ENG
+					is_ai = yes
+				}
+				add_units_to_division_template = {
+					template_name = "Army Headquarters"
+					support = { hq_military_police = 0 }
+				}
+			}
+		}
 
 		path = {
 			leads_to_tech = tech_military_police2
@@ -753,11 +781,11 @@ technologies = {
 	tech_military_police2 = {
 
 		military_police = {
-			suppression_factor = 0.1
+			suppression_factor = 0.12
 		}
 
 		motorized_military_police = {
-			suppression_factor = 0.1
+			suppression_factor = 0.12
 			battalion_mult = {
 				category = category_vehicle_infantry
 				default_morale = 0.05
@@ -794,11 +822,11 @@ technologies = {
 	tech_military_police3 = {
 
 		military_police = {
-			suppression_factor = 0.1
+			suppression_factor = 0.12
 		}
 
 		motorized_military_police = {
-			suppression_factor = 0.1
+			suppression_factor = 0.12
 			battalion_mult = {
 				category = category_vehicle_infantry
 				default_morale = 0.05
@@ -834,11 +862,11 @@ technologies = {
 	tech_military_police4 = {
 
 		military_police = {
-			suppression_factor = 0.1
+			suppression_factor = 0.12
 		}
 
 		motorized_military_police = {
-			suppression_factor = 0.1
+			suppression_factor = 0.12
 			battalion_mult = {
 				category = category_vehicle_infantry
 				default_morale = 0.05
@@ -886,6 +914,24 @@ technologies = {
 		enable_subunits = {
 			maintenance_company
 		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_maintenance
+		}
+
+		on_research_complete = {
+			if = {
+				limit = {
+					has_dlc = "Thunder at Our Gates"
+					tag = FRA
+					is_ai = yes
+				}
+				add_units_to_division_template = {
+					template_name = "Quartier General d'Armee"
+					support = { hq_maintenance = 0 }
+				}
+			}
+		}
 
 		path = {
 			leads_to_tech = tech_maintenance_company2
@@ -926,6 +972,12 @@ technologies = {
 				factor = 1.2
 				date > "1939.1.1"
 			}
+
+			modifier = {
+				factor = 10
+				tag = GER
+				date > "1942.1.1"
+			}
 		}
 	}
 
@@ -937,7 +989,7 @@ technologies = {
 		}
 
 		armored_maintenance = {
-			reliability_factor = 0.02
+			reliability_factor = 0.03
 			recovery = 0.03
 			equipment_capture_factor = 0.1
 		}
@@ -988,26 +1040,28 @@ technologies = {
 
 		maintenance_company = {
 			reliability_factor = 0.05
+			equipment_capture_factor = 0.05
 
-			battalion_mult = {
-				category = category_all_armor
-				equipment_capture_factor = 0.01
-				add = yes
-				display_as_percentage = yes
-			}
+			#battalion_mult = {
+			#	category = category_all_armor
+			#	equipment_capture_factor = 0.01
+			#	add = yes
+			#	display_as_percentage = yes
+			#}
 
 		}
 
 		armored_maintenance = {
-			reliability_factor = 0.02
+			reliability_factor = 0.03
 			recovery = 0.03
+			equipment_capture_factor = 0.1
 
-			battalion_mult = {
-				category = category_all_armor
-				equipment_capture_factor = 0.02
-				add = yes
-				display_as_percentage = yes
-			}
+			#battalion_mult = {
+			#	category = category_all_armor
+			#	equipment_capture_factor = 0.02
+			#	add = yes
+			#	display_as_percentage = yes
+			#}
 
 		}
 
@@ -1055,7 +1109,7 @@ technologies = {
 		}
 
 		armored_maintenance = {
-			reliability_factor = 0.02
+			reliability_factor = 0.03
 			recovery = 0.03
 			equipment_capture_factor = 0.1
 		}
@@ -1096,6 +1150,10 @@ technologies = {
 
 		enable_subunits = {
 			field_hospital
+		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_field_hospital
 		}
 
 		path = {
@@ -1357,6 +1415,35 @@ technologies = {
 		enable_subunits = {
 			logistics_company
 		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_logistics
+		}
+
+		on_research_complete = {
+			if = {
+				limit = {
+					has_dlc = "Thunder at Our Gates"
+					tag = USA
+					is_ai = yes
+				}
+				add_units_to_division_template = {
+					template_name = "Field Army Headquarters"
+					support = { hq_logistics = 0 }
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "Thunder at Our Gates"
+					tag = SOV
+					is_ai = yes
+				}
+				add_units_to_division_template = {
+					template_name = "Shtab Armii"
+					support = { hq_logistics = 0 }
+				}
+			}
+		}
 
 		path = {
 			leads_to_tech = tech_logistics_company2
@@ -1418,7 +1505,7 @@ technologies = {
 		}
 
 		helicopter_transport = {
-			supply_consumption_factor = -0.12
+			supply_consumption_factor = -0.15
 		}
 
 		path = {
@@ -1473,7 +1560,7 @@ technologies = {
 		}
 
 		helicopter_transport = {
-			supply_consumption_factor = -0.12
+			supply_consumption_factor = -0.15
 		}
 
 		helicopter_brigade = {
@@ -1569,6 +1656,10 @@ technologies = {
 		enable_subunits = {
 			signal_company
 		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_signal
+		}
 
 		path = {
 			leads_to_tech = tech_signal_company2
@@ -1613,13 +1704,14 @@ technologies = {
 
 		signal_company = {
 			initiative = 0.12
+			breakthrough = 0.01
 		}
 
 		armored_signal = {
-			initiative = 0.08
+			initiative = 0.09
 			battalion_mult = {
 				category = category_all_armor
-				breakthrough = 0.01
+				breakthrough = 0.02
 			}
 		}
 
@@ -1665,13 +1757,14 @@ technologies = {
 
 		signal_company = {
 			initiative = 0.12
+			breakthrough = 0.01
 		}
 
 		armored_signal = {
-			initiative = 0.08
+			initiative = 0.09
 			battalion_mult = {
 				category = category_all_armor
-				breakthrough = 0.01
+				breakthrough = 0.02
 			}
 		}
 
@@ -1716,13 +1809,14 @@ technologies = {
 
 		signal_company = {
 			initiative = 0.12
+			breakthrough = 0.01
 		}
 
 		armored_signal = {
-			initiative = 0.08
+			initiative = 0.09
 			battalion_mult = {
 				category = category_all_armor
-				breakthrough = 0.01
+				breakthrough = 0.02
 			}
 		}
 
