@@ -289,7 +289,7 @@ bookmarks = {
 				NZL_commonwealth_loyalty
 			}
 			focuses = {
-				RJ_NZL_air_force_review
+				NZL_the_first_labor_government
 				RJ_NZL_samoan_economic_development
 				RJ_NZL_the_biggest_bob
 			}

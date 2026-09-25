@@ -636,4 +636,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_the_biggest_bob.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_first_labour_government"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_first_labour_government.dds"
+	}
+
 }

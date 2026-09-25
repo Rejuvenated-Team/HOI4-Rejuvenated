@@ -2849,7 +2849,7 @@
 
 	focus = {
 		id = NZL_the_first_labor_government
-		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		icon = GFX_focus_RJ_NZL_first_labour_government
 		x = 4
 		y = 0
 
@@ -2871,6 +2871,7 @@
 
 		completion_reward = {
 			add_ideas = NZL_first_labor_government
+			add_political_power = 100
 		}
 	}
 
@@ -3150,11 +3151,12 @@
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		prerequisite = { focus = NZL_the_first_labor_government }
 		mutually_exclusive = { focus = NZL_statute_of_westminster }
+		mutually_exclusive = { focus = RJ_NZL_seek_out_labour_sympathizers }
 		x = 0
 		y = 1
 		relative_position_id = NZL_the_first_labor_government
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 30
@@ -3183,10 +3185,11 @@
 
 	focus = {
 		id = NZL_statute_of_westminster
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_focus_RJ_NZL_statute_of_westminster
 		prerequisite = { focus = NZL_the_first_labor_government }
 		mutually_exclusive = { focus = NZL_strengthen_the_commonwealth }
-		x = 5
+		mutually_exclusive = { focus = RJ_NZL_seek_out_labour_sympathizers }
+		x = 4
 		y = 1
 		relative_position_id = NZL_the_first_labor_government
 
@@ -3204,16 +3207,12 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_TFV_AUTONOMY }
 
 		completion_reward = {
-			add_political_power = 120
-			add_autonomy_ratio = {
-				value = 0.5
-				localization = NZL_statute_of_westminster
+			add_political_power = 200
+			add_autonomy_score = {
+				value = 800
 			}
 		}
 	}
@@ -3225,12 +3224,12 @@
 	focus = {
 		id = NZL_2nzef
 		icon = GFX_focus_generic_military_mission
-		prerequisite = { focus = NZL_strengthen_the_commonwealth }
-		x = 0
+		prerequisite = { focus = NZL_strengthen_the_commonwealth focus = NZL_statute_of_westminster }
+		x = 2
 		y = 1
 		relative_position_id = NZL_strengthen_the_commonwealth
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -3243,10 +3242,6 @@
 		bypass = {
 
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			add_ideas = NZL_2nzef
@@ -3275,9 +3270,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
@@ -3308,8 +3300,6 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -3326,13 +3316,14 @@
 	############################
 
 	focus = {
-		id = NZL_the_lee_affair
-		icon = GFX_goal_support_communism
-		prerequisite = { focus = NZL_statute_of_westminster }
-		mutually_exclusive = { focus = NZL_constitution_amendment_act }
-		x = 1
+		id = RJ_NZL_seek_out_labour_sympathizers
+		icon = GFX_focus_RJ_NZL_seek_labour_sympathizers
+		prerequisite = { focus = NZL_the_first_labor_government }
+		mutually_exclusive = { focus = NZL_statute_of_westminster }
+		mutually_exclusive = { focus = NZL_strengthen_the_commonwealth }
+		x = 8
 		y = 1
-		relative_position_id = NZL_statute_of_westminster
+		relative_position_id = NZL_the_first_labor_government
 
 		cost = 10
 
@@ -3348,226 +3339,11 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = NZL_first_labor_government
-				add_idea = NZL_the_workers_party_1
-			}
+			
 		}
 	}
-
-	focus = {
-		id = NZL_empower_the_working_class
-		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = NZL_the_lee_affair }
-		x = 0
-		y = 1
-		relative_position_id = NZL_the_lee_affair
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-			is_subject = no
-			has_government = communism
-			NOT = { has_war_together_with = ENG }
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			ENG = { remove_from_faction = ROOT }
-			add_political_power = 100
-			OVERLORD = {
-				set_autonomy = {
-					target = NZL
-					autonomy_state = autonomy_free
-				}
-			}
-
-			swap_ideas = {
-				remove_idea = NZL_the_workers_party_1
-				add_idea = NZL_the_workers_party_2
-			}
-			remove_ideas = NZL_commonwealth_loyalty
-		}
-	}
-
-	focus = {
-		id = NZL_join_comintern
-		icon = GFX_goal_generic_alliance
-		prerequisite = { focus = NZL_empower_the_working_class }
-		x = 0
-		y = 2
-		relative_position_id = NZL_the_lee_affair
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-			is_subject = no
-			has_government = communism
-			SOV_comintern_joinable = yes 
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
-		}
-
-		bypass = {
-
-		}
-
-		completion_reward = {
-			SOV = { country_event = { id = tfv_new_zealand.1 } }
-		}
-	}
-
-	focus = {
-		id = NZL_technology_sharing_with_soviet_union
-		icon = GFX_goal_tfv_generic_tech_sharing
-		prerequisite = { focus = NZL_join_comintern }
-		x = 0
-		y = 3
-		relative_position_id = NZL_the_lee_affair
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 30
-		}
-
-		available = {
-			has_government = communism
-			SOV = { has_government = communism }
-			is_subject = no
-			is_in_faction_with = SOV
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
-		}
-
-		bypass = {
-
-		}
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-		
-			SOV = { add_to_tech_sharing_group = comintern_research }
-			add_to_tech_sharing_group = comintern_research
-		}
-	}
-
-	############################
-	##### GO ALONE SECTION #####
-	############################
-
-	focus = {
-		id = NZL_constitution_amendment_act
-		icon = GFX_goal_tfv_sever_ties_with_uk
-		prerequisite = { focus = NZL_statute_of_westminster }
-		mutually_exclusive = { focus = NZL_the_lee_affair }
-		x = -2
-		y = 1
-		relative_position_id = NZL_statute_of_westminster
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-			NOT = {
-				any_country = {
-					has_war_together_with = ROOT
-					is_in_faction_with = ROOT
-				}
-			}
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_TFV_AUTONOMY }
-
-		completion_reward = {
-			add_political_power = 70
-			add_autonomy_ratio = {
-				value = 1
-				localization = NZL_constitution_amendment_act
-			}
-		}
-	}
-
-	focus = {
-		id = NZL_independent_new_zealand
-		icon = GFX_focus_AST_never_gallipoli
-		prerequisite = { focus = NZL_constitution_amendment_act }
-		x = 0
-		y = 1
-		relative_position_id = NZL_constitution_amendment_act
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-			is_subject = no
-			NOT = {
-				any_country = {
-					has_war_together_with = ROOT
-					is_in_faction_with = ROOT
-				}
-			}
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			set_rule = { can_create_factions = yes }
-			random_country = {
-				limit = {
-					NOT = { ROOT = { is_faction_leader = yes } }
-					is_faction_leader = yes
-					is_in_faction_with = ROOT
-				}
-				remove_from_faction = ROOT
-			}
-			remove_ideas = NZL_commonwealth_loyalty
-		}
-	}
-
-
 
 }		

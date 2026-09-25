@@ -1392,4 +1392,19 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/nzl/RJ_NZL_the_biggest_bob.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_first_labour_government"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_first_labour_government.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_seek_labour_sympathizers"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_seek_labour_sympathizers.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_statute_of_westminster"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_statute_of_westminster.dds"
+	}
+
 }

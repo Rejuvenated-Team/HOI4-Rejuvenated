@@ -7984,9 +7984,8 @@ leader_traits = {
 		random = no
 		sprite = 13
 		consumer_goods_factor = -0.10
-		war_support_factor = 0.05
+		production_lack_of_resource_penalty_factor = -0.2
 		production_speed_synthetic_refinery_factor = 0.15
-		subversive_activites_upkeep = -0.05
 	}
 
 	#Radek
@@ -14761,7 +14760,7 @@ leader_traits = {
 		sprite = 13
 		random = no
 		
-		production_speed_buildings_factor = 0.05
+		production_speed_buildings_factor = 0.12
 		consumer_goods_factor = -0.05
 
 	}

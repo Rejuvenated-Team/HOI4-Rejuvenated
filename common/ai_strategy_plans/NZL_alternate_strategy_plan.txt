@@ -46,10 +46,10 @@ NZL_alternate_democratic = {
 		NZL_domestic_arms_industry									
 		#1939						
 		NZL_think_big
-		NZL_constitution_amendment_act												
+		#NZL_constitution_amendment_act												
 		RJ_NZL_air_force_review									
 		NZL_maori_affairs_act
-		NZL_independent_new_zealand										
+		#NZL_independent_new_zealand										
 		#1940
 		NZL_bob_semple_tank											
 		#NZL_form_the_rnzn											
@@ -259,15 +259,15 @@ NZL_alternate_communist = {
 		NZL_domestic_arms_industry									
 		#1939						
 		NZL_think_big
-		NZL_the_lee_affair												
+		#NZL_the_lee_affair												
 		RJ_NZL_air_force_review									
 		NZL_maori_affairs_act
-		NZL_empower_the_working_class									
+		#NZL_empower_the_working_class									
 		#1940
 		NZL_bob_semple_tank											
 		#NZL_form_the_rnzn											
 		#NZL_expand_devonport_naval_base								
-		NZL_join_comintern
+		#NZL_join_comintern
 		NZL_form_the_rnzaf											
 		#1941
 		NZL_the_manpower_act										
