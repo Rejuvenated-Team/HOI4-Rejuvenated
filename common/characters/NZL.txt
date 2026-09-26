@@ -762,7 +762,7 @@ characters={
 		name=NZL_bernard_ashwin
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_europe_1"
+				small="GFX_rj_portrait_NZL_bernard_carl_ashwin_small"
 			}
 		}
 		advisor={
