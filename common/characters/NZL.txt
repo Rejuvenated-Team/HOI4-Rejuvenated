@@ -715,7 +715,7 @@ characters={
 		name=NZL_alexander_galbraith
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_europe_2"
+				small="GFX_rj_portrait_NZL_alexander_galbraith_small"
 			}
 		}
 		advisor={

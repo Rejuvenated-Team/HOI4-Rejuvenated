@@ -340,4 +340,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_bob_semple.dds"
 	}
 
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_alexander_galbraith_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_alexander_galbraith.dds"
+	}
+
 }
