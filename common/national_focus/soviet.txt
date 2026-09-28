@@ -8340,7 +8340,7 @@ focus_tree = {
 			show_ideas_tooltip = SOV_karl_radek
 			show_ideas_tooltip = SOV_ivar_smilga
 			show_ideas_tooltip = SOV_yevgeny_preobrazhensky
-			show_ideas_tooltip = SOV_martemyan_ryutin_alt
+			show_ideas_tooltip = SOV_martemyan_ryutin
 			hidden_effect = {
 				if = {
 					limit = { has_global_flag = AAT_trotsky_in_mexico }
