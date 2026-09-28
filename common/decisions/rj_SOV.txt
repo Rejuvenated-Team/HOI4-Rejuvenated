@@ -1,4 +1,23 @@
-#### GERMANY LUXEMBOURG DEMOCRATIC RUSSIA ####
+debug_decisions = {
+
+	rj_SOV_unhide_stalin_friendship_path = {
+		icon = generic_political_address
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		visible = {
+			is_debug = yes
+			is_ai = no
+		}
+
+		complete_effect = {
+			set_country_flag = SOV_the_all_russian_united_front_cflg
+		}
+	}
+}
+
 SOV_security_pact_category = {
 	SOV_invite_country_to_security_pact = {
 		icon = generic_political_address

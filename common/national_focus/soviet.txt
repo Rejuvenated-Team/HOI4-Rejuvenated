@@ -8635,6 +8635,7 @@ focus_tree = {
 			show_ideas_tooltip = SOV_yan_nagursky
 
 			custom_effect_tooltip = generic_skip_one_line_tt
+			show_unit_leaders_tooltip = SOV_grigory_semyonov
 			show_unit_leaders_tooltip = SOV_aleksandr_rodzyanko
 			show_unit_leaders_tooltip = SOV_vladimir_kosmin
 			show_unit_leaders_tooltip = SOV_andrey_shkuro
@@ -8692,10 +8693,6 @@ focus_tree = {
 					clr_character_flag = SOV_exiled_flag
 				}
 			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			show_unit_leaders_tooltip = SOV_grigory_semyonov
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
