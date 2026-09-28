@@ -8311,7 +8311,6 @@ focus_tree = {
 			show_ideas_tooltip = SOV_ivar_smilga
 			show_ideas_tooltip = SOV_yevgeny_preobrazhensky
 			show_ideas_tooltip = SOV_martemyan_ryutin
-			show_ideas_tooltip = SOV_nikolay_ustryalov
 			hidden_effect = {
 				if = {
 					limit = { has_global_flag = AAT_trotsky_in_mexico }
@@ -8332,7 +8331,6 @@ focus_tree = {
 				#SOV_ivar_smilga
 				#SOV_yevgeny_preobrazhensky
 				#SOV_martemyan_ryutin
-				#SOV_nikolay_ustryalov
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -8620,6 +8618,29 @@ focus_tree = {
 			show_ideas_tooltip = SOV_anastasy_vonsyatsky
 			show_ideas_tooltip = SOV_grigory_semyonov
 			show_ideas_tooltip = SOV_metropolitan_anastasy
+			show_ideas_tooltip = SOV_metropolitan_nikolay
+			show_ideas_tooltip = SOV_nikolay_ustryalov
+			show_ideas_tooltip = SOV_aleksandr_kazembek
+			show_ideas_tooltip = SOV_metropolitan_aleksy
+			show_ideas_tooltip = SOV_patriarch_meletius
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = SOV_aleksandr_prokofyev_seversky
+			show_ideas_tooltip = SOV_vasily_yanchenko
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_chief_of_airforce
+			show_ideas_tooltip = SOV_vyacheslav_tkachyov
+			show_ideas_tooltip = SOV_yan_nagursky
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			show_unit_leaders_tooltip = SOV_aleksandr_rodzyanko
+			show_unit_leaders_tooltip = SOV_vladimir_kosmin
+			show_unit_leaders_tooltip = SOV_andrey_shkuro
+			show_unit_leaders_tooltip = SOV_pyotr_krasnov
+			show_unit_leaders_tooltip = SOV_konstantin_nechayev
+			show_unit_leaders_tooltip = SOV_anton_denikin
 
 			hidden_effect = {
 				SOV_anastasy_vonsyatsky = {
@@ -8631,6 +8652,44 @@ focus_tree = {
 						id = NSB_Soviet_fascist_civil_war.004 # TODO Rewrite
 						days = 0
 					}
+				}
+				#SOV_metropolitan_anastasy
+				#SOV_metropolitan_nikolay
+				#SOV_nikolay_ustryalov
+				SOV_aleksandr_kazembek = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				#SOV_metropolitan_aleksy
+				#SOV_metropolitan_meletius
+				SOV_aleksandr_prokofyev_seversky = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				SOV_vasily_yanchenko = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				SOV_vyacheslav_tkachyov = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				SOV_yan_nagursky = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				SOV_aleksandr_rodzyanko = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				SOV_vladimir_kosmin = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				SOV_andrey_shkuro = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				SOV_pyotr_krasnov = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				SOV_konstantin_nechayev = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				SOV_anton_denikin = {
+					clr_character_flag = SOV_exiled_flag
 				}
 			}
 

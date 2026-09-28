@@ -102,14 +102,25 @@ characters = {
 			allowed = {
 				original_tag = SOV
 			}
-			visible = {
-				has_completed_focus = SOV_beaten_but_not_defeated
-				NOT = {
-					has_completed_focus = SOV_the_third_rome
+			available = {
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+					else = {
+						has_completed_focus = SOV_the_hands_do
+						NOT = {
+							has_completed_focus = SOV_the_third_rome
+						}
+					}
 				}
 			}
-			available = {
-				has_completed_focus = SOV_the_hands_do
+			visible = {
+				OR = {
+					has_completed_focus = SOV_beaten_but_not_defeated
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+				}
 				NOT = {
 					has_completed_focus = SOV_the_third_rome
 				}
@@ -1991,7 +2002,10 @@ characters = {
 			logistics_skill = 1
 			visible = {
 				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+				OR = {
+					ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+					ROOT = { has_completed_focus = rj_SOV_invite_the_white_exiles }
+				}
 			}
 		}
 	}
@@ -2018,6 +2032,7 @@ characters = {
 				ROOT = { 
 					OR = {
 						has_completed_focus = SOV_beaten_but_not_defeated 
+						has_completed_focus = rj_SOV_invite_the_white_exiles 
 						has_completed_focus = GER_ally_white_russian_forces 
 						has_completed_focus = GER_war_with_the_ussr 
 					}
@@ -2043,7 +2058,10 @@ characters = {
 			logistics_skill = 3
 			visible = {
 				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+				OR = {
+					ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+					ROOT = { has_completed_focus = rj_SOV_invite_the_white_exiles }
+				}
 			}
 		}
 	}
@@ -2065,7 +2083,10 @@ characters = {
 			logistics_skill = 1
 			visible = {
 				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+				OR = {
+					ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+					ROOT = { has_completed_focus = rj_SOV_invite_the_white_exiles }
+				}
 			}
 		}
 	}
@@ -2087,7 +2108,10 @@ characters = {
 			logistics_skill = 2
 			visible = {
 				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+				OR = {
+					ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+					ROOT = { has_completed_focus = rj_SOV_invite_the_white_exiles }
+				}
 			}
 		}
 	}
@@ -2114,6 +2138,7 @@ characters = {
 				ROOT = { 
 					OR = {
 						has_completed_focus = SOV_beaten_but_not_defeated 
+						has_completed_focus = rj_SOV_invite_the_white_exiles 
 						has_completed_focus = GER_ally_white_russian_forces 
 						has_completed_focus = GER_war_with_the_ussr
 					}
@@ -3628,10 +3653,21 @@ characters = {
 				original_tag = SOV
 			}
 			visible = {
-				has_completed_focus = SOV_beaten_but_not_defeated
+				OR = {
+					has_completed_focus = SOV_beaten_but_not_defeated
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+				}
 			}
 			available = {
-				has_completed_focus = SOV_the_declaration
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+					else = {
+						has_completed_focus = SOV_the_declaration
+					}
+				}
 			}
 			traits = {
 				theocratic_diplomat
@@ -3663,10 +3699,21 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				has_completed_focus = SOV_the_declaration
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+					else = {
+						has_completed_focus = SOV_the_declaration
+					}
+				}
 			}
 			visible = {
-				has_completed_focus = SOV_beaten_but_not_defeated
+				OR = {
+					has_completed_focus = SOV_beaten_but_not_defeated
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+				}
 			}
 			traits = {
 				driver_of_the_faithful
@@ -3829,7 +3876,7 @@ characters = {
 					limit = {
 						has_country_flag = SOV_the_all_russian_united_front_cflg
 					}
-					has_completed_focus = rj_SOV_get_back_the_trotskyists
+					has_completed_focus = rj_SOV_invite_the_white_exiles
 					else = {
 						has_completed_focus = SOV_consolidate_power
 					}
@@ -3870,7 +3917,15 @@ characters = {
 				}
 			}
 			available = {
-				has_completed_focus = SOV_reconvene_the_zemsky_sobor
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+					else = {
+						has_completed_focus = SOV_reconvene_the_zemsky_sobor
+					}
+				}
 				if = {
 					limit = {
 						has_character_flag = SOV_exiled_flag
@@ -3919,10 +3974,18 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				SOV_is_exiles = yes
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+					else = {
+						SOV_is_exiles = yes
+						OR = {
+							has_global_flag = SOV_soviet_civil_war
+							has_global_flag = SOV_soviet_civil_war_over
+						}
+					}
 				}
 				if = {
 					limit = {
@@ -3962,10 +4025,18 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				SOV_is_exiles = yes
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+					else = {
+						SOV_is_exiles = yes
+						OR = {
+							has_global_flag = SOV_soviet_civil_war
+							has_global_flag = SOV_soviet_civil_war_over
+						}
+					}
 				}
 				if = {
 					limit = {
@@ -4005,10 +4076,18 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				SOV_is_exiles = yes
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+					else = {
+						SOV_is_exiles = yes
+						OR = {
+							has_global_flag = SOV_soviet_civil_war
+							has_global_flag = SOV_soviet_civil_war_over
+						}
+					}
 				}
 				if = {
 					limit = {
@@ -4049,10 +4128,18 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				SOV_is_exiles = yes
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+					else = {
+						SOV_is_exiles = yes
+						OR = {
+							has_global_flag = SOV_soviet_civil_war
+							has_global_flag = SOV_soviet_civil_war_over
+						}
+					}
 				}
 				if = {
 					limit = {
