@@ -568,7 +568,7 @@ characters={
 		name=NZL_a_e_davy
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_europe_1"
+				small="GFX_rj_portrait_NZL_a_e_davies_small"
 			}
 		}
 		advisor={
@@ -647,7 +647,7 @@ characters={
 		name=NZL_leslie_lefeaux
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_europe_2"
+				small="GFX_rj_portrait_NZL_leslie_lefaux_small"
 			}
 		}
 		advisor={
@@ -784,7 +784,7 @@ characters={
 		name=NZL_vic_wilcox
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_europe_3"
+				small="GFX_rj_portrait_NZL_vic_wilcox_small"
 			}
 		}
 		advisor={

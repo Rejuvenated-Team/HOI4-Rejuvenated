@@ -360,4 +360,19 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_john_a_lee.dds"
 	}
 
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_a_e_davies_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_a_e_davies.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_leslie_lefaux_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_leslie_lefaux.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_vic_wilcox_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_vic_wilcox.dds"
+	}
+
 }
