@@ -14,6 +14,40 @@ debug_decisions = {
 
 		complete_effect = {
 			set_country_flag = SOV_the_all_russian_united_front_cflg
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+political_actions = {
+
+	rj_SOV_generate_interparty_discourse = {
+		icon = generic_political_discourse
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			communism > 0.3
+		}
+
+		visible = {
+			has_completed_focus = SOV_the_centre
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			add_stability = 0.03
+			hidden_effect = {
+				country_event = {
+					id = rj_soviet.12
+					days = 30
+				}
+			}
 		}
 	}
 }

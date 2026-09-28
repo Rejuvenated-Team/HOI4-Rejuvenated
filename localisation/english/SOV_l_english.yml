@@ -175,6 +175,7 @@
  SOV_urbanization: "Urbanization Efforts"
  SOV_urbanization_desc: "Our country is extremely rural. Encouraging our people to move into the cities can allow for our economy to grow as we consolidate."
 #Decisions
+ rj_SOV_generate_interparty_discourse: "Generate Inter-Party Discourse"
  SOV_security_pact_category: "Manage the Eastern Security Pact"
  SOV_security_pact_category_desc: "Several Eastern European states stand severely unprotected against the German Menace. Therefore, we shall save them."
  SOV_invite_country_to_security_pact: "Invite §H[FROM.getname]§! to [ROOT.getfactionname]"
@@ -260,6 +261,10 @@
  rj_soviet.11.desc: "The Black Hundreds were a paramilitary force that, while loyal to the Tsar, also attacked minorities and those supportive of the democratic cause. Now that we have dissolved them, the question is what to do with those involved."
  rj_soviet.11.a: "They did help fight the commies, so we'll give them a pass this time."
  rj_soviet.11.b: "Their past actions will not be tolerated in the new Russia."
+ rj_soviet.12.t: "Contact Our Old Enemies?"
+ rj_soviet.12.d: ""
+ rj_soviet.12.a: "Sure"
+ rj_soviet.12.b: "Nyet"
 #Tooltips
  modify_the_red_army_tt: "Modify [GetSovietArmyNsName] by:\n"
  modify_the_red_air_force_tt: "Modify [GetAppropriateRedArmyNsName] by:\n"
