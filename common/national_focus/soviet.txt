@@ -8340,7 +8340,7 @@ focus_tree = {
 			show_ideas_tooltip = SOV_karl_radek
 			show_ideas_tooltip = SOV_ivar_smilga
 			show_ideas_tooltip = SOV_yevgeny_preobrazhensky
-			show_ideas_tooltip = SOV_martemyan_ryutin
+			show_ideas_tooltip = SOV_martemyan_ryutin_alt
 			hidden_effect = {
 				if = {
 					limit = { has_global_flag = AAT_trotsky_in_mexico }
@@ -8358,9 +8358,23 @@ focus_tree = {
 					clr_character_flag = SOV_exiled_flag
 				}
 				#SOV_karl_radek
-				#SOV_ivar_smilga
+				SOV_ivar_smilga = {
+					clr_character_flag = SOV_imprisoned_flag
+					set_portraits = {
+						army = {
+							small = "GFX_idea_SOV_ivar_smilga"
+						}
+					}
+				}
 				#SOV_yevgeny_preobrazhensky
-				#SOV_martemyan_ryutin
+				SOV_martemyan_ryutin = {
+					clr_character_flag = SOV_imprisoned_flag
+					set_portraits = {
+						army = {
+							small = "GFX_idea_SOV_martemyan_ryutin"
+						}
+					}
+				}
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
