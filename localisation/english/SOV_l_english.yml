@@ -262,7 +262,7 @@
  rj_soviet.11.a: "They did help fight the commies, so we'll give them a pass this time."
  rj_soviet.11.b: "Their past actions will not be tolerated in the new Russia."
  rj_soviet.12.t: "Contact Our Old Enemies?"
- rj_soviet.12.d: ""
+ rj_soviet.12.desc: ""
  rj_soviet.12.a: "Sure"
  rj_soviet.12.b: "Nyet"
 #Tooltips

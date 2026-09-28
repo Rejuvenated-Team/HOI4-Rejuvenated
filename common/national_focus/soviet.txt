@@ -12616,7 +12616,7 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = -19
+			x = -18
 			y = 0
 			trigger = { #Trotskyist branch hides
 				NOT = { has_dlc = "No Step Back" }
@@ -12643,7 +12643,7 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = -26
+			x = -25
 			y = 0
 			trigger = {
 				has_dlc = "No Step Back"
