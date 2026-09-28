@@ -8,6 +8,9 @@ technologies = {
 		enable_equipments = {
 			artillery_equipment_1
 		}
+		enable_subunits = {
+			field_guns
+		}
 
 		armored_car = {
 			soft_attack = 0.1
@@ -35,7 +38,15 @@ technologies = {
 		}
 
 		on_research_complete = {
-			
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_land_super_heavy_howitzer
+				}
+			}			
 		}
 
 		research_cost = 1.5
@@ -88,6 +99,9 @@ technologies = {
 		category_self_propelled_artillery = {
 			soft_attack = 0.15
 		}
+		field_guns = {
+			soft_attack = 0.05
+		}
 
 		enable_equipment_modules = {
 			tank_small_cannon_2
@@ -122,7 +136,7 @@ technologies = {
 			factor = 2
 
 			modifier = { #This is needed for a lot of tank designs
-				factor = 2.0
+				factor = 6.0
 				is_major = yes
 			}
 
@@ -233,6 +247,9 @@ technologies = {
 		category_self_propelled_artillery = {
 			soft_attack = 0.1
 		}
+		field_guns = {
+			soft_attack = 0.05
+		}
 
 		path = {
 			leads_to_tech = artillery3
@@ -295,6 +312,9 @@ technologies = {
 		}
 		category_self_propelled_artillery = {
 			soft_attack = 0.10
+		}
+		field_guns = {
+			soft_attack = 0.05
 		}
 
 		enable_equipment_modules = {
@@ -410,6 +430,9 @@ technologies = {
 		}
 		category_self_propelled_artillery = {
 			soft_attack = 0.10
+		}
+		field_guns = {
+			soft_attack = 0.05
 		}
 
 		enable_equipment_modules = {

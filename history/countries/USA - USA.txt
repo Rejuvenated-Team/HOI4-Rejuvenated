@@ -182,6 +182,9 @@ set_technology = {
 	marines = 1
 	basic_train = 1
 	engine_tech_1 = 1
+	steelworks_tech = 1
+	experimental_rockets = 1
+	armored_car1 = 1
 }
 
 set_grand_doctrine = superior_firepower
