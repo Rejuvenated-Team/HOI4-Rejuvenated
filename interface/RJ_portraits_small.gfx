@@ -375,4 +375,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_vic_wilcox.dds"
 	}
 
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_william_veitch_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_william_veitch.dds"
+	}
+
 }

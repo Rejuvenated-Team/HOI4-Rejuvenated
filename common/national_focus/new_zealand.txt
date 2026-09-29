@@ -2661,7 +2661,7 @@
 			}
 			if = {
 				limit = {
-					has_war_support > 49
+					has_war_support > 0.49
 					NOT = {
 						has_idea = war_economy
 					}
@@ -3152,7 +3152,7 @@
 		prerequisite = { focus = NZL_the_first_labor_government }
 		mutually_exclusive = { focus = NZL_statute_of_westminster }
 		mutually_exclusive = { focus = RJ_NZL_seek_out_labour_sympathizers }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = NZL_the_first_labor_government
 
@@ -3189,7 +3189,7 @@
 		prerequisite = { focus = NZL_the_first_labor_government }
 		mutually_exclusive = { focus = NZL_strengthen_the_commonwealth }
 		mutually_exclusive = { focus = RJ_NZL_seek_out_labour_sympathizers }
-		x = 4
+		x = 1
 		y = 1
 		relative_position_id = NZL_the_first_labor_government
 
@@ -3223,9 +3223,9 @@
 
 	focus = {
 		id = NZL_2nzef
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_focus_RJ_NZL_2NZEF
 		prerequisite = { focus = NZL_strengthen_the_commonwealth focus = NZL_statute_of_westminster }
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = NZL_strengthen_the_commonwealth
 
@@ -3253,10 +3253,10 @@
 		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = NZL_2nzef }
 		x = 0
-		y = 2
-		relative_position_id = NZL_strengthen_the_commonwealth
+		y = 1
+		relative_position_id = NZL_2nzef
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -3282,10 +3282,10 @@
 		icon = GFX_goal_tfv_generic_tech_sharing
 		prerequisite = { focus = NZL_arrest_pacifist_leaders }
 		x = 0
-		y = 3
-		relative_position_id = NZL_strengthen_the_commonwealth
+		y = 1
+		relative_position_id = NZL_arrest_pacifist_leaders
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 30
@@ -3321,7 +3321,7 @@
 		prerequisite = { focus = NZL_the_first_labor_government }
 		mutually_exclusive = { focus = NZL_statute_of_westminster }
 		mutually_exclusive = { focus = NZL_strengthen_the_commonwealth }
-		x = 8
+		x = 5
 		y = 1
 		relative_position_id = NZL_the_first_labor_government
 

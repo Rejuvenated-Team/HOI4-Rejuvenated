@@ -111,6 +111,7 @@ recruit_character = NZL_alexander_galbraith
 recruit_character = NZL_john_a_lee
 recruit_character = NZL_bernard_ashwin
 recruit_character = NZL_vic_wilcox
+recruit_character = RJ_NZL_king_koroki
 
 
 if = {

@@ -216,4 +216,23 @@ leader_traits = {
 			value = 200
 		}
 	}
+
+	king_of_the_maori = {
+		random = no
+		political_power_gain = 0.10
+		non_core_manpower = 0.05
+	}
+
+	king_of_new_zealand = {
+		random = no
+		political_power_gain = 0.10
+		party_popularity_stability_factor = 0.15
+	}
+
+	king_of_polynesia = {
+		random = no
+		war_support_factor = 0.10
+		non_core_manpower = 0.15
+		compliance_gain = 0.25
+	}
 }

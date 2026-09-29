@@ -28,6 +28,21 @@ characters={
 		}
 	}
 
+	RJ_NZL_king_koroki={
+		name="Korokī Te Rata Mahuta Tāwhiao Pōtatau Te Wherowhero"
+		portraits={
+			civilian={
+				large="GFX_rj_portrait_NZL_king_koroki"
+			}
+		}
+		country_leader={
+			ideology = monarchy
+			expire="1965.1.1.1"
+			traits = { king_of_the_maori }
+			id=-1
+		}
+	}
+
 	NZL_john_ormond={
 		name=NZL_john_ormond
 		portraits={
@@ -584,10 +599,10 @@ characters={
 	}
 
 	NZL_w_a_veitch_milne={
-		name=NZL_w_a_veitch_milne
+		name="William Veitch"
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_europe_2"
+				small="GFX_rj_portrait_NZL_william_veitch_small"
 			}
 		}
 		advisor={
