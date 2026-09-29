@@ -25,6 +25,9 @@ equipments = {
 			aluminium = 1
 			steel = 2
 		}
+		upgrades = {
+			tank_reliability_upgrade
+		}
 	}
 
 	support_equipment_1 = {

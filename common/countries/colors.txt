@@ -259,11 +259,11 @@ USA = {
 }
 MON = {
 	#color = HSV { 0.1 0.15 0.4 }
-	color = rgb { 108 140 42 }
+	color = rgb { 78 130 32 }
 	color_ui = rgb { 209 247 133 }
 }
 MEN = {
-	color = rgb { 185  255  152 }
+	color = rgb { 247 211 32 }
 	color_ui = rgb { 165  230  132 }
 }
 TAN = {
