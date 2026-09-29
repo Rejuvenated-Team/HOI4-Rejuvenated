@@ -259,7 +259,7 @@
 				rule = obsolete_focus_branches_visibility
 				option = HIDE
 			}
-			has_completed_focus = FRA_invite_communist_ministers
+			has_completed_focus = FRA_soutien_cum_participation
 		}
 	}
 	### FRANCE OFFSET END ###

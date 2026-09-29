@@ -745,15 +745,7 @@ on_actions = {
 				}
 				load_focus_tree = { tree = french_focus keep_completed = no }
 				complete_national_focus = FRA_form_the_popular_front
-				if = {
-					limit = {
-						has_dlc = "La Resistance"
-					}
-					complete_national_focus = FRA_invite_communist_ministers
-					else = {
-						complete_national_focus = FRA_leftist_rhetoric
-					}
-				}
+				complete_national_focus = FRA_soutien_cum_participation
 			}
 			if = {
 				limit = {

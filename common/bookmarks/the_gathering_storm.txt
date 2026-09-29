@@ -29,35 +29,17 @@ bookmarks = {
 			history = "FRA_GATHERING_STORM_DESC"
 			ideology = democratic
 			version = base_game
-			available = { NOT = { has_dlc = "La Resistance" } }
 			ideas = {
 				FRA_victors_of_wwi
 				FRA_disjointed_government
 				FRA_protected_by_the_maginot_line
 			}
 			focuses = {
-				FRA_form_the_popular_front
-				FRA_revive_the_national_bloc
-				FRA_france_leads
-			}
-			label = { rj_label_europe }
-		}
-		"FRA"={
-			history = "FRA_GATHERING_STORM_DESC"
-			ideology = democratic
-			version = la_resistance
-			required_dlc = { "La Resistance" }
-			ideas = {
-				FRA_victors_of_wwi
-				FRA_disjointed_government
-				FRA_protected_by_the_maginot_line
-			}
-			focuses = {
-				FRA_invite_communist_ministers
+				FRA_soutien_cum_participation
 				FRA_utilize_the_leagues
 				FRA_je_suis_la_deluge
 			}
-			label = { rj_label_europe }
+			label = { rj_label_europe rj_label_new_content }
 		}
 		"USA"={
 			history = "rj_USA_GATHERING_STORM_DESC"

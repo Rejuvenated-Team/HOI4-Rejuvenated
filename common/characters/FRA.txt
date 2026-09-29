@@ -61,10 +61,7 @@ characters={
 				original_tag  = FRA
 			}
 			available  = {
-				or  = {
-					has_completed_focus  = FRA_leftist_rhetoric 
-					has_completed_focus  = FRA_invite_communist_ministers 
-				}
+				has_completed_focus = FRA_soutien_cum_participation 
 				not  = {
 					has_country_leader  = {
 						character  = FRA_philippe_petain
