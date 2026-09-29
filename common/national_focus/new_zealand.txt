@@ -2883,7 +2883,7 @@
 		id = NZL_ratana_alliance
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = NZL_the_first_labor_government }
-		x = -3
+		x = -6
 		y = 1
 		relative_position_id = NZL_the_first_labor_government
 
@@ -3217,6 +3217,35 @@
 		}
 	}
 
+	focus = {
+		id = RJ_NZL_ratana_alliance
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = NZL_statute_of_westminster focus = NZL_strengthen_the_commonwealth }
+		x = 1
+		y = 1
+		relative_position_id = NZL_statute_of_westminster
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			add_ideas = NZL_ratana_alliance
+		}
+	}
+
 	############################
 	# GO COMMONWEALTH SECTION ##
 	############################
@@ -3226,7 +3255,7 @@
 		icon = GFX_focus_RJ_NZL_2NZEF
 		prerequisite = { focus = NZL_strengthen_the_commonwealth focus = NZL_statute_of_westminster }
 		x = 1
-		y = 1
+		y = 3
 		relative_position_id = NZL_strengthen_the_commonwealth
 
 		cost = 5
@@ -3263,7 +3292,7 @@
 		}
 
 		available = {
-
+			has_war = yes
 		}
 
 		bypass = {
@@ -3280,20 +3309,22 @@
 	focus = {
 		id = NZL_technology_sharing_with_britain
 		icon = GFX_goal_tfv_generic_tech_sharing
-		prerequisite = { focus = NZL_arrest_pacifist_leaders }
-		x = 0
+		prerequisite = { focus = NZL_strengthen_the_commonwealth focus = NZL_statute_of_westminster }
+		x = -2
 		y = 1
-		relative_position_id = NZL_arrest_pacifist_leaders
+		relative_position_id = NZL_strengthen_the_commonwealth
 
-		cost = 5
+		cost = 3
 
 		ai_will_do = {
 			factor = 30
 		}
 
 		available = {
-			ENG = { has_government = ROOT }
 			is_in_tech_sharing_group = commonwealth_research
+			NOT = {
+				has_war_with = ENG
+			}
 		}
 
 		bypass = {
@@ -3306,7 +3337,7 @@
 		completion_reward = {
 			modify_tech_sharing_bonus = {
  				id = commonwealth_research
- 				bonus = 0.05  # we get 20% higher bonus from this group
+ 				bonus = 0.1  # we get 20% higher bonus from this group
 			}
 		}
 	}

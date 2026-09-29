@@ -113,9 +113,9 @@ ideas = {
 
 			modifier = {
 				foreign_subversive_activites = -0.50
-				stability_factor = -0.05
-				war_support_factor = 0.05
-				conscription_factor = 0.05
+				stability_factor = -0.03
+				war_support_factor = 0.1
+				conscription_factor = 0.08
 			}
 		}
 
@@ -158,7 +158,7 @@ ideas = {
 			picture = generic_morale_bonus
 
 			modifier = {
-				political_power_cost = 0.2
+				political_power_gain = 0.05
 				stability_factor = 0.05
 				war_support_factor = 0.05
 			}
