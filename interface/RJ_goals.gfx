@@ -1412,4 +1412,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/nzl/RJ_NZL_2NZEF.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_ratana_alliance"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_ratana_alliance.dds"
+	}
+
 }

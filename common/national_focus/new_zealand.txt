@@ -3219,7 +3219,7 @@
 
 	focus = {
 		id = RJ_NZL_ratana_alliance
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_RJ_NZL_ratana_alliance
 		prerequisite = { focus = NZL_statute_of_westminster focus = NZL_strengthen_the_commonwealth }
 		x = 1
 		y = 1
@@ -3243,8 +3243,12 @@
 
 		completion_reward = {
 			add_ideas = NZL_ratana_alliance
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = RJ_NZL_eruera_tirikatene
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = RJ_NZL_t_w_ratana
 		}
 	}
 
