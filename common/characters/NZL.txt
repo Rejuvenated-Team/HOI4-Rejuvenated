@@ -839,6 +839,28 @@ characters={
 		}		
 	}
 
+	RJ_NZL_t_w_ratana = {
+		name = "T.W. Ratana"
+		portraits={
+			army={
+				small="GFX_rj_portrait_NZL_t_w_ratana_small"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = RJ_NZL_t_w_ratana
+			allowed  = {
+				original_tag  = NZL
+			}
+			available = { 
+				has_completed_focus = RJ_NZL_ratana_alliance
+			}
+			traits  = {
+				faith_healer
+			}
+		}		
+	}
+
 	# Ideologicy-pushing advisors auto-generated
 
 	# Illusive Gentleman auto-generated

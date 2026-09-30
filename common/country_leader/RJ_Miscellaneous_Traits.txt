@@ -241,4 +241,11 @@ leader_traits = {
 		sprite = 13
 		political_power_factor = 0.25
 	}
+
+	faith_healer = {
+		random = no
+		sprite = 13
+		stability_factor = 0.05
+		casualty_trickleback = 0.15
+	}
 }

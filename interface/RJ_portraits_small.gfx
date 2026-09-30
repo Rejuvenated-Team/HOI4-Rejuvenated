@@ -385,4 +385,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_eruera_tirikatene.dds"
 	}
 
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_t_w_ratana_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_t_w_ratana.dds"
+	}
+
 }
