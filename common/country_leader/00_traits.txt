@@ -8334,7 +8334,7 @@ leader_traits = {
 		sprite = 13
 		resistance_damage_to_garrison = -0.25
 		foreign_subversive_activites = -0.3
-		non_core_manpower = 0.02
+		non_core_manpower = 0.05
 
 		ai_will_do = {
 			factor = 1
@@ -8589,7 +8589,7 @@ leader_traits = {
 		sprite = 13
 		resistance_damage_to_garrison = -0.15
 		foreign_subversive_activites = -0.15
-		non_core_manpower = 0.01
+		non_core_manpower = 0.03
 
 		ai_will_do = {
 			factor = 1
@@ -8752,7 +8752,7 @@ leader_traits = {
 
 		resistance_damage_to_garrison = -0.25
 		foreign_subversive_activites = -0.3
-		non_core_manpower = 0.02
+		non_core_manpower = 0.03
 
 		ai_will_do = {
 			factor = 1
