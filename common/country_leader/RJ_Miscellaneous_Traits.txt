@@ -235,4 +235,10 @@ leader_traits = {
 		non_core_manpower = 0.15
 		compliance_gain = 0.25
 	}
+
+	minister_without_a_portfolio = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.25
+	}
 }
