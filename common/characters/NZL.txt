@@ -684,7 +684,7 @@ characters={
 		name=NZL_thomas_leech
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_europe_1"
+				small="GFX_rj_portrait_NZL_thomas_leech_small"
 			}
 		}
 		advisor={

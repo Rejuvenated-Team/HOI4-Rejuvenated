@@ -1417,4 +1417,24 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/nzl/RJ_NZL_ratana_alliance.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_maori_crown"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_maori_crown.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_ICAA"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_ICAA.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_tech_share_ENG"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_tech_share_ENG.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_rent_control"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_rent_control.dds"
+	}
+
 }

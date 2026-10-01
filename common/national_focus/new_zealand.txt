@@ -19,6 +19,11 @@
 	
 	default = no
 
+	continuous_focus_position = {
+		x = 4
+		y = 1500
+	}
+
 #	focus = {
 #		id = NZL_
 #		icon = GFX_
@@ -2263,7 +2268,16 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			remove_ideas = NZL_great_depression
+			if = {
+				limit = {
+					has_idea = NZL_great_depression
+				}
+				remove_ideas = NZL_great_depression
+			}
+			else_if = {
+				limit = { has_idea = NZL_great_depression_2 }
+				remove_ideas = NZL_great_depression_2
+			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_controlled_state = {
 				prioritize = { 284 723 }
@@ -2875,277 +2889,6 @@
 		}
 	}
 
-	############################
-	## SHARED POLITICS SECTION #
-	############################
-
-	focus = {
-		id = NZL_ratana_alliance
-		icon = GFX_goal_generic_improve_relations
-		prerequisite = { focus = NZL_the_first_labor_government }
-		x = -6
-		y = 1
-		relative_position_id = NZL_the_first_labor_government
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
-
-		completion_reward = {
-			add_ideas = NZL_ratana_alliance
-		}
-	}
-
-	focus = {
-		id = NZL_maori_affairs_act
-		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = NZL_ratana_alliance }
-		x = -1
-		y = 1
-		relative_position_id = NZL_ratana_alliance
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-			controls_state = 284
-			controls_state = 723
-		}
-
-		bypass = {
-
-		}
-
-		completion_reward = {
-			284 = {
-				add_extra_state_shared_building_slots = 1
-			}
-			723 = {
-				add_extra_state_shared_building_slots = 1
-			}
-			add_stability = -0.05
-		}
-	}
-
-	focus = {
-		id = NZL_social_security_act
-		icon = GFX_focus_hol_the_foundations_of_defense
-		prerequisite = { focus = NZL_ratana_alliance }
-		x = 1
-		y = 1
-		relative_position_id = NZL_ratana_alliance
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
-
-		completion_reward = {
-			add_ideas = NZL_social_security_act
-		}
-	}
-
-	focus = {
-		id = NZL_the_manpower_act
-		icon = GFX_goal_generic_allies_build_infantry
-		prerequisite = { focus = NZL_social_security_act focus = NZL_maori_affairs_act }
-		x = 0
-		y = 2
-		relative_position_id = NZL_ratana_alliance
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		completion_reward = {
-			add_ideas = NZL_the_manpower_act
-		}
-	}
-
-	focus = {
-		id = NZL_amend_the_maori_affairs_act
-		icon = GFX_focus_generic_self_management
-		prerequisite = { focus = NZL_the_manpower_act }
-		mutually_exclusive = { focus = NZL_waitangi_tribunal }
-		x = -1
-		y = 3
-		relative_position_id = NZL_ratana_alliance
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		completion_reward = {
-			284 = {
-				add_extra_state_shared_building_slots = 2
-			}
-			723 = {
-				add_extra_state_shared_building_slots = 2
-			}
-			add_stability = -0.05
-		}
-	}
-
-	focus = {
-		id = NZL_waitangi_tribunal
-		icon = GFX_focus_generic_concessions
-		prerequisite = { focus = NZL_the_manpower_act }
-		mutually_exclusive = { focus = NZL_amend_the_maori_affairs_act }
-		x = 1
-		y = 3
-		relative_position_id = NZL_ratana_alliance
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 8
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
-
-		completion_reward = {
-			add_ideas = NZL_waitangi_tribunal
-		}
-	}
-
-	focus = {
-		id = NZL_maori_conscription
-		icon = GFX_focus_generic_manpower
-		prerequisite = { focus = NZL_amend_the_maori_affairs_act }
-		x = -1
-		y = 4
-		relative_position_id = NZL_ratana_alliance
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		completion_reward = {
-			add_ideas = NZL_maori_conscription
-		}
-	}
-
-	focus = {
-		id = NZL_maori_volunteers
-		icon = GFX_focus_generic_diverse_army
-		prerequisite = { focus = NZL_waitangi_tribunal }
-		x = 1
-		y = 4
-		relative_position_id = NZL_ratana_alliance
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		completion_reward = {
-			unlock_decision_tooltip = NZL_demand_islands
-			division_template = {
-				is_locked = yes
-				name = "Maori Volunteers"
-				division_names_group = NZL_INF_01
-				regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-					infantry = { x = 0 y = 2 }
-					
-					infantry = { x = 1 y = 0 }
-					infantry = { x = 1 y = 1 }
-					infantry = { x = 1 y = 2 }
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 284 723 }
-				create_unit = {
-					division = " name = \"Maori Volunteers\" division_template = \"Maori Volunteers\" start_experience_factor = 0.0"
-					owner = NZL
-				}
-			}
-		}
-	}
-
-
-	#########################
-	### THE CLASH SECTION ###
-	#########################
-
 	focus = {
 		id = NZL_strengthen_the_commonwealth
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
@@ -3214,6 +2957,240 @@
 			add_autonomy_score = {
 				value = 800
 			}
+			set_rule = {
+				can_create_factions = yes
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_improve_industrial_efficiency
+		icon = GFX_focus_generic_industry_investment
+		prerequisite = { focus = NZL_statute_of_westminster focus = NZL_strengthen_the_commonwealth }
+		x = 1
+		y = 1
+		relative_position_id = NZL_statute_of_westminster
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			add_ideas = RJ_NZL_idea_industrial_efficiency
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_icaa_act
+		icon = GFX_focus_RJ_NZL_ICAA
+		prerequisite = { focus = NZL_statute_of_westminster focus = NZL_strengthen_the_commonwealth }
+		x = -1
+		y = 1
+		relative_position_id = NZL_statute_of_westminster
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			NOT = {
+				has_idea = NZL_great_depression
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NZL_great_depression
+				add_idea = NZL_great_depression_2
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_agricultural_workers_act
+		icon = GFX_focus_generic_farmland
+		prerequisite = { focus = RJ_NZL_icaa_act }
+		x = 0
+		y = 1
+		relative_position_id = RJ_NZL_icaa_act
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			add_ideas = RJ_NZL_idea_agricultural_improvements
+		}
+	}
+
+	focus = {
+		id = NZL_social_security_act
+		icon = GFX_focus_hol_the_foundations_of_defense
+		prerequisite = { focus = RJ_NZL_agricultural_workers_act }
+		x = -1
+		y = 1
+		relative_position_id = RJ_NZL_agricultural_workers_act
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			add_ideas = NZL_social_security_act
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_establish_rent_controls
+		icon = GFX_focus_RJ_NZL_rent_control
+		prerequisite = { focus = RJ_NZL_agricultural_workers_act }
+		x = 1
+		y = 1
+		relative_position_id = RJ_NZL_agricultural_workers_act
+		mutually_exclusive = {
+			focus = RJ_NZL_abrogate_the_treaty_of_waitangi
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			add_political_power = 175
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_emergency_regulations
+		icon = GFX_focus_PHI_declare_military_emergency
+		prerequisite = { focus = RJ_NZL_establish_rent_controls }
+		prerequisite = { focus = NZL_social_security_act }
+		x = -1
+		y = 1
+		relative_position_id = RJ_NZL_establish_rent_controls
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			OR = {
+				has_war = yes
+				threat > 0.49
+			}
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_emergency_conscription
+		icon = GFX_focus_generic_army_attack
+		prerequisite = { focus = RJ_NZL_emergency_regulations }
+		x = 2
+		y = 1
+		relative_position_id = RJ_NZL_emergency_regulations
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						has_idea = disarmed_nation
+						has_idea = volunteer_only
+						has_idea = limited_conscription
+					}
+				}
+				add_ideas = extensive_conscription
+			}
+			if = {
+				limit = {
+					has_war_support < 49
+				}
+				add_war_support = 0.1
+				add_stability = -0.05
+			}
 		}
 	}
 
@@ -3221,7 +3198,7 @@
 		id = RJ_NZL_ratana_alliance
 		icon = GFX_focus_RJ_NZL_ratana_alliance
 		prerequisite = { focus = NZL_statute_of_westminster focus = NZL_strengthen_the_commonwealth }
-		x = 1
+		x = 4
 		y = 1
 		relative_position_id = NZL_statute_of_westminster
 
@@ -3252,6 +3229,148 @@
 		}
 	}
 
+	focus = {
+		id = RJ_NZL_maori_housing_amendment_act
+		icon = GFX_focus_SWE_hygienic_housing
+		prerequisite = { focus = RJ_NZL_ratana_alliance }
+		x = 1
+		y = 1
+		relative_position_id = RJ_NZL_ratana_alliance
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = {
+					284
+				}
+				add_extra_state_shared_building_slots = 1
+				add_state_modifier = {
+					modifier = { 
+						production_speed_buildings_factor = 0.05
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = {
+					1088
+				}
+				add_extra_state_shared_building_slots = 1
+				add_state_modifier = {
+					modifier = { 
+						production_speed_buildings_factor = 0.05
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = {
+					1086
+				}
+				add_extra_state_shared_building_slots = 1
+				add_state_modifier = {
+					modifier = { 
+						production_speed_buildings_factor = 0.05
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = {
+					1080
+				}
+				add_extra_state_shared_building_slots = 1
+				add_state_modifier = {
+					modifier = { 
+						production_speed_buildings_factor = 0.05
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_acknowledge_the_maori_crown
+		icon = GFX_focus_RJ_NZL_maori_crown
+		prerequisite = { focus = RJ_NZL_ratana_alliance }
+		x = -1
+		y = 1
+		relative_position_id = RJ_NZL_ratana_alliance
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			has_completed_focus = NZL_statute_of_westminster
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			add_ideas = RJ_NZL_idea_maori_crown
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_abrogate_the_treaty_of_waitangi
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		prerequisite = { focus = RJ_NZL_acknowledge_the_maori_crown }
+		prerequisite = { focus = RJ_NZL_maori_housing_amendment_act }
+		x = 1
+		y = 1
+		relative_position_id = RJ_NZL_acknowledge_the_maori_crown
+		mutually_exclusive = {
+			focus = RJ_NZL_establish_rent_controls
+		}
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			NOT = {
+				is_subject = yes
+			}
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.3
+			}
+			add_stability = -0.05
+		}
+	}
+
 	############################
 	# GO COMMONWEALTH SECTION ##
 	############################
@@ -3260,8 +3379,8 @@
 		id = NZL_2nzef
 		icon = GFX_focus_RJ_NZL_2NZEF
 		prerequisite = { focus = NZL_strengthen_the_commonwealth focus = NZL_statute_of_westminster }
-		x = 1
-		y = 3
+		x = -2
+		y = 4
 		relative_position_id = NZL_strengthen_the_commonwealth
 
 		cost = 5
@@ -3287,7 +3406,7 @@
 		id = NZL_arrest_pacifist_leaders
 		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = NZL_2nzef }
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = NZL_2nzef
 
@@ -3313,10 +3432,99 @@
 	}
 
 	focus = {
+		id = NZL_maori_volunteers
+		icon = GFX_focus_generic_diverse_army
+		prerequisite = { focus = NZL_2nzef }
+		x = -1
+		y = 1
+		relative_position_id = NZL_2nzef
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			unlock_decision_tooltip = NZL_demand_islands
+			division_template = {
+				is_locked = yes
+				name = "Maori Volunteers"
+				division_names_group = NZL_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 284 723 }
+				create_unit = {
+					division = " name = \"Maori Volunteers\" division_template = \"Maori Volunteers\" start_experience_factor = 0.0"
+					owner = NZL
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = NZL_maori_conscription
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = NZL_maori_volunteers }
+		prerequisite = { focus = NZL_arrest_pacifist_leaders }
+		x = 1
+		y = 1
+		relative_position_id = NZL_maori_volunteers
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			add_ideas = NZL_maori_conscription
+			if = {
+				limit = {
+					OR = {
+						has_war_support < 40
+						NOT = {
+							has_war = yes
+						}
+					}
+				}
+				add_stability = -0.05
+			}
+		}
+	}
+
+	focus = {
 		id = NZL_technology_sharing_with_britain
-		icon = GFX_goal_tfv_generic_tech_sharing
+		icon = GFX_focus_RJ_NZL_tech_share_ENG
 		prerequisite = { focus = NZL_strengthen_the_commonwealth focus = NZL_statute_of_westminster }
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = NZL_strengthen_the_commonwealth
 
@@ -3358,7 +3566,7 @@
 		prerequisite = { focus = NZL_the_first_labor_government }
 		mutually_exclusive = { focus = NZL_statute_of_westminster }
 		mutually_exclusive = { focus = NZL_strengthen_the_commonwealth }
-		x = 5
+		x = 8
 		y = 1
 		relative_position_id = NZL_the_first_labor_government
 

@@ -78,6 +78,24 @@
  RJ_NZL_seek_out_labour_sympathizers_desc: "The most recent directive from the Comintern has been to follow the 'Popular Front' method, attempting to make nice with the democratic parties. Labour has been unfortunately stubborn & blocked us out so far, but perhaps if we can find even a few sympathizers amongst their ranks, we can make some progress."
  RJ_NZL_ratana_alliance: "The Ratana Alliance"
  RJ_NZL_ratana_alliance_desc: "The Ratana movement has been backing Labour for several years now, in the hopes of greater support for the Māori people. It's time we formalize an alliance, & bring some native Māori political figures on-board with us!"
+ RJ_NZL_maori_housing_amendment_act: "Māori Housing Amendment Act"
+ RJ_NZL_maori_housing_amendment_act_desc: "This amendment to the previously passed Māori Housing Act expands our ability to build & finance homes for our Māori citizenry."
+ RJ_NZL_acknowledge_the_maori_crown: "Acknowledge the Māori Crown"
+ RJ_NZL_acknowledge_the_maori_crown_desc: "The Māori haven't traditionally had a kingship for very long, & it's certainly not been acknowledged either by our government or the crown of England. In the spirit of friendship & goodwill, we should rectify this with a formal acknowledgement, & granting at least a ceremonial role to king Koroki."
+ RJ_NZL_icaa_act: "ICAA Act"
+ RJ_NZL_icaa_act_desc: "The Industrial Conciliation & Arbitration Amendment Act returns a great deal of industrial oversight power to an Arbitration Court, which is prepared to set new standards such as a 40 hour work week, minimum wage, & compulsory union membership. This should help to alleviate some of our present economic strain."
+ RJ_NZL_agricultural_workers_act: "Agricultural Workers Act"
+ RJ_NZL_agricultural_workers_act_desc: "The Agricultural Workers Act is designed to improve working conditions & pay for our farmers, giving them the means to expand & improve their farms."
+ RJ_NZL_abrogate_the_treaty_of_waitangi: "Abrogate the Treaty of Waitangi"
+ RJ_NZL_abrogate_the_treaty_of_waitangi_desc: "The Treaty of Waitangi was signed by Māori chiefs in 1840, ceding control & authority over the land to the crown of England. Given our status as a fully sovereign nation now, we feel it's within our rights, as well as our obligation, to abrogate this treaty & begin working to restore sovereignty to the Māori people."
+ RJ_NZL_establish_rent_controls: "Establish Rent Controls"
+ RJ_NZL_establish_rent_controls_desc: "Rent has gotten out of control in recent years, which has hurt many people that are struggling to make ends meet. While it's not ideal, establishing some temporary rent controls can help to alleviate the situation."
+ RJ_NZL_improve_industrial_efficiency: "Improve Industrial Efficiency"
+ RJ_NZL_improve_industrial_efficiency_desc: "There's a variety of measures we can take, such as the Industrial Efficiency Act, that will help to improve our industrial capabilities across the board."
+ RJ_NZL_emergency_regulations: "Emergency Regulations"
+ RJ_NZL_emergency_regulations_desc: "With the current state of the world, we have to take action & enact some emergency regulations to ensure stability in our society!"
+ RJ_NZL_emergency_conscription: "Emergency Conscription"
+ RJ_NZL_emergency_conscription_desc: "We have no time to lose! We must begin rapid conscription expansion as soon as possible to ready ourselves for potential threats!"
 
 
 
@@ -111,6 +129,11 @@
  RJ_NZL_idea_schofield_tank: "Schofield Tanks"
  RJ_NZL_idea_improve_the_army_schools: "Improved Army Schools"
  RJ_NZL_idea_the_biggest_bob: "The Biggest Bob"
+ RJ_NZL_idea_maori_crown: "King Koroki"
+ RJ_NZL_idea_agricultural_improvements: "Agricultural Improvements"
+ NZL_great_depression_2: "The Great Depression"
+ NZL_great_depression_2_desc: "The collapse of the global economy in 1929 hit New Zealand's largely agricultural economy very hard. With countries purchasing less produce from New Zealand, many found themselves unemployed, reducing consumer purchasing power and in turn causing other industries to collapse. Years of austerity has left the nation yearning for a change in direction."
+ RJ_NZL_idea_industrial_efficiency: "Improved Industrial Efficiency"
 
 
 

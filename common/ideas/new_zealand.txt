@@ -64,9 +64,9 @@ ideas = {
 			picture = generic_manpower_bonus
 
 			modifier = {
-				conscription = 0.02
+				consumer_goods_factor = -0.10
 				stability_factor = 0.05
-				war_support_factor = 0.05
+				political_power_cost = 0.05
 			}
 
 		}
@@ -218,8 +218,7 @@ ideas = {
 			picture = generic_intel_bonus
 
 			modifier = {
-				conscription = 0.01
-				stability_factor = -0.05
+				conscription = 0.015
 			}
 		}
 
@@ -316,14 +315,33 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_economic_crisis
+			picture = great_depression
 
 			modifier = {
 				political_power_cost = 0.6
 				consumer_goods_factor = 0.3
 				local_resources_factor = -0.2
 				production_speed_buildings_factor = -0.05
+			}
+		}
 
+		NZL_great_depression_2 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				political_power_cost = 0.3
+				consumer_goods_factor = 0.15
+				local_resources_factor = -0.1
 			}
 		}
 

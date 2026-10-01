@@ -390,4 +390,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_t_w_ratana.dds"
 	}
 
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_thomas_leech_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_thomas_leech.dds"
+	}
+
 }
