@@ -39,7 +39,7 @@ NZL_alternate_democratic = {
 		NZL_department_of_scientific_and_industrial_research		
 		NZL_transfer_the_new_zealand_division						
 		#1938										
-		NZL_ratana_alliance											
+		#NZL_ratana_alliance											
 		NZL_social_security_act										
 		#NZL_army_reforms											
 		NZL_charlton_automatic_rifle																					
@@ -48,16 +48,16 @@ NZL_alternate_democratic = {
 		NZL_think_big
 		#NZL_constitution_amendment_act												
 		RJ_NZL_air_force_review									
-		NZL_maori_affairs_act
+		#NZL_maori_affairs_act
 		#NZL_independent_new_zealand										
 		#1940
 		NZL_bob_semple_tank											
 		#NZL_form_the_rnzn											
 		#NZL_expand_devonport_naval_base								
 		NZL_form_the_rnzaf											
-		NZL_the_manpower_act										
+		#NZL_the_manpower_act										
 		#1941
-		NZL_waitangi_tribunal
+		#NZL_waitangi_tribunal
 		NZL_maori_volunteers										
 		NZL_expand_the_university_of_auckland						
 		#NZL_long_range_patrol
@@ -145,7 +145,7 @@ NZL_alternate_fascist = {
 		NZL_department_of_scientific_and_industrial_research		
 		NZL_transfer_the_new_zealand_division						
 		#1938										
-		NZL_ratana_alliance											
+		#NZL_ratana_alliance											
 		NZL_social_security_act										
 		#NZL_army_reforms											
 		NZL_charlton_automatic_rifle																					
@@ -154,16 +154,16 @@ NZL_alternate_fascist = {
 		NZL_think_big
 		#NZL_in_the_darkness												
 		RJ_NZL_air_force_review										
-		NZL_maori_affairs_act
+		#NZL_maori_affairs_act
 		#NZL_befriend_japan									
 		#1940
 		NZL_bob_semple_tank											
 		#NZL_form_the_rnzn											
 		#NZL_expand_devonport_naval_base								
 		NZL_form_the_rnzaf											
-		NZL_the_manpower_act										
+		#NZL_the_manpower_act										
 		#1941
-		NZL_amend_the_maori_affairs_act
+		#NZL_amend_the_maori_affairs_act
 		NZL_maori_conscription										
 		NZL_expand_the_university_of_auckland						
 		#NZL_long_range_patrol
@@ -252,7 +252,7 @@ NZL_alternate_communist = {
 		NZL_department_of_scientific_and_industrial_research		
 		NZL_transfer_the_new_zealand_division						
 		#1938										
-		NZL_ratana_alliance											
+		#NZL_ratana_alliance											
 		NZL_social_security_act										
 		#NZL_army_reforms											
 		NZL_charlton_automatic_rifle																					
@@ -261,7 +261,7 @@ NZL_alternate_communist = {
 		NZL_think_big
 		#NZL_the_lee_affair												
 		RJ_NZL_air_force_review									
-		NZL_maori_affairs_act
+		#NZL_maori_affairs_act
 		#NZL_empower_the_working_class									
 		#1940
 		NZL_bob_semple_tank											
@@ -270,8 +270,8 @@ NZL_alternate_communist = {
 		#NZL_join_comintern
 		NZL_form_the_rnzaf											
 		#1941
-		NZL_the_manpower_act										
-		NZL_waitangi_tribunal
+		#NZL_the_manpower_act										
+		#NZL_waitangi_tribunal
 		NZL_maori_volunteers										
 		NZL_expand_the_university_of_auckland						
 		#NZL_long_range_patrol

@@ -848,6 +848,7 @@ characters={
 		}
 		advisor={
 			slot = political_advisor
+			cost = 75
 			idea_token = RJ_NZL_t_w_ratana
 			allowed  = {
 				original_tag  = NZL
@@ -857,6 +858,52 @@ characters={
 			}
 			traits  = {
 				faith_healer
+			}
+		}		
+	}
+
+	RJ_NZL_te_puea_herangi = {
+		name = "Te Puea Herangi"
+		portraits={
+			army={
+				small="GFX_rj_portrait_NZL_te_puea_herangi_small"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			cost = 75
+			idea_token = RJ_NZL_te_puea_herangi
+			allowed  = {
+				original_tag  = NZL
+			}
+			available = { 
+				has_completed_focus = RJ_NZL_support_the_kingitanga_movement
+			}
+			traits  = {
+				kingitanga_leader
+			}
+		}		
+	}
+
+	RJ_NZL_apirana_ngata = {
+		name = "Āpirana Ngata"
+		portraits={
+			army={
+				small="GFX_rj_portrait_NZL_apirana_ngata_small"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			cost = 75
+			idea_token = RJ_NZL_apirata_ngata
+			allowed  = {
+				original_tag  = NZL
+			}
+			available = { 
+				has_completed_focus = RJ_NZL_ratana_alliance
+			}
+			traits  = {
+				lawyer
 			}
 		}		
 	}

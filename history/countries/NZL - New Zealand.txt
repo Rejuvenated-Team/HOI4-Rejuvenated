@@ -114,6 +114,8 @@ recruit_character = NZL_vic_wilcox
 recruit_character = RJ_NZL_king_koroki
 recruit_character = RJ_NZL_eruera_tirikatene
 recruit_character = RJ_NZL_t_w_ratana
+recruit_character = RJ_NZL_te_puea_herangi
+recruit_character = RJ_NZL_apirana_ngata
 
 
 if = {

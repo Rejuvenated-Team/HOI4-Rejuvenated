@@ -37,7 +37,7 @@ NZL_historical = {
 		NZL_wairarapa_sheep_farms
 		RJ_NZL_air_force_review
 		#1937									
-		NZL_ratana_alliance																					
+		#NZL_ratana_alliance																					
 		NZL_form_the_rnzaf											
 		NZL_social_security_act										
 		#NZL_defend_our_islands
@@ -51,7 +51,7 @@ NZL_historical = {
 		NZL_arrest_pacifist_leaders									
 		NZL_technology_sharing_with_britain							
 		NZL_transfer_the_new_zealand_division						
-		NZL_maori_affairs_act										
+		#NZL_maori_affairs_act										
 		#NZL_form_the_rnzn											
 		#1940
 		NZL_taranaki_oil											
@@ -70,7 +70,7 @@ NZL_historical = {
 		#NZL_light_cruiser_effort									
 		NZL_schofield_tank											
 		#NZL_artillery_focus											
-		NZL_the_manpower_act										
+		#NZL_the_manpower_act										
 		#1943
 		NZL_big_bob_tank							
 	}

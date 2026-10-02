@@ -395,4 +395,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_thomas_leech.dds"
 	}
 
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_te_puea_herangi_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_te_puea_herangi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_apirana_ngata_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_apirana_ngata.dds"
+	}
+
 }

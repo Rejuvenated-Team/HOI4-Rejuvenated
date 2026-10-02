@@ -538,7 +538,7 @@
 		y = 1
 		relative_position_id = NZL_form_the_rnzaf
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			base = 10
@@ -3145,7 +3145,7 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-			
+			add_ideas = RJ_NZL_idea_emergency_regulations
 		}
 	}
 
@@ -3157,7 +3157,7 @@
 		y = 1
 		relative_position_id = RJ_NZL_emergency_regulations
 
-		cost = 7.2
+		cost = 10
 
 		ai_will_do = {
 			factor = 25
@@ -3190,6 +3190,10 @@
 				}
 				add_war_support = 0.1
 				add_stability = -0.05
+			}
+			swap_ideas = {
+				remove_idea = RJ_NZL_idea_emergency_regulations
+				add_idea = RJ_NZL_idea_emergency_regulations_2
 			}
 		}
 	}
@@ -3302,49 +3306,14 @@
 	}
 
 	focus = {
-		id = RJ_NZL_acknowledge_the_maori_crown
-		icon = GFX_focus_RJ_NZL_maori_crown
+		id = RJ_NZL_support_the_kingitanga_movement
+		icon = GFX_focus_renounce_the_treaty_of_trianon
 		prerequisite = { focus = RJ_NZL_ratana_alliance }
 		x = -1
 		y = 1
 		relative_position_id = RJ_NZL_ratana_alliance
 
-		cost = 7.2
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-			has_completed_focus = NZL_statute_of_westminster
-		}
-
-		bypass = {
-
-		}
-
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
-
-		completion_reward = {
-			add_stability = 0.05
-			add_political_power = 50
-			add_ideas = RJ_NZL_idea_maori_crown
-		}
-	}
-
-	focus = {
-		id = RJ_NZL_abrogate_the_treaty_of_waitangi
-		icon = GFX_focus_renounce_the_treaty_of_trianon
-		prerequisite = { focus = RJ_NZL_acknowledge_the_maori_crown }
-		prerequisite = { focus = RJ_NZL_maori_housing_amendment_act }
-		x = 1
-		y = 1
-		relative_position_id = RJ_NZL_acknowledge_the_maori_crown
-		mutually_exclusive = {
-			focus = RJ_NZL_establish_rent_controls
-		}
-
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -3365,9 +3334,81 @@
 		completion_reward = {
 			add_popularity = {
 				ideology = neutrality
-				popularity = 0.3
+				popularity = 0.05
+			}
+			add_political_power = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = RJ_NZL_te_puea_herangi
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_abrogate_the_treaty_of_waitangi
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		prerequisite = { focus = RJ_NZL_support_the_kingitanga_movement }
+		prerequisite = { focus = RJ_NZL_maori_housing_amendment_act }
+		x = 1
+		y = 1
+		relative_position_id = RJ_NZL_support_the_kingitanga_movement
+		mutually_exclusive = { focus = RJ_NZL_establish_rent_controls }
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			NOT = {
+				is_subject = yes
+			}
+			has_completed_focus = NZL_statute_of_westminster
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.2
 			}
 			add_stability = -0.05
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_acknowledge_the_maori_crown
+		icon = GFX_focus_RJ_NZL_maori_crown
+		prerequisite = { focus = RJ_NZL_abrogate_the_treaty_of_waitangi }
+		x = 0
+		y = 1
+		relative_position_id = RJ_NZL_abrogate_the_treaty_of_waitangi
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			add_ideas = RJ_NZL_idea_maori_crown
 		}
 	}
 

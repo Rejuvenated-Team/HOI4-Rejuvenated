@@ -743,7 +743,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = RJ_idea_NZL_the_biggest_bob
+			picture = RJ_idea_NZL_king_koroki
 
 			modifier = {
 				political_power_gain = 0.10
@@ -790,6 +790,52 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.2
 				production_factory_start_efficiency_factor = 0.05
 				license_purchase_cost = -0.25
+			}
+		}
+
+		RJ_NZL_idea_emergency_regulations = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_constitutional_guarantees
+
+			modifier = {
+				foreign_subversive_activites = -0.2
+				local_intel_to_enemies = -0.1
+				civilian_intel_to_others = -10
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+
+		RJ_NZL_idea_emergency_regulations_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_constitutional_guarantees
+
+			modifier = {
+				foreign_subversive_activites = -0.2
+				local_intel_to_enemies = -0.1
+				civilian_intel_to_others = -10
+				production_speed_arms_factory_factor = 0.05
+				conscription = 0.04
+				training_time_army_factor = -0.10
 			}
 		}
 	}
