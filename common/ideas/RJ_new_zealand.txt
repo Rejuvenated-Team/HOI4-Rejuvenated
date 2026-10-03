@@ -838,5 +838,24 @@ ideas = {
 				training_time_army_factor = -0.10
 			}
 		}
+
+		RJ_NZL_idea_kingitanga_supported = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = por_monarchist_uprising
+
+			modifier = {
+				neutrality_drift = 0.10
+			}
+		}
 	}
 }

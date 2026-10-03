@@ -80,3 +80,19 @@ country_event = {
 		}
 	}
 }
+
+country_event = { #A Matter of Formality's event
+	id = RJ_NZL.2a
+	title = "Matters of Formality"
+	desc = RJ_NZL.2.a_d
+	picture = GFX_report_event_generic_usa_treaty
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Ah well."
+		ai_chance = {
+			base = 1
+		}
+	}
+}

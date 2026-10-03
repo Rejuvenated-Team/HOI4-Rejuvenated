@@ -1437,4 +1437,34 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/nzl/RJ_NZL_rent_control.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_kingitanga_movement"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_kingitanga_movement.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_reign_of_koroki"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_reign_of_koroki.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_fisher_and_paykel"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_fisher_and_paykel.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_new_medical_complexes"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_new_medical_complexes.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_army_board"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_army_board.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_equipment_modernization"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_equipment_modernization.dds"
+	}
+
 }

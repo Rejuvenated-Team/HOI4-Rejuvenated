@@ -405,4 +405,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_apirana_ngata.dds"
 	}
 
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_sid_scott_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_sid_scott.dds"
+	}
+
 }

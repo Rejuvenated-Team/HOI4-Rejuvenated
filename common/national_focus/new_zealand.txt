@@ -1346,7 +1346,7 @@
 
 	focus = {
 		id = RJ_NZL_new_medical_complexes
-		icon = GFX_focus_RJ_hospital
+		icon = GFX_focus_RJ_NZL_new_medical_complexes
 		x = -1
 		y = 1
 		prerequisite = { focus = RJ_NZL_develop_apia }
@@ -1969,7 +1969,7 @@
 
 	focus = {
 		id = RJ_NZL_fisher_and_paykel_manufacturing
-		icon = GFX_focus_generic_industry_3
+		icon = GFX_focus_RJ_NZL_fisher_and_paykel
 		prerequisite = { focus = NZL_new_zealand_steel }
 		x = 2
 		y = 1
@@ -2425,7 +2425,7 @@
 
 	focus = {
 		id = RJ_NZL_army_board
-		icon = GFX_focus_RJ_army_review
+		icon = GFX_focus_RJ_NZL_army_board
 		x = 29
 		y = 0
 		cost = 7.2
@@ -2560,7 +2560,7 @@
 
 	focus = {
 		id = RJ_NZL_equipment_modernization
-		icon = GFX_focus_chi_army_reform
+		icon = GFX_focus_RJ_NZL_equipment_modernization
 		prerequisite = { focus = NZL_charlton_automatic_rifle }
 		x = -1
 		y = 1
@@ -2864,7 +2864,7 @@
 	focus = {
 		id = NZL_the_first_labor_government
 		icon = GFX_focus_RJ_NZL_first_labour_government
-		x = 4
+		x = 0
 		y = 0
 
 		cost = 10
@@ -3202,7 +3202,7 @@
 		id = RJ_NZL_ratana_alliance
 		icon = GFX_focus_RJ_NZL_ratana_alliance
 		prerequisite = { focus = NZL_statute_of_westminster focus = NZL_strengthen_the_commonwealth }
-		x = 4
+		x = 6
 		y = 1
 		relative_position_id = NZL_statute_of_westminster
 
@@ -3230,6 +3230,9 @@
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = RJ_NZL_t_w_ratana
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = RJ_NZL_apirata_ngata
 		}
 	}
 
@@ -3307,7 +3310,7 @@
 
 	focus = {
 		id = RJ_NZL_support_the_kingitanga_movement
-		icon = GFX_focus_renounce_the_treaty_of_trianon
+		icon = GFX_focus_RJ_NZL_kingitanga_movement
 		prerequisite = { focus = RJ_NZL_ratana_alliance }
 		x = -1
 		y = 1
@@ -3332,9 +3335,9 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.05
+			add_timed_idea = {
+				idea = RJ_NZL_idea_kingitanga_supported
+				days = 500
 			}
 			add_political_power = 25
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -3382,14 +3385,51 @@
 	}
 
 	focus = {
-		id = RJ_NZL_acknowledge_the_maori_crown
-		icon = GFX_focus_RJ_NZL_maori_crown
+		id = RJ_NZL_reign_of_koroki
+		icon = GFX_focus_RJ_NZL_reign_of_koroki
 		prerequisite = { focus = RJ_NZL_abrogate_the_treaty_of_waitangi }
 		x = 0
 		y = 1
 		relative_position_id = RJ_NZL_abrogate_the_treaty_of_waitangi
 
-		cost = 7.2
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			neutrality > 0.59
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			set_party_name = {
+				ideology = neutrality
+				long_name = "Maori Kingship"
+				name = "Maori Kingship"
+			}
+			promote_character = {
+				character = RJ_NZL_king_koroki
+				ideology = monarchy
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_a_king_for_all
+		icon = GFX_focus_RJ_NZL_reign_of_koroki
+		prerequisite = { focus = RJ_NZL_reign_of_koroki }
+		x = 1
+		y = 1
+		relative_position_id = RJ_NZL_reign_of_koroki
+
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -3406,9 +3446,84 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			add_stability = 0.05
-			add_political_power = 50
-			add_ideas = RJ_NZL_idea_maori_crown
+			add_country_leader_trait = king_of_new_zealand
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_samoan_citizenship
+		icon = GFX_focus_RJ_NZL_reign_of_koroki
+		prerequisite = { focus = RJ_NZL_a_king_for_all }
+		x = 1
+		y = 1
+		relative_position_id = RJ_NZL_a_king_for_all
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			726 = {
+				compliance > 30
+			}
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			726 = {
+				add_core_of = NZL
+			}
+			if = {
+				limit = {
+					owns_state = 1072
+					1072 = {
+						compliance > 30
+					}
+				}
+				1072 = {
+					add_core_of = NZL
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_a_matter_of_formality
+		icon = GFX_focus_RJ_NZL_reign_of_koroki
+		prerequisite = { focus = RJ_NZL_reign_of_koroki }
+		x = -1
+		y = 1
+		relative_position_id = RJ_NZL_reign_of_koroki
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			country_event = RJ_NZL.2a
 		}
 	}
 
@@ -3607,7 +3722,7 @@
 		prerequisite = { focus = NZL_the_first_labor_government }
 		mutually_exclusive = { focus = NZL_statute_of_westminster }
 		mutually_exclusive = { focus = NZL_strengthen_the_commonwealth }
-		x = 8
+		x = 13
 		y = 1
 		relative_position_id = NZL_the_first_labor_government
 
