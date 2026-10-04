@@ -3028,7 +3028,7 @@
 
 	focus = {
 		id = RJ_NZL_agricultural_workers_act
-		icon = GFX_focus_generic_farmland
+		icon = GFX_focus_RJ_NZL_agricultural_workers_act
 		prerequisite = { focus = RJ_NZL_icaa_act }
 		x = 0
 		y = 1
@@ -3152,8 +3152,8 @@
 	focus = {
 		id = RJ_NZL_emergency_conscription
 		icon = GFX_focus_generic_army_attack
-		prerequisite = { focus = RJ_NZL_emergency_regulations }
-		x = 2
+		prerequisite = { focus = RJ_NZL_emergency_regulations focus = RJ_NZL_reign_of_koroki }
+		x = 3
 		y = 1
 		relative_position_id = RJ_NZL_emergency_regulations
 
@@ -3164,7 +3164,8 @@
 		}
 
 		available = {
-			
+			has_war = yes
+			threat > 0.49
 		}
 
 		bypass = {
@@ -3199,10 +3200,70 @@
 	}
 
 	focus = {
+		id = RJ_NZL_strike_restrictions
+		icon = GFX_focus_generic_public_works
+		prerequisite = { focus = RJ_NZL_emergency_regulations }
+		x = 0
+		y = 1
+		relative_position_id = RJ_NZL_emergency_regulations
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_ideas = RJ_NZL_idea_strike_restrictions
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_war_pension_extension
+		icon = GFX_focus_RJ_NZL_war_pension_extension
+		prerequisite = { focus = RJ_NZL_emergency_regulations }
+		x = 1
+		y = 2
+		relative_position_id = RJ_NZL_emergency_regulations
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			add_war_support = 0.10
+			add_ideas = RJ_NZL_idea_extended_war_pensions
+		}
+	}
+
+	focus = {
 		id = RJ_NZL_ratana_alliance
 		icon = GFX_focus_RJ_NZL_ratana_alliance
 		prerequisite = { focus = NZL_statute_of_westminster focus = NZL_strengthen_the_commonwealth }
-		x = 6
+		x = 5
 		y = 1
 		relative_position_id = NZL_statute_of_westminster
 
@@ -3456,7 +3517,7 @@
 
 	focus = {
 		id = RJ_NZL_samoan_citizenship
-		icon = GFX_focus_RJ_NZL_reign_of_koroki
+		icon = GFX_focus_RJ_NZL_samoan_citizenship
 		prerequisite = { focus = RJ_NZL_a_king_for_all }
 		x = 1
 		y = 1
@@ -3500,7 +3561,7 @@
 
 	focus = {
 		id = RJ_NZL_a_matter_of_formality
-		icon = GFX_focus_RJ_NZL_reign_of_koroki
+		icon = GFX_focus_hun_elect_a_king
 		prerequisite = { focus = RJ_NZL_reign_of_koroki }
 		x = -1
 		y = 1
@@ -3523,7 +3584,8 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			country_event = RJ_NZL.2a
+			country_event = RJ_NZL.2
+			add_political_power = 25
 		}
 	}
 

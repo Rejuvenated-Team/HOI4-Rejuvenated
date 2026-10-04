@@ -82,17 +82,26 @@ country_event = {
 }
 
 country_event = { #A Matter of Formality's event
-	id = RJ_NZL.2a
+	id = RJ_NZL.2
 	title = "Matters of Formality"
-	desc = RJ_NZL.2.a_d
+	desc = RJ_NZL.2d
 	picture = GFX_report_event_generic_usa_treaty
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "Ah well."
+		name = "Maintain the Anglicization"
 		ai_chance = {
 			base = 1
 		}
+		set_cosmetic_tag = NZL_monarchist_1
+	}
+
+	option = {
+		name = "Adopt the Historical Name"
+		ai_chance = {
+			base = 1
+		}
+		set_cosmetic_tag = NZL_monarchist_2
 	}
 }

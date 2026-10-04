@@ -1467,4 +1467,19 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/nzl/RJ_NZL_equipment_modernization.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_agricultural_workers_act"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_agricultural_workers_act.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_samoan_citizenship"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_samoan_citizenship.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_war_pension_extension"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_war_pension_extension.dds"
+	}
+
 }

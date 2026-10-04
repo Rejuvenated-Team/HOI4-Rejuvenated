@@ -857,5 +857,43 @@ ideas = {
 				neutrality_drift = 0.10
 			}
 		}
+
+		RJ_NZL_idea_strike_restrictions = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_factory_strikes
+
+			modifier = {
+				industrial_capacity_factory = 0.10
+			}
+		}
+
+		RJ_NZL_idea_extended_war_pensions = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = eng_imperial_conscription
+
+			modifier = {
+				conscription = 0.03
+			}
+		}
 	}
 }

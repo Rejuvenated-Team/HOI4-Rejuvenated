@@ -104,6 +104,10 @@
  RJ_NZL_a_matter_of_formality_desc: "With a formal monarchy now in place, some minor formalities must be decided upon, such as our country's name & flag. Shall we maintain our current name & flag, or shall we change them to suit our change in identity?"
  RJ_NZL_samoan_citizenship: "Samoan Citizenship"
  RJ_NZL_samoan_citizenship_desc: "Koroki has extended his hand in friendship to the people of Samoa, offering them full citizenship & equal rights under his leadership."
+ RJ_NZL_strike_restrictions: "Strike Restrictions"
+ RJ_NZL_strike_restrictions_desc: "Given the current threat, we can't afford the potential of strikes disrupting the war effort!"
+ RJ_NZL_war_pension_extension: "War Pension Extension"
+ RJ_NZL_war_pension_extension_desc: "Our troops who bravely risk their lives for their country ought to be taken care of properly. We can extend their pensions to do just that! With a little luck, it might also help to encourage others to enlist."
 
 
 
@@ -145,6 +149,8 @@
  RJ_NZL_idea_emergency_regulations: "Emergency Regulations"
  RJ_NZL_idea_emergency_regulations_2: "Emergency Regulations"
  RJ_NZL_idea_kingitanga_supported: "Kīngitanga Supported"
+ RJ_NZL_idea_strike_restrictions: "Strike Restrictions"
+ RJ_NZL_idea_extended_war_pensions: "Extended War Pensions"
 
 
 
@@ -161,4 +167,4 @@
  RJ_NZL.1.d: "The government of New Zealand has approached us with an offer of compensation for New Zealand. They've offered a combination of industrial assets, as well as indefinite naval access within their territory. Our primary use for American Samoa was as a naval base in the furthest reaches of the Pacific. With this deal, we'd have even more access than we had before, at least so long as the New Zealand government remains friendly to us. What shall our response be?"
  RJ_NZL.1.d_a: "The United States government has agreed to give us American Samoa! This is a great day for us, as well as the Samoan peoples!"
  RJ_NZL.1.d_b: "The United States government has denied our offer for American Samoa. While unfortunate, we can also understand & respect their position."
- RJ_NZL.2.a_d: "Our first formality to address is the matter of our country's flag. While a part of the British crown, we maintained the Union Jack as a crucial part of the flag, displaying our loyalty to the commonwealth. Now that we're fully independent, we need a new flag. What should we use?"
+ RJ_NZL.2d: "Now that we're officially a monarchy, we have a minor formality to decide upon: What shall our new identity be? The people are used to calling the country New Zealand, which has been the Anglicized name for the country for a few centuries now. However, the Māori have traditionally called this land Aotearoa, & the king is of Māori descent."

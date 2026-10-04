@@ -3579,3 +3579,8 @@
  AST_independent_DEF: "$AST_DEF$"
  AST_monarchy_neutrality: "Kingdom of Australia"
  AST_monarchy_neutrality_DEF: "the Kingdom of Australia"
+
+ NZL_monarchist_1: "Kingdom of New Zealand"
+ NZL_monarchist_1_DEF: "the Kingdom of New Zealand"
+ NZL_monarchist_2: "Kingdom of Aotearoa"
+ NZL_Monarchist_2_DEF: "the Kingdom of Aotearoa"
