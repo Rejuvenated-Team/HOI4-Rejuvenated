@@ -3153,7 +3153,7 @@
 		id = RJ_NZL_emergency_conscription
 		icon = GFX_focus_generic_army_attack
 		prerequisite = { focus = RJ_NZL_emergency_regulations focus = RJ_NZL_reign_of_koroki }
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = RJ_NZL_emergency_regulations
 
@@ -3486,7 +3486,7 @@
 		id = RJ_NZL_a_king_for_all
 		icon = GFX_focus_RJ_NZL_reign_of_koroki
 		prerequisite = { focus = RJ_NZL_reign_of_koroki }
-		x = 1
+		x = 4
 		y = 1
 		relative_position_id = RJ_NZL_reign_of_koroki
 
@@ -3523,7 +3523,7 @@
 		y = 1
 		relative_position_id = RJ_NZL_a_king_for_all
 
-		cost = 5
+		cost = 3
 
 		ai_will_do = {
 			factor = 25
@@ -3560,6 +3560,133 @@
 	}
 
 	focus = {
+		id = RJ_NZL_increase_central_bank_control
+		icon = GFX_focus_RJ_NZL_samoan_citizenship
+		prerequisite = { focus = RJ_NZL_a_king_for_all }
+		x = -1
+		y = 1
+		relative_position_id = RJ_NZL_a_king_for_all
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_department_of_maori_welfare
+		icon = GFX_focus_generic_welfare
+		prerequisite = { focus = RJ_NZL_a_king_for_all }
+		x = 0
+		y = 2
+		relative_position_id = RJ_NZL_a_king_for_all
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_develop_taranaki_and_hawkes_bay
+		icon = GFX_focus_RJ_industry3
+		prerequisite = { focus = RJ_NZL_department_of_maori_welfare }
+		x = 0
+		y = 1
+		relative_position_id = RJ_NZL_department_of_maori_welfare
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			controls_state = 1086
+			controls_state = 1088
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			1086 = {
+				increase_state_category = yes
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_manpower = 20000
+			}
+			1088 = {
+				increase_state_category = yes
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_manpower = 30000
+			}
+		}
+	}
+
+	focus = {
 		id = RJ_NZL_a_matter_of_formality
 		icon = GFX_focus_hun_elect_a_king
 		prerequisite = { focus = RJ_NZL_reign_of_koroki }
@@ -3589,9 +3716,179 @@
 		}
 	}
 
-	############################
-	# GO COMMONWEALTH SECTION ##
-	############################
+	focus = {
+		id = RJ_NZL_proud_maori_traditions
+		icon = GFX_focus_hun_elect_a_king
+		prerequisite = { focus = RJ_NZL_a_matter_of_formality }
+		x = 0
+		y = 1
+		relative_position_id = RJ_NZL_a_matter_of_formality
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_masters_of_the_sea
+		icon = GFX_focus_PHI_gunboat_diplomacy
+		prerequisite = { focus = RJ_NZL_proud_maori_traditions }
+		x = 2
+		y = 1
+		relative_position_id = RJ_NZL_proud_maori_traditions
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_experts_in_terrain
+		icon = GFX_focus_PHI_gunboat_diplomacy
+		prerequisite = { focus = RJ_NZL_proud_maori_traditions }
+		x = -1
+		y = 1
+		relative_position_id = RJ_NZL_proud_maori_traditions
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_hands_across_the_pacific
+		icon = GFX_focus_GER_sentinels_of_the_pacific
+		prerequisite = { focus = RJ_NZL_masters_of_the_sea }
+		x = 0
+		y = 1
+		relative_position_id = RJ_NZL_masters_of_the_sea
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_put_out_the_call
+		icon = GFX_focus_GER_sentinels_of_the_pacific
+		prerequisite = { focus = RJ_NZL_hands_across_the_pacific }
+		x = 1
+		y = 1
+		relative_position_id = RJ_NZL_hands_across_the_pacific
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_foment_anti_colonial_sentiments
+		icon = GFX_focus_GER_sentinels_of_the_pacific
+		prerequisite = { focus = RJ_NZL_hands_across_the_pacific }
+		x = -1
+		y = 1
+		relative_position_id = RJ_NZL_hands_across_the_pacific
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			
+		}
+	}
 
 	focus = {
 		id = NZL_2nzef
@@ -3623,7 +3920,7 @@
 	focus = {
 		id = NZL_arrest_pacifist_leaders
 		icon = GFX_goal_generic_attack_allies
-		prerequisite = { focus = NZL_2nzef }
+		prerequisite = { focus = NZL_2nzef focus = RJ_NZL_emergency_regulations }
 		x = 1
 		y = 1
 		relative_position_id = NZL_2nzef
