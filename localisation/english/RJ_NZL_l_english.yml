@@ -130,7 +130,16 @@
  RJ_NZL_advanced_tactical_training_desc: "Our people used to apply a variety of special tactics for training warriors, which were then applied in combat. Suprise attacks, night warfare, elaborate traps, & false retreats. We can adapt these techniques to modern training, which will give our soldiers a great advantage!"
  RJ_NZL_hand_to_hand_combat: "Hand-to-Hand Combat"
  RJ_NZL_hand_to_hand_combat_desc: "While melee-based combat was far more important in the past, it should still be championed as an effective tool for soldiers. Not all combat will be at range, & being capable at hand-to-hand could mean the difference between life & death."
-
+ RJ_NZL_appeal_to_the_emperor: "Appeal to the Emperor"
+ RJ_NZL_appeal_to_the_emperor_desc: "The Japanese are the most powerful & influencing country in our region of the world. As such, it makes sense to appeal to the emperor, in the hopes of forming some sort of alliance."
+ RJ_NZL_demand_polynesian_colonial_territories: "Demand Polynesian Colonial Territories"
+ RJ_NZL_demand_polynesian_colonial_territories_desc: "Before we start a war that could cost countless lives, we should make a stern demand for the territories of Polynesia. While the controlling countries will surely be unhappy, we're prepared to offer them a manner of compensation that we believe will satisfy them."
+ RJ_NZL_demand_micronesian_colonial_territories: "Demand Micronesian Colonial Territories"
+ RJ_NZL_demand_micronesian_colonial_territories_desc: "Before we start a war that could cost countless lives, we should make a stern demand for the territories of Micronesia. While the controlling countries will surely be unhappy, we're prepared to offer them a manner of compensation that we believe will satisfy them."
+ RJ_NZL_our_philippine_brothers: "Our Philippine Brothers"
+ RJ_NZL_our_philippine_brothers_desc: "One of the first territories settled by our ancestors was what we now call the Philippines. While a large gap in cultural identity has developed, that commonality still stands, & in time we may be able to integrate them."
+ RJ_NZL_the_great_pacific_kingdom: "The Great Pacific Kingdom"
+ RJ_NZL_the_great_pacific_kingdom_desc: "With all of the territories of Polynesia, Micronesia, & the Philippines squarely in our control, we can proclaim a great Pacific Kingdom!"
 
 
  ##################################################

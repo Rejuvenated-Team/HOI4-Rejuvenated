@@ -3479,6 +3479,9 @@
 				character = RJ_NZL_king_koroki
 				ideology = monarchy
 			}
+			set_rule = {
+				can_create_factions = yes
+			}
 		}
 	}
 
@@ -3717,6 +3720,45 @@
 	}
 
 	focus = {
+		id = RJ_NZL_appeal_to_the_emperor
+		icon = GFX_focus_PER_fascist_reach_out_to_japan
+		prerequisite = { focus = RJ_NZL_reign_of_koroki }
+		x = 1
+		y = 1
+		relative_position_id = RJ_NZL_reign_of_koroki
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			JAP = {
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			JAP = {
+				add_opinion_modifier = {
+					target = NZL
+					modifier = large_increase
+				}
+			}
+		}
+	}
+
+	focus = {
 		id = RJ_NZL_proud_maori_traditions
 		icon = GFX_focus_hun_elect_a_king
 		prerequisite = { focus = RJ_NZL_a_matter_of_formality }
@@ -3926,6 +3968,125 @@
 		x = -1
 		y = 1
 		relative_position_id = RJ_NZL_hands_across_the_pacific
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_demand_polynesian_colonial_territories
+		icon = GFX_focus_GER_sentinels_of_the_pacific
+		prerequisite = { focus = RJ_NZL_foment_anti_colonial_sentiments }
+		prerequisite = { focus = RJ_NZL_put_out_the_call }
+		x = 0
+		y = 1
+		relative_position_id = RJ_NZL_foment_anti_colonial_sentiments
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_demand_micronesian_colonial_territories
+		icon = GFX_focus_GER_sentinels_of_the_pacific
+		prerequisite = { focus = RJ_NZL_foment_anti_colonial_sentiments }
+		prerequisite = { focus = RJ_NZL_put_out_the_call }
+		x = 0
+		y = 1
+		relative_position_id = RJ_NZL_put_out_the_call
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_our_philippine_brothers
+		icon = GFX_focus_PHI_second_philippine_republic
+		prerequisite = { focus = RJ_NZL_demand_micronesian_colonial_territories }
+		prerequisite = { focus = RJ_NZL_demand_polynesian_colonial_territories }
+		x = 1
+		y = 1
+		relative_position_id = RJ_NZL_demand_polynesian_colonial_territories
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_the_great_pacific_kingdom
+		icon = GFX_focus_PHI_second_philippine_republic
+		prerequisite = { focus = RJ_NZL_our_philippine_brothers }
+		x = 0
+		y = 1
+		relative_position_id = RJ_NZL_our_philippine_brothers
 
 		cost = 7.2
 
