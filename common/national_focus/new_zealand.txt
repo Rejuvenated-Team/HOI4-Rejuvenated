@@ -3749,7 +3749,36 @@
 		id = RJ_NZL_masters_of_the_sea
 		icon = GFX_focus_PHI_gunboat_diplomacy
 		prerequisite = { focus = RJ_NZL_proud_maori_traditions }
-		x = 2
+		x = 3
+		y = 1
+		relative_position_id = RJ_NZL_proud_maori_traditions
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_experts_in_terrain
+		icon = GFX_focus_generic_mountain_training
+		prerequisite = { focus = RJ_NZL_proud_maori_traditions }
+		x = -1
 		y = 1
 		relative_position_id = RJ_NZL_proud_maori_traditions
 
@@ -3775,12 +3804,41 @@
 	}
 
 	focus = {
-		id = RJ_NZL_experts_in_terrain
-		icon = GFX_focus_PHI_gunboat_diplomacy
+		id = RJ_NZL_advanced_tactical_training
+		icon = GFX_focus_SIA_night_time_training
 		prerequisite = { focus = RJ_NZL_proud_maori_traditions }
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = RJ_NZL_proud_maori_traditions
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_hand_to_hand_combat
+		icon = GFX_focus_RJ_NZL_hand_to_hand_combat
+		prerequisite = { focus = RJ_NZL_advanced_tactical_training focus = RJ_NZL_experts_in_terrain }
+		x = -1
+		y = 1
+		relative_position_id = RJ_NZL_advanced_tactical_training
 
 		cost = 7.2
 

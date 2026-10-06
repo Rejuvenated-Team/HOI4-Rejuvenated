@@ -126,6 +126,10 @@
  RJ_NZL_foment_anti_colonial_sentiments_desc: "It should be easy enough to stir up anti-colonial sentiments in the peoples across the pacific. This will make it more difficult for those powers to maintain their control, making them more likely to accede control to us."
  RJ_NZL_experts_in_terrain: "Experts in Terrain"
  RJ_NZL_experts_in_terrain_desc: "The natural terrain of [NZL.GetNameDef] is quite diverse with many harsh elements, & our people know it better than any other. This expertise can be instilled in our armed forces, allowing them to handle any terrain with ease."
+ RJ_NZL_advanced_tactical_training: "Advanced Tactical Training"
+ RJ_NZL_advanced_tactical_training_desc: "Our people used to apply a variety of special tactics for training warriors, which were then applied in combat. Suprise attacks, night warfare, elaborate traps, & false retreats. We can adapt these techniques to modern training, which will give our soldiers a great advantage!"
+ RJ_NZL_hand_to_hand_combat: "Hand-to-Hand Combat"
+ RJ_NZL_hand_to_hand_combat_desc: "While melee-based combat was far more important in the past, it should still be championed as an effective tool for soldiers. Not all combat will be at range, & being capable at hand-to-hand could mean the difference between life & death."
 
 
 

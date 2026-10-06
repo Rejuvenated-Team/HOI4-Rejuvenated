@@ -1482,4 +1482,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/nzl/RJ_NZL_war_pension_extension.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_hand_to_hand_combat"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_hand_to_hand_combat.dds"
+	}
+
 }
