@@ -558,6 +558,7 @@ ideas = {
 			
 			modifier = {			
 				experience_loss_factor = -0.10
+				casualty_trickleback = 0.15
 			}
 
 			research_bonus = {
