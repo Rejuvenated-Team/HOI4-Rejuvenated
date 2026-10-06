@@ -201,7 +201,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_suspend_the_presecution }
 		relative_position_id = USA_suspend_the_presecution
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -235,7 +235,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_desegregate_the_armed_forces }
 		relative_position_id = USA_desegregate_the_armed_forces
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -301,9 +301,6 @@ focus_tree = {
 			has_government = communism
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			set_politics = { ruling_party = communism elections_allowed = yes } #good and nice communism has elections
@@ -330,7 +327,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_democratic_socialism }
 		relative_position_id = USA_democratic_socialism
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -340,9 +337,6 @@ focus_tree = {
 			has_government = communism
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_NATIONAL_SPIRIT FOCUS_FILTER_DIPLOMACY }
 		completion_reward = {
 			add_ideas = USA_spread_our_ideals_idea
@@ -356,7 +350,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = RJ_USA_spread_our_ideals }
 		relative_position_id = RJ_USA_spread_our_ideals
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -369,10 +363,6 @@ focus_tree = {
 		bypass = {
 
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			custom_effect_tooltip = RJ_USA_end_monarchism_tt
@@ -623,7 +613,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_liberty_for_the_philippines }
 		relative_position_id = USA_liberty_for_the_philippines
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -635,13 +625,7 @@ focus_tree = {
 		
 		bypass = {
 
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
+		}		
 
 		completion_reward = {
 			if = {
@@ -711,7 +695,6 @@ focus_tree = {
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available_if_capitulated = no
 
 		completion_reward = {
 			if = {
@@ -762,7 +745,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_union_representation_act }
 		relative_position_id = USA_union_representation_act
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -813,7 +796,6 @@ focus_tree = {
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_NATIONAL_SPIRIT }
 		completion_reward = {
 			add_ideas = USA_accumulated_wealth_tax_act
@@ -862,9 +844,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
 			add_war_support = 0.1
@@ -898,7 +877,6 @@ focus_tree = {
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_NATIONAL_SPIRIT }
 		completion_reward = {
 			add_ideas = USA_worker_management_act
@@ -931,7 +909,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_guarantee_the_american_dream }
 		relative_position_id = USA_guarantee_the_american_dream
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -947,7 +925,6 @@ focus_tree = {
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_NATIONAL_SPIRIT FOCUS_FILTER_ARMY FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			custom_effect_tooltip = militia_mobilization_act_DM_tt
@@ -985,7 +962,6 @@ focus_tree = {
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			if = {
@@ -1031,9 +1007,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_USA_CONGRESS }
 		completion_reward = {
 			unlock_decision_tooltip = { decision = USA_readmit_state show_effect_tooltip = yes }
@@ -1063,10 +1036,6 @@ focus_tree = {
 			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
 		completion_reward = {
 			remove_ideas = USA_silver_legion_rallies_idea
 			add_popularity = {
@@ -1085,7 +1054,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = RJ_USA_stamp_out_the_silver_legion }
 		relative_position_id = RJ_USA_stamp_out_the_silver_legion
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -1098,10 +1067,6 @@ focus_tree = {
 		bypass = {
 
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
@@ -1137,13 +1102,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = USA_reach_out_to_the_ware_group
 		cost = 3
-		#ai_will_do = {
-		#	factor = 1
-		#}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		ai_will_do = {
+			factor = 1
+		}
 
 		completion_reward = {
 			SOU = {
@@ -1183,10 +1144,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 		PRC = {
@@ -1258,10 +1215,6 @@ focus_tree = {
 			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
 		completion_reward = {
 			SOU = { add_to_tech_sharing_group = USA_SOV_tech_group }
 			add_to_tech_sharing_group = USA_SOV_tech_group
@@ -1297,7 +1250,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_secure_china }
 		relative_position_id = USA_secure_china
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -1310,10 +1263,6 @@ focus_tree = {
 		bypass = {
 			
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			CHI = {
@@ -1598,7 +1547,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = RJ_USA_repeal_the_chinese_exclusion_act }
 		relative_position_id = RJ_USA_repeal_the_chinese_exclusion_act
-		cost = 14.4
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -3830,7 +3779,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_america_first }
 		relative_position_id = USA_america_first
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3844,9 +3793,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
@@ -3863,7 +3809,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_empower_the_huac }
 		relative_position_id = USA_empower_the_huac
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -3877,9 +3823,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_NATIONAL_SPIRIT FOCUS_FILTER_ESPIONAGE }
 		completion_reward = {
 			custom_effect_tooltip = RJ_fascist_civil_war_tt
@@ -3989,9 +3932,6 @@ focus_tree = {
 			has_government = fascism
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_USA_CONGRESS }
 		completion_reward = {
 			custom_effect_tooltip = RJ_fascist_civil_war_tt
@@ -4022,7 +3962,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_ally_with_the_silver_shirts }
 		relative_position_id = USA_ally_with_the_silver_shirts
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -4036,9 +3976,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_NATIONAL_SPIRIT }
 		completion_reward = {
 			add_ideas = USA_national_prosperity_program_idea
@@ -4052,7 +3989,7 @@ focus_tree = {
 		y = 2
 		prerequisite = { focus = USA_national_prosperity_program }
 		relative_position_id = USA_ally_with_the_silver_shirts
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -4065,10 +4002,6 @@ focus_tree = {
 		bypass = {
 
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			368 = {
@@ -4095,7 +4028,7 @@ focus_tree = {
 		y = 2
 		prerequisite = { focus = USA_national_prosperity_program }
 		relative_position_id = USA_ally_with_the_silver_shirts
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -4108,10 +4041,6 @@ focus_tree = {
 		bypass = {
 
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			add_ideas = USA_banking_sector_deregulation
@@ -4142,9 +4071,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATIONAL_SPIRIT FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			swap_ideas = {
@@ -4162,7 +4088,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_national_employment_strategy }
 		relative_position_id = USA_national_employment_strategy
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -4176,9 +4102,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_NATIONAL_SPIRIT FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_ideas = USA_expanded_bureau_of_mines_idea
@@ -4530,7 +4453,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = USA_war_powers_act
-		cost = 10
+		cost = 7.2
 		ai_will_do = {
 			factor = 1
 		}
@@ -5447,7 +5370,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_war_plans_division }
 		relative_position_id = USA_war_plans_division
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5460,10 +5383,6 @@ focus_tree = {
 		bypass = {
 
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			add_ideas = USA_intervention_in_the_americas
@@ -5493,10 +5412,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
 		completion_reward = {
 			unlock_decision_tooltip = { decision = USA_execute_war_plan_green show_effect_tooltip = yes show_modifiers = yes }
 		}
@@ -5524,10 +5439,6 @@ focus_tree = {
 		bypass = {
 
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			unlock_decision_tooltip = { decision = USA_execute_war_plan_crimson show_effect_tooltip = yes show_modifiers = yes }
@@ -5599,10 +5510,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
 		completion_reward = {
 			unlock_decision_tooltip = { decision = USA_execute_war_plan_gray show_effect_tooltip = yes show_modifiers = yes } 
 		}
@@ -5634,10 +5541,6 @@ focus_tree = {
 		bypass = {
 
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			if = {
@@ -5697,7 +5600,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_war_plans_division }
 		relative_position_id = USA_war_plans_division
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5710,10 +5613,6 @@ focus_tree = {
 		bypass = {
 
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			add_ideas = USA_intervention_in_europe
@@ -5749,10 +5648,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
 		completion_reward = {
 			IF = {
 				limit = {
@@ -5787,10 +5682,6 @@ focus_tree = {
 		bypass = {
 	
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			IF = {
@@ -5953,10 +5844,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
 		completion_reward = {
 			custom_effect_tooltip = mtg_usa_anti_bolshevist_aid_tt 
 		}
@@ -6012,10 +5899,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
 		completion_reward = {
 			unlock_decision_tooltip = { decision = USA_execute_war_plan_ruby show_effect_tooltip = yes show_modifiers = yes }
 		}
@@ -6043,10 +5926,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
 		completion_reward = {
 			unlock_decision_tooltip = { decision = USA_execute_war_plan_scarlet_garnet show_effect_tooltip = yes show_modifiers = yes }
 		}
@@ -6060,7 +5939,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_war_plans_division }
 		relative_position_id = USA_war_plans_division
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -6073,10 +5952,6 @@ focus_tree = {
 		bypass = {
 
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			show_unit_leaders_tooltip = USA_alexander_vandegrift
@@ -6133,10 +6008,6 @@ focus_tree = {
 		bypass = {
 
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			unlock_decision_tooltip = { decision = USA_execute_war_plan_yellow show_effect_tooltip = yes show_modifiers = yes }
@@ -6383,7 +6254,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = USA_selective_training_act
-		cost = 10
+		cost = 7.2
 		ai_will_do = {
 			factor = 1
 		}
@@ -6403,11 +6274,11 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = USA_modify_us_army_tt
 			add_to_variable = {
-				RJ_USA_SF_training_time = -0.10
+				RJ_USA_SF_training_time = -0.15
 				tooltip = special_forces_training_time_factor_tt
 			}
 			add_to_variable = {
-				RJ_USA_army_terrain_penalty_reduction = 0.05
+				RJ_USA_army_terrain_penalty_reduction = 0.10
 				tooltip = sf_focus_DM_tt
 			}
 			add_to_variable = {
@@ -6424,7 +6295,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_selective_training_act }
 		relative_position_id = USA_selective_training_act
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -6438,9 +6309,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
 			army_experience = 30
@@ -6563,10 +6431,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
 		completion_reward = {
 			USA_omar_bradley = {
 				add_skill_level = 1
@@ -6600,7 +6464,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_army_of_the_united_states }
 		relative_position_id = USA_army_of_the_united_states
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -6614,9 +6478,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY FOCUS_FILTER_NATIONAL_SPIRIT }
 		completion_reward = {
 			custom_effect_tooltip = USA_modify_us_army_tt
@@ -6634,7 +6495,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_army_of_the_united_states }
 		relative_position_id = USA_army_of_the_united_states
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -6648,9 +6509,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY FOCUS_FILTER_NATIONAL_SPIRIT }
 		completion_reward = {
 			custom_effect_tooltip = USA_modify_us_army_tt
@@ -6659,15 +6517,15 @@ focus_tree = {
 				tooltip = conscription_tt
 			}
 			add_to_variable = {
-				RJ_USA_army_attack = 0.05
+				RJ_USA_army_attack = 0.1
 				tooltip = army_attack_factor_tt
 			}
 			add_to_variable = {
-				RJ_USA_army_defense = 0.05
+				RJ_USA_army_defense = 0.1
 				tooltip = army_defence_factor_tt
 			}
 			add_to_variable = {
-				RJ_USA_army_org_factor = 0.10
+				RJ_USA_army_org_factor = 0.15
 				tooltip = army_org_factor_tt
 			}
 		}
@@ -6708,7 +6566,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = USA_selective_training_act
-		cost = 10
+		cost = 7.2
 		prerequisite = { focus = USA_selective_training_act }
 		ai_will_do = {
 			factor = 5
@@ -6742,7 +6600,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_support_rock_island }
 		relative_position_id = USA_support_rock_island
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -6756,9 +6614,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY }
 		completion_reward = {
 			add_breakthrough_progress = {
@@ -6781,7 +6636,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_support_rock_island }
 		relative_position_id = USA_support_rock_island
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -6795,9 +6650,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY }
 		completion_reward = {
 			add_breakthrough_progress = {
@@ -7012,10 +6864,10 @@ focus_tree = {
 		icon = GFX_focus_RJ_USA_air_corps_expansion_program
 		x = 4
 		y = 1
-		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		cost = 7.2
+		ai_will_do = {
+			factor = 1
+		}
 		prerequisite = { focus = USA_war_department }
 		relative_position_id = USA_war_department
 		available_if_capitulated = yes
@@ -7043,7 +6895,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = RJ_USA_air_corps_expansion_program }
 		relative_position_id = RJ_USA_air_corps_expansion_program
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -7057,9 +6909,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATIONAL_SPIRIT FOCUS_FILTER_AIR_XP FOCUS_FILTER_AIRFORCE }
 
 		completion_reward = {
@@ -7084,9 +6933,9 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 7.2
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		ai_will_do = {
+			factor = 1
+		}
 		prerequisite = { focus = USA_us_army_airforce }
 		relative_position_id = USA_us_army_airforce
 		available_if_capitulated = yes
@@ -7117,10 +6966,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = RJ_USA_air_corps_expansion_program
-		cost = 7.2
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 		completion_reward = {
@@ -7160,9 +7009,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = RJ_USA_air_corps_expansion_program
 		cost = 7.2
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 
@@ -7197,9 +7046,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = USA_air_support
 		cost = 5
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIRFORCE FOCUS_FILTER_NATIONAL_SPIRIT }
@@ -7223,10 +7072,10 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = USA_air_support
-		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		cost = 7.2
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIRFORCE FOCUS_FILTER_NATIONAL_SPIRIT }
@@ -7251,9 +7100,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = USA_air_support
 		cost = 5
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIRFORCE FOCUS_FILTER_NATIONAL_SPIRIT }
@@ -7279,9 +7128,9 @@ focus_tree = {
 		y = 2
 		relative_position_id = RJ_USA_ground_support
 		cost = 7.2
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIRFORCE FOCUS_FILTER_NATIONAL_SPIRIT }
@@ -7320,9 +7169,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = USA_strategic_bombing
 		cost = 7.2
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIRFORCE FOCUS_FILTER_NATIONAL_SPIRIT }
@@ -7350,9 +7199,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = USA_strategic_bombing
 		cost = 7.2
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIRFORCE FOCUS_FILTER_NATIONAL_SPIRIT }
@@ -7384,10 +7233,10 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = USA_strategic_bombing
-		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		cost = 7.2
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIRFORCE FOCUS_FILTER_NATIONAL_SPIRIT }
@@ -7407,10 +7256,10 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = USA_combined_bomber_offensive
-		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		cost = 7.2
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIRFORCE FOCUS_FILTER_NATIONAL_SPIRIT }
@@ -7455,9 +7304,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_AIRFORCE FOCUS_FILTER_NATIONAL_SPIRIT }
 
 		completion_reward = {
@@ -7479,7 +7325,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_us_air_force }
 		relative_position_id = USA_us_air_force
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -7493,9 +7339,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
@@ -7522,10 +7365,10 @@ focus_tree = {
 		icon = GFX_focus_RJ_navy
 		x = 15
 		y = 1
-		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		cost = 7.2
+		ai_will_do = {
+			factor = 1
+		}
 		prerequisite = { focus = USA_war_department }
 		relative_position_id = USA_war_department
 		available_if_capitulated = yes
@@ -7589,7 +7432,6 @@ focus_tree = {
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available_if_capitulated = no
 
 		complete_tooltip = {
 			378 = { 
@@ -7689,10 +7531,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
 		completion_reward = {
 			custom_effect_tooltip = USA_modify_us_navy_tt
 			add_to_variable = {
@@ -7711,10 +7549,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = USA_maritime_commission
-		cost = 7.2
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 
@@ -7738,10 +7576,10 @@ focus_tree = {
 		x = -5
 		y = 1
 		relative_position_id = USA_bureau_of_ships
-		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		cost = 7.2
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 
@@ -7767,10 +7605,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = USA_carrier_primacy
-		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		cost = 7.2
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 
@@ -7791,10 +7629,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = USA_bureau_of_aeronautics
-		cost = 7.2
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 
@@ -7823,7 +7661,7 @@ focus_tree = {
 		y = 2
 		prerequisite = { focus = USA_bureau_of_aeronautics }
 		relative_position_id = USA_bureau_of_aeronautics
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -7836,10 +7674,6 @@ focus_tree = {
 		bypass = {
 
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY FOCUS_FILTER_AIRFORCE }
 		completion_reward = {
@@ -7884,10 +7718,6 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
 		search_filters = { FOCUS_FILTER_NAVY FOCUS_FILTER_NATIONAL_SPIRIT }
 		completion_reward = {
 			custom_effect_tooltip = USA_modify_us_navy_tt
@@ -7917,10 +7747,10 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = USA_bureau_of_ships
-		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		cost = 7.2
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 
@@ -7950,10 +7780,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = USA_escort_effort
-		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		cost = 7.2
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 
@@ -7976,9 +7806,9 @@ focus_tree = {
 		y = 2
 		relative_position_id = USA_escort_effort
 		cost = 5
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 
@@ -8005,9 +7835,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = RJ_USA_the_bucket_brigade_system
 		cost = 7.2
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 
@@ -8033,7 +7863,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_bureau_of_ships }
 		relative_position_id = USA_bureau_of_ships
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -8042,10 +7872,6 @@ focus_tree = {
 		available = {
 			is_special_project_completed = sp:sp_naval_cruiser_submarine
 		}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY FOCUS_FILTER_NATIONAL_SPIRIT }
 		completion_reward = {
@@ -8079,7 +7905,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = USA_bureau_of_ships
-		cost = 10
+		cost = 7.2
 		prerequisite = { focus = USA_bureau_of_ships }
 		ai_will_do = {
 			factor = 1
@@ -8105,10 +7931,10 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = RJ_USA_doctrinal_refinements
-		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		cost = 7.2
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 
@@ -8150,10 +7976,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = USA_expand_the_USMC
-		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		cost = 7.2
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 		
@@ -8188,9 +8014,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = RJ_USA_doctrinal_refinements
 		cost = 7.2
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 		
@@ -8216,7 +8042,7 @@ focus_tree = {
 		prerequisite = { focus = USA_fleet_submarines }
 		prerequisite = { focus = RJ_USA_wolfpack_tactics }
 		relative_position_id = RJ_USA_wolfpack_tactics
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -8229,10 +8055,6 @@ focus_tree = {
 		bypass = {
 
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
 		completion_reward = {
 			add_ideas = USA_unrestricted_submarine_warfare
@@ -8248,10 +8070,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = RJ_USA_doctrinal_refinements
-		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		cost = 7.2
+		ai_will_do = {
+			factor = 1
+		}
 
 		available_if_capitulated = yes
 		
