@@ -140,6 +140,8 @@
  RJ_NZL_our_philippine_brothers_desc: "One of the first territories settled by our ancestors was what we now call the Philippines. While a large gap in cultural identity has developed, that commonality still stands, & in time we may be able to integrate them."
  RJ_NZL_the_great_pacific_kingdom: "The Great Pacific Kingdom"
  RJ_NZL_the_great_pacific_kingdom_desc: "With all of the territories of Polynesia, Micronesia, & the Philippines squarely in our control, we can proclaim a great Pacific Kingdom!"
+ RJ_NZL_increase_technology_sharing: "Increase Technology Sharing"
+ RJ_NZL_increase_technology_sharing_desc: "Increasing the amount of technology we directly share with Japan will help both our nations to make more rapid advancements."
 
 
  ##################################################
@@ -182,6 +184,9 @@
  RJ_NZL_idea_kingitanga_supported: "Kīngitanga Supported"
  RJ_NZL_idea_strike_restrictions: "Strike Restrictions"
  RJ_NZL_idea_extended_war_pensions: "Extended War Pensions"
+ RJ_NZL_idea_japan_likes_new_zealand: "Pro-New Zealand"
+ RJ_NZL_idea_new_zealand_likes_japan: "Pro-Japan"
+ RJ_NZL_idea_central_bank_control: "Central Bank Control"
 
 
 
@@ -199,3 +204,6 @@
  RJ_NZL.1.d_a: "The United States government has agreed to give us American Samoa! This is a great day for us, as well as the Samoan peoples!"
  RJ_NZL.1.d_b: "The United States government has denied our offer for American Samoa. While unfortunate, we can also understand & respect their position."
  RJ_NZL.2d: "Now that we're officially a monarchy, we have a minor formality to decide upon: What shall our new identity be? The people are used to calling the country New Zealand, which has been the Anglicized name for the country for a few centuries now. However, the Māori have traditionally called this land Aotearoa, & the king is of Māori descent."
+ RJ_NZL.3d: "[GetNameDef.NZL] has approached us, requesting an audience with the Emperor. They believe us to be most compatible with their own goals in the region, & wish to develop more formal relations, including a possible alliance, with us. This is rather unexpected, but not unwelcome, & opens up some possibilities for us. How shall we respond?"
+ RJ_NZL.4d_a: "The Japanese have approved of an alliance between our two countries, seeing great potential in it! This is a great day for both our countries."
+ RJ_NZL.4d_c: "The Japanese have unfortunately turned down all appeals of friendship to them. Guess we'll have to go things alone."

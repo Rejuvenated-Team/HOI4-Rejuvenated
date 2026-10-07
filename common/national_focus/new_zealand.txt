@@ -3057,7 +3057,7 @@
 
 	focus = {
 		id = NZL_social_security_act
-		icon = GFX_focus_hol_the_foundations_of_defense
+		icon = GFX_focus_RJ_paper_coins
 		prerequisite = { focus = RJ_NZL_agricultural_workers_act }
 		x = -1
 		y = 1
@@ -3564,7 +3564,7 @@
 
 	focus = {
 		id = RJ_NZL_increase_central_bank_control
-		icon = GFX_focus_RJ_NZL_samoan_citizenship
+		icon = GFX_focus_PER_national_bank
 		prerequisite = { focus = RJ_NZL_a_king_for_all }
 		x = -1
 		y = 1
@@ -3587,7 +3587,7 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			
+			add_ideas = RJ_NZL_idea_central_bank_control
 		}
 	}
 
@@ -3616,7 +3616,8 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			
+			add_political_power = 125
+			add_stability = 0.1
 		}
 	}
 
@@ -3727,7 +3728,7 @@
 		y = 1
 		relative_position_id = RJ_NZL_reign_of_koroki
 
-		cost = 3
+		cost = 2
 
 		ai_will_do = {
 			factor = 25
@@ -3754,6 +3755,40 @@
 					target = NZL
 					modifier = large_increase
 				}
+				country_event = RJ_NZL.3
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_increase_technology_sharing
+		icon = GFX_goal_tfv_generic_tech_sharing
+		prerequisite = { focus = RJ_NZL_appeal_to_the_emperor }
+		x = 0
+		y = 1
+		relative_position_id = RJ_NZL_appeal_to_the_emperor
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			is_in_faction_with = JAP
+			is_in_tech_sharing_group = japanese_research
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			modify_tech_sharing_bonus = {
+ 				id = japanese_research
+ 				bonus = 0.2
 			}
 		}
 	}
@@ -4285,7 +4320,7 @@
 		completion_reward = {
 			modify_tech_sharing_bonus = {
  				id = commonwealth_research
- 				bonus = 0.1  # we get 20% higher bonus from this group
+ 				bonus = 0.15
 			}
 		}
 	}

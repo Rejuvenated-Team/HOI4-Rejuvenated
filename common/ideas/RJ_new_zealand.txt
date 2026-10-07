@@ -895,5 +895,73 @@ ideas = {
 				conscription = 0.03
 			}
 		}
+
+		RJ_NZL_idea_japan_likes_new_zealand = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = can_wartime_prices_and_trade_board
+
+			targeted_modifier = {
+				tag = NZL
+				trade_opinion_factor = 0.5
+				trade_cost_for_target_factor = 0.5
+				opinion_gain_monthly_factor = 1
+			}
+		}
+
+		RJ_NZL_idea_new_zealand_likes_japan = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = can_wartime_prices_and_trade_board
+
+			targeted_modifier = {
+				tag = JAP
+				trade_opinion_factor = 0.5
+				trade_cost_for_target_factor = 0.5
+				opinion_gain_monthly_factor = 1
+			}
+		}
+
+		RJ_NZL_idea_central_bank_control = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = tur_balkan_central_bank_wealthy_greece
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.05
+				production_speed_arms_factory_factor = 0.10
+				production_speed_dockyard_factor = 0.10
+				production_speed_industrial_complex_factor = 0.15
+				political_power_cost = 0.10
+			}
+		}
 	}
 }

@@ -23,4 +23,9 @@ spriteTypes = {
 		name = "GFX_ahmed_fuad_death_event"
 		texturefile = "gfx/event_pictures/EGY/death_of_fuad.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_NZL_koroki"
+		texturefile = "gfx/event_pictures/NZL/NZL_koroki.dds"
+	}
 }

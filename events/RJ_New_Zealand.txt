@@ -85,7 +85,7 @@ country_event = { #A Matter of Formality's event
 	id = RJ_NZL.2
 	title = "Matters of Formality"
 	desc = RJ_NZL.2d
-	picture = GFX_report_event_generic_usa_treaty
+	picture = GFX_NZL_koroki
 	
 	is_triggered_only = yes
 	
@@ -103,5 +103,146 @@ country_event = { #A Matter of Formality's event
 			base = 1
 		}
 		set_cosmetic_tag = NZL_monarchist_2
+	}
+}
+
+country_event = { #Appeal to the Emperor - Event sent to Japan.
+	id = RJ_NZL.3
+	title = "An Appeal to the Emperor"
+	desc = RJ_NZL.3d
+	picture = GFX_report_event_chinese_japanese_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Strike up an alliance!"
+		ai_chance = {
+			base = 50
+		}
+		NZL = {
+			country_event = RJ_NZL.4a
+		}
+		
+	}
+
+	option = {
+		name = "Perhaps a less formal arrangement for now?"
+		ai_chance = {
+			base = 5
+		}
+		NZL = {
+			country_event = RJ_NZL.4b
+		}
+	}
+
+	option = {
+		name = "They have nothing we want."
+		ai_chance = {
+			base = 1
+		}
+		NZL = {
+			country_event = RJ_NZL.4c
+		}
+	}
+}
+
+country_event = { #Alliance-positive Response for Appeal to the Emperor.
+	id = RJ_NZL.4a
+	title = "Japan Agrees to an Alliance!"
+	desc = RJ_NZL.4d_a
+	picture = GFX_report_event_japanese_reply
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Delightful! Let's make it official."
+		ai_chance = {
+			base = 1
+		}
+		if = {
+			limit = {
+				JAP = {
+					NOT = {
+						is_in_faction = yes
+					}
+				}
+			}
+			create_faction_from_template = faction_template_pacific_alliance_faction
+			add_to_faction = JAP
+		}
+		else_if = {
+			limit = {
+				JAP = {
+					is_in_faction = yes
+				}
+			}
+			JAP = {
+				add_to_faction = NZL
+			}
+		}
+		add_to_tech_sharing_group = japanese_research
+		if = {
+			limit = {
+				JAP = {
+					NOT = {
+						is_in_tech_sharing_group = japanese_research
+					}
+				}
+			}
+			JAP = {
+				add_to_tech_sharing_group = japanese_research
+			}
+		}
+		add_ideas = RJ_NZL_idea_new_zealand_likes_japan
+		JAP = {
+			add_ideas = RJ_NZL_idea_japan_likes_new_zealand
+		}
+	}
+}
+
+country_event = { #Alliance-positive Response for Appeal to the Emperor.
+	id = RJ_NZL.4b
+	title = "Japan Strengthens Formal Ties"
+	desc = RJ_NZL.4d_b
+	picture = GFX_report_event_japanese_reply
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Not the ideal outcome, but better than nothing."
+		ai_chance = {
+			base = 1
+		}
+		JAP = {
+			add_opinion_modifier = {
+				target = NZL
+				modifier = huge_increase
+			}
+			add_ideas = RJ_NZL_idea_japan_likes_new_zealand
+		}
+		NZL = {
+			add_opinion_modifier = {
+				target = JAP
+				modifier = huge_increase
+			}
+		}
+		add_ideas = RJ_NZL_idea_new_zealand_likes_japan
+	}
+}
+
+country_event = { #Alliance-positive Response for Appeal to the Emperor.
+	id = RJ_NZL.4c
+	title = "Japan Rejects our Appeal"
+	desc = RJ_NZL.4d_c
+	picture = GFX_report_event_japanese_reply
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Ah well, it was worth a shot."
+		ai_chance = {
+			base = 1
+		}
+		add_political_power = 25
 	}
 }

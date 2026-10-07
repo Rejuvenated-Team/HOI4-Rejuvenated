@@ -221,6 +221,7 @@ leader_traits = {
 		random = no
 		political_power_gain = 0.10
 		non_core_manpower = 0.05
+		neutrality_drift = 0.08
 	}
 
 	king_of_new_zealand = {
@@ -245,7 +246,7 @@ leader_traits = {
 	faith_healer = {
 		random = no
 		sprite = 13
-		weekly_casualties_war_support = 0.2
+		weekly_casualties_war_support = 0.01
 		casualty_trickleback = 0.15
 	}
 

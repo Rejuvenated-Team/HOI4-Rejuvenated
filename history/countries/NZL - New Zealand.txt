@@ -129,6 +129,7 @@ add_ideas = {
 	NZL_railways_board
 	NZL_great_depression
 	NZL_commonwealth_loyalty
+	RJ_island_nation
 }
 
 set_variable = { NZL_train_var = 40 }
