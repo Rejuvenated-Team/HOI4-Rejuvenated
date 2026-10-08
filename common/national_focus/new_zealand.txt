@@ -2864,7 +2864,7 @@
 	focus = {
 		id = NZL_the_first_labor_government
 		icon = GFX_focus_RJ_NZL_first_labour_government
-		x = 0
+		x = -5
 		y = 0
 
 		cost = 10
@@ -3207,7 +3207,7 @@
 		y = 1
 		relative_position_id = RJ_NZL_emergency_regulations
 
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -3487,7 +3487,7 @@
 
 	focus = {
 		id = RJ_NZL_a_king_for_all
-		icon = GFX_focus_RJ_NZL_reign_of_koroki
+		icon = GFX_focus_RJ_NZL_king_for_all
 		prerequisite = { focus = RJ_NZL_reign_of_koroki }
 		x = 4
 		y = 1
@@ -3564,7 +3564,7 @@
 
 	focus = {
 		id = RJ_NZL_increase_central_bank_control
-		icon = GFX_focus_PER_national_bank
+		icon = GFX_focus_RJ_NZL_central_bank_control
 		prerequisite = { focus = RJ_NZL_a_king_for_all }
 		x = -1
 		y = 1
@@ -3692,7 +3692,7 @@
 
 	focus = {
 		id = RJ_NZL_a_matter_of_formality
-		icon = GFX_focus_hun_elect_a_king
+		icon = GFX_focus_RJ_NZL_a_matter_of_formality
 		prerequisite = { focus = RJ_NZL_reign_of_koroki }
 		x = -1
 		y = 1
@@ -3795,7 +3795,7 @@
 
 	focus = {
 		id = RJ_NZL_proud_maori_traditions
-		icon = GFX_focus_hun_elect_a_king
+		icon = GFX_focus_RJ_NZL_proud_maori_traditions
 		prerequisite = { focus = RJ_NZL_a_matter_of_formality }
 		x = 0
 		y = 1
@@ -3818,7 +3818,7 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			
+			add_ideas = RJ_NZL_idea_proud_maori_traditions
 		}
 	}
 
@@ -3847,7 +3847,7 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			
+			add_ideas = RJ_NZL_idea_masters_of_the_sea
 		}
 	}
 
@@ -3876,7 +3876,24 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			
+			if = {
+				limit = {
+					has_idea = RJ_NZL_idea_proud_maori_traditions
+				}
+				swap_ideas = {
+					remove_idea = RJ_NZL_idea_proud_maori_traditions
+					add_idea = RJ_NZL_idea_proud_maori_traditions_terrain
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RJ_NZL_idea_proud_maori_traditions_tactical
+				}
+				swap_ideas = {
+					remove_idea = RJ_NZL_idea_proud_maori_traditions_tactical
+					add_idea = RJ_NZL_idea_proud_maori_traditions_tactical_terrain
+				}
+			}
 		}
 	}
 
@@ -3905,19 +3922,37 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			
+			if = {
+				limit = {
+					has_idea = RJ_NZL_idea_proud_maori_traditions
+				}
+				swap_ideas = {
+					remove_idea = RJ_NZL_idea_proud_maori_traditions
+					add_idea = RJ_NZL_idea_proud_maori_traditions_tactical
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RJ_NZL_idea_proud_maori_traditions_terrain
+				}
+				swap_ideas = {
+					remove_idea = RJ_NZL_idea_proud_maori_traditions_terrain
+					add_idea = RJ_NZL_idea_proud_maori_traditions_tactical_terrain
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = RJ_NZL_hand_to_hand_combat
 		icon = GFX_focus_RJ_NZL_hand_to_hand_combat
-		prerequisite = { focus = RJ_NZL_advanced_tactical_training focus = RJ_NZL_experts_in_terrain }
+		prerequisite = { focus = RJ_NZL_advanced_tactical_training }
+		prerequisite = { focus = RJ_NZL_experts_in_terrain }
 		x = -1
 		y = 1
 		relative_position_id = RJ_NZL_advanced_tactical_training
 
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -3934,13 +3969,16 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = RJ_NZL_idea_proud_maori_traditions_tactical_terrain
+				add_idea = RJ_NZL_idea_proud_maori_traditions_hand_to_hand
+			}
 		}
 	}
 
 	focus = {
 		id = RJ_NZL_hands_across_the_pacific
-		icon = GFX_focus_GER_sentinels_of_the_pacific
+		icon = GFX_focus_generic_western_pacific_agreement
 		prerequisite = { focus = RJ_NZL_masters_of_the_sea }
 		x = 0
 		y = 1
@@ -3963,19 +4001,64 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = RJ_NZL_idea_masters_of_the_sea
+				add_idea = RJ_NZL_idea_masters_of_the_sea_2
+			}
+			AST = {
+				add_opinion_modifier = {
+					target = NZL
+					modifier = large_increase
+				}
+			}
+			INS = {
+				add_opinion_modifier = {
+					target = NZL
+					modifier = large_increase
+				}
+			}
+			MAL = {
+				add_opinion_modifier = {
+					target = NZL
+					modifier = large_increase
+				}
+			}
+			JAP = {
+				add_opinion_modifier = {
+					target = NZL
+					modifier = large_increase
+				}
+			}
+			PHI = {
+				add_opinion_modifier = {
+					target = NZL
+					modifier = large_increase
+				}
+			}
+			CHI = {
+				add_opinion_modifier = {
+					target = NZL
+					modifier = large_increase
+				}
+			}
+			SIA = {
+				add_opinion_modifier = {
+					target = NZL
+					modifier = large_increase
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = RJ_NZL_put_out_the_call
-		icon = GFX_focus_GER_sentinels_of_the_pacific
+		icon = GFX_focus_generic_diverse_army
 		prerequisite = { focus = RJ_NZL_hands_across_the_pacific }
 		x = 1
 		y = 1
 		relative_position_id = RJ_NZL_hands_across_the_pacific
 
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -3992,13 +4075,16 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			
+			add_timed_idea = {
+				idea = RJ_NZL_idea_put_out_the_call
+				days = 500
+			}
 		}
 	}
 
 	focus = {
 		id = RJ_NZL_foment_anti_colonial_sentiments
-		icon = GFX_focus_GER_sentinels_of_the_pacific
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 		prerequisite = { focus = RJ_NZL_hands_across_the_pacific }
 		x = -1
 		y = 1
@@ -4021,7 +4107,16 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			
+			635 = {
+				add_state_modifier = {
+					modifier = { 
+						resistance_growth = 0.25
+						resistance_activity = 0.25
+						resistance_decay = -0.10
+						compliance_gain = -0.05
+					}
+				}
+			}
 		}
 	}
 
@@ -4051,7 +4146,23 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			
+			every_country = {
+				limit = {
+					OR = {
+						owns_state = 636
+						owns_state = 1072
+						owns_state = 643
+						owns_state = 642
+						owns_state = 727
+						owns_state = 630
+						owns_state = 629
+						owns_state = 641
+						owns_state = 270
+						owns_state = 948
+					}
+				}
+				country_event = RJ_NZL.5
+			}
 		}
 	}
 
@@ -4117,7 +4228,7 @@
 
 	focus = {
 		id = RJ_NZL_the_great_pacific_kingdom
-		icon = GFX_focus_PHI_second_philippine_republic
+		icon = GFX_focus_SOV_pacific_empire
 		prerequisite = { focus = RJ_NZL_our_philippine_brothers }
 		x = 0
 		y = 1
@@ -4335,11 +4446,11 @@
 		prerequisite = { focus = NZL_the_first_labor_government }
 		mutually_exclusive = { focus = NZL_statute_of_westminster }
 		mutually_exclusive = { focus = NZL_strengthen_the_commonwealth }
-		x = 13
+		x = 15
 		y = 1
 		relative_position_id = NZL_the_first_labor_government
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -4356,7 +4467,10 @@
 		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = NZL_first_labor_government
+				add_idea = RJ_NZL_first_labor_government_communist
+			}
 		}
 	}
 

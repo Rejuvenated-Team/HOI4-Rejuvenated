@@ -4,10 +4,10 @@ state = {
 	manpower = 578000
 
 	resources = {
-		coal = 4 # Represents the Iriomote and Utara coal mines (and quite a few more)
+		coal = 13 # Represents the Iriomote and Utara coal mines (and quite a few more)
 	}
 	
-	state_category = small_island
+	state_category = rural
 
 	history = {
 
@@ -54,5 +54,5 @@ state = {
 		1123 7115 10124 11932 
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 2.0 
 }

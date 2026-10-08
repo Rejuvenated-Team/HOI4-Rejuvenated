@@ -265,7 +265,7 @@ ideas = {
 			picture = generic_the_london_naval_treaty
 
 			modifier = {
-				industrial_capacity_dockyard = 0.20
+				industrial_capacity_dockyard = 0.25
 				production_speed_dockyard_factor = 0.10
 				production_speed_naval_base_factor = 0.10
 				production_speed_naval_supply_hub_factor = 0.10
@@ -961,6 +961,253 @@ ideas = {
 				production_speed_dockyard_factor = 0.10
 				production_speed_industrial_complex_factor = 0.15
 				political_power_cost = 0.10
+			}
+		}
+
+		RJ_NZL_idea_masters_of_the_sea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = liberty_ships_focus
+
+			modifier = {
+				naval_speed_factor = 0.15
+				industrial_capacity_dockyard = 0.25
+				navy_visibility = -0.10
+				naval_enemy_fleet_size_ratio_penalty_factor = 0.5
+				convoy_escort_efficiency = 0.15
+				naval_supply_consumption_factor = -0.10
+				positioning = 0.10
+				naval_invasion_penalty = -0.2
+			}
+
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+		}
+
+		RJ_NZL_idea_masters_of_the_sea_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = liberty_ships_focus
+
+			modifier = {
+				naval_speed_factor = 0.15
+				industrial_capacity_dockyard = 0.25
+				navy_visibility = -0.10
+				naval_enemy_fleet_size_ratio_penalty_factor = 0.5
+				convoy_escort_efficiency = 0.15
+				naval_supply_consumption_factor = -0.10
+				positioning = 0.10
+				naval_invasion_penalty = -0.2
+				weekly_manpower = 2000
+				non_core_manpower = 0.03
+				required_garrison_factor = -0.25
+			}
+
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+		}
+
+		RJ_NZL_idea_proud_maori_traditions = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = liberty_ships_focus
+
+			modifier = {
+				war_support_weekly_factor = 0.0025
+				weekly_bombing_war_support = 0.005
+				weekly_convoys_war_support = 0.005
+				training_time_army_factor = -0.10
+			}
+		}
+
+		RJ_NZL_idea_proud_maori_traditions_terrain = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = liberty_ships_focus
+
+			modifier = {
+				war_support_weekly_factor = 0.0025
+				weekly_bombing_war_support = 0.005
+				weekly_convoys_war_support = 0.005
+				training_time_army_factor = -0.10
+				terrain_penalty_reduction = 0.25
+				terrain_trait_xp_gain_factor = 0.25
+				army_core_defence_factor = 0.05
+			}
+		}
+
+		RJ_NZL_idea_proud_maori_traditions_tactical = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = liberty_ships_focus
+
+			modifier = {
+				war_support_weekly_factor = 0.0025
+				weekly_bombing_war_support = 0.005
+				weekly_convoys_war_support = 0.005
+				training_time_army_factor = -0.10
+				army_org_factor = 0.10
+				army_speed_factor = 0.15
+				army_org_regain = 0.15
+				army_attack_factor = 0.10
+				land_night_attack = 0.15
+			}
+		}
+
+		RJ_NZL_idea_proud_maori_traditions_tactical_terrain = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = liberty_ships_focus
+
+			modifier = {
+				war_support_weekly_factor = 0.0025
+				weekly_bombing_war_support = 0.005
+				weekly_convoys_war_support = 0.005
+				training_time_army_factor = -0.10
+				army_org_factor = 0.10
+				army_speed_factor = 0.15
+				army_org_regain = 0.15
+				army_attack_factor = 0.10
+				land_night_attack = 0.15
+				terrain_penalty_reduction = 0.25
+				terrain_trait_xp_gain_factor = 0.25
+				army_core_defence_factor = 0.05
+			}
+		}
+
+		RJ_NZL_idea_proud_maori_traditions_hand_to_hand = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = liberty_ships_focus
+
+			modifier = {
+				war_support_weekly_factor = 0.0025
+				weekly_bombing_war_support = 0.005
+				weekly_convoys_war_support = 0.005
+				training_time_army_factor = -0.10
+				army_org_factor = 0.10
+				army_speed_factor = 0.15
+				army_org_regain = 0.15
+				army_attack_factor = 0.15
+				land_night_attack = 0.15
+				terrain_penalty_reduction = 0.25
+				terrain_trait_xp_gain_factor = 0.25
+				army_core_defence_factor = 0.05
+				army_defence_factor = 0.10
+			}
+			
+		}
+
+		RJ_NZL_idea_put_out_the_call = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = prc_low_popular_support3
+
+			modifier = {
+				weekly_manpower = 3000
+				monthly_population = 2
+			}
+			
+		}
+
+		RJ_NZL_first_labor_government_communist = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = democratic
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_first_labour_government
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.02
+				industrial_capacity_factory = 0.02
+				industrial_capacity_dockyard = 0.02
+				political_power_gain = 0.15
+				communism_drift = 0.08
 			}
 		}
 	}

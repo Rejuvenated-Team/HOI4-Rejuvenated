@@ -9,7 +9,7 @@ state={
 			industrial_complex = 1
 			air_base = 1
 			1652 = {
-				naval_base = 1
+				naval_base = 4
 				coastal_bunker = 1
 
 			}
@@ -29,6 +29,6 @@ state={
 	}
 	manpower=317200
 	buildings_max_level_factor=1.000
-	state_category=rural
-	local_supplies=0.000
+	state_category = city
+	local_supplies = 6.000
 }

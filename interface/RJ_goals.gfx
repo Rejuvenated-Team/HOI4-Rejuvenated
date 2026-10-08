@@ -1487,4 +1487,24 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/nzl/RJ_NZL_hand_to_hand_combat.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_proud_maori_traditions"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_proud_maori_traditions.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_a_matter_of_formality"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_a_matter_of_formality.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_central_bank_control"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_central_bank_control.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_king_for_all"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_king_for_all.dds"
+	}
+
 }

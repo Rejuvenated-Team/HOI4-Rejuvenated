@@ -5,7 +5,7 @@ state = {
 	
 	state_category = city
 	resources = {
-		oil = 3
+		oil = 11
 	}
 
 	history = {
@@ -38,5 +38,5 @@ state = {
 		1117 9952 10015 10128 11930 11989 12007 
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 6.0 
 }

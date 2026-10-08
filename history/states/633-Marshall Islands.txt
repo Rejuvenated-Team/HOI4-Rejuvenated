@@ -3,7 +3,7 @@ state={
 	name="STATE_633"
 	manpower=11817
 	
-	state_category = small_island
+	state_category = rural
 
 	history={
 		owner = JAP
@@ -54,5 +54,5 @@ state={
 		1002 13039 13040 13041 13042 13043 13044 13045 13046 
 	}
 
-	local_supplies=0.0 
+	local_supplies=2.0 
 }

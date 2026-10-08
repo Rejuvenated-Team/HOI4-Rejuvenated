@@ -4,6 +4,10 @@ state = {
 	manpower = 7174000 # was 6174000
 	state_category = large_city
 
+	resources = {
+		steel = 2
+	}
+
 	history = {
 
 		owner = JAP
@@ -28,21 +32,11 @@ state = {
 			10125 25 # Nagoya
 		}
 
-		1939.1.1 = {
-			buildings = {
-				arms_factory = 2
-				industrial_complex = 3
-				10125 = {
-					air_facility = 1 # Mitsubishi Arnsenals 
-				}
-			}
-		}
-
 	}
 
 	provinces = {
 		4069 4172 7087 7157 7187 10100 10125 12072 12097 
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 8.0 
 }

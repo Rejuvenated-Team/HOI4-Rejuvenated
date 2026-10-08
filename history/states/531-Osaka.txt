@@ -3,9 +3,10 @@ state = {
 	id = 531
 	name = "STATE_531" # Kansai
 	manpower = 12015000 # was 11015000
-	state_category = metropolis
+	state_category = megalopolis
 	resources = {
-		aluminium = 3 # was: 6
+		steel = 3
+		coal = 5
 	}
 
 	history = {
@@ -55,5 +56,5 @@ state = {
 		1051 1067 1133 1136 4054 4142 7072 7113 9985 11960 12031 
 	}
 
-	local_supplies = 9.0 
+	local_supplies = 15.0 
 }

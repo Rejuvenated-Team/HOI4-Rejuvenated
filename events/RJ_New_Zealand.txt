@@ -200,7 +200,7 @@ country_event = { #Alliance-positive Response for Appeal to the Emperor.
 	}
 }
 
-country_event = { #Alliance-positive Response for Appeal to the Emperor.
+country_event = { #Mildly positive Response for Appeal to the Emperor.
 	id = RJ_NZL.4b
 	title = "Japan Strengthens Formal Ties"
 	desc = RJ_NZL.4d_b
@@ -230,7 +230,7 @@ country_event = { #Alliance-positive Response for Appeal to the Emperor.
 	}
 }
 
-country_event = { #Alliance-positive Response for Appeal to the Emperor.
+country_event = { #Negative response for Appeal to the Emperor.
 	id = RJ_NZL.4c
 	title = "Japan Rejects our Appeal"
 	desc = RJ_NZL.4d_c
@@ -244,5 +244,21 @@ country_event = { #Alliance-positive Response for Appeal to the Emperor.
 			base = 1
 		}
 		add_political_power = 25
+	}
+}
+
+country_event = { #Colonial Polynesian Demands
+	id = RJ_NZL.5
+	title = "Territorial Demands"
+	desc = RJ_NZL.5
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Ah well, it was worth a shot."
+		ai_chance = {
+			base = 1
+		}
 	}
 }
