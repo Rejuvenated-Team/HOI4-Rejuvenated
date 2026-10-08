@@ -18,7 +18,9 @@ state={
 			air_base = 10
 			6732 = {
 				naval_base = 8
-
+			}
+			715 = {
+				land_facility = 1
 			}
 
 		}

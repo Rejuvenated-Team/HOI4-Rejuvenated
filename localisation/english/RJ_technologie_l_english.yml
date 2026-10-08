@@ -117,3 +117,5 @@
  enhanced_rotation_mechanism_desc: ""
  gun_ramming_mechanism: "Gun Ramming Mechanism"
  gun_ramming_mechanism_desc: ""
+
+ motorized_engine_upgrade: "Engine"
