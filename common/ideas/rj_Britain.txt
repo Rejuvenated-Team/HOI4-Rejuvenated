@@ -1,6 +1,7 @@
 ideas = {
-	
+
 	country = {
+
 		military_training_act_idea = {
 			picture = AFG_adopt_nufus
 			
@@ -16,6 +17,30 @@ ideas = {
 			
 			modifier = {
 				conscription_factor = 0.15
+			}
+		}
+
+		ENG_secret_weapons_idea = {
+
+			picture = generic_rocket_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = { has_government = communism }
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				special_project_speed_factor = 0.10
+				scientist_breakthrough_bonus_factor = 0.05
+			}
+			research_bonus = {
+				rocketry = 0.25
+				nuclear = 0.25
 			}
 		}
 
@@ -56,6 +81,27 @@ ideas = {
 					build_cost_ic = -0.10
 					reliability = 0.05
 				}
+			}
+		}
+
+		ENG_mi6_no_lar_ns = {
+			removal_cost = -1
+
+			name = ENG_mi6_ns
+
+			picture = generic_spy_intel
+				
+			allowed = {
+				original_tag = ENG
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+					
+			modifier = {
+				encryption_factor = 0.15
+				decryption_factor = 0.15
 			}
 		}
 
@@ -435,14 +481,14 @@ ideas = {
 		}
 
 		ENG_god_save_the_king_idea = {
-			picture = RJ_idea_ENG_god_save_the_king
+			picture = RJ_ENG_god_save_the_king
 
 			allowed = {
 				always = no
 			}
 
 			allowed_civil_war = {
-				original_tag = ENG
+				always = yes
 			}
 
 			removal_cost = -1
@@ -454,14 +500,14 @@ ideas = {
 		}
 
 		ENG_god_save_the_king2_idea = {
-			picture = RJ_idea_ENG_god_save_the_king
+			picture = RJ_ENG_god_save_the_king
 
 			allowed = {
 				always = no
 			}
 
 			allowed_civil_war = {
-				original_tag = ENG
+				always = yes
 			}
 
 			removal_cost = -1
@@ -475,14 +521,14 @@ ideas = {
 		}
 
 		ENG_god_save_the_king3_idea = {
-			picture = RJ_idea_ENG_god_save_the_king
+			picture = RJ_ENG_god_save_the_king
 
 			allowed = {
 				always = no
 			}
 
 			allowed_civil_war = {
-				original_tag = ENG
+				always = yes
 			}
 
 			removal_cost = -1
@@ -498,14 +544,14 @@ ideas = {
 		}
 
 		ENG_god_save_the_king4_idea = {
-			picture = RJ_idea_ENG_god_save_the_king
+			picture = RJ_ENG_god_save_the_king
 
 			allowed = {
 				always = no
 			}
 
 			allowed_civil_war = {
-				original_tag = ENG
+				always = yes
 			}
 
 			removal_cost = -1
@@ -524,14 +570,14 @@ ideas = {
 		}
 
 		ENG_power_to_the_king_idea = {
-			picture = RJ_idea_ENG_god_save_the_king
+			picture = RJ_ENG_god_save_the_king
 
 			allowed = {
 				always = no
 			}
 
 			allowed_civil_war = {
-				original_tag = ENG
+				always = yes
 			}
 
 			removal_cost = -1
@@ -550,7 +596,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				original_tag = ENG
+				always = yes
 			}
 
 			removal_cost = -1
@@ -607,7 +653,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				original_tag = ENG
+				always = yes
 			}
 
 			removal_cost = -1
@@ -626,7 +672,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				original_tag = ENG
+				always = yes
 			}
 
 			removal_cost = -1
@@ -652,7 +698,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				original_tag = ENG
+				always = yes
 			}
 
 			removal_cost = -1
@@ -670,7 +716,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				original_tag = ENG
+				always = yes
 			}
 
 			removal_cost = -1

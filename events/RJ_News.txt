@@ -9,7 +9,7 @@ news_event = {
 	id = rj_news.1
 	title = rj_news.1.t
 	desc = rj_news.1.desc
-	picture = GFX_news_event_PLACEHOLDER
+	picture = GFX_ahmed_fuad_death
 
 	is_triggered_only = yes
 

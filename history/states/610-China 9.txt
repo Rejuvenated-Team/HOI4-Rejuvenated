@@ -3,11 +3,11 @@ state = {
 	name = "STATE_610" # Jehol
 	manpower = 1975377
 	
-	state_category = pastoral
+	state_category = rural
 
 	resources = {
 		oil = 1
-		coal = 1
+		coal = 27
 	}
 
 	history = {
@@ -35,5 +35,5 @@ state = {
 		814 881 934 972 3814 3828 3881 3934 3955 4514 6837 6852 6898 6937 6969 6988 7575 7633 9768 9873 9927 10331 10426 10499 11801 11855 11886 
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 1.0 
 }

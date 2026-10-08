@@ -255,7 +255,6 @@ POR_neutrality_monarchist_plan = {
 		POR_merchant_marine_protection
 		POR_standardization
 		POR_submarine_effort
-		POR_elastic_defense
 		POR_colonial_army
 
 		#1943
@@ -434,7 +433,6 @@ POR_communist_comintern_plan = {
 		#1940
 		POR_metropolitan_army
 		POR_standardization
-		POR_elastic_defense
 		POR_intervention_in_spain
 		POR_a_powerful_merchant_marine
 		#1941

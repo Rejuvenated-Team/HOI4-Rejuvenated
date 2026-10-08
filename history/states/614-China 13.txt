@@ -6,6 +6,7 @@ state={
 
 	resources = {
 		coal = 5 #initial distribution
+		steel = 15
 	}
 	
 	state_category = town
@@ -44,5 +45,5 @@ state={
 		1169 1188 4032 4093 4114 4190 4208 7000 7109 10022 10053 11944 11996 12062 
 	}
 
-	local_supplies=0.0 
+	local_supplies=2.0 
 }

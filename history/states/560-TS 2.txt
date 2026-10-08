@@ -4,15 +4,23 @@ state = {
 	name = "STATE_560" # Nikolayevsk
 	manpower = 97663
 	
-	state_category = rural
+	state_category = large_town
 	resources={
-		steel=18 # was: 24
+		coal = 7
+		aluminium = 4
 	}
 
 	history={
 		owner = SOV
+		victory_points = {
+			12559 2
+		}
 		buildings = {
 			infrastructure = 2
+			dockyard = 1
+			12559 = {
+				naval_base = 2
+			}
 		}
 		add_core_of = SOV
 		add_core_of = FER
@@ -22,5 +30,5 @@ state = {
 		1724 1772 1807 1842 3664 4290 4844 7748 7871 9659 10571 10577 10590 12559 12569 12638 
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 4.0 
 }

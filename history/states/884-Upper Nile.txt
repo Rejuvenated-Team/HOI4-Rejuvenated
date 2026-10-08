@@ -7,6 +7,11 @@ state = {
 	history = {
 		owner = EGY
 		add_core_of = SUD
+
+		victory_points = {
+			2096 1 
+		}
+		
 		buildings = {
 			infrastructure = 2
 

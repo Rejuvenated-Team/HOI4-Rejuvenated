@@ -1,8 +1,6 @@
 state = {
 	id = 1071
 	name = "STATE_1071"
-	resources = {
-	}
 	
 	state_category = small_island
 

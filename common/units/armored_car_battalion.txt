@@ -28,12 +28,12 @@ sub_units = {
 			armored_car_equipment = 60
 		}
 		manpower = 240
-		max_organisation = 20
+		max_organisation = 33
 		default_morale = 0.3
-		training_time = 150
+		training_time = 120
 		max_strength = 8
 		weight = 0.8
-		supply_consumption = 0.10
+		supply_consumption = 0.08
 
 		#WE GOOD AT SUPPRESS 
 		suppression = 3.0

@@ -10,11 +10,11 @@ state = {
 
 		owner = SOV
 		victory_points = {
-			1384 1
+			1384 3
 		}
 		buildings = {
-			infrastructure = 1
-
+			infrastructure = 2
+			industrial_complex = 1
 		}
 		add_core_of = SOV
 		add_core_of = TAJ
@@ -28,7 +28,16 @@ state = {
 	
 	manpower = 230000
 	buildings_max_level_factor = 1.000
-	state_category = wasteland
+	state_category = city
 
-	local_supplies = 0.0 
+	resources = {
+		oil = 2
+		coal = 17
+		steel = 3
+		chromium = 15
+		tungsten = 28
+		aluminium = 14
+	}
+
+	local_supplies = 6.0 
 }

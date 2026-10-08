@@ -1,8 +1,6 @@
 state={
 	id=1077
 	name="STATE_1077"
-	resources={
-	}
 	state_category=town
 	history={
 		owner = SIA

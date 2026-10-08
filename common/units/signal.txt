@@ -17,10 +17,13 @@ sub_units = {
 		
 		categories = {
 			category_support_battalions
+			category_divisional_support_battalions
 			category_army
 		}
 
 	
+
+		regimental = no
 		combat_width = 0
 	
 		#Size Definitions
@@ -37,6 +40,7 @@ sub_units = {
 		
 		# Important Ability
 		initiative = 0.1
+		breakthrough = 0.1
 		
 		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
 		
@@ -77,6 +81,7 @@ sub_units = {
 		
 		categories = {
 			category_support_battalions
+			category_divisional_support_battalions
 			category_tanks
 			category_all_armor
 			category_army
@@ -87,6 +92,9 @@ sub_units = {
 			breakthrough = 0.05
 		}
 
+	
+
+		regimental = no
 		combat_width = 0
 	
 		#Size Definitions

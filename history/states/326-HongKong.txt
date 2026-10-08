@@ -2,9 +2,8 @@ state={
 	id=326
 	name="STATE_326"
 	manpower = 1000516
-	state_category = large_town
-	history=
-	{
+	state_category = large_city
+	history = {
 		owner = ENG
 		add_core_of = CHI
 		add_core_of = PRC
@@ -12,8 +11,9 @@ state={
 			10062 3 
 		}
 		buildings = {
-			infrastructure = 3 #was: 5
+			infrastructure = 4
 			air_base = 1
+			industrial_complex = 1
 			10062 = {
 				naval_base = 6
 				coastal_bunker = 1
@@ -24,5 +24,5 @@ state={
 		10062
 	}
 
-	local_supplies=0.0 
+	local_supplies=15.0 
 }

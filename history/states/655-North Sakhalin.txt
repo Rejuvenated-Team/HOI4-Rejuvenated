@@ -5,12 +5,15 @@ state = {
 
 	resources = {
 		oil = 4
-		coal = 4 # These are part of hte Soviet oil and coal concessions of North Sakhalin to Japan
-		chromium = 1
+		coal = 4
 	}
 	
-	state_category = pastoral
+	state_category = rural
 	history = {
+
+		victory_points = {
+			855 1
+		}
 
 		owner = SOV
 		add_core_of = SOV
@@ -21,6 +24,9 @@ state = {
 		buildings = {
 			infrastructure = 2
 			air_base = 1
+			855 = {
+				naval_base = 1
+			}
 		}
 	}
 
@@ -28,5 +34,5 @@ state = {
 		855 1742 1755 
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 2.0 
 }

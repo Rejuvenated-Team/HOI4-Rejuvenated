@@ -4,9 +4,11 @@ state = {
 	name = "STATE_525"
 	manpower = 6961368 # was 14284105, divided by 3 is 4761368
 	
-	state_category = town
+	state_category = large_city
 
 	resources = {
+		coal = 20
+		steel = 15
 	}
 
 	history = {
@@ -15,12 +17,13 @@ state = {
 		add_core_of = KOR
 
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
 			arms_factory = 1
+			industrial_complex = 1
 		}
 
 		victory_points = {
-			7125 3 # Seoul/Keijō/Gyeongseong
+			7125 5 # Seoul/Keijō/Gyeongseong
 		}
 
 	}
@@ -29,5 +32,5 @@ state = {
 		1100 7125 7221 10036 
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 9.0 
 }

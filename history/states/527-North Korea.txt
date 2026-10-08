@@ -2,11 +2,13 @@ state = {
 	id = 527
 	name = "STATE_527"
 	manpower = 3979468 # was 6774200
-	state_category = town
+	state_category = city
 
 	resources = {
-		steel = 8 # was: 30
-		tungsten = 8 # was: 52 - moved 10 to South Korea and the Sangdong province
+		steel = 17
+		tungsten = 11
+		coal = 30
+		aluminium = 6
 	}
 
 	history = {
@@ -15,7 +17,7 @@ state = {
 		add_core_of = KOR
 
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
 			industrial_complex = 1
 			1003 = {
 				naval_base = 2
@@ -40,5 +42,5 @@ state = {
 		912 1003 3912 4052 4107 6963 7070 7155 7171 9790 9795 9918 9981 10065 11828 11835 11896 11915 12040 
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 6.0 
 }

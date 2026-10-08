@@ -6,6 +6,10 @@ state={
 	
 	state_category = large_city
 
+	resources = {
+		steel = 20
+	}
+
 	history = {
 
 		owner = CHI
@@ -63,5 +67,5 @@ state={
 		1134 4137 4140 6828 9843 9969 10068 11761 12026 
 	}
 
-	local_supplies=0.0 
+	local_supplies=10.0 
 }

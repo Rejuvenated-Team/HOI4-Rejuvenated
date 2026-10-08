@@ -182,9 +182,9 @@ country_event = { #Operation Hemingway
 				factor = 0
 			}
 		}
-		random_country = {
+		random_country_with_original_tag = {
+			original_tag_to_check = SPR
 			limit = {
-				original_tag = SPR
 				has_government = fascism
 			}
 			ROOT = {

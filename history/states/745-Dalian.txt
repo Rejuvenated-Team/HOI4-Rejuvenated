@@ -2,7 +2,7 @@ state = {
 	id = 745
 	name = "STATE_745"
 	manpower = 1034074 # was 1000000
-	state_category = large_town
+	state_category = city
 	history = {
 
 		owner = JAP
@@ -11,7 +11,7 @@ state = {
 		add_core_of = PRC
 
 		victory_points = {
-			1150 1 # Dalian
+			1150 3 # Dalian
 		}
 
 		buildings = {
@@ -33,5 +33,5 @@ state = {
 	}
 	buildings_max_level_factor = 1.000
 
-	local_supplies = 0.0 
+	local_supplies = 6.0 
 }

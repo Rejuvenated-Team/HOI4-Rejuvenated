@@ -4,9 +4,9 @@ state={
 	name="STATE_573" # Zlatoust
 	manpower = 556677
 	
-	state_category = pastoral
+	state_category = large_town
 	resources={
-		chromium=23 # was: 32
+		chromium=30
 	}
 
 	history={

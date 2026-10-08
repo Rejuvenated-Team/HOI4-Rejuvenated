@@ -5,10 +5,6 @@ state={
 	manpower = 16959758 
 	
 	state_category = town
-	
-	resources={
-
-	}
 
 	history={
 		owner = RAJ

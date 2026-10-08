@@ -1,9 +1,0 @@
-##########################
-# Argentina #
-##########################
-
-#militia
-animation = {
-	name = "ARG_militia_attack_stand_animation"
-	file = "ARG_militia_attack_stand_tommy.anim"
-}

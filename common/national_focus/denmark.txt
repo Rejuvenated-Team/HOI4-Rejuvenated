@@ -9500,7 +9500,6 @@ focus_tree = {
 						free_building_slots = {
 							building = fuel_silo
 							size > 0
-							include_locked = yes
 						}
 					}
 					prioritize = { 99 911 912 37 } 
@@ -9517,7 +9516,6 @@ focus_tree = {
 						free_building_slots = {
 							building = fuel_silo
 							size > 0
-							include_locked = yes
 						}
 					}
 					prioritize = { 911 99 912 37 } 

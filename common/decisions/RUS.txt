@@ -507,7 +507,7 @@ SOV_big_russian_empire_category = {
 							}
 						}
 					}
-					transfer_state = SOV
+					transfer_state = 188
 				}
 			}
 		}
