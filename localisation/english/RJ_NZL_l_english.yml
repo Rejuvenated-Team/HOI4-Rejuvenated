@@ -196,6 +196,8 @@
  RJ_NZL_idea_proud_maori_traditions_hand_to_hand: "Proud Māori Traditions"
  RJ_NZL_idea_put_out_the_call: "Put Out the Call"
  RJ_NZL_first_labor_government_communist: "First Labour Government"
+ RJ_NZL_idea_philippines_likes_new_zealand: "Pro-New Zealand"
+ RJ_NZL_idea_new_zealand_likes_philippines: "Pro-Philippines"
 
 
 
@@ -213,6 +215,16 @@
  RJ_NZL.1.d_a: "The United States government has agreed to give us American Samoa! This is a great day for us, as well as the Samoan peoples!"
  RJ_NZL.1.d_b: "The United States government has denied our offer for American Samoa. While unfortunate, we can also understand & respect their position."
  RJ_NZL.2d: "Now that we're officially a monarchy, we have a minor formality to decide upon: What shall our new identity be? The people are used to calling the country New Zealand, which has been the Anglicized name for the country for a few centuries now. However, the Māori have traditionally called this land Aotearoa, & the king is of Māori descent."
- RJ_NZL.3d: "[GetNameDef.NZL] has approached us, requesting an audience with the Emperor. They believe us to be most compatible with their own goals in the region, & wish to develop more formal relations, including a possible alliance, with us. This is rather unexpected, but not unwelcome, & opens up some possibilities for us. How shall we respond?"
+ RJ_NZL.3d: "[NZL.GetName] has approached us, requesting an audience with the Emperor. They believe us to be most compatible with their own goals in the region, & wish to develop more formal relations, including a possible alliance, with us. This is rather unexpected, but not unwelcome, & opens up some possibilities for us. How shall we respond?"
  RJ_NZL.4d_a: "The Japanese have approved of an alliance between our two countries, seeing great potential in it! This is a great day for both our countries."
  RJ_NZL.4d_c: "The Japanese have unfortunately turned down all appeals of friendship to them. Guess we'll have to go things alone."
+ RJ_NZL.5d: "[NZL.GetName] has sent us a demand for our pacific territories, insisting that it's their right to rule over all the peoples of Polynesia. They stipulate, however, that they understand our interests in the region, & have thusly offered to compensate us by giving us full naval access in the region. This would mean that, while we no longer control the territories, that we would be able to use any of the naval bases in the region."
+ RJ_NZL.5d_a: "[FROM.GetName] has ceded control of their territory to us!"
+ RJ_NZL.5d_b: "[FROM.GetName] has refused our generous offer in exchange for the territories that ought to belong to us!"
+ RJ_NZL.6d_a: "[FROM.GetName] has ceded control of their territory to us!"
+ RJ_NZL.6d_b: "[FROM.GetName] has refused our generous offer in exchange for the territories that ought to belong to us!"
+ RJ_NZL.7t: "[NZL.GetName] Proposes Closer Ties"
+ RJ_NZL.7d: "[NZL.GetName] has reached out to us with a startling proposal. They say that, because of our shared heritage in Asia & colonial roots, that they'd like to become closer with us. They've requested one of two potentials: Either combining under their current government & becoming one nation, or increased trade between us. Of course, they've said they'll also respect our wishes if we should prefer neither option. What shall we do?"
+ RJ_NZL.7d_a: "[PHI.GetName] has responded, having chosen to unite our peoples! This is a great day for [NZL.GetName]!"
+ RJ_NZL.7d_b: "[PHI.GetName] has responded, having chosen to strengthen ties between us with a new trade agreement!"
+ RJ_NZL.7d_c: "[PHI.GetName] has rejected both of our offers, choosing to maintain their distance from us. Of all the nerve!"

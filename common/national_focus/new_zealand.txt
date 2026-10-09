@@ -3442,6 +3442,17 @@
 				popularity = 0.2
 			}
 			add_stability = -0.05
+			if = {
+				limit = {
+					is_in_faction_with = ENG
+					ENG = {
+						NOT = {
+							has_government = neutrality
+						}
+					}
+				}
+				leave_faction = yes
+			}
 		}
 	}
 
@@ -3482,6 +3493,7 @@
 			set_rule = {
 				can_create_factions = yes
 			}
+			remove_ideas = NZL_first_labor_government
 		}
 	}
 
@@ -4163,6 +4175,23 @@
 				}
 				country_event = RJ_NZL.5
 			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 636
+						state = 1072
+						state = 643
+						state = 642
+						state = 727
+						state = 630
+						state = 629
+						state = 641
+						state = 270
+						state = 948
+					}
+				}
+				add_core_of = NZL
+			}
 		}
 	}
 
@@ -4192,7 +4221,60 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			
+			every_country = {
+				limit = {
+					OR = {
+						owns_state = 635
+						owns_state = 1071
+						owns_state = 734
+						owns_state = 639
+						owns_state = 725
+						owns_state = 633
+						owns_state = 631
+						owns_state = 632
+						owns_state = 684
+						owns_state = 638
+						owns_state = 646
+						owns_state = 647
+						owns_state = 634
+						owns_state = 1070
+						owns_state = 737
+						owns_state = 979
+						owns_state = 1073
+						owns_state = 523
+						owns_state = 669
+						owns_state = 1057
+					}
+				}
+				country_event = RJ_NZL.6
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 635
+						state = 1071
+						state = 734
+						state = 639
+						state = 725
+						state = 633
+						state = 631
+						state = 632
+						state = 684
+						state = 638
+						state = 646
+						state = 647
+						state = 634
+						state = 1070
+						state = 737
+						state = 979
+						state = 1073
+						state = 523
+						state = 669
+						state = 1057
+					}
+				}
+				add_core_of = NZL
+			}
 		}
 	}
 
@@ -4205,24 +4287,31 @@
 		y = 1
 		relative_position_id = RJ_NZL_demand_polynesian_colonial_territories
 
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
 		}
 
 		available = {
-			
+			PHI = {
+				exists = yes
+				has_capitulated = no
+			}
 		}
 
 		bypass = {
-
+			PHI = {
+				exists = no
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			
+			PHI = {
+				country_event = RJ_NZL.7
+			}
 		}
 	}
 

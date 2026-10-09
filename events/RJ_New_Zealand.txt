@@ -250,15 +250,331 @@ country_event = { #Negative response for Appeal to the Emperor.
 country_event = { #Colonial Polynesian Demands
 	id = RJ_NZL.5
 	title = "Territorial Demands"
-	desc = RJ_NZL.5
+	desc = RJ_NZL.5d
 	picture = GFX_report_event_generic_read_write
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "Ah well, it was worth a shot."
+		name = "As long as we can move our navies through."
+		ai_chance = {
+			base = 30
+		}
+		every_owned_state = {
+			limit = {
+				state = 636
+				state = 1072
+				state = 643
+				state = 642
+				state = 727
+				state = 630
+				state = 629
+				state = 641
+				state = 270
+				state = 948
+			}
+			transfer_state_to = NZL
+		}
+		diplomatic_relation = {
+			country = NZL
+			relation = docking_rights
+		}
+		NZL = {
+			country_event = RJ_NZL.5a
+		}
+	}
+
+	option = {
+		name = "All our territories are valuable to us!"
 		ai_chance = {
 			base = 1
+		}
+		NZL = {
+			country_event = RJ_NZL.5b
+		}
+	}
+}
+
+country_event = { #Territories ceded.
+	id = RJ_NZL.5a
+	title = "Territories Ceded"
+	desc = RJ_NZL.5d_a
+	picture = GFX_report_event_generic_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Excellent!"
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = { #Territories ceded.
+	id = RJ_NZL.5b
+	title = "Territorial Claims Denied"
+	desc = RJ_NZL.5d_b
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Drat! We'll take those territories one way or the other!"
+		ai_chance = {
+			base = 1
+		}
+		create_wargoal = {
+			target = FROM
+			type = take_core_state
+		}
+	}
+
+	option = {
+		name = "Not ideal, but can we really go to war over this?"
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = { #Colonial Micronesian + Miscellaneous Demands
+	id = RJ_NZL.6
+	title = "Territorial Demands"
+	desc = RJ_NZL.6d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "As long as we can move our navies through."
+		ai_chance = {
+			base = 30
+		}
+		every_owned_state = {
+			limit = {
+				state = 635
+				state = 1071
+				state = 734
+				state = 639
+				state = 725
+				state = 633
+				state = 631
+				state = 632
+				state = 684
+				state = 638
+				state = 646
+				state = 647
+				state = 634
+				state = 1070
+				state = 737
+				state = 979
+				state = 1073
+				state = 523
+				state = 669
+				state = 1057
+			}
+			transfer_state_to = NZL
+		}
+		diplomatic_relation = {
+			country = NZL
+			relation = docking_rights
+		}
+		NZL = {
+			country_event = RJ_NZL.6a
+		}
+	}
+
+	option = {
+		name = "All our territories are valuable to us!"
+		ai_chance = {
+			base = 1
+		}
+		NZL = {
+			country_event = RJ_NZL.6b
+		}
+	}
+}
+
+country_event = { #Territories ceded.
+	id = RJ_NZL.6a
+	title = "Territories Ceded"
+	desc = RJ_NZL.6d_a
+	picture = GFX_report_event_generic_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Excellent!"
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = { #Territories ceded.
+	id = RJ_NZL.6b
+	title = "Territorial Claims Denied"
+	desc = RJ_NZL.6d_b
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Drat! We'll take those territories one way or the other!"
+		ai_chance = {
+			base = 1
+		}
+		create_wargoal = {
+			target = FROM
+			type = take_core_state
+		}
+	}
+
+	option = {
+		name = "Not ideal, but can we really go to war over this?"
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = { #Philippine Brothers
+	id = RJ_NZL.7
+	title = RJ_NZL.7t
+	desc = RJ_NZL.7d
+	picture = GFX_report_event_generic_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Time itself can't split us apart!"
+		ai_chance = {
+			base = 20
+			modifier = {
+				PHI = {
+					has_government = communism
+				}
+				factor = 0.25
+			}
+			modifier = {
+				PHI = {
+					has_government = neutrality
+				}
+				factor = 2
+			}
+		}
+		NZL = {
+			annex_country = {
+				target = PHI
+			}
+			every_core_state = {
+				limit = {
+					is_core_of = PHI
+				}
+				add_core_of = NZL
+			}
+			country_event = RJ_NZL.7a
+		}
+		transfer_units_fraction = {
+			target = NZL
+			size = 1
+			stockpile_ratio = 1
+			army_ratio = 1
+			navy_ratio = 1
+			air_ratio = 1
+		}
+	}
+
+	option = {
+		name = "Some better trade ties would be nice!"
+		ai_chance = {
+			base = 4
+		}
+		PHI = {
+			add_opinion_modifier = {
+				target = NZL
+				modifier = huge_increase
+			}
+			add_ideas = RJ_NZL_idea_philippines_likes_new_zealand
+		}
+		NZL = {
+			add_opinion_modifier = {
+				target = PHI
+				modifier = huge_increase
+			}
+			add_ideas = RJ_NZL_idea_new_zealand_likes_philippines
+			country_event = RJ_NZL.7b
+		}
+	}
+
+	option = {
+		name = "No thanks, we're not interested."
+		ai_chance = {
+			base = 1
+		}
+
+		NZL = {
+			country_event = RJ_NZL.7c
+		}
+	}
+}
+
+country_event = { #Annexed Philippines
+	id = RJ_NZL.7a
+	title = "The Philippines Are Ours!"
+	desc = RJ_NZL.7d_a
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Time to move in!"
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = { #Trade Agreement PHI
+	id = RJ_NZL.7b
+	title = "A Trade Agreement!"
+	desc = RJ_NZL.7d_b
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "This will do quite nicely!"
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = { #PHI Rejects
+	id = RJ_NZL.7c
+	title = "We've Been Rejected"
+	desc = RJ_NZL.7d_c
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Ah well, it's not a big deal I suppose."
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	option = {
+		name = "How dare they?! We must over-react immediately!"
+		ai_chance = {
+			base = 1
+		}
+		create_wargoal = {
+			target = PHI
+			type = annex_everything
 		}
 	}
 }

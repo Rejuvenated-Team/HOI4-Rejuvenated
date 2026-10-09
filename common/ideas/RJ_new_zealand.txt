@@ -1046,6 +1046,7 @@ ideas = {
 				weekly_bombing_war_support = 0.005
 				weekly_convoys_war_support = 0.005
 				training_time_army_factor = -0.10
+				generate_wargoal_tension = -0.25
 			}
 		}
 
@@ -1071,6 +1072,7 @@ ideas = {
 				terrain_penalty_reduction = 0.25
 				terrain_trait_xp_gain_factor = 0.25
 				army_core_defence_factor = 0.05
+				generate_wargoal_tension = -0.25
 			}
 		}
 
@@ -1098,6 +1100,7 @@ ideas = {
 				army_org_regain = 0.15
 				army_attack_factor = 0.10
 				land_night_attack = 0.15
+				generate_wargoal_tension = -0.25
 			}
 		}
 
@@ -1128,6 +1131,7 @@ ideas = {
 				terrain_penalty_reduction = 0.25
 				terrain_trait_xp_gain_factor = 0.25
 				army_core_defence_factor = 0.05
+				generate_wargoal_tension = -0.25
 			}
 		}
 
@@ -1159,6 +1163,7 @@ ideas = {
 				terrain_trait_xp_gain_factor = 0.25
 				army_core_defence_factor = 0.05
 				army_defence_factor = 0.10
+				generate_wargoal_tension = -0.25
 			}
 			
 		}
@@ -1208,6 +1213,50 @@ ideas = {
 				industrial_capacity_dockyard = 0.02
 				political_power_gain = 0.15
 				communism_drift = 0.08
+			}
+		}
+
+		RJ_NZL_idea_philippines_likes_new_zealand = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = can_wartime_prices_and_trade_board
+
+			targeted_modifier = {
+				tag = NZL
+				trade_opinion_factor = 0.5
+				trade_cost_for_target_factor = 0.5
+				opinion_gain_monthly_factor = 1
+			}
+		}
+
+		RJ_NZL_idea_new_zealand_likes_philippines = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = can_wartime_prices_and_trade_board
+
+			targeted_modifier = {
+				tag = PHI
+				trade_opinion_factor = 0.5
+				trade_cost_for_target_factor = 0.5
+				opinion_gain_monthly_factor = 1
 			}
 		}
 	}
