@@ -173,4 +173,9 @@ spriteTypes = {
 		name = "GFX_rj_portrait_NZL_king_kokori"
 		texturefile = "gfx/leaders/NZL/rj_portrait_NZL_king_kokori.dds"
 	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_vic_wilcox"
+		texturefile = "gfx/leaders/NZL/rj_portrait_NZL_vic_wilcox.dds"
+	}
 }

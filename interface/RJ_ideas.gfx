@@ -646,4 +646,19 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_king_koroki.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_proud_maori_traditions"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_proud_maori_traditions.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_great_pacific_kingdom"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_great_pacific_kingdom.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_peoples_voice"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_peoples_voice.dds"
+	}
+
 }

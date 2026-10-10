@@ -5626,7 +5626,7 @@ leader_traits = {
 		random = no
 		sprite = 13
 		political_power_factor = 0.05
-		global_building_slots_factor = 0.1
+		global_building_slots_factor = 0.15
 		consumer_goods_factor = -0.10
 	}
 
@@ -14777,7 +14777,7 @@ leader_traits = {
 		sprite = 13
 		
 		consumer_goods_factor = -0.1
-		production_lack_of_resource_penalty_factor = -0.1
+		production_lack_of_resource_penalty_factor = -0.15
 
 	}
 

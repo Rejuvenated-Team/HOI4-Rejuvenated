@@ -576,5 +576,38 @@ country_event = { #PHI Rejects
 			target = PHI
 			type = annex_everything
 		}
+		every_core_state = {
+			limit = {
+				is_core_of = PHI
+			}
+			add_claim_by = NZL
+		}
+	}
+}
+
+country_event = { #Choose communist leader
+	id = RJ_NZL.8
+	title = "Who should lead us?"
+	desc = RJ_NZL.8d
+	picture = GFX_report_event_communist_leader
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Stick with Farrelly"
+		ai_chance = {
+			base = 1
+		}
+		add_political_power = 25
+	}
+
+	option = {
+		name = "Vic Wilcox is a better leader!"
+		ai_chance = {
+			base = 1
+		}
+		NZL_vic_wilcox = {
+			promote_character = yes
+		}
 	}
 }

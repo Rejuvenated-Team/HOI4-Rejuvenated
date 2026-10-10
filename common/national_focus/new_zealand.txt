@@ -3300,8 +3300,8 @@
 	focus = {
 		id = RJ_NZL_maori_housing_amendment_act
 		icon = GFX_focus_SWE_hygienic_housing
-		prerequisite = { focus = RJ_NZL_ratana_alliance }
-		x = 1
+		prerequisite = { focus = RJ_NZL_ratana_alliance focus = RJ_NZL_appeal_to_the_maori_population }
+		x = 2
 		y = 1
 		relative_position_id = RJ_NZL_ratana_alliance
 
@@ -3481,18 +3481,20 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			set_party_name = {
-				ideology = neutrality
-				long_name = "Maori Kingship"
-				name = "Maori Kingship"
-			}
 			promote_character = {
 				character = RJ_NZL_king_koroki
 				ideology = monarchy
 			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+				long_name = "Maori Kingship"
+				name = "Maori Kingship"
+			}
 			set_rule = {
 				can_create_factions = yes
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			remove_ideas = NZL_first_labor_government
 		}
 	}
@@ -4119,13 +4121,46 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			635 = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 636
+						state = 1072
+						state = 643
+						state = 642
+						state = 727
+						state = 630
+						state = 629
+						state = 641
+						state = 270
+						state = 948
+						state = 635
+						state = 1071
+						state = 734
+						state = 639
+						state = 725
+						state = 633
+						state = 631
+						state = 632
+						state = 684
+						state = 638
+						state = 646
+						state = 647
+						state = 634
+						state = 1070
+						state = 737
+						state = 979
+						state = 1073
+						state = 523
+						state = 669
+						state = 1057
+					}
+				}
 				add_state_modifier = {
 					modifier = { 
-						resistance_growth = 0.25
+						resistance_growth = 0.15
 						resistance_activity = 0.25
-						resistance_decay = -0.10
-						compliance_gain = -0.05
+						compliance_gain = -0.10
 					}
 				}
 			}
@@ -4317,13 +4352,13 @@
 
 	focus = {
 		id = RJ_NZL_the_great_pacific_kingdom
-		icon = GFX_focus_SOV_pacific_empire
+		icon = GFX_focus_RJ_NZL_great_pacific_kingdom
 		prerequisite = { focus = RJ_NZL_our_philippine_brothers }
 		x = 0
 		y = 1
 		relative_position_id = RJ_NZL_our_philippine_brothers
 
-		cost = 7.2
+		cost = 10
 
 		ai_will_do = {
 			factor = 25
@@ -4340,7 +4375,7 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			
+			add_ideas = RJ_NZL_idea_great_pacific_kingdom
 		}
 	}
 
@@ -4546,7 +4581,7 @@
 		}
 
 		available = {
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
+			
 		}
 
 		bypass = {
@@ -4559,6 +4594,149 @@
 			swap_ideas = {
 				remove_idea = NZL_first_labor_government
 				add_idea = RJ_NZL_first_labor_government_communist
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_appeal_to_the_maori_population
+		icon = GFX_focus_generic_spur_communist_revolutions
+		prerequisite = { focus = RJ_NZL_seek_out_labour_sympathizers }
+		x = -2
+		y = 1
+		relative_position_id = RJ_NZL_seek_out_labour_sympathizers
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_increase_distribution_of_the_peoples_voice
+		icon = GFX_focus_RJ_NZL_seek_labour_sympathizers
+		prerequisite = { focus = RJ_NZL_seek_out_labour_sympathizers }
+		x = 1
+		y = 1
+		relative_position_id = RJ_NZL_seek_out_labour_sympathizers
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = RJ_NZL_idea_the_peoples_voice
+				days = 365
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_rally_the_unions
+		icon = GFX_focus_AUS_union_of_danubian_socialist_republics
+		prerequisite = { focus = RJ_NZL_increase_distribution_of_the_peoples_voice }
+		prerequisite = { focus = RJ_NZL_appeal_to_the_maori_population }
+		x = -1
+		y = 1
+		relative_position_id = RJ_NZL_increase_distribution_of_the_peoples_voice
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RJ_NZL_first_labor_government_communist
+				add_idea = RJ_NZL_first_labor_government_communist_2
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_irrelevant_no_more
+		icon = GFX_focus_RJ_NZL_irrelevant_no_more
+		prerequisite = { focus = RJ_NZL_rally_the_unions }
+		x = 0
+		y = 1
+		relative_position_id = RJ_NZL_rally_the_unions
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			communism > 0.49
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			set_rule = {
+				can_create_factions = yes
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			swap_ideas = {
+				remove_idea = RJ_NZL_first_labor_government_communist_2
+				add_idea = RJ_NZL_idea_first_communist_government
+			}
+			add_stability = -0.15
+			country_event = RJ_NZL.8
+			set_autonomy = {
+				target = NZL
+				autonomy_state = autonomy_free
 			}
 		}
 	}

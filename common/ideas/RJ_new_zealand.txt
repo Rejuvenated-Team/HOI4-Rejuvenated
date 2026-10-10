@@ -361,7 +361,7 @@ ideas = {
 					instant = yes
 				}
 				mio_cat_eq_all_cruiser = {
-					build_cost_ic = -0.10
+					build_cost_ic = -0.15
 					naval_speed = 0.10
 					reliability = 0.05
 					instant = yes
@@ -390,6 +390,8 @@ ideas = {
 			equipment_bonus = {
 				mio_cat_eq_all_ships_no_convoys = {
 					mines_sweeping = 0.15
+					mines_planting = 0.10
+					instant = yes
 				}
 			}
 		}
@@ -854,7 +856,7 @@ ideas = {
 			picture = por_monarchist_uprising
 
 			modifier = {
-				neutrality_drift = 0.10
+				neutrality_drift = 0.12
 			}
 		}
 
@@ -1039,7 +1041,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = liberty_ships_focus
+			picture = RJ_idea_NZL_proud_maori_traditions
 
 			modifier = {
 				war_support_weekly_factor = 0.0025
@@ -1062,7 +1064,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = liberty_ships_focus
+			picture = RJ_idea_NZL_proud_maori_traditions
 
 			modifier = {
 				war_support_weekly_factor = 0.0025
@@ -1088,7 +1090,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = liberty_ships_focus
+			picture = RJ_idea_NZL_proud_maori_traditions
 
 			modifier = {
 				war_support_weekly_factor = 0.0025
@@ -1116,7 +1118,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = liberty_ships_focus
+			picture = RJ_idea_NZL_proud_maori_traditions
 
 			modifier = {
 				war_support_weekly_factor = 0.0025
@@ -1147,7 +1149,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = liberty_ships_focus
+			picture = RJ_idea_NZL_proud_maori_traditions
 
 			modifier = {
 				war_support_weekly_factor = 0.0025
@@ -1187,33 +1189,6 @@ ideas = {
 				monthly_population = 2
 			}
 			
-		}
-
-		RJ_NZL_first_labor_government_communist = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
-
-			removal_cost = -1
-
-			picture = RJ_idea_NZL_first_labour_government
-
-			modifier = {
-				consumer_goods_factor = -0.05
-				production_factory_efficiency_gain_factor = 0.02
-				industrial_capacity_factory = 0.02
-				industrial_capacity_dockyard = 0.02
-				political_power_gain = 0.15
-				communism_drift = 0.08
-			}
 		}
 
 		RJ_NZL_idea_philippines_likes_new_zealand = {
@@ -1257,6 +1232,145 @@ ideas = {
 				trade_opinion_factor = 0.5
 				trade_cost_for_target_factor = 0.5
 				opinion_gain_monthly_factor = 1
+			}
+		}
+
+		RJ_NZL_idea_great_pacific_kingdom = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_great_pacific_kingdom
+
+			modifier = {
+				industrial_capacity_dockyard = 0.25
+				army_core_defence_factor = 0.15
+				global_building_slots_factor = 0.20
+				conscription = 0.03
+				naval_invasion_penalty = -0.10
+				naval_invasion_prep_speed = 0.25
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_ships_no_convoys = {
+					build_cost_ic = -0.2
+					reliability_factor = 0.1
+					instant = yes
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+		}
+
+		RJ_NZL_first_labor_government_communist = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = democratic
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_first_labour_government
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.02
+				industrial_capacity_factory = 0.02
+				industrial_capacity_dockyard = 0.02
+				political_power_gain = 0.15
+				communism_drift = 0.08
+			}
+		}
+
+		RJ_NZL_first_labor_government_communist_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = democratic
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_first_labour_government
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_factory = 0.08
+				industrial_capacity_dockyard = 0.08
+				political_power_gain = 0.15
+				communism_drift = 0.15
+			}
+		}
+
+		RJ_NZL_idea_first_communist_government = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+
+			modifier = {
+				industrial_capacity_factory = 0.08
+				industrial_capacity_dockyard = 0.08
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+				line_change_production_efficiency_factor = 0.10
+				consumer_goods_factor = -0.05
+				communism_drift = 0.08
+			}
+
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+
+		RJ_NZL_idea_the_peoples_voice = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_peoples_voice
+
+			modifier = {
+				communism_drift = 0.05
+				political_power_gain = 0.10
 			}
 		}
 	}

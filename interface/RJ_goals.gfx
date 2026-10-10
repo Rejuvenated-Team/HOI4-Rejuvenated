@@ -1507,4 +1507,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/nzl/RJ_NZL_king_for_all.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_great_pacific_kingdom"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_great_pacific_kingdom.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_irrelevant_no_more"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_irrelevant_no_more.dds"
+	}
+
 }

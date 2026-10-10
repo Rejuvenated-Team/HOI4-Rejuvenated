@@ -801,6 +801,15 @@ characters={
 			army={
 				small="GFX_rj_portrait_NZL_vic_wilcox_small"
 			}
+			civilian = {
+				large = "GFX_rj_portrait_NZL_vic_wilcox"
+			}
+		}
+		country_leader={
+			ideology = stalinism
+			expire="1965.1.1.1"
+			traits = { soviet_economist }
+			id=-1
 		}
 		advisor={
 			slot = political_advisor
@@ -810,6 +819,9 @@ characters={
 			}
 			available = { 
 				has_government = communism
+				NOT = {
+					is_country_leader = yes
+				}
 			}
 			traits  = {
 				soviet_economist

@@ -142,6 +142,14 @@
  RJ_NZL_the_great_pacific_kingdom_desc: "With all of the territories of Polynesia, Micronesia, & the Philippines squarely in our control, we can proclaim a great Pacific Kingdom!"
  RJ_NZL_increase_technology_sharing: "Increase Technology Sharing"
  RJ_NZL_increase_technology_sharing_desc: "Increasing the amount of technology we directly share with Japan will help both our nations to make more rapid advancements."
+ RJ_NZL_appeal_to_the_maori_population: "Appeal to the Māori Population"
+ RJ_NZL_appeal_to_the_maori_population_desc: "The Māori already feel largely disenfranchised by the government, making them lean in our direction. We can appeal to their population with promises of assistance & recognition if we take power, & on a level the Labour government would never agree to."
+ RJ_NZL_increase_distribution_of_the_peoples_voice: "Increase Distribution of The People's Voice"
+ RJ_NZL_increase_distribution_of_the_peoples_voice_desc: "The People's Voice has been a newspaper produced & distributed by the party for some years now, serving as a way to get our message out. Increasing the distribution of it should help to spread our cause."
+ RJ_NZL_rally_the_unions: "Rally the Unions"
+ RJ_NZL_rally_the_unions_desc: "Unions are a powerful force for workers, & they have a great deal of political sway. If we rally them to our side, we'll finally have the influence we need!"
+ RJ_NZL_irrelevant_no_more: "Irrelevant No More!"
+ RJ_NZL_irrelevant_no_more_desc: "For a long time we've been considered irrelevant by the nation, & by the world. Today, we become irrelevant no more! Now, we take control."
 
 
  ##################################################
@@ -196,8 +204,12 @@
  RJ_NZL_idea_proud_maori_traditions_hand_to_hand: "Proud Māori Traditions"
  RJ_NZL_idea_put_out_the_call: "Put Out the Call"
  RJ_NZL_first_labor_government_communist: "First Labour Government"
+ RJ_NZL_first_labor_government_communist_2: "First Labour Government"
  RJ_NZL_idea_philippines_likes_new_zealand: "Pro-New Zealand"
  RJ_NZL_idea_new_zealand_likes_philippines: "Pro-Philippines"
+ RJ_NZL_idea_great_pacific_kingdom: "Great Pacific Kingdom"
+ RJ_NZL_idea_first_communist_government: "First Communist Government"
+ RJ_NZL_idea_the_peoples_voice: "The People's Voice"
 
 
 
@@ -228,3 +240,4 @@
  RJ_NZL.7d_a: "[PHI.GetName] has responded, having chosen to unite our peoples! This is a great day for [NZL.GetName]!"
  RJ_NZL.7d_b: "[PHI.GetName] has responded, having chosen to strengthen ties between us with a new trade agreement!"
  RJ_NZL.7d_c: "[PHI.GetName] has rejected both of our offers, choosing to maintain their distance from us. Of all the nerve!"
+ RJ_NZL.8d: "We've never decided on formal party leadership. At present, Elsey Farrelly has taken up a leadership role, but she isn't necessarily the only option. Another strong communist leader is Vic Wilcox, who has strong industrial & Soviet ties. Shall we keep Farrelly, or shall we empower Wilcox instead?"
