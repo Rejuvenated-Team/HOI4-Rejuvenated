@@ -1,0 +1,36 @@
+division_template = {
+    name = "Force de Défense Française de l'Afrique Occidentale"
+    divison_names_group = "FWA_INF_01"
+    
+    regiments = {
+        infantry = { x = 0 y = 0}
+        infantry = {x = 0 y = 1}
+        infantry = {x = 1 y = 0}
+        infantry = { x = 1 y = 1}
+    }
+}
+
+units = {
+    #### Infantry ####
+    division = {
+        name = "1ère Division de l'Armée d'Afrique Occidentale"
+        location = 4948 #Dakar
+        division_template = "Force de Défense Française de l'Afrique Occidentale"
+        start_experience_factor = 0.5
+        start_equipment_factor = 0.5
+    }
+    division = {
+        name = "2e Division de l'Armée d'Afrique Occidentale"
+        location = 4948 #Dakar
+        division_template = "Force de Défense Française de l'Afrique Occidentale"
+        start_experience_factor = 0.5
+        start_equipment_factor = 0.5
+    }
+    division = {
+        name = "3e Division de l'Armée d'Afrique Occidentale"
+        location = 10803 #Ivory Coast
+        division_template = "Force de Défense Française de l'Afrique Occidentale"
+        start_experience_factor = 0.5
+        start_equipment_factor = 0.5
+    }
+}

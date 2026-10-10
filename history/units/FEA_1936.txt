@@ -1,0 +1,36 @@
+division_template = {
+    name = "Forces Françaises d'Afrique Équatoriale"
+    division_names_group = "FEA_INF_01"
+
+    regiments = {
+        infantry = { x = 0 y = 0}
+        infantry = {x = 0 y = 1}
+        infantry = {x = 1 y = 0}
+        infantry = { x = 1 y = 1}
+    }
+}
+
+units = {
+    ### Infantry ###
+    division = {
+        name = "1ère Division de l'Armée d'Afrique Équatoriale"
+        location = 8193 #Brazzaville
+        division_template = "Forces Françaises d'Afrique Équatoriale"
+        start_experience_factor = 0.5
+        start_equipment_factor = 0.5
+    }
+    division = {
+        name = "2e Division de l'Armée d'Afrique Équatoriale"
+        location = 8193 #Brazzaville
+        division_template = "Forces Françaises d'Afrique Équatoriale"
+        start_experience_factor = 0.5
+        start_equipment_factor = 0.5
+    }
+    division = {
+        name = "3e Division de l'Armée d'Afrique Équatoriale"
+        location = 8193 #Brazzaville
+        division_template = "Forces Françaises d'Afrique Équatoriale"
+        start_experience_factor = 0.5
+        start_equipment_factor = 0.5
+    }
+}

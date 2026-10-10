@@ -2,6 +2,12 @@
 
 ETH_set_up_lon_arms_resolution_effect = yes 
 
+set_autonomy = {
+	target = IAL
+	autonomous_state = autonomy_dominion
+	freedom_level = 0.5
+}
+
 if = {
 	limit = {
 		NOT = {

@@ -1273,3 +1273,28 @@ FRI = {
 	color = rgb { 51 153 255 }
 	color_ui = rgb { 51 153 255 }
 }
+
+IAL = {
+	color = rgb { 67 127 63 }
+	color_ui = rgb { 87 165 82 }
+}
+
+SYM = {
+	color = rgb { 57 113 228 }
+	color_ui = rgb { 74 147 255 }
+}
+
+FPT = {
+	color = rgb { 57 113 228 }
+	color_ui = rgb { 74 147 255 }
+}
+
+FWA = {
+	color = rgb { 57 113 228 }
+	color_ui = rgb { 74 147 255 }
+}
+
+FEA = {
+	color = rgb { 57 113 228 }
+	color_ui = rgb { 74 147 255 }
+}

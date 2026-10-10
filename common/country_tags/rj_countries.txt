@@ -1,6 +1,11 @@
 #Africa
 SMR = "countries/Spanish Morocco.txt"
+IAL = "countries/Italian Libya.txt"
+FWA = "countries/French West Africa.txt"
+FPT = "countries/French Protectorate of Tunisia.txt"
+FEA = "countries/French Equatorial Africa.txt"
 
 #Asia
 XIK = "countries/Xikang Clique.txt"
 FRI = "countries/French Indochina.txt"
+SYM = "countries/Syrian Mandate.txt"

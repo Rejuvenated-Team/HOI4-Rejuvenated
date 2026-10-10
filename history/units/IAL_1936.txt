@@ -1,0 +1,77 @@
+division_template = {
+    name = "Divisione dei Difensori dell'Africa"
+    division_names_group = "IAL_INF_01"
+
+    regiments = {
+        infantry = { x = 0 y = 0}
+        infantry = { x = 0 y = 1}
+        infantry = { x = 0 y = 2}
+        infantry = { x = 1 y = 0}
+        infantry = { x = 1 y = 1}
+        infantry = { x = 1 y = 2}
+    }
+
+    support = {
+        engineer = { x = 0 y = 0}
+    }
+}
+
+division_template = {
+    name = "Cavalleria dei Grandi Soldati d'Africa"
+    division_names_group = "IAL_CAV_01"
+
+    regiments = {
+        cavalry = { x = 0 y = 0}
+        cavalry = { x = 0 y = 1}
+        cavalry = { x = 1 y = 0}
+        cavalry = { x = 1 y = 1}
+    }
+}
+
+
+units = {
+    #### Infantry ####
+    division = {
+        name = "1a Divisione di Fanteria dell'Africa italiana"
+        location = 1149 #Tripoli
+        division_template = "Divisione dei Difensori dell'Africa"
+        start_experience_factor = 0.5
+        start_equipment_factor = 0.5
+    }
+    division = {
+        name = "2a Divisione di Fanteria dell'Africa italiana"
+        location = 1149 #Tripoli
+        division_template = "Divisione dei Difensori dell'Africa"
+        start_experience_factor = 0.5
+        start_equipment_factor = 0.5
+    }
+    division = {
+        name = "3a Divisione di Fanteria dell'Africa italiana"
+        location = 1149 #Tripoli
+        division_template = "Divisione dei Difensori dell'Africa"
+        start_experience_factor = 0.5
+        start_equipment_factor = 0.5
+    }
+    division ={
+        name = "4a Divisione di Fanteria dell'Africa italiana"
+        location = 11954 #Bengasi
+        division_template = "Divisione dei Difensori dell'Africa"
+        start_experience_factor = 0.5
+        start_equipment_factor = 0.5
+    }
+    ### Cavalry ###
+    division = {
+        name = "1a Divisione di Cavalleria dell'Africa italiana"
+        location = 1130 #Tobruk
+        division_template = "Cavalleria dei Grandi Soldati d'Africa"
+        start_experience_factor = 0.5
+        start_equipment_factor = 0.5
+    }
+    division = {
+        name = "2a Divisione di Cavalleria dell'Africa italiana"
+        location = 1130 #Tobruk
+        division_template = "Cavalleria dei Grandi Soldati d'Africa"
+        start_experience_factor = 0.5
+        start_equipment_factor = 0.5
+    }
+}
