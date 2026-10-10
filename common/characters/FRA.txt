@@ -61,7 +61,7 @@ characters={
 				original_tag  = FRA
 			}
 			available  = {
-				has_completed_focus = FRA_soutien_cum_participation 
+				has_completed_focus = rj_FRA_soutien_cum_participation 
 				not  = {
 					has_country_leader  = {
 						character  = FRA_philippe_petain

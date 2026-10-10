@@ -1761,13 +1761,13 @@
 	}
 
 	focus = {
-		id = FRA_soutien_cum_participation
+		id = rj_FRA_soutien_cum_participation
 		icon = GFX_goal_support_communism
 		x = -3
-		y = 1
-		
+		y = 8
+
 		relative_position_id = FRA_form_the_popular_front
-		
+
 		allow_branch = {
 			if = {
 				limit = {
@@ -1784,7 +1784,6 @@
 		}
 
 		prerequisite = { focus = FRA_form_the_popular_front }
-		mutually_exclusive = { }
 		cost = 5
 
 		ai_will_do = {
@@ -1825,6 +1824,320 @@
 					mark_focus_tree_layout_dirty = yes
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = rj_FRA_cpf_permiership
+		icon = GFX_goal_support_communism
+		x = -2
+		y = 1
+
+		relative_position_id = rj_FRA_soutien_cum_participation
+
+		prerequisite = { focus = rj_FRA_soutien_cum_participation }
+		mutually_exclusive = { focus = rj_FRA_cgt_permiership }
+		cost = 5
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = rj_FRA_begin_the_process_of_centralization
+		icon = GFX_goal_support_communism
+		x = -1
+		y = 1
+
+		relative_position_id = rj_FRA_cpf_permiership
+
+		prerequisite = { focus = rj_FRA_cpf_permiership }
+		cost = 5
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = rj_FRA_establish_political_commissars
+		icon = GFX_goal_support_communism
+		x = -2
+		y = 2
+
+		relative_position_id = rj_FRA_begin_the_process_of_centralization
+
+		prerequisite = { focus = rj_FRA_begin_the_process_of_centralization }
+		cost = 5
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = rj_FRA_means_to_the_end
+		icon = GFX_goal_support_communism
+		x = -1
+		y = 1
+
+		relative_position_id = rj_FRA_begin_the_process_of_centralization
+
+		prerequisite = { focus = rj_FRA_begin_the_process_of_centralization }
+		cost = 5
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = rj_FRA_le_robespierre_rouge
+		icon = GFX_goal_support_communism
+		x = 1
+		y = 1
+
+		relative_position_id = rj_FRA_means_to_the_end
+
+		prerequisite = { focus = rj_FRA_means_to_the_end focus = rj_FRA_cartelization_of_the_paysan_class }
+		cost = 5
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = rj_FRA_terror_by_book
+		icon = GFX_goal_support_communism
+		x = 0
+		y = 2
+
+		relative_position_id = rj_FRA_means_to_the_end
+
+		prerequisite = { focus = rj_FRA_means_to_the_end }
+		cost = 5
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = rj_FRA_le_fils_du_peuple
+		icon = GFX_goal_support_communism
+		x = 1
+		y = 1
+
+		relative_position_id = rj_FRA_terror_by_book
+
+		prerequisite = { focus = rj_FRA_terror_by_book focus = rj_FRA_nationalization_by_attrition }
+		cost = 5
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = rj_FRA_merge_the_internal_security_services
+		icon = GFX_goal_support_communism
+		x = 0
+		y = 2
+
+		relative_position_id = rj_FRA_terror_by_book
+
+		prerequisite = { focus = rj_FRA_terror_by_book }
+		cost = 5
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = rj_FRA_cartelization_of_the_paysan_class
+		icon = GFX_goal_support_communism
+		x = 1
+		y = 1
+
+		relative_position_id = rj_FRA_begin_the_process_of_centralization
+
+		prerequisite = { focus = rj_FRA_begin_the_process_of_centralization }
+		cost = 5
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = rj_FRA_nationalization_by_attrition
+		icon = GFX_goal_support_communism
+		x = 0
+		y = 2
+
+		relative_position_id = rj_FRA_cartelization_of_the_paysan_class
+
+		prerequisite = { focus = rj_FRA_cartelization_of_the_paysan_class }
+		cost = 5
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = rj_FRA_codify_production_quotas
+		icon = GFX_goal_support_communism
+		x = 0
+		y = 2
+
+		relative_position_id = rj_FRA_nationalization_by_attrition
+
+		prerequisite = { focus = rj_FRA_nationalization_by_attrition }
+		cost = 5
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = rj_FRA_cgt_permiership
+		icon = GFX_goal_support_communism
+		x = 2
+		y = 1
+
+		relative_position_id = rj_FRA_soutien_cum_participation
+
+		prerequisite = { focus = rj_FRA_soutien_cum_participation }
+		mutually_exclusive = { focus = rj_FRA_cpf_permiership }
+		cost = 5
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
 		}
 	}
 
@@ -2539,7 +2852,7 @@
 					}
 				}
 				NOT = {
-					has_completed_focus = FRA_soutien_cum_participation
+					has_completed_focus = rj_FRA_soutien_cum_participation
 					has_completed_focus = FRA_utilize_the_leagues
 				}
 			}
@@ -2563,7 +2876,7 @@
 		available = {
 			NOT = {
 				OR = {
-					has_completed_focus = FRA_soutien_cum_participation
+					has_completed_focus = rj_FRA_soutien_cum_participation
 					has_completed_focus = FRA_utilize_the_leagues
 				}
 			}
@@ -7380,7 +7693,7 @@
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
-				has_completed_focus = FRA_soutien_cum_participation
+				has_completed_focus = rj_FRA_soutien_cum_participation
 			}
 		}
 		offset = {

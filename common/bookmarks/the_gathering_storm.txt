@@ -35,7 +35,7 @@ bookmarks = {
 				FRA_protected_by_the_maginot_line
 			}
 			focuses = {
-				FRA_soutien_cum_participation
+				rj_FRA_soutien_cum_participation
 				FRA_utilize_the_leagues
 				FRA_je_suis_la_deluge
 			}
