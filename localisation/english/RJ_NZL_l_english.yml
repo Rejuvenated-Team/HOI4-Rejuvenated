@@ -150,6 +150,12 @@
  RJ_NZL_rally_the_unions_desc: "Unions are a powerful force for workers, & they have a great deal of political sway. If we rally them to our side, we'll finally have the influence we need!"
  RJ_NZL_irrelevant_no_more: "Irrelevant No More!"
  RJ_NZL_irrelevant_no_more_desc: "For a long time we've been considered irrelevant by the nation, & by the world. Today, we become irrelevant no more! Now, we take control."
+ RJ_NZL_affirm_comintern_ties: "Affirm Comintern Ties"
+ RJ_NZL_affirm_comintern_ties_desc: "We've followed the model laid out for us by the Comintern. Now that we've achieved victory, we should affirm our ties to them."
+ RJ_NZL_assist_the_australian_communist_struggle: "Assist the Australian Communist Struggle"
+ RJ_NZL_assist_the_australian_communist_struggle_desc: "Our ties with Australia's communist party have always been close, to the point we were once considered a branch of theirs. Now that our struggle has been won, we should assert our influence to help them as well!"
+ RJ_NZL_initiate_our_own_five_year_plan: "Initiate Our Own 5-Year Plan"
+ RJ_NZL_initiate_our_own_five_year_plan_desc: "To get our economy on track, we'll need to initiate a 5-year plan of our own, following in the footsteps of the Soviets!"
 
 
  ##################################################
@@ -241,3 +247,4 @@
  RJ_NZL.7d_b: "[PHI.GetName] has responded, having chosen to strengthen ties between us with a new trade agreement!"
  RJ_NZL.7d_c: "[PHI.GetName] has rejected both of our offers, choosing to maintain their distance from us. Of all the nerve!"
  RJ_NZL.8d: "We've never decided on formal party leadership. At present, Elsey Farrelly has taken up a leadership role, but she isn't necessarily the only option. Another strong communist leader is Vic Wilcox, who has strong industrial & Soviet ties. Shall we keep Farrelly, or shall we empower Wilcox instead?"
+ RJ_NZL.9d: "The communist party in New Zealand that we previously figured on being irrelevant, has come to us after a surprising victory, asking to join with us officially. Shall we let our new comrades join up with us officially?"

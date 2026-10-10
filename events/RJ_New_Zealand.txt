@@ -611,3 +611,27 @@ country_event = { #Choose communist leader
 		}
 	}
 }
+
+country_event = { #Join Comintern
+	id = RJ_NZL.9
+	title = "New Zealand Wishes to Join Us"
+	desc = RJ_NZL.9d
+	picture = GFX_report_event_generic_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "New comrades are always welcome!"
+		ai_chance = {
+			base = 100
+		}
+		add_to_faction = NZL
+	}
+
+	option = {
+		name = "Eh, I don't like kiwi."
+		ai_chance = {
+			base = 0
+		}
+	}
+}

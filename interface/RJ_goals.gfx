@@ -1517,4 +1517,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/nzl/RJ_NZL_irrelevant_no_more.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_appeal_to_maori"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_appeal_to_maori.dds"
+	}
+
 }
