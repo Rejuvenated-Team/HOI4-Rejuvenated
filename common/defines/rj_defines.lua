@@ -144,8 +144,10 @@ NDefines.NIntel.RADAR_INTEL_STACKING_FACTOR = 0.6							-- (Normaly 0.5) Used wh
 NDefines.NIntel.RECON_PLANE_INTEL_BASE = 0.024								-- (normaly 0.02) intel base amount for a strategic area per plane
 
 -- NSupply
-NDefines.NSupply.CAPITAL_SUPPLY_BASE = 7.0 -- base supply for capital
-NDefines.NSupply.INFRA_TO_SUPPLY = 0.8 -- each level of infra gives this many supply
+NDefines.NSupply.CAPITAL_SUPPLY_BASE = 10.0 -- base supply for capital
+NDefines.NSupply.INFRA_TO_SUPPLY = 1 -- each level of infra gives this many supply
+NDefines.NSupply.SUPPLY_FROM_DAMAGED_INFRA = 0.5
+NDefines.NSupply.VP_TO_SUPPLY_BASE = 0.5
 
 -- NProject
 NDefines.NProject.SCIENTIST_BASIC_RESEARCH_DAILY_XP_GAIN = 0.33 -- Daily experience gain for doing basic research

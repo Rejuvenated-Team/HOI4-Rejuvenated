@@ -4570,7 +4570,7 @@
 		prerequisite = { focus = NZL_the_first_labor_government }
 		mutually_exclusive = { focus = NZL_statute_of_westminster }
 		mutually_exclusive = { focus = NZL_strengthen_the_commonwealth }
-		x = 15
+		x = 17
 		y = 1
 		relative_position_id = NZL_the_first_labor_government
 
@@ -4784,14 +4784,14 @@
 	}
 
 	focus = {
-		id = RJ_NZL_affirm_comintern_ties
-		icon = GFX_focus_chi_mission_to_the_soviet_union
-		prerequisite = { focus = RJ_NZL_irrelevant_no_more }
-		x = 1
-		y = 1
-		relative_position_id = RJ_NZL_irrelevant_no_more
+		id = RJ_NZL_soviet_military_advisors
+		icon = GFX_focus_PRC_invite_soviet_general
+		prerequisite = { focus = RJ_NZL_affirm_comintern_ties }
+		x = 0
+		y = 2
+		relative_position_id = RJ_NZL_affirm_comintern_ties
 
-		cost = 5
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 25
@@ -4810,30 +4810,19 @@
 		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
 
 		completion_reward = {
-			add_political_power = 25
-			add_opinion_modifier = {
-				target = SOV
-				modifier = large_increase
-			}
-			SOV = {
-				add_opinion_modifier = {
-					target = NZL
-					modifier = large_increase
-				}
-				country_event = RJ_NZL.9
-			}
+			add_ideas = CUB_soviet_military_advisors_idea
 		}
 	}
 
 	focus = {
-		id = RJ_NZL_initiate_our_own_five_year_plan
-		icon = GFX_focus_RJ_SOV_five_year_plan
-		prerequisite = { focus = RJ_NZL_irrelevant_no_more }
-		x = -2
+		id = RJ_NZL_high_security_intelligence
+		icon = GFX_focus_JAP_learn_from_the_nkvd
+		prerequisite = { focus = RJ_NZL_soviet_military_advisors }
+		x = 0
 		y = 1
-		relative_position_id = RJ_NZL_irrelevant_no_more
+		relative_position_id = RJ_NZL_soviet_military_advisors
 
-		cost = 5
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 25
@@ -4853,6 +4842,213 @@
 
 		completion_reward = {
 			
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_initiate_our_own_five_year_plan
+		icon = GFX_focus_RJ_SOV_five_year_plan
+		prerequisite = { focus = RJ_NZL_irrelevant_no_more }
+		x = -2
+		y = 1
+		relative_position_id = RJ_NZL_irrelevant_no_more
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NZL_great_depression
+				add_idea = NZL_great_depression_2
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = RJ_NZL_idea_five_year_plan
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_power_to_the_workers
+		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		prerequisite = { focus = RJ_NZL_initiate_our_own_five_year_plan }
+		x = 0
+		y = 1
+		relative_position_id = RJ_NZL_initiate_our_own_five_year_plan
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RJ_NZL_idea_five_year_plan
+				add_idea = RJ_NZL_idea_five_year_plan_2
+			}
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_nationalize_the_banks
+		icon = GFX_focus_PER_national_bank
+		prerequisite = { focus = RJ_NZL_power_to_the_workers }
+		x = -1
+		y = 1
+		relative_position_id = RJ_NZL_power_to_the_workers
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RJ_NZL_idea_five_year_plan_2
+				add_idea = RJ_NZL_idea_five_year_plan_3
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_maori_relief_effort
+		icon = GFX_focus_generic_welfare
+		prerequisite = { focus = RJ_NZL_initiate_our_own_five_year_plan }
+		x = -2
+		y = 1
+		relative_position_id = RJ_NZL_initiate_our_own_five_year_plan
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_soviet_industrial_support
+		icon = GFX_focus_RJ_communist_industry
+		prerequisite = { focus = RJ_NZL_affirm_comintern_ties }
+		prerequisite = { focus = RJ_NZL_initiate_our_own_five_year_plan }
+		x = -1
+		y = 1
+		relative_position_id = RJ_NZL_affirm_comintern_ties
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			SOV = {
+				exists = yes
+				is_ally_with = NZL
+			}
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = RJ_NZL_idea_soviet_industrial_support
 		}
 	}
 

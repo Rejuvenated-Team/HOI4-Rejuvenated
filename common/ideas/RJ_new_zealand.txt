@@ -1373,5 +1373,94 @@ ideas = {
 				political_power_gain = 0.10
 			}
 		}
+
+		RJ_NZL_idea_five_year_plan = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_SOV_five_year_plan
+
+			modifier = {
+				production_speed_buildings_factor = 0.20
+				industrial_capacity_dockyard = 0.10
+				industrial_capacity_factory = 0.10
+			}
+		}
+
+		RJ_NZL_idea_five_year_plan_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_SOV_five_year_plan
+
+			modifier = {
+				production_speed_buildings_factor = 0.20
+				industrial_capacity_dockyard = 0.10
+				industrial_capacity_factory = 0.10
+				line_change_production_efficiency_factor = 0.10
+				production_factory_max_efficiency_factor = 0.15
+			}
+		}
+
+		RJ_NZL_idea_five_year_plan_3 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_SOV_five_year_plan
+
+			modifier = {
+				production_speed_buildings_factor = 0.25
+				industrial_capacity_dockyard = 0.10
+				industrial_capacity_factory = 0.10
+				line_change_production_efficiency_factor = 0.10
+				production_factory_max_efficiency_factor = 0.15
+				consumer_goods_factor = -0.10
+			}
+		}
+
+		RJ_NZL_idea_soviet_industrial_support = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = eng_spirit_of_the_industrial_revolution
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.05
+				production_speed_dockyard_factor = 0.05
+			}
+		}
 	}
 }
