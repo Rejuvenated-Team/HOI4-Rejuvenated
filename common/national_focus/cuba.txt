@@ -1388,7 +1388,7 @@ focus_tree = {
 
 	focus = {
 		id = CUB_soviet_military_advisors
-		icon = GFX_focus_RJ_communist_advisor
+		icon = GFX_focus_PRC_invite_soviet_general
 		cost = 10
 		prerequisite = { focus = CUB_reaffirm_comintern_ties }
 		relative_position_id = CUB_reaffirm_comintern_ties
