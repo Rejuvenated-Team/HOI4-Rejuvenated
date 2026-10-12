@@ -2104,7 +2104,10 @@
 
  CZE_kingdom_of_bohemia_and_silesia_neutrality: "Kingdom of Bohemia-Moravia and Silesia"
  CZE_kingdom_of_bohemia_and_silesia_neutrality_DEF: "the Kingdom of Bohemia-Moravia and Silesia"
- CZE_kingdom_of_bohemia_and_silesia_neutrality_ADJ: "Bohemian"
+ CZE_kingdom_of_bohemia_and_silesia_communism: "Socialist Union of Bohemia-Moravia and Silesia"
+ CZE_kingdom_of_bohemia_and_silesia_communism_DEF: "the Socialist Union of Bohemia-Moravia and Silesia"
+ CZE_kingdom_of_bohemia_and_silesia_ADJ: "Bohemian"
+ 
 
  MEX_habsburg_empire_neutrality: "Third Mexican Empire"
  MEX_habsburg_empire_neutrality_DEF: "the Third Mexican Empire"
@@ -3523,8 +3526,12 @@
  CZE_second_republic_democratic_DEF: "the Czecho-Slovak Republic"
  CZE_second_republic_neutrality: "Czecho-Slovak Republic"
  CZE_second_republic_neutrality_DEF: "the Czecho-Slovak Republic"
+ CZE_second_republic_communism: "Czecho-Slovak Socialist Republic"
+ CZE_second_republic_communism_DEF: "the Czecho-Slovak Socialist Republic"
  CZE_fall_of_the_republic_neutrality: "Czecho-Slovak Republic"
  CZE_fall_of_the_republic_neutrality_DEF: "the Czecho-Slovak Republic"
+ CZE_fall_of_the_republic_communism: "Czecho-Slovak Socialist Republic"
+ CZE_fall_of_the_republic_communism_DEF: "the Czecho-Slovak Socialist Republic"
  CZE_CEF: "Central Europe Federation"
  CZE_CEF_communism: "$CZE_union_expanded_communism$"
  CZE_CEF_communism_def: "$CZE_union_expanded_communism_DEF$"
@@ -3534,17 +3541,19 @@
  CZE_SLO_bohemia_expansion_ADJ: "Bohemo-Slovakian"
  CZE_SLO_bohemia_expansion_neutrality: "Kingdom of Bohemia-Slovakia"
  CZE_SLO_bohemia_expansion_neutrality_DEF: "the Kingdom of Bohemia-Slovakia"
+ CZE_SLO_bohemia_expansion_communism: "People's Republic of Bohemia-Slovakia"
+ CZE_SLO_bohemia_expansion_communism_DEF: "the People's Republic of Bohemia-Slovakia"
  CZE_SLO_bohemia_expansion_democratic: "Republic of Bohemia-Slovakia"
  CZE_SLO_bohemia_expansion_democratic_DEF: "the Republic of Bohemia-Slovakia"
 
- CZE_union_communism: "Czechoslovak Union"
- CZE_union_communism_DEF: "the Czechoslovak Union"
+ CZE_union_communism: "Czechoslovak Socialist Union"
+ CZE_union_communism_DEF: "the Czechoslovak Socialist Union"
 
  CZE_POL_union: "Polish-Czechoslovak Confederation"
  CZE_POL_union_DEF: "the Polish-Czechoslovak Confederation"
  CZE_POL_union_ADJ: "Polish-Czechoslovak"
- CZE_POL_union_communism: "Polish-Czechoslovak Union"
- CZE_POL_union_communism_DEF: "the Polish-Czechoslovak Union"
+ CZE_POL_union_communism: "Polish-Czechoslovak Socialist Union"
+ CZE_POL_union_communism_DEF: "the Polish-Czechoslovak Socialist Union"
  CZE_POL_union_neutrality: "Polish-Czechoslovak Federation"
  CZE_POL_union_neutrality_DEF: "the Polish-Czechoslovak Federation"
 
@@ -3560,6 +3569,8 @@
  CZE_great_moravia_fascism_DEF: "the Empire of Great Moravia"
  CZE_great_moravia_democratic: "Federation of Moravian States"
  CZE_great_moravia_democratic_DEF: "the Federation of Moravian States"
+ CZE_great_moravia_communism: "Socialist Union of Moravian States"
+ CZE_great_moravia_communism_DEF: "the Socialist Union of Moravian States"
  CZE_great_moravia_ADJ: "Moravian"
 
  AST_australasia: "Australasia"
