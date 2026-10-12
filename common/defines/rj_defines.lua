@@ -55,6 +55,8 @@ NDefines.NMilitary.ARMY_EXP_BASE_LEVEL = 5
 NDefines.NAir.ANTI_AIR_ATTACK_TO_DAMAGE_REDUCTION_FACTOR = 1.0 -- Balancing value to convert equipment stat anti_air_attack to the damage reduction modifier apply to incoming air attacks against units with AA.
 
 -- NNavy
+NDefines.NNavy.NAVAL_MINES_IN_REGION_MAX = 1200.0
+NDefines.NNavy.NAVAL_MINES_ACCIDENT_CRITICAL_HIT_CHANCES = 0.20
 NDefines.NNavy.NAVAL_HOMEBASE_CALCULATION_DISTANCE_CUTOFF = 1000 -- Tuning parameter for homebase calculation. Distance to normalize against. Everything above said value will be treated as score = 0.
 NDefines.NNavy.NAVAL_HOMEBASE_BUILDING_SCORE_FACTOR = 0.02 -- Tuning parameter for homebase calculation. Multiplier for how much the level of the naval base impacts its total score.
 NDefines.NNavy.COMBAT_MIN_HIT_CHANCE = 0.05 -- never less hit chance then this?
@@ -145,9 +147,19 @@ NDefines.NIntel.RECON_PLANE_INTEL_BASE = 0.024								-- (normaly 0.02) intel ba
 
 -- NSupply
 NDefines.NSupply.CAPITAL_SUPPLY_BASE = 10.0 -- base supply for capital
+NDefines.NSupply.CAPITAL_INITIAL_SUPPLY_FLOW = 10.0
 NDefines.NSupply.INFRA_TO_SUPPLY = 1 -- each level of infra gives this many supply
 NDefines.NSupply.SUPPLY_FROM_DAMAGED_INFRA = 0.5
 NDefines.NSupply.VP_TO_SUPPLY_BASE = 0.5
+NDefines.NSupply.NODE_INITIAL_SUPPLY_FLOW = 4
+NDefines.NSupply.NODE_ADDED_PENALTY_PER_PROVINCE = 0.25
+NDefines.NSupply.NODE_FLOW_BONUS_PER_RAIL_LEVEL = 0.50
+NDefines.NSupply.RAILWAY_BASE_FLOW = 15.0
+NDefines.NSupply.RAILWAY_FLOW_PER_LEVEL = 8.0
+NDefines.NSupply.RAILWAY_FLOW_PENALTY_PER_DAMAGED = 8.0
+NDefines.NSupply.RAILWAY_CONVERSION_COOLDOWN = 5
+NDefines.NSupply.RAILWAY_CONVERSION_COOLDOWN_CORE = 2
+NDefines.NSupply.SUPPLY_POINTS_PER_TRAIN = 1.25
 
 -- NProject
 NDefines.NProject.SCIENTIST_BASIC_RESEARCH_DAILY_XP_GAIN = 0.33 -- Daily experience gain for doing basic research

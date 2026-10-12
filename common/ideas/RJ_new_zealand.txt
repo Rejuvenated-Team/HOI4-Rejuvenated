@@ -1462,5 +1462,27 @@ ideas = {
 				production_speed_dockyard_factor = 0.05
 			}
 		}
+
+		RJ_NZL_idea_high_security_intelligence = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_intel
+
+			modifier = {
+				intelligence_agency_defense = 1
+				enemy_operative_detection_chance_factor = 0.20
+				enemy_operative_intel_extraction_rate = 0.10
+				foreign_subversive_activites = -0.15
+			}
+		}
 	}
 }

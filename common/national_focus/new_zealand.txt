@@ -3758,7 +3758,7 @@
 		}
 
 		bypass = {
-
+			is_in_faction_with = JAP
 		}
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
@@ -4841,7 +4841,7 @@
 		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
 
 		completion_reward = {
-			
+			add_ideas = RJ_NZL_idea_high_security_intelligence
 		}
 	}
 
