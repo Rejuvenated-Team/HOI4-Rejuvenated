@@ -672,7 +672,9 @@ characters={
 				original_tag  = NZL
 			}
 			available = { 
-				
+				NOT = {
+					has_government = communism
+				}
 			}
 			traits  = {
 				NZL_reserve_bank_governor

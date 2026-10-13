@@ -144,3 +144,19 @@
  RJ_generic_airbase_expansion_desc: "Having some basic airbases has been a great help, but it's time we expand them a bit further. Adding a bit of anti-air to help defend them from enemy raids would also be prudent."
  RJ_generic_foreign_plane_designs: "Foreign Plane Designs"
  RJ_generic_foreign_plane_designs_desc: "Studying planes abroad with a friendly foreign power will give us a significant boost to our research efforts in developing our own plane designs."
+
+
+
+
+
+ #Continous Focuses
+ modifier_repair_speed_air_base_factor: "Air Base Repair Speed"
+ modifier_repair_speed_supply_node_factor: "Supply Hub Repair Speed"
+ modifier_repair_speed_naval_base_factor: "Naval Base Repair Speed"
+ modifier_repair_speed_coastal_bunker_factor: "Coastal Fort Repair Speed"
+ modifier_repair_speed_anti_air_building_factor: "Anti-Air Repair Speed"
+ modifier_repair_speed_dockyard_factor: "Dockyard Repair Speed"
+ modifier_repair_speed_steelworks_factor: "Steelworks Repair Speed"
+ modifier_production_speed_mega_gun_emplacement_factor: "§YLarge-Caliber Multi-Charge Gun Emplacement§! construction speed"
+ continuous_foreign_recruits: "Foreign Recruits"
+ continuous_foreign_recruits_desc: "While it carries some risk, there's plenty of people around the world that will gladly serve in our armed forces in exchange for some pay."

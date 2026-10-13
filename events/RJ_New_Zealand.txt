@@ -635,3 +635,21 @@ country_event = { #Join Comintern
 		}
 	}
 }
+
+country_event = { #Australian Notification of Communist Meddling
+	id = RJ_NZL.10
+	title = "Communists Influencing Us!"
+	desc = RJ_NZL.10d
+	picture = GFX_report_event_generic_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Blasted, commies! We'll put a stop to their meddling!"
+		ai_chance = {
+			base = 100
+		}
+		unlock_decision_category_tooltip = australia_communist_suppress_cat
+		
+	}
+}

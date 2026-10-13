@@ -1,0 +1,39 @@
+influence_australia_cat = {
+	icon = GFX_decision_category_generic_communism
+
+	allowed = {
+		original_tag = NZL
+	}
+
+	visible = {
+		NZL = {
+			has_completed_focus = RJ_NZL_assist_the_australian_communist_struggle
+		}
+		AST = {
+			exists = yes
+		}
+	}
+
+	priority = 25
+}
+
+australia_communist_suppress_cat = {
+	icon = GFX_decision_category_generic_communism
+
+	allowed = {
+		original_tag = AST
+	}
+
+	visible = {
+		NZL = {
+			has_completed_focus = RJ_NZL_assist_the_australian_communist_struggle
+		}
+		AST = {
+			NOT = {
+				has_government = communism
+			}
+		}
+	}
+
+	priority = 50
+}

@@ -5,6 +5,10 @@ economy_decisions = {
 	# The Mangahao Power Scheme
 	NZL_mangahao_power_scheme = {
 		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 5
+		}
 	
 		allowed = {
 			original_tag = NZL
@@ -21,8 +25,6 @@ economy_decisions = {
 		}
 
 	    cost = 50 	
-
-		fire_only_once = yes # Can only be done once per state
 
 		days_remove = 70
 
@@ -58,6 +60,10 @@ economy_decisions = {
 	# The Waitaki Power Station
 	NZL_waitaki_power_station = {
 		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 5
+		}
 	
 		allowed = {
 			original_tag = NZL
@@ -74,8 +80,6 @@ economy_decisions = {
 		}
 
 	    cost = 50 	
-
-		fire_only_once = yes # Can only be done once per state
 
 		days_remove = 70
 
@@ -110,6 +114,10 @@ economy_decisions = {
 
 	RJ_NZL_otago_electrification = {
 		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 5
+		}
 	
 		allowed = {
 			original_tag = NZL
@@ -126,8 +134,6 @@ economy_decisions = {
 		}
 
 	    cost = 50 	
-
-		fire_only_once = yes # Can only be done once per state
 
 		days_remove = 70
 
@@ -162,6 +168,10 @@ economy_decisions = {
 
 	RJ_NZL_marlborough_electrification = {
 		icon = GFX_decision_generic_construction
+
+		ai_will_do = {
+			base = 5
+		}
 	
 		allowed = {
 			original_tag = NZL
@@ -178,8 +188,6 @@ economy_decisions = {
 		}
 
 	    cost = 50 	
-
-		fire_only_once = yes # Can only be done once per state
 
 		days_remove = 70
 
@@ -212,4 +220,237 @@ economy_decisions = {
 
 	}
 
+}
+
+influence_australia_cat = {
+	RJ_NZL_spread_the_peoples_voice = {
+		icon = GFX_decision_SOV_secure_the_administration
+
+		ai_will_do = {
+			base = 15
+		}
+
+		allowed = {
+			original_tag = NZL
+		}
+
+		visible = {
+			has_completed_focus = RJ_NZL_assist_the_australian_communist_struggle
+			has_government = communism
+
+			NOT = {
+				AST = {
+					has_government = communism
+				}
+			}
+		}
+
+		available = {
+			has_completed_focus = RJ_NZL_assist_the_australian_communist_struggle
+			has_government = communism
+			AST = {
+				has_idea = RJ_NZL_idea_communist_influence
+			}
+		}
+
+		
+
+		cost = 50
+
+		days_remove = 90
+
+		days_re_enable = 7
+
+		targeted_modifier = {
+			tag = AST
+			communism_drift = 0.10
+		}
+
+	}
+
+	RJ_NZL_stir_up_the_workers = {
+		icon = GFX_decision_SOV_secure_the_administration
+
+		ai_will_do = {
+			base = 15
+		}
+
+		allowed = {
+			original_tag = NZL
+		}
+
+		visible = {
+			has_completed_focus = RJ_NZL_assist_the_australian_communist_struggle
+			has_government = communism
+
+			NOT = {
+				AST = {
+					has_government = communism
+				}
+			}
+		}
+
+		available = {
+			has_completed_focus = RJ_NZL_assist_the_australian_communist_struggle
+			has_government = communism
+			AST = {
+				has_idea = RJ_NZL_idea_communist_influence
+			}
+		}
+
+		
+
+		cost = 50
+
+		days_remove = 90
+
+		days_re_enable = 7
+
+		targeted_modifier = {
+			tag = AST
+			communism_drift = 0.10
+		}
+
+	}
+
+	RJ_NZL_overturn_the_australian_government = {
+		icon = GFX_decision_SOV_secure_the_administration
+
+		ai_will_do = {
+			base = 100
+		}
+
+		allowed = {
+			original_tag = NZL
+		}
+
+		visible = {
+			has_completed_focus = RJ_NZL_assist_the_australian_communist_struggle
+			has_government = communism
+
+			NOT = {
+				AST = {
+					has_government = communism
+				}
+			}
+		}
+
+		available = {
+			has_completed_focus = RJ_NZL_assist_the_australian_communist_struggle
+			has_government = communism
+			AST = {
+				communism > 50
+			}
+		}
+
+		
+
+		cost = 100
+
+		days_remove = 15
+
+		complete_effect = {
+			AST = {
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+			}
+		}
+
+	}
+}
+
+australia_communist_suppress_cat = {
+	RJ_NZL_AST_address_worker_conditions = {
+		icon = GFX_decision_SWI_swiss_democratic_tradition_campaign
+
+		ai_will_do = {
+			base = 0
+		}
+
+		allowed = {
+			original_tag = AST
+		}
+
+		visible = {
+			NZL = {
+				has_completed_focus = RJ_NZL_assist_the_australian_communist_struggle
+			}
+			NOT = {
+				AST = {
+					has_government = communism
+				}
+			}
+		}
+
+		available = {
+			NZL = {
+				has_completed_focus = RJ_NZL_assist_the_australian_communist_struggle
+			}
+			AST = {
+				has_idea = RJ_NZL_idea_communist_influence
+			}
+		}
+
+		
+
+		cost = 50
+
+		days_remove = 90
+
+		days_re_enable = 7
+
+		modifier = {
+			communism_drift = -0.12
+			political_power_cost = 0.25
+		}
+
+	}
+
+	RJ_NZL_AST_refute_the_peoples_voice = {
+		icon = GFX_decision_SWI_swiss_democratic_tradition_campaign
+
+		ai_will_do = {
+			base = 0
+		}
+
+		allowed = {
+			original_tag = AST
+		}
+
+		visible = {
+			NZL = {
+				has_completed_focus = RJ_NZL_assist_the_australian_communist_struggle
+			}
+			NOT = {
+				AST = {
+					has_government = communism
+				}
+			}
+		}
+
+		available = {
+			NZL = {
+				has_completed_focus = RJ_NZL_assist_the_australian_communist_struggle
+			}
+			AST = {
+				has_idea = RJ_NZL_idea_communist_influence
+			}
+		}
+
+		
+
+		cost = 50
+
+		days_remove = 90
+
+		days_re_enable = 7
+
+		modifier = {
+			communism_drift = -0.12
+			political_power_cost = 0.25
+		}
+
+	}
 }

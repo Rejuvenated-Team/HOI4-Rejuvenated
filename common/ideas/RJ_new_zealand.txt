@@ -1354,6 +1354,36 @@ ideas = {
 			}
 		}
 
+		RJ_NZL_idea_first_communist_government_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.15
+				production_factory_efficiency_gain_factor = 0.25
+				production_factory_max_efficiency_factor = 0.15
+				line_change_production_efficiency_factor = 0.20
+				political_power_factor = 0.15
+				consumer_goods_factor = -0.05
+				communism_drift = 0.08
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+		}
+
 		RJ_NZL_idea_the_peoples_voice = {
 
 			allowed = {
@@ -1482,6 +1512,47 @@ ideas = {
 				enemy_operative_detection_chance_factor = 0.20
 				enemy_operative_intel_extraction_rate = 0.10
 				foreign_subversive_activites = -0.15
+			}
+		}
+
+		RJ_NZL_idea_socialist_healthcare = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_medical
+
+			modifier = {
+				casualty_trickleback = 0.15
+				experience_loss_factor = -0.20
+				monthly_population = 0.75
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		RJ_NZL_idea_communist_influence = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+
+			modifier = {
+				communism_drift = 0.07
 			}
 		}
 	}

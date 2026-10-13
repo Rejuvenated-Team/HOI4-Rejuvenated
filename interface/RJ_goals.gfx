@@ -136,6 +136,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_RJ_pay_soldier"
+		texturefile = "gfx/interface/goals/RJ_pay_soldier.dds"
+	}
+
+	SpriteType = {
 		name = "GFX_focus_RJ_munitions_factory"
 		texturefile = "gfx/interface/goals/RJ_munitions_factory.dds"
 	}

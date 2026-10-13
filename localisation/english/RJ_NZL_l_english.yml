@@ -168,6 +168,12 @@
  RJ_NZL_soviet_military_advisors_desc: "The Soviets have offered to give us some military advisors to help us better organize our armed forces. It's a generous offer, & frankly one we can't pass up."
  RJ_NZL_high_security_intelligence: "High Security Intelligence"
  RJ_NZL_high_security_intelligence_desc: "It's crucial to the security of our state to have a high security intelligence system, modeled after the NKVD. This will help to keep foreign spies off of our soil, ensuring the safety of our population!"
+ RJ_NZL_empower_the_unions: "Empower the Unions"
+ RJ_NZL_empower_the_unions_desc: "One of the many promises we made to take power is one we wholeheartedly support: empowering the unions! They will speak on behalf of the workers!"
+ RJ_NZL_socialist_healthcare: "Socialist Healthcare"
+ RJ_NZL_socialist_healthcare_desc: "People's health isn't something they should have to pay for. It's costly for us to fund ourselves, but we have the means to do it, so we shall."
+ RJ_NZL_land_reforms: "Land Reforms"
+ RJ_NZL_land_reforms_desc: "We must take the ownership of land from the greedy corporations, & give it to the farmers for expansion, & to the unions for industrialization!"
 
 
  ##################################################
@@ -227,12 +233,15 @@
  RJ_NZL_idea_new_zealand_likes_philippines: "Pro-Philippines"
  RJ_NZL_idea_great_pacific_kingdom: "Great Pacific Kingdom"
  RJ_NZL_idea_first_communist_government: "First Communist Government"
+ RJ_NZL_idea_first_communist_government_2: "First Communist Government"
  RJ_NZL_idea_the_peoples_voice: "The People's Voice"
  RJ_NZL_idea_five_year_plan: "Five Year Plan"
  RJ_NZL_idea_soviet_industrial_support: "Soviet Industrial Support"
  RJ_NZL_idea_five_year_plan_2: "Five Year Plan"
  RJ_NZL_idea_five_year_plan_3: "Five Year Plan"
  RJ_NZL_idea_high_security_intelligence: "High Security Intelligence"
+ RJ_NZL_idea_socialist_healthcare: "Socialist Healthcare"
+ RJ_NZL_idea_communist_influence: "Communist Influence"
 
 
 
@@ -241,6 +250,13 @@
  ##################################################
  RJ_NZL_otago_electrification: "Otago Electrification"
  RJ_NZL_marlborough_electrification: "Marlborough Electrification"
+ influence_australia_cat: "Influence Australia"
+ RJ_NZL_spread_the_peoples_voice: "Spread the People's Voice"
+ RJ_NZL_stir_up_the_workers: "Stir Up the Workers"
+ RJ_NZL_overturn_the_australian_government: "Overturn the Australian Government"
+ australia_communist_suppress_cat: "Suppress the Communists"
+ RJ_NZL_AST_address_worker_conditions: "Address Worker Conditions"
+ RJ_NZL_AST_refute_the_peoples_voice: "Refute The People's Voice"
 
 
  ##################################################
@@ -265,3 +281,4 @@
  RJ_NZL.7d_c: "[PHI.GetName] has rejected both of our offers, choosing to maintain their distance from us. Of all the nerve!"
  RJ_NZL.8d: "We've never decided on formal party leadership. At present, Elsey Farrelly has taken up a leadership role, but she isn't necessarily the only option. Another strong communist leader is Vic Wilcox, who has strong industrial & Soviet ties. Shall we keep Farrelly, or shall we empower Wilcox instead?"
  RJ_NZL.9d: "The communist party in New Zealand that we previously figured on being irrelevant, has come to us after a surprising victory, asking to join with us officially. Shall we let our new comrades join up with us officially?"
+ RJ_NZL.10d: "The communists in New Zealand have decided that they wish to aid our communist party, in an effort to flip Australia to communism. We can't outright ban their efforts without risking serious backlash from the people, but we can work quietly to mitigate their efforts to meddle."
