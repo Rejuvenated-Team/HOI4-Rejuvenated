@@ -9270,4 +9270,132 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_socialist_healthcare_shine"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_socialist_healthcare.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/nzl/RJ_NZL_socialist_healthcare.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/nzl/RJ_NZL_socialist_healthcare.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_aussie_nzl_unification_shine"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_aussie_nzl_unification.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/nzl/RJ_NZL_aussie_nzl_unification.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/nzl/RJ_NZL_aussie_nzl_unification.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_the_pacific_revolution_shine"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_the_pacific_revolution.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/nzl/RJ_NZL_the_pacific_revolution.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/nzl/RJ_NZL_the_pacific_revolution.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_revolution_on_the_seas_shine"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_revolution_on_the_seas.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/nzl/RJ_NZL_revolution_on_the_seas.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/nzl/RJ_NZL_revolution_on_the_seas.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
 }

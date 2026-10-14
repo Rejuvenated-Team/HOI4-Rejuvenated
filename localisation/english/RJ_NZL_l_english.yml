@@ -174,6 +174,32 @@
  RJ_NZL_socialist_healthcare_desc: "People's health isn't something they should have to pay for. It's costly for us to fund ourselves, but we have the means to do it, so we shall."
  RJ_NZL_land_reforms: "Land Reforms"
  RJ_NZL_land_reforms_desc: "We must take the ownership of land from the greedy corporations, & give it to the farmers for expansion, & to the unions for industrialization!"
+ RJ_NZL_australian_new_zealander_unification: "Australian-New Zealander Unification"
+ RJ_NZL_australian_new_zealander_unification_desc: "Now that we've assisted the Australian people in their struggle for communism, the party leaders there have agreed that unification with us makes the most sense, as we're so close to them in almost every metric."
+ RJ_NZL_new_conscripts: "New Conscripts"
+ RJ_NZL_new_conscripts_desc: "We need to increase our conscription to defend our new borders!"
+ RJ_NZL_the_pacific_revolution: "The Pacific Revolution"
+ RJ_NZL_the_pacific_revolution_desc: "We should spread our revolution to all those in the pacific, giving them the same chance at communism that we've had."
+ RJ_NZL_revolution_on_the_seas: "Revolution on the Seas"
+ RJ_NZL_revolution_on_the_seas_desc: "The revolution in the pacific can only spread by way of the seas that connect us all. We must assert a mastery of those seas if we're to succeed!"
+ RJ_NZL_free_indonesia: "Free Indonesia"
+ RJ_NZL_free_indonesia_desc: "Indonesia has been under the boot of the capitalist imperialists of the west for far too long. We shall free them from this tyranny, by force if we must, & peace if we can."
+ RJ_NZL_free_malaysia: "Free Malaysia"
+ RJ_NZL_free_malaysia_desc: "Malaysia has been under the boot of the capitalist imperialists of the west for far too long. We shall free them from this tyranny, by force if we must, & peace if we can."
+ RJ_NZL_end_the_dictatorship: "End the Dictatorship"
+ RJ_NZL_end_the_dictatorship_desc: "The Siamese people have been suffering under a dictatorship, with no help in sight. In fact, some powers might even seek to strengthen them! If we're going to fight imperialism elsewhere, we must start in our own backyard."
+ RJ_NZL_press_for_french_colonial_withdrawals: "Press for French Colonial Withdrawals"
+ RJ_NZL_press_for_french_colonial_withdrawals_desc: "The French have no business in this part of the world, & we must make sure they understand this. They must either withdraw, or face our wrath!"
+ RJ_NZL_indo_malaysian_integration: "Indo-Malaysian Integration"
+ RJ_NZL_indo_malaysian_integration_desc: "The peoples of Indonesia & Malaysia shall be given full citizenry & equal rights under our government, being fully integrated into our glorious soviet state."
+ RJ_NZL_empower_nguyen_sinh_cung: "Empower Nguyen Sinh Cung"
+ RJ_NZL_empower_nguyen_sinh_cung_desc: "Nguyen Sinh Cung, only recently known as Ho Chí Minh, has been fighting the French colonialists for many years now, pushing the communist cause in Indochina. In recognition & appreciation of his effort, we've elected to give him full authority over the former French territories of the region."
+ RJ_NZL_indochinese_integration: "Indochinese Integration"
+ RJ_NZL_indochinese_integration_desc: "We've made the decision that it would be in the best interests of everyone if we maintain control over & integration of the former French territories in Indochina."
+ RJ_NZL_cement_hos_power: "Cement Ho's Power"
+ RJ_NZL_cement_hos_power_desc: "Ho Chi Minh will need our support to cement his newfound position of power."
+ RJ_NZL_kickstart_indochinese_industry: "Kickstart Indochinese Industry"
+ RJ_NZL_kickstart_indochinese_industry_desc: "We have more than enough industrial means now to support a kickstarting of Indochinese industrialization!"
 
 
  ##################################################
@@ -242,6 +268,10 @@
  RJ_NZL_idea_high_security_intelligence: "High Security Intelligence"
  RJ_NZL_idea_socialist_healthcare: "Socialist Healthcare"
  RJ_NZL_idea_communist_influence: "Communist Influence"
+ RJ_NZL_idea_new_conscripts: "New Conscripts"
+ RJ_NZL_idea_the_pacific_revolution: "The Pacific Revolution"
+ RJ_NZL_idea_the_pacific_revolution_2: "The Pacific Revolution"
+ RJ_NZL_idea_industrial_support: "Industrial Support"
 
 
 

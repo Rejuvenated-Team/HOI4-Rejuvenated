@@ -3561,6 +3561,7 @@
 		completion_reward = {
 			726 = {
 				add_core_of = NZL
+				set_demilitarized_zone = no
 			}
 			if = {
 				limit = {
@@ -5008,7 +5009,7 @@
 
 	focus = {
 		id = RJ_NZL_socialist_healthcare
-		icon = GFX_focus_RJ_hospital
+		icon = GFX_focus_RJ_NZL_socialist_healthcare
 		prerequisite = { focus = RJ_NZL_nationalize_the_banks focus = RJ_NZL_empower_the_unions }
 		x = 0
 		y = 1
@@ -5109,7 +5110,7 @@
 
 	focus = {
 		id = RJ_NZL_soviet_industrial_support
-		icon = GFX_focus_RJ_communist_industry
+		icon = GFX_focus_generic_stalinist_industry
 		prerequisite = { focus = RJ_NZL_affirm_comintern_ties }
 		prerequisite = { focus = RJ_NZL_initiate_our_own_five_year_plan }
 		x = -1
@@ -5167,7 +5168,7 @@
 
 	focus = {
 		id = RJ_NZL_assist_the_australian_communist_struggle
-		icon = GFX_focus_AST_the_australian_commonwealth
+		icon = GFX_focus_AST_the_red_pacific
 		prerequisite = { focus = RJ_NZL_irrelevant_no_more }
 		x = 4
 		y = 1
@@ -5189,7 +5190,9 @@
 		}
 
 		bypass = {
-
+			AST = {
+				has_government = communism
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
@@ -5207,6 +5210,558 @@
 				AST = {
 					country_event = RJ_NZL.10
 				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_australian_new_zealander_unification
+		icon = GFX_focus_RJ_NZL_aussie_nzl_unification
+		prerequisite = { focus = RJ_NZL_assist_the_australian_communist_struggle }
+		x = -1
+		y = 1
+		relative_position_id = RJ_NZL_assist_the_australian_communist_struggle
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			AST = {
+				exists = yes
+			}
+		}
+
+		bypass = {
+			AST = {
+				NOT = {
+					exists = yes
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+
+		completion_reward = {
+			annex_country = {
+				target = AST
+			}
+			AST = {
+				every_core_state = {
+					add_core_of = NZL
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_new_conscripts
+		icon = GFX_focus_generic_limited_social_mobilization
+		prerequisite = { focus = RJ_NZL_australian_new_zealander_unification }
+		x = 0
+		y = 1
+		relative_position_id = RJ_NZL_australian_new_zealander_unification
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+
+		completion_reward = {
+			add_ideas = RJ_NZL_idea_new_conscripts
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_the_pacific_revolution
+		icon = GFX_focus_RJ_NZL_the_pacific_revolution
+		prerequisite = { focus = RJ_NZL_assist_the_australian_communist_struggle }
+		x = 2
+		y = 1
+		relative_position_id = RJ_NZL_assist_the_australian_communist_struggle
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+
+		completion_reward = {
+			INS = {
+				add_timed_idea = {
+					idea = RJ_NZL_idea_communist_influence
+					days = 400
+				}
+			}
+			MAL = {
+				add_timed_idea = {
+					idea = RJ_NZL_idea_communist_influence
+					days = 400
+				}
+			}
+			JAP = {
+				add_timed_idea = {
+					idea = RJ_NZL_idea_communist_influence
+					days = 400
+				}
+			}
+			PHI = {
+				add_timed_idea = {
+					idea = RJ_NZL_idea_communist_influence
+					days = 400
+				}
+			}
+			SIA = {
+				add_timed_idea = {
+					idea = RJ_NZL_idea_communist_influence
+					days = 400
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = RJ_NZL_idea_the_pacific_revolution
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_revolution_on_the_seas
+		icon = GFX_focus_RJ_NZL_revolution_on_the_seas
+		prerequisite = { focus = RJ_NZL_the_pacific_revolution }
+		x = 0
+		y = 1
+		relative_position_id = RJ_NZL_the_pacific_revolution
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RJ_NZL_idea_the_pacific_revolution
+				add_idea = RJ_NZL_idea_the_pacific_revolution_2
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_free_indonesia
+		icon = GFX_focus_INS_greater_indonesia
+		prerequisite = { focus = RJ_NZL_the_pacific_revolution }
+		x = -1
+		y = 2
+		relative_position_id = RJ_NZL_the_pacific_revolution
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			INS = {
+				exists = no
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_indo_malaysian_integration
+		icon = GFX_focus_AFG_integrate_tajik_and_uzbek_republics
+		prerequisite = { focus = RJ_NZL_free_indonesia }
+		prerequisite = { focus = RJ_NZL_free_malaysia }
+		prerequisite = { focus = RJ_NZL_revolution_on_the_seas }
+		x = 0
+		y = 2
+		relative_position_id = RJ_NZL_revolution_on_the_seas
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			all_state = {
+				AND = {
+					is_core_of = INS
+					is_core_of = MAL
+					is_owned_and_controlled_by = NZL
+				}
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+
+		completion_reward = {
+			every_core_state = {
+				limit = {
+					is_core_of = INS
+					is_core_of = MAL
+				}
+				add_core_of = NZL
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_press_for_french_colonial_withdrawals
+		icon = GFX_focus_JAP_occupy_indochina
+		prerequisite = { focus = RJ_NZL_free_indonesia }
+		x = -1
+		y = 1
+		relative_position_id = RJ_NZL_free_indonesia
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_empower_nguyen_sinh_cung
+		icon = GFX_focus_JAP_the_indochinese_soviet
+		prerequisite = { focus = RJ_NZL_press_for_french_colonial_withdrawals }
+		mutually_exclusive = {
+			focus = RJ_NZL_indochinese_integration
+		}
+		x = -1
+		y = 1
+		relative_position_id = RJ_NZL_press_for_french_colonial_withdrawals
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			all_state = {	
+				AND = {
+					is_core_of = VIN
+					is_core_of = LAO
+					is_core_of = CAM
+					is_owned_and_controlled_by = NZL
+				}
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+
+		completion_reward = {
+			release_puppet = VIN
+			every_core_state = {
+				limit = {
+					is_core_of = LAO
+					is_core_of = CAM
+				}
+				transfer_state_to = VIN
+				add_core_of = VIN
+				728 = {
+					transfer_state_to = VIN
+					add_core_of = VIN
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_indochinese_integration
+		icon = GFX_focus_JAP_occupy_indochina
+		prerequisite = { focus = RJ_NZL_press_for_french_colonial_withdrawals }
+		mutually_exclusive = {
+			focus = RJ_NZL_empower_nguyen_sinh_cung
+		}
+		x = 1
+		y = 1
+		relative_position_id = RJ_NZL_press_for_french_colonial_withdrawals
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			all_state = {	
+				AND = {
+					is_core_of = VIN
+					is_core_of = LAO
+					is_core_of = CAM
+					is_owned_and_controlled_by = NZL
+				}
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+
+		completion_reward = {
+			every_core_state = {
+				limit = {
+					is_core_of = VIN
+					is_core_of = CAM
+					is_core_of = LAO
+				}
+				add_core_of = NZL
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_cement_hos_power
+		icon = GFX_focus_JAP_occupy_indochina
+		prerequisite = { focus = RJ_NZL_empower_nguyen_sinh_cung }
+		x = 1
+		y = 1
+		relative_position_id = RJ_NZL_empower_nguyen_sinh_cung
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			VIN = {
+				exists = yes
+				is_subject_of = NZL
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+
+		completion_reward = {
+			VIN = {
+				add_stability = 0.15
+				add_political_power = 100
+				add_popularity = {
+					ideology = communism
+					popularity = 0.20
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_kickstart_indochinese_industry
+		icon = GFX_focus_RJ_communist_industry
+		prerequisite = { focus = RJ_NZL_empower_nguyen_sinh_cung }
+		x = -1
+		y = 1
+		relative_position_id = RJ_NZL_empower_nguyen_sinh_cung
+
+		cost = 14.4
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			NOT = {
+				OR = {
+					has_idea = NZL_great_depression
+					has_idea = NZL_great_depression_2
+				}
+			}
+			VIN = {
+				exists = yes
+				any_state = {
+					AND = {
+						is_core_of = VIN
+						is_owned_and_controlled_by = VIN
+					}
+				}
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+
+		completion_reward = {
+			VIN = {
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 3
+					increase_state_category = yes
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+					}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 3
+					increase_state_category = yes
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+					}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 3
+					increase_state_category = yes
+					add_building_construction = {
+						type = dockyard
+						level = 3
+					}
+				}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					increase_state_category = yes
+					add_building_construction = {
+						type = steelworks
+						level = 2
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				set_technology = {
+					steelworks_tech = 1
+					basic_machine_tools = 1
+					construction1 = 1
+					excavation1 = 1
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				add_ideas = RJ_NZL_idea_industrial_support
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_free_malaysia
+		icon = GFX_focus_INS_liberate_malaya
+		prerequisite = { focus = RJ_NZL_the_pacific_revolution }
+		x = 1
+		y = 2
+		relative_position_id = RJ_NZL_the_pacific_revolution
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			MAL = {
+				exists = no
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = RJ_NZL_end_the_dictatorship
+		icon = GFX_focus_SIA_phibuns_premiership
+		prerequisite = { focus = RJ_NZL_free_malaysia }
+		x = 0
+		y = 2
+		relative_position_id = RJ_NZL_free_malaysia
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			SIA = {
+				exists = yes
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+
+		completion_reward = {
+			create_wargoal = {
+				target = SIA
+				type = puppet_wargoal_focus
 			}
 		}
 	}

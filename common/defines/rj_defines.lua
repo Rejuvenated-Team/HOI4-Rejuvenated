@@ -2,7 +2,7 @@
 NDefines.NGame.END_DATE = "1959.1.1.1"
 
 -- NCountry
-NDefines.NCountry.LOCAL_MANPOWER_ACCESSIBLE_NON_CORE_FACTOR = 0.03 -- accessible recruitable factor base
+NDefines.NCountry.LOCAL_MANPOWER_ACCESSIBLE_NON_CORE_FACTOR = 0.05 -- accessible recruitable factor base
 NDefines.NCountry.STARTING_COMMAND_POWER = 10.0 -- starting command power for every country
 NDefines.NCountry.BASE_MAX_COMMAND_POWER = 300.0 -- base value for maximum command power
 NDefines.NCountry.BASE_RESEARCH_SLOTS = 3						-- Base number of research slots per country.

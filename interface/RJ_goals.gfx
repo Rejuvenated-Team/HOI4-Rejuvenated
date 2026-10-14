@@ -1527,4 +1527,24 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/nzl/RJ_NZL_appeal_to_maori.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_socialist_healthcare"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_socialist_healthcare.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_aussie_nzl_unification"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_aussie_nzl_unification.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_the_pacific_revolution"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_the_pacific_revolution.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_revolution_on_the_seas"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_revolution_on_the_seas.dds"
+	}
+
 }
