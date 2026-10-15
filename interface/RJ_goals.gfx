@@ -1547,4 +1547,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/nzl/RJ_NZL_revolution_on_the_seas.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_empower_ho"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_empower_ho.dds"
+	}
+
 }

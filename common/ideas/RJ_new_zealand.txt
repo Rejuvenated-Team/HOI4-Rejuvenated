@@ -1596,10 +1596,6 @@ ideas = {
 				production_speed_dockyard_factor = 0.10
 				production_speed_industrial_complex_factor = 0.15
 			}
-
-			research_bonus = {
-				industry = 0.25
-			}
 		}
 
 		RJ_NZL_idea_the_pacific_revolution = {

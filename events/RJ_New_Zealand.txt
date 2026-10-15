@@ -640,7 +640,7 @@ country_event = { #Australian Notification of Communist Meddling
 	id = RJ_NZL.10
 	title = "Communists Influencing Us!"
 	desc = RJ_NZL.10d
-	picture = GFX_report_event_generic_handshake
+	picture = GFX_report_event_generic_communist_militia
 	
 	is_triggered_only = yes
 	
@@ -651,5 +651,182 @@ country_event = { #Australian Notification of Communist Meddling
 		}
 		unlock_decision_category_tooltip = australia_communist_suppress_cat
 		
+	}
+}
+
+country_event = { #Baguette people get demands for French Indochina.
+	id = RJ_NZL.11
+	title = "New Zealand Presses for Indochinese Decolonization"
+	desc = RJ_NZL.11d
+	picture = GFX_report_event_communist_leader
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We don't need a new war right now."
+		ai_chance = {
+			base = 10
+			modifier = {
+				FRA = {
+					has_war_with = JAP
+				}
+				factor = 5
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = VIN
+					is_core_of = LAO
+					is_core_of = CAM
+				}
+			}
+			transfer_state_to = NZL
+		}
+		NZL = {
+			country_event = RJ_NZL.11a
+		}
+	}
+
+	option = {
+		name = "Just ignore them. This is just a ploy for territory."
+		ai_chance = {
+			base = 1
+		}
+		NZL = {
+			country_event = RJ_NZL.11b
+		}
+	}
+}
+
+country_event = { #Positive French Response
+	id = RJ_NZL.11a
+	title = "France Hands Over Indochina!"
+	desc = RJ_NZL.11a_d
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Huzzah, the people are liberated!"
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = { #Negative French Response
+	id = RJ_NZL.11b
+	title = "France Ignores Us"
+	desc = RJ_NZL.11b_d
+	picture = GFX_report_event_generic_rally2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Blasted French! We'll take it by force!"
+		ai_chance = {
+			base = 1
+		}
+		create_wargoal = {
+			target = FRA
+			type = annex_everything
+			generator = 671
+		}
+	}
+
+	option = {
+		name = "We'll bide our time. For now..."
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = { #Malaysia's owners get demands.
+	id = RJ_NZL.12
+	title = "New Zealand Demands Malaysia"
+	desc = RJ_NZL.12d
+	picture = GFX_report_event_communist_leader
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Fine, let them have it."
+		ai_chance = {
+			base = 10
+		}
+		NZL = {
+			country_event = RJ_NZL.12a
+			puppet = MAL
+		}
+	}
+
+	option = {
+		name = "Confounded Kiwis! You don't tell us what to do!"
+		ai_chance = {
+			base = 1
+		}
+		NZL = {
+			country_event = RJ_NZL.12b
+		}
+	}
+}
+
+country_event = { #Positive British Response
+	id = RJ_NZL.12a
+	title = "France Hands Over Indochina!"
+	desc = RJ_NZL.12a_d
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Huzzah! Let's integrate them directly."
+		ai_chance = {
+			base = 2
+		}
+		annex_country = {
+			target = MAL
+			transfer_troops = yes
+		}
+	}
+
+	option = {
+		name = "Let them maintain their own autonomy."
+		ai_chance = {
+			base = 1
+		}
+		MAL = {
+			inherit_technology = NZL
+		}
+	}
+}
+
+country_event = { #Negative British Response
+	id = RJ_NZL.12b
+	title = "The Brits Denied Us"
+	desc = RJ_NZL.12b_d
+	picture = GFX_report_event_generic_rally2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Fine, we'll do this the hard way."
+		ai_chance = {
+			base = 1
+		}
+		create_wargoal = {
+			target = MAL
+			type = annex_everything
+			generator = 336
+		}
+	}
+
+	option = {
+		name = "We'll bide our time. For now..."
+		ai_chance = {
+			base = 1
+		}
 	}
 }

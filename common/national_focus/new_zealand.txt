@@ -3016,7 +3016,7 @@
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATIONAL_SPIRIT }
 
 		completion_reward = {
 			swap_ideas = {
@@ -4735,9 +4735,11 @@
 			}
 			add_stability = -0.15
 			country_event = RJ_NZL.8
-			set_autonomy = {
-				target = NZL
-				autonomy_state = autonomy_free
+			ENG = {
+				set_autonomy = {
+					target = NZL
+					autonomy_state = autonomy_free
+				}
 			}
 		}
 	}
@@ -4881,7 +4883,7 @@
 
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATIONAL_SPIRIT }
 
 		completion_reward = {
 			swap_ideas = {
@@ -4931,7 +4933,7 @@
 
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_NATIONAL_SPIRIT FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			swap_ideas = {
@@ -4964,7 +4966,7 @@
 
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATIONAL_SPIRIT }
 
 		completion_reward = {
 			swap_ideas = {
@@ -4996,7 +4998,7 @@
 
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_NATIONAL_SPIRIT FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			swap_ideas = {
@@ -5029,7 +5031,7 @@
 
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_NATIONAL_SPIRIT FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
 
 		completion_reward = {
 			add_ideas = RJ_NZL_idea_socialist_healthcare
@@ -5058,7 +5060,7 @@
 
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			every_core_state = {
@@ -5096,7 +5098,7 @@
 
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_political_power = 150
@@ -5134,7 +5136,7 @@
 
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -5195,7 +5197,7 @@
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_CONQUEST FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			AST = {
@@ -5242,11 +5244,12 @@
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_CONQUEST FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			annex_country = {
 				target = AST
+				transfer_troops = yes
 			}
 			AST = {
 				every_core_state = {
@@ -5278,7 +5281,7 @@
 
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY }
 
 		completion_reward = {
 			add_ideas = RJ_NZL_idea_new_conscripts
@@ -5287,7 +5290,7 @@
 
 	focus = {
 		id = RJ_NZL_the_pacific_revolution
-		icon = GFX_focus_RJ_NZL_the_pacific_revolution
+		icon = GFX_focus_generic_communist_asia
 		prerequisite = { focus = RJ_NZL_assist_the_australian_communist_struggle }
 		x = 2
 		y = 1
@@ -5307,7 +5310,7 @@
 			
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_CONQUEST FOCUS_FILTER_POLITICAL FOCUS_FILTER_NATIONAL_SPIRIT FOCUS_FILTER_ARMY }
 
 		completion_reward = {
 			INS = {
@@ -5367,7 +5370,7 @@
 			
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_CONQUEST FOCUS_FILTER_NAVY FOCUS_FILTER_NATIONAL_SPIRIT }
 
 		completion_reward = {
 			swap_ideas = {
@@ -5396,12 +5399,19 @@
 		}
 
 		bypass = {
-			INS = {
-				exists = no
+			OR = {
+				INS = {
+					exists = no
+				}
+				INS = {
+					NOT = {
+						is_subject = yes
+					}
+				}
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_CONQUEST }
 
 		completion_reward = {
 			
@@ -5438,7 +5448,7 @@
 			
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_CONQUEST FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			every_core_state = {
@@ -5466,23 +5476,63 @@
 		}
 
 		available = {
-			
+			FRA = {
+				owns_state = 1066
+				controls_state = 1066
+				owns_state = 286
+				controls_state = 286
+				owns_state = 1017
+				controls_state = 1017
+				owns_state = 671
+				controls_state = 671
+				owns_state = 1087
+				controls_state = 1087
+				owns_state = 1069
+				controls_state = 1069
+				owns_state = 670
+				controls_state = 670
+				owns_state = 1068
+				controls_state = 1068
+				owns_state = 1085
+				controls_state = 1085
+				owns_state = 741
+				controls_state = 741
+				owns_state = 1084
+				controls_state = 1084
+				owns_state = 1067
+				controls_state = 1067
+			}
 		}
 
 		bypass = {
-			
+			NZL = {
+				controls_state = 1066
+				controls_state = 286
+				controls_state = 1017
+				controls_state = 671
+				controls_state = 1087
+				controls_state = 1069
+				controls_state = 670
+				controls_state = 1068
+				controls_state = 1085
+				controls_state = 741
+				controls_state = 1084
+				controls_state = 1067
+			}
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_EVENT FOCUS_FILTER_CONQUEST }
 
 		completion_reward = {
-			
+			FRA = {
+				country_event = RJ_NZL.11
+			}
 		}
 	}
 
 	focus = {
 		id = RJ_NZL_empower_nguyen_sinh_cung
-		icon = GFX_focus_JAP_the_indochinese_soviet
+		icon = GFX_focus_RJ_NZL_empower_ho
 		prerequisite = { focus = RJ_NZL_press_for_french_colonial_withdrawals }
 		mutually_exclusive = {
 			focus = RJ_NZL_indochinese_integration
@@ -5512,21 +5562,23 @@
 			
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			release_puppet = VIN
-			every_core_state = {
+			every_state = {
 				limit = {
-					is_core_of = LAO
-					is_core_of = CAM
+					OR = {
+						is_core_of = LAO
+						is_core_of = CAM
+					}
 				}
 				transfer_state_to = VIN
 				add_core_of = VIN
-				728 = {
-					transfer_state_to = VIN
-					add_core_of = VIN
-				}
+			}
+			728 = {
+				transfer_state_to = VIN
+				add_core_of = VIN
 			}
 		}
 	}
@@ -5550,7 +5602,7 @@
 
 		available = {
 			all_state = {	
-				AND = {
+				OR = {
 					is_core_of = VIN
 					is_core_of = LAO
 					is_core_of = CAM
@@ -5563,14 +5615,16 @@
 			
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_CONQUEST FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			every_core_state = {
+			every_state = {
 				limit = {
-					is_core_of = VIN
-					is_core_of = CAM
-					is_core_of = LAO
+					OR = {
+						is_core_of = VIN
+						is_core_of = CAM
+						is_core_of = LAO
+					}
 				}
 				add_core_of = NZL
 			}
@@ -5579,7 +5633,7 @@
 
 	focus = {
 		id = RJ_NZL_cement_hos_power
-		icon = GFX_focus_JAP_occupy_indochina
+		icon = GFX_focus_generic_military_dictatorship
 		prerequisite = { focus = RJ_NZL_empower_nguyen_sinh_cung }
 		x = 1
 		y = 1
@@ -5602,7 +5656,7 @@
 			
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			VIN = {
@@ -5624,7 +5678,7 @@
 		y = 1
 		relative_position_id = RJ_NZL_empower_nguyen_sinh_cung
 
-		cost = 14.4
+		cost = 10
 
 		ai_will_do = {
 			factor = 25
@@ -5652,7 +5706,7 @@
 			
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			VIN = {
@@ -5689,12 +5743,7 @@
 					}
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
-				set_technology = {
-					steelworks_tech = 1
-					basic_machine_tools = 1
-					construction1 = 1
-					excavation1 = 1
-				}
+				inherit_technology = NZL
 				custom_effect_tooltip = generic_skip_one_line_tt
 				add_ideas = RJ_NZL_idea_industrial_support
 			}
@@ -5720,21 +5769,33 @@
 		}
 
 		bypass = {
-			MAL = {
-				exists = no
+			OR = {
+				MAL = {
+					exists = no
+				}
+				MAL = {
+					is_subject = no
+				}
+				MAL = {
+					NOT = {
+						is_subject_of = ENG
+					}
+				}
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_CONQUEST }
 
 		completion_reward = {
-			
+			ENG = {
+				country_event = RJ_NZL.12
+			}
 		}
 	}
 
 	focus = {
 		id = RJ_NZL_end_the_dictatorship
-		icon = GFX_focus_SIA_phibuns_premiership
+		icon = GFX_focus_generic_attack_siam
 		prerequisite = { focus = RJ_NZL_free_malaysia }
 		x = 0
 		y = 2
@@ -5756,7 +5817,7 @@
 			
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_CONQUEST }
 
 		completion_reward = {
 			create_wargoal = {
