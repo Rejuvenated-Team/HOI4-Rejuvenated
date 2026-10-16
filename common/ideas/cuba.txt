@@ -244,6 +244,7 @@ ideas = {
 			modifier = {
 				monthly_population = 0.30
 				experience_loss_factor = -0.10
+				casualty_trickleback = 0.05
 			}
 		}
 
@@ -265,6 +266,7 @@ ideas = {
 				monthly_population = 0.60
 				experience_loss_factor = -0.15
 				conscription_factor = 0.20
+				casualty_trickleback = 0.15
 			}
 		}
 
@@ -588,10 +590,10 @@ ideas = {
 			picture = saf_soviet_advisers
 			
 			modifier = {
-				army_morale_factor = 0.10
+				army_morale_factor = 0.15
 				planning_speed = 0.10
 				max_planning = 0.15
-				experience_gain_army_unit_factor = 0.05
+				experience_gain_army_unit_factor = 0.15
 			}
 		}
 		

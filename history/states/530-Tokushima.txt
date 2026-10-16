@@ -3,7 +3,13 @@ state = {
 	name = "STATE_530" # Shikoku
 	manpower = 3310000
 
-	state_category = town # was large_city
+	state_category = town
+
+	resources = {
+		steel = 9
+		aluminium = 3
+		chromium = 12
+	}
 
 	history = {
 
@@ -33,5 +39,5 @@ state = {
 		4094 4179 7046 7197 9965 11997 12028
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 5.0 
 }

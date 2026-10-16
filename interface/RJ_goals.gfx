@@ -136,6 +136,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_RJ_pay_soldier"
+		texturefile = "gfx/interface/goals/RJ_pay_soldier.dds"
+	}
+
+	SpriteType = {
 		name = "GFX_focus_RJ_munitions_factory"
 		texturefile = "gfx/interface/goals/RJ_munitions_factory.dds"
 	}
@@ -1281,6 +1286,270 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_RJ_warlord_uplift_the_cavalry"
 		texturefile = "gfx/interface/goals/warlords/RJ_warlord_uplift_the_cavalry.dds"
+	}
+
+
+
+
+
+
+	################################################
+	### NEW ZEALAND ################################
+	################################################
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_RNZAF"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_RNZAF.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_air_force_review"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_air_force_review.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_commonwealth_air_training"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_commonwealth_air_training.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_begin_recruiting_efforts"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_begin_recruiting_efforts.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_acquire_british_planes"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_acquire_british_planes.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_transfer_the_nzl_division"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_transfer_the_nzl_division.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_the_rnzn"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_the_rnzn.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_naval_defense_amendment_act"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_naval_defense_amendment_act.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_purchase_ships"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_purchase_ships.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_kauri_point_naval_depot"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_kauri_point_naval_depot.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_study_british_radar"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_study_british_radar.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_taranaki_oil"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_taranaki_oil.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_women_in_the_workforce"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_women_in_the_workforce.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_expand_the_reparation_estates"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_expand_the_reparation_estates.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_defense_council"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_defense_council.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_charlton_automatic_rifle"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_charlton_automatic_rifle.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_schofield_tank"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_schofield_tank.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_samoan_economic_development"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_samoan_economic_development.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_purchase_american_samoa"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_purchase_american_samoa.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_the_biggest_bob"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_the_biggest_bob.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_first_labour_government"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_first_labour_government.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_seek_labour_sympathizers"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_seek_labour_sympathizers.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_statute_of_westminster"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_statute_of_westminster.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_2NZEF"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_2NZEF.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_ratana_alliance"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_ratana_alliance.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_maori_crown"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_maori_crown.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_ICAA"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_ICAA.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_tech_share_ENG"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_tech_share_ENG.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_rent_control"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_rent_control.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_kingitanga_movement"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_kingitanga_movement.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_reign_of_koroki"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_reign_of_koroki.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_fisher_and_paykel"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_fisher_and_paykel.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_new_medical_complexes"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_new_medical_complexes.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_army_board"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_army_board.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_equipment_modernization"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_equipment_modernization.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_agricultural_workers_act"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_agricultural_workers_act.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_samoan_citizenship"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_samoan_citizenship.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_war_pension_extension"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_war_pension_extension.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_hand_to_hand_combat"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_hand_to_hand_combat.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_proud_maori_traditions"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_proud_maori_traditions.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_a_matter_of_formality"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_a_matter_of_formality.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_central_bank_control"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_central_bank_control.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_king_for_all"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_king_for_all.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_great_pacific_kingdom"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_great_pacific_kingdom.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_irrelevant_no_more"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_irrelevant_no_more.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_appeal_to_maori"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_appeal_to_maori.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_socialist_healthcare"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_socialist_healthcare.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_aussie_nzl_unification"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_aussie_nzl_unification.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_the_pacific_revolution"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_the_pacific_revolution.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_revolution_on_the_seas"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_revolution_on_the_seas.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_empower_ho"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_empower_ho.dds"
 	}
 
 }

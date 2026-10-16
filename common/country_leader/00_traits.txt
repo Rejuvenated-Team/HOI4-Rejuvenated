@@ -5626,7 +5626,7 @@ leader_traits = {
 		random = no
 		sprite = 13
 		political_power_factor = 0.05
-		global_building_slots_factor = 0.1
+		global_building_slots_factor = 0.15
 		consumer_goods_factor = -0.10
 	}
 
@@ -7984,9 +7984,8 @@ leader_traits = {
 		random = no
 		sprite = 13
 		consumer_goods_factor = -0.10
-		war_support_factor = 0.05
+		production_lack_of_resource_penalty_factor = -0.2
 		production_speed_synthetic_refinery_factor = 0.15
-		subversive_activites_upkeep = -0.05
 	}
 
 	#Radek
@@ -8335,7 +8334,7 @@ leader_traits = {
 		sprite = 13
 		resistance_damage_to_garrison = -0.25
 		foreign_subversive_activites = -0.3
-		non_core_manpower = 0.02
+		non_core_manpower = 0.05
 
 		ai_will_do = {
 			factor = 1
@@ -8590,7 +8589,7 @@ leader_traits = {
 		sprite = 13
 		resistance_damage_to_garrison = -0.15
 		foreign_subversive_activites = -0.15
-		non_core_manpower = 0.01
+		non_core_manpower = 0.03
 
 		ai_will_do = {
 			factor = 1
@@ -8753,7 +8752,7 @@ leader_traits = {
 
 		resistance_damage_to_garrison = -0.25
 		foreign_subversive_activites = -0.3
-		non_core_manpower = 0.02
+		non_core_manpower = 0.03
 
 		ai_will_do = {
 			factor = 1
@@ -14719,11 +14718,12 @@ leader_traits = {
 		production_speed_infrastructure_factor = 0.1
 		production_speed_rail_way_factor = 0.1
 		production_speed_synthetic_refinery_factor = 0.1
+		production_speed_buildings_factor = 0.08
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			modifier = {
-				factor = 1.8
+				factor = 3
 				date < 1939.1.1
 			}
 		}
@@ -14760,7 +14760,7 @@ leader_traits = {
 		sprite = 13
 		random = no
 		
-		production_speed_buildings_factor = 0.05
+		production_speed_buildings_factor = 0.12
 		consumer_goods_factor = -0.05
 
 	}
@@ -14777,7 +14777,7 @@ leader_traits = {
 		sprite = 13
 		
 		consumer_goods_factor = -0.1
-		production_lack_of_resource_penalty_factor = -0.1
+		production_lack_of_resource_penalty_factor = -0.15
 
 	}
 

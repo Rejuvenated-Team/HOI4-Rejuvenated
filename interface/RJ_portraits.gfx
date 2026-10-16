@@ -157,4 +157,46 @@ spriteTypes = {
 		texturefile = "gfx/leaders/GXC/rj_portrait_GXC_chen_jitang.dds"
 	}
 
+
+
+	###########################
+	### CHI - CHINA ###########
+	###########################
+
+	spriteType = {
+		name = "GFX_rj_portrait_CHI_chiang_kai_shek"
+		texturefile = "gfx/leaders/CHI/rj_portrait_CHI_chiang_kai_shek.dds"
+	}
+
+
+
+	##############################
+	### NZL -  New Zealand #######
+	##############################
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_michael_savage"
+		texturefile = "gfx/leaders/NZL/rj_portrait_NZL_michael_savage.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_king_koroki"
+		texturefile = "gfx/leaders/NZL/rj_portrait_NZL_king_koroki.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_vic_wilcox"
+		texturefile = "gfx/leaders/NZL/rj_portrait_NZL_vic_wilcox.dds"
+	}
+
+
+
+	###############################
+	### VIN - Vietnam #############
+	###############################
+
+	spriteType = {
+		name = "GFX_rj_portrait_VIN_ho_chi_minh"
+		texturefile = "gfx/leaders/VIN/rj_portrait_VIN_ho_chi_minh.dds"
+	}
 }

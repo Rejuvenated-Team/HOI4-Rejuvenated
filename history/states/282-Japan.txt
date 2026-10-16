@@ -6,7 +6,9 @@ state = {
 	state_category = megalopolis
 	
 	resources = {
-		aluminium = 1 # was: 2
+		aluminium = 4
+		steel = 15
+		chromium = 3
 	}
 
 	history = {
@@ -25,7 +27,8 @@ state = {
 			}
 
 			9998 = {
-				naval_base = 6
+				naval_base = 9
+				naval_supply_hub = 1
 			}
 
 			1182 = {
@@ -37,7 +40,14 @@ state = {
 				}
 				
 			}
+		}
 
+		strategic_province_location = {
+		 	defensible_coastline = 9998
+		}
+
+		strategic_province_location = {
+		 	defensible_coastline = 1182
 		}
 
 		victory_points = {
@@ -48,19 +58,11 @@ state = {
 			9998 25 # Yokohama
 		}
 
-		1939.1.1 = {
-			buildings = {
-				arms_factory = 3
-				dockyard = 4
-				industrial_complex = 5
-			}
-		}
-
 	}
 
 	provinces = {
 		993 1097 1113 1182 4000 4100 4184 4188 7016 9998 11908 
 	}
 
-	local_supplies = 10.0 
+	local_supplies = 20.0 
 }
