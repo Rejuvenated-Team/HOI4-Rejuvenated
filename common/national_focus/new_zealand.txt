@@ -86,6 +86,7 @@
 
 		bypass = {
 			NOT = { is_subject_of = ENG }
+			NOT = { is_ally_with = ENG	}
 		}
 
 		completion_reward = {
@@ -459,13 +460,11 @@
 		}
 
 		bypass = {
-			OR = {
-				NOT = {
-					is_in_faction_with = ENG
-				}
-				NOT = {
-					is_subject_of = ENG
-				}
+			NOT = {
+				is_in_faction_with = ENG
+			}
+			NOT = {
+				is_subject_of = ENG
 			}
 		}
 
@@ -1297,10 +1296,10 @@
 
 		completion_reward = {
 			726 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1374,6 +1373,20 @@
 						monthly_population = 0.5
 						recruitable_population_factor = 0.10
 						compliance_gain = 0.10
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 1072
+				}
+				1072 = {
+					add_state_modifier = {
+						modifier = { 
+							monthly_population = 0.5
+							recruitable_population_factor = 0.10
+							compliance_gain = 0.10
+						}
 					}
 				}
 			}
@@ -2119,6 +2132,8 @@
 					value = 1 
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			complete_special_project = sp:sp_air_bouncing_bomb
 		}
 	}
 
@@ -4377,6 +4392,8 @@
 
 		completion_reward = {
 			add_ideas = RJ_NZL_idea_great_pacific_kingdom
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_country_leader_trait = king_of_the_pacific
 		}
 	}
 

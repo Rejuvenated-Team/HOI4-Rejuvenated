@@ -262,16 +262,18 @@ country_event = { #Colonial Polynesian Demands
 		}
 		every_owned_state = {
 			limit = {
-				state = 636
-				state = 1072
-				state = 643
-				state = 642
-				state = 727
-				state = 630
-				state = 629
-				state = 641
-				state = 270
-				state = 948
+				OR = {
+					state = 636
+					state = 1072
+					state = 643
+					state = 642
+					state = 727
+					state = 630
+					state = 629
+					state = 641
+					state = 270
+					state = 948
+				}
 			}
 			transfer_state_to = NZL
 		}
@@ -353,26 +355,28 @@ country_event = { #Colonial Micronesian + Miscellaneous Demands
 		}
 		every_owned_state = {
 			limit = {
-				state = 635
-				state = 1071
-				state = 734
-				state = 639
-				state = 725
-				state = 633
-				state = 631
-				state = 632
-				state = 684
-				state = 638
-				state = 646
-				state = 647
-				state = 634
-				state = 1070
-				state = 737
-				state = 979
-				state = 1073
-				state = 523
-				state = 669
-				state = 1057
+				OR = {
+					state = 635
+					state = 1071
+					state = 734
+					state = 639
+					state = 725
+					state = 633
+					state = 631
+					state = 632
+					state = 684
+					state = 638
+					state = 646
+					state = 647
+					state = 634
+					state = 1070
+					state = 737
+					state = 979
+					state = 1073
+					state = 523
+					state = 669
+					state = 1057
+				}
 			}
 			transfer_state_to = NZL
 		}

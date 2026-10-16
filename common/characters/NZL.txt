@@ -29,7 +29,7 @@ characters={
 	}
 
 	RJ_NZL_king_koroki={
-		name="Korokī Te Rata Mahuta Tāwhiao Pōtatau Te Wherowhero"
+		name="Korokī Wherowhero"
 		portraits={
 			civilian={
 				large="GFX_rj_portrait_NZL_king_koroki"

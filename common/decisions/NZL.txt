@@ -339,7 +339,7 @@ influence_australia_cat = {
 			has_completed_focus = RJ_NZL_assist_the_australian_communist_struggle
 			has_government = communism
 			AST = {
-				communism > 50
+				communism > 0.50
 			}
 		}
 

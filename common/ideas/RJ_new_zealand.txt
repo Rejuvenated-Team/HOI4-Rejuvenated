@@ -915,7 +915,7 @@ ideas = {
 			targeted_modifier = {
 				tag = NZL
 				trade_opinion_factor = 0.5
-				trade_cost_for_target_factor = 0.5
+				trade_cost_for_target_factor = -0.5
 				opinion_gain_monthly_factor = 1
 			}
 		}
@@ -937,7 +937,7 @@ ideas = {
 			targeted_modifier = {
 				tag = JAP
 				trade_opinion_factor = 0.5
-				trade_cost_for_target_factor = 0.5
+				trade_cost_for_target_factor = -0.5
 				opinion_gain_monthly_factor = 1
 			}
 		}
@@ -1208,7 +1208,7 @@ ideas = {
 			targeted_modifier = {
 				tag = NZL
 				trade_opinion_factor = 0.5
-				trade_cost_for_target_factor = 0.5
+				trade_cost_for_target_factor = -0.5
 				opinion_gain_monthly_factor = 1
 			}
 		}
@@ -1230,7 +1230,7 @@ ideas = {
 			targeted_modifier = {
 				tag = PHI
 				trade_opinion_factor = 0.5
-				trade_cost_for_target_factor = 0.5
+				trade_cost_for_target_factor = -0.5
 				opinion_gain_monthly_factor = 1
 			}
 		}
@@ -1614,6 +1614,7 @@ ideas = {
 
 			modifier = {
 				justify_war_goal_time = -0.25
+				resistance_decay = 0.10
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_org_factor = 0.10
@@ -1637,6 +1638,7 @@ ideas = {
 
 			modifier = {
 				justify_war_goal_time = -0.25
+				resistance_decay = 0.10
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_org_factor = 0.10
