@@ -1,0 +1,48 @@
+ideas = {
+	
+	country = {
+		
+		rj_FRA_centralization_time_ns = {
+
+			name = rj_FRA_centralization_ns
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			on_remove = {
+				add_ideas = rj_FRA_centralization_ns
+			}
+
+			modifier = {
+				stability_weekly = 0.0035
+				political_power_factor = 0.15
+				custom_modifier_tooltip = rj_FRA_centralization_time_ns_tt
+			}
+		}
+
+		rj_FRA_centralization_ns = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			modifier = {
+				political_power_factor = 0.15
+			}
+		}
+	}
+
+}

@@ -3,11 +3,19 @@
 #Characters
  FRA_louis_rivet: "Louis Rivet"
 #Ideas
+ rj_FRA_centralization_ns: "Centralization"
 #Focuses
  rj_FRA_soutien_cum_participation: "Soutien Cum Participation"
  rj_FRA_soutien_cum_participation_desc: ""
+ rj_FRA_cpf_permiership: "PCF Premiership"
+ rj_FRA_cpf_permiership_desc: ""
+ rj_FRA_begin_the_process_of_centralization: "Begin Administrative Centralization"
+ rj_FRA_begin_the_process_of_centralization_desc: ""
+ rj_FRA_means_to_the_end: "Means to the End"
+ rj_FRA_means_to_the_end_desc: ""
 #Decisions
 #Events
 #Tooltips
+ rj_FRA_centralization_time_ns_tt: "After this national spirit runs out, its weekly stability bonus will be removed."
  FRA_slum_clearing_effect_tt: "Adds three §YBuilding Slots§! to all core states with more than 7 factories.\n"
 #Flags

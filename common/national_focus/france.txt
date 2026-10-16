@@ -1856,7 +1856,7 @@
 
 	focus = {
 		id = rj_FRA_begin_the_process_of_centralization
-		icon = GFX_goal_support_communism
+		icon = GFX_focus_generic_improve_the_administration_2
 		x = -1
 		y = 1
 
@@ -1875,8 +1875,12 @@
 		bypass = {
 		}
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		completion_reward = {
+			add_timed_idea = {
+				idea = rj_FRA_centralization_ns
+				days = 360
+			}
 		}
 	}
 
@@ -1927,8 +1931,11 @@
 		bypass = {
 		}
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_STABILITY }
 		completion_reward = {
+			#TODO: Make all non-commie advisors not available
+			add_stability = -0.1
+			add_political_power = 50
 		}
 	}
 
@@ -2059,6 +2066,16 @@
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			every_controlled_state = {
+				limit = {
+					is_core_of = FRA
+					OR = {
+						has_state_category = town
+						has_state_category = large_town
+					}
+				}
+				ETH_upgrade_state_category = yes
+			}
 		}
 	}
 
