@@ -2134,6 +2134,7 @@
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			complete_special_project = sp:sp_air_bouncing_bomb
+			complete_special_project = sp:sp_air_earthshaker_bomb
 		}
 	}
 
@@ -4102,8 +4103,6 @@
 
 		}
 
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
-
 		completion_reward = {
 			add_timed_idea = {
 				idea = RJ_NZL_idea_put_out_the_call
@@ -4133,8 +4132,6 @@
 		bypass = {
 
 		}
-
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
 			every_state = {
@@ -4206,8 +4203,6 @@
 
 		}
 
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
-
 		completion_reward = {
 			every_country = {
 				limit = {
@@ -4268,8 +4263,6 @@
 		bypass = {
 
 		}
-
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
 			every_country = {
@@ -4606,8 +4599,6 @@
 
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
-
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = NZL_first_labor_government
@@ -4638,7 +4629,7 @@
 
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_popularity = {
@@ -4670,7 +4661,7 @@
 
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_timed_idea = {
@@ -4703,7 +4694,7 @@
 
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATIONAL_SPIRIT }
 
 		completion_reward = {
 			swap_ideas = {
@@ -4735,7 +4726,7 @@
 
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_NATIONAL_SPIRIT }
 
 		completion_reward = {
 			set_politics = {
@@ -4786,7 +4777,7 @@
 
 		}
 
-		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_political_power = 25
