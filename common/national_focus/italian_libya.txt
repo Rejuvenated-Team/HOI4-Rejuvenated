@@ -1,0 +1,62 @@
+focus_tree = {
+    id = italian_libya_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+            tag = IAL
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 1500 y = 1500 }
+
+	#Balbo Historical Modernisation
+    focus = {
+        id = IAL_continue_balbos_modernisation_plan
+		icon = GFX_focus_AFG_a_modern_economy
+		cost = 5
+		x = 0
+		y = 0
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 50
+		}
+		mutually_exclusive = { focus = IAL_challenge_balbos_modernisation }
+    }
+
+	focus = {
+		id = IAL_ministry_of_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = IAL_continue_balbos_modernisation_plan
+		completion_reward = {
+			unlock_decision_category_tooltip = IAL_ministry_of_infrastructure_category
+		}
+		prerequisite = { focus = IAL_continue_balbos_modernisation_plan }
+	}
+ 
+	#Alt Hist Agricultural Focus
+	focus = {
+		id = IAL_challenge_balbos_modernisation
+		icon = GFX_focus_generic_modernizing_agriculture
+		cost = 5
+		x = 2
+		y = 0
+		completion_reward = {
+			add_war_support = -0.10
+			add_stability = 0.10
+			add_political_power = -100
+			country_event = {
+				id = IAL.1
+				days = 2
+			}
+		}
+		mutually_exclusive = { focus = IAL_continue_balbos_modernisation_plan }		
+	}
+}

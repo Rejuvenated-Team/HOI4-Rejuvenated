@@ -1,0 +1,57 @@
+ideas = {
+    country = {
+        ial_modernisation_campaigns = {
+            picture = ARG_civilian_economy_boost
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            modifier = {
+                production_speed_infrastructure_factor = 0.10
+                production_speed_rail_way_factor = 0.10
+                production_speed_supply_node_factor = 0.10
+                production_speed_industrial_complex_factor = 0.10
+                production_speed_arms_factory_factor = 0.10
+                political_power_cost = 0.20
+            }
+        }
+
+        ial_italian_exploitation_and_looting = {
+            picture = generic_manpower_bonus
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+            modifier = {
+                weekly_manpower = -500
+                weekly_stability = -0.05
+                weekly_war_support = -0.05
+                extra_trade_to_overlord_factor = 0.50
+                cic_to_overlord_factor = 0.50
+                mic_to_overlord_factor = 0.50
+            }
+        }
+
+        ial_king_of_the_desert = {
+            picture = GFX_focus_generic_desert_training
+
+            modifier = {
+                terrain_penalty_reduction = 0.10
+            }
+        }
+    }
+}

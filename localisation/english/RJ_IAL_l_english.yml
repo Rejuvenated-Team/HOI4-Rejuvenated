@@ -1,0 +1,41 @@
+﻿l_english:
+#Political Parties
+  IAL_democratic_party: "DPL"
+  IAL_democratic_party_long: "Democratic Party of Libya"
+  IAL_fascism_party: "PNF"
+  IAL_fascism_party_long: "National Fascist Party"
+  IAL_communism_party: "FVPL"
+  IAL_communism_party_long: "Free Villagers Party of Libya"
+  IAL_neutrality_party: "KPL"
+  IAL_neutrality_party_long: "Kings Party of Libya"
+#Characters
+#Ideas
+  ial_modernisation_campaigns: "Modernisation Campaigns"
+  ial_modernisation_campaigns_desc: "Italo Balbo has entacted a modernisation campaign in Libya since 1934, which is working great but the cost is too high. We need to fully comply with this to achieve the best reward, or stop it now to halt our nation going to ruins."
+  ial_italian_exploitation_and_looting: "Italian Exploitation and Looting"
+  ial_italian_exploitation_and_looting_desc: "Since the Italian conquest of Libya in 1911, they have exploited our land for their own benefit and now take our men to fight in Ethiopia. The Italians are dependent on us, and they know it."
+  ial_king_of_the_desert: "King of the Desert"
+  ial_king_of_the_desert_desc: "Our soldiers are one of the best in the harsh deserts of Libya, with their great cavalry and guns. We must use this as an advantage against foreign invading armies who want to remove the nation we work hard for."
+#Focuses
+  IAL_continue_balbos_modernisation_plan: "Continue Balbo's Modernisation Plan"
+  IAL_continue_balbos_modernisation_plan_desc: "Balbo's modernisation plan is going great, why would we stop just because of some dirty peasants protesting."
+  IAL_ministry_of_infrastructure: "Ministry of Infrastructure"
+  IAL_ministry_of_infrastructure_desc: "The roads must be ready for the huge amount of construction materials we will transport across the country for the modernisation of Libya, we must evade bottlenecks and continue building our great nation."
+
+  IAL_challenge_balbos_modernisation: "Challenge Balbo's Economic Plans"
+  IAL_challenge_balbos_modernisation_desc: "Balbo's modernisation only benefits Italy, we must think about the hard working Libyans who build their factories, and give a better life to the average Libyan."
+#Decisions
+  IAL_ministry_of_infrastructure_category: "Ministry of Infrastructure"
+  IAL_expand_infrastructure_in_tripoli: "Expand Infrastructure in Tripoli"
+  IAL_expand_infrastructure_in_el_aghelia: "Expand Infrastructure in El Aghelia"
+  IAL_expand_infrastructure_in_sirte: "Expand Infrastructure in Sirte"
+  IAL_expand_infrastructure_in_benghasi: "Expand Infrastructure in Benghasi"
+  IAL_expand_infrastructure_in_cyrenacia: "Expand Infrastructure in Cyrenacia"
+  IAL_expand_infrastructure_in_derna: "Expand Infrastructure in Derna"
+  IAL_improve_the_passages: "Improve the Passages"
+#Events
+  IAL.1.t: "Libyan People Successfully Remove Balbo's Modernisation"
+  IAL.1.d: "The recent question to the economic actions done by Balbo has answered. On one hand, the Fascists wanted to continue the modernisation done by Balbo, as they say that its a great benefit to the Libyan economy and faling behind our enemies isnt an option, while the Libyan locals have successfully protested against the government to change the economic focus on more agricultural improvements. This is a heroic act done by the locals after the Italians brutally oppressed and silenced us, we wont let it happen again."
+  IAL.1.w: "We dont need Balbo"
+#Tooltips
+#Flags

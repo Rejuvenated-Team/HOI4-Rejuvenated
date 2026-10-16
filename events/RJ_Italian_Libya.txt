@@ -1,0 +1,15 @@
+add_namespace = IAL
+
+country_event = {
+    id = IAL.1
+    title = IAL.1.t
+    desc = IAL.1.d
+    picture = GFX_report_event_gathering_protest
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = IAL.1.w
+    }
+}
