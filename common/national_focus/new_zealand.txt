@@ -5233,6 +5233,7 @@
 		available = {
 			AST = {
 				exists = yes
+				has_government = communism
 			}
 		}
 
@@ -5414,7 +5415,9 @@
 		search_filters = { FOCUS_FILTER_CONQUEST }
 
 		completion_reward = {
-			
+			HOL = {
+				country_event = RJ_NZL.13
+			}
 		}
 	}
 
@@ -5435,11 +5438,14 @@
 		}
 
 		available = {
-			all_state = {
-				AND = {
-					is_core_of = INS
-					is_core_of = MAL
-					is_owned_and_controlled_by = NZL
+			INS = {
+				all_core_state = {
+					is_controlled_by = NZL
+				}
+			}
+			MAL = {
+				all_core_state = {
+					is_controlled_by = NZL
 				}
 			}
 		}
@@ -5451,19 +5457,22 @@
 		search_filters = { FOCUS_FILTER_CONQUEST FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			every_core_state = {
-				limit = {
-					is_core_of = INS
-					is_core_of = MAL
+			INS = {
+				every_core_state = {
+					add_core_of = NZL
 				}
-				add_core_of = NZL
+			}
+			MAL = {
+				every_core_state = {
+					add_core_of = NZL
+				}
 			}
 		}
 	}
 
 	focus = {
 		id = RJ_NZL_press_for_french_colonial_withdrawals
-		icon = GFX_focus_JAP_occupy_indochina
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 		prerequisite = { focus = RJ_NZL_free_indonesia }
 		x = -1
 		y = 1
@@ -5548,12 +5557,19 @@
 		}
 
 		available = {
-			all_state = {	
-				AND = {
-					is_core_of = VIN
-					is_core_of = LAO
-					is_core_of = CAM
-					is_owned_and_controlled_by = NZL
+			VIN = {
+				all_core_state = {
+					is_controlled_by = NZL
+				}
+			}
+			CAM = {
+				all_core_state = {
+					is_controlled_by = NZL
+				}
+			}
+			LAO = {
+				all_core_state = {
+					is_controlled_by = NZL
 				}
 			}
 		}
@@ -5601,12 +5617,19 @@
 		}
 
 		available = {
-			all_state = {	
-				OR = {
-					is_core_of = VIN
-					is_core_of = LAO
-					is_core_of = CAM
-					is_owned_and_controlled_by = NZL
+			VIN = {
+				all_core_state = {
+					is_controlled_by = NZL
+				}
+			}
+			CAM = {
+				all_core_state = {
+					is_controlled_by = NZL
+				}
+			}
+			LAO = {
+				all_core_state = {
+					is_controlled_by = NZL
 				}
 			}
 		}

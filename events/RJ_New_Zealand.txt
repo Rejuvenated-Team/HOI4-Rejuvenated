@@ -760,6 +760,15 @@ country_event = { #Malaysia's owners get demands.
 			country_event = RJ_NZL.12a
 			puppet = MAL
 		}
+		1023 = {
+			transfer_state_to = NZL
+		}
+		1065 = {
+			transfer_state_to = NZL
+		}
+		1021 = {
+			transfer_state_to = NZL
+		}
 	}
 
 	option = {
@@ -775,7 +784,7 @@ country_event = { #Malaysia's owners get demands.
 
 country_event = { #Positive British Response
 	id = RJ_NZL.12a
-	title = "France Hands Over Indochina!"
+	title = "The Brits Hand Over Malaysia!"
 	desc = RJ_NZL.12a_d
 	picture = GFX_report_event_generic_sign_treaty3
 	
@@ -784,7 +793,7 @@ country_event = { #Positive British Response
 	option = {
 		name = "Huzzah! Let's integrate them directly."
 		ai_chance = {
-			base = 2
+			base = 1
 		}
 		annex_country = {
 			target = MAL
@@ -799,6 +808,15 @@ country_event = { #Positive British Response
 		}
 		MAL = {
 			inherit_technology = NZL
+		}
+		1023 = {
+			transfer_state_to = MAL
+		}
+		1065 = {
+			transfer_state_to = MAL
+		}
+		1021 = {
+			transfer_state_to = MAL
 		}
 	}
 }
@@ -820,6 +838,94 @@ country_event = { #Negative British Response
 			target = MAL
 			type = annex_everything
 			generator = 336
+		}
+	}
+
+	option = {
+		name = "We'll bide our time. For now..."
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = { #Indonesia's owners get demands.
+	id = RJ_NZL.13
+	title = "New Zealand Demands Malaysia"
+	desc = RJ_NZL.13d
+	picture = GFX_report_event_communist_leader
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Fine, let them have it."
+		ai_chance = {
+			base = 10
+		}
+		NZL = {
+			country_event = RJ_NZL.13a
+			puppet = INS
+		}
+	}
+
+	option = {
+		name = "Who are you to give us orders?"
+		ai_chance = {
+			base = 1
+		}
+		NZL = {
+			country_event = RJ_NZL.13b
+		}
+	}
+}
+
+country_event = { #Positive British Response
+	id = RJ_NZL.13a
+	title = "The Dutch Hand Over Indonesia!"
+	desc = RJ_NZL.13a_d
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Huzzah! Let's integrate them directly."
+		ai_chance = {
+			base = 1
+		}
+		annex_country = {
+			target = INS
+			transfer_troops = yes
+		}
+	}
+
+	option = {
+		name = "Let them maintain their own autonomy."
+		ai_chance = {
+			base = 1
+		}
+		INS = {
+			inherit_technology = NZL
+		}
+	}
+}
+
+country_event = { #Negative British Response
+	id = RJ_NZL.13b
+	title = "The Dutch Denied Us"
+	desc = RJ_NZL.13b_d
+	picture = GFX_report_event_generic_rally2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Fine, we'll do this the hard way."
+		ai_chance = {
+			base = 1
+		}
+		create_wargoal = {
+			target = INS
+			type = annex_everything
+			generator = 1058
 		}
 	}
 

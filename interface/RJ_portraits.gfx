@@ -159,6 +159,16 @@ spriteTypes = {
 
 
 
+	###########################
+	### CHI - CHINA ###########
+	###########################
+
+	spriteType = {
+		name = "GFX_rj_portrait_CHI_chiang_kai_shek"
+		texturefile = "gfx/leaders/CHI/rj_portrait_CHI_chiang_kai_shek.dds"
+	}
+
+
 
 	##############################
 	### NZL -  New Zealand #######

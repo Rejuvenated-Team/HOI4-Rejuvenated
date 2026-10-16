@@ -61,7 +61,7 @@ spriteTypes = {
     }
 
     spriteType = {
-        name = GFX_ideology_oligarchy
+        name = GFX_ideology_oligarchism
         texturefile = gfx/interface/ideologies/RJ_oligarchy_icon.dds
     }
 
@@ -72,6 +72,11 @@ spriteTypes = {
 
     spriteType = {
         name = GFX_ideology_conservatism
+        texturefile = gfx/interface/ideologies/RJ_conservatism_icon.dds
+    }
+
+    spriteType = {
+        name = GFX_ideology_conservatism_neutrality
         texturefile = gfx/interface/ideologies/RJ_conservatism_icon.dds
     }
 
