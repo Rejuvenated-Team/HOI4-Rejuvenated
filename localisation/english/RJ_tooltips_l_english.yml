@@ -6,3 +6,5 @@
  light_tank_tech: "Light Tank Tech"
  armored_car_tech: "Armored Car Tech"
  all_artillery_tech: "All Artillery Tech"
+ infantry_tech_research: "Infantry Technology Research Speed"
+ armored_car_tech_research: "Armored Car Technology Research Speed"
