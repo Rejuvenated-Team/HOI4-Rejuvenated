@@ -9,6 +9,7 @@
   IAL_neutrality_party: "KPL"
   IAL_neutrality_party_long: "Kings Party of Libya"
 #Characters
+  IAL_Italo_Balbo: "Italo Balbo"
 #Ideas
   ial_modernisation_campaigns: "Modernisation Campaigns"
   ial_modernisation_campaigns_desc: "Italo Balbo has entacted a modernisation campaign in Libya since 1934, which is working great but the cost is too high. We need to fully comply with this to achieve the best reward, or stop it now to halt our nation going to ruins."
@@ -21,6 +22,10 @@
   IAL_continue_balbos_modernisation_plan_desc: "Balbo's modernisation plan is going great, why would we stop just because of some dirty peasants protesting."
   IAL_ministry_of_infrastructure: "Ministry of Infrastructure"
   IAL_ministry_of_infrastructure_desc: "The roads must be ready for the huge amount of construction materials we will transport across the country for the modernisation of Libya, we must evade bottlenecks and continue building our great nation."
+  IAL_ministry_of_civilian_industry: "Ministry of Civilain Industry"
+  IAL_ministry_of_civilian_industry_desc: "The civilian industry is important for our growth, the Ministry of Civilian Industry will accomplish great achievements in our industrialisation and defeat our enemies in the economical front."
+  IAL_ministry_of_military_industry: "Ministry of Military Industry"
+  IAL_ministry_of_military_industry_desc: "Finally, our modernisation is seeming to be effective, we need the Ministry of Military Industry to lead our war production to eliminate the enemies of Libya."
 
   IAL_challenge_balbos_modernisation: "Challenge Balbo's Economic Plans"
   IAL_challenge_balbos_modernisation_desc: "Balbo's modernisation only benefits Italy, we must think about the hard working Libyans who build their factories, and give a better life to the average Libyan."
@@ -33,6 +38,18 @@
   IAL_expand_infrastructure_in_cyrenacia: "Expand Infrastructure in Cyrenacia"
   IAL_expand_infrastructure_in_derna: "Expand Infrastructure in Derna"
   IAL_improve_the_passages: "Improve the Passages"
+
+  IAL_ministry_of_civilian_industry_category: "Ministry of Civilian Industry"
+  IAL_industrialise_the_east: "Industrialise the East"
+  IAL_industrialise_the_center: "Industrialise the Center"
+  IAL_industrialise_the_west: "Industrialise the West"
+  IAL_open_shops_in_the_libyan_passages: "Open Shops in the Passages"
+
+  IAL_ministry_of_military_industry_category: "Ministry of Military Industry"
+  IAL_militarise_tripoli: "Militarise Tripoli"
+  IAL_militarise_el_agheila: "Militarise El Aghelia"
+  IAL_militarise_derna: "Militarise Derna"
+  IAL_open_dockyards_in_benghasi: "Open Dockyards in Benghasi"
 #Events
   IAL.1.t: "Libyan People Successfully Remove Balbo's Modernisation"
   IAL.1.d: "The recent question to the economic actions done by Balbo has answered. On one hand, the Fascists wanted to continue the modernisation done by Balbo, as they say that its a great benefit to the Libyan economy and faling behind our enemies isnt an option, while the Libyan locals have successfully protested against the government to change the economic focus on more agricultural improvements. This is a heroic act done by the locals after the Italians brutally oppressed and silenced us, we wont let it happen again."

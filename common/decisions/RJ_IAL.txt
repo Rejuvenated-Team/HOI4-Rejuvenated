@@ -114,7 +114,7 @@ IAL_ministry_of_infrastructure_category = {
             450 = {
                 add_building_construction = {
                     type = infrastructure
-                    level = 5
+                    level = 3
                     instant_build = yes
                 }
             }
@@ -174,7 +174,7 @@ IAL_ministry_of_infrastructure_category = {
             451 = {
                 add_building_construction = {
                     type = infrastructure
-                    level = 3
+                    level = 4
                     instant_build = yes
                 }
             }
@@ -209,5 +209,308 @@ IAL_ministry_of_infrastructure_category = {
                 }
             }
         }
+    }
+}
+
+IAL_ministry_of_civilian_industry_category = {
+
+    IAL_industrialise_the_east = {
+        icon = GFX_decision_generic_factory
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 663
+                state = 451
+                state = 450
+			}
+		}
+
+        visible = {
+            ROOT = {
+                controls_state = 663
+                controls_state = 451
+                controls_state = 450
+            }
+        }
+
+        cost = 100
+        fire_only_once = yes
+        days_remove = 250
+
+        remove_effect = {
+            663 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+
+            451 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 3
+                    instant_build = yes
+                }
+            }
+    
+            450 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    IAL_industrialise_the_center = {
+        icon = GFX_decision_generic_factory
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 449
+                state = 662
+			}
+		}
+
+        visible = {
+            ROOT = {
+				controls_state = 449
+                controls_state = 662
+            }
+        }
+
+        cost = 100
+        fire_only_once = yes
+        days_remove = 250
+
+        remove_effect = {
+            449 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+
+            662 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 3
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    IAL_industrialise_the_west = {
+        icon = GFX_decision_generic_factory
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 661
+                state = 448
+			}
+		}
+
+        visible = {
+            ROOT = {
+                controls_state = 661
+                controls_state = 448
+            }
+        }
+
+        cost = 100
+        fire_only_once = yes
+        days_remove = 250
+
+        remove_effect = {
+            448 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 4
+                    instant_build = yes
+                }
+            }
+
+            661 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+
+    }
+
+    IAL_open_shops_in_the_libyan_passages = {
+        icon = GFX_decision_generic_factory
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 1113
+			}
+		}
+
+        visible = {
+            ROOT = {
+                controls_state = 1113
+            }
+        }
+
+        cost = 100
+        fire_only_once = yes
+        days_remove = 250
+
+        remove_effect = {
+            1113 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+
+    }
+}
+
+IAL_ministry_of_military_industry_category = {
+
+    IAL_militarise_tripoli = {
+        icon = GFX_decision_generic_industry
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 448
+			}
+		}
+
+        visible = {
+            ROOT = {
+                controls_state = 448
+            }
+        }
+
+        cost = 100
+        fire_only_once = yes
+        days_remove = 100
+
+        remove_effect = {
+            448 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+
+    }
+
+    IAL_militarise_el_agheila = {
+        icon = GFX_decision_generic_industry
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 449
+			}
+		}
+
+        visible = {
+            ROOT = {
+                controls_state = 449
+            }
+        }
+
+        cost = 100
+        fire_only_once = yes
+        days_remove = 100
+
+        remove_effect = {
+            449 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = arms_factory
+                    level = 3
+                    instant_build = yes
+                }
+            }
+        }
+
+    }
+
+    IAL_militarise_derna = {
+        icon = GFX_decision_generic_industry
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 451
+			}
+		}
+
+        visible = {
+            ROOT = {
+                controls_state = 451
+            }
+        }
+
+        cost = 100
+        fire_only_once = yes
+        days_remove = 100
+
+        remove_effect = {
+            451 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+
+    }
+
+    IAL_open_dockyards_in_benghasi = {
+        icon = GFX_decision_generic_human_torpedo
+
+		highlight_states = { 
+			highlight_state_targets = {
+				state = 450
+			}
+		}
+
+        visible = {
+            ROOT = {
+                controls_state = 450
+            }
+        }
+
+        cost = 100
+        fire_only_once = yes
+        days_remove = 100
+
+        remove_effect = {
+            450 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = dockyard
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+
     }
 }
