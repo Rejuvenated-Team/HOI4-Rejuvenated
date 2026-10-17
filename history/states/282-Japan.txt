@@ -29,6 +29,7 @@ state = {
 			9998 = {
 				naval_base = 9
 				naval_supply_hub = 1
+				air_facility = 1
 			}
 
 			1182 = {

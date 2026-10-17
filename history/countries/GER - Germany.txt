@@ -99,6 +99,8 @@ set_technology = {
 	synth_oil_experiments = 1
 	fuel_silos = 1
 	fuel_refining = 1
+	steelworks_tech = 1
+	experimental_rockets = 1
 }
 if = {
 	limit = {

@@ -5391,7 +5391,7 @@
 
 	focus = {
 		id = RJ_NZL_free_indonesia
-		icon = GFX_focus_INS_greater_indonesia
+		icon = GFX_focus_RJ_NZL_free_indonesia
 		prerequisite = { focus = RJ_NZL_the_pacific_revolution }
 		x = -1
 		y = 2
@@ -5480,7 +5480,7 @@
 
 	focus = {
 		id = RJ_NZL_press_for_french_colonial_withdrawals
-		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		icon = GFX_focus_RJ_NZL_free_indochina
 		prerequisite = { focus = RJ_NZL_free_indonesia }
 		x = -1
 		y = 1
@@ -5783,7 +5783,7 @@
 
 	focus = {
 		id = RJ_NZL_free_malaysia
-		icon = GFX_focus_INS_liberate_malaya
+		icon = GFX_focus_RJ_NZL_free_malaysia
 		prerequisite = { focus = RJ_NZL_the_pacific_revolution }
 		x = 1
 		y = 2

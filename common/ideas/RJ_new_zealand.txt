@@ -567,6 +567,8 @@ ideas = {
 
 			modifier = {
 				research_speed_factor = 0.08
+				special_project_speed_factor = 0.10
+				production_speed_facility_factor = 0.2
 			}
 		}
 

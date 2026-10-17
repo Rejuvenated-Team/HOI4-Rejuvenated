@@ -1552,4 +1552,19 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/nzl/RJ_NZL_empower_ho.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_free_indonesia"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_free_indonesia.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_free_malaysia"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_free_malaysia.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_NZL_free_indochina"
+		texturefile = "gfx/interface/goals/nzl/RJ_NZL_free_indochina.dds"
+	}
+
 }

@@ -855,7 +855,7 @@ country_event = { #Negative British Response
 
 country_event = { #Indonesia's owners get demands.
 	id = RJ_NZL.13
-	title = "New Zealand Demands Malaysia"
+	title = "New Zealand Demands Indonesia"
 	desc = RJ_NZL.13d
 	picture = GFX_report_event_communist_leader
 	
