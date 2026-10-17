@@ -9779,6 +9779,7 @@ leader_traits = {
 		
 		justify_war_goal_time = -0.25
 		war_support_factor = 0.1
+		stability_factor = 0.10
 		
 		ai_will_do = {
 			factor = 0
