@@ -23,6 +23,55 @@ ideas = {
             }
         }
 
+        ial_modernisation_campaignsfocus1 = {
+            picture = ARG_civilian_economy_boost
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            modifier = {
+                production_speed_infrastructure_factor = 0.10
+                production_speed_rail_way_factor = 0.10
+                production_speed_supply_node_factor = 0.10
+                production_speed_industrial_complex_factor = 0.10
+                production_speed_arms_factory_factor = 0.10
+                research_speed_factor = 0.15
+                political_power_cost = 0.20
+            }
+        }
+
+        ial_modernisation_campaignsfocus2 = {
+            picture = ARG_civilian_economy_boost
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            modifier = {
+                production_speed_infrastructure_factor = 0.10
+                production_speed_rail_way_factor = 0.10
+                production_speed_supply_node_factor = 0.10
+                production_speed_industrial_complex_factor = 0.10
+                production_speed_arms_factory_factor = 0.10
+                research_speed_factor = 0.15
+                fascism_drift = 0.05
+                political_power_cost = 0.20
+            }
+        }
+
         ial_italian_exploitation_and_looting = {
             picture = generic_manpower_bonus
 
