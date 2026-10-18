@@ -8,9 +8,10 @@ NDefines.NCountry.BASE_MAX_COMMAND_POWER = 300.0 -- base value for maximum comma
 NDefines.NCountry.BASE_RESEARCH_SLOTS = 3						-- Base number of research slots per country.
 
 -- NProduction
-NDefines.NProduction.DEFAULT_MAX_NAV_FACTORIES_PER_LINE = 15
-NDefines.NProduction.FLOATING_HARBOR_MAX_NAV_FACTORIES_PER_LINE = 15
-NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 15
+NDefines.NProduction.DEFAULT_MAX_NAV_FACTORIES_PER_LINE = 30
+NDefines.NProduction.FLOATING_HARBOR_MAX_NAV_FACTORIES_PER_LINE = 30
+NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 30
+NDefines.NProduction.CONVOY_MAX_NAV_FACTORIES_PER_LINE = 30
 NDefines.NProduction.RAILWAY_GUN_MAX_MIL_FACTORIES_PER_LINE = 10
 NDefines.NProduction.RESOURCE_TO_ENERGY_COEFFICIENT = 12.0 -- How much energy per coal produces
 NDefines.NProduction.BASE_COUNTRY_ENERGY_PRODUCTION = 12.0 -- The base energy production of a country
@@ -59,7 +60,6 @@ NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 5
 NDefines.NAir.ANTI_AIR_ATTACK_TO_DAMAGE_REDUCTION_FACTOR = 1.0 -- Balancing value to convert equipment stat anti_air_attack to the damage reduction modifier apply to incoming air attacks against units with AA.
 
 -- NNavy
-NDefines.NNavy.NAVAL_MINES_IN_REGION_MAX = 1200.0
 NDefines.NNavy.NAVAL_MINES_ACCIDENT_CRITICAL_HIT_CHANCES = 0.20
 NDefines.NNavy.NAVAL_HOMEBASE_CALCULATION_DISTANCE_CUTOFF = 1000 -- Tuning parameter for homebase calculation. Distance to normalize against. Everything above said value will be treated as score = 0.
 NDefines.NNavy.NAVAL_HOMEBASE_BUILDING_SCORE_FACTOR = 0.02 -- Tuning parameter for homebase calculation. Multiplier for how much the level of the naval base impacts its total score.

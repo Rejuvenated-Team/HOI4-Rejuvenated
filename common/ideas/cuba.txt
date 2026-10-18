@@ -599,7 +599,7 @@ ideas = {
 			picture = saf_soviet_advisers
 			
 			modifier = {
-				army_morale_factor = 0.15
+				army_morale_factor = 0.10
 				planning_speed = 0.10
 				max_planning = 0.15
 				experience_gain_army_unit_factor = 0.15

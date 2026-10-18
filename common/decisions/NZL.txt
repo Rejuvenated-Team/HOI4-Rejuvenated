@@ -261,9 +261,15 @@ influence_australia_cat = {
 
 		days_re_enable = 1
 
+		targets = { AST }
+		target_trigger = {
+			FROM = {
+				tag = AST
+			}
+		}
 		targeted_modifier = {
 			tag = AST
-			communism_drift = 0.15
+			communism_drift = 0.08
 		}
 
 	}
@@ -306,9 +312,15 @@ influence_australia_cat = {
 
 		days_re_enable = 1
 
+		targets = { AST }
+		target_trigger = {
+			FROM = {
+				tag = AST
+			}
+		}
 		targeted_modifier = {
 			tag = AST
-			communism_drift = 0.15
+			communism_drift = 0.08
 		}
 
 	}
@@ -351,9 +363,15 @@ influence_australia_cat = {
 
 		days_re_enable = 1
 
+		targets = { AST }
+		target_trigger = {
+			FROM = {
+				tag = AST
+			}
+		}
 		targeted_modifier = {
 			tag = AST
-			communism_drift = 0.15
+			communism_drift = 0.05
 		}
 
 	}

@@ -7125,8 +7125,9 @@ leader_traits = {
 	ARG_socialist_feminist = {
 		random = no
 		sprite = 13
-		communism_drift = 0.05
-		political_power_gain = 0.05
+		communism_drift = 0.08
+		political_power_gain = 0.10
+		recruitable_population_factor = 0.15
 		stability_weekly = 0.005
 	}
 
