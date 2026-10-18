@@ -26,6 +26,7 @@ NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT
 -- NPolitics
 NDefines.NPolitics.ARMY_LEADER_MAX_COST = 50 -- max cost BEFORE modifiers
 NDefines.NPolitics.NAVY_LEADER_MAX_COST = 50 -- max cost BEFORE modifiers
+NDefines.NPolitics.BASE_POLITICAL_POWER_INCREASE = 2.5
 
 -- NMilitary
 NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 1000 --Max army experience a country can store

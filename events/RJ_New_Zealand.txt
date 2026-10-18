@@ -669,10 +669,16 @@ country_event = { #Baguette people get demands for French Indochina.
 	option = {
 		name = "We don't need a new war right now."
 		ai_chance = {
-			base = 10
+			base = 12
 			modifier = {
 				FRA = {
 					has_war_with = JAP
+				}
+				factor = 5
+			}
+			modifier = {
+				FRA = {
+					has_capitulated = yes
 				}
 				factor = 5
 			}

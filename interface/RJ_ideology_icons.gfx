@@ -71,6 +71,11 @@ spriteTypes = {
     }
 
     spriteType = {
+        name = GFX_ideology_socialism
+        texturefile = gfx/interface/ideologies/RJ_socialism_icon.dds
+    }
+
+    spriteType = {
         name = GFX_ideology_conservatism
         texturefile = gfx/interface/ideologies/RJ_conservatism_icon.dds
     }

@@ -845,7 +845,7 @@ characters={
 				original_tag  = NZL
 			}
 			available = { 
-				has_government = communism
+				has_completed_focus = RJ_NZL_increase_distribution_of_the_peoples_voice
 			}
 			traits  = {
 				communist_journalist

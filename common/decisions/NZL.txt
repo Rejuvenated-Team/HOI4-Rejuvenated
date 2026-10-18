@@ -255,15 +255,15 @@ influence_australia_cat = {
 
 		
 
-		cost = 50
+		cost = 25
 
 		days_remove = 90
 
-		days_re_enable = 7
+		days_re_enable = 1
 
 		targeted_modifier = {
 			tag = AST
-			communism_drift = 0.10
+			communism_drift = 0.15
 		}
 
 	}
@@ -300,24 +300,24 @@ influence_australia_cat = {
 
 		
 
-		cost = 50
+		cost = 25
 
 		days_remove = 90
 
-		days_re_enable = 7
+		days_re_enable = 1
 
 		targeted_modifier = {
 			tag = AST
-			communism_drift = 0.10
+			communism_drift = 0.15
 		}
 
 	}
 
-	RJ_NZL_overturn_the_australian_government = {
+	RJ_NZL_appeal_to_the_natives = {
 		icon = GFX_decision_SOV_secure_the_administration
 
 		ai_will_do = {
-			base = 100
+			base = 15
 		}
 
 		allowed = {
@@ -339,7 +339,52 @@ influence_australia_cat = {
 			has_completed_focus = RJ_NZL_assist_the_australian_communist_struggle
 			has_government = communism
 			AST = {
-				communism > 0.50
+				has_idea = RJ_NZL_idea_communist_influence
+			}
+		}
+
+		
+
+		cost = 25
+
+		days_remove = 90
+
+		days_re_enable = 1
+
+		targeted_modifier = {
+			tag = AST
+			communism_drift = 0.15
+		}
+
+	}
+
+	RJ_NZL_overturn_the_australian_government = {
+		icon = GFX_decision_SOV_secure_the_administration
+
+		ai_will_do = {
+			base = 50
+		}
+
+		allowed = {
+			original_tag = NZL
+		}
+
+		visible = {
+			has_completed_focus = RJ_NZL_assist_the_australian_communist_struggle
+			has_government = communism
+
+			NOT = {
+				AST = {
+					has_government = communism
+				}
+			}
+		}
+
+		available = {
+			has_completed_focus = RJ_NZL_assist_the_australian_communist_struggle
+			has_government = communism
+			AST = {
+				communism > 0.49
 			}
 		}
 
@@ -347,7 +392,7 @@ influence_australia_cat = {
 
 		cost = 100
 
-		days_remove = 15
+		days_remove = 7
 
 		complete_effect = {
 			AST = {
