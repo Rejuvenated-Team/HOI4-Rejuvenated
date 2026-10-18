@@ -38,8 +38,8 @@ ideas = {
 
             modifier = {
                 weekly_manpower = -500
-                weekly_stability = -0.05
-                weekly_war_support = -0.05
+                weekly_stability_factor = -0.05
+                weekly_war_support_factor = -0.05
                 extra_trade_to_overlord_factor = 0.50
                 cic_to_overlord_factor = 0.50
                 mic_to_overlord_factor = 0.50
@@ -47,10 +47,86 @@ ideas = {
         }
 
         ial_king_of_the_desert = {
-            picture = GFX_focus_generic_desert_training
+            picture = HABSBURG_cavalry
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
 
             modifier = {
                 terrain_penalty_reduction = 0.10
+            }
+        }
+
+        IAL_compensation_for_workers = {
+            picture = NOR_printing_money
+
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            modifier = {
+                political_power_cost = 0.30
+                compliance_gain = 0.05
+                resistance_growth = -0.05
+            }
+        }
+
+        IAL_improving_agricultural_situation = {
+            picture = LIT_invested_in_farms
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            modifier = {
+                political_power_cost = 0.10
+                stability_weekly_factor = 0.05
+            }
+
+            remove_effect = {
+                add_ideas = IAL_great_agriculture
+            }
+        }
+
+        IAL_great_agriculture = {
+            picture = LIT_invested_in_farms
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            modifier = {
+                political_power_gain = 0.10
+                stability_weekly_factor = 0.05
+                attrition = -0.05
+                army_org = 0.05
+                army_morale = 0.05
             }
         }
     }

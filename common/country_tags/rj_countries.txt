@@ -1,5 +1,6 @@
 #Africa
 SMR = "countries/Spanish Morocco.txt"
+IAL = "countries/Italian Libya.txt"
 
 #Asia
 XIK = "countries/Xikang Clique.txt"

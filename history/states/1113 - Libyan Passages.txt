@@ -6,7 +6,7 @@ state={
 	state_category = wasteland
 
 	history={
-		owner = ITA
+		owner = IAL
 		add_core_of = LBA
 		victory_points = {
 			1060 1 # Al Jawf

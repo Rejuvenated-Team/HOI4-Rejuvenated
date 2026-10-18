@@ -7,7 +7,7 @@ state={
 	state_category = city
 
 	history={
-		owner = ITA
+		owner = IAL
 		
 		victory_points = {
 			11954 3 

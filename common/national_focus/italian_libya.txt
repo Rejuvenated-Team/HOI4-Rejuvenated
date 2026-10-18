@@ -69,7 +69,79 @@ focus_tree = {
 			add_war_support = 0.05
 		}
 	}
+
+	focus = {
+		id = IAL_power_of_science
+		icon = GFX_SOV_national_academies_of_sciences_ccp_2d_sov_compatibility
+		x = -2
+		y = 1
+		relative_position_id = IAL_continue_balbos_modernisation_plan
+		prerequisite = { focus = IAL_continue_balbos_modernisation_plan }
+	#	completion_reward = {
+	#
+	#	}
+	}
  
+	focus = {
+		id = IAL_inspiration_from_italy
+		icon = GFX_focus_ITA_italian_irredentism
+		x = 0
+		y = 1
+		relative_position_id = IAL_power_of_science
+		prerequisite = { focus = IAL_power_of_science }
+	#	completion_reward = {
+	#
+	#	}
+	}
+
+	focus = {
+		id = IAL_a_city_like_rome
+		icon = GFX_focus_ARG_march_to_la_casa_rosada
+		x = 0
+		y = 2
+		relative_position_id = IAL_power_of_science
+		prerequisite = { focus = IAL_inspiration_from_italy }
+	#	completion_reward = {
+	#
+	#	}
+	}
+
+	focus = {
+		id = IAL_enslave_the_locals
+		icon = GFX_goal_continuous_restrict_freedom
+		x = -4
+		y = 1
+		relative_position_id = IAL_continue_balbos_modernisation_plan
+		prerequisite = { focus = IAL_continue_balbos_modernisation_plan }
+	#	completion_reward = {
+	#
+	#	}
+	}
+
+	focus = {
+		id = IAL_twelve_hour_workdays
+		icon = GFX_focus_generic_reinforcing_the_supply_network
+		x = 0
+		y = 1
+		relative_position_id = IAL_enslave_the_locals
+		prerequisite = { focus = IAL_enslave_the_locals }
+	#	completion_reward = {
+	#
+	#	}
+	}
+
+	focus = {
+		id = IAL_encourage_brutality
+		icon = GFX_focus_ETH_amedeos_feast_of_maskal
+		x = 0
+		y = 2
+		relative_position_id = IAL_enslave_the_locals
+		prerequisite = { focus = IAL_twelve_hour_workdays }
+	#	completion_reward = {
+	#
+	#	}
+	}
+
 	#Alt Hist Agricultural Focus
 	focus = {
 		id = IAL_challenge_balbos_modernisation
