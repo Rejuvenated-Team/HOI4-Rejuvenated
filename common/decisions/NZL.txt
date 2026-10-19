@@ -261,15 +261,13 @@ influence_australia_cat = {
 
 		days_re_enable = 1
 
-		targets = { AST }
-		target_trigger = {
-			FROM = {
-				tag = AST
+		complete_effect = {
+			AST = {
+				add_timed_idea = {
+					idea = RJ_NZL_idea_AST_peoples_voice
+					days = 90
+				}
 			}
-		}
-		targeted_modifier = {
-			tag = AST
-			communism_drift = 0.08
 		}
 
 	}
@@ -312,15 +310,13 @@ influence_australia_cat = {
 
 		days_re_enable = 1
 
-		targets = { AST }
-		target_trigger = {
-			FROM = {
-				tag = AST
+		complete_effect = {
+			AST = {
+				add_timed_idea = {
+					idea = RJ_NZL_idea_AST_stirred_up_workers
+					days = 90
+				}
 			}
-		}
-		targeted_modifier = {
-			tag = AST
-			communism_drift = 0.08
 		}
 
 	}
@@ -359,19 +355,17 @@ influence_australia_cat = {
 
 		cost = 25
 
-		days_remove = 90
+		days_remove = 1
 
-		days_re_enable = 1
+		days_re_enable = 90
 
-		targets = { AST }
-		target_trigger = {
-			FROM = {
-				tag = AST
+		complete_effect = {
+			AST = {
+				add_timed_idea = {
+					idea = RJ_NZL_idea_AST_natives
+					days = 90
+				}
 			}
-		}
-		targeted_modifier = {
-			tag = AST
-			communism_drift = 0.05
 		}
 
 	}
@@ -408,7 +402,7 @@ influence_australia_cat = {
 
 		
 
-		cost = 100
+		cost = 150
 
 		days_remove = 7
 
@@ -465,7 +459,7 @@ australia_communist_suppress_cat = {
 		days_re_enable = 7
 
 		modifier = {
-			communism_drift = -0.12
+			communism_drift = -0.15
 			political_power_cost = 0.25
 		}
 

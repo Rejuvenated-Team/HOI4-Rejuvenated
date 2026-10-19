@@ -33,27 +33,31 @@ NZL_alternate_democratic = {
 		NZL_national_roads_board		
 		NZL_bureau_of_industry							
 		NZL_wairarapa_sheep_farms
-		NZL_new_zealand_steel										
-		#1937									
+		NZL_new_zealand_steel	
+		RJ_NZL_icaa_act									
+		#1937
+		RJ_NZL_ratana_alliance									
 		NZL_taranaki_oil								
 		NZL_department_of_scientific_and_industrial_research		
-		NZL_transfer_the_new_zealand_division						
-		#1938										
-		#NZL_ratana_alliance											
+		NZL_transfer_the_new_zealand_division
+		RJ_NZL_agricultural_workers_act						
+		#1938																					
 		NZL_social_security_act										
-		#NZL_army_reforms											
+		RJ_NZL_army_board										
 		NZL_charlton_automatic_rifle																					
-		NZL_domestic_arms_industry									
+		NZL_domestic_arms_industry
+		RJ_NZL_establish_rent_controls									
 		#1939						
 		NZL_think_big
-		#NZL_constitution_amendment_act												
+		RJ_NZL_emergency_regulations											
 		RJ_NZL_air_force_review									
-		#NZL_maori_affairs_act
-		#NZL_independent_new_zealand										
+		RJ_NZL_maori_housing_amendment_act
+		RJ_NZL_the_naval_defense_amendment_act
+		RJ_NZL_defense_council										
 		#1940
-		NZL_bob_semple_tank											
-		#NZL_form_the_rnzn											
-		#NZL_expand_devonport_naval_base								
+		NZL_domestic_arms_industry										
+		RJ_NZL_emergency_conscription										
+		RJ_NZL_devonport_naval_base_improvements								
 		NZL_form_the_rnzaf											
 		#NZL_the_manpower_act										
 		#1941
@@ -87,113 +91,6 @@ NZL_alternate_democratic = {
 	traits = {
 		captain_of_industry = 5
 		war_industrialist = 5
-	}
-
-	# Keep small, as it is used as a factor for some things (such as research needs)
-	# Recommended around 1.0. Useful for relation between plans
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-
-	focus_factors = {
-		
-	}
-
-}
-
-NZL_alternate_fascist = {
-	name = "Kiwi alternate fascist plan"
-	desc = "Taking the REDACTED to REDACTED"
-
-	allowed = {
-		original_tag = NZL
-		has_dlc = "Together for Victory"
-	}
-	enable = {
-		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = NZL_ai_behavior
-					option = DEFAULT
-				}
-			}
-			has_country_flag = NZL_AI_RANDOM_FASCIST 
-			has_game_rule = {
-				rule = NZL_ai_behavior
-				option = FASCIST
-			}
-		}
-	}
-	abort = {
-		
-	}
-
-	ai_national_focuses = {
-		NZL_the_first_labor_government								
-		NZL_statute_of_westminster		
-		NZL_ministry_of_public_works	
-		NZL_bureau_of_industry					
-		NZL_national_roads_board									
-		NZL_wairarapa_sheep_farms
-		NZL_new_zealand_steel										
-		#1937									
-		NZL_taranaki_oil											
-		NZL_department_of_scientific_and_industrial_research		
-		NZL_transfer_the_new_zealand_division						
-		#1938										
-		#NZL_ratana_alliance											
-		NZL_social_security_act										
-		#NZL_army_reforms											
-		NZL_charlton_automatic_rifle																					
-		NZL_domestic_arms_industry									
-		#1939						
-		NZL_think_big
-		#NZL_in_the_darkness												
-		RJ_NZL_air_force_review										
-		#NZL_maori_affairs_act
-		#NZL_befriend_japan									
-		#1940
-		NZL_bob_semple_tank											
-		#NZL_form_the_rnzn											
-		#NZL_expand_devonport_naval_base								
-		NZL_form_the_rnzaf											
-		#NZL_the_manpower_act										
-		#1941
-		#NZL_amend_the_maori_affairs_act
-		NZL_maori_conscription										
-		NZL_expand_the_university_of_auckland						
-		#NZL_long_range_patrol
-		#NZL_fighter_focus											
-		#1942
-		#NZL_destroyer_effort										
-		#NZL_defend_our_islands
-		NZL_coastal_defense											
-		#NZL_light_cruiser_effort									
-		NZL_schofield_tank											
-		#1943
-		#NZL_artillery_focus											
-		NZL_big_bob_tank							
-	}
-
-	research = {
-		industry = 20.0
-		infantry_tech = 15.0
-		artillery = 8.0
-		support_tech = 6.5
-	}
-
-	ideas = {
-		
-	}
-
-	traits = {
-		captain_of_industry = 5
-		war_industrialist = 5
-		fascist_demagogue = 10
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
@@ -240,8 +137,8 @@ NZL_alternate_communist = {
 	}
 
 	ai_national_focuses = {
-		NZL_the_first_labor_government								
-		NZL_statute_of_westminster		
+		NZL_the_first_labor_government
+		RJ_NZL_seek_out_labour_sympathizers								
 		NZL_ministry_of_public_works						
 		NZL_national_roads_board		
 		NZL_bureau_of_industry							
@@ -249,11 +146,10 @@ NZL_alternate_communist = {
 		NZL_new_zealand_steel										
 		#1937									
 		NZL_taranaki_oil			
-		NZL_department_of_scientific_and_industrial_research		
+		NZL_expand_the_university_of_auckland		
 		NZL_transfer_the_new_zealand_division						
 		#1938										
-		#NZL_ratana_alliance											
-		NZL_social_security_act										
+		#NZL_ratana_alliance																				
 		#NZL_army_reforms											
 		NZL_charlton_automatic_rifle																					
 		NZL_domestic_arms_industry									
@@ -272,8 +168,7 @@ NZL_alternate_communist = {
 		#1941
 		#NZL_the_manpower_act										
 		#NZL_waitangi_tribunal
-		NZL_maori_volunteers										
-		NZL_expand_the_university_of_auckland						
+		NZL_maori_volunteers																
 		#NZL_long_range_patrol
 		#1942
 		#NZL_fighter_focus											
@@ -299,9 +194,9 @@ NZL_alternate_communist = {
 	}
 
 	traits = {
-		captain_of_industry = 5
-		war_industrialist = 5
-		fascist_demagogue = 10
+		minister_of_public_works = 5
+		soviet_economist = 10
+		communist_journalist = 10
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

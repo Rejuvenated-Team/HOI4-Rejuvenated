@@ -261,8 +261,8 @@ leader_traits = {
 	communist_journalist = {
 		sprite = 13
 		random = no
-		communism_drift = 0.15
-		political_power_factor = 0.15
+		communism_drift = 0.12
+		political_power_factor = 0.10
 
 		ai_will_do = {
 			factor = 2

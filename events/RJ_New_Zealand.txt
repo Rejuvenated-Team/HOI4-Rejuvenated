@@ -454,12 +454,12 @@ country_event = { #Philippine Brothers
 	option = {
 		name = "Time itself can't split us apart!"
 		ai_chance = {
-			base = 20
+			base = 10
 			modifier = {
 				PHI = {
 					has_government = communism
 				}
-				factor = 0.25
+				factor = 0.1
 			}
 			modifier = {
 				PHI = {
@@ -468,32 +468,29 @@ country_event = { #Philippine Brothers
 				factor = 2
 			}
 		}
+		every_core_state = {
+			add_core_of = NZL
+		}
+		every_unit_leader = {
+			set_nationality = NZL
+		}
 		NZL = {
-			annex_country = {
-				target = PHI
-			}
-			every_core_state = {
-				limit = {
-					is_core_of = PHI
-				}
-				add_core_of = NZL
-			}
 			country_event = RJ_NZL.7a
 		}
-		transfer_units_fraction = {
-			target = NZL
-			size = 1
-			stockpile_ratio = 1
-			army_ratio = 1
-			navy_ratio = 1
-			air_ratio = 1
-		}
+		#transfer_units_fraction = {
+		#	target = NZL
+		#	size = 1
+		#	stockpile_ratio = 1
+		#	army_ratio = 1
+		#	navy_ratio = 1
+		#	air_ratio = 1
+		#}
 	}
 
 	option = {
 		name = "Some better trade ties would be nice!"
 		ai_chance = {
-			base = 4
+			base = 3
 		}
 		PHI = {
 			add_opinion_modifier = {
@@ -536,6 +533,10 @@ country_event = { #Annexed Philippines
 		name = "Time to move in!"
 		ai_chance = {
 			base = 1
+		}
+		annex_country = {
+			target = PHI
+			transfer_troops = yes
 		}
 	}
 }

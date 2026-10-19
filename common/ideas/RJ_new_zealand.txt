@@ -459,7 +459,6 @@ ideas = {
 			modifier = {
 				stability_factor = 0.05
 				consumer_goods_factor = -0.05
-				political_power_factor = 0.05
 				production_speed_infrastructure_factor = 0.05
 				production_speed_industrial_infrastructure_factor = 0.05
 				production_speed_energy_infrastructure_factor = 0.05
@@ -483,7 +482,6 @@ ideas = {
 			modifier = {
 				stability_factor = 0.05
 				consumer_goods_factor = -0.05
-				political_power_factor = 0.05
 				recruitable_population_factor = 0.15
 				line_change_production_efficiency_factor = 0.10
 				production_speed_infrastructure_factor = 0.05
@@ -865,7 +863,7 @@ ideas = {
 			picture = por_monarchist_uprising
 
 			modifier = {
-				neutrality_drift = 0.25
+				neutrality_drift = 0.15
 			}
 		}
 
@@ -1383,7 +1381,6 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.20
 				production_factory_max_efficiency_factor = 0.15
 				line_change_production_efficiency_factor = 0.20
-				political_power_factor = 0.10
 				consumer_goods_factor = -0.05
 				communism_drift = 0.08
 			}
@@ -1658,6 +1655,63 @@ ideas = {
 				positioning = 0.15
 				naval_defense_factor = 0.10
 				convoy_raiding_efficiency_factor = 0.10
+			}
+		}
+
+		RJ_NZL_idea_AST_natives = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+
+			modifier = {
+				communism_drift = 0.05
+			}
+		}
+
+		RJ_NZL_idea_AST_stirred_up_workers = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = por_iberian_workers_united
+
+			modifier = {
+				communism_drift = 0.10
+			}
+		}
+
+		RJ_NZL_idea_AST_peoples_voice = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_peoples_voice
+
+			modifier = {
+				communism_drift = 0.10
 			}
 		}
 	}
