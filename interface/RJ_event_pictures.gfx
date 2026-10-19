@@ -19,7 +19,7 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/EGY/ahmed_fuad_death.dds"
 	}
 
-	SpriteType = { #News Picture
+	SpriteType = { #Event Picture
 		name = "GFX_ahmed_fuad_death_event"
 		texturefile = "gfx/event_pictures/EGY/death_of_fuad.dds"
 	}
