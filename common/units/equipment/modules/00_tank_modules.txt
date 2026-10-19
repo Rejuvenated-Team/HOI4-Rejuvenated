@@ -2049,7 +2049,7 @@ equipment_modules = {
 			soft_attack = 42 #Was 45 #SH Cannon: 35
 			hard_attack = 52 #Was 55 #SH Cannon: 45
 			ap_attack = 230 #SH Cannon: 225
-			build_cost_ic = 16 #SH Cannon: 12.5
+			build_cost_ic = 14 #SH Cannon: 12.5
 			maximum_speed = -0.4 #SH Cannon: -0.6
 			reliability = -0.1 #SH Cannon: -0.35
 		}
@@ -2077,8 +2077,8 @@ equipment_modules = {
 			soft_attack = 70 #Was 75 #Heavy Howitzer: 55
 			hard_attack = 5 #Heavy Howitzer: 2
 			ap_attack = 70 #Heavy Howitzer: 60
-			build_cost_ic = 14 #Heavy Howitzer: 7
-			maximum_speed = -0.4 #Heavy Howitzer:  -0.5
+			build_cost_ic = 10 #Heavy Howitzer: 7
+			maximum_speed = -0.3 #Heavy Howitzer:  -0.5
 			reliability = -0.1 #Heavy Howitzer: -0.3
 		}
 
@@ -2089,7 +2089,7 @@ equipment_modules = {
 			convert_cost_ic = 12 #Heavy Howitzer: 7
 		}
 		build_cost_resources = {
-			tungsten = 3 #Heavy Howitzer: 1
+			tungsten = 2 #Heavy Howitzer: 1
 			chromium = 2 #Heavy Howitzer: 1
 			steel = 4 #Heavy Howitzer: 3
 		}
@@ -2101,13 +2101,13 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			breakthrough = 20 #LC Needs breakthrough
+			breakthrough = 25 #LC Needs breakthrough
 			#breakthrough = -8 #Heavy Howitzer: -4
-			soft_attack = 65 #Heavy Howitzer: 55
+			soft_attack = 75 #Heavy Howitzer: 55
 			hard_attack = 4 #Heavy Howitzer: 2
 			ap_attack = 65 #Heavy Howitzer: 60
 			build_cost_ic = 12 #Heavy Howitzer: 7
-			maximum_speed = -0.4 #Heavy Howitzer:  -0.5
+			maximum_speed = -0.3 #Heavy Howitzer:  -0.5
 			reliability = -0.1 #Heavy Howitzer: -0.3
 
 			additional_collateral_damage = 500
@@ -2136,7 +2136,7 @@ equipment_modules = {
 			soft_attack = 30 #Advanced AT Cannon: 25
 			hard_attack = 55 #Was 60 #Advanced AT Cannon: 45 
 			ap_attack = 250 #Advanced AT Cannon: 200 
-			build_cost_ic = 12 #Advanced AT Cannon: 7 
+			build_cost_ic = 10 #Advanced AT Cannon: 7 
 			maximum_speed = -0.3 #Advanced AT Cannon: -0.4 
 			reliability = -0.05 #Advanced AT Cannon: -0.2 
 		}
@@ -2173,7 +2173,7 @@ equipment_modules = {
 		xp_cost = 1
 		can_convert_from = {
 			module_category = lc_secondary_armament
-			convert_cost_ic = 12 #Advanced AA Cannon: 7
+			convert_cost_ic = 9 #Advanced AA Cannon: 7
 		}
 		build_cost_resources = {
 			tungsten = 2 #Advanced AA Cannon: 1
