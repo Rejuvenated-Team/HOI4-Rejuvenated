@@ -1,0 +1,17 @@
+defined_text = {
+	name = IRQ_special_projects_key
+	text = {
+		trigger = {
+			NOT = {
+				has_government = communism
+			}
+		}
+		localization_key = IRQ_special_projects_IRQ
+	}
+	text = {
+		trigger = {
+			has_government = communism
+		}
+		localization_key = IRQ_special_projects_commie
+	}
+}

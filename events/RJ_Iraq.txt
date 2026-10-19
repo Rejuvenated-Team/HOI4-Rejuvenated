@@ -1,0 +1,2840 @@
+###########################
+# Iraq Events - Shadows of Babylon origin
+###########################
+
+add_namespace = iraq
+add_namespace = iraq_flavour
+add_namespace = iraq_lore
+#
+country_event = {
+	id = iraq.1
+	title = iraq.1.t
+	desc = iraq.1.d
+	picture = GFX_report_event_iraq_coup
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.1.a
+		trigger = {
+			NOT={
+				OR={
+					has_country_flag = IRQ_coup_fail
+					has_country_flag = IRQ_coup_stalemate
+				}
+			}
+		}
+		add_country_leader_role = {
+			country_leader = {
+				ideology = despotism
+			 }
+			 character = IRQ_bakr_sidqi
+			 promote_leader = yes
+		}
+		retire_character = IRQ_Jafar_Al_Askari
+		deactivate_advisor = IRQ_nuri_al_said
+		activate_advisor = IRQ_hikmat_sulayman
+		remove_power_balance = {
+			id = IRQ_political_chaos_balance
+		}
+		hidden_effect = {
+			set_country_flag = IRQ_coup_succesful
+			set_country_flag = IRQ_Coup_happened
+		}
+		set_nationality = {
+			target_country = SYR
+			character = IRQ_yasin_al_hashimi
+		}
+		set_party_name = {
+			ideology = neutrality
+			long_name = "Bakr Sidqi Clique"
+			name = "Bakr Sidqi Clique"
+		}
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+	}
+
+	option = {
+		name = iraq.1.b
+		trigger = {
+			NOT={
+				OR={
+					has_country_flag = IRQ_coup_fail
+					has_country_flag = IRQ_coup_succesful
+				}
+			}
+		}
+		add_country_leader_role = {
+			country_leader = {
+				ideology = despotism
+			 }
+			 character = IRQ_bakr_sidqi
+			 promote_leader = yes
+		}
+		remove_power_balance = {
+			id = IRQ_political_chaos_balance
+		}
+		hidden_effect = {
+			set_country_flag = IRQ_coup_stalemate
+			set_country_flag = IRQ_Coup_happened
+		}
+		set_nationality = {
+			target_country = SYR
+			character = IRQ_yasin_al_hashimi
+		}
+		set_party_name = {
+			ideology = neutrality
+			long_name = "Bakr Sidqi Clique"
+			name = "Bakr Sidqi Clique"
+		}
+		hidden_effect = {
+			country_event = {
+				id = iraq.2
+				days = 2
+				
+			}
+			
+		}
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+	}
+
+
+	option = {
+		name = iraq.1.c
+		trigger = {
+			has_country_flag = IRQ_coup_fail
+		}
+		remove_power_balance = {
+			id = IRQ_political_chaos_balance
+		}
+		hidden_effect = {
+			country_event = {
+				id = iraq.3
+				days = 7
+			}
+			set_country_flag = IRQ_Coup_happened
+			
+		}
+	}
+}
+country_event = {
+	id = iraq.2
+	title = iraq.2.t
+	desc = iraq.2.d
+	picture = GFX_report_event_iraq_coup
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.2.a
+		ai_chance = {
+			base = 100
+		}
+		retire_character = IRQ_Jafar_Al_Askari
+		complete_national_focus = IRQ_October_Coup
+		complete_national_focus = IRQ_succesful_coup
+		deactivate_advisor = IRQ_nuri_al_said
+		activate_advisor = IRQ_hikmat_sulayman
+		remove_power_balance = {
+			id = IRQ_political_chaos_balance
+		}
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+	}
+
+	option = {
+		name = iraq.2.b
+		ai_chance = {
+			base = 0
+		}
+		add_country_leader_role = {
+			country_leader = {
+				ideology = despotism
+			 }
+			 character = IRQ_Jafar_Al_Askari
+			 promote_leader = yes
+		}
+		complete_national_focus = IRQ_October_Coup
+		complete_national_focus = IRQ_failed_coup
+		retire_character = IRQ_bakr_sidqi
+		remove_power_balance = {
+			id = IRQ_political_chaos_balance
+		}
+		set_party_name = {
+			ideology = neutrality
+			long_name = "Jafar Al Askari Clique"
+			name = "Jafar Al Askari Clique"
+		}
+		hidden_effect = {
+			country_event = {
+				id = iraq.3
+				days = 7
+			}
+			
+		}
+	}
+}
+
+country_event = {
+	id = iraq.3
+	title = iraq.3.t
+	desc = iraq.3.d
+	picture = GFX_report_event_iraq_coup
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.3.a
+		add_country_leader_role = {
+			country_leader = {
+				ideology = oligarchism
+				
+			 }
+			 character = IRQ_nuri_al_said
+			 promote_leader = yes
+		}
+		complete_national_focus = IRQ_maintain_the_haw_dictatorship
+		complete_national_focus = IRQ_Al_Said_Cabinet
+		hidden_effect = {
+			set_country_flag = IRQ_path_decided
+		}
+	}
+
+	option = {
+		name = iraq.3.b
+		trigger = {
+			OR={
+				has_country_flag = IRQ_coup_fail
+				has_country_flag = IRQ_coup_stalemate
+			}
+		}
+		complete_national_focus = IRQ_path_towards_reform
+		country_event = iraq.22
+		hidden_effect = {
+			set_country_flag = IRQ_path_decided
+		}
+	}
+	option = {
+		name = iraq.3.c
+		add_country_leader_role = {
+			country_leader = {
+				ideology = oligarchism
+				
+			 }
+			 character = IRQ_Muhammad_hassan_al_sadr
+			 promote_leader = yes
+		}
+		complete_national_focus = IRQ_maintain_the_haw_dictatorship
+		complete_national_focus = IRQ_Al_Sadr_Cabinet
+		hidden_effect = {
+			set_country_flag = IRQ_path_decided
+		}
+	}
+}
+country_event = {
+	id = iraq.4
+	title = iraq.4.t
+	desc = iraq.4.d
+	picture = GFX_report_event_ghazi_clique
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.4.a
+		retire_character = IRQ_bakr_sidqi
+		add_country_leader_role = {
+			country_leader = { 
+				ideology = despotism
+			}
+			character = IRQ_ghazi_i
+			promote_leader = yes
+		}
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.5
+		}
+		add_trait = {
+			trait = popular_monarch
+			character = IRQ_ghazi_i
+		}
+		set_party_name = {
+			ideology = neutrality
+			long_name = "Hashemite Dynasty"
+			name = "Hashemites"
+		}
+		deactivate_advisor = IRQ_hikmat_sulayman
+		activate_advisor = IRQ_nuri_al_said
+	}
+}
+country_event = {
+	id = iraq.5
+	title = iraq.5.t
+	desc = iraq.5.d
+	picture = GFX_report_event_iraq_coup
+	
+	trigger = {
+		OR={
+			has_completed_focus = IRQ_maintain_the_haw_dictatorship
+			has_completed_focus = IRQ_royal_coup
+		}
+		date = 1939.1.1
+	}
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.5.a
+		trigger = {
+			is_ai = no
+		}
+	}
+	option = {
+		name = iraq.5.b
+		hidden_effect = {
+			set_country_flag = IRQ_ghazi_kill_plan
+			
+		}
+	}
+}
+country_event = {
+	id = iraq.6
+	title = iraq.6.t
+	picture = GFX_report_event_ghazi_funeral
+	
+	trigger = {
+		date = 1939.4.4
+	}
+	fire_only_once = yes
+	
+	desc = {
+		trigger = {
+			NOT={
+				has_country_flag = IRQ_ghazi_kill_plan
+			}
+		}
+		text = iraq.6.d1
+	}
+	desc = {
+		trigger = {
+			has_country_flag = IRQ_ghazi_kill_plan
+		}
+		text = iraq.6.d2
+	}
+	option = {
+		name = iraq.6.a
+		trigger = {
+			NOT={
+				has_country_flag = IRQ_ghazi_kill_plan
+			}
+		}
+		add_stability = 0.05
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.1
+		}
+	}
+	option = {
+		name = iraq.6.c
+		trigger = {
+			has_country_flag = IRQ_ghazi_kill_plan
+			GER={
+				NOT={
+					has_government = fascism
+				}
+			}
+		}
+		add_stability = 0.05
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.3
+		}
+		create_country_leader = {
+			name = "Ghazi II"
+			picture = "gfx/leaders/IRQ/portrait_adolf_ghazi.png"
+			ideology = nazism
+		}
+		create_country_leader = {
+			name = "Ghazi II"
+			picture = "gfx/leaders/IRQ/portrait_adolf_ghazi.png"
+			ideology = despotism
+		}
+		set_politics = {
+			ruling_party = fascism
+		}
+	}
+	option = {
+		name = iraq.6.b
+		trigger = {
+			has_country_flag = IRQ_ghazi_kill_plan
+		}
+		if = {
+			limit = {
+				has_completed_focus = IRQ_royal_coup
+			 }
+			 add_country_leader_role = {
+				country_leader = {
+					ideology = despotism
+				 }
+				 character = IRQ_abdulilah
+				 promote_leader = yes
+			}
+			add_country_leader_role = {
+				country_leader = {
+					ideology = despotism
+				 }
+				 character = IRQ_faisal_ii
+			}
+			remove_ideas = IRQ_ghazi
+			add_ideas = IRQ_faisal
+			add_trait = {
+				trait = crown_regent
+				character = IRQ_abdulilah
+			}
+			add_trait = {
+				trait = underage_monarch
+				character = IRQ_faisal_ii
+			}
+			retire_character = IRQ_ghazi_i
+			hidden_effect = {
+				set_country_flag = IRQ_Ghazi_died
+			}
+		}
+		if = {
+			limit = {
+				has_completed_focus = IRQ_maintain_the_haw_dictatorship
+			 }
+			 retire_character = IRQ_ghazi_i
+			 remove_ideas = IRQ_ghazi
+			 add_ideas = IRQ_faisal
+			 hidden_effect = {
+				 set_country_flag = IRQ_Ghazi_died
+			 }
+		}
+	}
+}
+country_event = {
+	id = iraq.7
+	title = iraq.7.t
+	desc = iraq.7.d
+	picture = GFX_report_event_faisal_ii_coronation
+	
+	trigger = {
+		date = 1953.5.2
+		OR={
+			has_completed_focus = IRQ_royal_coup
+			has_completed_focus = IRQ_maintain_the_haw_dictatorship
+			has_idea = IRQ_faisal
+			has_country_leader = IRQ_faisal_ii
+			has_country_leader = IRQ_abdulilah
+		}
+	}
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.7.a
+		if = {
+			limit = {
+				OR={
+					has_country_leader = IRQ_abdulilah
+					has_country_leader = IRQ_faisal_ii
+					has_completed_focus = IRQ_royal_coup
+				}
+			 }
+			add_country_leader_role = {
+				country_leader = {
+					ideology = despotism
+				 }
+				 character = IRQ_faisal_ii
+				 promote_leader = yes
+			}
+			swap_ideas = {
+				remove_idea = IRQ_faisal
+				add_idea = IRQ_faisal2
+			}
+			remove_trait = {
+				trait = underage_monarch
+				character = IRQ_faisal_ii
+			}
+			set_portraits = {
+				character = IRQ_faisal_ii
+				civilian={
+					large="gfx/leaders/IRQ/Portrait_IRQ_faisal_ii.png"
+				}
+				army={
+					large="gfx/leaders/IRQ/Portrait_IRQ_faisal_ii.png"
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR={
+					has_completed_focus = IRQ_maintain_the_haw_dictatorship
+					has_idea = IRQ_faisal
+					
+				}
+			 }
+			 swap_ideas = {
+				 remove_idea = IRQ_faisal
+				 add_idea = IRQ_faisal2
+			 }
+		}
+	}
+}
+country_event = {
+	id = iraq.8
+	title = iraq.8.t
+	desc = iraq.8.d
+	picture = GFX_report_event_may_coup
+	
+	trigger = {
+		date = 1941.4.1
+		has_country_flag = IRQ_Ghazi_died
+		OR={
+			has_completed_focus = IRQ_maintain_the_haw_dictatorship
+			has_completed_focus = IRQ_royal_coup
+		}
+	}
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.8.a
+		hidden_effect = {
+			set_country_flag = IRQ_1941_coup
+			mark_focus_tree_layout_dirty = yes
+			country_event = {
+				id = iraq.9
+				days = 55
+			}
+			country_event = {
+				id = iraq.23
+				days = 14
+			}
+		}
+		add_country_leader_role = {
+			country_leader = {
+				ideology = despotism
+			 }
+			 character = IRQ_National_Defence_Government
+			 promote_leader = yes
+		}
+		activate_advisor = IRQ_rashid_ali_algaylani
+		deactivate_advisor = IRQ_nuri_al_said
+		remove_ideas = IRQ_anglo_iraqi_treaties
+	}
+}
+country_event = {
+	id = iraq.9
+	title = iraq.9.t
+	desc = iraq.9.d
+	picture = GFX_report_event_may_coup
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.9.a
+		news_event = {
+			id = iraq.10
+			days = 60
+		}
+	}
+	option = {
+		name = iraq.9.b
+		trigger = {
+			is_ai = no
+		}
+		custom_effect_tooltip = IRQ_Britain_war
+		retire_character = IRQ_nuri_al_said
+		retire_character = IRQ_abdulilah
+		hidden_effect = {
+			set_country_flag = flag_IRQ_nuri_al_said_dead
+			
+		}
+		ENG={
+			if = {
+				limit = {
+					NOT={
+						has_country_flag = IRQ_neutrality_reaffirmed
+					}
+				 }
+				 declare_war_on = {
+					target = IRQ
+					type = topple_government
+				} 
+				GER={
+					add_to_faction = IRQ
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 30000
+				producer = GER
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 30000
+				producer = GER
+			}
+		}
+	}
+}
+news_event = {
+	id = iraq.10
+	title = iraq.10.t
+	desc = iraq.10.d
+	picture = GFX_news_event_anglo_iraqi_war
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.10.a
+		hidden_effect = {
+			news_event = {
+				id = iraq_flavour.23
+				days = 1
+			}
+			GER={
+				remove_from_faction = IRQ
+			}
+			IRQ={
+				
+				if = {
+					limit = {
+						has_country_flag = flag_IRQ_nuri_al_said_dead
+					 }
+					add_country_leader_role = {
+						country_leader = {
+							ideology = despotism
+							traits = {
+								underage_monarch
+							}
+						 }
+						 character = IRQ_faisal_ii
+						 promote_leader = yes
+						 
+					}
+					activate_advisor = IRQ_arshad_al_umari
+					deactivate_advisor = IRQ_rashid_ali_algaylani
+					add_ideas = IRQ_anglo_iraqi_treaties
+					if = {
+						limit = {
+							NOT={
+								has_idea = IRQ_faisal
+							}
+						 }
+						 add_ideas = IRQ_faisal
+					}
+				}
+				if = {
+					limit = {
+						NOT={
+							has_country_flag = flag_IRQ_nuri_al_said_dead
+						}
+					 }
+					add_country_leader_role = {
+						country_leader = {
+							ideology = despotism
+						 }
+						 character = IRQ_abdulilah
+						 promote_leader = yes
+					}
+					hidden_effect = {
+						has_country_flag = flag_IRQ_nuri_al_said_alive
+					}
+					activate_advisor = IRQ_nuri_al_said
+					deactivate_advisor = IRQ_rashid_ali_algaylani
+					add_ideas = IRQ_anglo_iraqi_treaties
+					if = {
+						limit = {
+							NOT={
+								has_idea = IRQ_faisal
+							}
+						 }
+						 add_ideas = IRQ_faisal
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = iraq.11
+	title = iraq.11.t
+	desc = iraq.11.d
+	picture = GFX_report_event_iraq_coup
+	
+	trigger = {
+		tag = ENG
+		OR={
+			ENG={
+				controls_province = 2097
+			}
+			FRA={
+				controls_province = 2097
+			}
+			AST={
+				controls_province = 2097
+			}
+			RAJ={
+				controls_province = 2097
+			}
+			NZL={
+				controls_province = 2097
+			}
+			CAN={
+				controls_province = 2097
+			}
+		}
+	}
+	
+	option = {
+		name = iraq.11.a
+		ENG={
+			add_to_faction = IRQ
+		}
+		IRQ={
+			add_ideas = IRQ_anglo_iraqi_treaties
+			transfer_state = 291
+			transfer_state = 676
+			transfer_state = 675
+			transfer_state = 1011
+			transfer_state = 1018
+			transfer_state = 1019
+			transfer_state = 1020
+			transfer_state = 1021
+			transfer_state = 1010
+			transfer_state = 1017
+			transfer_state = 1022
+			if = {
+				limit = {
+					has_country_flag = flag_IRQ_nuri_al_said_dead
+				 }
+				add_country_leader_role = {
+					country_leader = {
+						ideology = despotism
+					 }
+					 character = IRQ_faisal_ii
+					 promote_leader = yes
+				}
+				activate_advisor = IRQ_arshad_al_umari
+				deactivate_advisor = IRQ_rashid_ali_algaylani
+			}
+			if = {
+				limit = {
+					NOT={
+						has_country_flag = flag_IRQ_nuri_al_said_dead
+					}
+				 }
+				add_country_leader_role = {
+					country_leader = {
+						ideology = despotism
+					 }
+					 character = IRQ_abdulilah
+					 promote_leader = yes
+				}
+				activate_advisor = IRQ_nuri_al_said
+				deactivate_advisor = IRQ_rashid_ali_algaylani
+			}
+		}
+	}
+	option = {
+		name = iraq.11.b
+		trigger = {
+			has_country_flag = flag_IRQ_nuri_al_said_dead
+		}
+		ENG={
+			add_to_faction = IRQ
+		}
+		IRQ={
+			add_ideas = IRQ_anglo_iraqi_treaties
+			transfer_state = 291
+			transfer_state = 676
+			transfer_state = 675
+			transfer_state = 1011
+			transfer_state = 1018
+			transfer_state = 1019
+			transfer_state = 1020
+			transfer_state = 1021
+			transfer_state = 1010
+			transfer_state = 1017
+			transfer_state = 1022
+			add_country_leader_role = {
+				country_leader = {
+					ideology = despotism
+					traits = {
+						queen_of_iraq
+					}
+				 }
+				 character = IRQ_Queen_Aliyah_bint_ali
+				 promote_leader = yes
+				 
+			}
+			activate_advisor = IRQ_arshad_al_umari
+			deactivate_advisor = IRQ_rashid_ali_algaylani
+			add_ideas = IRQ_anglo_iraqi_treaties
+			if = {
+				limit = {
+					NOT={
+						has_idea = IRQ_faisal
+					}
+				 }
+				 add_ideas = IRQ_faisal
+			}
+		}
+	}
+}
+country_event = {
+	id = iraq.12
+	title = iraq.12.t
+	desc = iraq.12.d
+	picture = GFX_report_event_kurdish_revolt
+	
+	trigger = {
+		NOT={
+			has_completed_focus = IRQ_Bakr_reign
+			country_exists = KUR
+		}
+		date = 1943.7.1
+		country_exists = IRQ
+		IRQ={
+			controls_state = 1018
+		}
+	}
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.12.a
+		KUR={
+			transfer_state = 1018
+			declare_war_on = {
+				target = IRQ
+				type = take_core_state
+			}
+			load_oob = KUR_barazan_revolt
+		}
+	}
+	
+}
+country_event = {
+	id = iraq.13
+	title = iraq.13.t
+	desc = iraq.13.d
+	picture = GFX_report_event_kuwait
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.13.a
+		ai_chance = {
+			base = 100
+		}
+		IRQ={
+			transfer_state = 656
+		}
+		add_opinion_modifier = {
+			target = IRQ
+			modifier = large_increase
+		}
+		IRQ={
+			add_opinion_modifier = {
+				target = ENG
+				modifier = large_increase
+			}
+			
+		}
+	}
+	option = {
+		name = iraq.13.b
+		trigger = {
+			is_ai = no
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+	
+}
+country_event = {
+	id = iraq.14
+	title = iraq.14.t
+	desc = iraq.14.d
+	picture = GFX_report_event_khazal
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.14.a
+		ai_chance = {
+			base = 100
+		}
+		annex_country = {
+			target = AHZ
+		}
+	}
+	
+}
+country_event = {
+	id = iraq.15
+	title = iraq.15.t
+	desc = iraq.15.d
+	picture = GFX_report_event_syria
+	trigger = {
+		tag = IRQ
+		controls_province = 4111
+		has_war_with = FRA
+	}
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.15.a
+		white_peace = FRA
+		every_state = {
+			if = {
+				limit = {
+					is_core_of = SYR
+				 }
+				 add_core_of = IRQ
+				 transfer_state_to = IRQ
+			}
+		}
+	}
+}
+country_event = {
+	id = iraq.16
+	title = iraq.16.t
+	desc = iraq.16.d
+	picture = GFX_report_event_syria
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.16.a
+		ai_chance = {
+			base = 100
+		}
+		add_opinion_modifier = {
+			target = IRQ
+			modifier = large_increase
+		}
+		IRQ={
+			add_opinion_modifier = {
+				target = FRA
+				modifier = large_increase
+			}
+			
+		}
+		every_state = {
+			if = {
+				limit = {
+					is_core_of = SYR
+				 }
+				 add_core_of = IRQ
+				 transfer_state_to = IRQ
+			}
+		}
+	}
+	option = {
+		name = iraq.16.b
+		ai_chance = {
+			base = 0
+		}
+		every_state = {
+			if = {
+				limit = {
+					is_core_of = SYR
+				 }
+				 add_core_of = IRQ
+			}
+		}
+		IRQ={
+			declare_war_on = {
+				target = FRA
+				type = take_core_state
+			}
+		}
+	}
+	
+}
+country_event = {
+	id = iraq.17
+	title = iraq.17.t
+	desc = iraq.17.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.17.a
+		ai_chance = {
+			base = 100
+		}
+		add_opinion_modifier = {
+			target = IRQ
+			modifier = large_increase
+		}
+		IRQ={
+			add_opinion_modifier = {
+				target = ENG
+				modifier = large_increase
+			}
+			
+		}
+		every_state = {
+			if = {
+				limit = {
+					is_core_of = JOR
+				 }
+				 add_core_of = IRQ
+				 transfer_state_to = IRQ
+			}
+		}
+	}
+	
+}
+country_event = {
+	id = iraq.18
+	title = iraq.18.t
+	desc = iraq.18.d
+	picture = GFX_report_event_zahawi_funeral
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.18.a
+		GER={
+			country_event = iraq.19
+		}
+	}
+	option = {
+		name = iraq.18.b
+		USA={
+			country_event = iraq.19
+		}
+	}
+	option = {
+		name = iraq.18.c
+		ENG={
+			country_event = iraq.19
+		}
+	}
+}
+country_event = {
+	id = iraq.19
+	title = iraq.19.t
+	desc = iraq.19.d
+	picture = GFX_report_event_zahawi_funeral
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.19.a
+		trigger = {
+			tag = GER
+		}
+		IRQ={
+			set_country_flag = IRQ_German_investments
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = small_increase
+			}
+		}
+	}
+	option = {
+		name = iraq.19.a
+		trigger = {
+			tag = USA
+		}
+		IRQ={
+			set_country_flag = IRQ_American_investments
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = small_increase
+			}
+		}
+	}
+	option = {
+		name = iraq.19.a
+		trigger = {
+			tag = ENG
+		}
+		IRQ={
+			set_country_flag = IRQ_British_investments
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = small_increase
+			}
+		}
+	}
+	option = {
+		name = iraq.19.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				has_government = communism
+				factor = 100
+			}
+			modifier = {
+				communism > 0.3
+				factor = 100
+			}
+		}
+		IRQ={
+			SOV={
+				country_event = iraq.20
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = small_decrease
+			}
+		}
+	}
+}
+country_event = {
+	id = iraq.20
+	title = iraq.20.t
+	desc = iraq.20.d
+	picture = GFX_report_event_zahawi_funeral
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.20.a
+		trigger = {
+			tag = SOV
+		}
+		IRQ={
+			set_country_flag = IRQ_Soviet_investments
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = small_increase
+			}
+		}
+	}
+	option = {
+		name = iraq.20.b
+		trigger = {
+			tag = SOV
+		}
+		IRQ={
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = small_decrease
+			}
+		}
+	}
+}
+country_event = {
+	id = iraq.21
+	title = iraq.21.t
+	desc = iraq.21.d
+	picture = GFX_report_event_zahawi_funeral
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.21.a
+	}
+	option = {
+		name = iraq.21.b
+		set_cosmetic_tag = IRQ_republic
+		remove_ideas = IRQ_Ghazi
+	}
+}
+country_event = {
+	id = iraq.22
+	title = iraq.22.t
+	desc = iraq.22.d
+	picture = GFX_report_event_zahawi_funeral
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.22.a
+		add_country_leader_role = {
+			country_leader = {
+				ideology = oligarchism
+				
+			 }
+			 character = IRQ_nuri_al_said
+			 promote_leader = yes
+		}
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.5
+		}
+		complete_national_focus = IRQ_Al_Said_Cabinet
+
+	}
+	option = {
+		name = iraq.22.b
+		add_country_leader_role = {
+			country_leader = {
+				ideology = conservatism
+				
+			 }
+			 character = IRQ_Muhammad_hassan_al_sadr
+			 promote_leader = yes
+		}
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.5
+		}
+		complete_national_focus = IRQ_Al_Sadr_Cabinet
+	}
+	option = {
+		name = iraq.22.c
+		trigger = {
+			has_completed_focus = IRQ_path_towards_reform
+		}
+		add_country_leader_role = {
+			country_leader = {
+				ideology = liberalism
+				
+			 }
+			 character = IRQ_Jafar_Abu_Timman
+			 promote_leader = yes
+		}
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.5
+		}
+		complete_national_focus = IRQ_Abu_Timman_Cabinet
+	}
+	option = {
+		name = iraq.22.f
+		trigger = {
+			has_completed_focus = IRQ_path_towards_reform
+		}
+		add_country_leader_role = {
+			country_leader = {
+				ideology = socialism
+			 }
+			 character = IRQ_Kamil_Al_Chaderchi
+			 promote_leader = yes
+		}
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.5
+		}
+		complete_national_focus = IRQ_Chaderchi_Cabinet
+	}
+	
+	option = {
+		name = iraq.22.g
+		trigger = {
+			has_completed_focus = IRQ_path_towards_reform
+		}
+		hidden_effect = {
+			mark_focus_tree_layout_dirty = yes
+			set_country_flag = IRQ_gaylani_PM
+			set_party_name = {
+				ideology = neutrality
+				long_name = "Hizb Al Akha'a Al Watani"
+				name = "Hizb Al Akha'a Al Watani"
+			}
+		}
+		add_country_leader_role = {
+			country_leader = {
+				ideology = despotism
+			 }
+			 character = IRQ_rashid_ali_algaylani
+			 promote_leader = yes
+		}
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.5
+		}
+		complete_national_focus = IRQ_Gaylani_Cabinet
+		complete_national_focus = IRQ_civilians_in_power
+	}
+}
+country_event = {
+	id = iraq.23
+	title = iraq.23.t
+	desc = iraq.23.d
+	picture = GFX_report_event_zahawi_funeral
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.23.a
+		hidden_effect = {
+			country_event = {
+				id = iraq_flavour.5
+				days = 60
+			}
+			set_country_flag = IRQ_Iraqi_Italo_Treaty
+			every_state = {
+				limit = {
+					is_core_of = SYR
+				}
+				add_claim_by = IRQ
+			}
+			every_state = {
+				limit = {
+					is_core_of = LEB
+				}
+				add_claim_by = IRQ
+			}
+			every_state = {
+				limit = {
+					is_core_of = JOR
+				}
+				add_claim_by = IRQ
+			}
+			
+			every_state = {
+				limit = {
+					is_core_of = PAL
+				}
+				add_claim_by = IRQ
+			}
+		}
+		
+	}
+	option = {
+		name = iraq.23.b
+		set_country_flag = IRQ_neutrality_reaffirmed
+	}
+}
+country_event = {
+	id = iraq.24
+	title = iraq.24.t
+	desc = iraq.24.d
+	picture = GFX_report_event_zahawi_funeral
+	
+	trigger = {
+		date = 1940.1.22
+		has_country_flag = IRQ_Ghazi_died
+		has_country_flag = IRQ_Saidian_cabinet
+	}
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.24.a
+		hidden_effect = {
+			country_event = {
+				id = iraq.26
+				days = 60
+			}
+		}
+		retire_character = IRQ_Rustam_Haidar
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.01
+		}
+	}
+}
+country_event = {
+	id = iraq.25
+	title = iraq.25.t
+	desc = iraq.25.d
+	picture = GFX_report_event_zahawi_funeral
+	
+	trigger = {
+		date = 1938.12.25
+		has_completed_focus = IRQ_royal_coup
+	}
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.25.a
+		hidden_effect = {
+			set_country_flag = IRQ_Saidian_cabinet
+		}
+	}
+}
+country_event = {
+	id = iraq.26
+	title = iraq.26.t
+	desc = iraq.26.d
+	picture = GFX_report_event_zahawi_funeral
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.26.a
+		set_power_balance = {
+			id = IRQ_nationalist_split
+		}
+	}
+}
+country_event = {
+	id = iraq.27
+	title = iraq.27.t
+	desc = iraq.27.d
+	picture = GFX_report_event_zahawi_funeral
+	
+	trigger = {
+		tag = IRQ
+		IRQ={
+			OR={
+				has_country_flag = IRQ_Iraqi_Italo_Treaty
+				has_country_flag = IRQ_Iraqi_Italo_Treaty_formal
+			}
+		}
+		GER={
+			OR={
+				126 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				126 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				ENG={
+					is_puppet_of = GER
+				}
+			}
+		}
+	}
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.27.a
+		every_state = {
+			if = {
+				limit = { 
+					is_core_of = SYR
+				}
+				transfer_state_to = IRQ
+				add_core_of = IRQ
+			}
+			if = {
+				limit = { 
+					is_core_of = LEB
+				}
+				transfer_state_to = IRQ
+				add_core_of = IRQ
+			}
+			if = {
+				limit = { 
+					is_core_of = JOR
+				}
+				transfer_state_to = IRQ
+				add_core_of = IRQ
+			}
+			if = {
+				limit = { 
+					is_core_of = KUW
+				}
+				transfer_state_to = IRQ
+				add_core_of = IRQ
+			}
+		}
+		give_resource_rights = {
+			receiver = GER
+			state = 676
+		}
+		give_resource_rights = {
+			receiver = GER
+			state = 1011
+		}
+		give_resource_rights = {
+			receiver = GER
+			state = 1019
+		}
+		give_resource_rights = {
+			receiver = GER
+			state = 291
+		}
+		give_resource_rights = {
+			receiver = GER
+			state = 656
+		
+		}
+		give_military_access = ITA
+	}
+}
+#### Flavour Events ####
+country_event = {
+	id = iraq_flavour.1
+	title = iraq_flavour.1.t
+	desc = iraq_flavour.1.d
+	picture = GFX_report_event_zahawi_funeral
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_flavour.1.a
+	}
+}
+country_event = {
+	id = iraq_flavour.2
+	title = iraq_flavour.2.t
+	desc = iraq_flavour.2.d
+	picture = GFX_report_event_eid_adha
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_flavour.2.a
+	}
+}
+country_event = {
+	id = iraq_flavour.3
+	title = iraq_flavour.3.t
+	desc = iraq_flavour.3.d
+	picture = GFX_report_event_eid_fitr
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_flavour.3.a
+	}
+}
+country_event = {
+	id = iraq_flavour.4
+	title = iraq_flavour.4.t
+	desc = iraq_flavour.4.d
+	picture = GFX_report_event_arbeen
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_flavour.4.a
+	}
+}
+country_event = {
+	id = iraq_flavour.5
+	title = iraq_flavour.5.t
+	desc = iraq_flavour.5.d
+	picture = GFX_report_event_adolf_rashid
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_flavour.5.a
+	}
+}
+country_event = {
+	id = iraq_flavour.6
+	title = iraq_flavour.6.t
+	desc = iraq_flavour.6.d
+	picture = GFX_report_event_emir_saud_in_baghdad
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_flavour.6.a
+		SAU={
+			add_opinion_modifier = {
+				target = IRQ
+				modifier = small_decrease
+			}
+		}
+	}
+	option = {
+		name = iraq_flavour.6.b
+		SAU={
+			add_opinion_modifier = {
+				target = IRQ
+				modifier = small_increase
+			}
+		}
+	}
+}
+country_event = {
+	id = iraq_flavour.7
+	title = iraq_flavour.7.t
+	desc = iraq_flavour.7.d
+	picture = GFX_report_event_Iraq_Anti_Palestine_Partition_Protests_1937
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_flavour.7.a
+	}
+}
+country_event = {
+	id = iraq_flavour.8
+	title = iraq_flavour.8.t
+	desc = {
+		trigger = {
+			NOT={
+				OR={
+					has_idea = IRQ_ghazi
+					has_country_leader = IRQ_ghazi_i
+				}
+			}
+		}
+		text = iraq_flavour.8.d1
+	}
+	desc = {
+		trigger = {
+			OR={
+				has_idea = IRQ_ghazi
+				has_country_leader = IRQ_ghazi_i
+			}
+		}
+		text = iraq_flavour.8.d2
+	}
+	picture = GFX_report_event_basra_airport
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_flavour.8.a
+	}
+}
+country_event = {
+	id = iraq_flavour.9
+	title = iraq_flavour.9.t
+	desc = iraq_flavour.9.d
+	picture = GFX_report_event_turkey_army_maneuvers
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_flavour.9.a
+	}
+}
+country_event = {
+	id = iraq_flavour.10
+	title = iraq_flavour.10.t
+	desc = iraq_flavour.10.d
+	picture = GFX_report_event_Sans_Peur
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_flavour.10.a
+	}
+}
+country_event = {
+	id = iraq_flavour.11
+	title = iraq_flavour.11.t
+	desc = iraq_flavour.11.d
+	picture = GFX_report_event_greece
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_flavour.11.a
+		trigger = {
+			tag = GRE
+		}
+	}
+	option = {
+		name = iraq_flavour.11.b
+		trigger = {
+			tag = IRQ
+		}
+	}
+}
+country_event = {
+	id = iraq_flavour.12
+	title = iraq_flavour.12.t
+	desc = iraq_flavour.12.d
+	picture = GFX_report_event_greece
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_flavour.12.a
+	}
+}
+country_event = {
+	id = iraq_flavour.13
+	title = iraq_flavour.13.t
+	desc = iraq_flavour.13.d
+	picture = GFX_report_event_princess_azzah_3
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_flavour.13.a
+		IRQ={
+			add_opinion_modifier = {
+				target = GRE
+				modifier = large_decrease
+			}
+		}
+	}
+}
+country_event = {
+	id = iraq_flavour.14
+	title = iraq_flavour.14.t
+	desc = iraq_flavour.14.d
+	picture = GFX_report_event_khazal
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_flavour.14.a
+		trigger = {
+			is_ai = no
+		}
+		hidden_effect = {
+			set_country_flag = IRQ_support_khazal
+			
+		}
+	}
+	option = {
+		name = iraq_flavour.14.b
+	}
+}
+
+country_event = {
+	id = iraq_flavour.15
+	title = iraq_flavour.15.t
+	desc = iraq_flavour.15.d
+	picture = GFX_report_event_christmas
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_flavour.15.a
+		hidden_effect = {
+			country_event = {
+				id = iraq_flavour.15
+				days = 359
+			}
+			
+		}
+	}
+}
+
+country_event = {
+	id = iraq_flavour.16
+	title = iraq_flavour.16.t
+	desc = iraq_flavour.16.d
+	picture = GFX_report_event_poirot
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_flavour.16.a
+		hidden_effect = {
+			country_event = {
+				id = iraq_flavour.17
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = {
+	id = iraq_flavour.17
+	title = iraq_flavour.17.t
+	desc = iraq_flavour.17.d
+	picture = GFX_report_event_poirot2
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_flavour.17.a
+	}
+}
+country_event = {
+	id = iraq_flavour.18
+	title = iraq_flavour.18.t
+	desc = iraq_flavour.18.d
+	picture = GFX_report_event_baghdad_Conservatory
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_flavour.18.a
+		hidden_effect = {
+			country_event = {
+				id = iraq_flavour.19
+				days = 30
+			}
+		}
+	}
+}
+country_event = {
+	id = iraq_flavour.19
+	title = iraq_flavour.19.t
+	desc = iraq_flavour.19.d
+	picture = GFX_report_event_sharif_muhiddin
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_flavour.19.a
+		hidden_effect = {
+			country_event = {
+				id = iraq_flavour.20
+				days = 30
+			}
+		}
+	}
+}
+country_event = {
+	id = iraq_flavour.20
+	title = iraq_flavour.20.t
+	desc = iraq_flavour.20.d
+	picture = GFX_report_event_salima_pasha
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_flavour.20.a
+	}
+}
+country_event = {
+	id = iraq_flavour.21
+	title = iraq_flavour.21.t
+	desc = iraq_flavour.21.d
+	picture = GFX_report_event_siddiq_pasha
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_flavour.21.a
+		add_stability = 0.05
+		add_popularity = {
+			ideology = communism
+			popularity = -0.05
+		}
+		hidden_effect = {
+			set_country_flag = IRQ_anti_communism
+		}
+	}
+	option = {
+		name = iraq_flavour.21.b
+		retire_character = IRQ_Siddiq_Rasul_Al_Qadri
+		add_popularity = {
+			ideology = communism
+			popularity = 0.03
+		}
+	}
+}
+country_event = {
+	id = iraq_flavour.22
+	title = iraq_flavour.22.t
+	desc = iraq_flavour.22.d
+	picture = GFX_report_event_boy_scouts
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_flavour.22.a
+		add_ideas = IRQ_Futuwwa_idea
+	}
+}
+news_event = {
+	id = iraq_flavour.23
+	title = iraq_flavour.23.t
+	desc = iraq_flavour.23.d
+	picture = GFX_news_event_farhud
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	option = {
+		name = iraq_flavour.23.a
+		add_manpower = -180
+		hidden_effect = {
+			country_event = {
+				id = iraq_flavour.24
+				days = 10
+			}
+		}
+	}
+}
+country_event = {
+	id = iraq_flavour.24
+	title = iraq_flavour.24.t
+	desc = iraq_flavour.24.d
+	picture = GFX_news_event_farhud
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	option = {
+		name = iraq_flavour.24.a
+		hidden_effect = {
+			set_country_flag = IRQ_angry_officers1
+		}
+		add_manpower = -401
+		retire_character = IRQ_Yunis_Sabawi
+		add_stability = -0.1
+	}
+	option = {
+		name = iraq_flavour.24.b
+		trigger = {
+			is_ai = no
+		}
+		add_manpower = -1
+		retire_character = IRQ_Yunis_Sabawi
+		add_stability = 0.1
+	}
+}
+#Lore
+
+country_event = {
+	id = iraq_lore.0
+	title = iraq_lore.0.t
+	desc = iraq_lore.0.d
+	picture = GFX_report_event_babylon
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_lore.0.a
+		country_event = iraq_lore.1
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		name = iraq_lore.0.b
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = iraq_lore.0.g
+		mark_focus_tree_layout_dirty = yes
+		set_country_flag = IRQ_old_eco_arm_tree
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = {
+	id = iraq_lore.1
+	title = iraq_lore.1.t
+	desc = iraq_lore.1.d
+	picture = GFX_report_event_ottomans
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_lore.1.a
+		country_event = iraq_lore.2
+	}
+	option = {
+		name = iraq_lore.1.b
+	}
+}
+country_event = {
+	id = iraq_lore.2
+	title = iraq_lore.2.t
+	desc = iraq_lore.2.d
+	picture = GFX_report_event_british
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_lore.2.a
+		country_event = iraq_lore.3
+	}
+	option = {
+		name = iraq_lore.2.b
+	}
+}
+country_event = {
+	id = iraq_lore.3
+	title = iraq_lore.3.t
+	desc = iraq_lore.3.d
+	picture = GFX_report_event_revolt
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_lore.3.a
+		country_event = iraq_lore.4
+	}
+	option = {
+		name = iraq_lore.3.b
+	}
+}
+country_event = {
+	id = iraq_lore.4
+	title = iraq_lore.4.t
+	desc = iraq_lore.4.d
+	picture = GFX_report_event_iraqi_parliament
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_lore.4.a
+		country_event = iraq_lore.5
+	}
+	option = {
+		name = iraq_lore.4.b
+	}
+}
+country_event = {
+	id = iraq_lore.5
+	title = iraq_lore.5.t
+	desc = iraq_lore.5.d
+	picture = GFX_report_event_iraqi_independence
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq_lore.5.a
+	}
+	option = {
+		name = iraq_lore.5.b
+		hidden_effect = {
+			launch_nuke = {
+				province = 11506
+				state = 16
+				controller = FRA
+				use_nuke = yes
+				
+			}
+		}
+	}
+	option = {
+		name = iraq_lore.0.c
+		trigger = {
+			is_ai = no
+		}
+		hidden_effect = {
+			IRAQI_MEME_WAR = yes
+			country_event = iraq_lore.7
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+country_event = {
+	id = iraq_lore.6
+	title = iraq_lore.6.t
+	desc = iraq_lore.6.d
+	picture = GFX_report_event_iraq
+	fire_only_once = yes
+	trigger = {
+		has_global_flag = IRQ_civil_war
+		OR={
+			tag = BSR
+			tag = JAZ
+			tag = MTQ
+			tag = KUW
+		}
+		owns_state = 291
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = iraq_lore.6.a
+		set_cosmetic_tag = IRQ_united
+	}
+	option = {
+		name = iraq_lore.6.b
+		set_cosmetic_tag = IRQ_united
+		declare_war_on = {
+			target = ASY
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = KUR
+			type = annex_everything
+		}
+	}
+}
+country_event = {
+	id = iraq_lore.7
+	title = iraq_lore.7.t
+	desc = iraq_lore.7.d
+	picture = GFX_report_event_iraq
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			Iraq_fighting_chance = YES
+		}
+	}
+	option = {
+		name = iraq_lore.7.a
+		hidden_effect = {
+			division_template = {
+				name = "Ferqat Al Harb"
+				division_names_group = IRQ_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+					owner = IRQ
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+					owner = IRQ
+					allow_spawning_on_enemy_provs = yes
+				}
+				create_unit = {
+					division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+					owner = IRQ
+					allow_spawning_on_enemy_provs = yes
+				}
+				
+			}
+		}
+	}
+	option = {
+		name = iraq_lore.7.b
+		BSR={
+			hidden_effect = {
+				division_template = {
+					name = "Ferqat Al Harb"
+					division_names_group = IRQ_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+						owner = BSR
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+						owner = BSR
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+						owner = BSR
+						allow_spawning_on_enemy_provs = yes
+					}
+					
+				}
+				change_tag_from = ROOT
+			}
+		}
+	}
+	option = {
+		name = iraq_lore.7.c
+		MTQ={
+			hidden_effect = {
+				division_template = {
+					name = "Ferqat Al Harb"
+					division_names_group = IRQ_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+						owner = MTQ
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+						owner = MTQ
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+						owner = MTQ
+						allow_spawning_on_enemy_provs = yes
+					}
+					
+				}
+				change_tag_from = ROOT
+			}
+		}
+	}
+	option = {
+		name = iraq_lore.7.f
+		JAZ={
+			hidden_effect = {
+				division_template = {
+					name = "Ferqat Al Harb"
+					division_names_group = IRQ_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+						owner = JAZ
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+						owner = JAZ
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+						owner = JAZ
+						allow_spawning_on_enemy_provs = yes
+					}
+					
+				}
+				change_tag_from = ROOT
+			}
+		}
+	}
+	option = {
+		name = iraq_lore.0.f
+		country_event = iraq_lore.8
+	}
+}
+
+country_event = {
+	id = iraq_lore.8
+	title = iraq_lore.8.t
+	desc = iraq_lore.8.d
+	picture = GFX_report_event_iraq
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = iraq_lore.7.k
+		KUW={
+			hidden_effect = {
+				division_template = {
+					name = "Ferqat Al Harb"
+					division_names_group = IRQ_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+						owner = KUW
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+						owner = KUW
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+						owner = KUW
+						allow_spawning_on_enemy_provs = yes
+					}
+					
+				}
+				change_tag_from = ROOT
+			}
+		}
+	}
+	option = {
+		name = iraq_lore.7.e
+		KUR={
+			hidden_effect = {
+				division_template = {
+					name = "Ferqat Al Harb"
+					division_names_group = IRQ_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+						owner = KUR
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+						owner = KUR
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+						owner = KUR
+						allow_spawning_on_enemy_provs = yes
+					}
+					
+				}
+				change_tag_from = ROOT
+			}
+		}
+	}
+	option = {
+		name = iraq_lore.7.g
+		ASY={
+			hidden_effect = {
+				division_template = {
+					name = "Ferqat Al Harb"
+					division_names_group = IRQ_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+						owner = ASY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+						owner = ASY
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+						owner = ASY
+						allow_spawning_on_enemy_provs = yes
+					}
+					
+				}
+				change_tag_from = ROOT
+			}
+		}
+	}
+}
+country_event = {
+	id = iraq.96
+	title = iraq.96.t
+	desc = iraq.96.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_red_line
+	option = {
+		name = iraq.96.a
+		trigger = {
+			is_ai = no
+		}
+	}
+	option = {
+		name = iraq.96.b
+		IRQ={
+			country_event = {
+				id = iraq.97
+				days = 7
+			}
+		}
+	}
+}
+country_event = {
+	id = iraq.97
+	title = iraq.97.t
+	desc = iraq.97.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_red_line
+	option = {
+		name = iraq.97.a
+	}
+	option = {
+		name = iraq.97.b
+		291={
+			add_manpower = -1000
+		}
+	}
+	#option = {
+		#name = iraq.97.b
+	#	start_civil_war = {
+	#		ideology = fascism
+	#		ruling_party = neutrality
+	#		size = 0.1
+		#	states = { 1011 1019 }
+		#}
+		#hidden_effect = {
+		#	set_party_name = {
+		#		ideology = fascism
+		#		long_name = "Oil Cartel"
+		#		name = "Oil Cartel"
+		#	}
+		#	add_popularity = {
+		#		ideology = fascism
+		#		popularity = -0.9
+		#	}
+		#	add_country_leader_role = {
+	#			country_leader = { 
+		#			ideology = fascism_ideology
+		#			traits = {
+		#				oil_baron radical_anti_communist
+		#			}
+		#		}
+		#		promote_leader = yes
+		#		character = IRQ_Calouste_Gulbenkian
+		#	}
+		#}
+	#}
+	option = {
+		name = iraq.97.c
+		set_politics = {
+			elections_allowed = no
+			ruling_party = fascism
+		}
+		start_civil_war = {
+			ideology = neutrality
+			ruling_party = fascism
+			size = 0.5
+			states = { 291 676 1010 1017 1021 }
+		}
+		hidden_effect = {
+			set_cosmetic_tag = IRQ_republic
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.9
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = "Oil Cartel"
+				name = "Oil Cartel"
+			}
+			add_country_leader_role = {
+				country_leader = { 
+					ideology = corporatocracy
+					traits = {
+						oil_baron radical_anti_communist
+					}
+				}
+				promote_leader = yes
+				character = IRQ_Calouste_Gulbenkian
+			}
+			add_ideas = IRQ_anglo_iraqi_treaties
+			give_resource_rights = {
+				receiver = ENG
+				state = 1019
+			}
+			give_resource_rights = {
+				receiver = ENG
+				state = 1011
+			}
+			ENG={
+				add_to_faction = IRQ
+			}
+		}
+	}
+}
+country_event = {
+	id = iraq.98
+	title = iraq.98.t
+	desc = iraq.98.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.98.a
+		complete_national_focus = IRQ_develop_the_south
+	}
+}
+country_event = {
+	id = iraq.99
+	title = iraq.99.t
+	desc = iraq.99.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = iraq.99.a
+		complete_national_focus = IRQ_develop_the_north
+	}
+}
+
+news_event = {
+	id = iraq.100
+	title = iraq.100.t
+	desc = iraq.100.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = iraq.100.a
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+	
+}
+
+country_event = {
+	id = iraq.101
+	title = iraq.101.t	
+	desc = iraq.101.desc
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_core_of = SUD
+				}
+				transfer_state_to = ENG
+			}
+			ENG={
+				end_puppet = EGY
+			}
+		}
+	}
+	option = {
+		name = iraq.101.a
+		start_civil_war = {
+			ideology = fascism
+			size = 0.7
+			states = { 456 447 }
+		}
+	}
+	option = {
+		trigger = {
+			is_ai = no
+		}
+		name = iraq.101.b
+		if = {
+			limit = {
+				has_government = democratic
+			}
+			start_civil_war = {
+				ruling_party = fascism
+				ideology = democratic
+				size = 0.2
+			}
+		}
+		if = {
+			limit = {
+				has_government = communism
+			}
+			start_civil_war = {
+				ruling_party = fascism
+				ideology = communism
+				size = 0.2
+			}
+		}
+		if = {
+			limit = {
+				has_government = neutrality
+			}
+			start_civil_war = {
+				ruling_party = fascism
+				ideology = neutrality
+				size = 0.2
+			}
+		}
+	}
+
+}
+country_event = { #Communist civil war starts
+	id = iraq.102
+	title = iraq.102.t
+	desc = iraq.102.desc
+	picture = GFX_report_event_generic_communist_militia
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { #For the workers
+		name = iraq.102.a
+		ai_chance = {
+			base = 10
+		}
+
+		hidden_effect = { 
+			IF = {
+				limit = {
+					1011 = {
+						has_dynamic_modifier = {
+							modifier = IRQ_proletariat_uprising_modifier
+						}
+					}
+				}
+
+				set_capital =  {
+					state = 1011
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					291 = {
+						has_dynamic_modifier = {
+							modifier = IRQ_proletariat_uprising_modifier
+						}
+					}
+				}
+
+				set_capital =  {
+					state = 291
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					1018 = {
+						has_dynamic_modifier = {
+							modifier = IRQ_proletariat_uprising_modifier
+						}
+					}
+				}
+
+				set_capital =  {
+					state = 1018
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					676 = {
+						has_dynamic_modifier = {
+							modifier = IRQ_proletariat_uprising_modifier
+						}
+					}
+				}
+
+				set_capital =  {
+					state = 676
+				}
+			}
+			else = {
+				random_core_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						has_dynamic_modifier = {
+							modifier = IRQ_proletariat_uprising_modifier
+						}
+					}
+
+					prioritize = { 1019 1020 1021 1010 } 
+
+				}
+				set_capital =  {
+					state = PREV
+				}
+			}
+		}
+
+		start_civil_war = {
+			ideology = neutrality
+			ruling_party = communism
+			size = 0.2
+			states = { 1011 1018 676 1021 }
+			hidden_effect = {
+				add_political_power = 250
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_political_power = 50
+		if = {
+			limit = {
+				has_completed_focus = IRQ_establish_the_peoples_fighters_front
+			}
+			every_core_state = {
+				limit = {
+					OR = {
+						has_dynamic_modifier = { modifier = IRQ_proletariat_uprising_modifier }
+						AND = {
+							controller = {
+								has_government = communism
+								original_tag = GER
+							}
+						}
+					}
+				}
+				random_select_amount = 3
+
+				create_unit = {
+					division = "division_template =\"Quwat Al Shaab Division\" start_experience_factor = 0.2 start_equipment_factor = 0.7"
+					owner = PREV
+					count = 2
+				}
+			}
+		}
+
+		every_state = {
+			limit = {
+				has_dynamic_modifier = { modifier = IRQ_proletariat_uprising_modifier }
+			}
+			remove_dynamic_modifier = { modifier = IRQ_proletariat_uprising_modifier }
+		}
+
+		hidden_effect = {
+			set_country_flag = IRQ_communist_civil_war_flag
+		}
+	}
+}
+country_event = { #FROM seeks to join the faction
+	id = iraq.103
+	title = AUS_political_events.40.t
+	desc = AUS_political_events.40.desc
+	picture = GFX_report_event_generic_sign_treaty2
+	is_triggered_only = yes
+
+	option = { #Sure they can join
+		name = AUS_political_events.40.a
+		ai_chance = {
+			base = 98
+		}
+		ROOT = {
+			add_to_faction = FROM
+
+			add_ai_strategy = { 
+				type = alliance
+				id = FROM
+				value = 200
+			}
+		}
+
+		FROM = {
+			country_event = {
+				id = iraq.104
+				hours = 12
+			}
+		}
+	}
+
+	option = { #No thanks!
+		name = AUS_political_events.40.b
+		ai_chance = {
+			base = 2
+		}
+
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = medium_decrease
+			}
+
+			country_event = {
+				id = iraq.105
+				hours = 12
+			}
+		}
+	}
+}
+country_event = { #FROM agrees to let ROOT join
+	id = iraq.104
+	title = AUS_political_events.41.t
+	desc = AUS_political_events.41.desc
+	picture = GFX_report_event_generic_handshake
+	is_triggered_only = yes
+
+	option = { #Yay
+		name = AUS_political_events.41.a
+		ai_chance = {
+			base = 10
+		}
+
+		event_option_tooltip = AUS_political_events.40.a
+
+		add_ai_strategy = { 
+			type = alliance
+			id = FROM
+			value = 200
+		}
+	}
+}
+country_event = { #FROM rejects to let ROOT join
+	id = iraq.105
+	title = AUS_political_events.42.t
+	desc = AUS_political_events.42.desc
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+
+	option = { #Sad
+		name = AUS_political_events.42.a
+		ai_chance = {
+			base = 10
+		}
+
+		event_option_tooltip = AUS_political_events.40.b
+	}
+}
+news_event = {
+	id = iraq.106
+	title = iraq.106.t
+	desc = iraq.106.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = iraq.106.a
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+	
+}

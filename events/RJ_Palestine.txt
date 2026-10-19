@@ -1,0 +1,86 @@
+###########################
+# Mandatory Palestine Events - This was originally from Shadows of Babylon.
+###########################
+add_namespace = palestine
+country_event = {
+	id = palestine.1
+	title = palestine.1.t
+	desc = palestine.1.d
+	picture = GFX_report_event_palestine
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = palestine.1.a
+		PAL={
+			transfer_state = 454
+			add_ideas = PAL_Zionists
+			load_oob = PAL_revolt
+		}
+		IRQ={
+			country_event = {
+				id = palestine.2
+				days = 30
+			}
+		}
+		ENG={
+			declare_war_on = {
+				target = PAL
+				type = annex_everything
+			}
+			load_oob = JOR_1936
+		}
+	}
+	option = {
+		name = palestine.1.b
+		PAL={
+			transfer_state = 454
+			add_ideas = PAL_Zionists
+			load_oob = PAL_revolt
+			change_tag_from = ENG
+		}
+		IRQ={
+			country_event = {
+				id = palestine.2
+				days = 30
+			}
+		}
+		ENG={
+			declare_war_on = {
+				target = PAL
+				type = annex_everything
+			}
+			load_oob = JOR_1936
+		}
+	}
+}
+country_event = {
+	id = palestine.2
+	title = palestine.2.t
+	desc = palestine.2.d
+	picture = GFX_report_event_palestine
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = palestine.2.a
+		set_nationality = {
+			target_country = PAL
+			character = IRQ_fawzi_al_qawuqji
+		}
+		PAL={
+			add_manpower = 500
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 500
+			}
+		}
+		IRQ={
+			add_manpower = -500
+		}
+		454={
+			start_resistance = yes
+			add_resistance = 0.15
+		}
+	}
+}
