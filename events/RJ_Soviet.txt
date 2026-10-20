@@ -367,7 +367,7 @@ country_event = {
 		ai_chance = {
 			base = 30
 		}
-		add_war_support = .05
+		add_war_support = 0.05
 		add_political_power = 50
 		custom_effect_tooltip = generic_skip_one_line_tt
 		add_stability = -0.05
@@ -377,7 +377,7 @@ country_event = {
 		ai_chance = {
 			base = 70
 		}
-		add_stability = .05
+		add_stability = 0.05
 		add_popularity = {
 			ideology = democratic 
 			popularity = 0.05
@@ -385,5 +385,30 @@ country_event = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		add_war_support = -0.05
 		add_political_power = -25
+	}
+}
+
+# Contact Old Enemies?
+country_event = {
+	id = rj_soviet.12
+	title = rj_soviet.12.t
+	desc = rj_soviet.12.desc
+	picture = GFX_report_event_generic_handshake
+	
+	is_triggered_only = yes
+	
+	option = { # Sure
+		name = rj_soviet.12.a
+		ai_chance = {
+			base = 1
+		}
+		set_country_flag = SOV_the_all_russian_united_front_cflg
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = { # Nah
+		name = rj_soviet.12.b
+		ai_chance = {
+			base = 99
+		}
 	}
 }

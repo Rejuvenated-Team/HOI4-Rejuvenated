@@ -65,22 +65,12 @@ recruit_character = MAN_kanjurjab
 recruit_character = MAN_ding_jianxiu
 recruit_character = MAN_kawashima_naniwa
 
-# Old fake characters 
-#recruit_character = MAN_kyoiji_tomonaga
-#recruit_character = MAN_yonimitsu_kasahara
-#recruit_character = MAN_hesehn_tiemei
-#recruit_character = MAN_guan_xingde
-#recruit_character = MAN_megata_toshiro
-#recruit_character = MAN_hung_zhehuang
-#recruit_character = MAN_nakajima_kesago
-
-IF = {
-	limit = { has_dlc = "No Step Back" }
-	recruit_character = SOV_grigory_semyonov
-	SOV_grigory_semyonov = { 
-		set_character_flag = SOV_exiled_army_leader
-	}
+#RJ Characters
+recruit_character = SOV_grigory_semyonov
+SOV_grigory_semyonov = { 
+	set_character_flag = SOV_exiled_army_leader
 }
+
 IF = {
 	limit = {
 		has_dlc = "No Compromise, No Surrender"

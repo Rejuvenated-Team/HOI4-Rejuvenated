@@ -30,49 +30,13 @@
 
 	continuous_focus_position = { x = 50 y = 1350 }
 
-#	focus = {
-#		id = CHI_
-#		icon = GFX_
-#		prerequisite = { focus = }
-#		mutually_exclusive = { focus =  }
-#		x = -3
-#		y = 0
-#		relative_position_id = 
-#
-#		cost = 10
-#
-#		ai_will_do = {
-#			factor = 1
-#		}
-#
-#		available = {
-#
-#		}
-#		
-#		bypass = {
-#
-#		}
-#
-#		
-#		
-#		
-#
-#		complete_tooltip = {
-#
-#		}
-#
-#		completion_reward = {
-#
-#		}
-#	}
-
 	focus = {
 		id = CHI_secure_internal_politics
 		icon = GFX_goal_generic_major_alliance
 		x = 6
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			base = 20
@@ -85,10 +49,6 @@
 		bypass = {
 
 		}
-
-		
-		
-		
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -138,10 +98,6 @@
 		bypass = {
 
 		}
-
-		
-		
-		
 
 		completion_reward = {
 			add_stability = 0.05
@@ -253,7 +209,7 @@
 		bypass = {
 
 		}
-	
+
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			if = {
@@ -275,7 +231,7 @@
 		y = 1
 		relative_position_id = CHI_cooperation_with_the_nationalists
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			base = 1
@@ -389,6 +345,7 @@
 		completion_reward = {
 			every_owned_state = {
 				limit = {
+					impassable = no
 					is_controlled_by = ROOT
 				}
 				add_extra_state_shared_building_slots = 2
@@ -484,10 +441,6 @@
 
 		}
 
-		
-		
-		
-
 		completion_reward = {
 			custom_effect_tooltip = enable_power_struggle
 			WTT_setup_political_struggle = yes
@@ -524,10 +477,6 @@
 		bypass = {
 
 		}
-
-		
-		
-		
 
 		completion_reward = {
 			load_focus_tree = china_nationalist_focus
@@ -581,10 +530,6 @@
 		bypass = {
 
 		}
-
-		
-		
-		
 
 		completion_reward = {
 			add_political_power = 50
@@ -801,10 +746,6 @@
 
 		}
 
-		
-		
-		
-
 		completion_reward = {
 			set_politics = { ruling_party = communism elections_allowed = no }
 			add_opinion_modifier = { target = SOV modifier = CHI_join_the_chinese_soviet }
@@ -863,10 +804,6 @@
 		bypass = {
 
 		}
-
-		
-		
-		
 
 		completion_reward = {
 			custom_effect_tooltip = CHI_the_yanan_incident_effect_tt

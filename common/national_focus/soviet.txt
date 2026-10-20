@@ -7683,6 +7683,14 @@ focus_tree = {
 		}
 		relative_position_id = SOV_the_path_of_marxism_leninism
 		cost = 5
+		offset = {
+			x = 1
+			trigger = {
+				NOT = {
+					has_country_flag = SOV_the_all_russian_united_front_cflg
+				}
+			}
+		}
 
 		mutually_exclusive = { focus = SOV_the_right_opposition focus = SOV_the_left_opposition }
 
@@ -7781,10 +7789,19 @@ focus_tree = {
 		id = SOV_the_stalin_constitution
 		icon = GFX_goal_support_communism
 		prerequisite = { focus = SOV_the_centre }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = SOV_the_centre
 		cost = 7.2
+
+		offset = {
+			x = -1
+			trigger = {
+				NOT = {
+					has_country_flag = SOV_the_all_russian_united_front_cflg
+				}
+			}
+		}
 
 		available = {
 
@@ -7808,10 +7825,20 @@ focus_tree = {
 		id = SOV_the_zinovyevite_terrorist_center
 		icon = GFX_focus_SOV_purge_zinovyevists
 		prerequisite = { focus = SOV_the_stalin_constitution }
-		x = 0
+		mutually_exclusive = { focus = rj_SOV_reinvite_the_zinovyevites_into_the_party }
+		x = -1
 		y = 1
 		relative_position_id = SOV_the_stalin_constitution
 		cost = 5
+
+		offset = {
+			x = 1
+			trigger = {
+				NOT = {
+					has_country_flag = SOV_the_all_russian_united_front_cflg
+				}
+			}
+		}
 
 		available = {
 
@@ -7918,9 +7945,85 @@ focus_tree = {
 	}
 
 	focus = {
+		id = rj_SOV_reinvite_the_zinovyevites_into_the_party
+		icon = GFX_focus_SOV_zinovyevists
+		prerequisite = { focus = SOV_the_stalin_constitution }
+		mutually_exclusive = { focus = SOV_the_zinovyevite_terrorist_center }
+		x = 1
+		y = 1
+		relative_position_id = SOV_the_stalin_constitution
+		cost = 5
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
+
+		allow_branch = {
+			has_country_flag = SOV_the_all_russian_united_front_cflg
+		}
+
+		completion_reward = {
+			SOV_remove_paranoia_effect = yes
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SOV_grigory_zinovyev
+			show_ideas_tooltip = SOV_lev_kamenev
+			show_ideas_tooltip = SOV_ivan_smirnov
+			show_ideas_tooltip = SOV_grigory_sokolnikov
+			show_ideas_tooltip = SOV_aleksandr_shlyapnikov
+			hidden_effect = {
+				SOV_grigory_zinovyev = {
+					clr_character_flag = SOV_imprisoned_flag
+					set_portraits = {
+						army = {
+							small = "GFX_idea_SOV_grigory_zinovyev"
+						}
+					}
+				}
+				SOV_lev_kamenev = {
+					clr_character_flag = SOV_imprisoned_flag
+					set_portraits = {
+						army = {
+							small = "GFX_idea_SOV_lev_kamenev"
+						}
+					}
+				}
+				SOV_ivan_smirnov = {
+					clr_character_flag = SOV_imprisoned_flag
+					set_portraits = {
+						army = {
+							small = "GFX_idea_SOV_ivan_smirnov"
+						}
+					}
+				}
+				#SOV_grigory_sokolnikov
+				SOV_aleksandr_shlyapnikov = {
+					clr_character_flag = SOV_imprisoned_flag
+					set_portraits = {
+						army = {
+							small = "GFX_idea_SOV_aleksandr_shlyapnikov"
+						}
+					}
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = { NOT = { has_completed_focus = SOV_lessons_of_war } }
+				
+				custom_effect_tooltip = modify_the_red_army_tt
+				add_to_variable = { SOV_the_red_army_mastery_loss_factor  = -0.05 tooltip = land_mastery_gain_factor_tt }
+
+				#Need for tooltip
+				set_variable = { SOV_the_red_army_mastery_loss_factor_inverted = SOV_the_red_army_mastery_loss_factor }
+				multiply_variable = { SOV_the_red_army_mastery_loss_factor_inverted = -1 }
+			}
+		}
+	}
+
+	focus = {
 		id = SOV_secure_the_administration
 		icon = GFX_focus_generic_join_comintern
-		prerequisite = { focus = SOV_the_zinovyevite_terrorist_center }
+		prerequisite = { focus = SOV_the_zinovyevite_terrorist_center focus = rj_SOV_reinvite_the_zinovyevites_into_the_party }
 		x = -1
 		y = 1
 		relative_position_id = SOV_the_zinovyevite_terrorist_center
@@ -8084,6 +8187,7 @@ focus_tree = {
 		id = SOV_the_anti_soviet_trotskyist_center
 		icon = GFX_focus_SOV_purge_trotskyists
 		prerequisite = { focus = SOV_the_zinovyevite_terrorist_center }
+		mutually_exclusive = { focus = rj_SOV_get_back_the_trotskyists }
 		x = 0
 		y = 2
 		relative_position_id = SOV_the_zinovyevite_terrorist_center
@@ -8219,13 +8323,96 @@ focus_tree = {
 	}
 
 	focus = {
+		id = rj_SOV_get_back_the_trotskyists
+		icon = GFX_focus_fra_loyalty_trotzky
+		prerequisite = { focus = rj_SOV_reinvite_the_zinovyevites_into_the_party }
+		mutually_exclusive = { focus = SOV_the_anti_soviet_trotskyist_center }
+		x = 0
+		y = 2
+		relative_position_id = rj_SOV_reinvite_the_zinovyevites_into_the_party
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
+
+		completion_reward = {
+
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SOV_lev_trotsky
+			show_ideas_tooltip = SOV_karl_radek
+			show_ideas_tooltip = SOV_ivar_smilga
+			show_ideas_tooltip = SOV_yevgeny_preobrazhensky
+			show_ideas_tooltip = SOV_martemyan_ryutin
+			hidden_effect = {
+				if = {
+					limit = { has_global_flag = AAT_trotsky_in_mexico }
+					set_global_flag = flag_trotsky_returning_to_ussr_from_mexico
+					MEX = { country_event = { id = mexico.22 } } #TODO Needs rewrite
+				}
+				else_if = {
+					limit = { has_global_flag = NOR_trotsky_in_norway }
+					set_global_flag = flag_trotsky_returning_to_ussr_from_norway
+					set_global_flag = NOR_trotsky_in_soviet
+					clr_global_flag = NOR_trotsky_in_norway
+					NOR = { country_event = { id = mexico.22 } } #TODO Needs rewrite
+				}
+				SOV_lev_trotsky = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				#SOV_karl_radek
+				SOV_ivar_smilga = {
+					clr_character_flag = SOV_imprisoned_flag
+					set_portraits = {
+						army = {
+							small = "GFX_idea_SOV_ivar_smilga"
+						}
+					}
+				}
+				#SOV_yevgeny_preobrazhensky
+				SOV_martemyan_ryutin = {
+					clr_character_flag = SOV_imprisoned_flag
+					set_portraits = {
+						army = {
+							small = "GFX_idea_SOV_martemyan_ryutin"
+						}
+					}
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_field_marshal_role = {
+				character = SOV_lev_trotsky
+				traits = { media_personality organisational_leader }
+				skill = 4
+				attack_skill = 3
+				defense_skill = 1
+				planning_skill = 4
+				logistics_skill = 4
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = {
+				limit = { NOT = { has_completed_focus = SOV_lessons_of_war } }
+				
+				custom_effect_tooltip = modify_the_red_army_tt
+				add_to_variable = { SOV_the_red_army_mastery_loss_factor = -0.05 tooltip = land_mastery_gain_factor_tt }
+
+				#Need for tooltip
+				set_variable = { SOV_the_red_army_mastery_loss_factor_inverted = SOV_the_red_army_mastery_loss_factor }
+				multiply_variable = { SOV_the_red_army_mastery_loss_factor_inverted = -1 }
+			}
+		}
+	}
+
+	focus = {
 		id = SOV_the_workers_dictatorship
 		icon = GFX_focus_spr_masters_of_our_own_fate
-		prerequisite = { focus = SOV_the_anti_soviet_trotskyist_center }
-		x = 0
+		prerequisite = { focus = SOV_the_anti_soviet_trotskyist_center focus = rj_SOV_get_back_the_trotskyists }
+		x = -1
 		y = 1
 		relative_position_id = SOV_the_anti_soviet_trotskyist_center
-		cost = 10
+		cost = 7.2
 
 		available = {
 
@@ -8249,7 +8436,7 @@ focus_tree = {
 		icon = GFX_focus_SOV_organization_centralization_discipline
 		prerequisite = { focus = SOV_the_collectivization_process }
 		prerequisite = { focus = SOV_the_workers_dictatorship }
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = SOV_the_workers_dictatorship
 		cost = 5
@@ -8350,6 +8537,8 @@ focus_tree = {
 		id = SOV_the_military_conspiracy
 		icon = GFX_focus_SOV_military_purge
 		prerequisite = { focus = SOV_the_workers_dictatorship }
+		prerequisite = { focus = SOV_the_anti_soviet_trotskyist_center }
+		mutually_exclusive = { focus = rj_SOV_invite_the_white_exiles }
 		x = 0
 		y = 2
 		relative_position_id = SOV_the_anti_soviet_trotskyist_center
@@ -8457,9 +8646,119 @@ focus_tree = {
 	}
 
 	focus = {
+		id = rj_SOV_invite_the_white_exiles
+		icon = GFX_goal_align_russia
+		prerequisite = { focus = rj_SOV_get_back_the_trotskyists }
+		mutually_exclusive = { focus = SOV_the_military_conspiracy }
+		x = 0
+		y = 2
+		relative_position_id = rj_SOV_get_back_the_trotskyists
+		cost = 5
+		
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
+
+		completion_reward = {
+
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SOV_anastasy_vonsyatsky
+			show_ideas_tooltip = SOV_grigory_semyonov
+			show_ideas_tooltip = SOV_metropolitan_anastasy
+			show_ideas_tooltip = SOV_metropolitan_nikolay
+			show_ideas_tooltip = SOV_nikolay_ustryalov
+			show_ideas_tooltip = SOV_aleksandr_kazembek
+			show_ideas_tooltip = SOV_metropolitan_aleksy
+			show_ideas_tooltip = SOV_patriarch_meletius
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = SOV_aleksandr_prokofyev_seversky
+			show_ideas_tooltip = SOV_vasily_yanchenko
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_chief_of_airforce
+			show_ideas_tooltip = SOV_vyacheslav_tkachyov
+			show_ideas_tooltip = SOV_yan_nagursky
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			show_unit_leaders_tooltip = SOV_grigory_semyonov
+			show_unit_leaders_tooltip = SOV_aleksandr_rodzyanko
+			show_unit_leaders_tooltip = SOV_vladimir_kosmin
+			show_unit_leaders_tooltip = SOV_andrey_shkuro
+			show_unit_leaders_tooltip = SOV_pyotr_krasnov
+			show_unit_leaders_tooltip = SOV_konstantin_nechayev
+			show_unit_leaders_tooltip = SOV_anton_denikin
+
+			hidden_effect = {
+				SOV_anastasy_vonsyatsky = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				#SOV_grigory_semyonov - below
+				MAN = {
+					country_event = {
+						id = NSB_Soviet_fascist_civil_war.004 # TODO Rewrite
+						days = 0
+					}
+				}
+				#SOV_metropolitan_anastasy
+				#SOV_metropolitan_nikolay
+				#SOV_nikolay_ustryalov
+				SOV_aleksandr_kazembek = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				#SOV_metropolitan_aleksy
+				#SOV_metropolitan_meletius
+				SOV_aleksandr_prokofyev_seversky = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				SOV_vasily_yanchenko = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				SOV_vyacheslav_tkachyov = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				SOV_yan_nagursky = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				SOV_aleksandr_rodzyanko = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				SOV_vladimir_kosmin = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				SOV_andrey_shkuro = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				SOV_pyotr_krasnov = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				SOV_konstantin_nechayev = {
+					clr_character_flag = SOV_exiled_flag
+				}
+				SOV_anton_denikin = {
+					clr_character_flag = SOV_exiled_flag
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = {
+				limit = { NOT = { has_completed_focus = SOV_lessons_of_war } }
+				
+				custom_effect_tooltip = modify_the_red_army_tt
+				add_to_variable = { SOV_the_red_army_mastery_loss_factor = -0.05 tooltip = land_mastery_gain_factor_tt }
+
+				#Need for tooltip
+				set_variable = { SOV_the_red_army_mastery_loss_factor_inverted = SOV_the_red_army_mastery_loss_factor }
+				multiply_variable = { SOV_the_red_army_mastery_loss_factor_inverted = -1 }
+			}
+		}
+	}
+
+	focus = {
 		id = SOV_the_bloc_of_rights_and_trotskyites
 		icon = GFX_focus_SOV_purge_bukharinists
 		prerequisite = { focus = SOV_the_military_conspiracy }
+		mutually_exclusive = { focus = rj_SOV_appeal_to_the_right_bloc }
 		x = 0
 		y = 1
 		relative_position_id = SOV_the_military_conspiracy
@@ -8567,13 +8866,61 @@ focus_tree = {
 	}
 
 	focus = {
+		id = rj_SOV_appeal_to_the_right_bloc
+		icon = GFX_focus_SOV_bukharinists
+		prerequisite = { focus = rj_SOV_invite_the_white_exiles }
+		mutually_exclusive = { focus = SOV_the_bloc_of_rights_and_trotskyites }
+		x = 0
+		y = 1
+		relative_position_id = rj_SOV_invite_the_white_exiles
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SOV_nikolay_bukharin
+			show_ideas_tooltip = SOV_aleksey_rykov
+			show_ideas_tooltip = SOV_mikhail_tomsky
+			hidden_effect = {
+				#SOV_nikolay_bukharin
+				#SOV_aleksey_rykov
+				#SOV_mikhail_tomsky
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = {
+				limit = { NOT = { has_completed_focus = SOV_lessons_of_war } }
+				
+				custom_effect_tooltip = modify_the_red_army_tt
+				add_to_variable = { SOV_the_red_army_mastery_loss_factor = -0.05 tooltip = land_mastery_gain_factor_tt }
+
+				#Need for tooltip
+				set_variable = { SOV_the_red_army_mastery_loss_factor_inverted = SOV_the_red_army_mastery_loss_factor }
+				multiply_variable = { SOV_the_red_army_mastery_loss_factor_inverted = -1 }
+			}
+		}
+	}
+
+	focus = {
 		id = SOV_behead_the_snake
 		icon = GFX_focus_SOV_behead_the_snake
 		prerequisite = { focus = SOV_the_military_conspiracy }
-		x = 2
-		y = 1
+		x = -1
+		y = 2
 		relative_position_id = SOV_the_military_conspiracy
 		cost = 5
+
+		offset = {
+			x = 3
+			y = -1
+			trigger = {
+				NOT = {
+					has_country_flag = SOV_the_all_russian_united_front_cflg
+				}
+			}
+		}
 
 		available = {
 			has_government = communism
@@ -8613,11 +8960,20 @@ focus_tree = {
 	focus = {
 		id = SOV_stalins_cult_of_personality
 		icon = GFX_focus_SOV_stalins_cult_of_personality
-		prerequisite = { focus = SOV_the_bloc_of_rights_and_trotskyites }
-		x = 0
+		prerequisite = { focus = SOV_the_bloc_of_rights_and_trotskyites focus = rj_SOV_appeal_to_the_right_bloc }
+		x = 1
 		y = 1
 		relative_position_id = SOV_the_bloc_of_rights_and_trotskyites
 		cost = 5
+
+		offset = {
+			x = -1
+			trigger = {
+				NOT = {
+					has_country_flag = SOV_the_all_russian_united_front_cflg
+				}
+			}
+		}
 
 		available = {
 			has_country_flag = {
@@ -9685,7 +10041,7 @@ focus_tree = {
 		icon = GFX_focus_spr_masters_of_our_own_fate
 		prerequisite = { focus = SOV_approach_tukhachevsky focus = SOV_approach_primakov}
 		x = 1
-		y = 2
+		y = 1
 		relative_position_id = SOV_approach_tukhachevsky
 		cost = 5
 
@@ -9752,7 +10108,7 @@ focus_tree = {
 		prerequisite = { focus = SOV_left_opposition_coup }
 		prerequisite = { focus = SOV_funds_for_the_cause }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = SOV_funds_for_the_cause
 		cost = 10
 
@@ -9931,7 +10287,7 @@ focus_tree = {
 		prerequisite = { focus = SOV_left_opposition_coup }
 		prerequisite = { focus = SOV_committee_in_exile }
 		x = 0
-		y = 4
+		y = 3
 		relative_position_id = SOV_committee_in_exile
 		
 		cost = 10
@@ -10789,7 +11145,7 @@ focus_tree = {
 		icon = GFX_goal_generic_war_with_comintern
 		prerequisite = { focus = SOV_covert_support_for_spanish_poum }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = SOV_covert_support_for_spanish_poum
 		cost = 5
 		available = {
@@ -10878,7 +11234,7 @@ focus_tree = {
 		icon = GFX_focus_spr_masters_of_our_own_fate
 		prerequisite = { focus = SOV_dissent_in_the_party }
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = SOV_dissent_in_the_party
 		cost = 10
 		available = {
@@ -12067,7 +12423,7 @@ focus_tree = {
 		prerequisite = { focus = SOV_cooperation_against_stalin }
 		mutually_exclusive = { focus = SOV_left_purges focus = SOV_right_purges }
 		x = 0
-		y = 4
+		y = 3
 		relative_position_id = SOV_cooperation_against_stalin
 		cost = 10
 		available = {
@@ -12275,7 +12631,7 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = -19
+			x = -18
 			y = 0
 			trigger = { #Trotskyist branch hides
 				NOT = { has_dlc = "No Step Back" }
@@ -12302,7 +12658,7 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = -26
+			x = -25
 			y = 0
 			trigger = {
 				has_dlc = "No Step Back"
