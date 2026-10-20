@@ -19,8 +19,28 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/EGY/ahmed_fuad_death.dds"
 	}
 
-	SpriteType = { #News Picture
+	SpriteType = { #Event Picture
 		name = "GFX_ahmed_fuad_death_event"
 		texturefile = "gfx/event_pictures/EGY/death_of_fuad.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_NZL_koroki"
+		texturefile = "gfx/event_pictures/NZL/NZL_koroki.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SAU_dammam_drillers"
+		texturefile = "gfx/event_pictures/SAU/SAU_dammam_drillers.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SAU_dammam_well"
+		texturefile = "gfx/event_pictures/SAU/SAU_dammam_well.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SAU_dammam_development"
+		texturefile = "gfx/event_pictures/SAU/SAU_dammam_development.dds"
 	}
 }

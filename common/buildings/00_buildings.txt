@@ -97,7 +97,7 @@ buildings = {
 
 	supply_node = {
 		show_on_map = 1
-		base_cost = 12000
+		base_cost = 10000
 		disabled_in_dmz = yes
 		icon_frame = 15
 		centered = yes
@@ -125,7 +125,7 @@ buildings = {
 	
 	naval_facility = {
 		show_on_map = 1
-		base_cost = 12000
+		base_cost = 9000
 		per_controlled_building_extra_cost = 3000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 18
@@ -209,7 +209,6 @@ buildings = {
 		infrastructure_construction_effect = yes
 		level_cap = {
 			state_max = 1
-			shares_slots = yes
 		}
 		hide_if_missing_tech = yes
 		show_modifier = yes
@@ -265,7 +264,7 @@ buildings = {
 		base_cost = 14500
 		icon_frame = 10
 		#local_resources_oil = 1 # May use local_resources_ + any resource name
-		local_resources_rubber = 1 # May use local_resources_ + any resource name
+		local_resources_rubber = 8 # May use local_resources_ + any resource name
 		refinery = yes
 		value = 5
 		infrastructure_construction_effect = yes
@@ -503,7 +502,7 @@ buildings = {
 
 	nuclear_facility = {
 		show_on_map = 1
-		base_cost = 15000
+		base_cost = 12000
 		per_controlled_building_extra_cost = 5000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 20
@@ -537,7 +536,7 @@ buildings = {
 
 	air_facility = {
 		show_on_map = 1
-		base_cost = 12000
+		base_cost = 9000
 		per_controlled_building_extra_cost = 3000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 17
@@ -561,7 +560,7 @@ buildings = {
 
 	land_facility = {
 		show_on_map = 1
-		base_cost = 12000
+		base_cost = 9000
 		per_controlled_building_extra_cost = 3000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 19

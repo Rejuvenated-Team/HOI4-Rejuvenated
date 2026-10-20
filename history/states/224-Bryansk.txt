@@ -4,7 +4,7 @@ state={
 	name="STATE_224"
 	manpower = 1707567
 	
-	state_category = town
+	state_category = city
 
 	history={
 		owner = SOV
@@ -14,6 +14,7 @@ state={
 		buildings = {
 			infrastructure = 3 #was: 5
 			air_base = 2
+			industrial_complex = 1
 		}
 		add_core_of = SOV
 	}
@@ -22,5 +23,5 @@ state={
 		288 315 343 371 398 3226 3306 3335 3364 3390 6305 6330 6386 6411 11229 11298 11325 
 	}
 
-	local_supplies=0.0 
+	local_supplies=6.0 
 }

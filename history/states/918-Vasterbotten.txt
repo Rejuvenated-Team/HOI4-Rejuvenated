@@ -2,7 +2,7 @@ state = {
 	id = 918
 	name = "STATE_918" # Västerbotten
 	manpower = 315105
-	state_category = rural
+	state_category = town
 	resources = {
 		tungsten = 35
 		steel = 39
@@ -30,5 +30,5 @@ state = {
 		11 109 118 145 182 184 3003 3044 3062 3100 3113 3138 3173 6024 6083 6132 6152 6161 6200 9093 9095 9134 9143 9175 9211 9220 11026 11058 11067 11069 11112 11152 11190 11201 
 	}
 
-	local_supplies=0.000
+	local_supplies=4.000
 }

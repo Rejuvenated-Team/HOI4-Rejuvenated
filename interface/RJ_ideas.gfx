@@ -574,5 +574,91 @@ spriteTypes = {
 		name = "GFX_idea_RJ_idea_warlord_uplift_the_cavalry"
 		texturefile = "gfx/interface/ideas/warlords/RJ_idea_warlord_uplift_the_cavalry.dds"
 	}
-	
+
+
+
+	##############################################
+	### NEW ZEALAND ##############################
+	##############################################
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_RNZAF"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_RNZAF.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_RNZN"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_RNZN.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_commonwealth_air_training"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_commonwealth_air_training.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_kauri_point"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_kauri_point.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_rail_board"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_rail_board.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_mining_controller"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_mining_controller.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_recycling_program"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_recycling_program.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_recycling_program"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_recycling_program.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_major_financial_investment"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_major_financial_investment.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_schofield_tank"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_schofield_tank.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_the_biggest_bob"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_the_biggest_bob.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_first_labour_government"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_first_labour_government.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_king_koroki"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_king_koroki.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_proud_maori_traditions"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_proud_maori_traditions.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_great_pacific_kingdom"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_great_pacific_kingdom.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_NZL_peoples_voice"
+		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_peoples_voice.dds"
+	}
+
 }

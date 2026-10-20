@@ -1,2 +1,4 @@
 ﻿l_english:
  ENG_reach_out_across_the_channel_tt: "§YInvites Spain, France, & the Benelux countries to your faction, if any of them have Communist governments."
+ GER_naval_based_on_atlantic_islands_tt: ""Every §Y[ROOT.GetName]§! or German subject controlled island with a §Y$naval_base$§! in the §YNorth Atlantic Ocean§!: Add §G3§! §Y$naval_base$§!. Add §G3§! §Y$coastal_bunker$§!. Current effect:""
+ SOV_pc_of_mechanical_engineering_ns_tt: "$SOV_modify_defense_industry_ns_intro$ \n £prod_eff_cap Production Efficiency Cap: §G+5.00%§!\n\n"

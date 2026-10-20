@@ -3,7 +3,11 @@ state = {
 	name = "STATE_244" # Volkhov
 	manpower = 195325
 	
-	state_category = rural
+	state_category = city
+
+	resources = {
+		aluminium = 22
+	}
 
 	history = {
 
@@ -27,5 +31,5 @@ state = {
 		70 3072 3110 6035 6095 9164 9197 11174 
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 6.0 
 }
