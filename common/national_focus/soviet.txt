@@ -1481,7 +1481,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_restoration_and_development
-		cost = 10
+		cost = 7.2
 
 		available = {
 			custom_trigger_tooltip = {
@@ -2744,7 +2744,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_foster_flying_clubs
-		cost = 10
+		cost = 7.2
 
 		available = {
 			OR = {
@@ -3884,7 +3884,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_pc_of_the_ussr_navy
-		cost = 10
+		cost = 7.2
 
 		mutually_exclusive = { focus = SOV_submarine_warfare }
 
@@ -3933,7 +3933,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_pc_of_the_ussr_navy
-		cost = 10
+		cost = 7.2
 
 		mutually_exclusive = { focus = SOV_surface_warfare }
 
@@ -4748,7 +4748,7 @@ focus_tree = {
 		x = -5
 		y = 1
 		relative_position_id = SOV_found_the_pcdi
-		cost = 10
+		cost = 7.2
 
 		available = {
 			has_full_control_of_state = 219 #MOSCOW
@@ -4758,7 +4758,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_to_variable = { SOV_defense_industry_production_factory_max_efficiency_factor = 0.05 }
-			add_to_variable = { SOV_defense_industry_production_factory_efficiency_gain_factor = -0.05 }
 			custom_effect_tooltip = SOV_pc_of_mechanical_engineering_ns_tt
 
 			if = { #DEFAULT COMMIE
@@ -5230,7 +5229,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_pc_of_mechanical_engineering
-		cost = 10
+		cost = 7.2
 
 		available = {
 			has_full_control_of_state = 219 #MOSCOW
@@ -6924,7 +6923,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_rehabilitated_military
-		cost = 10
+		cost = 7.2
 
 		select_effect = {
 			add_ideas = SOV_military_reorganization_ns
@@ -7783,7 +7782,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_the_centre
-		cost = 10
+		cost = 7.2
 
 		available = {
 
@@ -7923,7 +7922,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_the_zinovyevite_terrorist_center
-		cost = 10
+		cost = 7.2
 
 		available = {
 
@@ -7951,7 +7950,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = SOV_socialism_in_one_country
-		cost = 10
+		cost = 7.2
 
 		available = {
 
@@ -8640,7 +8639,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PROPAGANDA}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 50
 
 			custom_effect_tooltip = unlock_propaganda_campaign_tt
 			unlock_decision_tooltip = SOV_propaganda_stalin
@@ -12589,7 +12588,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_expand_the_agitprop
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_collectivist_propaganda }
 
@@ -12662,7 +12661,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_positive_heroism
-		cost = 10
+		cost = 7.2
 
 		available = {
 
@@ -12771,7 +12770,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_expand_the_agitprop
-		cost = 10
+		cost = 7.2
 
 		mutually_exclusive = { focus = SOV_positive_heroism }
 
@@ -12799,7 +12798,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_collectivist_propaganda
-		cost = 10
+		cost = 7.2
 
 		available = {
 
@@ -16452,7 +16451,7 @@ focus_tree = {
 		x = 3
 		y = 0
 		relative_position_id = SOV_the_threat_from_the_land_of_the_rising_sun
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -16519,7 +16518,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_reconcile_japan
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -17610,8 +17609,6 @@ focus_tree = {
 				has_country_flag = SOV_breakaway_country_flag
 			}
 		}
-
-		available_if_capitulated = no
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -17638,12 +17635,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_rebuild_the_nation
-		cost = 10
+		cost = 7.2
 		ai_will_do = {
 			factor = 1
 		}
-
-		available_if_capitulated = no
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -18120,7 +18115,6 @@ focus_tree = {
 				NOT = { has_completed_focus = SOV_the_path_of_marxism_leninism }
 			}
 		}
-		available_if_capitulated = no
 
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
@@ -18143,11 +18137,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_romanov_reconstruction
-		cost = 10
+		cost = 7.2
 		ai_will_do = {
 			factor = 1
 		}
-		available_if_capitulated = no
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -18312,11 +18305,10 @@ focus_tree = {
 		x = -5
 		y = 1
 		relative_position_id = SOV_romanov_reconstruction
-		cost = 10
+		cost = 7.2
 		ai_will_do = {
 			factor = 1
 		}
-		available_if_capitulated = no
 
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY}
 
@@ -18389,7 +18381,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		available_if_capitulated = no
 
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 
@@ -18434,9 +18425,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		available_if_capitulated = no
-		
-		search_filters = {}
 
 		available = {
 			is_subject = no
@@ -18868,13 +18856,10 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = SOV_westward_bound
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
-		available_if_capitulated = no
-
-		search_filters = {}
 
 		available = {
 			is_subject = no
@@ -19329,7 +19314,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_our_slavic_commitments
-		cost = 10
+		cost = 7.2
 		ai_will_do = {
 			factor = 1
 		}
@@ -19345,8 +19330,6 @@ focus_tree = {
 				has_completed_focus = SOV_dismantle_the_zemsky_sobor
 			}
 		}
-
-		available_if_capitulated = no
 
 		will_lead_to_war_with = ROM
 
@@ -19655,8 +19638,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available_if_capitulated = no
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
@@ -19731,8 +19712,6 @@ focus_tree = {
 		will_lead_to_war_with = FRA
 		will_lead_to_war_with = RAJ
 		will_lead_to_war_with = PAK
-
-		available_if_capitulated = no
 		
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 
@@ -19788,8 +19767,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available_if_capitulated = no
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP}
 
@@ -19860,8 +19837,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available_if_capitulated = no
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP}
 
@@ -19896,8 +19871,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available_if_capitulated = no
 		
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP}
 
@@ -19930,8 +19903,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available_if_capitulated = no
 		
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 
@@ -19991,10 +19962,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available_if_capitulated = no
-		
-		search_filters = {}
-
 		completion_reward = {
 			custom_effect_tooltip = SOV_an_empire_in_the_pacific_tt
 			hidden_effect = {
@@ -20034,9 +20001,6 @@ focus_tree = {
 			is_in_faction_with = GER
 			GER = { is_faction_leader = yes }
 		}
-		available_if_capitulated = no
-
-		search_filters = {}
 
 		available = {
 			is_subject = no
@@ -20066,9 +20030,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		available_if_capitulated = no
-
-		search_filters = {}
 
 		available = {
 			is_subject = no
@@ -20128,7 +20089,6 @@ focus_tree = {
 				NOT = { has_completed_focus = SOV_the_path_of_marxism_leninism }
 			}
 		}
-		available_if_capitulated = no
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
@@ -20161,14 +20121,13 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_reinstate_the_duma
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		available = {
 			democratic > .5
 		}
-		available_if_capitulated = no
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 

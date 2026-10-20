@@ -7127,7 +7127,7 @@ leader_traits = {
 		sprite = 13
 		communism_drift = 0.08
 		political_power_gain = 0.10
-		recruitable_population_factor = 0.15
+		recruitable_population = 0.15
 		stability_weekly = 0.005
 	}
 
@@ -7661,10 +7661,10 @@ leader_traits = {
 
 	stalin_father_of_nations = {
 		random = no
-		stability_weekly = 0.001
-		compliance_gain = 0.05
+		stability_weekly = 0.002
+		compliance_gain = 0.10
 		justify_war_goal_when_in_major_war_time = -0.5
-		conscription = 0.02
+		conscription = 0.03
 	}
 
 	stalin_authority_undermined = {

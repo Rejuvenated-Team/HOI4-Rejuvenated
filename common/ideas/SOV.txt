@@ -1186,8 +1186,8 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory = 0.03
-				industrial_capacity_dockyard = 0.03
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
 			}
 		}
 
@@ -1207,9 +1207,11 @@ ideas = {
 			}
 
 			modifier = {
-				military_leader_cost_factor = -0.2
+				military_leader_cost_factor = -0.25
 				promote_cost_factor	 = -0.15
 				army_org_factor = 0.05
+				unit_medal_effectiveness = 0.10
+				grant_medal_cost_factor = -0.25
 			}
 		}
 
@@ -1252,8 +1254,8 @@ ideas = {
 			}
 
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.05
-				research_speed_factor = 0.02
+				production_factory_efficiency_gain_factor = 0.08
+				research_speed_factor = 0.03
 			}
 		}
 
@@ -1273,8 +1275,9 @@ ideas = {
 			}
 
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.05
-				research_speed_factor = 0.02
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+				research_speed_factor = 0.05
 				drift_defence_factor = 0.05
 				communism_drift = 0.05
 				consumer_goods_factor = -0.05
@@ -1494,7 +1497,7 @@ ideas = {
 			}
 
 			modifier = {
-				research_speed_factor = 0.1
+				research_speed_factor = 0.3
 			}
 		}
 
@@ -1508,7 +1511,7 @@ ideas = {
 			}
 
 			modifier = {
-				research_speed_factor = 0.01
+				research_speed_factor = 0.03
 			}
 		}
 
@@ -1522,7 +1525,7 @@ ideas = {
 			}
 
 			modifier = {
-				research_speed_factor = 0.01
+				research_speed_factor = 0.03
 			}
 		}
 
@@ -2362,7 +2365,7 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = -0.10
-				conscription = 0.01
+				conscription = 0.025
 			}
 		}
 
@@ -2524,9 +2527,10 @@ ideas = {
 
 			equipment_bonus = {
 				super_heavy_tank_chassis = {
-					build_cost_ic = -0.2
+					build_cost_ic = -0.25
 					reliability = 0.05 instant = yes
-					armor_value = 0.05
+					armor_value = 0.10
+					fuel_consumption_factor = -0.10
 				}
 			}
 		}
