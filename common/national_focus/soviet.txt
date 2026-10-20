@@ -902,6 +902,7 @@ focus_tree = {
 					bonus = 0.75
 					uses = 2
 					category = construction_tech
+					ahead_reduction = 1
 				}
 			}
 			else = {
@@ -910,6 +911,7 @@ focus_tree = {
 					bonus = 0.75
 					uses = 2
 					category = construction_tech
+					ahead_reduction = 1
 				}
 			}
 		}
@@ -17469,7 +17471,7 @@ focus_tree = {
 			factor = 1
 		}
 
-		available_if_capitulated = no
+		
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -17517,7 +17519,7 @@ focus_tree = {
 			has_global_flag = SOV_soviet_civil_war_over
 		}
 
-		available_if_capitulated = no
+		
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
 
@@ -17543,7 +17545,7 @@ focus_tree = {
 		}
 		available = { has_war = no }
 
-		available_if_capitulated = no
+		
 		
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
@@ -17573,7 +17575,7 @@ focus_tree = {
 			}
 		}
 
-		available_if_capitulated = no
+		
 		
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
@@ -17841,7 +17843,7 @@ focus_tree = {
 			factor = 1
 		}
 
-		available_if_capitulated = no
+		
 		available = { 
 			has_civil_war = no
 		}
@@ -17944,7 +17946,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		available_if_capitulated = no
+		
 		offset = {
 			x = -5
 			y = 0
@@ -18021,7 +18023,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -18330,7 +18332,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		available_if_capitulated = no
+		
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
@@ -18497,7 +18499,7 @@ focus_tree = {
 			factor = 1
 		}
 
-		available_if_capitulated = no
+		
 
 		available = {
 			is_subject = no
@@ -18572,7 +18574,7 @@ focus_tree = {
 				has_completed_focus = SOV_romanov_reconstruction
 			}
 		}
-		available_if_capitulated = no
+		
 
 		will_lead_to_war_with = MON
 
@@ -18630,7 +18632,7 @@ focus_tree = {
 			}
 		}
 
-		available_if_capitulated = no
+		
 
 		will_lead_to_war_with = TAN
 
@@ -18680,7 +18682,7 @@ focus_tree = {
 				has_completed_focus = SOV_dismantle_the_zemsky_sobor
 			}
 		}
-		available_if_capitulated = no
+		
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -18975,7 +18977,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		available_if_capitulated = no
+		
 
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
@@ -19004,7 +19006,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		available_if_capitulated = no
+		
 
 		will_lead_to_war_with = SWE
 
@@ -19040,7 +19042,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		available_if_capitulated = no
+		
 
 		will_lead_to_war_with = FIN
 
@@ -19077,7 +19079,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		available_if_capitulated = no
+		
 
 		will_lead_to_war_with = EST
 		will_lead_to_war_with = LIT
@@ -19134,7 +19136,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		available_if_capitulated = no
+		
 
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 
@@ -19369,7 +19371,7 @@ focus_tree = {
 			}
 		}
 
-		available_if_capitulated = no
+		
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -19484,7 +19486,7 @@ focus_tree = {
 			factor = 1
 		}
 
-		available_if_capitulated = no
+		
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -19557,7 +19559,7 @@ focus_tree = {
 			factor = 1
 		}
 
-		available_if_capitulated = no
+		
 		
 		search_filters = {}
 
@@ -19675,7 +19677,7 @@ focus_tree = {
 		will_lead_to_war_with = AFG
 		will_lead_to_war_with = PER
 
-		available_if_capitulated = no
+		
 		
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 
@@ -20171,7 +20173,6 @@ focus_tree = {
 				}
 			}
 		}
-		available_if_capitulated = no
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
@@ -20202,7 +20203,7 @@ focus_tree = {
 		}
 		available = {
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
@@ -20263,7 +20264,7 @@ focus_tree = {
 		bypass = {
 			is_in_faction_with = ENG
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = {  }
 
@@ -20291,7 +20292,7 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 
@@ -20324,7 +20325,7 @@ focus_tree = {
 				has_completed_focus = SOV_greater_russian_dream
 			}
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -20374,7 +20375,7 @@ focus_tree = {
 		}
 		available = {
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
@@ -20401,7 +20402,7 @@ focus_tree = {
 		}
 		available = {
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
@@ -20483,7 +20484,7 @@ focus_tree = {
 			is_faction_leader = yes
 			num_faction_members > 1
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 
@@ -20511,7 +20512,7 @@ focus_tree = {
 		available = {
 			is_faction_leader = yes
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -20538,7 +20539,7 @@ focus_tree = {
 		available = {
 			num_subjects > 0
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 
@@ -20565,7 +20566,7 @@ focus_tree = {
 		}
 		available = {
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 
@@ -20589,7 +20590,6 @@ focus_tree = {
 		available = {
 			has_government = democratic
 		}
-		available_if_capitulated = no
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
@@ -20677,7 +20677,6 @@ focus_tree = {
 				}
 			}
 		}
-		available_if_capitulated = no
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -20721,9 +20720,6 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		available_if_capitulated = no
-		
-		search_filters = {  }
 
 		completion_reward = {
 			add_political_power = 100
@@ -20760,7 +20756,6 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		available_if_capitulated = no
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
@@ -20823,7 +20818,7 @@ focus_tree = {
 				has_completed_focus = SOV_our_own_alliance
 			}
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
@@ -20865,7 +20860,7 @@ focus_tree = {
 				}
 			}
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
@@ -20917,7 +20912,7 @@ focus_tree = {
 				}
 			}
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
@@ -20970,7 +20965,7 @@ focus_tree = {
 				}
 			}
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
@@ -21014,7 +21009,7 @@ focus_tree = {
 				}
 			}
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
@@ -21057,7 +21052,7 @@ focus_tree = {
 				controls_state = 111
 			}
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 
@@ -21095,7 +21090,7 @@ focus_tree = {
 				}
 			}
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
@@ -21146,7 +21141,7 @@ focus_tree = {
 				}
 			}
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
@@ -21202,7 +21197,7 @@ focus_tree = {
 				}
 			}
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
@@ -21264,7 +21259,7 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY }
 
@@ -21316,7 +21311,7 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY }
 
@@ -21359,7 +21354,7 @@ focus_tree = {
 		available = {
 			threat > 0.4
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 
@@ -21412,7 +21407,7 @@ focus_tree = {
 				has_idea = war_economy
 			}
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -21460,7 +21455,7 @@ focus_tree = {
 		}
 		available = {
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP }
 
@@ -21509,7 +21504,7 @@ focus_tree = {
 		}
 		available = {
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH }
 
@@ -21598,7 +21593,7 @@ focus_tree = {
 				}
 			}
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
@@ -21644,7 +21639,7 @@ focus_tree = {
 				}
 			}
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
@@ -21689,7 +21684,7 @@ focus_tree = {
 				}
 			}
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
@@ -21726,7 +21721,7 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
@@ -21765,7 +21760,7 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_STABILITY }
 
@@ -21794,7 +21789,7 @@ focus_tree = {
 
 		bypass = {
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -21827,7 +21822,7 @@ focus_tree = {
 
 		bypass = {
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -21857,7 +21852,7 @@ focus_tree = {
 
 		bypass = {
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -21889,7 +21884,7 @@ focus_tree = {
 
 		bypass = {
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -21921,7 +21916,7 @@ focus_tree = {
 
 		bypass = {
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -21955,7 +21950,7 @@ focus_tree = {
 				JAP = { exists = no }
 			}
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -22197,7 +22192,7 @@ focus_tree = {
 		bypass = {
 			
 		}
-		available_if_capitulated = no
+		
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 

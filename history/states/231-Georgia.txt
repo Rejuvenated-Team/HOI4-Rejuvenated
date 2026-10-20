@@ -2,6 +2,10 @@ state = {
 	id = 231
 	name = "STATE_231"
 
+	resources = {
+		steel = 50
+	}
+
 	history = {
 		owner = SOV
 		victory_points = {
@@ -23,14 +27,6 @@ state = {
 		}
 		add_core_of = SOV
 		add_core_of = GEO
-		1939.1.1 = {
-			buildings = {
-				industrial_complex = 2
-
-			}
-
-		}
-
 	}
 
 	provinces = {
@@ -38,7 +34,7 @@ state = {
 	}
 	manpower = 2457844
 	buildings_max_level_factor = 1.000
-	state_category = town
+	state_category = city
 
-	local_supplies = 0.0 
+	local_supplies = 6.0 
 }
