@@ -1,0 +1,113 @@
+ideas = {
+	
+	country = {
+
+		RJ_CHI_electrification_scheme_idea = {
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture =  AFG_electrification
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_industrial_infrastructure_factor = 0.15
+				production_speed_energy_infrastructure_factor = 0.15
+			}
+		}
+
+		RJ_CHI_communist_administrators_idea = {
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture =  generic_communist_army
+
+			removal_cost = -1
+
+			modifier = {
+				communism_drift = 0.10
+				communism_acceptance = 25
+				political_power_factor = 0.15
+			}
+		}
+
+		RJ_CHI_reformed_administration_idea = {
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture =  generic_political_support
+
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly_factor = 0.0025
+				political_power_gain = 0.15
+				drift_defence_factor = 0.10
+			}
+		}
+
+		RJ_CHI_medical_idea = {
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture =  generic_immigration
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.25
+				casualty_trickleback = 0.05
+			}
+		}
+
+		RJ_CHI_cavalry_idea = {
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture =  RJ_idea_warlord_uplift_the_cavalry
+
+			removal_cost = -1
+
+			modifier = {
+				cavalry_attack_factor = 0.10
+				cavalry_defence_factor = 0.05
+				modifier_army_sub_unit_cavalry_speed_factor = 0.10
+			}
+		}
+
+		RJ_CHI_mountaineers_idea = {
+			allowed = { always = no }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture =  PER_special_units_division_idea
+
+			removal_cost = -1
+
+			modifier = {
+				modifier_army_sub_unit_mountaineers_attack_factor = 0.05
+				modifier_army_sub_unit_mountaineers_defence_factor = 0.05
+				special_forces_cap = 0.10
+			}
+		}
+
+	}
+
+}

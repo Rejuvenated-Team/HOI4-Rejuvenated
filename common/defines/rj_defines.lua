@@ -2,14 +2,16 @@
 NDefines.NGame.END_DATE = "1959.1.1.1"
 
 -- NCountry
-NDefines.NCountry.LOCAL_MANPOWER_ACCESSIBLE_NON_CORE_FACTOR = 0.03 -- accessible recruitable factor base
+NDefines.NCountry.LOCAL_MANPOWER_ACCESSIBLE_NON_CORE_FACTOR = 0.05 -- accessible recruitable factor base
 NDefines.NCountry.STARTING_COMMAND_POWER = 10.0 -- starting command power for every country
 NDefines.NCountry.BASE_MAX_COMMAND_POWER = 300.0 -- base value for maximum command power
+NDefines.NCountry.BASE_RESEARCH_SLOTS = 3						-- Base number of research slots per country.
 
 -- NProduction
-NDefines.NProduction.DEFAULT_MAX_NAV_FACTORIES_PER_LINE = 15
-NDefines.NProduction.FLOATING_HARBOR_MAX_NAV_FACTORIES_PER_LINE = 15
-NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 15
+NDefines.NProduction.DEFAULT_MAX_NAV_FACTORIES_PER_LINE = 30
+NDefines.NProduction.FLOATING_HARBOR_MAX_NAV_FACTORIES_PER_LINE = 30
+NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 30
+NDefines.NProduction.CONVOY_MAX_NAV_FACTORIES_PER_LINE = 30
 NDefines.NProduction.RAILWAY_GUN_MAX_MIL_FACTORIES_PER_LINE = 10
 NDefines.NProduction.RESOURCE_TO_ENERGY_COEFFICIENT = 12.0 -- How much energy per coal produces
 NDefines.NProduction.BASE_COUNTRY_ENERGY_PRODUCTION = 12.0 -- The base energy production of a country
@@ -25,6 +27,7 @@ NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT
 -- NPolitics
 NDefines.NPolitics.ARMY_LEADER_MAX_COST = 50 -- max cost BEFORE modifiers
 NDefines.NPolitics.NAVY_LEADER_MAX_COST = 50 -- max cost BEFORE modifiers
+NDefines.NPolitics.BASE_POLITICAL_POWER_INCREASE = 2.25
 
 -- NMilitary
 NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 1000 --Max army experience a country can store
@@ -43,11 +46,21 @@ NDefines.NMilitary.NEW_OPERATIVE_RANDOM_BASIC_TRAIT_CHANCES = {  				-- chances 
 	0.35, -- up from vanilla 25% for first trait
 	0.15  -- up from vanilla 5% for second trait after that
 }
+NDefines.NMilitary.TRAINING_MAX_LEVEL = 10
+NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 5
+NDefines.NMilitary.UNIT_EXP_LEVELS = {0.02,	0.03,	0.05,	0.08,	0.1,	0.14,	0.18,	0.22,	0.26,	0.3,	0.39,	0.48,	0.57,	0.66,	0.75,	0.78,	0.81,	0.84,	0.87,	0.9}		-- Experience needed to progress to the next level
+NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.05
+NDefines.NMilitary.ARMY_EXP_BASE_LEVEL = 5
+NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 2
+NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 10
+NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 5
+-- NDefines.NAir.AIR_WING_XP_LEVELS = { 20, 40, 60, 80, 100, 140, 180, 220, 260, 300, 380, 460, 640, 620, 700, 740, 780, 820, 860, 900 }
 
 -- NAir
 NDefines.NAir.ANTI_AIR_ATTACK_TO_DAMAGE_REDUCTION_FACTOR = 1.0 -- Balancing value to convert equipment stat anti_air_attack to the damage reduction modifier apply to incoming air attacks against units with AA.
 
 -- NNavy
+NDefines.NNavy.NAVAL_MINES_ACCIDENT_CRITICAL_HIT_CHANCES = 0.20
 NDefines.NNavy.NAVAL_HOMEBASE_CALCULATION_DISTANCE_CUTOFF = 1000 -- Tuning parameter for homebase calculation. Distance to normalize against. Everything above said value will be treated as score = 0.
 NDefines.NNavy.NAVAL_HOMEBASE_BUILDING_SCORE_FACTOR = 0.02 -- Tuning parameter for homebase calculation. Multiplier for how much the level of the naval base impacts its total score.
 NDefines.NNavy.COMBAT_MIN_HIT_CHANCE = 0.05 -- never less hit chance then this?
@@ -137,8 +150,20 @@ NDefines.NIntel.RADAR_INTEL_STACKING_FACTOR = 0.6							-- (Normaly 0.5) Used wh
 NDefines.NIntel.RECON_PLANE_INTEL_BASE = 0.024								-- (normaly 0.02) intel base amount for a strategic area per plane
 
 -- NSupply
-NDefines.NSupply.CAPITAL_SUPPLY_BASE = 7.0 -- base supply for capital
-NDefines.NSupply.INFRA_TO_SUPPLY = 0.8 -- each level of infra gives this many supply
+NDefines.NSupply.CAPITAL_SUPPLY_BASE = 10.0 -- base supply for capital
+NDefines.NSupply.CAPITAL_INITIAL_SUPPLY_FLOW = 10.0
+NDefines.NSupply.INFRA_TO_SUPPLY = 1 -- each level of infra gives this many supply
+NDefines.NSupply.SUPPLY_FROM_DAMAGED_INFRA = 0.5
+NDefines.NSupply.VP_TO_SUPPLY_BASE = 0.5
+NDefines.NSupply.NODE_INITIAL_SUPPLY_FLOW = 4
+NDefines.NSupply.NODE_ADDED_PENALTY_PER_PROVINCE = 0.25
+NDefines.NSupply.NODE_FLOW_BONUS_PER_RAIL_LEVEL = 0.50
+NDefines.NSupply.RAILWAY_BASE_FLOW = 15.0
+NDefines.NSupply.RAILWAY_FLOW_PER_LEVEL = 8.0
+NDefines.NSupply.RAILWAY_FLOW_PENALTY_PER_DAMAGED = 8.0
+NDefines.NSupply.RAILWAY_CONVERSION_COOLDOWN = 5
+NDefines.NSupply.RAILWAY_CONVERSION_COOLDOWN_CORE = 2
+NDefines.NSupply.SUPPLY_POINTS_PER_TRAIN = 1.25
 
 -- NProject
 NDefines.NProject.SCIENTIST_BASIC_RESEARCH_DAILY_XP_GAIN = 0.33 -- Daily experience gain for doing basic research
@@ -148,3 +173,7 @@ NDefines.NProject.BASIC_RESEARCH_TECHNOLOGY_BONUS_DIMINISHING_RETURN_FACTOR = 0.
 NDefines.NDoctrines.MAX_MONTHLY_MASTERY_GAIN = 50.0 -- Monthly mastery gain will not exceed this value
 NDefines.NDoctrines.MASTERY_BAR_ANIMATION_SPEED_PER_DAILY_MASTERY = 5.0 -- Multiplier of how fast the mastery bar animates based on daily mastery gain
 NDefines.NDoctrines.MASTERY_BAR_MAX_ANIMATION_SPEED = 50.0 -- Max speed of the mastery bar animation
+
+
+-- NBuildings
+NDefines.NBuildings.MAX_SHARED_SLOTS = 30				-- Max slots shared by factories

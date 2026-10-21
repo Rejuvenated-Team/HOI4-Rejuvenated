@@ -51,6 +51,21 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
 	}
 
+	spriteType = {
+		name = "GFX_rj_portrait_CUB_fulgencio_batista_small"
+		texturefile = "gfx/interface/ideas/cub/advisors/rj_advisor_CUB_fulgencio_batista.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_CUB_meyer_lansky_small"
+		texturefile = "gfx/interface/ideas/cub/advisors/rj_advisor_CUB_meyer_lansky.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_CUB_genovevo_perez_damera_small"
+		texturefile = "gfx/interface/ideas/cub/advisors/rj_advisor_CUB_genovevo_perez_damera.dds"
+	}
+
 	####################
 	### EGY - Egypt ###
 	####################
@@ -132,6 +147,25 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/ger/advisors/rj_advisor_GER_theodor_von_hippel.dds"
 	}
 
+	##############
+	### GUANXI ###
+	##############
+
+	spriteType = {
+		name = "GFX_rj_portrait_GXC_li_zongren_small"
+		texturefile = "gfx/interface/ideas/gxc/advisors/rj_portrait_GXC_li_zongren.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_GXC_bai_chongxi_small"
+		texturefile = "gfx/interface/ideas/gxc/advisors/rj_portrait_GXC_bai_chongxi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_GXC_chen_jitang_small"
+		texturefile = "gfx/interface/ideas/gxc/advisors/rj_portrait_GXC_chen_jitang.dds"
+	}
+
 	###################
 	### ITA - Italy ###
 	###################
@@ -144,6 +178,15 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_rj_portrait_ITA_paolo_aloisi_small"
 		texturefile = "gfx/interface/ideas/ita/advisors/rj_advisor_ITA_paolo_aloisi.dds"
+	}
+
+	#####################
+	### SIC - Sichuan ###
+	#####################
+
+	spriteType = {
+		name = "GFX_rj_portrait_SIC_liu_wenhui_small"
+		texturefile = "gfx/interface/ideas/sic/advisors/rj_advisor_SIC_liu_wenhui.dds"
 	}
 
 	######################
@@ -218,6 +261,18 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_rj_portrait_SOV_aleksandr_konovalov_small"
 		#texturefile = "gfx/interface/ideas/sov/advisors/rj_advisor_SOV_aleksandr_konovalov.dds"
+		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kr_portrait_SOV_anastasy_vonsyatsky_small"
+		#texturefile = "gfx/interface/ideas/sov/advisors/kr_advisor_SOV_anastasy_vonsyatsky.dds"
+		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kr_portrait_SOV_grigory_semyonov_small"
+		#texturefile = "gfx/interface/ideas/sov/advisors/kr_advisor_SOV_grigory_semyonov.dds"
 		texturefile = "gfx/interface/ideas/portrait_PLACEHOLDER_small.dds"
 	}
 
@@ -307,6 +362,94 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_rj_portrait_GXC_chen_jitang_small"
 		texturefile = "gfx/interface/ideas/warlords/advisors/rj_portrait_GXC_chen_jitang.dds"
+	}
+
+
+
+
+
+	#################################
+	### NEW ZEALAND #################
+	#################################
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_ralph_cochrane_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_ralph_cochrane.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_bob_semple_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_bob_semple.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_alexander_galbraith_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_alexander_galbraith.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_bernard_carl_ashwin_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_bernard_carl_ashwin.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_william_polson_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_william_polson.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_john_a_lee_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_john_a_lee.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_a_e_davies_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_a_e_davies.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_leslie_lefaux_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_leslie_lefaux.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_vic_wilcox_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_vic_wilcox.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_william_veitch_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_william_veitch.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_eruera_tirikatene_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_eruera_tirikatene.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_t_w_ratana_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_t_w_ratana.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_thomas_leech_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_thomas_leech.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_te_puea_herangi_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_te_puea_herangi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_apirana_ngata_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_apirana_ngata.dds"
+	}
+
+	spriteType = {
+		name = "GFX_rj_portrait_NZL_sid_scott_small"
+		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_sid_scott.dds"
 	}
 
 }

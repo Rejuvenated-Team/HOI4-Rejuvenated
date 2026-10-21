@@ -39,9 +39,9 @@ leader_traits = {
 
 	lawyer = {
 		random = no
-		stability_factor = 0.05
-		political_power_factor = 0.05
-		party_popularity_stability_factor = 0.05
+		sprite = 13
+		political_power_factor = 0.10
+		party_popularity_stability_factor = 0.10
 	}
 
 	modernizer = {
@@ -214,6 +214,58 @@ leader_traits = {
 			type = befriend
 			id = ITA
 			value = 200
+		}
+	}
+
+	king_of_the_maori = {
+		random = no
+		political_power_gain = 0.10
+		non_core_manpower = 0.05
+		neutrality_drift = 0.08
+	}
+
+	king_of_new_zealand = {
+		random = no
+		political_power_gain = 0.10
+		party_popularity_stability_factor = 0.15
+	}
+
+	king_of_the_pacific = {
+		random = no
+		war_support_factor = 0.10
+		non_core_manpower = 0.15
+		compliance_gain = 0.25
+		army_core_defence_factor = 0.10
+	}
+
+	minister_without_a_portfolio = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.20
+	}
+
+	faith_healer = {
+		random = no
+		sprite = 13
+		weekly_casualties_war_support = 0.01
+		casualty_trickleback = 0.15
+	}
+
+	kingitanga_leader = {
+		random = no
+		sprite = 13
+		neutrality_drift = 0.15
+		stability_factor = -0.05
+	}
+
+	communist_journalist = {
+		sprite = 13
+		random = no
+		communism_drift = 0.12
+		political_power_factor = 0.10
+
+		ai_will_do = {
+			factor = 2
 		}
 	}
 }

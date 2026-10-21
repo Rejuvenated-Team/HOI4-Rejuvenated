@@ -3,7 +3,11 @@ state = {
 	name="STATE_626"
 	manpower = 55257
 	
-	state_category = pastoral
+	state_category = rural
+
+	resources = {
+		steel = 9
+	}
 	
 	history= {
 		owner = PHI
@@ -14,15 +18,10 @@ state = {
 			}
 		}
 		add_core_of = PHI
-		1939.1.1 = {
-			buildings = {
-				industrial_complex = 1
-			}
-		}
 	}
 	provinces={
 		4429 7419 10145 
 	}
 
-	local_supplies=0.0 
+	local_supplies=2.0 
 }

@@ -50,5 +50,5 @@ state = {
 		1415 4423 7275 7351 10165 10280 12253
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 3.0 
 }

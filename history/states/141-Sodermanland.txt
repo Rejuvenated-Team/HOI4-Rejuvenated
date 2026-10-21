@@ -2,7 +2,7 @@ state = {
 	id = 141
 	name = "STATE_141" # Svealand
 	manpower = 1338181
-	state_category = city
+	state_category = metropolis
 	
 	resources = {
 		steel = 24 # was: 40
@@ -29,6 +29,7 @@ state = {
 			6050 = {
 				naval_base = 5
 				coastal_bunker = 3
+				air_facility = 1
 			}
 		}
 
@@ -40,5 +41,5 @@ state = {
 		35 161 3106 3182 6050 6084 6127 6164 6188 6209 9109 9149 9185 9209 11044 11082 11163 11188 11278 13097 13098 
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 10.0 
 }

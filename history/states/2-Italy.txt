@@ -31,16 +31,14 @@ state = {
                         has_dlc = "Gotterdammerung"
                     }
                 }
+				air_facility = 1
             }
+			11882 = {
+				land_facility = 1
+			}
 		}
 		add_core_of = ITA
 		add_core_of = PAP
-		1939.1.1 = {
-			buildings = {
-				arms_factory = 2
-				industrial_complex = 5
-			}
-		}
 	}
 
 	provinces = {

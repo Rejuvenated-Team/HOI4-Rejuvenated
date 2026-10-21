@@ -4,7 +4,7 @@ ideas = {
 
 		IRQ_golden_square = {
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -29,7 +29,7 @@ ideas = {
 
 		IRQ_golden_square_strong = {
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -55,7 +55,7 @@ ideas = {
 
 		IRQ_anglo_iraqi_treaty = {
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -86,7 +86,7 @@ ideas = {
 
 		IRQ_anglo_iraqi_oil_company = {
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -113,7 +113,7 @@ ideas = {
 
 		IRQ_agrarian_society = {
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -137,7 +137,7 @@ ideas = {
 			name = IRQ_agrarian_society
 
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -161,7 +161,7 @@ ideas = {
 			name = IRQ_agrarian_society
 
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -184,7 +184,7 @@ ideas = {
 			name = IRQ_agrarian_society
 
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -204,7 +204,7 @@ ideas = {
 		IRQ_artisans_society_trade_union_idea = {
 
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -224,7 +224,7 @@ ideas = {
 		IRQ_appeasing_the_local_tribes_idea = {
 
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -243,7 +243,7 @@ ideas = {
 
 		IRQ_iraq_currency_board_idea = {
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -264,7 +264,7 @@ ideas = {
 			name = IRQ_iraq_currency_board_idea
 
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -287,7 +287,7 @@ ideas = {
 			name = IRQ_iraq_currency_board_idea
 
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -309,7 +309,7 @@ ideas = {
 			name = IRQ_iraq_currency_board_idea
 
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -330,7 +330,7 @@ ideas = {
 
 		IRQ_strenghtened_the_dinar = {
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -350,7 +350,7 @@ ideas = {
 
 		IRQ_foreign_industrial_monopolies = {
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -368,7 +368,7 @@ ideas = {
 
 		IRQ_export_economy_idea = {
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -389,7 +389,7 @@ ideas = {
 
 		IRQ_armed_tribes_idea = {
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -411,7 +411,7 @@ ideas = {
 		IRQ_al_muthanna_club_idea = {
 			picture = generic_fascism_rising
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 
 			allowed_civil_war = { 
@@ -431,7 +431,7 @@ ideas = {
 		IRQ_iraqi_al_futuwwa_idea = {
 			picture = generic_fascist_workers
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 
 			allowed_civil_war = { 
@@ -451,7 +451,7 @@ ideas = {
 			name = IRQ_iraqi_al_futuwwa_idea
 			picture = generic_fascist_workers
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 
 			allowed_civil_war = { 
@@ -474,7 +474,7 @@ ideas = {
 			picture = ETH_scavenging_tactics
 			
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -489,7 +489,7 @@ ideas = {
 
 		IRQ_GER_attack_bonus = {
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 			allowed_civil_war = {
 				always = yes
@@ -505,7 +505,7 @@ ideas = {
 
 		IRQ_ITA_attack_bonus = {
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 			allowed_civil_war = {
 				always = yes
@@ -521,7 +521,7 @@ ideas = {
 
 		IRQ_ENG_attack_bonus = {
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 			allowed_civil_war = {
 				always = yes
@@ -537,7 +537,7 @@ ideas = {
 
 		IRQ_USA_attack_bonus = {
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 			allowed_civil_war = {
 				always = yes
@@ -553,7 +553,7 @@ ideas = {
 
 		IRQ_generic_attack_bonus = {
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 			allowed_civil_war = {
 				always = yes
@@ -568,7 +568,7 @@ ideas = {
 
 		IRQ_generic_attack_bonus_axis = {
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 			allowed_civil_war = {
 				always = yes
@@ -583,7 +583,7 @@ ideas = {
 
 		IRQ_pan_arab_crackdown = {
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 			removal_cost = -1
 			picture = bul_zveno
@@ -595,7 +595,7 @@ ideas = {
 
 		IRQ_anglo_iraqi_mutual_defense_agreement = {
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 			cancel = {
 				has_war_with = ENG
@@ -645,7 +645,7 @@ ideas = {
 
 		IRQ_rally_the_arab_world_idea = {
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 			removal_cost = -1
 			picture = MEX_revolutionary_army
@@ -673,7 +673,7 @@ ideas = {
 
 		IRQ_regent_idea = {
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 			removal_cost = -1
 			picture = IRQ_regent_idea
@@ -686,7 +686,7 @@ ideas = {
 
 		IRQ_recovering_from_forceful_industrialization = {
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 			removal_cost = -1
 			picture = GER_recovering_economy
@@ -697,7 +697,7 @@ ideas = {
 
 		IRQ_peshmerga_idea = {
 			allowed = {
-				original_tag = IRQ
+				always = no
 			}
 			removal_cost = -1
 			picture = MEX_politicised_army_2
@@ -714,8 +714,7 @@ ideas = {
 			picture = generic_production_bonus
 
 			allowed = {
-				original_tag = IRQ
-				has_dlc = "Graveyard of Empires"
+				always = no
 			}
 
 			visible = {
@@ -733,8 +732,7 @@ ideas = {
 			picture = generic_improved_industries
 
 			allowed = {
-				original_tag = IRQ
-				has_dlc = "Graveyard of Empires"
+				always = no
 			}
 
 			visible = {
@@ -752,8 +750,7 @@ ideas = {
 			picture = man_five_year_plan_industry
 
 			allowed = {
-				original_tag = IRQ
-				has_dlc = "Graveyard of Empires"
+				always = no
 			}
 
 			visible = {
@@ -769,8 +766,7 @@ ideas = {
 			picture = LIT_invested_in_farms
 
 			allowed = {
-				original_tag = IRQ
-				has_dlc = "Graveyard of Empires"
+				always = no
 			}
 
 			visible = {

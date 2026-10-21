@@ -8,6 +8,9 @@ technologies = {
 		enable_equipments = {
 			artillery_equipment_1
 		}
+		enable_subunits = {
+			field_guns
+		}
 
 		armored_car = {
 			soft_attack = 0.1
@@ -43,7 +46,7 @@ technologies = {
 					localization_key = SP_UNLOCK_PROJECT
 					PROJECT = sp_land_super_heavy_howitzer
 				}
-			}
+			}			
 		}
 
 		research_cost = 1.5
@@ -57,6 +60,8 @@ technologies = {
 			artillery
 			mio_cat_all_artillery_equipment
 			mio_cat_artillery #Only Artillery
+			artillery_tech
+			all_artillery_tech
 		}
 		special_project_specialization = { specialization_land }
 
@@ -94,6 +99,9 @@ technologies = {
 		category_self_propelled_artillery = {
 			soft_attack = 0.15
 		}
+		field_guns = {
+			soft_attack = 0.05
+		}
 
 		enable_equipment_modules = {
 			tank_small_cannon_2
@@ -119,6 +127,8 @@ technologies = {
 			artillery
 			mio_cat_all_artillery_equipment
 			mio_cat_artillery #Only Artillery
+			artillery_tech
+			all_artillery_tech
 		}
 		special_project_specialization = { specialization_land }
 
@@ -126,7 +136,7 @@ technologies = {
 			factor = 2
 
 			modifier = { #This is needed for a lot of tank designs
-				factor = 2.0
+				factor = 6.0
 				is_major = yes
 			}
 
@@ -198,6 +208,8 @@ technologies = {
 			artillery
 			mio_cat_all_artillery_equipment
 			mio_cat_artillery #Only Artillery
+			artillery_tech
+			all_artillery_tech
 		}
 		special_project_specialization = { specialization_land }
 
@@ -235,6 +247,9 @@ technologies = {
 		category_self_propelled_artillery = {
 			soft_attack = 0.1
 		}
+		field_guns = {
+			soft_attack = 0.05
+		}
 
 		path = {
 			leads_to_tech = artillery3
@@ -259,6 +274,8 @@ technologies = {
 			artillery
 			mio_cat_all_artillery_equipment
 			mio_cat_artillery #Only Artillery
+			artillery_tech
+			all_artillery_tech
 		}
 		special_project_specialization = { specialization_land }
 
@@ -294,11 +311,16 @@ technologies = {
 			soft_attack = 0.1
 		}
 		category_self_propelled_artillery = {
+			soft_attack = 0.10
+		}
+		field_guns = {
 			soft_attack = 0.05
 		}
 
 		enable_equipment_modules = {
 			tank_medium_howitzer_2
+			tank_heavy_howitzer
+			tank_medium_cannon_2
 		}
 		path = {
 			leads_to_tech = artillery4
@@ -318,6 +340,8 @@ technologies = {
 			artillery
 			mio_cat_all_artillery_equipment
 			mio_cat_artillery #Only Artillery
+			artillery_tech
+			all_artillery_tech
 		}
 		special_project_specialization = { specialization_land }
 
@@ -347,7 +371,7 @@ technologies = {
 		}
 
 		enable_equipment_modules = {
-			tank_medium_cannon_2
+			tank_super_heavy_howitzer
 		}
 
 		path = {
@@ -368,6 +392,8 @@ technologies = {
 			artillery
 			mio_cat_all_artillery_equipment
 			mio_cat_artillery #Only Artillery
+			artillery_tech
+			all_artillery_tech
 		}
 		special_project_specialization = { specialization_land }
 
@@ -403,12 +429,19 @@ technologies = {
 			soft_attack = 0.1
 		}
 		category_self_propelled_artillery = {
+			soft_attack = 0.10
+		}
+		field_guns = {
 			soft_attack = 0.05
 		}
 
 		enable_equipment_modules = {
 			auto_loader
-			tank_heavy_howitzer
+			tank_medium_cannon_3
+		}
+
+		path = {
+			leads_to_tech = artillery6
 		}
 
 		research_cost = 1
@@ -424,6 +457,8 @@ technologies = {
 			artillery
 			mio_cat_all_artillery_equipment
 			mio_cat_artillery #Only Artillery
+			artillery_tech
+			all_artillery_tech
 		}
 		special_project_specialization = { specialization_land }
 
@@ -443,6 +478,182 @@ technologies = {
 			modifier = {
 				factor = 5
 				date > "1945.1.1"
+			}
+		}
+	}
+
+	artillery6 = {
+
+		artillery = {
+			soft_attack = 0.05
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		category_self_propelled_artillery = {
+			soft_attack = 0.10
+		}
+
+		enable_equipment_modules = {
+			tank_heavy_howitzer_2
+			tank_medium_howitzer_3
+		}
+
+		research_cost = 1
+
+		start_year = 1944
+
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 14 }
+		}
+
+		categories = {
+			artillery
+			mio_cat_all_artillery_equipment
+			mio_cat_artillery #Only Artillery
+			artillery_tech
+			all_artillery_tech
+		}
+		special_project_specialization = { specialization_land }
+
+		path = {
+			leads_to_tech = artillery7
+			research_cost_coeff = 1
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 2
+				date > "1944.1.6"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1945.1.1"
+			}
+
+			modifier = {
+				factor = 5
+				date > "1946.1.1"
+			}
+		}
+	}
+
+	artillery7 = {
+
+		enable_equipments = {
+			artillery_equipment_4
+		}
+
+		armored_car = {
+			soft_attack = 0.1
+		}
+
+		enable_equipment_modules = {
+			tank_super_heavy_howitzer_2
+		}
+
+		research_cost = 2
+
+		start_year = 1945
+
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 16 }
+		}
+
+		path = {
+			leads_to_tech = artillery8
+		}
+
+		categories = {
+			artillery
+			mio_cat_all_artillery_equipment
+			mio_cat_artillery #Only Artillery
+			artillery_tech
+			all_artillery_tech
+		}
+		special_project_specialization = { specialization_land }
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 2
+				date > "1945.1.9"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1946.1.1"
+			}
+
+			modifier = {
+				factor = 5
+				date > "1947.1.6"
+			}
+		}
+	}
+
+	artillery8 = {
+
+		artillery = {
+			soft_attack = 0.05
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		category_self_propelled_artillery = {
+			soft_attack = 0.10
+		}
+
+		enable_equipment_modules = {
+			
+		}
+
+		research_cost = 1
+
+		start_year = 1946
+
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 18 }
+		}
+
+		categories = {
+			artillery
+			mio_cat_all_artillery_equipment
+			mio_cat_artillery #Only Artillery
+			artillery_tech
+			all_artillery_tech
+		}
+		special_project_specialization = { specialization_land }
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 2
+				date > "1946.1.6"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1947.1.1"
+			}
+
+			modifier = {
+				factor = 5
+				date > "1948.1.1"
 			}
 		}
 	}
@@ -483,7 +694,6 @@ technologies = {
 
 		enable_equipment_modules = {
 			tank_rocket_launcher
-			rocket_rails
 			lc_rocket_launcher #Module for Land Cruiser
 		}
 
@@ -513,8 +723,11 @@ technologies = {
 		categories = {
 			rocketry
 			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			rocket_artillery_tech
 		}
 		special_project_specialization = { specialization_air }
+		special_project_specialization = { specialization_land }
 	}
 
 	rocket_artillery2 = {
@@ -549,8 +762,11 @@ technologies = {
 		categories = {
 			rocketry
 			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			rocket_artillery_tech
 		}
 		special_project_specialization = { specialization_air }
+		special_project_specialization = { specialization_land }
 	}
 
 	rocket_artillery3 = {
@@ -588,6 +804,7 @@ technologies = {
 			mio_cat_all_artillery_equipment
 		}
 		special_project_specialization = { specialization_air }
+		special_project_specialization = { specialization_land }
 	}
 
 	rocket_artillery4 = {
@@ -601,6 +818,7 @@ technologies = {
 		enable_equipment_modules = {
 			tank_rocket_launcher_2
 		}
+
 		research_cost = 1
 
 		start_year = 1943
@@ -608,6 +826,51 @@ technologies = {
 		folder = {
 			name = artillery_folder
 			position = { x = @rocket_artillery y = 12 }
+		}
+
+		path = {
+			leads_to_tech = rocket_artillery5
+			research_cost_coeff = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				tag = SOV
+			}
+		}
+
+		categories = {
+			rocketry
+			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			rocket_artillery_tech
+		}
+		special_project_specialization = { specialization_air }
+		special_project_specialization = { specialization_land }
+	}
+
+	rocket_artillery5 = {
+
+		category_rocket_artillery = {
+			soft_attack = 0.15
+		}
+
+
+		path = {
+			leads_to_tech = rocket_artillery6
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1944
+
+		folder = {
+			name = artillery_folder
+			position = { x = @rocket_artillery y = 14 }
 		}
 
 		ai_will_do = {
@@ -624,6 +887,85 @@ technologies = {
 			mio_cat_all_artillery_equipment
 		}
 		special_project_specialization = { specialization_air }
+		special_project_specialization = { specialization_land }
+	}
+
+	rocket_artillery6 = {
+
+		category_rocket_artillery = {
+			soft_attack = 0.15
+		}
+
+		path = {
+			leads_to_tech = rocket_artillery7
+			research_cost_coeff = 1
+		}
+
+		enable_equipment_modules = {
+			tank_rocket_launcher_3
+		}
+
+		research_cost = 1
+
+		start_year = 1945
+
+		folder = {
+			name = artillery_folder
+			position = { x = @rocket_artillery y = 16 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				tag = SOV
+			}
+		}
+
+		categories = {
+			rocketry
+			mio_cat_all_artillery_equipment
+		}
+		special_project_specialization = { specialization_air }
+		special_project_specialization = { specialization_land }
+	}
+
+	rocket_artillery7 = {
+
+		enable_equipments = {
+			rocket_artillery_equipment_3
+		}
+		motorized_rocket_brigade = {
+			soft_attack = 0.3
+		}
+
+		research_cost = 1
+
+		start_year = 1946
+
+		folder = {
+			name = artillery_folder
+			position = { x = @rocket_artillery y = 18 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				tag = SOV
+			}
+		}
+
+		categories = {
+			rocketry
+			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			rocket_artillery_tech
+		}
+		special_project_specialization = { specialization_air }
+		special_project_specialization = { specialization_land }
 	}
 
 	interwar_antiair = {
@@ -699,6 +1041,8 @@ technologies = {
 			artillery
 			cat_anti_air
 			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			anti_air_tech
 		}
 		special_project_specialization = { specialization_land specialization_air }
 	}
@@ -754,6 +1098,8 @@ technologies = {
 			artillery
 			cat_anti_air
 			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			anti_air_tech
 		}
 		special_project_specialization = { specialization_land specialization_air }
 	}
@@ -815,6 +1161,8 @@ technologies = {
 			artillery
 			cat_anti_air
 			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			anti_air_tech
 		}
 		special_project_specialization = { specialization_land specialization_air }
 	}
@@ -874,6 +1222,8 @@ technologies = {
 			artillery
 			cat_anti_air
 			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			anti_air_tech
 		}
 		special_project_specialization = { specialization_land specialization_air }
 	}
@@ -890,7 +1240,7 @@ technologies = {
 			air_attack = 0.1
 		}
 		category_self_propelled_anti_air = {
-			air_attack = 0.05
+			air_attack = 0.10
 		}
 
 		tech_air_damage_factor = -0.02
@@ -930,6 +1280,8 @@ technologies = {
 			artillery
 			cat_anti_air
 			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			anti_air_tech
 		}
 		special_project_specialization = { specialization_land specialization_air }
 	}
@@ -950,6 +1302,11 @@ technologies = {
 			tank_anti_air_cannon_3
 			auto_loader
 			lc_heavy_anti_air_platform #Module for Land Cruiser
+			tank_auto_cannon_3
+		}
+
+		path = {
+			leads_to_tech = antiair6
 		}
 
 		research_cost = 1
@@ -982,6 +1339,182 @@ technologies = {
 			artillery
 			cat_anti_air
 			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			anti_air_tech
+		}
+		special_project_specialization = { specialization_land specialization_air }
+	}
+
+	antiair6 = {
+
+		anti_air = {
+			air_attack = 0.1
+		}
+		anti_air_brigade = {
+			air_attack = 0.1
+		}
+		mot_anti_air_brigade = {
+			air_attack = 0.1
+		}
+		category_self_propelled_anti_air = {
+			air_attack = 0.10
+		}
+
+		tech_air_damage_factor = -0.02
+
+		path = {
+			leads_to_tech = antiair7
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1944
+
+		folder = {
+			name = artillery_folder
+			position = { x = @anti_air y = 14 }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				OR = {
+					tag = JAP
+					tag = ENG
+					tag = USA
+				}
+				OR = {
+					has_war_with = JAP
+					has_war_with = USA
+					has_war_with = ENG
+				}
+				factor = 5
+			}
+		}
+
+		categories = {
+			artillery
+			cat_anti_air
+			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			anti_air_tech
+		}
+		special_project_specialization = { specialization_land specialization_air }
+	}
+
+	antiair7 = {
+
+		enable_equipment_modules = {
+			tank_heavy_cannon_4
+		}
+
+		anti_air = {
+			air_attack = 0.1
+		}
+		anti_air_brigade = {
+			air_attack = 0.1
+		}
+		mot_anti_air_brigade = {
+			air_attack = 0.1
+		}
+		category_self_propelled_anti_air = {
+			air_attack = 0.10
+		}
+
+		tech_air_damage_factor = -0.02
+
+		path = {
+			leads_to_tech = antiair8
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1945
+
+		folder = {
+			name = artillery_folder
+			position = { x = @anti_air y = 16 }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				OR = {
+					tag = JAP
+					tag = ENG
+					tag = USA
+				}
+				OR = {
+					has_war_with = JAP
+					has_war_with = USA
+					has_war_with = ENG
+				}
+				factor = 5
+			}
+		}
+
+		categories = {
+			artillery
+			cat_anti_air
+			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			anti_air_tech
+		}
+		special_project_specialization = { specialization_land specialization_air }
+	}
+
+	antiair8 = {
+
+		enable_equipments = {
+			anti_air_equipment_4
+		}
+		armored_car = {
+			hard_attack = 0.1
+		}
+		static_anti_air_damage_factor = 0.1
+
+		enable_equipment_modules = {
+			ship_anti_air_5
+		}
+
+		path = {
+			leads_to_tech = antiair6
+		}
+
+		research_cost = 1
+
+		start_year = 1946
+
+		folder = {
+			name = artillery_folder
+			position = { x = @anti_air y = 18 }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				OR = {
+					tag = JAP
+					tag = ENG
+					tag = USA
+				}
+				OR = {
+					has_war_with = JAP
+					has_war_with = USA
+					has_war_with = ENG
+				}
+				factor = 5
+			}
+		}
+
+		categories = {
+			artillery
+			cat_anti_air
+			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			anti_air_tech
 		}
 		special_project_specialization = { specialization_land specialization_air }
 	}
@@ -1088,6 +1621,8 @@ technologies = {
 			artillery
 			cat_anti_tank
 			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			anti_tank_tech
 		}
 		special_project_specialization = { specialization_land }
 	}
@@ -1160,6 +1695,8 @@ technologies = {
 			artillery
 			cat_anti_tank
 			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			anti_tank_tech
 		}
 		special_project_specialization = { specialization_land }
 	}
@@ -1241,6 +1778,8 @@ technologies = {
 			artillery
 			cat_anti_tank
 			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			anti_tank_tech
 		}
 		special_project_specialization = { specialization_land }
 	}
@@ -1248,6 +1787,7 @@ technologies = {
 	antitank3 = {
 		enable_equipment_modules = {
 			tank_medium_cannon_2
+			tank_high_velocity_cannon_2
 		}
 		
 		category_anti_tank = {
@@ -1257,7 +1797,7 @@ technologies = {
 
 		category_tank_destroyers = {
 			hard_attack = 0.1
-			ap_attack = 0.05
+			ap_attack = 0.10
 		}
 
 		path = {
@@ -1278,6 +1818,8 @@ technologies = {
 			artillery
 			cat_anti_tank
 			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			anti_tank_tech
 		}
 
 		special_project_specialization = { specialization_land }
@@ -1324,7 +1866,7 @@ technologies = {
 
 	antitank4 = {
 		enable_equipment_modules = {
-			tank_high_velocity_cannon_2
+			
 		}
 		
 		category_anti_tank = {
@@ -1333,8 +1875,8 @@ technologies = {
 		}
 
 		category_tank_destroyers = {
-			hard_attack = 0.05
-			ap_attack = 0.05
+			hard_attack = 0.10
+			ap_attack = 0.10
 		}
 
 		path = {
@@ -1389,6 +1931,8 @@ technologies = {
 			artillery
 			cat_anti_tank
 			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			anti_tank_tech
 		}
 		special_project_specialization = { specialization_land }
 	}
@@ -1403,6 +1947,7 @@ technologies = {
 		}	
 		enable_equipment_modules = {
 			tank_high_velocity_cannon_3
+			tank_medium_cannon_3
 			tank_heavy_cannon_3
 			auto_loader
 			lc_heavy_high_velocity_cannons #Module for Land Cruiser
@@ -1411,6 +1956,11 @@ technologies = {
 		research_cost = 1
 
 		start_year = 1943
+
+		path = {
+			leads_to_tech = antitank6
+			research_cost_coeff = 1
+		}
 
 		folder = {
 			name = artillery_folder
@@ -1460,6 +2010,225 @@ technologies = {
 			artillery
 			cat_anti_tank
 			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			anti_tank_tech
+		}
+		special_project_specialization = { specialization_land }
+	}
+
+	antitank6 = {
+		enable_equipment_modules = {
+			
+		}
+		
+		category_anti_tank = {
+			hard_attack = 0.1
+			ap_attack = 0.1
+		}
+
+		category_tank_destroyers = {
+			hard_attack = 0.10
+			ap_attack = 0.10
+		}
+
+		path = {
+			leads_to_tech = antitank7
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1944
+
+		folder = {
+			name = artillery_folder
+			position = { x = @anti_tank y = 14 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				date > "1943.1.6"
+			}
+			modifier = {
+				tag = JAP
+				not = {
+					OR = {
+						has_War_with = SOV
+						has_war_with = USA
+					}
+				}
+				factor = 0.5
+			}
+			modifier = {
+				factor = 5
+				date > "1944.1.1"
+			}
+			modifier = {
+				factor = 10
+				any_enemy_country = {
+					ROOT = {
+						estimated_intel_max_armor = {
+							tag = PREV
+							value > 35
+						}
+					}
+				}
+			}
+		}
+
+		categories = {
+			artillery
+			cat_anti_tank
+			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			anti_tank_tech
+		}
+		special_project_specialization = { specialization_land }
+	}
+
+	antitank7 = {
+		enable_equipment_modules = {
+			tank_heavy_cannon_4
+			tank_high_velocity_cannon_4
+		}
+		
+		category_anti_tank = {
+			hard_attack = 0.1
+			ap_attack = 0.1
+		}
+
+		category_tank_destroyers = {
+			hard_attack = 0.10
+			ap_attack = 0.10
+		}
+
+		path = {
+			leads_to_tech = antitank8
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1945
+
+		folder = {
+			name = artillery_folder
+			position = { x = @anti_tank y = 16 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				date > "1944.1.6"
+			}
+			modifier = {
+				tag = JAP
+				not = {
+					OR = {
+						has_War_with = SOV
+						has_war_with = USA
+					}
+				}
+				factor = 0.5
+			}
+			modifier = {
+				factor = 5
+				date > "1945.1.1"
+			}
+			modifier = {
+				factor = 10
+				any_enemy_country = {
+					ROOT = {
+						estimated_intel_max_armor = {
+							tag = PREV
+							value > 35
+						}
+					}
+				}
+			}
+		}
+
+		categories = {
+			artillery
+			cat_anti_tank
+			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			anti_tank_tech
+		}
+		special_project_specialization = { specialization_land }
+	}
+
+	antitank8 = {
+
+		enable_equipments = {
+			anti_tank_equipment_4
+		}
+		armored_car = {
+			ap_attack = 0.1
+		}	
+		enable_equipment_modules = {
+			
+		}
+
+		research_cost = 1
+
+		start_year = 1946
+
+		folder = {
+			name = artillery_folder
+			position = { x = @anti_tank y = 18 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				date > "1945.1.9"
+			}
+			modifier = {
+				tag = JAP
+				not = {
+					OR = {
+						has_War_with = SOV
+						has_war_with = USA
+					}
+				}
+				factor = 0.5
+			}
+			modifier = {
+				factor = 2
+				date > "1946.1.1"
+			}
+
+			modifier = {
+				factor = 5
+				date > "1947.1.6"
+			}
+			modifier = {
+				factor = 10
+				any_enemy_country = {
+					ROOT = {
+						estimated_intel_max_armor = {
+							tag = PREV
+							value > 35
+						}
+					}
+				}
+			}
+		}
+
+		categories = {
+			artillery
+			cat_anti_tank
+			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			anti_tank_tech
 		}
 		special_project_specialization = { specialization_land }
 	}
@@ -1510,6 +2279,8 @@ technologies = {
 			cat_anti_tank
 			artillery
 			mio_cat_all_artillery_equipment
+			all_artillery_tech
+			anti_tank_tech
 		}
 	}
 
@@ -1552,6 +2323,8 @@ technologies = {
 			artillery
 			mio_cat_all_artillery_equipment
 			mio_cat_artillery #Only Artillery
+			all_artillery_tech
+			rocket_artillery_tech
 		}
 		special_project_specialization = { specialization_land }
 
@@ -1606,6 +2379,7 @@ technologies = {
 			artillery
 			mio_cat_all_artillery_equipment
 			mio_cat_artillery #Only Artillery
+			all_artillery_tech
 		}
 		special_project_specialization = { specialization_land }
 
@@ -1655,6 +2429,7 @@ technologies = {
 			artillery
 			mio_cat_all_artillery_equipment
 			mio_cat_artillery
+			all_artillery_tech
 		}
 
 		special_project_specialization = { specialization_land specialization_air }
@@ -1698,6 +2473,7 @@ technologies = {
 			artillery
 			mio_cat_all_artillery_equipment
 			mio_cat_artillery
+			all_artillery_tech
 		}
 
 		special_project_specialization = { specialization_land specialization_air }

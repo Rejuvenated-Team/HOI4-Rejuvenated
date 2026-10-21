@@ -4,6 +4,10 @@ state={
 	manpower = 124000
 	
 	state_category = rural
+
+	resources = {
+		chromium = 4
+	}
 	
 	history={
 		owner = PAN
@@ -22,5 +26,5 @@ state={
 
 	provinces={ 1633 4611 4624 }
 
-	local_supplies=0.5
+	local_supplies = 2.0
 }

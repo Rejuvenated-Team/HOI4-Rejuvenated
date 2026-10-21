@@ -15,6 +15,7 @@ focus_tree = {
 		modifier = {
 			add = 10
 			tag = HOL
+			has_dlc = "Man the Guns"
 		}
 	}
 	
@@ -810,9 +811,9 @@ focus_tree = {
 					is_subject_of = HOL
 					has_autonomy_state = autonomy_integrated_puppet
 					compare_autonomy_progress_ratio < 0.6
-					has_full_control_of_state = 335
+					has_full_control_of_state = 1058
 				}
-				has_full_control_of_state = 335
+				has_full_control_of_state = 1058
 			}
 		}
 		icon = GFX_focus_hol_continue_the_war_in_batavia
@@ -844,7 +845,7 @@ focus_tree = {
 					}
 					add_compliance = 70
 				}
-				set_capital = { state = 335 }
+				set_capital = { state = 1058 }
 			}
 		}
 	}
@@ -1243,6 +1244,16 @@ focus_tree = {
 		x = 4
 		y = 0
 
+		offset = {
+			x = -4
+			y = 0
+			trigger = {
+				INS = {
+					has_completed_focus = INS_underground_revolution
+				}
+			}
+		}
+
 		cost = 5
 
 		available_if_capitulated = yes
@@ -1279,6 +1290,8 @@ focus_tree = {
 		relative_position_id = HOL_obtain_foreign_colonial_investments_taog
 
 		cost = 5
+
+		available_if_capitulated = no
 
 		completion_reward = {
 			add_political_power = -100
@@ -1320,8 +1333,18 @@ focus_tree = {
 		mutually_exclusive = { focus = HOL_the_zuiderzee_works }
 		icon = GFX_focus_generic_treaty
 		x = 0
-		y = 4
+		y = 5
 		relative_position_id = HOL_obtain_foreign_colonial_investments_taog
+
+		offset = {
+			x = 0
+			y = -1
+			trigger = {
+				INS = {
+					has_completed_focus = INS_underground_revolution
+				}
+			}
+		}
 
 		cost = 10
 
@@ -1669,16 +1692,26 @@ focus_tree = {
 					is_subject_of = HOL
 					has_autonomy_state = autonomy_integrated_puppet
 					compare_autonomy_progress_ratio < 0.6
-					has_full_control_of_state = 335
+					has_full_control_of_state = 1058
 				}
-				has_full_control_of_state = 335
+				has_full_control_of_state = 1058
 			}
 		}
 		mutually_exclusive = { focus = INSHOL_industrialized_colony focus = INSHOL_autonomous_dominion  }
 		icon = GFX_focus_hol_continue_the_war_in_batavia
 		x = 0
-		y = 6
+		y = 7
 		relative_position_id = HOL_obtain_foreign_colonial_investments_taog
+
+		offset = {
+			x = 0
+			y = -2
+			trigger = {
+				INS = {
+					has_completed_focus = INS_underground_revolution
+				}
+			}
+		}
 
 		#prerequisite = { focus = HOL_obtain_foreign_colonial_investments_taog }
 		prerequisite = { focus = HOL_curtail_colonial_autonomy_taog }
@@ -1728,7 +1761,7 @@ focus_tree = {
 					}
 					add_compliance = 70
 				}
-				set_capital = { state = 335 }
+				set_capital = { state = 1058 }
 			}
 		}
 	}
@@ -2358,13 +2391,6 @@ focus_tree = {
 		available = {
 			has_full_control_of_state = 7
 			has_full_control_of_state = 36
-			INS = {
-				exists = yes
-				is_subject_of = HOL
-				has_full_control_of_state = 1058
-				has_full_control_of_state = 1051
-				has_full_control_of_state = 335
-			}
 		}
 		mutually_exclusive = { focus = HOL_curtail_colonial_autonomy focus = HOL_curtail_colonial_autonomy_taog }
 		prerequisite = { focus = HOL_expand_the_artillerieinrichtingen }
@@ -2405,6 +2431,24 @@ focus_tree = {
 		}
 
 		relative_position_id = HOL_expand_the_artillerieinrichtingen
+
+		offset = {
+			x = 0
+			y = 1
+			trigger = {
+				has_dlc = "Thunder at Our Gates"
+			}
+		}
+
+		offset = {
+			x = 0
+			y = -1
+			trigger = {
+				INS = {
+					has_completed_focus = INS_underground_revolution
+				}
+			}
+		}
 
 		cost = 30
 
@@ -3536,6 +3580,13 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		x = -1
 		y = 1
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Death or Dishonor" }
+			}
+		}
 		relative_position_id = HOL_appoint_new_supreme_commander
 		cost = 10
 
@@ -3589,7 +3640,12 @@ focus_tree = {
 				uses = 1
 				category = artillery
 			}
-			custom_effect_tooltip = HOL_modernize_our_infantry_equipment_tt
+			if = {
+				limit = {
+					has_dlc = "Death or Dishonor"
+				}
+				custom_effect_tooltip = HOL_modernize_our_infantry_equipment_tt
+			}
 		}
 	}
 
@@ -3597,6 +3653,10 @@ focus_tree = {
 		id = HOL_production_under_license
 		prerequisite = { focus = HOL_appoint_new_supreme_commander }
 		mutually_exclusive = { focus = HOL_modernize_our_infantry_equipment }
+
+		allow_branch = {
+			has_dlc = "Death or Dishonor"
+		}
 
 		available = {
 		}
@@ -3616,10 +3676,20 @@ focus_tree = {
 
 	focus = {
 		id = HOL_light_tanks_for_the_colonies
+		allow_branch = {
+			always = yes
+		}
 		prerequisite = { focus = HOL_modernize_our_infantry_equipment focus = HOL_production_under_license }
 		icon = GFX_goal_generic_army_tanks
 		x = -1
 		y = 1
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Death or Dishonor" }
+			}
+		}
 		relative_position_id = HOL_modernize_our_infantry_equipment
 		cost = 10
 
@@ -3631,6 +3701,7 @@ focus_tree = {
 				limit = {
 					NOT = { has_completed_focus = HOL_modernize_our_infantry_equipment }
 					NOT = { has_completed_focus = HOL_production_under_license }
+					has_dlc = "Death or Dishonor"
 				}
 				custom_effect_tooltip = HOL_light_tanks_for_the_colonies_tt
 				effect_tooltip = {
@@ -3646,7 +3717,10 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_completed_focus = HOL_modernize_our_infantry_equipment
+					OR = {
+						has_completed_focus = HOL_modernize_our_infantry_equipment
+						NOT = { has_dlc = "Death or Dishonor" }
+					}
 				}
 				add_tech_bonus = {
 					name = HOL_light_tanks_for_the_colonies
@@ -3675,10 +3749,20 @@ focus_tree = {
 			}
 			has_war = no
 		}
+		allow_branch = {
+			always = yes
+		}
 		prerequisite = { focus = HOL_modernize_our_infantry_equipment focus = HOL_production_under_license }
 		icon = GFX_goal_generic_intelligence_exchange
 		x = 1
 		y = 1
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Death or Dishonor" }
+			}
+		}
 		relative_position_id = HOL_modernize_our_infantry_equipment
 		cost = 10
 
@@ -3708,10 +3792,20 @@ focus_tree = {
 
 	focus = {
 		id = HOL_anti_tank_guns_for_the_continent
+		allow_branch = {
+			always = yes
+		}
 		prerequisite = { focus = HOL_modernize_our_infantry_equipment focus = HOL_production_under_license }
 		icon = GFX_goal_generic_army_artillery2
 		x = 3
 		y = 1
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Death or Dishonor" }
+			}
+		}
 		relative_position_id = HOL_modernize_our_infantry_equipment
 		cost = 10
 
@@ -3723,6 +3817,7 @@ focus_tree = {
 				limit = {
 					NOT = { has_completed_focus = HOL_modernize_our_infantry_equipment }
 					NOT = { has_completed_focus = HOL_production_under_license }
+					has_dlc = "Death or Dishonor"
 				}
 				custom_effect_tooltip = HOL_light_tanks_for_the_colonies_tt
 				effect_tooltip = {
@@ -3738,7 +3833,10 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_completed_focus = HOL_modernize_our_infantry_equipment
+					OR = {
+						has_completed_focus = HOL_modernize_our_infantry_equipment
+						NOT = { has_dlc = "Death or Dishonor" }
+					}
 				}
 				add_tech_bonus = {
 					name = HOL_anti_tank_guns_for_the_continent
@@ -4228,6 +4326,12 @@ focus_tree = {
 		prerequisite = { focus = HOL_prepare_naval_expansion }
 		available = {
 			has_full_control_of_state = 7
+			7 = {
+				free_building_slots = {
+					building = fuel_silo
+					size > 1
+				}
+			}
 		}
 		icon = GFX_goal_generic_oil_refinery
 		x = 2
@@ -4240,7 +4344,6 @@ focus_tree = {
 		completion_reward = {
 			
 			7 = {
-				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = fuel_silo
 					level = 1
@@ -4521,6 +4624,10 @@ focus_tree = {
 		relative_position_id = HOL_form_new_government
 		cost = 10
 
+		ai_will_do = {
+			base = 5
+		}
+
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
@@ -4761,13 +4868,20 @@ focus_tree = {
 				check_variable = { var = eng_temp_trade_influence value = 15 compare = greater_than_or_equals }
 			}
 			modifier = {
-				factor = 10
-				date > 1940.3.1
+				factor = 25
+				date > 1939.8.1
 				OR = {
 					HOL_check_plan_historical = yes
 					HOL_check_plan_colonial_alternate_democratic = yes
 					HOL_check_plan_continental_alternate_democratic = yes
 					HOL_check_plan_lead_the_minor_democracies = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					HOL_check_plan_alternate_fascist = yes
+					HOL_check_plan_alternate_communist = yes
 				}
 			}
 		}
@@ -4988,126 +5102,256 @@ focus_tree = {
 			
 			if = {
 				limit = {
-					GER = {
-						NOT = { has_tech = improved_medium_tank }
-						NOT = { has_tech = basic_medium_tank }
-						NOT = { has_tech = basic_medium_tank_chassis }
+					has_dlc = "Death or Dishonor"
+				}
+				if = {
+					limit = {
+						GER = {
+							NOT = { has_tech = improved_medium_tank }
+							NOT = { has_tech = basic_medium_tank }
+							NOT = { has_tech = basic_medium_tank_chassis }
+						}
+					}
+					custom_effect_tooltip = HOL_beginnings_of_a_dutch_blitzkrieg_tt_1
+				}
+				GER = {
+					if = {
+						limit = {
+							has_tech = advanced_medium_tank
+						}
+						create_production_license = {
+							target = HOL
+							equipment = {
+								type = medium_tank_equipment_3
+							}
+							cost_factor = 0
+						}
+						HOL = {
+							add_equipment_to_stockpile = {
+							    type = medium_tank_equipment_3
+							    amount = 250
+							    producer = GER
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							has_tech = improved_medium_tank
+						}
+						create_production_license = {
+							target = HOL
+							equipment = {
+								type = medium_tank_equipment_2
+							}
+							cost_factor = 0
+						}
+						HOL = {
+							add_equipment_to_stockpile = {
+							    type = medium_tank_equipment_2
+							    amount = 250
+							    producer = GER
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							has_tech = basic_medium_tank
+						}
+						create_production_license = {
+							target = HOL
+							equipment = {
+								type = medium_tank_equipment_1
+							}
+							cost_factor = 0
+						}
+						HOL = {
+							add_equipment_to_stockpile = {
+							    type = medium_tank_equipment_1
+							    amount = 250
+							    producer = GER
+							}
+						}
+					}
+					if = {
+						limit = {
+							has_tech = advanced_medium_tank_chassis
+						}
+						create_production_license = {
+							target = HOL
+							equipment = {
+								type = medium_tank_chassis_3
+							}
+							cost_factor = 0
+						}
+						HOL = {
+							add_equipment_to_stockpile = {
+							    type = medium_tank_chassis_3
+							    amount = 250
+							    producer = GER
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							has_tech = improved_medium_tank_chassis
+						}
+						create_production_license = {
+							target = HOL
+							equipment = {
+								type = medium_tank_chassis_2
+							}
+							cost_factor = 0
+						}
+						HOL = {
+							add_equipment_to_stockpile = {
+							    type = medium_tank_chassis_2
+							    amount = 250
+							    producer = GER
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							has_tech = basic_medium_tank_chassis
+						}
+						create_production_license = {
+							target = HOL
+							equipment = {
+								type = medium_tank_chassis_1
+							}
+							cost_factor = 0
+						}
+						HOL = {
+							add_equipment_to_stockpile = {
+							    type = medium_tank_chassis_1
+							    amount = 250
+							    producer = GER
+							}
+						}
 					}
 				}
-				custom_effect_tooltip = HOL_beginnings_of_a_dutch_blitzkrieg_tt_1
 			}
-			GER = {
-				if = {
-					limit = {
-						has_tech = advanced_medium_tank
-					}
-					create_production_license = {
-						target = HOL
-						equipment = {
-							type = medium_tank_equipment_3
-						}
-						cost_factor = 0
-					}
-					HOL = {
-						add_equipment_to_stockpile = {
-							type = medium_tank_equipment_3
-							amount = 250
-							producer = GER
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						has_tech = improved_medium_tank
-					}
-					create_production_license = {
-						target = HOL
-						equipment = {
-							type = medium_tank_equipment_2
-						}
-						cost_factor = 0
-					}
-					HOL = {
-						add_equipment_to_stockpile = {
-							type = medium_tank_equipment_2
-							amount = 250
-							producer = GER
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						has_tech = basic_medium_tank
-					}
-					create_production_license = {
-						target = HOL
-						equipment = {
-							type = medium_tank_equipment_1
-						}
-						cost_factor = 0
-					}
-					HOL = {
-						add_equipment_to_stockpile = {
-							type = medium_tank_equipment_1
-							amount = 250
-							producer = GER
-						}
-					}
+			if = {
+				limit = {
+					NOT = { has_dlc = "Death or Dishonor" }
 				}
 				if = {
 					limit = {
-						has_tech = advanced_medium_tank_chassis
-					}
-					create_production_license = {
-						target = HOL
-						equipment = {
-							type = medium_tank_chassis_3
-						}
-						cost_factor = 0
-					}
-					HOL = {
-						add_equipment_to_stockpile = {
-							type = medium_tank_chassis_3
-							amount = 250
-							producer = GER
+						GER = {
+							NOT = { has_tech = improved_medium_tank }
+							NOT = { has_tech = basic_medium_tank }
+							NOT = { has_tech = basic_medium_tank_chassis }
 						}
 					}
+					custom_effect_tooltip = HOL_beginnings_of_a_dutch_blitzkrieg_tt_2
 				}
-				else_if = {
-					limit = {
-						has_tech = improved_medium_tank_chassis
-					}
-					create_production_license = {
-						target = HOL
-						equipment = {
-							type = medium_tank_chassis_2
+				GER = {
+					if = {
+						limit = {
+							has_tech = advanced_medium_tank
 						}
-						cost_factor = 0
-					}
-					HOL = {
-						add_equipment_to_stockpile = {
-							type = medium_tank_chassis_2
-							amount = 250
-							producer = GER
+						HOL = {
+							add_tech_bonus = {
+								name = HOL_beginnings_of_a_dutch_blitzkrieg
+								bonus = 1
+								uses = 1
+								technology = advanced_medium_tank
+							}
+							add_equipment_to_stockpile = {
+							    type = medium_tank_equipment_3
+							    amount = 250
+							    producer = GER
+							}
 						}
 					}
-				}
-				else_if = {
-					limit = {
-						has_tech = basic_medium_tank_chassis
-					}
-					create_production_license = {
-						target = HOL
-						equipment = {
-							type = medium_tank_chassis_1
+					else_if = {
+						limit = {
+							has_tech = improved_medium_tank
 						}
-						cost_factor = 0
+						HOL = {
+							add_tech_bonus = {
+								name = HOL_beginnings_of_a_dutch_blitzkrieg
+								bonus = 1
+								uses = 1
+								technology = improved_medium_tank
+							}
+							add_equipment_to_stockpile = {
+							    type = medium_tank_equipment_2
+							    amount = 250
+							    producer = GER
+							}
+						}
 					}
-					HOL = {
-						add_equipment_to_stockpile = {
-							type = medium_tank_chassis_1
-							amount = 250
-							producer = GER
+					else_if = {
+						limit = {
+							has_tech = basic_medium_tank
+						}
+						HOL = {
+							add_tech_bonus = {
+								name = HOL_beginnings_of_a_dutch_blitzkrieg
+								bonus = 1
+								uses = 1
+								technology = basic_medium_tank
+							}
+							add_equipment_to_stockpile = {
+							    type = medium_tank_equipment_1
+							    amount = 250
+							    producer = GER
+							}
+						}
+					}
+					if = {
+						limit = {
+							has_tech = advanced_medium_tank_chassis
+						}
+						HOL = {
+							add_tech_bonus = {
+								name = HOL_beginnings_of_a_dutch_blitzkrieg
+								bonus = 1
+								uses = 1
+								technology = advanced_medium_tank_chassis
+							}
+							add_equipment_to_stockpile = {
+							    type = medium_tank_chassis_3
+							    amount = 250
+							    producer = GER
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							has_tech = improved_medium_tank_chassis
+						}
+						HOL = {
+							add_tech_bonus = {
+								name = HOL_beginnings_of_a_dutch_blitzkrieg
+								bonus = 1
+								uses = 1
+								technology = improved_medium_tank_chassis
+							}
+							add_equipment_to_stockpile = {
+							    type = medium_tank_chassis_2
+							    amount = 250
+							    producer = GER
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							has_tech = basic_medium_tank_chassis
+						}
+						HOL = {
+							add_tech_bonus = {
+								name = HOL_beginnings_of_a_dutch_blitzkrieg
+								bonus = 1
+								uses = 1
+								technology = basic_medium_tank_chassis
+							}
+							add_equipment_to_stockpile = {
+							    type = medium_tank_chassis_1
+							    amount = 250
+							    producer = GER
+							}
 						}
 					}
 				}
@@ -6561,6 +6805,8 @@ focus_tree = {
 			}
 		}
 
+		available_if_capitulated = no
+
 		completion_reward = {
 			
 			if = {
@@ -6914,12 +7160,15 @@ focus_tree = {
 			has_full_control_of_state = 980
 			has_full_control_of_state = 8
 		}
+		cancel_if_invalid = yes
 		prerequisite = { focus = HOL_revive_the_buffer_state_proposal }
 		icon = GFX_goal_generic_construct_civilian
 		x = 0
 		y = 1
 		relative_position_id = HOL_revive_the_buffer_state_proposal
 		cost = 10
+
+		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			
@@ -7171,6 +7420,11 @@ focus_tree = {
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL}
+
+		ai_will_do = {
+			base = 10 #if its available, do it
+		}
+
 		completion_reward = {
 			
 			add_stability = 0.05
@@ -7241,6 +7495,15 @@ focus_tree = {
 		cost = 5
 
 		available_if_capitulated = yes
+
+		ai_will_do = {
+			base = 10 #if its available, do it
+
+			modifier = {
+				factor = 0
+				HOL_check_plan_lead_the_minor_democracies = yes #oh yeah except dont do this if youre supposed to not do this
+			}
+		}
 
 		completion_reward = {
 			
