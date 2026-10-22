@@ -38,13 +38,3 @@ YUG_regency = {
 	army_core_defence_factor = YUG_regency_army_core_attack_factor
 	army_core_defence_factor = YUG_regency_army_core_attack_factor
 }
-YUG_edog_modifier = {
-	icon = hol_caved_to_the_germans
-	enable = { always = yes }
-	consumer_goods_factor = YUG_edog_modifier_consumer_goods_factor
-	
-	targeted_modifier = {
-		tag = GER
-		cic_to_target_factor = YUG_edog_modifier_cic_to_ger_factor 
-	}
-}

@@ -1,7 +1,0 @@
-YUG_rising_economic_dependance_on_germany_category = {
-	icon = eng_imperial_conference
-
-	allowed = {
-		original_tag = YUG
-	}
-}
