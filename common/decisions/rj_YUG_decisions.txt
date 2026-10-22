@@ -7,11 +7,14 @@ YUG_rising_economic_dependance_on_germany_category = {
             NOT = { has_completed_focus = YUG_cut_off_german_influence }
         }
 
-        available = {
-            always = no
-        }
+        is_mission = yes 
 
-        activate_mission = germanys_extends_influence
+        selectable_mission = yes
+
+        timeout_effect = {
+            add_to_variable = { YUG_edog_consumer_goods_factor = -0.005 }
+            add_to_variable = { YUG_edog_cic_to_ger_factor = 0.005 }
+        }
 
         abort_trigger = {
             has_completed_focus = YUG_cut_off_german_influence
@@ -25,12 +28,5 @@ YUG_rising_economic_dependance_on_germany_category = {
 
         fire_only_once = no
         days_remove = 90
-
-        days_re_enable = 1
-
-        remove_effect = {
-            add_to_variable = { YUG_edog_modifier_consumer_goods_factor = -0.005 }
-            add_to_variable = { YUG_edog_modifier_cic_to_ger_factor  = 0.005 }
-        }
     }
 }
