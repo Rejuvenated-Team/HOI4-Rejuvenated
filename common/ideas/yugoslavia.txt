@@ -1,0 +1,248 @@
+ideas = {
+	country = {
+		### STARTING NATIONAL SPIRITS
+		YUG_croatian_nationalism = { 
+			allowed = {
+				tag = CRO
+			}
+
+			picture = generic_fascist_workers
+
+			modifier = {
+				conscription_factor = -0.1
+				war_support_factor = -0.15
+				surrender_limit = -0.1
+				fascism_drift = 0.01
+			}
+		}
+		# IF YOU NEGOTIATE WITH CROATIANS
+		YUG_croatian_nationalism_handled = { 
+			allowed = {
+				tag = YUG
+			}
+
+			picture = generic_fascist_workers
+
+			modifier = {
+				conscription_factor = 0.05
+				war_support_factor = 0.05
+				fascism_drift = 0.05
+			}
+		}
+		YUG_sls = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = ARG_growing_nationalism_modifier
+
+			modifier = {
+				conscription_factor = -0.05
+				production_speed_buildings_factor = -0.1
+			}
+		}
+		YUG_economic_reliance_on_germany = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = F
+
+			modifier = {
+				consumer_goods_factor = -0.2
+				political_power_cost = 0.05
+				fascism_drift = 0.01
+			}
+			
+			targeted_modifier = {
+				tag = GER
+				extra_trade_to_target_factor = 0.2
+				defense_bonus_against = -0.1
+			}
+		}
+		YUG_religious_tensions = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = PER_islamic_traditions_ns
+
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+		}
+		YUG_religious_tensions_united = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = PER_islamic_traditions_ns
+
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.1
+			}
+		}
+		YUG_severe_illiteracy = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = RAJ_partition_chaos_less_bad
+
+			mmodifier = {
+				research_speed_factor = -0.25
+				stability_factor = -0.1
+				communism_drift = 0.01
+			}
+		}
+		YUG_severe_illiteracy_2 = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = RAJ_partition_chaos_less_bad
+
+			mmodifier = {
+				research_speed_factor = -0.2
+				stability_factor = -0.1
+				communism_drift = 0.01
+			}
+		}
+		YUG_severe_illiteracy_3 = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = RAJ_partition_chaos_less_bad
+
+			mmodifier = {
+				research_speed_factor = -0.15
+				stability_factor = -0.1
+				communism_drift = 0.01
+			}
+		}
+		YUG_severe_illiteracy_4 = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = RAJ_partition_chaos_less_bad
+
+			mmodifier = {
+				research_speed_factor = -0.1
+				stability_factor = -0.1
+				communism_drift = 0.01
+			}
+		}
+		YUG_italian_funded_terrorists = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = ETH_italian_settlers
+
+			modifier = {
+				political_power_cost = 0.1
+				resistance_target = 0.1
+				no_compliance_gain = 1
+			}
+		}
+		YUG_imro = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = bul_imro
+
+			modifier = {
+				political_power_cost = 0.2
+				resistance_target = 0.1
+				drift_defence = -0.25
+			}
+		}
+		YUG_imro_2 = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = bul_imro
+
+			modifier = {
+				political_power_cost = 0.1
+				drift_defence = -0.15
+				fascism_drift = 0.03
+			}
+		}
+		YUG_hungarian_seperatism = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = HUN_hungarian_gendarmerie
+
+			modifier = {
+				conscription_factor = -0.05
+			}
+		}
+		YUG_hungarian_seperatism_appeased = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = HUN_hungarian_gendarmerie
+
+			modifier = {
+				conscription_factor = -0.1
+				political_power_factor = 0.1
+			}
+		}
+		YUG_anti_german_generals = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = FIN_german_threat
+
+			modifier = {
+				experience_gain_army = 0.05
+				fascism_drift = -0.01
+				democratic_drift = 0.01
+			}
+
+			targeted_modifier = {
+				tag = GER
+                attack_bonus_against = 0.0250
+                defense_bonus_against = 0.0250
+			}
+		}
+		YUG_axis_investments = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = GER_german_trade
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.15
+				fascism_drift = 0.01
+			}
+		}
+		YUG_german_military_advisors = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = soviet_german_friendship
+
+			modifier = {
+				experience_gain_army = 0.1
+				war_support_factor = 0.1
+				army_org_factor = 0.750
+			}
+		}
+	}
+}

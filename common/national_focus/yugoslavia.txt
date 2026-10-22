@@ -1,0 +1,82 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = YUG
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 2000 }
+
+	focus = {
+		id = YUG_strengthen_the_regency
+		mutually_exclusive = { focus = YUG_move_against_the_regency}
+		available = {
+			has_country_leader = {
+				character = YUG_prince_paul
+				ruling_only = yes
+			}
+		}
+
+		bypass = {
+			YUG_prince_paul = {
+				is_character_active = no
+			}
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 12
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = YUG_move_against_the_regency
+		mutually_exclusive = { focus = YUG_strengthen_the_regency }
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 32
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+}
