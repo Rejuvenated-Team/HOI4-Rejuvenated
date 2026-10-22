@@ -2,6 +2,8 @@
  #NATIONAL SPIRITS
  YUG_army: "Jugoslovenska vojska"
  YUG_modify_army_tt: "Modify §YJugoslovenska vojska§! by\n"
+ YUG_regency: "The Regency Council"
+ YUG_modify_regency_tt: "Modify §YThe Regency Council§! by\n"
  YUG_croatian_nationalism: "Croatian Nationalism"
  YUG_croatian_nationalism_desc: "Croatians have developed extreme rises of nationalism, since the nation of united Slavs, have actually been priotizing Serbians a lot. It has led to massive hatred, and want for independence. If they aren't to be dealt with, §Rthey could potentionally rise up if we were to get in a war with a fascist nation.§!"
  YUG_croatian_nationalism_handled: "Croatian Nationalists §GHandled§!"
@@ -16,12 +18,13 @@
  YUG_severe_illiteracy_3: "Severe Illiteracy"
  YUG_severe_illiteracy_4: "Severe Illiteracy"
  YUG_italian_funded_terrorists: "Italian Funded Terrorists"
- YUG_italian_funded_terrorists_timed: "§RTaking Care Of§! Italian Funded Terrorists"
+ YUG_italian_funded_terrorists_timed: "§RTaking Care Of Italian Funded Terrorists§!"
  YUG_imro: "IMRO"
  YUG_imro_2: "IMRO"
  YUG_hungarian_seperatism: "Hungarian Seperatists"
  YUG_hungarian_seperatism_appeased: "Hungarian Seperatists §GAppeased§!"
  YUG_anti_german_generals: "Anti-German Generals"
+ YUG_pm_milan_stojadinovic: "Milan Stojadinović"
 
  #Tooltips
  HUN_has_removed_treaty_of_trianon_tt: "Hungary has removed the Treaty of Trianon"

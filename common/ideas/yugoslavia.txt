@@ -41,6 +41,19 @@ ideas = {
 				production_speed_buildings_factor = -0.1
 			}
 		}
+		YUG_pm_milan_stojadinovic = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = YUG_milan_stojadinovic
+
+			modifier = {
+				war_support_factor = 0.05
+				consumer_goods_factor = -0.05
+				fascism_drift = 0.01
+			}
+		}
 		YUG_economic_reliance_on_germany = {
 			allowed = {
 				tag = YUG

@@ -89,15 +89,27 @@ set_variable = { YUG_army_mechanized_defence_factor = 0 }
 set_variable = { YUG_army_experience_loss_factor = 0 }
 set_variable = { YUG_army_planning_speed = -0.2 }
 
+set_variable = { YUG_regency_political_power_factor = 0.05 }
+set_variable = { YUG_regency_stability_factor = 0 }
+set_variable = { YUG_regency_war_support_factor = 0 }
+set_variable = { YUG_regency_drift_defence_factor = 0.15 }
+set_variable = { YUG_regency_party_popularity_stability_factor = 0 }
+set_variable = { YUG_regency_neutrality_drift = 0.03 }
+set_variable = { YUG_regency_conscription_factor }
+set_variable = { YUG_regency_weekly_manpower }
+set_variable = { YUG_regency_army_core_attack_factor }
+set_variable = { YUG_regency_army_core_attack_factor }
+
 add_dynamic_modifier = {
 	modifier = YUG_army
 }
 
 add_ideas = {
 	YUG_economic_reliance_on_germany
-	YUG_croatian_nationalism
+	YUG_pm_milan_stojadinovic
 	YUG_religious_tensions
 	YUG_severe_illiteracy
+	YUG_croatian_nationalism
 	YUG_slovene_autonomy_movements
 	YUG_italian_funded_terrorists
 	YUG_imro

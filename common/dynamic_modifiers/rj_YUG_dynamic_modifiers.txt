@@ -22,3 +22,19 @@ YUG_army = {
 	experience_loss_factor = YUG_army_experience_loss_factor
 	planning_speed = YUG_army_planning_speed
 }
+
+YUG_regency = {
+	enable = { always = yes }
+	icon = wip
+
+	political_power_factor = YUG_regency_political_power_factor
+	stability_factor = YUG_regency_stability_factor
+	war_support_factor = YUG_regency_war_support_factor
+	drift_defence_factor = YUG_regency_drift_defence_factor
+	party_popularity_stability_factor = YUG_regency_party_popularity_stability_factor
+	neutrality_drift = YUG_regency_neutrality_drift
+	conscription_factor = YUG_regency_conscription_factor
+	weekly_manpower = YUG_regency_weekly_manpower
+	army_core_defence_factor = YUG_regency_army_core_attack_factor
+	army_core_defence_factor = YUG_regency_army_core_attack_factor
+}

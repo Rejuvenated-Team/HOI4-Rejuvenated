@@ -52,6 +52,11 @@ focus_tree = {
 				ideology = democratic
 				popularity = 0.05
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_dynamic_modifier = {
+				modifier = YUG_regency
+			}
 		}
 	}
 	focus = {
@@ -431,6 +436,30 @@ focus_tree = {
 
 		icon = GFX_focus_PLACEHOLDER
 		x = 0
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_request_greek_membership
+		relative_position_id = YUG_continue_balkan_friendship
+		prerequisite = { focus = YUG_reaffirm_the_little_entente }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 3
 		y = 2
 		cost = 10
 		ai_will_do = {
