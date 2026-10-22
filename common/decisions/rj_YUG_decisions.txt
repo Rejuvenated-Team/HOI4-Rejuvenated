@@ -6,7 +6,7 @@ YUG_rising_economic_dependance_on_germany_category = {
         visible = {
             NOT = { has_completed_focus = YUG_cut_off_german_influence }
         }
-
+        priority = 500 
         is_mission = yes 
 
         selectable_mission = yes
