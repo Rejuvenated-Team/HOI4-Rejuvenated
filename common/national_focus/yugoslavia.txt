@@ -21,8 +21,8 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 2000 }
 
 	focus = {
-		id = YUG_strengthen_the_regency
-		mutually_exclusive = { focus = YUG_move_against_the_regency}
+		id = YUG_the_three_man_regency
+		mutually_exclusive = { focus = YUG_move_against_the_regency }
 		available = {
 			has_country_leader = {
 				character = YUG_prince_paul
@@ -31,9 +31,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			YUG_prince_paul = {
-				is_character_active = no
-			}
+
 		}
 
 		icon = GFX_focus_PLACEHOLDER
@@ -51,14 +49,231 @@ focus_tree = {
 				popularity = 0.1
 			}
 			add_popularity = {
-				ideology = fascism
+				ideology = democratic
 				popularity = 0.05
 			}
 		}
 	}
 	focus = {
+		id = YUG_continue_balkan_friendship
+		relative_position_id = YUG_the_three_man_regency
+		prerequisite = { focus = YUG_the_three_man_regency }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 15
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_arrest_italian_terrorists
+		relative_position_id = YUG_continue_balkan_friendship
+		prerequisite = { focus = YUG_continue_balkan_friendship }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -7
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_stability = 0.05
+			remove_ideas = {
+				YUG_italian_funded_terrorists
+			}
+			add_timed_idea = {
+				idea = YUG_italian_funded_terrorists_timed
+				days = 120
+			}
+		}
+	}
+	focus = {
+		id = YUG_italian_deals
+		relative_position_id = YUG_arrest_italian_terrorists
+		prerequisite = { focus = YUG_arrest_italian_terrorists }
+		mutually_exclusive = { focus = YUG_the_italian_border_problem }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_the_italian_border_problem
+		relative_position_id = YUG_arrest_italian_terrorists
+		prerequisite = { focus = YUG_arrest_italian_terrorists }
+		mutually_exclusive = { focus = YUG_italian_deals }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_generic_adriatic_sea_focus
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_forgive_hungary
+		relative_position_id = YUG_continue_balkan_friendship
+		prerequisite = { focus = YUG_continue_balkan_friendship }
+		mutually_exclusive = { focus = YUG_reaffirm_the_treaty_of_trianon }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -5
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_reaffirm_the_treaty_of_trianon
+		relative_position_id = YUG_continue_balkan_friendship
+		prerequisite = { focus = YUG_continue_balkan_friendship }
+		mutually_exclusive = { focus = YUG_forgive_hungary }
+		available = {
+			HUN = {
+				custom_trigger_tooltip = {
+					tooltip = HUN_has_removed_treaty_of_trianon_tt
+					NOT = {
+						OR = {
+							has_idea = HUN_treaty_of_triannon
+							has_idea = HUN_treaty_of_triannon_2
+							has_idea = HUN_treaty_of_triannon_3
+							has_idea = HUN_treaty_of_triannon_aat
+							has_idea = HUN_treaty_of_triannon_wuw
+							has_idea = HUN_treaty_of_triannon_aat_wuw
+						}
+					}
+				}
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -3
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_reaffirm_the_little_entente
+		relative_position_id = YUG_continue_balkan_friendship
+		prerequisite = { focus = YUG_continue_balkan_friendship }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { #THIS WILL MAKE CROATIA A PUPPET REMEMBER
+		id = YUG_the_sporazum_agreement
+		relative_position_id = YUG_the_three_man_regency
+		prerequisite = { focus = YUG_the_three_man_regency }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 6
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
 		id = YUG_move_against_the_regency
-		mutually_exclusive = { focus = YUG_strengthen_the_regency }
+		mutually_exclusive = { focus = YUG_the_three_man_regency }
 		available = {
 			
 		}
@@ -68,7 +283,7 @@ focus_tree = {
 		}
 
 		icon = GFX_focus_PLACEHOLDER
-		x = 32
+		x = 50
 		y = 0
 		cost = 5
 		ai_will_do = {

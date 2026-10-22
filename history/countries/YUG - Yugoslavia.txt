@@ -69,7 +69,6 @@ recruit_character = YUG_peter_ii
 recruit_character = SOV_vasily_flug
 recruit_character = SOV_boris_shteifon
 
-add_dynamic_modifier = YUG_army
 set_variable = { YUG_army_conscription_factor = 0.1 }
 set_variable = { YUG_army_experience_gain_army_factor = 0.15 }
 set_variable = { YUG_army_training_time_factor = 0 }
@@ -89,6 +88,10 @@ set_variable = { YUG_army_mechanized_attack_factor = 0 }
 set_variable = { YUG_army_mechanized_defence_factor = 0 }
 set_variable = { YUG_army_experience_loss_factor = 0 }
 set_variable = { YUG_army_planning_speed = -0.2 }
+
+add_dynamic_modifier = {
+	modifier = YUG_army
+}
 
 add_ideas = {
 	YUG_economic_reliance_on_germany

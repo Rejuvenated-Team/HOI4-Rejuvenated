@@ -1,4 +1,27 @@
 ﻿l_english:
  #NATIONAL SPIRITS
  YUG_army: "Jugoslovenska vojska"
- YUG_modify_army: "Modify §YJugoslovenska vojska§!"
+ YUG_modify_army_tt: "Modify §YJugoslovenska vojska§! by\n"
+ YUG_croatian_nationalism: "Croatian Nationalism"
+ YUG_croatian_nationalism_desc: "Croatians have developed extreme rises of nationalism, since the nation of united Slavs, have actually been priotizing Serbians a lot. It has led to massive hatred, and want for independence. If they aren't to be dealt with, §Rthey could potentionally rise up if we were to get in a war with a fascist nation.§!"
+ YUG_croatian_nationalism_handled: "Croatian Nationalists §GHandled§!"
+ YUG_sls: "Slovenska ljudska stranka"
+ YUG_sls_desc: "At the north of our country, lies the Slovene province. After hundreds of years of Austrian rule, have they finally got into our realm. Problem is, they hold opposition to our country. Whilst not extreme, they still hinder us from developing slightly."
+ YUG_economic_reliance_on_germany: "Economic Reliance on Germany"
+ YUG_economic_reliance_on_germany_desc: "We've been dependent on the Germans ever since the Great Depression, and their influence is gaining a toll on our politics."
+ YUG_religious_tensions: "Religious Tensions"
+ YUG_religious_tensions_united: "Religious Tensions §GHandled§!"
+ YUG_severe_illiteracy: "Severe Illiteracy"
+ YUG_severe_illiteracy_2: "Severe Illiteracy"
+ YUG_severe_illiteracy_3: "Severe Illiteracy"
+ YUG_severe_illiteracy_4: "Severe Illiteracy"
+ YUG_italian_funded_terrorists: "Italian Funded Terrorists"
+ YUG_italian_funded_terrorists_timed: "§YTaking Care Of§! Italian Funded Terrorists"
+ YUG_imro: "IMRO"
+ YUG_imro_2: "IMRO"
+ YUG_hungarian_seperatism: "Hungarian Seperatists"
+ YUG_hungarian_seperatism_appeased: "Hungarian Seperatists §GAppeased§!"
+ YUG_anti_german_generals: "Anti-German Generals"
+
+ #Tooltips
+ HUN_has_removed_treaty_of_trianon_tt: "Hungary has removed the Treaty of Trianon"

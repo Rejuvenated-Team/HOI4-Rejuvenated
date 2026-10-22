@@ -92,7 +92,7 @@ ideas = {
 
 			picture = RAJ_partition_chaos_less_bad
 
-			mmodifier = {
+			modifier = {
 				research_speed_factor = -0.25
 				stability_factor = -0.1
 				communism_drift = 0.01
@@ -105,7 +105,7 @@ ideas = {
 
 			picture = RAJ_partition_chaos_less_bad
 
-			mmodifier = {
+			modifier = {
 				research_speed_factor = -0.2
 				stability_factor = -0.1
 				communism_drift = 0.01
@@ -118,7 +118,7 @@ ideas = {
 
 			picture = RAJ_partition_chaos_less_bad
 
-			mmodifier = {
+			modifier = {
 				research_speed_factor = -0.15
 				stability_factor = -0.1
 				communism_drift = 0.01
@@ -131,7 +131,7 @@ ideas = {
 
 			picture = RAJ_partition_chaos_less_bad
 
-			mmodifier = {
+			modifier = {
 				research_speed_factor = -0.1
 				stability_factor = -0.1
 				communism_drift = 0.01
@@ -150,6 +150,20 @@ ideas = {
 				no_compliance_gain = 1
 			}
 		}
+		YUG_italian_funded_terrorists_timed = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = ETH_italian_settlers
+
+			modifier = {
+				political_power_cost = 0.05
+				resistance_target = 0.05
+				no_compliance_gain = 1
+				stability_weekly_factor = -0.0005
+			}
+		}
 		YUG_imro = {
 			allowed = {
 				tag = YUG
@@ -160,7 +174,7 @@ ideas = {
 			modifier = {
 				political_power_cost = 0.2
 				resistance_target = 0.1
-				drift_defence = -0.25
+				drift_defence_factor = -0.25
 			}
 		}
 		YUG_imro_2 = {
@@ -172,7 +186,7 @@ ideas = {
 
 			modifier = {
 				political_power_cost = 0.1
-				drift_defence = -0.15
+				drift_defence_factor = -0.15
 				fascism_drift = 0.03
 			}
 		}
@@ -216,32 +230,6 @@ ideas = {
 				tag = GER
                 attack_bonus_against = 0.0250
                 defense_bonus_against = 0.0250
-			}
-		}
-		YUG_axis_investments = {
-			allowed = {
-				tag = YUG
-			}
-
-			picture = GER_german_trade
-
-			modifier = {
-				production_speed_buildings_factor = 0.1
-				consumer_goods_factor = -0.15
-				fascism_drift = 0.01
-			}
-		}
-		YUG_german_military_advisors = {
-			allowed = {
-				tag = YUG
-			}
-
-			picture = soviet_german_friendship
-
-			modifier = {
-				experience_gain_army = 0.1
-				war_support_factor = 0.1
-				army_org_factor = 0.750
 			}
 		}
 	}
