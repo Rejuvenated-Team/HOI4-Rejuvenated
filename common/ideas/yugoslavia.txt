@@ -29,7 +29,7 @@ ideas = {
 				fascism_drift = 0.05
 			}
 		}
-		YUG_sls = {
+		YUG_slovene_autonomy_movements = {
 			allowed = {
 				tag = YUG
 			}

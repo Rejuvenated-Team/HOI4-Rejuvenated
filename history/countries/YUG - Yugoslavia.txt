@@ -69,7 +69,7 @@ recruit_character = YUG_peter_ii
 recruit_character = SOV_vasily_flug
 recruit_character = SOV_boris_shteifon
 
-set_variable = { YUG_army_conscription_factor = 0.1 }
+set_variable = { YUG_army_conscription_factor = 0.05 }
 set_variable = { YUG_army_experience_gain_army_factor = 0.15 }
 set_variable = { YUG_army_training_time_factor = 0 }
 set_variable = { YUG_army_land_doctrine_cost_factor = 0 }
@@ -98,6 +98,7 @@ add_ideas = {
 	YUG_croatian_nationalism
 	YUG_religious_tensions
 	YUG_severe_illiteracy
+	YUG_slovene_autonomy_movements
 	YUG_italian_funded_terrorists
 	YUG_imro
 	YUG_hungarian_seperatism
