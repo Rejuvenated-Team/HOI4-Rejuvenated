@@ -1,4 +1,7 @@
 YUG_army = {
+	enable = { always = yes }
+	icon = wip
+
 	conscription_factor = YUG_army_conscription_factor
 	experience_gain_army_factor = YUG_army_experience_gain_army_factor
 	training_time_factor = YUG_army_training_time_factor
