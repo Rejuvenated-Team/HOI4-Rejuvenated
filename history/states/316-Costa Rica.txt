@@ -4,6 +4,10 @@ state={
 	manpower = 576856
 	
 	state_category = town
+
+	resources = {
+		chromium = 7
+	}
 	
 
 	history={
@@ -28,5 +32,5 @@ state={
 		12878 13087 13092 
 	}
 
-	local_supplies=0.0 
+	local_supplies=4.0 
 }

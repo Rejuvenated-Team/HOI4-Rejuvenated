@@ -1,4 +1,57 @@
-#### GERMANY LUXEMBOURG DEMOCRATIC RUSSIA ####
+debug_decisions = {
+
+	rj_SOV_unhide_stalin_friendship_path = {
+		icon = generic_political_address
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		visible = {
+			is_debug = yes
+			is_ai = no
+		}
+
+		complete_effect = {
+			set_country_flag = SOV_the_all_russian_united_front_cflg
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+political_actions = {
+
+	rj_SOV_generate_interparty_discourse = {
+		icon = generic_political_discourse
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			communism > 0.3
+		}
+
+		visible = {
+			has_completed_focus = SOV_the_centre
+		}
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			add_stability = 0.03
+			hidden_effect = {
+				country_event = {
+					id = rj_soviet.12
+					days = 30
+				}
+			}
+		}
+	}
+}
+
 SOV_security_pact_category = {
 	SOV_invite_country_to_security_pact = {
 		icon = generic_political_address

@@ -1607,15 +1607,15 @@ focus_tree = {
 					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = industrial_complex
-						size > 0
+						size > 1
 						include_locked = yes
 					}
 				}
 				random_select_amount = 2
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2302,7 +2302,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = GER_seize_foreign_industries
-		cost = 10
+		cost = 7.2
 		available = {
 			all_core_state = {
 				is_fully_controlled_by = ROOT
@@ -2600,7 +2600,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = GER_concentrated_armament_program
-		cost = 10
+		cost = 7.2
 		available = {
 			has_war_with_major = yes
 			has_civil_war = no
@@ -2666,7 +2666,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_zentrale_planung
-		cost = 10
+		cost = 7.2
 		available = {
 		}
 
@@ -2876,13 +2876,40 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = RJ_GER_peenemunde_ost
+		icon = GFX_focus_research2
+		prerequisite = { focus = GER_develop_modern_maneuver_warfare }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_develop_modern_maneuver_warfare
+		cost = 7.2
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			62 = {
+				add_building_construction = {
+					type = land_facility
+					level = 1
+					instant_build = yes
+					province = 349
+				}
+			}
+			add_ideas = RJ_GER_idea_peenemunde_ost
+		}
+	}
 	
 	focus = {
 		id = GER_fortify_the_vaterland
 		icon = GFX_goal_fortify_the_westwall
 		prerequisite = { focus = GER_develop_modern_maneuver_warfare }
 
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = GER_develop_modern_maneuver_warfare
 		cost = 5
@@ -3698,7 +3725,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_instill_auftragstaktik
-		cost = 10
+		cost = 7.2
 		available = {
 		}
 
@@ -5420,13 +5447,40 @@ focus_tree = {
 			
 		}
 	}
+
+	focus = {
+		id = RJ_GER_peenemunde_west
+		icon = GFX_focus_research2
+		prerequisite = { focus = GER_expanding_the_luftwaffe }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_expanding_the_luftwaffe
+		cost = 7.2
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			62 = {
+				add_building_construction = {
+					type = air_facility
+					level = 1
+					instant_build = yes
+					province = 3340
+				}
+			}
+			add_ideas = RJ_GER_idea_peenemunde_west
+		}
+	}
 	
 	focus = {
 		id = GER_fallschirmjager
 		icon = GFX_focus_generic_paratrooper
 		prerequisite = { focus = GER_expanding_the_luftwaffe }
 
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = GER_expanding_the_luftwaffe
 		cost = 5
@@ -5615,7 +5669,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GER_form_the_jagdwaffe
-		cost = 10
+		cost = 7.2
 		available = {
 			GER_hermann_goring = {
 				is_air_chief = no
@@ -5629,7 +5683,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_command_power = 25
-			air_experience = 25
+			air_experience = 75
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -5644,7 +5698,7 @@ focus_tree = {
 
 			GER_modify_airforce_modifier = yes
 			add_to_variable = { 
-				GER_military_air_manpower_requirement_factor = -0.1
+				GER_military_air_manpower_requirement_factor = -0.25
 				tooltip = air_manpower_requirement_factor_tt
 			}
 
@@ -6105,7 +6159,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_torpedobomber
-		cost = 10
+		cost = 7.2
 		available = {
 		}
 
@@ -6255,7 +6309,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_aerodynamic_research_institute
-		cost = 10
+		cost = 7.2
 
 		continue_if_invalid = yes
 		cancel_if_invalid = no
@@ -6422,6 +6476,24 @@ focus_tree = {
 				}
 			}
 
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = GER_plan_z_lock_other_focus_tt
 		}
@@ -6475,6 +6547,23 @@ focus_tree = {
 						level = 2
 						instant_build = yes
 					}
+				}
+			}
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
 				}
 			}
 
@@ -7002,6 +7091,40 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -7080,7 +7203,7 @@ focus_tree = {
 
 			GER_modify_navy_modifier = yes
 			add_to_variable = { 
-				GER_military_naval_heavy_gun_hit_chance_factor = 0.05
+				GER_military_naval_heavy_gun_hit_chance_factor = 0.1
 				tooltip = naval_heavy_gun_hit_chance_factor_tt
 			}
 
@@ -7142,7 +7265,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_construct_aircraft_carriers
-		cost = 10
+		cost = 7.2
 		available = {
 		}
 
@@ -7411,7 +7534,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_marinestosstrupp
-		cost = 10
+		cost = 7.2
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GER_controls_an_atantic_island_tt
@@ -7490,7 +7613,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = naval_base
-					level = 1
+					level = 3
 					instant_build = yes
 					province = {
 						all_provinces = yes
@@ -7527,7 +7650,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = coastal_bunker
-					level = 1
+					level = 3
 					instant_build = yes
 					province = {
 						all_provinces = yes
@@ -8000,7 +8123,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_panzerschiff_raiders
-		cost = 10
+		cost = 7.2
 		available = {
 		}
 

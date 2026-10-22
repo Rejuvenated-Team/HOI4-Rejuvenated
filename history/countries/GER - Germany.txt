@@ -99,6 +99,8 @@ set_technology = {
 	synth_oil_experiments = 1
 	fuel_silos = 1
 	fuel_refining = 1
+	steelworks_tech = 1
+	experimental_rockets = 1
 }
 if = {
 	limit = {
@@ -422,7 +424,7 @@ set_variable = { GER_industrialist_prevailed = 0 } #For allowing only one Indust
 
 
 # Starting Stats of various kinds
-set_research_slots = 4
+set_research_slots = 5
 set_convoys = 200
 IF = {
 	limit = {

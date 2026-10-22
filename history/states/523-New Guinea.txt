@@ -5,6 +5,10 @@ state = {
 	manpower = 185000 # was 1077000
 	state_category = rural
 
+	resources = {
+		chromium = 12
+	}
+
 	history = {
 
 		add_core_of = PNG
@@ -44,5 +48,5 @@ state = {
 
 	
 	buildings_max_level_factor = 1
-	local_supplies = 0.0 
+	local_supplies = 2.0 
 }
