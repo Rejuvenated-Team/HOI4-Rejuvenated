@@ -104,6 +104,10 @@ set_variable = { YUG_edog_modifier_consumer_goods_factor = -0.1 }
 set_variable = { YUG_edog_modifier_cic_to_ger_factor = 0.1 }
 
 add_dynamic_modifier = {
+	modifier = YUG_edog_modifier
+}
+
+add_dynamic_modifier = {
 	modifier = YUG_army
 }
 

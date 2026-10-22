@@ -47,6 +47,4 @@ YUG_edog_modifier = {
 		tag = GER
 		cic_to_target_factor = YUG_edog_modifier_cic_to_ger_factor 
 	}
-
-	custom_modifier_tooltip = YUG_edog_modifier_desc
 }

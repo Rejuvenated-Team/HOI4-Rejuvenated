@@ -11,6 +11,8 @@ YUG_rising_economic_dependance_on_germany_category = {
             always = no
         }
 
+        activate_mission = germanys_extends_influence
+
         abort_trigger = {
             has_completed_focus = YUG_cut_off_german_influence
         }
