@@ -242,7 +242,7 @@ focus_tree = {
 		}
 
 		icon = GFX_focus_PLACEHOLDER
-		x = 25
+		x = 30
 		y = 1
 		cost = 5
 		ai_will_do = {
@@ -267,7 +267,7 @@ focus_tree = {
 		}
 
 		icon = GFX_focus_PLACEHOLDER
-		x = 27
+		x = 32
 		y = 1
 		cost = 5
 		ai_will_do = {
@@ -461,7 +461,57 @@ focus_tree = {
 		icon = GFX_focus_PLACEHOLDER
 		x = 3
 		y = 2
-		cost = 10
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_beginning_of_albanian_friendship
+		relative_position_id = YUG_request_greek_membership
+		prerequisite = { focus = YUG_request_greek_membership }
+		mutually_exclusive = { focus = YUG_demand_albanian_subjugation }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_demand_albanian_subjugation
+		relative_position_id = YUG_request_greek_membership
+		prerequisite = { focus = YUG_request_greek_membership }
+		mutually_exclusive = { focus = YUG_beginning_of_albanian_friendship }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 1
+		y = 1
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -518,7 +568,7 @@ focus_tree = {
 
 		}
 	}
-	focus = {
+	focus = { #ANTI REGENCY
 		id = YUG_move_against_the_regency
 		mutually_exclusive = { focus = YUG_the_three_man_regency }
 		available = {
@@ -531,6 +581,29 @@ focus_tree = {
 
 		icon = GFX_focus_PLACEHOLDER
 		x = 50
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	focus = { INDEPENDENT ECONOMY
+		id = YUG_cut_off_german_influence
+		mutually_exclusive = { focus = YUG_the_three_man_regency }
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 70
 		y = 0
 		cost = 5
 		ai_will_do = {

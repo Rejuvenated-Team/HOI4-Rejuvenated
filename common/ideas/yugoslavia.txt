@@ -54,25 +54,6 @@ ideas = {
 				fascism_drift = 0.01
 			}
 		}
-		YUG_economic_reliance_on_germany = {
-			allowed = {
-				tag = YUG
-			}
-
-			picture = F
-
-			modifier = {
-				consumer_goods_factor = -0.2
-				political_power_cost = 0.05
-				fascism_drift = 0.01
-			}
-			
-			targeted_modifier = {
-				tag = GER
-				extra_trade_to_target_factor = 0.2
-				defense_bonus_against = -0.1
-			}
-		}
 		YUG_religious_tensions = {
 			allowed = {
 				tag = YUG

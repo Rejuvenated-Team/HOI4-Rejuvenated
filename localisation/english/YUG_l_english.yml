@@ -4,6 +4,8 @@
  YUG_modify_army_tt: "Modify §YJugoslovenska vojska§! by\n"
  YUG_regency: "The Regency Council"
  YUG_modify_regency_tt: "Modify §YThe Regency Council§! by\n"
+ YUG_edog_modifier: "Economic Dependance on Germany"
+ YUG_modify_edog_modifier_tt: "Modify §YEconomic Dependance on Germany§! by\n"
  YUG_croatian_nationalism: "Croatian Nationalism"
  YUG_croatian_nationalism_desc: "Croatians have developed extreme rises of nationalism, since the nation of united Slavs, have actually been priotizing Serbians a lot. It has led to massive hatred, and want for independence. If they aren't to be dealt with, §Rthey could potentionally rise up if we were to get in a war with a fascist nation.§!"
  YUG_croatian_nationalism_handled: "Croatian Nationalists §GHandled§!"
@@ -28,3 +30,7 @@
 
  #Tooltips
  HUN_has_removed_treaty_of_trianon_tt: "Hungary has removed the Treaty of Trianon"
+
+ #decisions
+ YUG_rising_economic_dependance_on_germany_category: "Rising Economic Dependance on Germany"
+ germanys_extends_influence: "Germany Extends Influence"

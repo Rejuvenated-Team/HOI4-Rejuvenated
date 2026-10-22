@@ -1,0 +1,34 @@
+YUG_rising_economic_dependance_on_germany_category = {
+    
+    germanys_extends_influence = {
+        icon = GFX_decision_eng_trade_unions_support
+
+        visible = {
+            NOT = { has_completed_focus = YUG_cut_off_german_influence }
+        }
+
+        available = {
+            always = no
+        }
+
+        abort_trigger = {
+            has_completed_focus = YUG_cut_off_german_influence
+        }
+
+        abort_effect = {
+            remove_dynamic_modifier = {
+                modifier = YUG_edog_modifier
+            }
+        }
+
+        fire_only_once = no
+        days_remove = 90
+
+        days_re_enable = 1
+
+        remove_effect = {
+            add_to_variable = { YUG_edog_modifier_consumer_goods_factor = -0.005 }
+            add_to_variable = { YUG_edog_modifier_cic_to_ger_factor  = 0.005 }
+        }
+    }
+}

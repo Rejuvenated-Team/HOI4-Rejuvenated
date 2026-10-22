@@ -25,7 +25,7 @@ YUG_army = {
 
 YUG_regency = {
 	enable = { always = yes }
-	icon = wip
+	icon = PER_unification_initiative_idea
 
 	political_power_factor = YUG_regency_political_power_factor
 	stability_factor = YUG_regency_stability_factor
@@ -37,4 +37,16 @@ YUG_regency = {
 	weekly_manpower = YUG_regency_weekly_manpower
 	army_core_defence_factor = YUG_regency_army_core_attack_factor
 	army_core_defence_factor = YUG_regency_army_core_attack_factor
+}
+YUG_edog_modifier = {
+	icon = hol_caved_to_the_germans
+	enable = { always = yes }
+	consumer_goods_factor = YUG_edog_modifier_consumer_goods_factor
+	
+	targeted_modifier = {
+		tag = GER
+		cic_to_target_factor = YUG_edog_modifier_cic_to_ger_factor 
+	}
+
+	custom_modifier_tooltip = YUG_edog_modifier_desc
 }
