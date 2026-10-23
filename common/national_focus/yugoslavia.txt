@@ -1,12 +1,6 @@
-### search_filters = {FOCUS_FILTER_POLITICAL}
-### search_filters = {FOCUS_FILTER_RESEARCH}
-### search_filters = {FOCUS_FILTER_INDUSTRY}
-### search_filters = {FOCUS_FILTER_STABILITY}
-### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
-### search_filters = {FOCUS_FILTER_MANPOWER}
-### search_filters = {FOCUS_FILTER_ANNEXATION}
-
 focus_tree = {
+	id = yugoslavian_focus
+	
 	country = {
 		factor = 0
 		
@@ -667,7 +661,7 @@ focus_tree = {
 			
 		}
 	}
-	focus = { INDEPENDENT ECONOMY
+	focus = { #INDEPENDENT ECONOMY
 		id = YUG_cut_off_german_influence
 		available = {
 			
