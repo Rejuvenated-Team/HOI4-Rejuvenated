@@ -63,6 +63,7 @@ focus_tree = {
 		id = YUG_continue_balkan_friendship
 		relative_position_id = YUG_the_three_man_regency
 		prerequisite = { focus = YUG_the_three_man_regency }
+		mutually_exclusive = { focus = YUG_distance_from_the_little_entente }
 		available = {
 
 		}
@@ -545,7 +546,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = YUG_goal_of_balkan_dominance
+		id = YUG_distance_from_the_little_entente
 		relative_position_id = YUG_the_three_man_regency
 		prerequisite = { focus = YUG_the_three_man_regency }
 		mutually_exclusive = { focus = YUG_continue_balkan_friendship }
@@ -559,6 +560,56 @@ focus_tree = {
 
 		icon = GFX_focus_PLACEHOLDER
 		x = 26
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_axis_trade_deals
+		relative_position_id = YUG_distance_from_the_little_entente
+		prerequisite = { focus = YUG_distance_from_the_little_entente }
+		mutually_exclusive = { focus = YUG_to_pursue_balkan_dominance }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -4
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_to_pursue_balkan_dominance
+		relative_position_id = YUG_distance_from_the_little_entente
+		prerequisite = { focus = YUG_distance_from_the_little_entente }
+		mutually_exclusive = { focus = YUG_axis_trade_deals }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 6
 		y = 1
 		cost = 5
 		ai_will_do = {
