@@ -578,7 +578,55 @@ focus_tree = {
 		}
 
 		icon = GFX_focus_PLACEHOLDER
-		x = -4
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_the_ciano_stojadinovic_pact
+		relative_position_id = YUG_axis_trade_deals
+		prerequisite = { focus = YUG_axis_trade_deals }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_
+		relative_position_id = YUG_axis_trade_deals
+		prerequisite = { focus = YUG_axis_trade_deals }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -2
 		y = 1
 		cost = 5
 		ai_will_do = {
@@ -603,7 +651,7 @@ focus_tree = {
 		}
 
 		icon = GFX_focus_PLACEHOLDER
-		x = 6
+		x = 7
 		y = 1
 		cost = 5
 		ai_will_do = {
