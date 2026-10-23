@@ -81,6 +81,7 @@ ideas = {
 			picture = ARG_political_corruption_modifier
 
 			modifier = {
+				political_power_factor = 0.25
 				stability_factor = -0.15
 				consumer_goods_factor = 0.2
 			}
