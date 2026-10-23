@@ -74,12 +74,12 @@ set_variable = { YUG_army_experience_gain_army_factor = 0.15 }
 set_variable = { YUG_army_training_time_factor = 0 }
 set_variable = { YUG_army_land_doctrine_cost_factor = 0 }
 set_variable = { YUG_army_army_attack_factor = -0.1 }
-set_variable = { YUG_army_army_defence_factor = 0.05 }
+set_variable = { YUG_army_army_defence_factor = -0.05 }
 set_variable = { YUG_army_army_speed_factor = -0.1 }
-set_variable = { YUG_army_army_morale_factor = 0 }
+set_variable = { YUG_army_army_morale_factor = -0.05 }
 set_variable = { YUG_army_army_org_factor = 0 }
-set_variable = { YUG_army_army_artillery_attack_factor = 0 }
-set_variable = { YUG_army_army_artillery_defence_factor = 0 }
+set_variable = { YUG_army_army_artillery_attack_factor = -0.1 }
+set_variable = { YUG_army_army_artillery_defence_factor = -0.1 }
 set_variable = { YUG_army_army_armor_attack_factor = 0 }
 set_variable = { YUG_army_army_armor_defence_factor = 0 }
 set_variable = { YUG_army_motorized_attack_factor = 0 }

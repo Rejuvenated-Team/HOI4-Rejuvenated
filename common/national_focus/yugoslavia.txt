@@ -656,7 +656,7 @@ focus_tree = {
 		}
 
 		icon = GFX_focus_PLACEHOLDER
-		x = 60
+		x = 70
 		y = 0
 		cost = 5
 		ai_will_do = {
@@ -678,7 +678,7 @@ focus_tree = {
 		}
 
 		icon = GFX_focus_PLACEHOLDER
-		x = 80
+		x = 100
 		y = 0
 		cost = 5
 		ai_will_do = {
