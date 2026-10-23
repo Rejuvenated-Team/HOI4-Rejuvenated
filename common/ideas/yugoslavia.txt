@@ -78,7 +78,7 @@ ideas = {
 				tag = YUG
 			}
 
-			picture = F
+			picture = ARG_political_corruption_modifier
 
 			modifier = {
 				stability_factor = -0.15
