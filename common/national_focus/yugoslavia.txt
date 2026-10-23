@@ -614,9 +614,129 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = YUG_
+		id = YUG_attract_axis_capital
+		relative_position_id = YUG_the_ciano_stojadinovic_pact
+		prerequisite = { focus = YUG_the_ciano_stojadinovic_pact }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_german_military_advisors
+		relative_position_id = YUG_the_ciano_stojadinovic_pact
+		prerequisite = { focus = YUG_the_ciano_stojadinovic_pact }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_sign_the_tripartite_pact
+		relative_position_id = YUG_the_ciano_stojadinovic_pact
+		prerequisite = { focus = YUG_german_military_advisors focus = YUG_attract_axis_capital }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_curb_italian_claims_in_exchange_for_support
 		relative_position_id = YUG_axis_trade_deals
 		prerequisite = { focus = YUG_axis_trade_deals }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 3
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_italian_naval_experts
+		relative_position_id = YUG_curb_italian_claims_in_exchange_for_support
+		prerequisite = { focus = YUG_curb_italian_claims_in_exchange_for_support }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_develop_italian_friendship
+		relative_position_id = YUG_curb_italian_claims_in_exchange_for_support
+		prerequisite = { focus = YUG_curb_italian_claims_in_exchange_for_support }
 		available = {
 
 		}
@@ -629,6 +749,54 @@ focus_tree = {
 		x = -2
 		y = 1
 		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_support_italian_migration
+		relative_position_id = YUG_curb_italian_claims_in_exchange_for_support
+		prerequisite = { focus = YUG_italian_naval_experts focus = YUG_develop_italian_friendship }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -1
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_giving_in_to_the_lions_demands
+		relative_position_id = YUG_distance_from_the_little_entente
+		prerequisite = { focus = YUG_sign_the_tripartite_pact focus = YUG_support_italian_migration }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -2
+		y = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -654,6 +822,270 @@ focus_tree = {
 		x = 7
 		y = 1
 		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_revenge_from_1915
+		relative_position_id = YUG_to_pursue_balkan_dominance
+		prerequisite = { focus = YUG_to_pursue_balkan_dominance }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_demand_banat
+		relative_position_id = YUG_to_pursue_balkan_dominance
+		prerequisite = { focus = YUG_to_pursue_balkan_dominance }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_demand_annexation_of_albania
+		relative_position_id = YUG_revenge_from_1915
+		prerequisite = { focus = YUG_revenge_from_1915 }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_demand_hungarian_submission
+		relative_position_id = YUG_revenge_from_1915
+		prerequisite = { focus = YUG_to_pursue_balkan_dominance}
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_greek_submission
+		relative_position_id = YUG_demand_banat
+		prerequisite = { focus = YUG_demand_banat }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_split_romania
+		relative_position_id = YUG_demand_banat
+		prerequisite = { focus = YUG_demand_banat }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_secure_austria
+		relative_position_id = YUG_revenge_from_1915
+		prerequisite = { focus = YUG_revenge_from_1915 }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_greater_yugoslavia
+		relative_position_id = YUG_demand_hungarian_submission
+		prerequisite = { focus = YUG_secure_austria focus = YUG_split_romania }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_destroying_the_italian_threat
+		relative_position_id = YUG_greater_yugoslavia
+		prerequisite = { focus = YUG_greater_yugoslavia }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_demand_turkish_submission
+		relative_position_id = YUG_greater_yugoslavia
+		prerequisite = { focus = YUG_greater_yugoslavia }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_bring_czechoslovakia_into_our_fold
+		relative_position_id = YUG_greater_yugoslavia
+		prerequisite = { focus = YUG_greater_yugoslavia }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 0
+		y = 2
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
