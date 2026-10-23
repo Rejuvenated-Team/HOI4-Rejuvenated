@@ -21,6 +21,7 @@
  YUG_italian_funded_terrorists_timed: "§RTaking Care Of Italian Funded Terrorists§!"
  YUG_imro: "IMRO"
  YUG_imro_2: "IMRO"
+ YUG_corruption: "Corruption"
  YUG_hungarian_seperatism: "Hungarian Seperatists"
  YUG_hungarian_seperatism_appeased: "Hungarian Seperatists §GAppeased§!"
  YUG_anti_german_generals: "Anti-German Generals"
@@ -29,6 +30,6 @@
  #Tooltips
  HUN_has_removed_treaty_of_trianon_tt: "Hungary has removed the Treaty of Trianon"
 
- #decisions
- YUG_rising_economic_dependance_on_germany_category: "Rising Economic Dependance on Germany"
- germanys_extends_influence: "Germany Extends Influence"
+ #Focuses
+ YUG_the_three_man_regency: "The Three Man Regency"
+ YUG_the_three_man_regency_desc: "When Alexander I was assassinated, the political landscape of Yugoslavia plunged into chaos. And the question of who would rule next, was asked frequently. Because King Peter II, was legally to young to rule, a regency council was established. It now waits for the young Peter to turn 18, so he can rule Yugoslavia."

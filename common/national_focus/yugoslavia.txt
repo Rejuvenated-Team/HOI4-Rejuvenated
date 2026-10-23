@@ -231,7 +231,7 @@ focus_tree = {
 	focus = {
 		id = YUG_extend_the_alliances_with_france
 		relative_position_id = YUG_the_three_man_regency
-		prerequisite = { focus = YUG_the_three_man_regency focus = YUG_move_against_the_regency }
+		prerequisite = { focus = YUG_the_three_man_regency }
 		mutually_exclusive = { focus = YUG_cut_relations_with_france }
 		available = {
 
@@ -242,7 +242,7 @@ focus_tree = {
 		}
 
 		icon = GFX_focus_PLACEHOLDER
-		x = 30
+		x = 9
 		y = 1
 		cost = 5
 		ai_will_do = {
@@ -256,7 +256,7 @@ focus_tree = {
 	focus = {
 		id = YUG_cut_relations_with_france
 		relative_position_id = YUG_the_three_man_regency
-		prerequisite = { focus = YUG_the_three_man_regency focus = YUG_move_against_the_regency }
+		prerequisite = { focus = YUG_the_three_man_regency }
 		mutually_exclusive = { focus = YUG_extend_the_alliances_with_france }
 		available = {
 
@@ -267,7 +267,7 @@ focus_tree = {
 		}
 
 		icon = GFX_focus_PLACEHOLDER
-		x = 32
+		x = 11
 		y = 1
 		cost = 5
 		ai_will_do = {
@@ -544,6 +544,31 @@ focus_tree = {
 
 		}
 	}
+	focus = {
+		id = YUG_goal_of_balkan_dominance
+		relative_position_id = YUG_the_three_man_regency
+		prerequisite = { focus = YUG_the_three_man_regency }
+		mutually_exclusive = { focus = YUG_continue_balkan_friendship }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 26
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
 	focus = { #THIS WILL MAKE CROATIA A PUPPET REMEMBER
 		id = YUG_the_sporazum_agreement
 		relative_position_id = YUG_the_three_man_regency
@@ -580,7 +605,7 @@ focus_tree = {
 		}
 
 		icon = GFX_focus_PLACEHOLDER
-		x = 50
+		x = 60
 		y = 0
 		cost = 5
 		ai_will_do = {
@@ -593,7 +618,6 @@ focus_tree = {
 	}
 	focus = { INDEPENDENT ECONOMY
 		id = YUG_cut_off_german_influence
-		mutually_exclusive = { focus = YUG_the_three_man_regency }
 		available = {
 			
 		}

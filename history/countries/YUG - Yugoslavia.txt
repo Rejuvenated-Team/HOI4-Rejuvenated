@@ -106,6 +106,7 @@ add_dynamic_modifier = {
 
 add_ideas = {
 	YUG_economic_reliance_on_germany
+	YUG_corruption
 	YUG_croatian_nationalism
 	YUG_religious_tensions
 	YUG_severe_illiteracy
