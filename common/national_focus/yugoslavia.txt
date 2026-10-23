@@ -1013,7 +1013,7 @@ focus_tree = {
 		icon = GFX_focus_PLACEHOLDER
 		x = 0
 		y = 2
-		cost = 5
+		cost = 7.2
 		ai_will_do = {
 			factor = 1
 		}
