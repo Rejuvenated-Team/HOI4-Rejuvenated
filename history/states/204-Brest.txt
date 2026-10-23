@@ -4,12 +4,12 @@ state = {
 	name = "STATE_204" # Bobruysk
 	manpower = 1041084
 	
-	state_category = rural
+	state_category = large_city
 
 	history = {
 
 		victory_points = {
-			3350 3
+			3350 5
 		}
 
 		#victory_points = {
@@ -20,6 +20,10 @@ state = {
 
 		buildings = {
 			infrastructure = 3 #was: 5
+			industrial_complex = 1
+			3350 = {
+				bunker = 5
+			}
 		}
 
 		add_core_of = SOV
@@ -30,5 +34,5 @@ state = {
 		304 331 360 386 3350 3759 6373 11313 
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 8.0 
 }

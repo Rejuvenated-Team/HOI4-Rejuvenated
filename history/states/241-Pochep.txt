@@ -4,7 +4,7 @@ state={
 	name="STATE_241" # Gomel
 	manpower = 943422
 	
-	state_category = large_town
+	state_category = city
 
 	history={
 		owner = SOV
@@ -23,5 +23,5 @@ state={
 		289 6233 6344 6354 9247 9288 9342 9371 9396 11230 11271 11355 11383 
 	}
 
-	local_supplies=5.0 
+	local_supplies=7.0 
 }
