@@ -7615,20 +7615,23 @@ leader_traits = {
 
 	stalin_servant_of_lenin = {
 		random = no
-		drift_defence_factor = 0.15
+		conscription_factor = 0.15
+		non_core_manpower = 0.03
 		guarantee_cost = -0.25
 	}
 
 	stalin_servant_of_lenin_worship = {
 		random = no
-		drift_defence_factor = 0.15
+		conscription_factor = 0.15
+		non_core_manpower = 0.03
 		guarantee_cost = -0.25
 		stability_factor = 0.15
 	}
 
 	stalin_servant_of_lenin_leader = {
 		random = no
-		drift_defence_factor = 0.15
+		conscription_factor = 0.15
+		non_core_manpower = 0.03
 		guarantee_cost = -0.25
 		party_popularity_stability_factor = 0.15
 		defensive_war_stability_factor = 0.4
@@ -7637,7 +7640,8 @@ leader_traits = {
 
 	stalin_servant_of_lenin_final = {
 		random = no
-		drift_defence_factor = 0.15
+		conscription_factor = 0.15
+		non_core_manpower = 0.03
 		guarantee_cost = -0.25
 		stability_factor = 0.15
 		party_popularity_stability_factor = 0.15

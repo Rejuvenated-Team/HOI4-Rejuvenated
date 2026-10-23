@@ -16,7 +16,7 @@ state = {
 
 		buildings = {
 			infrastructure = 3 #was: 5
-
+			industrial_complex = 1
 			# Volkhov Hydroelectric Station
 			9197 = { dam = 1 }
 

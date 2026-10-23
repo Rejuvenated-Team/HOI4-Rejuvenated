@@ -6,7 +6,7 @@ state={
 		oil=177
 	}
 	
-	state_category = rural
+	state_category = large_town
 	
 
 	history={
@@ -27,5 +27,5 @@ state={
 		1922 5005 5089 7953 
 	}
 
-	local_supplies=2.0 
+	local_supplies = 5.0 
 }
