@@ -1392,6 +1392,104 @@ focus_tree = {
 
 		}
 	}
+	focus = { 
+		id = YUG_train_peter_ii_royalty
+		relative_position_id = YUG_the_three_man_regency
+		prerequisite = { focus = YUG_the_three_man_regency }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_aftermath_of_the_34_assassination
+		relative_position_id = YUG_the_three_man_regency
+		prerequisite = { focus = YUG_the_three_man_regency }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_denounce_corruption
+		relative_position_id = YUG_aftermath_of_the_34_assassination
+		prerequisite = { focus = YUG_aftermath_of_the_34_assassination focus = YUG_train_peter_ii_royalty }
+		mutually_exclusive = { focus = YUG_what_the_public_eye_doesnt_see }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 3
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_what_the_public_eye_doesnt_see
+		relative_position_id = YUG_train_peter_ii_royalty
+		prerequisite = { focus = YUG_aftermath_of_the_34_assassination focus = YUG_train_peter_ii_royalty }
+		mutually_exclusive = { focus = YUG_denounce_corruption }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -3
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
 	focus = { #THIS WILL MAKE CROATIA A PUPPET REMEMBER
 		id = YUG_the_sporazum_agreement
 		relative_position_id = YUG_the_three_man_regency

@@ -73,19 +73,6 @@ ideas = {
 				defense_bonus_against = -0.1
 			}
 		}
-		YUG_corruption = {
-			allowed = {
-				tag = YUG
-			}
-
-			picture = ARG_political_corruption_modifier
-
-			modifier = {
-				political_power_factor = 0.25
-				stability_factor = -0.15
-				consumer_goods_factor = 0.2
-			}
-		}
 		YUG_religious_tensions = {
 			allowed = {
 				tag = YUG

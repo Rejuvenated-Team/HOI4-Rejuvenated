@@ -20,7 +20,14 @@ YUG_army = {
 	experience_loss_factor = YUG_army_experience_loss_factor
 	planning_speed = YUG_army_planning_speed
 }
+YUG_corruption = {
+	enable = { always = yes }
+	icon = ARG_political_corruption_modifier
 
+	political_power_factor = YUG_corruption_political_power_factor
+	stability_factor = YUG_corruption_stability_factor
+	consumer_goods_factor = YUG_corruption_consumer_goods_factor
+}
 YUG_regency = {
 	enable = { always = yes }
 	icon = PER_unification_initiative_idea
