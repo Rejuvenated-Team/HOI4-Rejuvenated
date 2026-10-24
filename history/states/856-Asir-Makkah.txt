@@ -8,7 +8,7 @@ state= {
 		add_core_of	= SAU
 
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 			arms_factory = 1
 			12883 = {
 				naval_base = 5
@@ -24,13 +24,13 @@ state= {
 		}
 	}
 	manpower = 500000
-	state_category = pastoral
+	state_category = city
 
 	provinces = {
 		1923 2090 5037 8073 10786 12883 
 	}
 
 	buildings_max_level_factor = 1.000
-	local_supplies = 0.000
+	local_supplies = 6.0
 
 }

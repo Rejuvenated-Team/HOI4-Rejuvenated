@@ -21,6 +21,9 @@ state={
 					}
 				}
 			}
+			865 = {
+				air_facility = 1
+			}
 
 		}
 		add_core_of = USA

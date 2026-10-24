@@ -481,7 +481,7 @@ ideas = {
 		}
 
 		ENG_god_save_the_king_idea = {
-			picture = RJ_idea_ENG_god_save_the_king
+			picture = RJ_ENG_god_save_the_king
 
 			allowed = {
 				always = no
@@ -500,7 +500,7 @@ ideas = {
 		}
 
 		ENG_god_save_the_king2_idea = {
-			picture = RJ_idea_ENG_god_save_the_king
+			picture = RJ_ENG_god_save_the_king
 
 			allowed = {
 				always = no
@@ -521,7 +521,7 @@ ideas = {
 		}
 
 		ENG_god_save_the_king3_idea = {
-			picture = RJ_idea_ENG_god_save_the_king
+			picture = RJ_ENG_god_save_the_king
 
 			allowed = {
 				always = no
@@ -544,7 +544,7 @@ ideas = {
 		}
 
 		ENG_god_save_the_king4_idea = {
-			picture = RJ_idea_ENG_god_save_the_king
+			picture = RJ_ENG_god_save_the_king
 
 			allowed = {
 				always = no
@@ -570,7 +570,7 @@ ideas = {
 		}
 
 		ENG_power_to_the_king_idea = {
-			picture = RJ_idea_ENG_god_save_the_king
+			picture = RJ_ENG_god_save_the_king
 
 			allowed = {
 				always = no

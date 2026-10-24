@@ -1,13 +1,11 @@
-state=
-{
+state = {
 	id=628
 	name="STATE_628"
 	manpower = 3426194
 	
 	state_category = large_town
 	
-	history=
-	{
+	history= {
 		owner = PHI
 		buildings = {
 			infrastructure = 2

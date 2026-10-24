@@ -51,15 +51,6 @@ state = {
 
 		add_core_of = SOV
 		add_core_of = CRI
-
-		1939.1.1 = {
-			buildings = {
-				dockyard = 2
-				3686 = {
-					naval_facility = 1 # Sevastopol Naval Facilties
-				}
-			}
-		}
 	}
 
 	provinces = {

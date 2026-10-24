@@ -4,7 +4,7 @@ state = {
 	name = "STATE_198"
 	manpower = 1893391
 
-	state_category = large_town
+	state_category = city
 
 	history = {
 		victory_points = {
@@ -14,6 +14,7 @@ state = {
 		buildings = {
 			infrastructure = 3 #was: 5
 			air_base = 3
+			industrial_complex = 1
 		}
 		add_core_of = SOV
 		add_core_of = UKR
@@ -23,5 +24,5 @@ state = {
 		476 6455 6480 9423 9435 9481 
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 6.0 
 }

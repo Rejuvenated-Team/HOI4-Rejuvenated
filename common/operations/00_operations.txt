@@ -220,7 +220,7 @@ operation_infiltrate_civilian = { ### 1 1/35
 				token = token_civilian
 			}
 		}
-		has_done_agency_upgrade = upgrade_economy_civilian
+		#has_done_agency_upgrade = upgrade_economy_civilian
 	}
 
 	equipment = {
@@ -358,10 +358,10 @@ operation_fake_intel = { ### 2 1/40
 			target = FROM
 			value > 0
 		}
-		has_operation_token = {
-			tag = FROM
-			token = token_army
-		}
+		#has_operation_token = {
+		#	tag = FROM
+		#	token = token_army
+		#}
 		FROM = {
 			has_war_with = ROOT
 		}
@@ -813,7 +813,7 @@ operation_infiltrate_armed_forces_army = { ### 4 1/55
 				token = token_army
 			}
 		}
-		has_done_agency_upgrade = upgrade_army_department
+		#has_done_agency_upgrade = upgrade_army_department
 	}
 
 	equipment = {
@@ -968,7 +968,7 @@ operation_infiltrate_armed_forces_navy = { ### 5 1/55
 				is_coastal = yes
 			}
 		}		
-		has_done_agency_upgrade = upgrade_naval_department
+		#has_done_agency_upgrade = upgrade_naval_department
 	}
 
 	equipment = {
@@ -1122,7 +1122,7 @@ operation_infiltrate_armed_forces_airforce = { ### 6 1/55
 				token = token_airforce
 			}
 		}		
-		has_done_agency_upgrade = upgrade_airforce_department
+		#has_done_agency_upgrade = upgrade_airforce_department
 	}
 
 	equipment = {
@@ -1270,10 +1270,10 @@ operation_coup_government = { ### 7 1/70
 			value > 35
 		}
 		NOT = { has_completed_focus = SPR_regional_defense_council_of_aragon }
-		has_operation_token = {
-			tag = FROM
-			token = token_civilian
-		}
+		#has_operation_token = {
+		#	tag = FROM
+		#	token = token_civilian
+		#}
 	}
 
 	equipment = {
@@ -1548,11 +1548,11 @@ operation_boost_resistance = { ### 8 2/40
 			token = token_resistance_contacts
 		}
 
-		FROM = {
-			any_controlled_state = {
-				has_resistance = yes
-			}
-		}
+		#FROM = {
+		#	any_controlled_state = {
+		#		has_resistance = yes
+		#	}
+		#}
 	}
 
 	selection_target = {
@@ -1892,10 +1892,10 @@ operation_collaboration_government = { ### 10 2/55
 			target = FROM
 			value > 25
 		}
-		has_operation_token = {
-			tag = FROM
-			token = token_civilian
-		}
+		#has_operation_token = {
+		#	tag = FROM
+		#	token = token_civilian
+		#}
 	}
 
 	equipment = {
@@ -2118,7 +2118,7 @@ operation_steal_tech_civilian = { ### 12 3/35
 	cost_multiplier = 0.05
 
 	visible = {
-		num_of_operatives > 1
+		num_of_operatives > 0
 		network_national_coverage = {
 			target = FROM
 			value > 0

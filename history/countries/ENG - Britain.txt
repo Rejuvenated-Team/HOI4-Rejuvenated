@@ -1,5 +1,10 @@
 capital = 126
 
+create_intelligence_agency = {
+	name = "SIS"
+	icon = GFX_intelligence_agency_logo_uk
+}
+
 if = {
 	limit = {
 		NOT = {
@@ -137,6 +142,9 @@ set_technology = {
 	radio = 1
 	fuel_silos = 1
 	fuel_refining = 1
+	steelworks_tech = 1
+	basic_machine_tools = 1
+	interwar_antitank = 1
 }
 
 set_grand_doctrine = grand_battleplan

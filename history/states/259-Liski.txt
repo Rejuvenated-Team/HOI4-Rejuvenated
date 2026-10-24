@@ -4,7 +4,7 @@ state={
 	name="STATE_259" # Poltava
 	manpower = 1442584
 	
-	state_category = rural
+	state_category = city
 
 	history={
 		victory_points = {
@@ -13,6 +13,7 @@ state={
 		owner = SOV
 		buildings = {
 			infrastructure = 3 #was: 5
+			industrial_complex = 1
 		}
 		add_core_of = SOV
 		add_core_of = UKR
