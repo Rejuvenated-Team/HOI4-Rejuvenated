@@ -1466,6 +1466,80 @@ focus_tree = {
 		}
 	}
 	focus = { 
+		id = YUG_introduce_anti_corruption_laws
+		relative_position_id = YUG_denounce_corruption
+		prerequisite = { focus = YUG_denounce_corruption }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_dismiss_the_prime_minister
+		relative_position_id = YUG_introduce_anti_corruption_laws
+		prerequisite = { focus = YUG_introduce_anti_corruption_laws }
+		mutually_exclusive = { focus = YUG_reshape_the_prime_minister }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_reshape_the_prime_minister
+		relative_position_id = YUG_introduce_anti_corruption_laws
+		prerequisite = { focus = YUG_introduce_anti_corruption_laws }
+		mutually_exclusive = { focus = YUG_dismiss_the_prime_minister }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
 		id = YUG_what_the_public_eye_doesnt_see
 		relative_position_id = YUG_train_peter_ii_royalty
 		prerequisite = { focus = YUG_aftermath_of_the_34_assassination focus = YUG_train_peter_ii_royalty }
