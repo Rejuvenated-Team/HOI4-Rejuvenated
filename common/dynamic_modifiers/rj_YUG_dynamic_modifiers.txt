@@ -41,5 +41,5 @@ YUG_regency = {
 	conscription_factor = YUG_regency_conscription_factor
 	weekly_manpower = YUG_regency_weekly_manpower
 	army_core_defence_factor = YUG_regency_army_core_attack_factor
-	army_core_defence_factor = YUG_regency_army_core_attack_factor
+	army_core_defence_factor = YUG_regency_army_core_defence_factor
 }
