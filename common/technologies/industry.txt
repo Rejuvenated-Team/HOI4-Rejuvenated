@@ -400,6 +400,10 @@ technologies = {
 	improved_equipment_conversion = {
 		energy_gain_factor = 0.15
 		#equipment_conversion_speed = 0.40
+		
+		allow_branch = {
+			always = no #RJ TODO Ace readd this branch and make it actually good thx
+		}
 
 		path = {
 			leads_to_tech = advanced_equipment_conversion
@@ -479,6 +483,220 @@ technologies = {
 			production_tech
 		}
 	}
+
+
+	#### Power branch ####
+	power_high_pressure_boilers = {
+		power_from_coal_factor = 0.50
+		power_from_oil_factor = 0.50
+
+		path = {
+			leads_to_tech = power_hydrogen_cooled_generators
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.0
+		start_year = 1933
+
+		folder = {
+			name = industry_folder
+			position = { x = 7 y = 0 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 10
+				energy_ratio < 0.95
+			}
+		}
+
+		categories = {
+			industry
+			cat_production
+			construction_tech
+			excavation_tech
+		}
+	}
+
+	power_hydrogen_cooled_generators = {
+		power_generation_factor = 0.10
+
+		path = {
+			leads_to_tech = power_steam_reheating
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = power_large_hydro_turbines
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1937
+
+		folder = {
+			name = industry_folder
+			position = { x = 7 y = 4 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 10
+				energy_ratio < 0.95
+			}
+		}
+
+		categories = {
+			industry
+			cat_production
+			construction_tech
+		}
+	}
+
+	power_large_hydro_turbines = {
+		power_from_dams_factor = 0.35
+
+		path = {
+			leads_to_tech = power_grid_interconnection
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1938
+
+		folder = {
+			name = industry_folder
+			position = { x = 9 y = 6 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+				NOT = { power_from_dams > 0 }
+			}
+
+			modifier = {
+				factor = 10
+				energy_ratio < 0.95
+			}
+		}
+
+		categories = {
+			industry
+			cat_production
+			construction_tech
+		}
+	}
+
+	power_grid_interconnection = {
+		power_from_dams_factor = 0.35
+
+		research_cost = 2
+		start_year = 1940
+
+		folder = {
+			name = industry_folder
+			position = { x = 9 y = 8 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+				NOT = { power_from_dams > 0 }
+			}
+
+			modifier = {
+				factor = 10
+				energy_ratio < 0.95
+			}
+		}
+
+		categories = {
+			industry
+			cat_production
+			construction_tech
+		}
+	}
+
+	power_steam_reheating = {
+		power_generation_factor = 0.10
+
+		path = {
+			leads_to_tech = power_supercritical_steam
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1941
+
+		folder = {
+			name = industry_folder
+			position = { x = 7 y = 8 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 10
+				energy_ratio < 0.95
+			}
+		}
+
+		categories = {
+			industry
+			cat_production
+			construction_tech
+		}
+	}
+
+	power_supercritical_steam = {
+		power_from_coal_factor = 1.0
+		power_from_oil_factor = 1.0
+
+		research_cost = 3
+		start_year = 1944
+
+		folder = {
+			name = industry_folder
+			position = { x = 7 y = 10 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 5
+
+				has_resources_in_country = {
+					resource = coal
+					amount > 0
+					only_imported = yes
+				}
+			}
+
+			modifier = {
+				factor = 10
+				energy_ratio < 0.95
+			}
+		}
+
+		categories = {
+			industry
+			cat_production
+			construction_tech
+			excavation_tech
+		}
+	}
+
 
 	###############
 	concentrated_industry = {
