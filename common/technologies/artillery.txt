@@ -49,7 +49,7 @@ technologies = {
 			}			
 		}
 
-		research_cost = 1.5
+		research_cost = 1
 
 		folder = {
 			name = artillery_folder
@@ -114,7 +114,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1936
 
@@ -379,7 +379,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 1.7
 
 		start_year = 1942
 
@@ -559,7 +559,7 @@ technologies = {
 			tank_super_heavy_howitzer_2
 		}
 
-		research_cost = 2
+		research_cost = 1.7
 
 		start_year = 1945
 
@@ -702,7 +702,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 1.7
 
 		start_year = 1940
 
@@ -996,7 +996,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.2
 
 		start_year = 1936
 
@@ -1068,7 +1068,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.8
 
 		start_year = 1939
 
@@ -1192,7 +1192,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.8
 
 		start_year = 1941
 
@@ -1250,7 +1250,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.8
 
 		start_year = 1942
 
@@ -1367,7 +1367,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.8
 
 		start_year = 1944
 
@@ -1429,7 +1429,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.8
 
 		start_year = 1945
 
@@ -1551,7 +1551,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.2
 
 		start_year = 1936
 
@@ -1648,7 +1648,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.9
 
 		start_year = 1939
 
@@ -1805,7 +1805,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.9
 
 		start_year = 1941
 
@@ -1884,7 +1884,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.9
 
 		start_year = 1942
 
@@ -2036,7 +2036,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.9
 
 		start_year = 1944
 
@@ -2110,7 +2110,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.9
 
 		start_year = 1945
 

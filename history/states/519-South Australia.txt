@@ -6,7 +6,7 @@ state={
 	history={
 		owner = AST
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 			12910 = {
 				naval_base = 2
 
@@ -23,9 +23,9 @@ state={
 	provinces={
 		1773 2219 5183 5197 5211 5225 7567 8165 8186 8220 10925 10927 12910 12918 12924 13169 13170 
 	}
-	manpower=200800
+	manpower = 589312
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category = city
 
-	local_supplies=0.0 
+	local_supplies = 6.0 
 }

@@ -4,7 +4,7 @@ state = {
 	name = "STATE_144" # Nordland
 	manpower = 142100 # 355251
 	
-	state_category = rural
+	state_category = town
 	
 	resources = {
 		steel = 6
@@ -36,5 +36,5 @@ state = {
 		38 192 3034 3132 3145 9126 11157 6214
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 4.0 
 }

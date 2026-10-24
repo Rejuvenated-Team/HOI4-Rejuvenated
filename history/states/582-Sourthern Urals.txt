@@ -2,7 +2,7 @@ state = {
 	id = 582
 	name = "STATE_582"
 	resources = {
-		steel = 40.000
+		steel = 61.000
 		oil = 6.000
 	}
 
@@ -12,12 +12,13 @@ state = {
 
 		buildings = {
 			infrastructure = 3 #was: 5
+			industrial_complex = 2
 		}
 
 		add_core_of = SOV
 
 		victory_points = {
-			10256 3 # Magnitogorsk
+			10256 7 # Magnitogorsk
 		}
 		victory_points = {
 			4311 1 # Beloretsk
@@ -31,7 +32,7 @@ state = {
 
 	manpower = 1044991
 	buildings_max_level_factor = 1.000
-	state_category = rural
+	state_category = large_city
 
-	local_supplies = 0.0 
+	local_supplies = 6.0 
 }

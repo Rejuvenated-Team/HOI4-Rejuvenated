@@ -278,6 +278,24 @@ bookmarks = {
 			label = { rj_label_south_america rj_label_new_content }
 		}
 
+		NZL = {
+			minor = yes
+			history = "rj_NZL_GATHERING_STORM_DESC"
+			ideology = democratic
+			version = base_game
+			ideas = {
+				NZL_railways_board
+				NZL_great_depression
+				NZL_commonwealth_loyalty
+			}
+			focuses = {
+				NZL_the_first_labor_government
+				RJ_NZL_samoan_economic_development
+				RJ_NZL_the_biggest_bob
+			}
+			label = { rj_label_oceania rj_label_new_content }
+		}
+
 		MLT = {
 			minor = yes
 			history = "rj_MLT_GATHERING_STORM_DESC"

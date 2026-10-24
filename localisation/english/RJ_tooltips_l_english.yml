@@ -1,4 +1,13 @@
 ﻿l_english:
- generic_further_escalation_effects_tt: "§YIf they decide to escalate:§!"
- generic_no_further_escalation_effects_tt: "§YIf they decide not to escalate:§!"
+ generic_further_escalation_effects_tt: "§YIf [FROM.GetNameDef] decide to escalate:\n§!"
+ generic_no_further_escalation_effects_tt: "§YIf [FROM.GetNameDef] decide not to escalate:\n§!"
  generic_focus_unlocked_by_event_tt: "§GThis focus will be automatically unlocked via event.§!"
+
+ modifier_production_speed_steelworks_factor: "Steelworks Construction Speed:"
+ motorization_tech: "Motorization Tech"
+ light_tank_tech: "Light Tank Tech"
+ armored_car_tech: "Armored Car Tech"
+ all_artillery_tech: "All Artillery Tech"
+ infantry_tech_research: "Infantry Technology Research Speed"
+ armored_car_tech_research: "Armored Car Technology Research Speed"
+ motorization_tech_research: "Motorized Technology Research Speed"

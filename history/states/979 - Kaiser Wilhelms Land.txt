@@ -5,6 +5,10 @@ state = {
 	manpower = 190000 #PreTAOG 359000
 	state_category = "rural"
 
+	resources = {
+		chromium = 70
+	}
+
 	history = {
 
 		add_core_of = PNG
@@ -48,5 +52,5 @@ state = {
 
 	
 	buildings_max_level_factor = 1
-	local_supplies = 0.0 
+	local_supplies = 2.0 
 }

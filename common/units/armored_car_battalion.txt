@@ -28,7 +28,7 @@ sub_units = {
 			armored_car_equipment = 60
 		}
 		manpower = 240
-		max_organisation = 33
+		max_organisation = 40
 		default_morale = 0.3
 		training_time = 120
 		max_strength = 8

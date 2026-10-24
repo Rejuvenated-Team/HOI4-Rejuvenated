@@ -604,6 +604,15 @@ leader_traits = {
 
 	}
 
+	skillful_propagandist = {
+		random = no
+		sprite = 13
+		subversive_activites_upkeep = -0.15
+		boost_resistance_factor = 0.1
+		resistance_decay_on_our_occupied_states = -0.1
+		intel_from_operatives_factor = 0.1
+	}
+
 	### Military Advisor Traits ###
 
 	army_specops_instructor_1 = {
