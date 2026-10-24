@@ -1932,7 +1932,7 @@ technologies = {
 
 	basic_naval_mines = {
 
-		research_cost = 2
+		research_cost = 1
 
 		start_year = 1922
 
@@ -1995,7 +1995,7 @@ technologies = {
 
 	submarine_mine_laying = {
 
-		research_cost = 2
+		research_cost = 1.5
 
 		start_year = 1922
 
@@ -2040,7 +2040,7 @@ technologies = {
 
 	improved_submarine_mine_laying = {
 
-		research_cost = 2
+		research_cost = 1.5
 
 		start_year = 1940
 
@@ -2080,7 +2080,7 @@ technologies = {
 
 	improved_naval_mines = {
 
-		research_cost = 2
+		research_cost = 1.5
 
 		start_year = 1936
 
@@ -2191,7 +2191,7 @@ technologies = {
 
 	advanced_naval_mines = {
 
-		research_cost = 2
+		research_cost = 1.5
 
 		start_year = 1940
 
@@ -2252,7 +2252,7 @@ technologies = {
 			NOT = { has_dlc = "By Blood Alone" }
 		}
 
-		research_cost = 2
+		research_cost = 1.2
 
 		start_year = 1942
 
@@ -2383,7 +2383,7 @@ technologies = {
 			NOT = { has_dlc = "By Blood Alone" }
 		}
 
-		research_cost = 2
+		research_cost = 1.2
 
 		start_year = 1942
 
@@ -2474,7 +2474,7 @@ technologies = {
 			research_cost_coeff = 1
 		}	
 
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 1922
 
 		folder = {
@@ -2544,7 +2544,7 @@ technologies = {
 		force_use_small_tech_layout = yes
 		show_equipment_icon = yes
 
-		research_cost = 2
+		research_cost = 1.5
 		start_year = 1940
 
 		folder = {
@@ -2617,7 +2617,7 @@ technologies = {
 		naval_invasion_plan_cap = 4			
 		#naval_invasion_capacity = 100
 
-		research_cost = 2
+		research_cost = 1.5
 		start_year = 1944
 		folder = {
 			name = mtgnavalsupportfolder
