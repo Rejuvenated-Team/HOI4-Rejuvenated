@@ -91,6 +91,13 @@ prospect_for_resources = {
 
 			num_of_civilian_factories_available_for_projects > 2
 			has_tech = excavation3
+			IF = {
+				limit = {
+					has_dlc = "Graveyard of Empires"
+					original_tag = RAJ 
+				}
+				has_completed_focus = RAJ_establish_the_alupuram_works
+			}
 		}
 
 		state_target = yes
