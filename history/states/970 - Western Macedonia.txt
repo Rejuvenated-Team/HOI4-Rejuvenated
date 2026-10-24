@@ -3,7 +3,6 @@ state = {
 	name = "STATE_970"
 	resources = {
 		chromium = 20.000
-		aluminium = 6.000
 	}
 
 	history = {
@@ -27,7 +26,7 @@ state = {
 	} 
 	manpower = 343550
 	buildings_max_level_factor = 1.000
-	state_category = pastoral
+	state_category = town
 
-	local_supplies = 0.0 
+	local_supplies = 5.0 
 }
