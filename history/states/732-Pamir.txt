@@ -20,11 +20,11 @@ state={
 	}
 	manpower=230000
 	buildings_max_level_factor=1.000
-	state_category=pastoral
+	state_category = town
 
 	resources = {
-		steel = 1
+		steel = 2
 	}
 
-	local_supplies=1.0 
+	local_supplies=4.0 
 }

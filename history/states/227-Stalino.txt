@@ -6,14 +6,16 @@ state={
 
 	resources = {
 		coal = 82 # initial distribution
+		steel = 22
 	}
 	
-	state_category = city
+	state_category = metropolis
 
 	history={
 		owner = SOV
 		buildings = {
 			infrastructure = 3 #was: 5
+			industrial_complex = 3
 		}
 		victory_points = {
 			6474 10

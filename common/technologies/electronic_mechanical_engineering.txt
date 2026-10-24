@@ -2008,11 +2008,11 @@ technologies = {
 		}
 		
 		research_cost = 1
-		start_year = 1943
+		start_year = 1940
 		
 		folder = {
 			name = electronics_folder
-			position = { x = 0 y = @rockets_1943 }
+			position = { x = 0 y = @rockets_1942 }
 		}
 		
 		ai_will_do = {
@@ -2244,7 +2244,7 @@ technologies = {
 	
 	atomic_research = {
 
-		research_speed_factor = 0.04
+		research_speed_factor = 0.08
 		
 		#path = {
 		#	leads_to_tech = nuclear_reactor 
@@ -2252,7 +2252,7 @@ technologies = {
 		#}
 		
 		start_year = 1940
-		research_cost = 5
+		research_cost = 4
 		
 		folder = {
 			name = electronics_folder

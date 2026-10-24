@@ -4,7 +4,7 @@ state={
 	name="STATE_225" # Sumy
 	manpower = 1338280
 	
-	state_category = town
+	state_category = city
 
 	history={
 		victory_points = {
@@ -16,6 +16,7 @@ state={
 		owner = SOV
 		buildings = {
 			infrastructure = 3 #was: 5
+			industrial_complex = 1
 		}
 		add_core_of = SOV
 		add_core_of = UKR
@@ -25,5 +26,5 @@ state={
 		463 501 522 3225 3455 3520 6565 9477 9566 11462 11553 
 	}
 
-	local_supplies=0.0 
+	local_supplies=6.0 
 }

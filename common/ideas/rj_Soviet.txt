@@ -7,7 +7,7 @@ ideas = {
 				always = yes
 			}
 
-			picture = generic_spy_coup
+			picture = generic_prisoner
 
 			removal_cost = -1
 
@@ -24,15 +24,15 @@ ideas = {
 				always = yes
 			}
 
-			picture = generic_spy_coup
+			picture = generic_prisoner
 
 			removal_cost = -1
 
 			modifier = {
 				consumer_goods_factor = 0.05
-				political_power_cost = 0.2
-				industrial_capacity_factory = 0.15 
-				production_speed_buildings_factor = 0.1
+				political_power_cost = 0.1
+				industrial_capacity_factory = 0.10
+				production_speed_buildings_factor = 0.20
 			}
 		}
 		
@@ -41,14 +41,15 @@ ideas = {
 				always = yes
 			}
 
-			picture = generic_spy_coup
+			picture = generic_prisoner
 
 			removal_cost = -1
 
 			modifier = {
 				stability_factor = -0.05
 				political_power_cost = 0.1
-				industrial_capacity_factory = 0.15 
+				industrial_capacity_factory = 0.20
+				industrial_capacity_dockyard = 0.10
 				production_speed_buildings_factor = 0.1
 			}
 		}
@@ -58,15 +59,15 @@ ideas = {
 				always = yes
 			}
 
-			picture = generic_spy_coup
+			picture = generic_prisoner
 
 			removal_cost = -1
 
 			modifier = {
 				consumer_goods_factor = 0.05
-				political_power_cost = 0.2
+				political_power_cost = 0.15
 				industrial_capacity_factory = 0.15 
-				production_speed_buildings_factor = 0.1
+				production_speed_buildings_factor = 0.25
 				research_speed_factor = 0.06
 			}
 		}
@@ -76,14 +77,15 @@ ideas = {
 				always = yes
 			}
 
-			picture = generic_spy_coup
+			picture = generic_prisoner
 
 			removal_cost = -1
 
 			modifier = {
 				stability_factor = -0.05
 				political_power_cost = 0.1
-				industrial_capacity_factory = 0.15 
+				industrial_capacity_factory = 0.25
+				industrial_capacity_dockyard = 0.15
 				production_speed_buildings_factor = 0.1
 				research_speed_factor = 0.02
 			}
@@ -310,6 +312,49 @@ ideas = {
 					reliability = 0.10
 					instant = yes
 				}
+			}
+		}
+
+		SOV_impregnable_forts_idea = {
+
+			picture = FRA_fortification_focus
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				production_speed_bunker_factor = 0.15
+				production_speed_coastal_bunker_factor = 0.15
+				production_speed_stronghold_network_factor = 0.25
+				land_bunker_effectiveness_factor = 0.10
+				coastal_bunker_effectiveness_factor = 0.10
+			}
+		}
+
+		SOV_new_soviet_woman_idea = {
+
+			picture = generic_women_in_the_army
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				conscription_factor = 0.10
+			}
+		}
+
+		SOV_industrial_research_speed_idea = {
+
+			picture = generic_research_bonus
+
+			allowed = {
+				always = no
+			}
+
+			research_bonus = {
+				industry = 0.15
 			}
 		}
 
