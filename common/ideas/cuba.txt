@@ -181,9 +181,15 @@ ideas = {
 			picture = RJ_financial_law
 			
 			modifier = {
-				experience_gain_army = 0.08
-				research_speed_factor = 0.03
+				experience_gain_army = 0.10
+				research_speed_factor = 0.05
 				conscription = 0.005
+			}
+
+			research_bonus = {
+				infantry_tech = 0.10
+				armor = 0.05
+				armored_car_tech = 0.05
 			}
 		}
 
@@ -202,9 +208,10 @@ ideas = {
 			picture = RJ_financial_law2
 			
 			modifier = {
-				production_speed_buildings_factor = 0.1
-				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.1
 				production_factory_start_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.05
 			}
 		}
 
@@ -244,6 +251,7 @@ ideas = {
 			modifier = {
 				monthly_population = 0.30
 				experience_loss_factor = -0.10
+				casualty_trickleback = 0.05
 			}
 		}
 
@@ -265,6 +273,7 @@ ideas = {
 				monthly_population = 0.60
 				experience_loss_factor = -0.15
 				conscription_factor = 0.20
+				casualty_trickleback = 0.15
 			}
 		}
 
@@ -393,7 +402,8 @@ ideas = {
 	
 			modifier = {
 				enemy_operative_intel_extraction_rate = 0.10
-				enemy_operative_detection_chance_factor = 0.05
+				enemy_operative_detection_chance_factor = 0.15
+				foreign_subversive_activites = -0.15
 				new_operative_slot_bonus = 1
 			}
 		}
@@ -414,10 +424,10 @@ ideas = {
 	
 			modifier = {
 				enemy_operative_intel_extraction_rate = 0.10
-				enemy_operative_detection_chance_factor = 0.05
-				new_operative_slot_bonus = 1
-				enemy_intel_network_gain_factor_over_occupied_tag = -0.10
-				enemy_operative_detection_chance_factor_over_occupied_tag = 0.15
+				enemy_operative_detection_chance_factor = 0.25
+				new_operative_slot_bonus = 3
+				foreign_subversive_activites = -0.25
+				enemy_intel_network_gain_factor_over_occupied_tag = -0.15
 			}
 		}
 
@@ -436,7 +446,7 @@ ideas = {
 			picture = RJ_CUB_CTC
 			
 			modifier = {
-				communism_drift = 0.05
+				communism_drift = 0.08
 			}
 		}
 
@@ -455,7 +465,7 @@ ideas = {
 			picture = RJ_CUB_CTC
 			
 			modifier = {
-				communism_drift = 0.08
+				communism_drift = 0.12
 			}
 		}
 
@@ -474,8 +484,9 @@ ideas = {
 			picture = SOV_second_five_year_plan
 			
 			modifier = {
-				production_speed_buildings_factor = 0.10
-				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.10
+				production_speed_industrial_complex_factor = 0.25
 			}
 		}
 
@@ -547,9 +558,9 @@ ideas = {
 			picture = SWE_radiotjanst
 			
 			modifier = {
-				communism_drift = 0.08
-				army_morale_factor = 0.08
-				war_support_weekly = 0.001
+				communism_drift = 0.10
+				army_morale_factor = 0.12
+				war_support_weekly = 0.002
 			}
 		}
 
@@ -568,8 +579,8 @@ ideas = {
 			picture = POL_ideology_drift_defence
 			
 			modifier = {
-				political_power_factor = 0.15
-				planning_speed = 0.10
+				political_power_factor = 0.25
+				planning_speed = 0.15
 			}
 		}
 
@@ -591,7 +602,7 @@ ideas = {
 				army_morale_factor = 0.10
 				planning_speed = 0.10
 				max_planning = 0.15
-				experience_gain_army_unit_factor = 0.05
+				experience_gain_army_unit_factor = 0.15
 			}
 		}
 		
@@ -610,13 +621,13 @@ ideas = {
 			picture = saf_soviet_advisers
 			
 			modifier = {
-				army_morale_factor = 0.15
-				planning_speed = 0.15
-				max_planning = 0.20
-				experience_gain_army_unit_factor = 0.1
-				army_attack_factor = 0.05
-				army_core_defence_factor = 0.1
-				training_time_army_factor = -0.05
+				army_morale_factor = 0.18
+				planning_speed = 0.20
+				max_planning = 0.40
+				experience_gain_army_unit_factor = 0.25
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				training_time_army_factor = -0.15
 			}
 		}
 		
@@ -635,8 +646,8 @@ ideas = {
 			picture = idea_man_five_year_plan_industry
 			
 			modifier = {
-				industrial_capacity_dockyard = 0.15
-				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.25
+				industrial_capacity_factory = 0.15
 		}
 		}
 		
@@ -684,6 +695,7 @@ ideas = {
 				navy_visibility = -0.05
 				invasion_preparation = -0.10
 				amphibious_invasion = 0.05
+				naval_invasion_penalty = -0.10
 			}
 		}
 
@@ -707,7 +719,7 @@ ideas = {
 				navy_visibility = -0.10
 				invasion_preparation = -0.15
 				amphibious_invasion = 0.05
-				naval_invasion_penalty = -0.10
+				naval_invasion_penalty = -0.25
 				conscription = 0.02
 			}
 		}
@@ -791,7 +803,7 @@ ideas = {
 				navy_visibility = -0.10
 				invasion_preparation = -0.15
 				amphibious_invasion = 0.05
-				naval_invasion_penalty = -0.10
+				naval_invasion_penalty = -0.25
 				conscription = 0.04
 				justify_war_goal_time = -0.25
 				annex_cost_factor = -0.25
@@ -851,6 +863,7 @@ ideas = {
 			modifier = {
 				war_support_factor = 0.10
 				generate_wargoal_tension = -0.25
+				war_stability_factor = 0.15
 			}
 		}
 
@@ -889,7 +902,8 @@ ideas = {
 			picture = RJ_army_money
 			
 			modifier = {
-				conscription = 0.04
+				conscription = 0.05
+				mobilization_speed = 0.25
 			}
 		}
 
@@ -1040,7 +1054,7 @@ ideas = {
 				army_core_defence_factor = 0.10
 				army_core_attack_factor = 0.10
 				army_org_factor = 0.05
-				conscription = 0.01
+				conscription = 0.03
 			}
 		}
 
@@ -1059,8 +1073,9 @@ ideas = {
 			picture = generic_improved_industries
 			
 			modifier = {
-				global_building_slots_factor = 0.20
+				global_building_slots_factor = 0.25
 				production_speed_buildings_factor = 0.10
+				production_speed_infrastructure_factor = 0.25
 			}
 		}
 
@@ -1185,8 +1200,8 @@ ideas = {
 			picture = SPA_national_recovery
 	
 			modifier = {
-				weekly_manpower = 250
-				monthly_population = 0.25
+				weekly_manpower = 1000
+				monthly_population = 1
 			}
 		}
 
@@ -1440,7 +1455,8 @@ ideas = {
 			
 			modifier = {
 				monthly_population = 0.25
-				weekly_manpower = 50
+				weekly_manpower = 100
+				trade_opinion_factor = 0.50
 			}
 		}
 

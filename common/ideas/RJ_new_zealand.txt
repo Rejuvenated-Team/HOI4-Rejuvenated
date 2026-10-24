@@ -1,0 +1,1718 @@
+ideas = {
+	country = {
+		RJ_NZL_idea_RNZAF = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_RNZAF
+
+			modifier = {
+				experience_gain_air_factor = 0.15
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_small_plane = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				mio_cat_eq_all_medium_plane = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				mio_cat_eq_all_large_plane = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+
+		}
+
+		RJ_NZL_idea_RNZAF_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_RNZAF
+
+			modifier = {
+				experience_gain_air_factor = 0.15
+				recruitable_population_factor = 0.10
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_small_plane = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				mio_cat_eq_all_medium_plane = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				mio_cat_eq_all_large_plane = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+
+		}
+
+		RJ_NZL_idea_RNZAF_3 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_RNZAF
+
+			modifier = {
+				experience_gain_air_factor = 0.15
+				recruitable_population_factor = 0.10
+				air_accidents_factor = -0.05
+				air_training_xp_gain_factor = 0.10
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_small_plane = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				mio_cat_eq_all_medium_plane = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				mio_cat_eq_all_large_plane = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+
+		}
+
+		RJ_NZL_idea_RNZAF_4 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_RNZAF
+
+			modifier = {
+				experience_gain_air_factor = 0.15
+				recruitable_population_factor = 0.20
+				conscription = 0.01
+				air_accidents_factor = -0.05
+				air_training_xp_gain_factor = 0.10
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_small_plane = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				mio_cat_eq_all_medium_plane = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				mio_cat_eq_all_large_plane = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+
+		}
+
+
+		RJ_NZL_idea_commonwealth_air_training = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_commonwealth_air_training
+
+			equipment_bonus = {
+				mio_cat_eq_all_small_plane = {
+					air_range = 0.10
+					instant = yes
+				}
+				mio_cat_eq_all_medium_plane = {
+					air_range = 0.10
+					instant = yes
+				}
+				mio_cat_eq_all_large_plane = {
+					air_range = 0.10
+					instant = yes
+				}
+				fighter = {
+					air_attack = 0.05
+					air_agility = 0.05
+					instant = yes
+				}
+				heavy_fighter = {
+					air_attack = 0.05
+					air_agility = 0.05
+					instant = yes
+				}
+				naval_bomber = {
+					air_agility = 0.05
+					naval_strike_targetting = 0.05
+					instant = yes
+				}
+				strategic_bomber = {
+					air_defence = 0.05
+					air_bombing = 0.05
+					instant = yes
+				}
+				cas = {
+					air_ground_attack = 0.05
+					air_agility = 0.05
+					instant = yes
+				}
+				tactical_bomber = {
+					air_bombing = 0.05
+					air_defence = 0.05
+					instant = yes
+				}
+			}
+
+		}
+
+		RJ_NZL_idea_bomber_command = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = SWE_marauder_bombers
+
+			equipment_bonus = {
+				naval_bomber = {
+					naval_strike_targetting = 0.05
+					naval_strike_attack = 0.10
+					air_range = 0.05
+					instant = yes
+				}
+				maritime_patrol_plane = {
+					naval_strike_targetting = 0.05
+					naval_strike_attack = 0.10
+					air_range = 0.15
+					instant = yes
+				}
+				strategic_bomber = {
+					air_bombing = 0.05
+					air_range = 0.05
+					instant = yes
+				}
+				tactical_bomber = {
+					air_bombing = 0.05
+					air_range = 0.05
+					instant = yes
+				}
+			}
+		}
+
+		RJ_NZL_idea_naval_defense_amendment_act = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_the_london_naval_treaty
+
+			modifier = {
+				industrial_capacity_dockyard = 0.25
+				production_speed_dockyard_factor = 0.10
+				production_speed_naval_base_factor = 0.10
+				production_speed_naval_supply_hub_factor = 0.10
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_ships_no_convoys = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+		}
+
+		RJ_NZL_idea_kauri_point_depot = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_kauri_point
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_ships_no_convoys = {
+					torpedo_attack = 0.05
+					anti_air_attack = 0.05
+					naval_light_gun_hit_chance_factor = 0.05
+					naval_heavy_gun_hit_chance_factor = 0.05
+					instant = yes
+				}
+			}
+		}
+
+		RJ_NZL_idea_royal_new_zealand_navy = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_RNZN
+
+			modifier = {
+				experience_gain_navy_factor = 0.15
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_ships_no_convoys = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				mio_cat_eq_all_cruiser = {
+					
+				}
+			}
+		}
+
+		RJ_NZL_idea_royal_new_zealand_navy_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_RNZN
+
+			modifier = {
+				experience_gain_navy_factor = 0.15
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_ships_no_convoys = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				mio_cat_eq_all_cruiser = {
+					build_cost_ic = -0.15
+					naval_speed = 0.10
+					reliability = 0.05
+					instant = yes
+				}
+			}
+		}
+
+		RJ_NZL_idea_pacific_minesweepers = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = SOV_mine_warfare
+
+			modifier = {
+				naval_mine_hit_chance = -0.10
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_ships_no_convoys = {
+					mines_sweeping = 0.15
+					mines_planting = 0.10
+					instant = yes
+				}
+			}
+		}
+
+		RJ_NZL_idea_bureau_of_industry = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ARG_public_works_investment
+
+			modifier = {
+				industrial_capacity_factory = 0.08
+				industrial_capacity_dockyard = 0.08
+				production_speed_buildings_factor = 0.05
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+
+		RJ_NZL_idea_bureau_of_industry_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ARG_public_works_investment
+
+			modifier = {
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.12
+				production_speed_industrial_complex_factor = 0.25
+				production_lack_of_resource_penalty_factor = -0.10
+				production_factory_max_efficiency_factor = 0.10
+			}
+		}
+
+		RJ_NZL_idea_ministry_of_public_works = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = man_five_year_plan_industry
+
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.05
+				production_speed_infrastructure_factor = 0.05
+				production_speed_industrial_infrastructure_factor = 0.05
+				production_speed_energy_infrastructure_factor = 0.05
+			}
+		}
+
+		RJ_NZL_idea_ministry_of_public_works_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = man_five_year_plan_industry
+
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.05
+				recruitable_population_factor = 0.15
+				line_change_production_efficiency_factor = 0.10
+				production_speed_infrastructure_factor = 0.05
+				production_speed_industrial_infrastructure_factor = 0.05
+				production_speed_energy_infrastructure_factor = 0.05
+			}
+		}
+
+		RJ_NZL_idea_mining_controller = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_mining_controller
+
+			modifier = {
+				local_resources_factor = 0.25
+				production_speed_steelworks_factor = 0.10
+			}
+		}
+
+		RJ_NZL_idea_national_roads_board = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ARG_invest_in_roads
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.20
+			}
+
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+		}
+
+		RJ_NZL_idea_recycling_program = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_recycling_program
+
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.20
+			}
+		}
+
+		RJ_NZL_idea_DSIR_funding = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_research_bonus
+
+			modifier = {
+				research_speed_factor = 0.08
+				special_project_speed_factor = 0.10
+				production_speed_facility_factor = 0.2
+			}
+		}
+
+		RJ_NZL_idea_major_financial_investment = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_major_financial_investment
+
+			modifier = {
+				consumer_goods_factor = 0.10
+			}
+		}
+
+		RJ_NZL_idea_defense_council = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = YUG_federal_defense_council
+
+			modifier = {
+				army_core_defence_factor = 0.10
+				experience_gain_army = 0.15
+			}
+		}
+
+		RJ_NZL_idea_army_board = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = chi_army_corruption2
+
+			modifier = {
+				conscription = 0.02
+				max_planning_factor = 0.15
+				mobilization_speed = 0.20
+			}
+		}
+
+		RJ_NZL_idea_charlton_automatic_rifle = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = raj_rifle_factory_ishapore
+
+			modifier = {
+				army_attack_factor = 0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					soft_attack = 0.20
+					instant = yes
+				}
+			}
+		}
+
+		RJ_NZL_idea_schofield_tank = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_schofield_tank
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+			equipment_bonus = {
+				mio_cat_eq_all_light_tank = {
+					soft_attack = 0.10
+					defense = 0.05
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				armored_car_equipment = {
+					soft_attack = 0.10
+					defense = 0.15
+					build_cost_ic = -0.20
+					maximum_speed = 0.10
+					instant = yes
+				}
+			}
+		}
+
+		RJ_NZL_idea_improve_the_army_schools = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = chi_army_corruption3
+
+			modifier = {
+				army_org_factor = 0.10
+				training_time_army_factor = -0.15
+				experience_gain_army_factor = 0.10
+			}
+		}
+
+		RJ_NZL_idea_the_biggest_bob = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_the_biggest_bob
+
+			equipment_bonus = {
+				land_cruiser = {
+					build_cost_ic = -0.25
+					reliability_factor = 0.15
+					instant = yes
+				}
+			}
+		}
+
+		RJ_NZL_idea_maori_crown = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_king_koroki
+
+			modifier = {
+				political_power_gain = 0.10
+				non_core_manpower = 0.05
+			}
+		}
+
+		RJ_NZL_idea_agricultural_improvements = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = LIT_invested_in_farms
+
+			modifier = {
+				monthly_population = 1
+				supply_factor = 0.15
+			}
+		}
+
+		RJ_NZL_idea_industrial_efficiency = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = man_five_year_plan_industry
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_start_efficiency_factor = 0.05
+				license_purchase_cost = -0.25
+			}
+		}
+
+		RJ_NZL_idea_emergency_regulations = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_constitutional_guarantees
+
+			modifier = {
+				foreign_subversive_activites = -0.2
+				local_intel_to_enemies = -0.1
+				civilian_intel_to_others = -10
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+
+		RJ_NZL_idea_emergency_regulations_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_constitutional_guarantees
+
+			modifier = {
+				foreign_subversive_activites = -0.2
+				local_intel_to_enemies = -0.1
+				civilian_intel_to_others = -10
+				production_speed_arms_factory_factor = 0.05
+				conscription = 0.04
+				training_time_army_factor = -0.10
+			}
+		}
+
+		RJ_NZL_idea_kingitanga_supported = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = por_monarchist_uprising
+
+			modifier = {
+				neutrality_drift = 0.15
+			}
+		}
+
+		RJ_NZL_idea_strike_restrictions = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_factory_strikes
+
+			modifier = {
+				industrial_capacity_factory = 0.10
+			}
+		}
+
+		RJ_NZL_idea_extended_war_pensions = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = eng_imperial_conscription
+
+			modifier = {
+				conscription = 0.03
+			}
+		}
+
+		RJ_NZL_idea_japan_likes_new_zealand = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = can_wartime_prices_and_trade_board
+
+			targeted_modifier = {
+				tag = NZL
+				trade_opinion_factor = 0.5
+				trade_cost_for_target_factor = -0.5
+				opinion_gain_monthly_factor = 1
+			}
+		}
+
+		RJ_NZL_idea_new_zealand_likes_japan = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = can_wartime_prices_and_trade_board
+
+			targeted_modifier = {
+				tag = JAP
+				trade_opinion_factor = 0.5
+				trade_cost_for_target_factor = -0.5
+				opinion_gain_monthly_factor = 1
+			}
+		}
+
+		RJ_NZL_idea_central_bank_control = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = tur_balkan_central_bank_wealthy_greece
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.05
+				production_speed_arms_factory_factor = 0.10
+				production_speed_dockyard_factor = 0.10
+				production_speed_industrial_complex_factor = 0.15
+				political_power_cost = 0.10
+			}
+		}
+
+		RJ_NZL_idea_masters_of_the_sea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = liberty_ships_focus
+
+			modifier = {
+				naval_speed_factor = 0.15
+				industrial_capacity_dockyard = 0.25
+				navy_visibility = -0.10
+				naval_enemy_fleet_size_ratio_penalty_factor = 0.5
+				convoy_escort_efficiency = 0.15
+				naval_supply_consumption_factor = -0.10
+				positioning = 0.10
+				naval_invasion_penalty = -0.2
+			}
+
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+		}
+
+		RJ_NZL_idea_masters_of_the_sea_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = liberty_ships_focus
+
+			modifier = {
+				naval_speed_factor = 0.15
+				industrial_capacity_dockyard = 0.25
+				navy_visibility = -0.10
+				naval_enemy_fleet_size_ratio_penalty_factor = 0.5
+				convoy_escort_efficiency = 0.15
+				naval_supply_consumption_factor = -0.10
+				positioning = 0.10
+				naval_invasion_penalty = -0.2
+				weekly_manpower = 2000
+				non_core_manpower = 0.03
+				required_garrison_factor = -0.25
+			}
+
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+		}
+
+		RJ_NZL_idea_proud_maori_traditions = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_proud_maori_traditions
+
+			modifier = {
+				war_support_weekly_factor = 0.0025
+				weekly_bombing_war_support = 0.005
+				weekly_convoys_war_support = 0.005
+				training_time_army_factor = -0.10
+				generate_wargoal_tension = -0.25
+			}
+		}
+
+		RJ_NZL_idea_proud_maori_traditions_terrain = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_proud_maori_traditions
+
+			modifier = {
+				war_support_weekly_factor = 0.0025
+				weekly_bombing_war_support = 0.005
+				weekly_convoys_war_support = 0.005
+				training_time_army_factor = -0.10
+				terrain_penalty_reduction = 0.25
+				terrain_trait_xp_gain_factor = 0.25
+				army_core_defence_factor = 0.05
+				generate_wargoal_tension = -0.25
+			}
+		}
+
+		RJ_NZL_idea_proud_maori_traditions_tactical = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_proud_maori_traditions
+
+			modifier = {
+				war_support_weekly_factor = 0.0025
+				weekly_bombing_war_support = 0.005
+				weekly_convoys_war_support = 0.005
+				training_time_army_factor = -0.10
+				army_org_factor = 0.10
+				army_speed_factor = 0.15
+				army_org_regain = 0.15
+				army_attack_factor = 0.10
+				land_night_attack = 0.15
+				generate_wargoal_tension = -0.25
+			}
+		}
+
+		RJ_NZL_idea_proud_maori_traditions_tactical_terrain = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_proud_maori_traditions
+
+			modifier = {
+				war_support_weekly_factor = 0.0025
+				weekly_bombing_war_support = 0.005
+				weekly_convoys_war_support = 0.005
+				training_time_army_factor = -0.10
+				army_org_factor = 0.10
+				army_speed_factor = 0.15
+				army_org_regain = 0.15
+				army_attack_factor = 0.10
+				land_night_attack = 0.15
+				terrain_penalty_reduction = 0.25
+				terrain_trait_xp_gain_factor = 0.25
+				army_core_defence_factor = 0.05
+				generate_wargoal_tension = -0.25
+			}
+		}
+
+		RJ_NZL_idea_proud_maori_traditions_hand_to_hand = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_proud_maori_traditions
+
+			modifier = {
+				war_support_weekly_factor = 0.0025
+				weekly_bombing_war_support = 0.005
+				weekly_convoys_war_support = 0.005
+				training_time_army_factor = -0.10
+				army_org_factor = 0.10
+				army_speed_factor = 0.15
+				army_org_regain = 0.15
+				army_attack_factor = 0.15
+				land_night_attack = 0.15
+				terrain_penalty_reduction = 0.25
+				terrain_trait_xp_gain_factor = 0.25
+				army_core_defence_factor = 0.05
+				army_defence_factor = 0.10
+				generate_wargoal_tension = -0.25
+			}
+			
+		}
+
+		RJ_NZL_idea_put_out_the_call = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = prc_low_popular_support3
+
+			modifier = {
+				weekly_manpower = 3000
+				monthly_population = 2
+			}
+			
+		}
+
+		RJ_NZL_idea_philippines_likes_new_zealand = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = can_wartime_prices_and_trade_board
+
+			targeted_modifier = {
+				tag = NZL
+				trade_opinion_factor = 0.5
+				trade_cost_for_target_factor = -0.5
+				opinion_gain_monthly_factor = 1
+			}
+		}
+
+		RJ_NZL_idea_new_zealand_likes_philippines = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = can_wartime_prices_and_trade_board
+
+			targeted_modifier = {
+				tag = PHI
+				trade_opinion_factor = 0.5
+				trade_cost_for_target_factor = -0.5
+				opinion_gain_monthly_factor = 1
+			}
+		}
+
+		RJ_NZL_idea_great_pacific_kingdom = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_great_pacific_kingdom
+
+			modifier = {
+				industrial_capacity_dockyard = 0.25
+				army_core_defence_factor = 0.15
+				global_building_slots_factor = 0.20
+				conscription = 0.03
+				naval_invasion_penalty = -0.10
+				naval_invasion_prep_speed = 0.25
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_ships_no_convoys = {
+					build_cost_ic = -0.2
+					reliability_factor = 0.1
+					instant = yes
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+		}
+
+		RJ_NZL_first_labor_government_communist = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = democratic
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_first_labour_government
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.02
+				industrial_capacity_factory = 0.02
+				industrial_capacity_dockyard = 0.02
+				political_power_gain = 0.15
+				communism_drift = 0.08
+			}
+		}
+
+		RJ_NZL_first_labor_government_communist_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = democratic
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_first_labour_government
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_factory = 0.08
+				industrial_capacity_dockyard = 0.08
+				political_power_gain = 0.15
+				communism_drift = 0.15
+			}
+		}
+
+		RJ_NZL_idea_first_communist_government = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+
+			modifier = {
+				industrial_capacity_factory = 0.08
+				industrial_capacity_dockyard = 0.08
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+				line_change_production_efficiency_factor = 0.10
+				consumer_goods_factor = -0.05
+				communism_drift = 0.08
+			}
+
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+
+		RJ_NZL_idea_first_communist_government_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.15
+				production_factory_efficiency_gain_factor = 0.20
+				production_factory_max_efficiency_factor = 0.15
+				line_change_production_efficiency_factor = 0.20
+				consumer_goods_factor = -0.05
+				communism_drift = 0.08
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+		}
+
+		RJ_NZL_idea_the_peoples_voice = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_peoples_voice
+
+			modifier = {
+				communism_drift = 0.10
+			}
+		}
+
+		RJ_NZL_idea_five_year_plan = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_SOV_five_year_plan
+
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				industrial_capacity_dockyard = 0.10
+				industrial_capacity_factory = 0.10
+			}
+		}
+
+		RJ_NZL_idea_five_year_plan_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_SOV_five_year_plan
+
+			modifier = {
+				production_speed_buildings_factor = 0.20
+				industrial_capacity_dockyard = 0.10
+				industrial_capacity_factory = 0.10
+				line_change_production_efficiency_factor = 0.10
+				production_factory_max_efficiency_factor = 0.15
+			}
+		}
+
+		RJ_NZL_idea_five_year_plan_3 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_SOV_five_year_plan
+
+			modifier = {
+				production_speed_buildings_factor = 0.25
+				industrial_capacity_dockyard = 0.10
+				industrial_capacity_factory = 0.10
+				line_change_production_efficiency_factor = 0.10
+				production_factory_max_efficiency_factor = 0.15
+				consumer_goods_factor = -0.10
+			}
+		}
+
+		RJ_NZL_idea_soviet_industrial_support = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = eng_spirit_of_the_industrial_revolution
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.05
+				production_speed_dockyard_factor = 0.05
+			}
+		}
+
+		RJ_NZL_idea_high_security_intelligence = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_intel
+
+			modifier = {
+				intelligence_agency_defense = 1
+				enemy_operative_detection_chance_factor = 0.20
+				enemy_operative_intel_extraction_rate = 0.10
+				foreign_subversive_activites = -0.15
+			}
+		}
+
+		RJ_NZL_idea_socialist_healthcare = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_medical
+
+			modifier = {
+				casualty_trickleback = 0.15
+				experience_loss_factor = -0.10
+				monthly_population = 0.75
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		RJ_NZL_idea_communist_influence = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+
+			modifier = {
+				communism_drift = 0.07
+			}
+		}
+
+		RJ_NZL_idea_new_conscripts = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				conscription = 0.05
+				training_time_army_factor = -0.10
+			}
+		}
+
+		RJ_NZL_idea_industrial_support = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = eng_spirit_of_the_industrial_revolution
+
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				production_speed_arms_factory_factor = 0.10
+				production_speed_dockyard_factor = 0.10
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+
+		RJ_NZL_idea_the_pacific_revolution = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = home_of_revolution
+
+			modifier = {
+				justify_war_goal_time = -0.25
+				resistance_decay = 0.10
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_org_factor = 0.10
+				non_core_manpower = 0.05
+			}
+		}
+
+		RJ_NZL_idea_the_pacific_revolution_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = home_of_revolution
+
+			modifier = {
+				justify_war_goal_time = -0.25
+				resistance_decay = 0.10
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_org_factor = 0.10
+				non_core_manpower = 0.05
+				industrial_capacity_dockyard = 0.25
+				naval_light_gun_hit_chance_factor = 0.10
+				naval_heavy_gun_hit_chance_factor = 0.10
+				naval_speed_factor = 0.10
+				positioning = 0.15
+				naval_defense_factor = 0.10
+				convoy_raiding_efficiency_factor = 0.10
+			}
+		}
+
+		RJ_NZL_idea_AST_natives = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+
+			modifier = {
+				communism_drift = 0.05
+			}
+		}
+
+		RJ_NZL_idea_AST_stirred_up_workers = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = por_iberian_workers_united
+
+			modifier = {
+				communism_drift = 0.10
+			}
+		}
+
+		RJ_NZL_idea_AST_peoples_voice = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = RJ_idea_NZL_peoples_voice
+
+			modifier = {
+				communism_drift = 0.10
+			}
+		}
+	}
+}

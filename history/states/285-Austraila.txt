@@ -2,10 +2,13 @@ state = {
 	id = 285
 	name = "STATE_285"
 	state_category = large_city
-	manpower = 2783177
+	manpower = 2690736
 
 	resources = {
-		coal = 16 #initial distribution
+		coal = 33
+		chromium = 7
+		tungsten = 27
+		aluminium = 35
 	}
 
 	history = {
@@ -60,5 +63,5 @@ state = {
 	buildings_max_level_factor = 1.000
 	
 
-	local_supplies = 0.0 
+	local_supplies = 9.0 
 }

@@ -1,6 +1,11 @@
 ﻿
 capital = 64 # Berlin/Brandeburg
 
+create_intelligence_agency = {
+	name = "Abwehr"
+	icon = GFX_intelligence_agency_logo_ger
+}
+
 if = {
 	limit = {
 		NOT = {
@@ -99,6 +104,11 @@ set_technology = {
 	synth_oil_experiments = 1
 	fuel_silos = 1
 	fuel_refining = 1
+	steelworks_tech = 1
+	experimental_rockets = 1
+	basic_machine_tools = 1
+	smoke_generator = 1
+	antitank1 = 1
 }
 if = {
 	limit = {
@@ -422,7 +432,7 @@ set_variable = { GER_industrialist_prevailed = 0 } #For allowing only one Indust
 
 
 # Starting Stats of various kinds
-set_research_slots = 4
+set_research_slots = 5
 set_convoys = 200
 IF = {
 	limit = {

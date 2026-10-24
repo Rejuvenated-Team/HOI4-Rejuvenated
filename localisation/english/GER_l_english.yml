@@ -2,3 +2,24 @@
 #Characters
  GER_otto_skorzeny: "Otto Skorzeny"
  GER_theodor_von_hippel: "Theodor von Hippel"
+
+
+
+
+ ####################################
+ ########## FOCUSES #################
+ ####################################
+
+ RJ_GER_peenemunde_west: "Peenemünde West"
+ RJ_GER_peenemunde_west_desc: "The Reich Air Ministry purchased Usedom recently. It's a perfect spot to set up a new research facility for rocketry & air: Peenemünde West"
+ RJ_GER_peenemunde_ost: "Peenemünde Ost"
+ RJ_GER_peenemunde_ost_desc: "The Reich Air Ministry recently purchased Usedom, which is a perfect spot to set up a new army research facility."
+
+
+
+ ####################################
+ ######### IDEAS ####################
+ ####################################
+
+ RJ_GER_idea_peenemunde_west: "Peenemünde Rocketry"
+ RJ_GER_idea_peenemunde_ost: "Peenemünde Army Research"

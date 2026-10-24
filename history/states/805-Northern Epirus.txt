@@ -10,7 +10,7 @@ state={
 		#steel = 10 # was: 20
 	}
 	
-	state_category = pastoral
+	state_category = city
 
 	history= {
 		owner = ALB
@@ -19,6 +19,7 @@ state={
 		}
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
 		}
 		add_core_of = ALB
 		add_claim_by = GRE
@@ -31,5 +32,5 @@ state={
 		}
 	}
 
-	local_supplies=0.0 
+	local_supplies = 6.0 
 }

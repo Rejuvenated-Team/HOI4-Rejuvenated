@@ -121,7 +121,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 1.5
 		start_year = 1918
 		folder = {
 			name = nsb_armour_folder
@@ -214,7 +214,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 1.8
 		start_year = 1934
 		folder = {
 			name = nsb_armour_folder
@@ -276,7 +276,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 1.8
 		start_year = 1936
 
 		folder = {
@@ -473,7 +473,7 @@ technologies = {
 			heavy_tank_amphibious_chassis_3
 		}
 
-		research_cost = 2
+		research_cost = 1.5
 		start_year = 1941
 
 		folder = {
@@ -527,7 +527,7 @@ technologies = {
 			light_tank_aa_chassis_3
 		}
 
-		research_cost = 2
+		research_cost = 1.8
 		start_year = 1940
 
 		path = {
@@ -589,7 +589,7 @@ technologies = {
 			light_tank_aa_chassis_4
 		}
 
-		research_cost = 2
+		research_cost = 1.8
 		start_year = 1943
 
 		folder = {
@@ -1393,7 +1393,7 @@ technologies = {
 			tank_super_heavy_cannon
 		}
 
-		research_cost = 2.8
+		research_cost = 2.2
 		start_year = 1941
 		folder = {
 			name = nsb_armour_folder
@@ -1538,7 +1538,7 @@ technologies = {
 			tank_super_heavy_cannon_2
 		}
 
-		research_cost = 2.8
+		research_cost = 2.2
 		start_year = 1943
 		folder = {
 			name = nsb_armour_folder
@@ -2099,7 +2099,7 @@ technologies = {
 
 		is_special_project_tech = yes
 
-		research_cost = 1
+		research_cost = 0.8
 		start_year = 1941
 
 		folder = {
@@ -2234,8 +2234,8 @@ technologies = {
 			supply_consumption  = -0.02
 		}
 
-		research_cost = 1
-		start_year = 1943
+		research_cost = 0.75
+		start_year = 1942
 
 		folder = {
 			name = nsb_armour_folder
@@ -2330,8 +2330,8 @@ technologies = {
 			}
 		}
 
-		research_cost = 1
-		start_year = 1943
+		research_cost = 0.75
+		start_year = 1942
 
 		folder = {
 			name = nsb_armour_folder
@@ -2402,8 +2402,8 @@ technologies = {
 			max_organisation = 10
 		}
 
-		research_cost = 1
-		start_year = 1943
+		research_cost = 0.75
+		start_year = 1942
 
 		folder = {
 			name = nsb_armour_folder
@@ -2468,8 +2468,8 @@ technologies = {
 			defense = 0.1
 		}
 
-		research_cost = 1
-		start_year = 1945
+		research_cost = 0.9
+		start_year = 1943
 
 		folder = {
 			name = nsb_armour_folder
@@ -2529,8 +2529,8 @@ technologies = {
 
 		is_special_project_tech = yes
 
-		research_cost = 1
-		start_year = 1943
+		research_cost = 0.9
+		start_year = 1942
 
 		folder = {
 			name = nsb_armour_folder

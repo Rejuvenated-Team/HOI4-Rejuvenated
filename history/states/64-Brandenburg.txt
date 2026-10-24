@@ -41,14 +41,8 @@ state = {
             3499 = {
                 land_facility = 1 #Representing Kommersdorf's Research Facilities
             }
-		}
-
-		1939.1.1 = {
-			buildings = {
-				air_base = 10
-				anti_air_building = 5
-				arms_factory = 10
-				industrial_complex = 7
+			9496 = {
+				air_facility = 1 #Deutsche Versuchsanstalt für Luftfahrt
 			}
 		}
 
@@ -58,5 +52,5 @@ state = {
 		375 478 3367 3499 3522 6487 6521 9428 9456 9496 9560 11219 11359 11415 11444 11505 
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 10.0 
 }

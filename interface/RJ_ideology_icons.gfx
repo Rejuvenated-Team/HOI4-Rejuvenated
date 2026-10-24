@@ -46,6 +46,46 @@ spriteTypes = {
     }
 
     spriteType = {
+        name = GFX_ideology_rexism
+        texturefile = gfx/interface/ideologies/RJ_rexism_icon.dds
+    }
+
+    spriteType = {
+        name = GFX_ideology_anarchist_communism
+        texturefile = gfx/interface/ideologies/RJ_anarchist_communism_icon.dds
+    }
+
+    spriteType = {
+        name = GFX_ideology_moderatism
+        texturefile = gfx/interface/ideologies/RJ_moderatism_icon.dds
+    }
+
+    spriteType = {
+        name = GFX_ideology_oligarchism
+        texturefile = gfx/interface/ideologies/RJ_oligarchy_icon.dds
+    }
+
+    spriteType = {
+        name = GFX_ideology_liberalism
+        texturefile = gfx/interface/ideologies/RJ_liberalism_icon.dds
+    }
+
+    spriteType = {
+        name = GFX_ideology_socialism
+        texturefile = gfx/interface/ideologies/RJ_socialism_icon.dds
+    }
+
+    spriteType = {
+        name = GFX_ideology_conservatism
+        texturefile = gfx/interface/ideologies/RJ_conservatism_icon.dds
+    }
+
+    spriteType = {
+        name = GFX_ideology_conservatism_neutrality
+        texturefile = gfx/interface/ideologies/RJ_conservatism_icon.dds
+    }
+
+    spriteType = {
         name = GFX_ideology_communism_group
         texturefile = gfx/interface/ideologies/communism_group.dds
     }

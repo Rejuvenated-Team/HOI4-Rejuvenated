@@ -4,7 +4,7 @@ state = {
 	name = "STATE_829" #Volga Germany
 	manpower = 618530
 	
-	state_category = rural
+	state_category = large_town
 	
 	resources = {
 		steel = 14 # was: 40

@@ -5,9 +5,13 @@ state={
 	manpower = 2074932
 	
 	resources = {
-		coal = 8 # initial distribution
+		coal = 30
+		tungsten = 7
+		steel = 47
+		chromium = 10
+		aluminium = 12
 	}
-	state_category = town
+	state_category = city
 
 	history={
 		owner = SOV
@@ -16,7 +20,7 @@ state={
 		}
 		buildings = {
 			infrastructure = 3 #was: 6
-			industrial_complex = 1
+			industrial_complex = 2
 
 		}
 		add_core_of = SOV
@@ -26,5 +30,5 @@ state={
 		1233 1292 1294 1327 1775 4242 7285 9292 10170 10213 10542 12106 12157 12287 12584 
 	}
 
-	local_supplies=0.0 
+	local_supplies = 6.0 
 }

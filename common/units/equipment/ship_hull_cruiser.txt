@@ -139,7 +139,7 @@ equipments = {
 			steel = 1
 		}
 		
-		manpower = 600
+		manpower = 800
 
 		naval_dominance_factor = 100
 		naval_weather_penalty_factor = 1 #this value gets -1 before its used so 1.5 will increase the effects of weather penalties by 0.5. this is base value is required for MIO stat modifiers
@@ -165,7 +165,7 @@ equipments = {
 		archetype = ship_hull_cruiser
 		priority = 1900
 		parent = ship_hull_cruiser_1
-		manpower = 800
+		manpower = 1000
 		sub_detection = 1.5
 		naval_speed = 30
 		reliability = 0.85
@@ -328,7 +328,7 @@ equipments = {
 		parent = ship_hull_cruiser_3
 		naval_speed = 33
 		reliability = 0.95
-		manpower = 1400
+		manpower = 1300
 		build_cost_ic = 2100
 		naval_range = 4500
 		max_strength = 130
