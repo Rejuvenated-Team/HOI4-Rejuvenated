@@ -4,7 +4,7 @@ state = {
 	name = "STATE_214"
 	manpower = 577985
 	
-	state_category = town
+	state_category = city
 
 	history = {
 		owner = SOV
@@ -20,16 +20,11 @@ state = {
 			}
 		}
 		add_core_of = SOV
-		1939.1.1 = {
-			buildings = {
-				industrial_complex = 2
-			}
-		}
 	}
 
 	provinces = {
 		      140 180 312 3075 3080 3092 3130 3168 3338 6102 6105 9041 9248 11038 11171  
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 6.0 
 }

@@ -19,6 +19,9 @@ state={
 			4804 = {
 				dam = 1 #Mangahao Power Station
 			}
+			1814 = {
+				naval_base = 3
+			}
 		}
 		victory_points = {
 			1814 10

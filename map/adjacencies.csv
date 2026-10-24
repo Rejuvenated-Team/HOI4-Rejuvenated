@@ -250,6 +250,31 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 10231;12995;impassable;-1;-1;-1;-1;-1;;Kokoda Track
 13401;13396;sea;436;-1;-1;-1;-1;;Aceh-Islands
 1428;13395;sea;812;-1;-1;-1;-1;;Padang-Islands
+8051;13313;sea;2691;-1;-1;-1;-1;;Bahrain-Qatar
+10440;1513;sea;7230;-1;-1;-1;-1;;Bahamas 1
+5700;7245;sea;7910;-1;-1;-1;-1;;Bahamas 2
+7245;10254;sea;7910;-1;-1;-1;-1;;Bahamas 3
+7245;4647;sea;8284;-1;-1;-1;-1;;Bahamas 4
+10201;1381;sea;7479;-1;-1;-1;-1;;Sri-Lanka-S-Madras
+1399;4728;sea;5488;-1;-1;-1;-1;;Kuril-Kamchatka
+6039;1903;sea;3818;-1;-1;-1;-1;;Cameroon-Equatorial Guinea
+13020;4387;sea;8570;-1;-1;-1;-1;;Gilbert Islands 1
+4387;13021;sea;8673;-1;-1;-1;-1;;Gilbert Islands 2
+13022;7393;sea;8673;-1;-1;-1;-1;;Gilbert Islands 3
+12120;4247;sea;5609;-1;-1;-1;-1;;New Hebrides
+13040;13042;sea;2414;-1;-1;-1;-1;;Marshal Islands 1
+13043;13044;sea;7287;-1;-1;-1;-1;;Marshal Islands 2
+1002;13045;sea;7062;-1;-1;-1;-1;;Marshal Islands 3
+13033;13032;sea;2121;-1;-1;-1;-1;;Caroline Islands 1
+13031;13030;sea;2711;-1;-1;-1;-1;;Caroline Islands 2
+13024;13023;sea;2901;-1;-1;-1;-1;;Saipan
+13023;12140;sea;2901;-1;-1;-1;-1;;Saipan-Guam
+1966;8000;sea;8788;-1;-1;-1;-1;;Somalia-Socotra
+1361;4352;sea;7010;-1;-1;-1;-1;;Bismarck 1
+4352;7339;sea;807;-1;-1;-1;-1;;Bismarck 2
+4421;10234;sea;7010;-1;-1;-1;-1;;Bismarck-Bougainville
+4226;12265;sea;229;-1;-1;-1;-1;;Bougainville-Solomon Islands
+6322;185;sea;2107;-1;-1;-1;-1;;Kurzeme-Saaremaa
 -1;-1;;-1;-1;-1;-1;-1;-1 
 #Start province ID;End province ID;Adjacency type;Through province ID;Starting X position;Starting Y position;Ending X position;Ending Y position;Adjacency rule;Comment
 

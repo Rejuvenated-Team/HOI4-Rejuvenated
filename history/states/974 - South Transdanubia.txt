@@ -3,12 +3,13 @@ state = {
 	name = "STATE_974" # South Transdanubia
 	manpower = 732535
 	
-	state_category = large_town
+	state_category = city
 
 	resources = {
 		oil = 1
 		aluminium = 20
-		coal = 2 # initial distribution
+		coal = 45
+		steel = 7
 	}
 
 	history = {
@@ -32,5 +33,5 @@ state = {
 		682 3680 6685 9624 9643 11610
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 7.0 
 }

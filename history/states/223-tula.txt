@@ -4,7 +4,7 @@ state={
 	name="STATE_223"
 	manpower = 1635549
 	
-	state_category = town
+	state_category = large_city
 
 	history={
 		owner = SOV
@@ -16,18 +16,14 @@ state={
 			arms_factory = 2
 			air_base = 1
 			synthetic_refinery = 1 #NSB
+			industrial_complex = 1
 		}
 		add_core_of = SOV
-		1939.1.1 = {
-			buildings = {
-				arms_factory = 3
-			}
-		}
 	}
 
 	provinces={
 		212 261 300 3236 3250 3292 3376 6262 6315 6333 6396 9366 11242 11347 
 	}
 
-	local_supplies=0.0 
+	local_supplies = 8.0 
 }

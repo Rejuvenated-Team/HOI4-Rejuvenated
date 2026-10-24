@@ -185,6 +185,7 @@ set_technology = {
 	steelworks_tech = 1
 	experimental_rockets = 1
 	armored_car1 = 1
+	basic_machine_tools = 1
 }
 
 set_grand_doctrine = superior_firepower

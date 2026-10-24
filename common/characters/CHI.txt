@@ -15,7 +15,7 @@ characters = {
 			name=CHI_chiang_kaishek
 			portraits={
 				civilian={
-					large = GFX_portrait_CHI_chiang_kai_shek
+					large = GFX_rj_portrait_CHI_chiang_kai_shek
 				}
 			}
 			country_leader={
@@ -32,7 +32,7 @@ characters = {
 			name=CHI_chiang_kaishek
 			portraits={
 				civilian={
-					large = "gfx/leaders/CHI/Portrait_CHI_chiang_kai_shek.dds"
+					large = GFX_rj_portrait_CHI_chiang_kai_shek
 				}
 			}
 			country_leader={

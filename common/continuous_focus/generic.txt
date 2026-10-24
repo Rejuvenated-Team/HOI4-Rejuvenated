@@ -315,14 +315,17 @@ continuous_focus_palette = {
 			production_speed_supply_node_factor = 0.1
 			production_speed_air_base_factor = 0.1
 			production_speed_naval_base_factor = 0.1
-			#production_speed_synthetic_refinery_factor = 0.1
+			production_speed_synthetic_refinery_factor = 0.1
 			production_speed_fuel_silo_factor = 0.1	
 			production_speed_rocket_site_factor = 0.1
 			production_speed_nuclear_reactor_factor = 0.1
 			production_speed_bunker_factor = 0.2
 			production_speed_coastal_bunker_factor = 0.2
 			production_speed_anti_air_building_factor = 0.2
-			production_speed_radar_station_factor = 0.2	
+			production_speed_radar_station_factor = 0.2
+			production_speed_stronghold_network_factor = 0.2
+			production_speed_mega_gun_emplacement_factor = 0.2
+			production_speed_naval_supply_hub_factor = 0.1
 		}
 		
 		ai_will_do = {
@@ -406,7 +409,18 @@ continuous_focus_palette = {
 		}
 				
 		modifier = {
-			industry_repair_factor = 0.5
+			repair_speed_industrial_complex_factor = 0.5
+			repair_speed_dockyard_factor = 0.5
+			repair_speed_arms_factory_factor = 0.5
+			repair_speed_steelworks_factor = 0.5
+			repair_speed_infrastructure_factor = 0.5
+			repair_speed_air_base_factor = 0.5
+			repair_speed_anti_air_building_factor = 0.5
+			repair_speed_bunker_factor = 0.5
+			repair_speed_naval_base_factor = 0.5
+			repair_speed_coastal_bunker_factor = 0.5
+			repair_speed_rail_way_factor = 0.5
+			repair_speed_supply_node_factor = 0.5
 		}
 		
 		ai_will_do = {
@@ -586,6 +600,32 @@ continuous_focus_palette = {
 		#supports_ai_strategy = ai_focus_military_advancements
 		
 		daily_cost = 0
+		
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = continuous_foreign_recruits
+		
+		icon = GFX_focus_RJ_pay_soldier
+		
+		available = {
+			hidden_trigger = { has_dlc = "Together for Victory" }
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.25
+			stability_factor = -0.20
+			weekly_manpower = 7500
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		supports_ai_strategy = ai_focus_military_advancements
+		
+		daily_cost = 1
 		
 		available_if_capitulated = yes
 	}

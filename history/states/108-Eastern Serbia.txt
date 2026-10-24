@@ -2,7 +2,9 @@ state={
 	id=108
 	name="STATE_108"
 	resources={
-		steel=3.000
+		steel = 9
+		coal = 17
+		tungsten = 4
 	}
 
 	history={
@@ -12,7 +14,8 @@ state={
 		owner = YUG
 		buildings = {
 			infrastructure = 2
-
+			industrial_complex = 1
+			arms_factory = 1
 		}
 		add_core_of = YUG
 		add_core_of = SER
@@ -24,7 +27,7 @@ state={
 	}
 	manpower = 951000
 	buildings_max_level_factor=1.000
-	state_category=town
+	state_category = city
 
-	local_supplies=5.0 
+	local_supplies = 6.0 
 }
