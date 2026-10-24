@@ -418,7 +418,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = YUG_establish_the_cisle
+		id = YUG_establish_the_iscle
 		relative_position_id = YUG_continue_balkan_friendship
 		prerequisite = { focus = YUG_reaffirm_the_little_entente }
 		available = {
@@ -1086,6 +1086,304 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_road_to_national_unification
+		relative_position_id = YUG_the_three_man_regency
+		prerequisite = { focus = YUG_the_three_man_regency }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 42
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_destroy_the_ustase
+		relative_position_id = YUG_road_to_national_unification
+		prerequisite = { focus = YUG_road_to_national_unification }
+		mutually_exclusive = { focus = YUG_appease_croatian_nationalists }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -5
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_appease_croatian_nationalists
+		relative_position_id = YUG_road_to_national_unification
+		prerequisite = { focus = YUG_road_to_national_unification }
+		mutually_exclusive = { focus = YUG_destroy_the_ustase }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -3
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_appease_albanian_seperatists
+		relative_position_id = YUG_road_to_national_unification
+		prerequisite = { focus = YUG_destroy_the_ustase focus = YUG_appease_croatian_nationalists }
+		mutually_exclusive = { focus = YUG_arrest_albanian_seperatists }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -4
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_arrest_albanian_seperatists
+		relative_position_id = YUG_road_to_national_unification
+		prerequisite = { focus = YUG_destroy_the_ustase focus = YUG_appease_croatian_nationalists }
+		mutually_exclusive = { focus = YUG_appease_albanian_seperatists }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -2
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_introduce_secularism
+		relative_position_id = YUG_road_to_national_unification
+		prerequisite = { focus = YUG_negotiate_with_hungarian_seperatists focus = YUG_anti_hungarianism }
+		mutually_exclusive = { focus = YUG_state_orthodox }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 4
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_state_orthodox
+		relative_position_id = YUG_road_to_national_unification
+		prerequisite = { focus = YUG_negotiate_with_hungarian_seperatists focus = YUG_anti_hungarianism }
+		mutually_exclusive = { focus = YUG_introduce_secularism }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 2
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_a_united_yugoslavia
+		relative_position_id = YUG_road_to_national_unification
+		prerequisite = { focus = YUG_appease_albanian_seperatists focus = YUG_arrest_albanian_seperatists focus = YUG_state_orthodox focus = YUG_introduce_secularism }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 0
+		y = 3
+		cost = 7.2
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_integrate_the_sls
+		relative_position_id = YUG_road_to_national_unification
+		prerequisite = { focus = YUG_road_to_national_unification }
+		mutually_exclusive = { focus = YUG_shut_down_the_sls }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_shut_down_the_sls
+		relative_position_id = YUG_road_to_national_unification
+		prerequisite = { focus = YUG_road_to_national_unification }
+		mutually_exclusive = { focus = YUG_integrate_the_sls }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_negotiate_with_hungarian_seperatists
+		relative_position_id = YUG_road_to_national_unification
+		prerequisite = { focus = YUG_road_to_national_unification }
+		mutually_exclusive = { focus = YUG_anti_hungarianism }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 3
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = YUG_anti_hungarianism 
+		relative_position_id = YUG_road_to_national_unification
+		prerequisite = { focus = YUG_road_to_national_unification }
+		mutually_exclusive = { focus = YUG_negotiate_with_hungarian_seperatists }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 5
+		y = 1
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
