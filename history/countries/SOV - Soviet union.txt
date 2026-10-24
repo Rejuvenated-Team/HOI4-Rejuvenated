@@ -806,6 +806,11 @@ set_technology = { #WARNING: Do not just remove techs from here -> It can impact
 	basic_train = 1
 	steelworks_tech = 1
 	experimental_rockets = 1
+	basic_fortification_tech = 1
+	basic_machine_tools = 1
+	sonar = 1
+	smoke_generator = 1
+	basic_cruiser_armor_scheme = 1
 }
 
 set_grand_doctrine = mass_assault
@@ -818,7 +823,7 @@ if = {
 	set_technology = {
 		gwtank = 1
 		basic_light_tank = 1
-
+		basic_heavy_tank = 1	
 	}
 }
 if = {
@@ -831,6 +836,8 @@ if = {
 		improved_light_tank_chassis = 1
 		engine_tech_1 = 1
 		engine_tech_2 = 1
+		armor_tech_1 = 1
+		basic_heavy_tank_chassis = 1
 	}
 }
 if = {
@@ -1407,7 +1414,7 @@ if = {
 				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 				fixed_ship_radar_slot = empty
 				fixed_ship_engine_slot = cruiser_ship_engine_2
-				fixed_ship_armor_slot = ship_armor_cruiser_1
+				fixed_ship_armor_slot = ship_armor_cruiser_2
 				mid_1_custom_slot = ship_airplane_launcher_1
 				mid_2_custom_slot = ship_anti_air_1
 				rear_1_custom_slot = ship_medium_battery_1

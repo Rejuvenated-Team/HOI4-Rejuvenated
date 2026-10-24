@@ -18,23 +18,23 @@ equipments = {
 		
 		interface_category = interface_category_land
 		
-		maximum_speed = 12
-		reliability = 0.8
+		maximum_speed = 15
+		reliability = 0.85
 		hardness = 0.1
 
 		breakthrough = 5
 
 		#Space taken in convoy
-		lend_lease_cost = 5
+		lend_lease_cost = 3
 
-		build_cost_ic = 2.5
+		build_cost_ic = 1
 		resources = {
 			#oil = 1
 			rubber = 1
 			steel = 1
 		}
 		
-		fuel_consumption = 1.2
+		fuel_consumption = 1.1
 		supply_truck = yes
 	}
 
@@ -43,8 +43,8 @@ equipments = {
 
 		archetype = motorized_equipment
 		priority = 30
-		maximum_speed = 10
-		reliability = 0.65
+		maximum_speed = 12
+		reliability = 0.70
 		breakthrough = 2			
 	}
 
@@ -71,7 +71,7 @@ equipments = {
 		
 		interface_category = interface_category_land
 		
-		maximum_speed = 12
+		maximum_speed = 15
 		reliability = 0.9
 		#hardness = 0
 
@@ -80,7 +80,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 2
 
-		build_cost_ic = 1.5
+		build_cost_ic = 0.8
 		resources = {
 			#oil = 1
 			rubber = 1
