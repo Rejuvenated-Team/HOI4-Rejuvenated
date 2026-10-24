@@ -60,6 +60,7 @@ buildings = {
 		disabled_in_dmz = yes
 		icon_frame = 2
 		value = 8
+		power_output = 1.5
 		infrastructure_construction_effect = yes
 		level_cap = {
 			shares_slots = yes
@@ -74,6 +75,7 @@ buildings = {
 		general_production = 1
 		icon_frame = 1
 		value = 5
+		power_output = 0.75
 		infrastructure_construction_effect = yes
 		level_cap = {
 			shares_slots = yes
@@ -130,6 +132,7 @@ buildings = {
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 18
 		value = 1
+		power_consumption = 10
 		spawn_point = naval_base_spawn 
 		specialization = { specialization_naval }
 		tags = { facility }
@@ -235,6 +238,7 @@ buildings = {
 		icon_frame = 4
 		only_costal = yes
 		value = 5
+		power_output = 1.5
 		tags = { naval_buildings_tag } 
 		infrastructure_construction_effect = yes
 		level_cap = {
@@ -264,9 +268,10 @@ buildings = {
 		base_cost = 14500
 		icon_frame = 10
 		#local_resources_oil = 1 # May use local_resources_ + any resource name
-		local_resources_rubber = 8 # May use local_resources_ + any resource name
+		local_resources_rubber = 2 # May use local_resources_ + any resource name
 		refinery = yes
 		value = 5
+		power_consumption = 7.5
 		infrastructure_construction_effect = yes
 		
 		show_modifier = yes
@@ -310,6 +315,7 @@ buildings = {
 		radar = yes
 		damage_factor = 0.5
 		value = 4
+		power_consumption = 1
 		centered = yes
 		allied_build = yes
 		infrastructure_construction_effect = yes
@@ -413,6 +419,7 @@ buildings = {
 		base_cost = 30000
 		icon_frame = 13
 		nuclear_reactor = yes
+		power_consumption = 8
 		value = 10
 		tags = { specialization_nuclear }
 		infrastructure_construction_effect = yes
@@ -444,6 +451,7 @@ buildings = {
 		base_cost = 25000
 		icon_frame = 13
 		nuclear_reactor = yes
+		power_consumption = 8
 		value = 10
 		infrastructure_construction_effect = yes
 
@@ -477,6 +485,7 @@ buildings = {
 		nuclear_reactor = yes
 		affects_energy = yes
 		value = 10
+		power_output = 80
 		infrastructure_construction_effect = yes
 		
 		country_modifiers = {
@@ -490,7 +499,6 @@ buildings = {
 			state_production_speed_buildings_factor = 0.15
 			local_building_slots_factor = 0.15
 			state_resources_factor = 0.1
-			local_factory_energy_consumption = -0.50
 		}
 
 		level_cap = {
@@ -507,6 +515,7 @@ buildings = {
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 20
 		value = 1
+		power_consumption = 10
 		spawn_point = special_project_facility_spawn
 		specialization = { specialization_nuclear }
 		need_supply = yes
@@ -541,6 +550,7 @@ buildings = {
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 17
 		value = 1
+		power_consumption = 10
 		spawn_point = special_project_facility_spawn 
 		specialization = { specialization_air}
 		tags = { facility }
@@ -565,6 +575,7 @@ buildings = {
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 19
 		value = 1
+		power_consumption = 10
 		spawn_point = special_project_facility_spawn 
 		specialization = { specialization_land }
 		tags = { facility }
@@ -582,6 +593,7 @@ buildings = {
 		}
 	}
 
+	#valley / generic dam
 	dam = {
 		show_on_map = 1
 		base_cost = 20000
@@ -593,6 +605,7 @@ buildings = {
 		damage_factor = -1
 		is_buildable = no
 		affects_energy = yes
+		power_output = 40
 		need_detection = yes
 		detecting_intel_type = civilian 
 		province_damage_modifiers = { flooded }
@@ -607,9 +620,10 @@ buildings = {
 			state_production_speed_buildings_factor = 0.15
 			local_building_slots_factor = 0.15
 			state_resources_factor = 0.1
-			local_factory_energy_consumption = -0.65
 		}
 	}
+	
+	#mountain-gorge dam 
 	dam_mountain = {
 		show_on_map = 1
 		base_cost = 20000
@@ -621,6 +635,7 @@ buildings = {
 		damage_factor = -1
 		is_buildable = no
 		affects_energy = yes
+		power_output = 40
 		need_detection = yes
 		detecting_intel_type = civilian 
 		province_damage_modifiers = { flooded }
@@ -634,10 +649,10 @@ buildings = {
 			state_production_speed_buildings_factor = 0.15
 			local_building_slots_factor = 0.15
 			state_resources_factor = 0.1
-			local_factory_energy_consumption = -0.65
 		}
 	}
 
+	#waterfall / cataract-style dam
 	cataract_dam_mountain = {
 		show_on_map = 1
 		base_cost = 20000
@@ -649,6 +664,7 @@ buildings = {
 		damage_factor = -1
 		is_buildable = no
 		affects_energy = yes
+		power_output = 40
 		need_detection = yes
 		detecting_intel_type = civilian 
 		province_damage_modifiers = { flooded }
@@ -662,7 +678,64 @@ buildings = {
 			state_production_speed_buildings_factor = 0.15
 			local_building_slots_factor = 0.15
 			state_resources_factor = 0.1
-			local_factory_energy_consumption = -0.65
+		}
+	}
+
+	#large-scale dam project, granted by national focuses
+	massive_dam = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 26
+		value = 5
+		tags = { dam_building }
+		spawn_point = dam_spawn
+		damage_factor = -1
+		is_buildable = no
+		affects_energy = yes
+		power_output = 50
+		need_detection = yes
+		detecting_intel_type = civilian
+		province_damage_modifiers = { flooded }
+		only_display_if_exists = yes
+		special_icon = GFX_dam_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		show_modifier = yes
+		state_modifiers = {
+			state_production_speed_buildings_factor = 0.15
+			local_building_slots_factor = 0.15
+			state_resources_factor = 0.1
+		}
+	}
+
+	#large-scale mountain-gorge dam project, granted by national focuses
+	massive_dam_mountain = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 26
+		value = 5
+		tags = { dam_building }
+		spawn_point = dam_spawn
+		damage_factor = -1
+		is_buildable = no
+		affects_energy = yes
+		power_output = 50
+		need_detection = yes
+		detecting_intel_type = civilian
+		province_damage_modifiers = { flooded }
+		only_display_if_exists = yes
+		special_icon = GFX_dam_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		show_modifier = yes
+		state_modifiers = {
+			state_production_speed_buildings_factor = 0.15
+			local_building_slots_factor = 0.15
+			state_resources_factor = 0.1
 		}
 	}
 
@@ -713,57 +786,38 @@ buildings = {
 	}
 	
 	#### Energy
-	
-	energy_infrastructure = {
-		base_cost = 12000
-		icon_frame = 30
-		value = 1
 
-		show_modifier = yes
-		affects_energy = yes
-
-		infrastructure_construction_effect = yes
-		level_cap = {
-			state_max = 1
-			shares_slots = no
-			#group_by = infrastructure_keystone
-		}
-		state_modifiers = {
-			local_factory_energy_consumption_per_infrastructure = -0.075
-		}
-	}
-	
 	industrial_infrastructure = {
 		base_cost = 12000
 		icon_frame = 31
 		value = 1
 
+		power_consumption = 8
 		show_modifier = yes
 
 
 		infrastructure_construction_effect = yes
 		level_cap = {
 			state_max = 1
-			shares_slots = no
-			#group_by = infrastructure_keystone
+			shares_slots = yes
 		}
 		state_modifiers = {
 			local_resource_gain_efficiency_per_infrastructure = 0.10
 		}
 	}
 
-	########REJUVINATED BUILDINGS###########
-
-	steelworks = {
-		show_on_map = 0
-		base_cost = 12000
-		icon_frame = 32
-		local_resources_steel = 12
-		value = 5
+	power_plant = {
+		base_cost = 8400
+		icon_frame = 30
+		value = 8
+		show_modifier = yes
+		affects_energy = yes
+		power_plant = yes
 		infrastructure_construction_effect = yes
+		per_level_extra_cost = -800
+		damage_factor = 1.5
 		level_cap = {
-			shares_slots = yes
-			state_max = 20
+			state_max = 3
 		}
 	}
 }
