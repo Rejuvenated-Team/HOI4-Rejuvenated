@@ -1,10 +1,9 @@
-state=
-{
+state = {
 	id=124
 	name="STATE_124"
 	manpower = 56988
 	
-	state_category = small_island
+	state_category = city
 	
 	history = {
 		victory_points = {
@@ -15,7 +14,7 @@ state=
 		buildings = {
 			infrastructure = 3 #was: 6
 			408 = {
-				naval_base = 1
+				naval_base = 3
 			}
 		}
 	}
@@ -23,5 +22,5 @@ state=
 		408 6258
 	}
 
-	local_supplies=0.0 
+	local_supplies = 6.0 
 }

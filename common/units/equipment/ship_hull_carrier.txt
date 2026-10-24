@@ -141,7 +141,7 @@ equipments = {
 			chromium = 1
 		}
 
-		manpower = 4500
+		manpower = 3000
 
 		naval_dominance_factor = 300
 		naval_weather_penalty_factor = 1 #this value gets -1 before its used so 1.5 will increase the effects of weather penalties by 0.5. this is base value is required for MIO stat modifiers
@@ -225,7 +225,7 @@ equipments = {
 			steel = 4
 			chromium = 1
 		}
-		manpower = 5000
+		manpower = 3200
 		naval_dominance_factor = 300
 	}
 
@@ -297,7 +297,7 @@ equipments = {
 			steel = 4
 			chromium = 2
 		}
-		manpower = 5500
+		manpower = 3400
 	}
 
 	#MODERN CARRIER
@@ -376,7 +376,7 @@ equipments = {
 			steel = 5
 			chromium = 3
 		}
-		manpower = 6500
+		manpower = 3600
 	}
 	
 	#MEGA CARRIER - ICE CARRIER - HABAKKUK
@@ -458,7 +458,7 @@ equipments = {
 			steel = 5
 			chromium = 2
 		}
-		manpower = 6000
+		manpower = 4500
 	}
 
 	ship_hull_carrier_conversion_bb = {
@@ -505,7 +505,7 @@ equipments = {
 			steel = 4
 			chromium = 1
 		}
-		manpower = 5000
+		manpower = 2500
 	}
 
 	ship_hull_carrier_conversion_ca = {
@@ -617,7 +617,7 @@ equipments = {
 			chromium = 1
 		}
 
-		manpower = 2500
+		manpower = 1000
 
 		naval_dominance_factor = 175
 		naval_weather_penalty_factor = 1 #this value gets -1 before its used so 1.5 will increase the effects of weather penalties by 0.5. this is base value is required for MIO stat modifiers

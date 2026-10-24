@@ -4,7 +4,7 @@ state={
 	name="STATE_1001"
 	manpower = 390139
 	
-	state_category = rural
+	state_category = large_town
 
 	history={
 		owner = PER
@@ -25,5 +25,5 @@ state={
 		4943 9816 5098 12773
 	}
 
-	local_supplies=0.0 
+	local_supplies = 6.0 
 }

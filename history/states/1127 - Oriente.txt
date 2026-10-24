@@ -3,8 +3,8 @@ state= {
 	name="STATE_1127"
 	manpower = 1130000
 	resources={
-		steel=62
-		chromium=22
+		steel=76
+		chromium=37
 	}
 	
 	state_category = large_town
@@ -26,5 +26,5 @@ state= {
 	}
 	provinces={	1550 7590 12347 }
 
-	local_supplies=2.0 
+	local_supplies=4.0 
 }

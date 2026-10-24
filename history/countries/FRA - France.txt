@@ -1,5 +1,10 @@
 ﻿capital = 16 # Paris/Ile de France
 
+create_intelligence_agency = {
+	name = "Deuxième Bureau"
+	icon = GFX_intelligence_agency_logo_fra
+}
+
 if = {
 	limit = {
 		NOT = {
@@ -109,6 +114,10 @@ set_technology = {
 	basic_train = 1
 	basic_fortification_tech = 1
 	steelworks_tech = 1
+	basic_machine_tools = 1
+	antitank1 = 1
+	sonar = 1
+	smoke_generator = 1
 }
 
 set_grand_doctrine = grand_battleplan

@@ -102,14 +102,25 @@ characters = {
 			allowed = {
 				original_tag = SOV
 			}
-			visible = {
-				has_completed_focus = SOV_beaten_but_not_defeated
-				NOT = {
-					has_completed_focus = SOV_the_third_rome
+			available = {
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+					else = {
+						has_completed_focus = SOV_the_hands_do
+						NOT = {
+							has_completed_focus = SOV_the_third_rome
+						}
+					}
 				}
 			}
-			available = {
-				has_completed_focus = SOV_the_hands_do
+			visible = {
+				OR = {
+					has_completed_focus = SOV_beaten_but_not_defeated
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+				}
 				NOT = {
 					has_completed_focus = SOV_the_third_rome
 				}
@@ -1991,7 +2002,10 @@ characters = {
 			logistics_skill = 1
 			visible = {
 				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+				OR = {
+					ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+					ROOT = { has_completed_focus = rj_SOV_invite_the_white_exiles }
+				}
 			}
 		}
 	}
@@ -2018,6 +2032,7 @@ characters = {
 				ROOT = { 
 					OR = {
 						has_completed_focus = SOV_beaten_but_not_defeated 
+						has_completed_focus = rj_SOV_invite_the_white_exiles 
 						has_completed_focus = GER_ally_white_russian_forces 
 						has_completed_focus = GER_war_with_the_ussr 
 					}
@@ -2043,7 +2058,10 @@ characters = {
 			logistics_skill = 3
 			visible = {
 				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+				OR = {
+					ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+					ROOT = { has_completed_focus = rj_SOV_invite_the_white_exiles }
+				}
 			}
 		}
 	}
@@ -2065,7 +2083,10 @@ characters = {
 			logistics_skill = 1
 			visible = {
 				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+				OR = {
+					ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+					ROOT = { has_completed_focus = rj_SOV_invite_the_white_exiles }
+				}
 			}
 		}
 	}
@@ -2087,7 +2108,10 @@ characters = {
 			logistics_skill = 2
 			visible = {
 				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+				OR = {
+					ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+					ROOT = { has_completed_focus = rj_SOV_invite_the_white_exiles }
+				}
 			}
 		}
 	}
@@ -2114,6 +2138,7 @@ characters = {
 				ROOT = { 
 					OR = {
 						has_completed_focus = SOV_beaten_but_not_defeated 
+						has_completed_focus = rj_SOV_invite_the_white_exiles 
 						has_completed_focus = GER_ally_white_russian_forces 
 						has_completed_focus = GER_war_with_the_ussr
 					}
@@ -2670,13 +2695,21 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-				}
-				OR = {
-					has_completed_focus = SOV_integrate_smirnovs_bloc
-					has_completed_focus = SOV_return_democracy_to_the_party
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_get_back_the_trotskyists
+					else = {
+						OR = {
+							has_global_flag = SOV_soviet_civil_war
+							has_global_flag = SOV_soviet_civil_war_over
+						}
+						OR = {
+							has_completed_focus = SOV_integrate_smirnovs_bloc
+							has_completed_focus = SOV_return_democracy_to_the_party
+						}
+					}
 				}
 				is_country_leader = no
 				if = {
@@ -2737,13 +2770,21 @@ characters = {
 				
 			}
 			available = {
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-				}
-				OR = {
-					has_completed_focus = SOV_integrate_smirnovs_bloc
-					has_completed_focus = SOV_return_democracy_to_the_party
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_reinvite_the_zinovyevites_into_the_party
+					else = {
+						OR = {
+							has_global_flag = SOV_soviet_civil_war
+							has_global_flag = SOV_soviet_civil_war_over
+						}
+						OR = {
+							has_completed_focus = SOV_integrate_smirnovs_bloc
+							has_completed_focus = SOV_return_democracy_to_the_party
+						}
+					}
 				}
 				is_country_leader = no
 				if = {
@@ -2800,9 +2841,17 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					has_completed_focus = SOV_integrate_smirnovs_bloc
-					has_completed_focus = SOV_return_democracy_to_the_party
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_get_back_the_trotskyists
+					else = {
+						OR = {
+							has_completed_focus = SOV_integrate_smirnovs_bloc
+							has_completed_focus = SOV_return_democracy_to_the_party
+						}
+					}
 				}
 				if = {
 					limit = {
@@ -2867,14 +2916,22 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					AND = {
-						SOV_is_left_opposition = yes 
-						has_completed_focus = SOV_bring_old_trotskyists_back
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
 					}
-					AND = {
-						SOV_is_right_opposition = yes 
-						has_completed_focus = SOV_cooperation_against_stalin 
+					has_completed_focus = rj_SOV_get_back_the_trotskyists
+					else = {
+						OR = {
+							AND = {
+								SOV_is_left_opposition = yes 
+								has_completed_focus = SOV_bring_old_trotskyists_back
+							}
+							AND = {
+								SOV_is_right_opposition = yes 
+								has_completed_focus = SOV_cooperation_against_stalin 
+							}
+						}
 					}
 				}
 				if = {
@@ -2932,16 +2989,24 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					AND = {
-						tag = SOV
-						SOV_is_left_opposition = yes 
-						has_completed_focus = SOV_bring_old_trotskyists_back
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
 					}
-					AND = {
-						tag = SOV
-						SOV_is_right_opposition = yes 
-						has_completed_focus = SOV_cooperation_against_stalin 
+					has_completed_focus = rj_SOV_get_back_the_trotskyists
+					else = {
+						OR = {
+							AND = {
+								tag = SOV
+								SOV_is_left_opposition = yes 
+								has_completed_focus = SOV_bring_old_trotskyists_back
+							}
+							AND = {
+								tag = SOV
+								SOV_is_right_opposition = yes 
+								has_completed_focus = SOV_cooperation_against_stalin 
+							}
+						}
 					}
 				}
 				if = {
@@ -2992,9 +3057,17 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					SOV_is_left_opposition = yes
-					has_completed_focus = SOV_return_democracy_to_the_party
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_reinvite_the_zinovyevites_into_the_party
+					else = {
+						OR = {
+							SOV_is_left_opposition = yes
+							has_completed_focus = SOV_return_democracy_to_the_party
+						}
+					}
 				}
 				if = {
 					limit = {
@@ -3056,11 +3129,19 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					SOV_is_right_opposition = yes 
-					AND = {
-						SOV_is_left_opposition = yes 
-						has_completed_focus = SOV_cooperation_against_stalin 
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_appeal_to_the_right_bloc
+					else = {
+						OR = {
+							SOV_is_right_opposition = yes 
+							AND = {
+								SOV_is_left_opposition = yes 
+								has_completed_focus = SOV_cooperation_against_stalin 
+							}
+						}
 					}
 				}
 				is_country_leader = no
@@ -3118,11 +3199,19 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					SOV_is_right_opposition = yes 
-					AND = {
-						SOV_is_left_opposition = yes 
-						has_completed_focus = SOV_cooperation_against_stalin 
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_appeal_to_the_right_bloc
+					else = {
+						OR = {
+							SOV_is_right_opposition = yes 
+							AND = {
+								SOV_is_left_opposition = yes 
+								has_completed_focus = SOV_cooperation_against_stalin 
+							}
+						}
 					}
 				}
 				is_country_leader = no
@@ -3175,9 +3264,17 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					SOV_is_right_opposition = yes
-					has_completed_focus = SOV_return_democracy_to_the_party
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_appeal_to_the_right_bloc
+					else = {
+						OR = {
+							SOV_is_right_opposition = yes 
+							has_completed_focus = SOV_return_democracy_to_the_party
+						}
+					}
 				}
 				if = {
 					limit = {
@@ -3218,9 +3315,17 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					has_completed_focus = SOV_the_need_for_policy_changes 
-					has_completed_focus = SOV_return_democracy_to_the_party
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_reinvite_the_zinovyevites_into_the_party
+					else = {
+						OR = {
+							has_completed_focus = SOV_the_need_for_policy_changes 
+							has_completed_focus = SOV_return_democracy_to_the_party
+						}
+					}
 				}
 				if = {
 					limit = {
@@ -3273,13 +3378,21 @@ characters = {
 				}
 			}
 			available = {
-				has_completed_focus = SOV_align_the_zinovyevites
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-					AND = {
-						has_completed_focus = SOV_the_plan_for_the_coup
-						has_completed_focus = SOV_coup_detat
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_reinvite_the_zinovyevites_into_the_party
+					else = {
+						has_completed_focus = SOV_align_the_zinovyevites
+						OR = {
+							has_global_flag = SOV_soviet_civil_war
+							has_global_flag = SOV_soviet_civil_war_over
+							AND = {
+								has_completed_focus = SOV_the_plan_for_the_coup
+								has_completed_focus = SOV_coup_detat
+							}
+						}
 					}
 				}
 				if = {
@@ -3339,10 +3452,18 @@ characters = {
 				}
 			}
 			available = {
-				has_completed_focus = SOV_align_the_zinovyevites
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_reinvite_the_zinovyevites_into_the_party
+					else = {
+						has_completed_focus = SOV_align_the_zinovyevites
+						OR = {
+							has_global_flag = SOV_soviet_civil_war
+							has_global_flag = SOV_soviet_civil_war_over
+						}
+					}
 				}
 				if = {
 					limit = {
@@ -3404,10 +3525,18 @@ characters = {
 				}
 			}
 			available = {
-				has_completed_focus = SOV_liberate_ryutin
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_get_back_the_trotskyists
+					else = {
+						has_completed_focus = SOV_liberate_ryutin
+						OR = {
+							has_global_flag = SOV_soviet_civil_war
+							has_global_flag = SOV_soviet_civil_war_over
+						}
+					}
 				}
 				if = {
 					limit = {
@@ -3423,7 +3552,7 @@ characters = {
 				}
 			}
 			traits = {
-				anti_stalinist_propagandist 
+				skillful_propagandist #rj had to be renamed due to funny Stalin path issues 
 			}
 			ai_will_do = {
 				base = 0.5
@@ -3486,10 +3615,21 @@ characters = {
 				original_tag = SOV
 			}
 			visible = {
-				has_completed_focus = SOV_beaten_but_not_defeated
+				OR = {
+					has_completed_focus = SOV_beaten_but_not_defeated
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+				}
 			}
 			available = {
-				has_completed_focus = SOV_return_of_the_rocor
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+					else = {
+						has_completed_focus = SOV_return_of_the_rocor
+					}
+				}
 			}
 			traits = {
 				orthodox_rabblerouser
@@ -3521,10 +3661,21 @@ characters = {
 				original_tag = SOV
 			}
 			visible = {
-				has_completed_focus = SOV_beaten_but_not_defeated
+				OR = {
+					has_completed_focus = SOV_beaten_but_not_defeated
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+				}
 			}
 			available = {
-				has_completed_focus = SOV_the_declaration
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+					else = {
+						has_completed_focus = SOV_the_declaration
+					}
+				}
 			}
 			traits = {
 				theocratic_diplomat
@@ -3556,10 +3707,21 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				has_completed_focus = SOV_the_declaration
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+					else = {
+						has_completed_focus = SOV_the_declaration
+					}
+				}
 			}
 			visible = {
-				has_completed_focus = SOV_beaten_but_not_defeated
+				OR = {
+					has_completed_focus = SOV_beaten_but_not_defeated
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+				}
 			}
 			traits = {
 				driver_of_the_faithful
@@ -3573,8 +3735,9 @@ characters = {
 	SOV_anastasy_vonsyatsky = {
 		name = SOV_anastasy_vonsyatsky
 		portraits = {
-			army = {
-				small = "GFX_idea_SOV_anastasy_vonsyatsky"
+			civilian = {
+				large = "GFX_kr_portrait_SOV_anastasy_vonsyatsky"
+				small = "GFX_kr_portrait_SOV_anastasy_vonsyatsky_small"
 			}
 		}
 		allowed_civil_war = {
@@ -3616,8 +3779,8 @@ characters = {
 		name = SOV_grigory_semyonov
 		portraits = {
 			army = {
-				small = "GFX_idea_SOV_grigory_semyonov"
-				large = "GFX_portrait_SOV_grigory_semyonov"
+				small = "GFX_kr_portrait_SOV_grigory_semyonov_small"
+				large = "GFX_kr_portrait_SOV_grigory_semyonov"
 			}
 		}
 
@@ -3633,6 +3796,7 @@ characters = {
 				OR = {
 					has_idea = SOV_grigory_semyonov
 					has_completed_focus = SOV_approach_semyonov
+					has_completed_focus = rj_SOV_invite_the_white_exiles
 				}
 			}
 		}
@@ -3664,7 +3828,15 @@ characters = {
 				
 				if = {
 					limit = { original_tag = SOV }
-					has_completed_focus = SOV_approach_semyonov
+					if = {
+						limit = {
+							has_country_flag = SOV_the_all_russian_united_front_cflg
+						}
+						has_completed_focus = rj_SOV_invite_the_white_exiles
+						else = {
+							has_completed_focus = SOV_approach_semyonov
+						}
+					}
 				}
 				if = {
 					limit = {
@@ -3708,7 +3880,15 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				has_completed_focus = SOV_consolidate_power
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+					else = {
+						has_completed_focus = SOV_consolidate_power
+					}
+				}
 			}
 			traits = {
 				political_chameleon
@@ -3745,7 +3925,15 @@ characters = {
 				}
 			}
 			available = {
-				has_completed_focus = SOV_reconvene_the_zemsky_sobor
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+					else = {
+						has_completed_focus = SOV_reconvene_the_zemsky_sobor
+					}
+				}
 				if = {
 					limit = {
 						has_character_flag = SOV_exiled_flag
@@ -3794,10 +3982,18 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				SOV_is_exiles = yes
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+					else = {
+						SOV_is_exiles = yes
+						OR = {
+							has_global_flag = SOV_soviet_civil_war
+							has_global_flag = SOV_soviet_civil_war_over
+						}
+					}
 				}
 				if = {
 					limit = {
@@ -3837,10 +4033,18 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				SOV_is_exiles = yes
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+					else = {
+						SOV_is_exiles = yes
+						OR = {
+							has_global_flag = SOV_soviet_civil_war
+							has_global_flag = SOV_soviet_civil_war_over
+						}
+					}
 				}
 				if = {
 					limit = {
@@ -3880,10 +4084,18 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				SOV_is_exiles = yes
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+					else = {
+						SOV_is_exiles = yes
+						OR = {
+							has_global_flag = SOV_soviet_civil_war
+							has_global_flag = SOV_soviet_civil_war_over
+						}
+					}
 				}
 				if = {
 					limit = {
@@ -3924,10 +4136,18 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				SOV_is_exiles = yes
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
+				if = {
+					limit = {
+						has_country_flag = SOV_the_all_russian_united_front_cflg
+					}
+					has_completed_focus = rj_SOV_invite_the_white_exiles
+					else = {
+						SOV_is_exiles = yes
+						OR = {
+							has_global_flag = SOV_soviet_civil_war
+							has_global_flag = SOV_soviet_civil_war_over
+						}
+					}
 				}
 				if = {
 					limit = {

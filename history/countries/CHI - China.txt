@@ -1,5 +1,10 @@
 ﻿capital = 1035 # Nanjing
 
+create_intelligence_agency = {
+	name = "Military Commission Social Service Department"
+	icon = GFX_intelligence_agency_logo_chi
+}
+
 IF = {
 	limit = {
 		has_dlc = "No Compromise, No Surrender"

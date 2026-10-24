@@ -18,6 +18,11 @@
 	}
 }
 
+create_intelligence_agency = {
+	name = "Central Social Affairs Department"
+	icon = GFX_intelligence_agency_logo_PRC_central_social_affairs_department
+}
+
 # Politics, oops all communism!
 
 set_politics = {
