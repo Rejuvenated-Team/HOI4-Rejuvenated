@@ -3,11 +3,13 @@ state = {
 	name = "STATE_528" # North Kyushu
 	manpower = 6046000 # was 9069000
 
-	state_category = city # was large_city
+	state_category = metropolis
 
 	resources = {
 		chromium = 32 # was: 88, then 52
-		coal = 15 # initial distribution
+		coal = 45 # initial distribution
+		steel = 14
+		tungsten = 3
 	}
 
 	history = {
@@ -23,6 +25,10 @@ state = {
 			industrial_complex = 1
 
 			9950 = {
+				naval_base = 6
+			}
+
+			1025 = {
 				naval_base = 6
 			}
 
@@ -60,5 +66,5 @@ state = {
 		1025 1158 4027 4164 7110 9950 10011 10020 10092 11925 
 	}
 
-	local_supplies = 10.0 
+	local_supplies = 12.0 
 }

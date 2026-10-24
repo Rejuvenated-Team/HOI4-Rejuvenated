@@ -135,4 +135,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/kr/OTT_opda.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_goal_align_russia"
+		texturefile = "gfx/interface/goals/kr/align_russia.dds"
+	}
+
 }

@@ -140,7 +140,7 @@ equipments = {
 			chromium = 1
 		}
 
-		manpower = 4000
+		manpower = 1500
 
 		naval_dominance_factor = 300
 		naval_weather_penalty_factor = 1 #this value gets -1 before its used so 1.5 will increase the effects of weather penalties by 0.5. this is base value is required for MIO stat modifiers
@@ -206,7 +206,7 @@ equipments = {
 			chromium = 1
 		}
 
-		manpower = 3200
+		manpower = 1200
 	}
 	ship_hull_heavy_1 = {
 		abbreviation = "hcc"
@@ -364,7 +364,7 @@ equipments = {
 			chromium = 1
 		}
 
-		manpower = 5200
+		manpower = 1800
 	}
 
 	ship_hull_heavy_3 = {
@@ -430,7 +430,7 @@ equipments = {
 			chromium = 1
 		}
 
-		manpower = 6000
+		manpower = 2300
 	}
 
 	ship_hull_heavy_4 = {
@@ -497,7 +497,7 @@ equipments = {
 			chromium = 1
 		}
 
-		manpower = 6000
+		manpower = 2750
 	}
 	ship_hull_heavy_modern = {
 		abbreviation = "hcf"
@@ -569,7 +569,7 @@ equipments = {
 			chromium = 3
 		}
 
-		manpower = 6000
+		manpower = 3000
 	}
 
 	ship_hull_super_heavy_1 = {
@@ -667,7 +667,7 @@ equipments = {
 			steel = 1
 			chromium = 1
 		}
-		manpower = 9000
+		manpower = 2500
 	}
 
 	battleship_1 = { 
@@ -775,7 +775,7 @@ equipments = {
 			chromium = 1
 		}
 
-		manpower = 6000
+		manpower = 1500
 	}
 	
 	battleship_2 = {
@@ -828,7 +828,7 @@ equipments = {
 			steel = 4
 			chromium = 1
 		}
-		manpower = 6600
+		manpower = 1750
 		
 	}
 	
@@ -883,7 +883,7 @@ equipments = {
 			steel = 4
 			chromium = 2
 		}
-		manpower = 7000
+		manpower = 2300
 
 	}
 	
@@ -938,7 +938,7 @@ equipments = {
 			steel = 5
 			chromium = 3
 		}
-		manpower = 7400
+		manpower = 2700
 		
 	}
 
@@ -1061,7 +1061,7 @@ equipments = {
 			steel = 4
 			chromium = 1
 		}
-		manpower = 9000
+		manpower = 2500
 	}
 	
 	SH_battleship_2 = {
@@ -1184,7 +1184,7 @@ equipments = {
 			steel = 5
 			chromium = 3
 		}
-		manpower = 10000
+		manpower = 3000
 		
 	}
 	battle_cruiser_1 = {
@@ -1239,7 +1239,7 @@ equipments = {
 			chromium = 1
 		}
 		
-		manpower = 3500
+		manpower = 1200
 	}
 	
 	battle_cruiser_2 = {
@@ -1293,7 +1293,7 @@ equipments = {
 			steel = 4
 			chromium = 1
 		}
-		manpower = 4000
+		manpower = 1400
 	}
 
 	modern_battleship = {
@@ -1414,7 +1414,7 @@ equipments = {
 			steel = 5
 			chromium = 3
 		}
-		manpower = 8000
+		manpower = 3000
 
 	}
 

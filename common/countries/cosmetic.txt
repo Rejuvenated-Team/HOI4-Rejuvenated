@@ -1858,10 +1858,16 @@ SIA_thailand = { #Mandate 1, Phibun, historical
 }
 
 SIA_great_thai_empire = { #Mandate 1, Phibun, historical
-	color = rgb { 252 253 254 } 
+	color = rgb { 252 253 254 }
 	color_ui = rgb { 252 253 254 }
 }
-CZE_puppet = {	
+
+SIA_pan_tai_empire = { 
+	color = rgb { 212 160 23 }
+	color_ui = rgb { 212 160 23 }
+}
+
+CZE_puppet = {
 	color = rgb { 54 167 156 }
 	color_ui = rgb { 70 217 203 }
 }
@@ -1909,6 +1915,11 @@ CZE_first_monarchy_color = {
 AST_australasia = {
 	color = rgb { 0 102 180 }
 	color_ui = rgb { 0 102 180 }
+}
+
+AST_monarchy = {
+	color = rgb { 218 165 32 }
+	color_ui = rgb { 218 165 32 }
 }
 
 #### REJUVENATED ####
