@@ -240,7 +240,7 @@
 		y = 1
 		relative_position_id = SWI_reaffirm_spiritual_defense
 		prerequisite = { focus = SWI_reaffirm_spiritual_defense }
-		cost = 10
+		cost = 5
 	
 		ai_will_do = {
 			factor = 10
@@ -264,7 +264,7 @@
 				every_owned_state = {
 					add_building_construction = {
 						type = bunker
-						level = 2
+						level = 3
 						instant_build = yes
 						province = {
 							all_provinces = yes
@@ -294,7 +294,7 @@
 		y = 1
 		relative_position_id = SWI_reaffirm_spiritual_defense
 		prerequisite = { focus = SWI_reaffirm_spiritual_defense }
-		cost = 10
+		cost = 5
 	
 		ai_will_do = {
 			factor = 10
@@ -318,7 +318,7 @@
 				every_owned_state = {
 					add_building_construction = {
 						type = bunker
-						level = 2
+						level = 3
 						instant_build = yes
 						province = {
 							all_provinces = yes
@@ -348,7 +348,7 @@
 		y = 1
 		relative_position_id = SWI_reaffirm_spiritual_defense
 		prerequisite = { focus = SWI_reaffirm_spiritual_defense }
-		cost = 10
+		cost = 5
 	
 		ai_will_do = {
 			factor = 10
@@ -378,7 +378,7 @@
 				every_owned_state = {
 					add_building_construction = {
 						type = bunker
-						level = 2
+						level = 3
 						instant_build = yes
 						province = {
 							all_provinces = yes
@@ -778,7 +778,7 @@
 		
 		prerequisite = { focus = SWI_armed_neutrality }
 		mutually_exclusive = { focus = SWI_frontier_defense_plan }
-		cost = 10
+		cost = 5
 	
 		ai_will_do = {
 			factor = 10
@@ -813,7 +813,7 @@
 		y = 1
 		relative_position_id = SWI_promote_guisan
 		prerequisite = { focus = SWI_promote_guisan }
-		cost = 10
+		cost = 7.2
 	
 		ai_will_do = {
 			factor = 10
@@ -841,7 +841,7 @@
 			847 = { #Western Swiss Alps
 				add_building_construction = {
 					type = bunker
-					level = 2
+					level = 4
 					instant_build = yes
 					province = {
 						all_provinces = yes
@@ -852,7 +852,7 @@
 			151 = { #Eastern Swiss Alps
 				add_building_construction = {
 					type = bunker
-					level = 2
+					level = 4
 					instant_build = yes
 					province = {
 						all_provinces = yes
@@ -862,7 +862,7 @@
 			846 = { #Ticino
 				add_building_construction = {
 					type = bunker
-					level = 2
+					level = 4
 					instant_build = yes
 					province = {
 						all_provinces = yes
