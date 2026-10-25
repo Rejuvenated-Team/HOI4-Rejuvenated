@@ -14953,7 +14953,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_baltic_security
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -15040,7 +15040,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_respect_baltic_self_determination
-		cost = 10
+		cost = 7.2
 		
 		ai_will_do = {
 			factor = 1
@@ -15205,7 +15205,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_claims_in_baltic
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -15310,7 +15310,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_claims_on_poland
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -15413,7 +15413,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_claims_on_poland
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -15518,7 +15518,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SOV_claims_on_poland
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 2.5
@@ -15646,7 +15646,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_claim_on_bessarabia
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -15699,7 +15699,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_claim_on_bessarabia
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -15881,7 +15881,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_middle_east_diplomacy
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
