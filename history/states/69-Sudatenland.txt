@@ -3,11 +3,7 @@ state = {
 	name = "STATE_69"
 	manpower = 2476250 # was 2830000
 	
-	state_category = town
-	
-	resources = {
-		steel = 4 # was: 8
-	}
+	state_category = large_city
 	
 	history = {
 
@@ -53,18 +49,11 @@ state = {
 			}
 
 		}
-
-		1938.9.30 = {
-			owner = GER
-			controller = GER
-			add_core_of = GER
-		}
-
 	}
 
 	provinces = {
 		424 469 3418 3585 6470 9555 11401 11414 11432 	
 	}
-	local_supplies = 0.0 
+	local_supplies = 8.0 
 
 }

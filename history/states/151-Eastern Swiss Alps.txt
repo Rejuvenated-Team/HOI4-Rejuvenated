@@ -14,6 +14,10 @@ state={
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
+
+			11601 = {
+				bunker = 4
+			}
 		}
 		add_core_of = SWI
 	}

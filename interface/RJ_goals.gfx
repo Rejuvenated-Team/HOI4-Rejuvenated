@@ -855,6 +855,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/sov/RJ_SOV_deep_operations.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_positive_heroism"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_positive_heroism.dds"
+	}
+
 	#################################
 	### FRANCE ######################
 	#################################
@@ -878,11 +883,6 @@ spriteTypes = {
 		name = "GFX_focus_RJ_FRA_reform_the_bank_of_france"
 		texturefile = "gfx/interface/goals/fra/RJ_FRA_reform_the_bank_of_france.dds"
 	}
-
-
-
-
-
 
 
 	###########
