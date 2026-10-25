@@ -1,0 +1,139 @@
+add_namespace = SAU
+
+country_event = { #Dammam Well No. 7 - Initial Oil
+	id = SAU.1
+	title = "Oil Struck!"
+	desc = SAU.1.d
+	picture = GFX_SAU_dammam_drillers
+
+	trigger = {
+		date > 1937.10.1
+		controls_state = 859
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	fire_only_once = yes
+
+	option = {
+		name = "Patience is paying off!"
+		ai_chance = {
+			base = 1
+		}
+		add_resource = {
+			type = oil
+			amount = 1
+			state = 859
+		}
+	}
+}
+
+country_event = { #Dammam Well No. 7 - Jackpot
+	id = SAU.2
+	title = "Well No. 7 A Success"
+	desc = SAU.2.d
+	picture = GFX_SAU_dammam_well
+
+	trigger = {
+		date > 1938.03.1
+		controls_state = 859
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	fire_only_once = yes
+
+	option = {
+		name = "Amazing!"
+		ai_chance = {
+			base = 1
+		}
+		add_resource = {
+			type = oil
+			amount = 5
+			state = 859
+		}
+	}
+}
+
+country_event = { #Dammam Well No. 7 - 1939 Development
+	id = SAU.3
+	title = "Well No. 7 Oil Report"
+	desc = SAU.3.d
+	picture = GFX_SAU_dammam_development
+
+	trigger = {
+		date > 1939.02.1
+		controls_state = 859
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	fire_only_once = yes
+
+	option = {
+		name = "What fantastic developments!"
+		ai_chance = {
+			base = 1
+		}
+		add_resource = {
+			type = oil
+			amount = 15
+			state = 859
+		}
+		859 = {
+			increase_state_category = yes
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = fuel_silo
+				level = 2
+				instant_build = yes
+			}
+			set_victory_points = {
+				province = 12702
+				value = 3
+			}
+		}
+	}
+}
+
+country_event = { #Dammam Well No. 7 - 1940 Development
+	id = SAU.4
+	title = "Well No. 7 Oil Report #2"
+	desc = SAU.4.d
+	picture = GFX_SAU_dammam_well
+
+	trigger = {
+		date > 1940.02.1
+		controls_state = 859
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	fire_only_once = yes
+
+	option = {
+		name = "It keeps getting better!"
+		ai_chance = {
+			base = 1
+		}
+		add_resource = {
+			type = oil
+			amount = 10
+			state = 859
+		}
+		859 = {
+			increase_state_category = yes
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}

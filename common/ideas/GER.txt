@@ -5527,8 +5527,10 @@ ideas = {
 
 			equipment_bonus = {
 				armored_car_equipment = {
-					build_cost_ic = -0.05
-					armor_value = 0.05
+					build_cost_ic = -0.15
+					armor_value = 0.10
+					reliability_factor = 0.05
+					soft_attack = 0.05
 					instant = yes
 				}
 			}

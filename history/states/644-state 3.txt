@@ -2,6 +2,10 @@ state = {
 	id = 644
 	name = "STATE_644" # Kolyma
 
+	resources = {
+		chromium = 3
+	}
+
 	history = {
 		owner = SOV
 		victory_points = {
@@ -20,7 +24,7 @@ state = {
 	}
 	manpower = 13090
 	buildings_max_level_factor = 1
-	state_category = "wasteland"
+	state_category = rural
 
-	local_supplies = 0.0 
+	local_supplies = 3.0 
 }

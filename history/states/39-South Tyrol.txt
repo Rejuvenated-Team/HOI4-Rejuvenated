@@ -5,10 +5,6 @@ state = {
 	manpower = 298290 # was 641650 before Trentino split
 	
 	state_category = town
-	
-	resources = {
-		aluminium = 14 # was: 22
-	}
 
 	history = {
 		victory_points = { #Bolzano
@@ -28,5 +24,5 @@ state = {
 		656 6675 9630 11598 11615
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 4.0 
 }

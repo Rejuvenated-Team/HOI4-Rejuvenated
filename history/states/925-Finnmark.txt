@@ -4,7 +4,7 @@ state = {
 
 	manpower = 142100 # 355251
 	
-	state_category = pastoral
+	state_category = rural
 	
 	resources = {
 		tungsten = 5
@@ -34,5 +34,5 @@ state = {
 		22 64 76 128 2995 3016 3040 6015 6092 9042 9064 9089 9116 9128 9191 11034 11063 11077 11104 11169 
 	}
 
-	local_supplies = 0.000
+	local_supplies = 3.000
 }

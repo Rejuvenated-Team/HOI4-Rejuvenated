@@ -17,9 +17,11 @@ sub_units = {
 		
 		categories = {
 			category_support_battalions
+			category_divisional_support_battalions
 			category_army
 		}
-	
+		
+		regimental = no
 		combat_width = 0
 	
 		#Size Definitions
@@ -35,7 +37,7 @@ sub_units = {
 		can_be_parachuted = yes
 		
 		# Important Ability
-		reliability_factor = 0.05
+		reliability_factor = 0.10
 		equipment_capture_factor = 0.05
 		
 		essential = {
@@ -73,6 +75,7 @@ sub_units = {
 		
 		categories = {
 			category_support_battalions
+			category_divisional_support_battalions
 			category_tanks
 			category_all_armor
 			category_army
@@ -83,7 +86,8 @@ sub_units = {
 			max_strength = 0.1
 			add = yes
 		}
-	
+		
+		regimental = no
 		combat_width = 0
 	
 		#Size Definitions
@@ -99,7 +103,7 @@ sub_units = {
 		can_be_parachuted = no
 		
 		# Important Ability
-		reliability_factor = 0.02 #Less than reg maintenance (0.05)
+		reliability_factor = 0.06 #Less than reg maintenance (0.05)
 		equipment_capture_factor = 0.1 #More than reg maintenance (0.05)
 		recovery = 0.1 #More than reg maintenance (0)
 

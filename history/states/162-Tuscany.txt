@@ -6,6 +6,11 @@ state = {
 	
 	state_category = large_city
 
+	resources = {
+		tungsten = 35
+		steel = 50
+	}
+
 	history = {
 		owner = ITA
 		victory_points = {
@@ -31,21 +36,16 @@ state = {
 			}
 			11833 = {
 				naval_base = 4
+				naval_facility = 1
 			}
 		}
 		add_core_of = ITA
 		add_core_of = TOS
-		1939.1.1 = {
-			buildings = {
-				arms_factory = 2
-				industrial_complex = 2
-			}
-		}
 	}
 
 	provinces = {
 		910 1616 3885 6875 6946 6973 9750 9879 9907 11833 11889 
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 7.0 
 }

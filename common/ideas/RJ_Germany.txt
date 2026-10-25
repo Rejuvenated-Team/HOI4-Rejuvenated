@@ -1,0 +1,50 @@
+ideas = {
+	country = {
+		RJ_GER_idea_peenemunde_west = {
+			picture = generic_rocket_bonus
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				rocket_attack_factor = 0.10
+				production_speed_rocket_site_factor = 0.15
+				special_project_speed_factor = 0.05
+			}
+
+			research_bonus = {
+				rocketry = 0.10
+			}
+		}
+
+		RJ_GER_idea_peenemunde_ost = {
+			picture = generic_research_bonus
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.05
+				special_project_speed_factor = 0.05
+			}
+
+			research_bonus = {
+				infantry_tech = 0.10
+				motorization_tech = 0.10
+				armor = 0.10
+			}
+		}
+	}
+}

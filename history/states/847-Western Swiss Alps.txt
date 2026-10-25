@@ -3,7 +3,13 @@ state={
 	id=847
 	name="STATE_847"
 	manpower = 178429
-	state_category = pastoral
+	state_category = rural
+
+	resources = {
+		aluminium = 7
+		chromium = 1
+		steel = 4
+	}
 	history={
 		owner = SWI
 		buildings = {
@@ -12,11 +18,14 @@ state={
 			636 = {
 				dam = 1 #Grimselsee
 			}
+			3612 = {
+				bunker = 3
+			}
 		}
 		add_core_of = SWI
 	}
 	provinces={
 		636 9587 3612 9618  
 	}
-	local_supplies=0.0 
+	local_supplies = 3.0 
 }

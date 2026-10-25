@@ -4,10 +4,11 @@ state={
 	name="STATE_226" # Dnipropertovsk
 	manpower = 2391047
 	
-	state_category = town
+	state_category = large_city
 	
 	resources={
 		oil=4 # was: 6
+		steel = 67
 	}
 
 	history={
@@ -31,5 +32,5 @@ state={
 		453 472 486 6423 9419 9433 9463 9479 11422 11437 11452 11561 
 	}
 
-	local_supplies=0.0 
+	local_supplies=8.0 
 }

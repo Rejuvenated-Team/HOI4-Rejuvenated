@@ -2,10 +2,11 @@ state = {
 	id = 635
 	name = "STATE_635"
 	resources = {
-		chromium = 90 # was: 178.000
+		chromium = 121 # was: 178.000
+		steel = 9
 	}
 	
-	state_category = small_island
+	state_category = town
 
 	history = {
 
@@ -19,7 +20,7 @@ state = {
 		buildings = {
 			infrastructure = 2
 			4268 = {
-				naval_base = 1
+				naval_base = 3
 			}
 		}
 	}
@@ -30,5 +31,5 @@ state = {
 	manpower = 31876
 	buildings_max_level_factor = 1.000
 
-	local_supplies = 0.0 
+	local_supplies = 4.0 
 }

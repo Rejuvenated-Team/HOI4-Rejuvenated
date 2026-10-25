@@ -6,10 +6,12 @@ state = {
 
 	resources = {
 		steel = 18 #Took half of Tohoku's steel
-		coal = 10 #initial distribution
+		coal = 25
+		chromium = 27
+		aluminium = 3
 	}
 	
-	state_category = rural
+	state_category = city
 
 	history = {
 
@@ -19,9 +21,15 @@ state = {
 		add_core_of = ANU
 
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
 			10444 = {
 				dam = 1 #Chitose Dam
+				naval_base = 4
+			}
+			4646 = {
+				naval_base = 1
 			}
 		}
 
@@ -41,5 +49,5 @@ state = {
 		1512 1642 3962 4576 4646 7532 7595 10444 10512 12352 12421 12493 
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 9.0 
 }
