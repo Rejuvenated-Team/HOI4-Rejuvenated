@@ -22,7 +22,7 @@ YUG_army = {
 }
 YUG_corruption = {
 	enable = { always = yes }
-	icon = ARG_political_corruption_modifier
+	icon = GFX_idea_ARG_political_corruption_modifier
 
 	political_power_factor = YUG_corruption_political_power_factor
 	stability_factor = YUG_corruption_stability_factor
@@ -30,7 +30,7 @@ YUG_corruption = {
 }
 YUG_regency = {
 	enable = { always = yes }
-	icon = PER_unification_initiative_idea
+	icon = GFX_idea_PER_unification_initiative_idea
 
 	political_power_factor = YUG_regency_political_power_factor
 	stability_factor = YUG_regency_stability_factor
