@@ -3,12 +3,12 @@ state = {
 	name = "STATE_976"
 	manpower = 1500000
 	
-	state_category = city
+	state_category = large_city
 	
 	resources = {
-		steel = 15 # was: 8
+		steel = 52 # was: 8
 		aluminium = 1 # was: 1
-		coal = 1 #initial distribution /5 total
+		coal = 19
 	}
 
 	history = {
@@ -19,6 +19,7 @@ state = {
 		buildings = {
 			infrastructure = 3 
 			industrial_complex = 2
+			arms_factory = 1
 		}
 
 		victory_points = {
@@ -44,5 +45,5 @@ state = {
 		653 3673 3674 6687 9646 9648 9650 9679 11612 
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 8.0 
 }

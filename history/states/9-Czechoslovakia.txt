@@ -4,7 +4,7 @@ state={
 	manpower = 4492600
 	resources={
 		steel = 5 # was: 8
-		coal = 6 # initial distribution / 60 total
+		coal = 50 # initial distribution / 60 total
 	}
 	
 	state_category = metropolis
@@ -36,5 +36,5 @@ state={
 		445 494 583 3462 6418 6440 6592 9414 9421 9429 9541 9569 11542 11556 
 	}
 
-	local_supplies=8.0 
+	local_supplies=12.0 
 }

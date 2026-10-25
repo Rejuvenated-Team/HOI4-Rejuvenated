@@ -114,6 +114,24 @@ division_template = {
 }
 
 division_template = {
+	name = "Tyazhelyy Mekhanizirovaniy Korpus" 				# Represents regular mechanized corps (4 existed in 1935-38); 
+	division_names_group = SOV_MEC_01
+												# Also represents groups of independent tank, mech brigades of the time, though groups are best represented by tank bge 
+													# (2x M/L tank + 1x mot), and 2x mech bge (2x L tank + 1x mot)
+	regiments = {
+		heavy_armor = { x = 0 y = 0 }
+		heavy_armor = { x = 0 y = 1 }
+		heavy_armor = { x = 1 y = 0 }		
+		heavy_armor = { x = 1 y = 1 }		
+		heavy_armor = { x = 1 y = 2 }		
+		motorized = { x = 2 y = 0 }		
+		motorized = { x = 2 y = 1 }	
+		motorized = { x = 2 y = 2 }		
+		motorized = { x = 2 y = 3 }		
+	}
+}
+
+division_template = {
 	name = "Vozdushno-Desantnaya Brigada"			# Airborne Brigade
 	division_names_group = SOV_PAR_01
 
@@ -194,7 +212,29 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.85
 
-	}			
+	}
+	division= {	# Heavies	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = 1821
+		division_template = "Tyazhelyy Mekhanizirovaniy Korpus"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.80
+
+	}
+	division= {	# Heavies	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 9292
+		division_template = "Tyazhelyy Mekhanizirovaniy Korpus"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.80
+
+	}
 	division= {	# "56ya 'Moskva' Strelk. Div."		
 		division_name = {
 			is_name_ordered = yes
@@ -1864,6 +1904,18 @@ instant_effect = {
 		requested_factories = 3
 		progress = 0.4
 		efficiency = 50
+		industrial_manufacturer = mio:SOV_morozov_design_bureau_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = heavy_tank_chassis_0
+			creator = "SOV" 
+			version_name = "T-35"
+		}
+		requested_factories = 5
+		progress = 0.6
+		efficiency = 70
 		industrial_manufacturer = mio:SOV_morozov_design_bureau_organization
 	}
 
