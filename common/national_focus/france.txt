@@ -156,7 +156,7 @@
 		prerequisite = { focus = RJ_FRA_metropolitan_investments }
 		mutually_exclusive = { }
 		relative_position_id = RJ_FRA_metropolitan_investments
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
