@@ -144,7 +144,7 @@ set_technology = {
 	fuel_refining = 1
 	steelworks_tech = 1
 	basic_machine_tools = 1
-	antitank1 = 1
+	interwar_antitank = 1
 }
 
 set_grand_doctrine = grand_battleplan

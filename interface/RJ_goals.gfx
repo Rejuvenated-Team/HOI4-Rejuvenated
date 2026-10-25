@@ -855,6 +855,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/sov/RJ_SOV_deep_operations.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_positive_heroism"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_positive_heroism.dds"
+	}
+
 
 
 	###########

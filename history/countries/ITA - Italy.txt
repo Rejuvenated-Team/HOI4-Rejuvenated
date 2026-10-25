@@ -371,7 +371,7 @@ set_technology = {
 	basic_train = 1
 	steelworks_tech = 1
 	basic_machine_tools = 1
-	antitank1 = 1
+	interwar_antitank = 1
 	smoke_generator = 1
 }
 

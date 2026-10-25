@@ -7374,7 +7374,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_military_reorganization
-		cost = 10
+		cost = 7.2
 
 		mutually_exclusive = { focus = SOV_swap_to_political_advisors }
 
@@ -7466,7 +7466,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SOV_military_reorganization
-		cost = 10
+		cost = 7.2
 
 		mutually_exclusive = { focus = SOV_keep_commissars_organization }
 
@@ -12994,12 +12994,12 @@ focus_tree = {
 
 	focus = {
 		id = SOV_positive_heroism
-		icon = GFX_goal_generic_cavalry
+		icon = GFX_focus_RJ_SOV_positive_heroism
 		prerequisite = { focus = SOV_expand_the_agitprop }
 		x = 2
 		y = 1
 		relative_position_id = SOV_expand_the_agitprop
-		cost = 5
+		cost = 7.2
 
 		mutually_exclusive = { focus = SOV_collectivist_propaganda }
 
@@ -13011,6 +13011,8 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 25
+			add_ideas = SOV_positive_heroism_idea
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = konstantin_rokossovsky 
 			custom_effect_tooltip = available_theorist
@@ -14953,7 +14955,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_baltic_security
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -15040,7 +15042,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_respect_baltic_self_determination
-		cost = 10
+		cost = 7.2
 		
 		ai_will_do = {
 			factor = 1
@@ -15205,7 +15207,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_claims_in_baltic
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -15310,7 +15312,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_claims_on_poland
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -15413,7 +15415,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_claims_on_poland
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -15518,7 +15520,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SOV_claims_on_poland
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 2.5
@@ -15646,7 +15648,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_claim_on_bessarabia
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -15699,7 +15701,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_claim_on_bessarabia
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -15881,7 +15883,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_middle_east_diplomacy
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1

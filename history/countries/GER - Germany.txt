@@ -108,7 +108,7 @@ set_technology = {
 	experimental_rockets = 1
 	basic_machine_tools = 1
 	smoke_generator = 1
-	antitank1 = 1
+	interwar_antitank = 1
 }
 if = {
 	limit = {

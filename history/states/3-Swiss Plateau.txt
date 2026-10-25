@@ -18,6 +18,10 @@ state={
 			air_base = 4
 			663 = {
 				dam = 1 #Laufenburg Dam; Swiss Part
+				bunker = 1
+			}
+			11623 = {
+				bunker = 1
 			}
 		}
 		add_core_of = SWI
