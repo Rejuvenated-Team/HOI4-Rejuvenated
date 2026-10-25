@@ -1654,52 +1654,25 @@ focus_tree = {
 		x = 25
 		y = 0
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 20
 		}
 		
 		available = {
-			compare_autonomy_progress_ratio > 0.50
-			compare_autonomy_state > autonomy_fr_colony
-			is_subject_of = FRA
-		}
-
-		complete_tooltip = {
-			add_autonomy_ratio = {
-				value = -0.15
-				localization = RAJ_strengthen_ties_with_british_investors
-			}
-			random_state = {
-				limit = {
-					has_state_flag = RAJ_strengthen_ties_with_british_investors_AF1
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_state = {
-				limit = {
-					has_state_flag = RAJ_strengthen_ties_with_british_investors_AF2
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
+			OR = {
+				is_subject_of = FRA
+				FRA = {
+					has_opinion = {
+						target = MOR
+						value > 39
+					}
 				}
 			}
 		}
 
 		completion_reward = {
-			add_autonomy_ratio = {
-				value = -0.15
-				localization = RAJ_strengthen_ties_with_british_investors
-			}
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -1714,23 +1687,36 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = RAJ_strengthen_ties_with_british_investors_AF1
 			}
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
-						building = arms_factory
+						building = industrial_complex
 						size > 0
 						include_locked = yes
 					}
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = arms_factory
+					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = RAJ_strengthen_ties_with_british_investors_AF2
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -1742,7 +1728,7 @@ focus_tree = {
 		x = 26
 		y = 1
 
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 10
@@ -1752,30 +1738,16 @@ focus_tree = {
 			NOT = { has_war_with = FRA }
 		}
 
-		complete_tooltip = {
-			every_state = {
-				limit = { has_state_flag = MAN_invite_japanese_settlers_2IC }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-
 		completion_reward = {
-			random_owned_state = {
-				limit = { is_fully_controlled_by = ROOT }
+			random_owned_controlled_state = {
+				prioritize = { 462 }
 				add_manpower = 26487
 				add_extra_state_shared_building_slots = 2
-				set_state_flag = MAN_invite_japanese_settlers_2IC
 			}
-			random_owned_state = {
-				limit = { is_fully_controlled_by = ROOT }
+			random_owned_controlled_state = {
+				prioritize = { 461 }
 				add_manpower = 31459
 				add_extra_state_shared_building_slots = 2
-				set_state_flag = MAN_invite_japanese_settlers_2IC
 			}
 		}
 	}
@@ -1790,7 +1762,7 @@ focus_tree = {
 		x = 24
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1806,6 +1778,17 @@ focus_tree = {
 				bonus = 0.5
 				uses = 1
 				category = industry
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = MOR
+				}
+				add_state_modifier = {
+					modifier = { 
+						monthly_population = 1
+						local_resources = 0.50
+					}
+				}
 			}
 		}
 	}
