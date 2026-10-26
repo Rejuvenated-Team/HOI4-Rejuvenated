@@ -1339,8 +1339,9 @@ ideas = {
 
 			modifier = {
 				conscription_factor = 0.15
+				weekly_manpower = 1000
 				max_dig_in_factor = 0.1
-				training_time_factor = 0.1
+				training_time_factor = -0.1
 			}
 		}
 

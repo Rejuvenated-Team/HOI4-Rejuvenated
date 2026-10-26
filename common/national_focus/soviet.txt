@@ -943,7 +943,7 @@ focus_tree = {
 	focus = {
 		id = SOV_reorganize_the_pc_of_heavy_industry
 
-		icon = GFX_goal_generic_production2
+		icon = GFX_focus_generic_industrial_experts
 		prerequisite = { focus = SOV_third_five_year_plan }
 		x = -2
 		y = 2
@@ -1211,7 +1211,7 @@ focus_tree = {
 	focus = {
 		id = SOV_steel_casting_industry
 
-		icon = GFX_focus_generic_steel
+		icon = GFX_focus_generic_steel_mill
 		prerequisite = { focus = SOV_reorganize_the_pc_of_heavy_industry focus = SOV_shift_to_armaments_production }
 		x = 2
 		y = 1
@@ -1313,7 +1313,7 @@ focus_tree = {
 	focus = {
 		id = SOV_synthetic_rubber
 
-		icon = GFX_focus_generic_rubber
+		icon = GFX_focus_BRA_rubber_war
 		prerequisite = { focus = SOV_steel_casting_industry }
 		x = -1
 		y = 1
@@ -1387,7 +1387,7 @@ focus_tree = {
 	focus = {
 		id = SOV_oil_production
 
-		icon = GFX_goal_generic_oil_refinery
+		icon = GFX_focus_RJ_NZL_taranaki_oil
 		prerequisite = { focus = SOV_steel_casting_industry }
 		x = 1
 		y = 1
@@ -3005,7 +3005,7 @@ focus_tree = {
 	focus = {
 		id = SOV_the_modern_war_in_the_skies
 
-		icon = GFX_goal_generic_CAS
+		icon = GFX_focus_generic_cas_aircraft
 		prerequisite = { focus = SOV_ground_support focus = SOV_long_range_aircraft }
 		x = 1
 		y = 1
@@ -12670,7 +12670,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_addressing_internal_affairs
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_RJ_SOV_internal_affairs
 		prerequisite = { focus = SOV_the_path_of_marxism_leninism }
 		x = 26
 		y = 1
@@ -12938,7 +12938,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_the_new_soviet_woman
-		icon = GFX_goal_support_communism
+		icon = GFX_focus_generic_women_in_military
 		prerequisite = { focus = SOV_addressing_internal_affairs }
 		x = 2
 		y = 1
@@ -12952,7 +12952,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
 
 		completion_reward = {
-			add_political_power = 70
+			add_political_power = 25
 			add_stability = 0.1
 			add_popularity = {
 				ideology = communism
@@ -12965,7 +12965,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_expand_the_agitprop
-		icon = GFX_focus_generic_soviet_politics
+		icon = GFX_focus_RJ_SOV_agitprop
 		prerequisite = { focus = SOV_addressing_internal_affairs }
 		x = 0
 		y = 1
@@ -13048,7 +13048,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_socialist_science
-		icon = GFX_focus_generic_socialist_science
+		icon = GFX_focus_RJ_SOV_socialist_science
 		prerequisite = { focus = SOV_militarized_schools }
 		x = 0
 		y = 2
@@ -13069,7 +13069,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_revive_the_stakhanovite_movement
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_RJ_SOV_stakhanovite_movement
 		prerequisite = { focus = SOV_positive_heroism }
 		x = 0
 		y = 2
@@ -13178,7 +13178,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_collectivist_propaganda
-		icon = GFX_goal_generic_propaganda
+		icon = GFX_focus_RJ_SOV_collectivist_propaganda
 		prerequisite = { focus = SOV_expand_the_agitprop }
 		x = 0
 		y = 1
@@ -13249,7 +13249,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_the_komsomol
-		icon = GFX_focus_generic_join_comintern
+		icon = GFX_focus_RJ_SOV_komsomol
 		prerequisite = { focus = SOV_expand_the_agitprop }
 		x = -2
 		y = 1
@@ -16926,7 +16926,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_spheres_of_influence_in_china
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_chi_one_china_policy
 		prerequisite = { focus = SOV_reconcile_japan }
 		x = 1
 		y = 1
@@ -16971,7 +16971,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_soviet_japanese_pact_against_usa_focus
-		icon = GFX_goal_generic_military_deal
+		icon = GFX_focus_JAP_raise_the_red_flag_high
 		prerequisite = { focus = SOV_reconcile_japan }
 		x = 0
 		y = 4
