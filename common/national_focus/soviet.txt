@@ -1583,12 +1583,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			IF = {
-				limit = {
-					has_dlc = "No Compromise, No Surrender"
-				}
-				has_completed_focus = SOV_curtailment_of_the_collective_farms 
-			}
+			
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}

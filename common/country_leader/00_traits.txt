@@ -7001,6 +7001,16 @@ leader_traits = {
 
 	}
 
+	RAJ_viceroy_of_india_trait = {
+		sprite = 13
+		random = no
+		
+		experience_gain_navy = 0.06 
+		autonomy_gain = 0.1 
+		cic_to_overlord_factor = -0.05 
+		mic_to_overlord_factor = -0.05 
+	}
+
 	########################
 	### ARGENTINA TRAITS ###
 	########################
