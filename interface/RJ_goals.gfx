@@ -890,6 +890,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/sov/RJ_SOV_internal_affairs.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_no_time_for_peace"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_no_time_for_peace.dds"
+	}
+
 
 
 	###########

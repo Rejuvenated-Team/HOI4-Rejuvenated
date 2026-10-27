@@ -1523,6 +1523,8 @@ focus_tree = {
 			hidden_effect = {
 				add_to_variable = { SOV_fyp_consumer_goods_factor = -0.05 } #Bonus to CG
 				add_to_variable = { SOV_fyp_production_factory_max_efficiency_factor = 0.05 } #Bonus to max efficicency
+				add_to_variable = { SOV_fyp_production_speed_arms_factory_factor = 0.05 }
+				add_to_variable = { SOV_fyp_production_speed_industrial_complex_factor = 0.05 }
 				if = {
 					limit = {
 						has_government = communism
@@ -1736,7 +1738,7 @@ focus_tree = {
 	focus = {
 		id = SOV_no_time_for_peace
 
-		icon = GFX_focus_rocketry
+		icon = GFX_focus_RJ_SOV_no_time_for_peace
 		prerequisite = { focus = SOV_fourth_five_year_plan }
 		prerequisite = { focus = SOV_national_academies_of_sciences }
 		x = 5
@@ -5403,6 +5405,12 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = SOV_assembly_line_heavy_tanks_idea
+			add_tech_bonus = {
+				name = Assembly_Line_Heavy_Bonus
+				bonus = 1
+				category = heavy_tank_tech
+				uses = 1
+			}
 		}
 	}
 
@@ -13017,6 +13025,12 @@ focus_tree = {
 			show_ideas_tooltip = konstantin_rokossovsky 
 			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = georgy_zhukov
+			SOV_georgy_zhukov = {
+				add_skill_level = 1
+			}
+			SOV_konstantin_rokossovsky = {
+				add_skill_level = 1
+			}
 
 			custom_effect_tooltip = unlock_propaganda_campaign_tt
 			unlock_decision_tooltip = SOV_propaganda_heroes_forward

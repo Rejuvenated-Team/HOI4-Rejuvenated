@@ -55,7 +55,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = trotskyite_plot
+			picture = RJ_idea_SOV_trotskyite_plot
 
 			allowed = {
 				always = no
@@ -779,8 +779,8 @@ ideas = {
 			picture = generic_exploit_mines
 
 			modifier = {
-				industry_repair_factor = 0.1
-				production_speed_infrastructure_factor = 0.1
+				industry_repair_factor = 0.5
+				production_speed_infrastructure_factor = 0.25
 				consumer_goods_factor = 0.10
 			}
 		}
