@@ -59,7 +59,7 @@ ideas = {
 				tag = YUG
 			}
 
-			picture = F
+			picture = hol_caved_to_the_germans
 
 			modifier = {
 				consumer_goods_factor = -0.1
