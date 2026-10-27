@@ -860,6 +860,41 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/sov/RJ_SOV_positive_heroism.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_collectivist_propaganda"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_collectivist_propaganda.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_stakhanovite_movement"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_stakhanovite_movement.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_socialist_science"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_socialist_science.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_agitprop"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_agitprop.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_komsomol"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_komsomol.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_internal_affairs"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_internal_affairs.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_SOV_no_time_for_peace"
+		texturefile = "gfx/interface/goals/sov/RJ_SOV_no_time_for_peace.dds"
+	}
+
 
 
 	###########

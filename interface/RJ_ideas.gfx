@@ -491,6 +491,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/sov/RJ_idea_SOV_five_year_plan.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_RJ_idea_SOV_trotskyite_plot"
+		texturefile = "gfx/interface/ideas/sov/RJ_idea_SOV_trotskyite_plot.dds"
+	}
+
 	###########
 	### USA ###
 	###########

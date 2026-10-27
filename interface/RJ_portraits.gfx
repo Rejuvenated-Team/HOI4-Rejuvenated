@@ -208,4 +208,15 @@ spriteTypes = {
 		name = "GFX_rj_portrait_VIN_ho_chi_minh"
 		texturefile = "gfx/leaders/VIN/rj_portrait_VIN_ho_chi_minh.dds"
 	}
+
+
+
+	###############################
+	### ROM - Romania #############
+	###############################
+
+	spriteType = {
+		name = "GFX_rj_portrait_ROM_tatarescu"
+		texturefile = "gfx/leaders/ROM/rj_portrait_ROM_tatarescu.dds"
+	}
 }
