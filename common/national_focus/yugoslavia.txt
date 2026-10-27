@@ -1515,10 +1515,58 @@ focus_tree = {
 		}
 	}
 	focus = { 
+		id = YUG_political_freedom
+		relative_position_id = YUG_dismiss_the_prime_minister
+		prerequisite = { focus = YUG_dismiss_the_prime_minister }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
 		id = YUG_reshape_the_prime_minister
 		relative_position_id = YUG_introduce_anti_corruption_laws
 		prerequisite = { focus = YUG_introduce_anti_corruption_laws }
 		mutually_exclusive = { focus = YUG_dismiss_the_prime_minister }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_strict_minister_rules
+		relative_position_id = YUG_reshape_the_prime_minister
+		prerequisite = { focus = YUG_reshape_the_prime_minister }
 		available = {
 
 		}
