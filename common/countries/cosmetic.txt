@@ -1948,3 +1948,8 @@ SOV_UNION_SOVEREIGN_STATES = {
 	color = rgb { 78 93 135 }
 	color_ui = rgb { 78 93 135 }
 }
+
+KUR_Turkish_province = {
+	color = rgb { 213  52  25 }
+	color_ui = rgb { 213  52  25 }
+}

@@ -1,0 +1,283 @@
+
+leader_traits = {
+	national_poet = {
+		random = no
+		sprite = 13
+		democratic_drift = 0.05
+		political_power_factor = 0.15
+	}
+	religious_figure = {
+		random = no
+		sprite = 13
+		war_support_factor = 0.05
+		exile_manpower_factor = 0.1
+		resistance_growth = -0.1
+	}
+	nationalist_cleric = {
+		random = no
+		sprite = 13
+		war_support_factor = 0.1
+		exile_manpower_factor = 0.1
+		resistance_growth = -0.12
+		party_popularity_stability_factor = 0.05
+	}
+	bismark_of_the_arabs = {
+		random = no
+		opinion_gain_monthly_same_ideology_factor = 1
+		justify_war_goal_time = -0.75
+		targeted_modifier = {
+			tag = SYR
+			attack_bonus_against = 0.15
+		}
+		targeted_modifier = {
+			tag = MOR
+			attack_bonus_against = 0.15
+		}
+		targeted_modifier = {
+			tag = ALG
+			attack_bonus_against = 0.15
+		}
+		targeted_modifier = {
+			tag = LBA
+			attack_bonus_against = 0.15
+		}
+		targeted_modifier = {
+			tag = JOR
+			attack_bonus_against = 0.15
+		}
+		targeted_modifier = {
+			tag = PAL
+			attack_bonus_against = 0.15
+		}
+		targeted_modifier = {
+			tag = LEB
+			attack_bonus_against = 0.15
+		}
+		targeted_modifier = {
+			tag = EGY
+			attack_bonus_against = 0.15
+		}
+		targeted_modifier = {
+			tag = SAU
+			attack_bonus_against = 0.15
+		}
+		targeted_modifier = {
+			tag = YEM
+			attack_bonus_against = 0.15
+		}
+		targeted_modifier = {
+			tag = ENG
+			attack_bonus_against = 0.15
+		}
+		targeted_modifier = {
+			tag = FRA
+			attack_bonus_against = 0.15
+		}
+		targeted_modifier = {
+			tag = ITA
+			attack_bonus_against = 0.15
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	brit_eager_collaborator = {
+		random = yes
+		send_volunteer_size = 2
+		improve_relations_maintain_cost_factor = -1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	IRQ_radical_nationalist = {
+		resistance_damage_to_garrison = -0.25
+		foreign_subversive_activites = -0.3
+		non_core_manpower = 0.02
+		production_factory_max_efficiency_factor = -0.1
+		production_factory_efficiency_gain_factor = 0.1
+		
+		random = no
+	}
+	popular_monarch = {
+		random = no
+		political_power_factor = 0.3
+		stability_factor = 0.2
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	IRQ_royal_chamberlain = {
+		random = no
+		sprite = 13
+
+		political_power_factor = 0.05
+		improve_relations_maintain_cost_factor = -0.15
+		opinion_gain_monthly_same_ideology = 0.1
+		neutrality_drift = 0.01
+	}
+	protector_of_minorities = {
+		random = no
+		political_power_factor = 0.05
+		conscription = 0.005
+	}
+	fascist_doctor = {
+		random = no
+		MONTHLY_POPULATION = 0.05
+		fascism_drift = 0.01
+		fascism_acceptance = 50
+	}
+	queen_of_iraq = {
+		random = no 
+
+		stability_factor = 0.2
+		political_power_cost = -0.05
+		consumer_goods_factor = 0.15
+	}
+	national_unifier = {
+		sprite = 13
+		random = no
+
+		stability_factor = 0.1
+		political_power_factor = 0.05
+		drift_defence_factor = 0.25
+	}
+	oil_baron = {
+		random = no
+
+		trade_opinion_factor = 0.50
+		trade_laws_cost_factor = -0.50
+		local_resources_oil = 0.1
+		cic_to_overlord_factor = 0.1
+		hidden_modifier = {
+			ai_join_ally_desire_factor = -75
+			ai_get_ally_desire_factor = -75
+		}
+
+		ai_strategy = {
+			type = alliance      
+			id = "SAU"       
+			value = -200
+		}
+
+		ai_strategy = {
+			type = alliance   
+			id = "PER"      
+			value = -200
+		}
+
+		ai_strategy = {
+			type = befriend       
+			id = "PER"       
+			value = -200
+		}
+
+		ai_strategy = {
+			type = befriend       
+			id = "USA"       
+			value = 200
+		}
+
+		ai_strategy = {
+			type = alliance      
+			id = "ENG"       
+			value = 200
+		}
+
+		ai_strategy = {
+			type = antagonize       
+			id = "EGY"     
+			value = 100
+		}
+
+		ai_strategy = {
+			type = antagonize       
+			id = "GER"
+			value = 100
+		}
+
+		ai_strategy = {
+			type = antagonize       
+			id = "ITA"
+			value = 100
+		}
+
+		ai_strategy = {
+			type = force_build_armies
+			value = 75
+		}
+		
+	}
+	IRQ_red_cresent = {
+		sprite = 6
+		random = no
+		#experience_gain_army_factor = 0.05
+		equipment_bonus = {
+			support_equipment = {
+				build_cost_ic = -0.05
+				instant = yes
+			}
+		}
+		
+	}
+	revolutionary_poet = {
+		random = no
+		sprite = 13
+		stability_weekly = 0.01
+		political_power_factor = 0.15
+	}
+	tribal_leader = {
+		random = no
+		army_speed_factor = 0.05
+		org_loss_when_moving = -0.05
+		recruitable_population = 0.05
+	}
+	minister_of_religious_affairs = {
+		political_power_factor = 0.1
+		war_support_factor = 0.12
+		conscription = 0.01
+		
+		random = no
+	}
+	successful_businessman = {			
+		sprite = 18
+		random = no
+		production_speed_infrastructure_factor = 0.15
+		min_export = 0.3
+		industrial_factory_donations = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Futuwwa_organizer = {
+		sprite = 13
+		random = no
+		conscription = 0.025
+		war_support_factor = 0.1
+		targeted_modifier = {
+			tag = ENG
+			attack_bonus_against = 0.3
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	hated_by_political_elites = {
+		political_power_factor = -0.1
+		random = no
+	}
+	communist_mechanical_engineer = {
+		production_speed_buildings_factor = 0.1
+		line_change_production_efficiency_factor = 0.1
+		communism_drift = 0.05
+		communism_acceptance = 50
+		random = no
+	}
+	mechanical_engineer = {
+		production_speed_buildings_factor = 0.1
+		line_change_production_efficiency_factor = 0.1
+		random = no
+	}
+}

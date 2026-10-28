@@ -1,0 +1,34 @@
+spriteTypes = {	
+	SpriteType = {
+		name = "GFX_idea_IRQ_Faisal_II"
+		texturefile = "gfx/interface/ideas/idea_IRQ_Faisal_II.png"			
+	}	
+	SpriteType = {
+		name = "GFX_idea_iraq_petroleum"
+		texturefile = "gfx/interface/ideas/iraq_petroleum.png"			
+	}	
+	SpriteType = {
+		name = "GFX_idea_IRQ_coin"
+		texturefile = "gfx/interface/ideas/idea_IRQ_coin.png"			
+	}	
+	SpriteType = {
+		name = "GFX_idea_IRQ_poverty"
+		texturefile = "gfx/interface/ideas/idea_IRQ_poverty.png"			
+	}	
+	spriteType = {
+		name = "GFX_idea_tur_kurdish_separatism"
+		textureFile = "gfx/interface/ideas/modifiers_tur_kurdish_separatism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_tur_kurdish_agitation"
+		textureFile = "gfx/interface/ideas/modifiers_tur_kurdish_agitation.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_tur_kurdish_fatigue"
+		textureFile = "gfx/interface/ideas/modifiers_tur_kurdish_fatigue.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_tur_kurdish_rebellion"
+		textureFile = "gfx/interface/ideas/modifiers_tur_kurdish_rebellion.dds"
+	}
+}

@@ -1,6 +1,29 @@
 ####This is where our unique field leader traits are defined. Put new additions under here. First is an example from RT56.
 leader_traits = {
 
+	trait_IRQ_malik_loyalist = {
+
+		type = all
+		trait_type = personality_trait
+
+		allowed = {
+			FROM = { original_tag = BUL }
+		}
+
+		new_commander_weight = {
+			factor = 1
+			modifier = {
+				factor = 0
+				FROM = {
+					OR = {
+						neutrality < 0.05
+						has_completed_focus = IRQ_Bakr_reign
+					}
+				}
+			}
+		}
+	}
+
 ##################################
 # Operative traits
 ##################################

@@ -1,0 +1,273 @@
+
+IRQ_political_chaos_balance = {
+	initial_value = 0.05
+	left_side = IRQ_bop_left_side	
+	right_side = IRQ_bop_right_side	
+	decision_category = IRQ_balance_of_power_category
+	
+	range = {
+		id = IRQ_unstable_government
+		min = -0.1
+		max = 0.1
+		modifier = {
+			 #stability_factor = 0
+			 #political_power_factor = -0.05
+			 #neutrality_drift = 0.02
+		}
+		on_activate = {
+			
+		}
+		on_deactivate = {
+		}
+	}
+
+	# Civilian Side
+	side = {
+		id = IRQ_bop_left_side	
+		icon = GFX_bop_SWI_centralization_canton_side
+		range = {
+			id = IRQ_independent_government
+			min = -1
+			max = -0.7
+			modifier = {
+				stability_factor = 0.15
+				political_power_factor = 0.15
+			}
+			on_activate = {
+				set_country_flag = IRQ_coup_fail
+			}
+			on_deactivate = {
+				clr_country_flag = IRQ_coup_fail
+			}
+
+		}
+		range = {
+			id = IRQ_strong_government
+			min = -0.7
+			max = -0.4
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.1
+			}
+			on_activate = {
+				set_country_flag = IRQ_coup_fail
+			}
+			on_deactivate = {
+				clr_country_flag = IRQ_coup_fail
+			}
+
+		}
+		range = {
+			id = IRQ_weak_government
+			min = -0.4
+			max = -0.1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+
+			}
+			on_activate = {
+				set_country_flag = IRQ_coup_stalemate
+			}
+			on_deactivate = {
+				clr_country_flag = IRQ_coup_stalemate
+			}
+
+		}
+	}
+
+	# Military Side
+	side = {
+		id = IRQ_bop_right_side	
+		icon = GFX_bop_ETH_anarchist_side
+		range = {
+			id = IRQ_little_chaos
+			min = 0.1
+			max = 0.4
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.05
+			}
+			on_activate = {
+				set_country_flag = IRQ_coup_stalemate
+			}
+			on_deactivate = {
+				clr_country_flag = IRQ_coup_stalemate
+			}
+
+		}
+		range = {
+			id = IRQ_falling_government
+			min = 0.4
+			max = 0.7
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.1
+			
+			}
+			on_activate = {
+				set_country_flag = IRQ_coup_succesful
+			}
+			on_deactivate = {
+				clr_country_flag = IRQ_coup_succesful
+			}
+
+		}
+		range = {
+			id = IRQ_total_chaos
+			min = 0.7
+			max = 1
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.15
+				communism_drift = 0.01
+			}
+			on_activate = {
+				set_country_flag = IRQ_coup_succesful
+				
+			}
+			on_deactivate = {
+				clr_country_flag = IRQ_coup_succesful
+			}
+
+		}
+	}
+}
+
+
+IRQ_nationalist_split = {
+	initial_value = -0.15
+	left_side = IRQ_bop_gaylani_side	
+	right_side = IRQ_bop_military_side	
+	decision_category = IRQ_balance_of_power_category
+	
+	range = {
+		id = IRQ_nationalist_equilibrium
+		min = -0.1
+		max = 0.1
+		modifier = {
+			 #stability_factor = 0
+			 #political_power_factor = -0.05
+			 #neutrality_drift = 0.02
+		}
+		on_activate = {
+			
+		}
+		on_deactivate = {
+		}
+	}
+
+	# Civilian Side
+	side = {
+		id = IRQ_bop_gaylani_side	
+		icon = GFX_focus_IRQ_gaylani
+		range = {
+			id = IRQ_gaylani_aligned_plan
+			min = -1
+			max = -0.7
+			modifier = {
+				stability_factor = 0.15
+				political_power_factor = 0.15
+			}
+			on_activate = {
+				set_country_flag = IRQ_gaylani_side3
+				complete_national_focus = IRQ_civilians_in_power
+			}
+			on_deactivate = {
+				clr_country_flag = IRQ_gaylani_side3
+			}
+
+		}
+		range = {
+			id = IRQ_strong_monarchist_influence
+			min = -0.7
+			max = -0.4
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.1
+			}
+			on_activate = {
+				set_country_flag = IRQ_gaylani_side2
+			}
+			on_deactivate = {
+				clr_country_flag = IRQ_gaylani_side2
+			}
+
+		}
+		range = {
+			id = IRQ_weakening_gaylani_admin
+			min = -0.4
+			max = -0.1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+
+			}
+			on_activate = {
+				set_country_flag = IRQ_gaylani_side1
+			}
+			on_deactivate = {
+				clr_country_flag = IRQ_gaylani_side1
+			}
+
+		}
+	}
+
+	# Military Side
+	side = {
+		id = IRQ_bop_military_side	
+		icon = GFX_focus_IRQ_military
+		range = {
+			id = IRQ_falling_gaylani_government
+			min = 0.1
+			max = 0.4
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.05
+			}
+			on_activate = {
+				set_country_flag = IRQ_military_side1
+			}
+			on_deactivate = {
+				clr_country_flag = IRQ_military_side1
+			}
+
+		}
+		range = {
+			id = IRQ_strong_republican_influence
+			min = 0.4
+			max = 0.7
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.1
+			
+			}
+			on_activate = {
+				set_country_flag = IRQ_military_side2
+			}
+			on_deactivate = {
+				clr_country_flag = IRQ_military_side2
+			}
+
+		}
+		range = {
+			id = IRQ_military_aligned_plan
+			min = 0.7
+			max = 1
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.15
+				communism_drift = 0.01
+			}
+			on_activate = {
+				set_country_flag = IRQ_military_side3
+				complete_national_focus = IRQ_colonels_takeover
+			}
+			on_deactivate = {
+				clr_country_flag = IRQ_military_side3
+			}
+
+		}
+	}
+}
+

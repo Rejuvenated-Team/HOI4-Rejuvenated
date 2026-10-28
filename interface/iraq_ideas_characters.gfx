@@ -1,0 +1,174 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_ARM_calouste_gulbenkian_small"
+		texturefile = "gfx/interface/ideas/portrait_ARM_calouste_gulbenkian_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_ali_mahmud_al_shaykh_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_ali_mahmud_al_shaykh_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_amir_al_illah_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_amir_al_illah_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_fahmi_said_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_fahmi_said_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_faisal_ii_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_faisal_ii_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_fawsi_al_kaukji_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_fawsi_al_kaukji_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_fritz_grobba_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_fritz_grobba_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_ghazi_i_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_ghazi_i_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_hamdi_al_pachachi_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_hamdi_al_pachachi_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_harry_george_smart_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_harry_george_smart_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_ibrahim_al_ghandanfari_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_ibrahim_al_ghandanfari_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_jamil_abdul_wahab_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_jamil_abdul_wahab_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_jamil_al_midfai_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_jamil_al_midfai_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_mahmud_salman_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_mahmud_salman_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_max_von_oppenheim_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_max_von_oppenheim_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_muhammad_amin_zaki_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_muhammad_amin_zaki_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_naji_al_suwaidi_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_naji_al_suwaidi_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_saib_shawkat_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_saib_shawkat_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_sharaf_bin_rajeh_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_sharaf_bin_rajeh_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_tawfiq_al_suawaidi_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_tawfiq_al_suawaidi_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_werner_junck_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_werner_junck_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_PAL_tarab_abdul_hadi_small"
+		texturefile = "gfx/interface/ideas/portrait_PAL_tarab_abdul_hadi_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_muhammad_husayn_kashif_al_ghita_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_muhammad_husayn_kashif_al_ghita_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_abd_al_ilah_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_abd_al_ilah_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_ahmed_barzani_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_ahmed_barzani_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_bakr_sidqi_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_bakr_sidqi_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_fahmi_said_civilian_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_fahmi_said_civilian_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_fahmi_said_military_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_fahmi_said_military_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_hikmat_suleiman_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_hikmat_suleiman_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_hussein_fawzi_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_hussein_fawzi_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_kamil_shabib_civilian_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_kamil_shabib_civilian_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_kamil_shabib_military_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_kamil_shabib_military_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_mustafa_barzani_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_mustafa_barzani_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_nuri_as_said_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_nuri_as_said_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_salah_al_din_al_sabbagh_civilian_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_salah_al_din_al_sabbagh_civilian_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_salah_al_din_al_sabbagh_military_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_salah_al_din_al_sabbagh_military_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_taha_al_hashem_civilian_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_taha_al_hashemi_civilian_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_taha_al_hashem_military_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_taha_al_hashemi_military_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_yasin_al_hashimi_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_yasin_al_hashimi_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_IRQ_yusuf_salman_yusuf_small"
+		texturefile = "gfx/interface/ideas/portrait_IRQ_yusuf_salman_yusuf_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_KUW_ahmad_al_sabah_civilian_small"
+		texturefile = "gfx/interface/ideas/portrait_KUW_ahmad_al_sabah_civilian_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_KUW_ahmad_al_sabah_military_small"
+		texturefile = "gfx/interface/ideas/portrait_KUW_ahmad_al_sabah_military_small.dds"
+	}
+
+}
+
+
+

@@ -1,0 +1,53 @@
+IRQ_poverty = {
+	icon = GFX_idea_IRQ_poverty
+	remove_trigger = {
+		NOT = { is_controlled_by = IRQ }
+	}
+
+	local_resources = -0.07
+	monthly_population = -0.07
+}
+IRQ_poverty2 = {
+	icon = GFX_idea_IRQ_coin
+	remove_trigger = {
+		NOT = { is_controlled_by = IRQ }
+	}
+
+	local_resources = -0.03
+	monthly_population = -0.03
+}
+idea_IRQ_river_navy = { #STATE MODIFIER
+	remove_trigger = { 
+		IRQ = { has_capitulated = yes } 
+
+	}
+	icon = GFX_MODIFIER_NAVAL_INVASION_CAPACITY
+	army_core_defence_factor = 0.2
+	resistance_target = 0.5
+	resistance_growth_on_our_occupied_states = 0.25
+	resistance_activity = 1
+	resistance_damage_to_garrison_on_our_occupied_states = 1
+	resistance_garrison_penetration_chance = 1
+}
+IRQ_proletariat_uprising_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_GER_socialist_movement
+
+	remove_trigger = {
+		OR = {
+			GER = {
+				has_government = communism
+			}
+			ROOT = { 
+				NOT = {
+					controller = { original_tag = GER }
+				}
+			}
+		}
+	}
+
+	state_production_speed_buildings_factor = -0.25
+	state_resources_factor = -0.25
+	local_factories = -0.25
+	recruitable_population_factor = 0.15
+}

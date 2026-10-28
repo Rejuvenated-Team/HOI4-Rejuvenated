@@ -1,0 +1,163 @@
+spriteTypes = {	
+	SpriteType = {
+		name = "GFX_focus_IRQ_Air_Force"
+		texturefile = "gfx/interface/goals/focus_IRQ_Air_Force.png"			
+	}	
+	SpriteType = {
+		name = "GFX_focus_IRQ_Army"
+		texturefile = "gfx/interface/goals/focus_IRQ_Army.png"			
+	}	
+	SpriteType = {
+		name = "GFX_focus_IRQ_Navy"
+		texturefile = "gfx/interface/goals/focus_IRQ_Navy.png"			
+	}	
+	SpriteType = {
+		name = "GFX_focus_IRQ_military"
+		texturefile = "gfx/interface/goals/focus_IRQ_military.png"			
+	}	
+	SpriteType = {
+		name = "GFX_focus_IRQ_coup"
+		texturefile = "gfx/interface/goals/focus_IRQ_coup.png"			
+	}	
+	SpriteType = {
+		name = "GFX_focus_IRQ_northern_development"
+		texturefile = "gfx/interface/goals/focus_IRQ_northern_development.png"			
+	}	
+	SpriteType = {
+		name = "GFX_focus_IRQ_southern_development"
+		texturefile = "gfx/interface/goals/focus_IRQ_southern_development.png"			
+	}
+	SpriteType = {
+		name = "GFX_focus_IRQ_kirkuk_oil"
+		texturefile = "gfx/interface/goals/focus_IRQ_kirkuk_oil.png"			
+	}	
+	SpriteType = {
+		name = "GFX_focus_IRQ_basra_oil"
+		texturefile = "gfx/interface/goals/focus_IRQ_basra_oil.png"			
+	}	
+	SpriteType = {
+		name = "GFX_focus_IRQ_bakr_sidqi"
+		texturefile = "gfx/interface/goals/focus_IRQ_bakr_sidqi.png"			
+	}	
+	SpriteType = {
+		name = "GFX_focus_IRQ_gaylani"
+		texturefile = "gfx/interface/goals/focus_IRQ_gaylani.png"			
+	}	
+	SpriteType = {
+		name = "GFX_focus_muslim_friendship"
+		texturefile = "gfx/interface/goals/focus_muslim_friendship.png"			
+	}	
+	SpriteType = {
+		name = "GFX_focus_IRQ_undermine_gaylani"
+		texturefile = "gfx/interface/goals/focus_IRQ_undermine_gaylani.png"			
+	}	
+	SpriteType = {
+		name = "GFX_focus_fight_kurds"
+		texturefile = "gfx/interface/goals/focus_fight_kurds.png"			
+	}	
+	SpriteType = {
+		name = "GFX_focus_IRQ_baghdad_mosul"
+		texturefile = "gfx/interface/goals/focus_IRQ_baghdad_mosul.png"			
+	}	
+	SpriteType = {
+		name = "GFX_youth_militias"
+		texturefile = "gfx/interface/goals/youth_militias.png"			
+	}	
+	SpriteType = {
+		name = "GFX_IRQ_muthanna"
+		texturefile = "gfx/interface/goals/IRQ_muthanna.png"			
+	}	
+	SpriteType = {
+		name = "GFX_focus_IRQ_ghazi"
+		texturefile = "gfx/interface/goals/focus_IRQ_ghazi.png"			
+	}	
+	SpriteType = {
+		name = "GFX_focus_IRQ_ghazi2"
+		texturefile = "gfx/interface/goals/focus_IRQ_ghazi2.png"			
+	}	
+	SpriteType = {
+		name = "GFX_focus_IRQ_iraqi_economy"
+		texturefile = "gfx/interface/goals/focus_IRQ_iraqi_economy.png"			
+	}	
+	SpriteType = {
+		name = "GFX_focus_IRQ_PER_agreement"
+		texturefile = "gfx/interface/goals/focus_IRQ_PER_agreement.png"			
+	}
+	SpriteType = {
+		name = "GFX_IRQ_chaderchi"
+		texturefile = "gfx/interface/goals/IRQ_chaderchi.png"			
+	}
+	SpriteType = {
+		name = "GFX_IRQ_Sadr"
+		texturefile = "gfx/interface/goals/IRQ_Sadr.png"			
+	}
+	SpriteType = {
+		name = "GFX_IRQ_said"
+		texturefile = "gfx/interface/goals/IRQ_said.png"			
+	}
+	SpriteType = {
+		name = "GFX_IRQ_timman"
+		texturefile = "gfx/interface/goals/IRQ_timman.png"			
+	}
+	SpriteType = {
+		name = "GFX_Pan_Arabism"
+		texturefile = "gfx/interface/goals/Pan_Arabism.png"			
+	}
+	SpriteType = {
+		name = "GFX_focus_arab"
+		texturefile = "gfx/interface/goals/focus_arab.png"			
+	}
+	SpriteType = {
+		name = "GFX_focus_arab2"
+		texturefile = "gfx/interface/goals/focus_arab2.png"			
+	}
+	SpriteType = {
+		name = "GFX_islamic_healthcare"
+		texturefile = "gfx/interface/goals/islamic_healthcare.png"			
+	}
+	SpriteType = {
+		name = "GFX_OTT_Islamic_Education"
+		texturefile = "gfx/interface/goals/OTT_Islamic_Education.png"			
+	}
+	SpriteType = {
+		name = "GFX_islamic_government"
+		texturefile = "gfx/interface/goals/islamic_government.png"			
+	}
+	SpriteType = {
+		name = "GFX_IRQ_Red_Crescent"
+		texturefile = "gfx/interface/goals/IRQ_Red_Crescent.png"			
+	}
+	SpriteType = {
+		name = "GFX_generic_banking_legislation"
+		texturefile = "gfx/interface/goals/generic_banking_legislation.png"			
+	}
+	SpriteType = {
+		name = "GFX_AUS_agriculture"
+		texturefile = "gfx/interface/goals/AUS_agriculture.png"			
+	}
+	SpriteType = {
+		name = "GFX_focus_IRQ_kuwait"
+		texturefile = "gfx/interface/goals/focus_IRQ_kuwait.png"			
+	}
+	SpriteType = {
+		name = "GFX_focus_IRQ_axis"
+		texturefile = "gfx/interface/goals/focus_IRQ_axis.png"			
+	}
+	SpriteType = {
+		name = "GFX_champagne_diplomacy"
+		texturefile = "gfx/interface/goals/champagne_diplomacy.png"			
+	}
+	SpriteType = {
+		name = "GFX_collaborate_local_elites"
+		texturefile = "gfx/interface/goals/collaborate_local_elites.png"			
+	}
+	SpriteType = {
+		name = "GFX_collaborate_local_elites2"
+		texturefile = "gfx/interface/goals/collaborate_local_elites2.png"			
+	}
+	SpriteType = {
+		name = "GFX_conspiracy"
+		texturefile = "gfx/interface/goals/conspiracy.png"			
+	}
+
+}

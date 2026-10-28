@@ -1,0 +1,42 @@
+﻿capital = 454
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_trucks = 1
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+
+set_convoys = 5
+
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 60
+	fascism = 10
+	democratic = 30
+}
+recruit_character = PAL_harold_macmichael
+recruit_character = PAL_Raghib_Nashashibi
+recruit_character = PAL_Radwan_Al_Hilu
+recruit_character = PAL_Amin_Al_Hussieni
+recruit_character = PAL_Abdulqadir_Hussieni
+recruit_character = PAL_Hasan_Salama
+
+#country_event = {
+#	id = palestine.1
+#	days = 600
+#}

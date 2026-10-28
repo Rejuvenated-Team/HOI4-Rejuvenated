@@ -1,0 +1,122 @@
+﻿capital = 676
+
+set_research_slots = 1
+
+# Starting tech
+set_technology = {
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		early_fighter = 1
+	}
+}
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+
+	}
+}
+if = {
+	limit = {
+		
+		has_dlc = "No Step Back"
+		
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+
+	}
+}
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_submarine = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_torpedo = 1
+	}
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 75
+	fascism = 25
+}
+create_country_leader = {
+	name = "Shimun XXIII Eshai"
+	picture = "gfx/leaders/ASY/ASY_shimun_xxi_eshai.png"
+	ideology = despotism
+}
+create_country_leader = {
+	name = "Shimun XXIII Eshai"
+	picture = "gfx/leaders/ASY/ASY_shimun_xxi_eshai.png"
+	ideology = fascism_ideology
+}
+create_corps_commander = {
+	name = "Agha Petros"
+	picture = "gfx/leaders/ASY/ASY_agha_petros.png"
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	traits = {
+		 war_hero
+	}
+}
+create_corps_commander = {
+	name = "Odisho Moshe"
+	picture = "gfx/leaders/ASY/ASY_odisho_moshe.png"
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Dawid Mar Shimun"
+	picture = "gfx/leaders/ASY/ASY_dawid_mar_shimun.png"
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	traits = {
+		politically_connected war_hero
+	}
+}

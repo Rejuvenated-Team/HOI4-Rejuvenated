@@ -1,0 +1,303 @@
+characters={
+	
+	KUR_bakr_sidqi={
+		advisor = {
+			slot = theorist
+			idea_token = KUR_bakr_sidqi_th
+			ledger = army
+			traits = {
+				military_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+			allowed = {
+				original_tag = KUR
+			}
+		}
+		
+		corps_commander={
+			traits={ career_officer harsh_leader defensive_doctrine aggressive_assaulter }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+
+		name="Bakr Sidqi"
+		portraits={
+			army={
+				large="gfx/leaders/IRQ/KUR_bakr_sidqi.png"
+				small=GFX_portrait_IRQ_bakr_sidqi_small
+			}
+		}
+	}
+	KUR_qazi_muhamad = {
+
+		name = KUR_qazi_muhamad
+
+		portraits = {
+			civilian = {
+				large="gfx/leaders/KUR/KUR_qazi_mihemed.png"
+			}
+		}
+
+		country_leader = {
+			ideology = marxism
+			traits = {  }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+
+	}
+
+	KUR_mahmud_barzanji = {
+
+		name = KUR_mahmud_barzanji
+
+		portraits = {
+			civilian = {
+				large="gfx/leaders/KUR/Portrait_KUR_Mahmud_Barzanji.dds"
+			}
+		}
+		field_marshal = {
+			traits = { war_hero inflexible_strategist unyielding_defender commando }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+
+
+	}
+
+	KUR_ihsan_nuri = {
+
+		name = KUR_ishan_nuri
+
+		portraits = {
+			civilian = {
+				large="gfx/leaders/KUR/Portrait_Ihsan_Nuri.dds"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = KUR_ihsan_nuri
+			allowed  = {
+					original_tag  = KUR
+				}
+				traits  = {
+					army_chief_defensive_2 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+
+		country_leader = {
+			ideology = fascism_ideology
+			traits = { experienced_insurgent }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+
+		field_marshal = {
+			traits = { war_hero inflexible_strategist unyielding_defender desert_fox commando }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+
+	}
+
+	KUR_seyid_riza = {
+
+		name = KUR_seyid_riza
+
+		portraits = {
+			civilian = {
+				large = GFX_portrait_kur_seyid_riza
+			}
+		}
+		corps_commander = {
+			traits = { war_hero commando }
+			skill = 2 #13
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+			visible = {
+			}
+		}
+
+	}
+
+	KUR_ferzende_bege_haseni = {
+
+		name = KUR_ferzende_bege_haseni
+
+		corps_commander = {
+			traits = { war_hero commando desert_fox }
+			skill = 2 #13
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+			visible = {
+			}
+		}
+
+		portraits = {
+			army = {
+				large="gfx/leaders/KUR/Portrait_KUR_Farzende_Beg_Hasani.dds"
+				small = GFX_idea_generic_air_arab_2
+			}
+		}
+		
+	}
+	KUR_haji_baba={
+		advisor={
+			slot = political_advisor
+			idea_token = KUR_haji_baba
+			allowed  = {
+					original_tag  = KUR
+				}
+				traits  = {
+					communist_revolutionary 
+				}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+        name = "Haji Baba"
+		portraits={
+			army={
+				large="gfx/leaders/KUR/KUR_haji_baba_sheikh.png"
+				small="GFX_idea_generic_political_advisor_arab_3"
+			}
+		}
+	}
+	KUR_mustafa_barzani={
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		country_leader = {
+			ideology = despotism
+		}
+		country_leader = {
+			ideology = conservatism
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+        name = "Mustafa Barazani"
+		portraits={
+			army={
+				large="gfx/leaders/KUR/KUR_mustafa_barzani.png"
+				small="GFX_portrait_IRQ_mustafa_barzani_small"
+			}
+		}
+	}
+	KUR_ahmed_barzani={
+		advisor={
+			slot = political_advisor
+			idea_token = KUR_ahmed_barzani
+			allowed  = {
+					original_tag  = KUR
+				}
+				traits  = {
+					popular_figurehead 
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+        name = "Ahmed Barazani"
+		portraits={
+			army={
+				small="GFX_portrait_IRQ_ahmed_barzani_small"
+			}
+		}
+	}
+	KUR_nuri_dersimi={
+		advisor={
+			slot = political_advisor
+			idea_token = KUR_nuri_dersimi
+			allowed  = {
+					original_tag  = KUR
+				}
+				traits  = {
+					democratic_reformer 
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_arab_2"
+			}
+		}
+	}
+	KUR_kamuran_ali_bedirxan={
+		advisor={
+			slot = political_advisor
+			idea_token = KUR_kamuran_ali_bedirxan
+			allowed  = {
+					original_tag  = KUR
+				}
+				traits  = {
+					fascist_demagogue 
+				}
+		}
+        name = "Kamuran Ali Bedirkhan"
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		portraits={
+			army={
+				large="gfx/leaders/KUR/KUR_kamuran_ali_bedirxan.png"
+				small="GFX_idea_generic_political_advisor_arab_1"
+			}
+		}
+	}
+	KUR_muhammad_amin_zaki = {
+		name = IRQ_muhammad_amin_zaki
+		portraits = {
+			civilian = {
+				small = GFX_portrait_IRQ_muhammad_amin_zaki_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = KUR_muhammad_amin_zaki
+			traits = {
+				IRQ_kurdish_politician
+			}
+			allowed = {
+				original_tag = KUR
+			}
+			available = {
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+}

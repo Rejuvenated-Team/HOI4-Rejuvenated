@@ -1,0 +1,67 @@
+﻿
+division_template = {
+	name = "Quwat Mahaliyah"
+	division_names_group = IRQ_INF_01
+	is_locked = yes
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+	}
+	template_counter = 68
+}
+division_template = {
+	name = "Quwat Nizamiyah"
+	division_names_group = IRQ_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Fursan"
+	division_names_group = IRQ_CAV_01
+	is_locked = yes
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+	}
+}
+
+units = {
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7151
+		division_template = "Quwat Mahaliyah"
+		start_experience_factor = 0.2
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 7151
+		division_template = "Quwat Mahaliyah"
+		start_experience_factor = 0.2
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 7151
+		division_template = "Quwat Mahaliyah"
+		start_experience_factor = 0.2
+	}
+}
+

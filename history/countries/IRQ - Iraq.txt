@@ -1,7 +1,6 @@
-﻿capital = 291 # Baghdad
+﻿capital = 291
 
 oob = "IRQ_1936"
-
 if = {
 	limit = { has_dlc = "By Blood Alone" }
 		set_air_oob = "IRQ_1936_air_bba"
@@ -13,18 +12,22 @@ if = {
 		}
 	}
 }
-
+991={
+	add_contested_owner = IRQ
+}
+992={
+	add_contested_owner = ENG
+}
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	#tech_mountaineers = 1
+	tech_mountaineers = 1
 	tech_trucks = 1
 	gw_artillery = 1
 	fuel_silos = 1
 }
 
-set_convoys = 5
 
 if = {
 	limit = {
@@ -32,298 +35,400 @@ if = {
 	}
 	set_technology = { camelry = 1 }
 }
+add_ideas = {
+	IRQ_Ghazi
+	IRQ_agricultural_economy_1
+	IRQ_shia_issue
+	IRQ_kurdish_issue
+	IRQ_Tribal_and_aristocratic_influence1_idea
+	IRQ_anglo_iraqi_treaties
+	
+}
+country_event = {
+	hours = 12
+	id = iraq_lore.0
+}
+country_event = {
+	id = iraq.1
+	days = 300
+}
+country_event = {
+	id = iraq_flavour.1
+	days = 40
+}
+#Adha
+country_event = {
+	id = iraq_flavour.2
+	days = 70
+}
+country_event = {
+	id = iraq_flavour.2
+	days = 423 
+}
+country_event = {
+	id = iraq_flavour.2
+	days = 778 
+}
+country_event = {
+	id = iraq_flavour.2
+	days = 1113
+}
+country_event = {
+	id = iraq_flavour.2
+	days = 1487
+}
+country_event = {
+	id = iraq_flavour.2
+	days = 1843
+}
+country_event = {
+	id = iraq_flavour.2
+	days = 2526
+}
+#Fitr
+country_event = {
+	id = iraq_flavour.3
+	days = 249 
+}
+country_event = {
+	id = iraq_flavour.3
+	days = 649  
+}
+country_event = {
+	id = iraq_flavour.3
+	days = 1004 
+}
+country_event = {
+	id = iraq_flavour.3
+	days = 1358 
+}
+country_event = {
+	id = iraq_flavour.3
+	days = 1713
+}
+country_event = {
+	id = iraq_flavour.3
+	days = 2068
+}
+country_event = {
+	id = iraq_flavour.3
+	days = 2424
+}
+#Arbeen
+country_event = {
+	id = iraq_flavour.4
+	days = 152 
+}
+country_event = {
+	id = iraq_flavour.4
+	days = 507   
+}
+country_event = {
+	id = iraq_flavour.4
+	days = 862  
+}
+country_event = {
+	id = iraq_flavour.4
+	days = 1217  
+}
+country_event = {
+	id = iraq_flavour.4
+	days = 1571 
+}
+country_event = {
+	id = iraq_flavour.4
+	days = 1925 
+}
+country_event = {
+	id = iraq_flavour.4
+	days = 2280 
+}
+country_event = {
+	id = iraq_flavour.6
+	days = 466
+}
+country_event = {
+	id = iraq_flavour.7
+	days = 560
+}
+country_event = {
+	id = iraq_flavour.8
+	days = 814
+}
+country_event = {
+	id = iraq_flavour.9
+	days = 614 
+}
+country_event = {
+	id = iraq_flavour.10
+	days = 644 
+}
+country_event = {
+	id = iraq_flavour.11
+	days = 52  
+}
+GRE={
+	country_event = {
+		id = iraq_flavour.11
+		days = 52  
+	}
+	
+}
+country_event = {
+	id = iraq_flavour.12
+	days = 102  
+}
+country_event = {
+	id = iraq_flavour.13
+	days = 152  
+}
+GRE={
+	country_event = {
+		id = iraq_flavour.13
+		days = 152  
+	}
+	
+}
+country_event = {
+	id = iraq_flavour.15
+	days = 359 
+}
+country_event = {
+	id = iraq_flavour.16
+	days = 185  
+}
+country_event = {
+	id = iraq_flavour.18
+	days = 60  
+}
 
-##### RECRUIT VANILLA CHARACTERS #####
-IF = {
-	limit = {
-		has_dlc = "Graveyard of Empires"
+1018={
+	add_dynamic_modifier = {
+		modifier = kurdish_agitation
 	}
-	recruit_character = IRQ_yasin_al_hashimi
-	recruit_character = IRQ_ghazi_i
-}
-IF = {
-	limit = {
-		NOT = {
-			has_dlc = "Graveyard of Empires"
-		}
+	add_dynamic_modifier = {
+		modifier = IRQ_poverty
 	}
-	recruit_character = IRQ_ghazi_i
-	recruit_character = IRQ_yasin_al_hashimi
 }
+1020={
+	add_dynamic_modifier = {
+		modifier = kurdish_agitation
+	}
+}
+
+1021={
+	add_dynamic_modifier = {
+		modifier = IRQ_poverty
+	}
+}
+1010={
+	add_dynamic_modifier = {
+		modifier = IRQ_poverty
+	}
+}
+1017={
+	add_dynamic_modifier = {
+		modifier = IRQ_poverty
+	}
+}
+1022={
+	add_dynamic_modifier = {
+		modifier = IRQ_poverty
+	}
+}
+
+add_opinion_modifier = {
+	target = ENG
+	modifier = non_aggression_pact
+}
+give_military_access = ENG
+give_market_access = ENG
+ENG={
+	give_guarantee = IRQ
+}
+set_convoys = 5
+recruit_character = IRQ_yasin_al_hashimi
+recruit_character = IRQ_ghazi_i
+recruit_character = IRQ_Queen_Aliyah_bint_ali
+recruit_character = IRQ_faisal_ii
+recruit_character = IRQ_nuri_al_said
+recruit_character = IRQ_Siddiq_Rasul_Al_Qadri
+recruit_character = IRQ_Jafar_Al_Askari
 recruit_character = IRQ_rashid_ali_algaylani
 recruit_character = IRQ_yusuf_salman_yusuf
+recruit_character = IRQ_Jafar_Abu_Timman
+recruit_character = IRQ_taha_al_hashimi
 recruit_character = IRQ_fahmi_said
 recruit_character = IRQ_ali_mahmud_al_shaykh
+recruit_character = IRQ_Muhammad_Husayn_Kashif_Ghita
+recruit_character = IRQ_Salih_Jabr
+recruit_character = IRQ_Abd_Al_Latif_Nuri
 recruit_character = IRQ_hamdi_al_pachachi
+recruit_character = IRQ_fawzi_al_qawuqji
+recruit_character = IRQ_muhammad_ali_jawad
 recruit_character = IRQ_jamil_al_midfai
 recruit_character = IRQ_bakr_sidqi
-recruit_character = IRQ_abdullah
-recruit_character = IRQ_amir_al_illah
-recruit_character = IRQ_nuri_as_said
-recruit_character = IRQ_sharaf_bin_rajeh
-recruit_character = IRQ_faisal_ii
+recruit_character = IRQ_Muhammad_Amin_Al_Umari
+recruit_character = IRQ_abdulilah
+recruit_character = IRQ_zeid_ibn_hussein
+recruit_character = IRQ_talib_mushtaq
+recruit_character = IRQ_Haqqi_Tawfik_Al_Mufti
+recruit_character = IRQ_sami_fatah
+recruit_character = IRQ_Saabeh_naguib_al_ezi
+recruit_character = IRQ_Tahsien_Ali
+recruit_character = IRQ_Shaker_Saadoun
+recruit_character = IRQ_hikmat_sulayman
+recruit_character = IRQ_Salah_al_Din_al_Sabbagh
+recruit_character = IRQ_Mahmud_Salman
+recruit_character = IRQ_kamil_shabib
+recruit_character = IRQ_Muhammad_hassan_al_sadr
+recruit_character = IRQ_sulayiman_fizi
+recruit_character = IRQ_Fritz_Grobba
+recruit_character = IRQ_muhammad_zaki_al_basri
+recruit_character = IRQ_muhammad_amin_zaki
+recruit_character = IRQ_Hussien_Fawzi
+recruit_character = IRQ_werner_junck
+recruit_character = IRQ_Muhmmad_Reza_Al_Shabibi
+recruit_character = IRQ_tahsien_qadri
+recruit_character = IRQ_Kamil_Al_Chaderchi
+recruit_character = IRQ_Ahmed_Mukhtar_Babban
+recruit_character = IRQ_Sabhia_Al_Sheikh_Daud
+recruit_character = IRQ_Naima_Al_Askari
+recruit_character = IRQ_Amina_Al_Rahal
+recruit_character = IRQ_Hussien_Al_Rahal
+recruit_character = IRQ_Saib_Shawkat
+recruit_character = IRQ_bahjat_al_attaiyah
+recruit_character = IRQ_Rustam_Haidar
+recruit_character = IRQ_Hussien_Fawzi
+recruit_character = IRQ_Sami_Shawkat
+recruit_character = IRQ_Sharif_Sharaf
+recruit_character = IRQ_Calouste_Gulbenkian
+recruit_character = IRQ_Ali_Al_Sharqi
+recruit_character = IRQ_Zari_Al_Saadon
+recruit_character = IRQ_Ajeel_Al_Yawer
+recruit_character = IRQ_Salih_Bash_Ayan_Abbasi
+recruit_character = IRQ_Suleiman_Fattah_Pasha
+recruit_character = IRQ_Yunis_Sabawi
 
+recruit_character = IRQ_Abduljabbar_Abdullah
+recruit_character = IRQ_Muhammad_Kashef_Al_Ghitta
+activate_advisor = IRQ_nuri_al_said
 
-##### GoE Setup #####
-
-IF = { 
-	limit = {
-		has_dlc = "Graveyard of Empires"
-	}
-	recruit_character = IRQ_abd_al_ilah
-	recruit_character = IRQ_taha_al_hashemi
-	recruit_character = IRQ_muhammad_husayn_kashif_al_ghita
-	recruit_character = PAL_amin_al_husseini
-	recruit_character = IRQ_muhammad_amin_zaki
-	recruit_character = IRQ_kamil_shabib
-	recruit_character = IRQ_salah_al_din_al_sabbagh
-	recruit_character = IRQ_jamil_abdul_wahab
-	recruit_character = IRQ_fawsi_al_kaukji
-	recruit_character = IRQ_mahmud_salman
-	recruit_character = IRQ_hikmat_suleiman
-	recruit_character = IRQ_tawfiq_al_suawaidi
-	recruit_character = IRQ_husain_al_rahhal
-	recruit_character = IRQ_max_von_oppenheim
-	recruit_character = IRQ_saib_shawkat
-	recruit_character = IRQ_ibrahim_al_ghandanfari
-	recruit_character = ARM_calouste_gulbenkian
-	recruit_character = IRQ_hussein_fawzi
-	recruit_character = IRQ_fritz_grobba
-	recruit_character = IRQ_werner_junck
-	recruit_character = IRQ_harry_george_smart
-	recruit_character = IRQ_naji_al_suwaidi
-	recruit_character = IRQ_akram_mushtak
-	recruit_character = IRQ_ahmed_barzani
-	recruit_character = IRQ_mustafa_barzani
-	recruit_character = IRQ_muhammad_ali_jawad
-	recruit_character = IRQ_maruf_al_rusafi
-	recruit_character = IRQ_ahmed_rushdi_muhammad
-	recruit_character = IRQ_jamil_ahmad_abullah_al_rawi
-	recruit_character = IRQ_kamil_al_jaderji
-	recruit_character = IRQ_mohamed_hadid
-	recruit_character = IRQ_jafar_al_timman
-	recruit_character = IRQ_mohamed_mahdi_kubba
-
-	IRQ_salah_al_din_al_sabbagh = {
-		set_character_flag = IRQ_golden_square_char
-	}
-	IRQ_mahmud_salman = {
-		set_character_flag = IRQ_golden_square_char
-	}
-	IRQ_fahmi_said = {
-		set_character_flag = IRQ_golden_square_char
-	}
-	IRQ_kamil_shabib = {
-		set_character_flag = IRQ_golden_square_char
-	}
-
-	add_ideas = IRQ_ghazi_i
-	add_ideas = IRQ_golden_square
-	add_ideas = IRQ_anglo_iraqi_treaty
-	add_ideas = IRQ_agrarian_society
-
-	#variables for Royal Iraqi Army modifier
-
-	set_variable = { IRQ_experience_gain_army_factor = -0.03 }
-	set_variable = { IRQ_army_org_factor = -0.05 }
-	set_variable = { IRQ_army_core_defence_factor = 0 }
-	set_variable = { IRQ_army_core_attack_factor = 0 }
-	set_variable = { IRQ_army_armor_defence_factor = 0 }
-	set_variable = { IRQ_army_armor_attack_factor = 0 }
-	set_variable = { IRQ_army_artillery_attack_factor = 0 }
-	set_variable = { IRQ_army_artillery_defence_factor = 0 }
-	set_variable = { IRQ_conscription_factor = -0.05 }
-	set_variable = { IRQ_training_time_factor = 0 }
-	set_variable = { IRQ_conscription = 0 }
-	set_variable = { IRQ_army_defence_factor = 0 }
-	set_variable = { IRQ_army_attack_factor = 0 }
-	set_variable = { IRQ_special_forces_cap = 0 }
-	set_variable = { IRQ_special_forces_out_of_supply_factor = 0 }
-	set_variable = { IRQ_extra_marine_supply_grace = 0 }
-	set_variable = { IRQ_max_planning_factor = 0 }
-	set_variable = { IRQ_planning_speed = -0.1 }
-	set_variable = { IRQ_max_command_power_mult = 0 }
-	set_variable = { IRQ_command_power_gain_mult = 0 }
-	set_variable = { IRQ_acclimatization_cold_climate_gain_factor = 0 }
-	set_variable = { IRQ_acclimatization_hot_climate_gain_factor = 0.15 }
-	set_variable = { IRQ_motorized_attack_factor = 0 }
-	set_variable = { IRQ_mechanized_attack_factor = 0 }
-	set_variable = { IRQ_modifier_army_sub_unit_cavalry_attack_factor = 0 }
-	set_variable = { IRQ_modifier_army_sub_unit_cavalry_defence_factor = 0 }
-	set_variable = { IRQ_modifier_army_sub_unit_cavalry_speed_factor = 0 }
-
-	add_dynamic_modifier = {
-		modifier = IRQ_royal_army_modifier_IRQ
-	}
-
-	#Variables for Air Force Modifier 
-	set_variable = { IRQ_air_accidents_factor = -0.1 }
-	set_variable = { IRQ_air_ace_generation_chance_factor = 0 }
-	set_variable = { IRQ_air_weather_penalty = -0.05 }
-	set_variable = { IRQ_air_training_xp_gain_factor = 0 }
-	set_variable = { IRQ_air_manpower_requirement_factor = 0 }
-	set_variable = { IRQ_air_agility_factor = 0 }
-	set_variable = { IRQ_air_nav_efficiency = 0 }
-	set_variable = { IRQ_air_cas_efficiency = 0 }
-	set_variable = { IRQ_air_strategic_bomber_bombing_factor = 0 }
-	set_variable = { IRQ_air_range_factor = 0 }
-	set_variable = { IRQ_air_fuel_consumption_factor = 0 }
-	set_variable = { IRQ_air_superiority_efficiency = 0 }
-
-	#Variables for Navy
-	set_variable = { IRQ_navy_refit_speed = 0 }
-	set_variable = { IRQ_navy_repair_speed_factor = 0 }
-	set_variable = { IRQ_experience_gain_navy = 0.1 }
-	set_variable = { IRQ_mines_planting_by_fleets_factor = 0 }
-	set_variable = { IRQ_navy_anti_air_attack_factor = 0 }
-	set_variable = { IRQ_navy_spirit_category_type_cost_factor = 0 }
-	set_variable = { IRQ_convoy_retreat_speed = 0 }
-	set_variable = { IRQ_spotting_chance = 0 }
-	set_variable = { IRQ_production_speed_dockyard_factor = 0 }
-	set_variable = { IRQ_industrial_capacity_dockyard = 0 }
-	set_variable = { IRQ_extra_marine_supply_grace = 0 }
-	set_variable = { IRQ_naval_invasion_capacity = 0 }
-	set_variable = { IRQ_naval_mines_effect_reduction = 0 }
-	set_variable = { IRQ_experience_gain_navy_unit_factor = 0.1 }
-	set_variable = { IRQ_naval_coordination = 0 }
-	set_variable = { IRQ_naval_equipment_upgrade_xp_cost = 0 }
-	set_variable = { IRQ_naval_morale_factor = 0 }
-	set_variable = { IRQ_screening_efficiency = 0 }
-	set_variable = { IRQ_convoy_escort_efficiency = 0 }
-	set_variable = { IRQ_navy_capital_ship_defence_factor = 0 }
-	set_variable = { IRQ_naval_accidents_chance = 0 }
-	set_variable = { IRQ_navy_screen_defence_factor = 0 }
-	set_variable = { IRQ_production_speed_coastal_bunker_factor = 0 }
-
-	IF = {
-		limit = { has_dlc = "Arms Against Tyranny" }
-		give_market_access = ENG
-	}
-
-	ENG = {
-		add_opinion_modifier = {
-			target = IRQ
-			modifier = IRQ_anglo_iraqi_treaty_in_place_opm
-		}	
-	}
-	add_opinion_modifier = {
-		target = ENG
-		modifier = IRQ_anglo_iraqi_treaty_in_place_opm
-	}
-
-	# Kurdish Resistance
-	676 = {
-		add_dynamic_modifier = { modifier = KUR_resistance_modifier }
-	}
-
-	# Unhappy and Autonomous Shia Tribes 
-	1010 = {
-		add_dynamic_modifier = { modifier = IRQ_shia_resistance_modifier }
-	}
-	675 = {
-		add_dynamic_modifier = { modifier = IRQ_shia_resistance_modifier }
-	}
-
+set_power_balance = {
+	id = IRQ_political_chaos_balance
+	left_side = IRQ_bop_left_side
+	right_side = IRQ_bop_right_side
 }
-
-IF = {
-	limit = {
-		NOT = {
-			has_dlc	= "Graveyard of Empires"
-		}
-	}
-	recruit_character = IRQ_abd_almalik_ibn_hisham
-	recruit_character = IRQ_ali_abn_hussein
-	recruit_character = IRQ_iskandar_al-shami
-	recruit_character = IRQ_mustafa_al_quidsi
-	recruit_character = IRQ_ali_ben_jawad
-	recruit_character = IRQ_abdullah_al-tell
-	recruit_character = IRQ_khaled_al_dalabeeh
-	recruit_character = IRQ_taha_al_ahmani
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.8.4"
+	election_frequency = 60
+	elections_allowed = yes
 }
-
+set_popularities = {
+	democratic = 32
+	fascism = 5
+	neutrality = 61
+	communism = 2
+}
+add_stability = -0.4
+add_command_power = 15
 1939.1.1 = {
-
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1937.12.18"
+		election_frequency = 60
+		elections_allowed = no
+	}
+	set_popularities = {
+		fascism = 30
+		neutrality = 70
+	}
+	add_country_leader_role = {
+		country_leader = {
+			ideology = despotism
+		 }
+		 character = IRQ_abdulilah
+		 promote_leader = yes
+	}
+	add_country_leader_role = {
+		country_leader = {
+			ideology = despotism
+		 }
+		 character = IRQ_faisal_ii
+	}
+	retire_character = IRQ_ghazi_i
+	remove_ideas = IRQ_agricultural_economy_1
+	remove_ideas = IRQ_kurdish_issue
+	remove_ideas = IRQ_Ghazi
 	add_political_power = 1198
 	add_command_power = 100
-	
-	IF = {
-		limit = {
-			has_dlc = "Graveyard of Empires"
-		}
-		#1936
-		complete_national_focus = IRQ_party_of_national_brotherhood
-		complete_national_focus = IRQ_royal_iraqi_army
-		complete_national_focus = IRQ_bakr_sidqi_coup
-		complete_national_focus = IRQ_raf_levies_focus
-		complete_national_focus = IRQ_assasination_of_sidqi
-		#1937
-		complete_national_focus = IRQ_expand_habbaniya_airbase
-		complete_national_focus = IRQ_decouple_from_the_pound
-		complete_national_focus = IRQ_found_the_iraqi_state_railways
-		complete_national_focus = IRQ_purchase_foreign_equipment
-		complete_national_focus = IRQ_independent_flight_schools
-
-		#1938
-		complete_national_focus = IRQ_infantry_focus
-		complete_national_focus = IRQ_purchase_british_aircraft
-		complete_national_focus = IRQ_strengthen_the_iraqi_dinar
-		complete_national_focus = IRQ_heavy_industry_investments
-		complete_national_focus = IRQ_local_arms_industry
-		complete_national_focus = IRQ_al_muthanna_club
-
-		#1939
-		complete_national_focus = IRQ_construct_the_kut_barrage
-		complete_national_focus = IRQ_baghdad_colleges_of_engineering_and_education
-		complete_national_focus = IRQ_found_southern_steel_plants
-		complete_national_focus = IRQ_modernization
-
-		diplomatic_relation = {
-			country = TUR
-			relation = non_aggression_pact
-			active = yes
-		}
-
-		diplomatic_relation = {
-			country = PER
-			relation = non_aggression_pact
-			active = yes
-		}
-
-		diplomatic_relation = {
-			country = AFG
-			relation = non_aggression_pact
-			active = yes
-		}
-
-		add_dynamic_modifier = { modifier = SSB_saadabad_pact }
-
-		remove_ideas = {
-			IRQ_bakr_sidqi
-			IRQ_ghazi_i
-		}
-		retire_character = IRQ_ghazi_i
-		retire_character = IRQ_bakr_sidqi
-		add_ideas = IRQ_regent_idea
+	add_ideas = {
+		IRQ_faisal
+		IRQ_agricultural_economy_3
+		IRQ_kurdish_issue2
+		IRQ_anglo_iraqi_treaties
+		
 	}
-	IF = {
-		limit = {
-			NOT = { has_dlc = "Graveyard of Empires" }
-		}
-		# Generic focuses
-		complete_national_focus = army_effort
-		complete_national_focus = equipment_effort
-		complete_national_focus = motorization_effort
-		complete_national_focus = aviation_effort
-		complete_national_focus = construction_effort_2
-		complete_national_focus = production_effort_2
-		complete_national_focus = infrastructure_effort
-		complete_national_focus = industrial_effort
-		complete_national_focus = construction_effort
-		complete_national_focus = production_effort		
+	#generic focuses
+	complete_national_focus = IRQ_establish_navy
+	complete_national_focus = IRQ_modernise_the_army
+	complete_national_focus = IRQ_invest_in_infantry_support_equipment
+	complete_national_focus = IRQ_iraqi_arms
+	complete_national_focus = IRQ_iraqi_cavalry_corps
+	complete_national_focus = IRQ_chevrolet_c15
+	complete_national_focus = IRQ_iraqi_armed_forces
+	complete_national_focus = IRQ_independent_airforce
+	complete_national_focus = IRQ_fighter_focus
+	#Adha
+	country_event = {
+		id = iraq_flavour.2
+		days = 167  
+	}
+	country_event = {
+		id = iraq_flavour.2
+		days = 522    
+	}
+	country_event = {
+		id = iraq_flavour.2
+		days = 1205   
+	}
+	#Fitr
+	country_event = {
+		id = iraq_flavour.3
+		days = 37 
+	}
+	country_event = {
+		id = iraq_flavour.3
+		days = 392   
+	}
+	country_event = {
+		id = iraq_flavour.3
+		days = 747  
+	}
+	country_event = {
+		id = iraq_flavour.3
+		days = 1103   
+	}
+	#Arbeen
+	country_event = {
+		id = iraq_flavour.4
+		days = 250 
+	}
+	country_event = {
+		id = iraq_flavour.4
+		days = 604  
+	}
+	country_event = {
+		id = iraq_flavour.4
+		days = 959 
+	}
+	country_event = {
+		id = iraq_flavour.14
+		days = 90 
 	}
 	
-	oob = "IRQ_1939"
+	oob = "IRQ_1936"
 	if = {
 		limit = { has_dlc = "By Blood Alone" }
 			set_air_oob = "IRQ_1939_air_bba"
@@ -339,11 +444,18 @@ IF = {
 		gw_artillery = 1
 
 		#doctrines
-		#air_superiority = 1
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+
 
 		#electronics
 		electronic_mechanical_engineering = 1
 		radio = 1
+		radio_detection = 1
 		mechanical_computing = 1
 		computing_machine = 1
 
@@ -357,46 +469,7 @@ IF = {
 		dispersed_industry = 1
 		dispersed_industry2 = 1
 	}
-
-set_grand_doctrine = grand_battleplan
-set_grand_doctrine = new_fleet_in_being
-set_grand_doctrine = new_strategic_destruction
-
-	complete_special_project = {
-		project = sp:sp_air_radar
-	}
-}
-
-set_politics = {
-	ruling_party = neutrality
-	last_election = "1936.1.1"
-	election_frequency = 48
-	elections_allowed = no
-}
-set_popularities = {
-	fascism = 20
-	neutrality = 80
-}
-
-1939.1.1 = {
-	set_politics = {
-		ruling_party = neutrality
-		last_election = "1936.1.1"
-		election_frequency = 48
-		elections_allowed = no
-	}
-	set_popularities = {
-		fascism = 30
-		neutrality = 70
-	}
-	IF = {
-		limit = { 
-			NOT = { 
-				has_dlc = "Graveyard of Empires" 
-			} 
-		}		
-		recruit_character = IRQ_faisal_ii
-		promote_character = IRQ_faisal_ii
-		retire_character = IRQ_ghazi_i
+	remove_power_balance = {
+		id = IRQ_political_chaos_balance
 	}
 }

@@ -1,0 +1,190 @@
+﻿division_template = {
+	name = "Al-Mushat"
+	division_names_group = IRQ_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Fursan"
+	division_names_group = IRQ_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Camel Corps"
+	division_names_group = IRQ_CAV_01
+	regiments = {
+		camelry = { x = 0 y = 0 }
+		camelry = { x = 0 y = 1 }
+		camelry = { x = 0 y = 2 }
+		camelry = { x = 1 y = 0 }
+		camelry = { x = 1 y = 1 }
+		camelry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Al-Mushat Garrison"
+	division_names_group = IRQ_GAR_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+division_template = {
+	name = "Alfurqat Aljabalia"				# Mountain Division
+
+	division_names_group = IRQ_MTN_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+}
+
+
+units = {
+	##### Royal Iraqi Army #####
+	division = {
+		#name = "1 Alfurqat"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 2097
+		division_template = "Al-Mushat"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "1 Alfurqat"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 2089
+		division_template = "Al-Mushat"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "1 Alfurqat"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 8001
+		division_template = "Al-Mushat"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "1 Alfurqat"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 10106
+		division_template = "Al-Mushat"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "1 Alfurqat"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 13366
+		division_template = "Al-Mushat"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "1 Alfurqat"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 6826
+		division_template = "Al-Mushat"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "1 Alfurqat"
+		name = "Al Ferqah Al Jabaliyah"
+		location = 2916
+		division_template = "Alfurqat Aljabalia"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "2 Alfurqat"
+		name = "Al Ferqah Al Jabaliyah"
+		location = 8123
+		division_template = "Alfurqat Aljabalia"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "1 Alfurqat"
+		name = "Al Mushat"
+		location = 2097
+		division_template = "Al-Mushat Garrison"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		#name = "1 Alfurqat"
+		name = "Al Mushat Al Jamaliyah"
+		location = 1631
+		division_template = "Camel Corps"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+}
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "IRQ"
+		}
+		requested_factories = 1
+		progress = 0.22
+		efficiency = 100
+	}
+}

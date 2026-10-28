@@ -1,0 +1,97 @@
+################
+##### IRQ ######
+################
+IRQ_balance_of_power_category={
+	icon = GFX_decision_category_saf_anti_colonialist_crusade #TODO_TA replace if it is actually shown
+		
+		allowed = {
+			tag = IRQ
+		}
+	
+		priority = {
+			base = 10
+		}
+	
+		visible = {
+			
+		}
+}
+greater_iraq_decision_cat = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 20
+	#picture = GFX_decision_cat_picture_NOR_preparedness
+	visible_when_empty = no	
+	allowed = {
+		original_tag = IRQ
+	}
+
+	visible = {
+		
+	}
+}
+hashemite_federation_cat = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 20
+	#picture = GFX_decision_cat_picture_NOR_preparedness
+	visible_when_empty = no	
+	allowed = {
+		original_tag = IRQ
+	}
+
+	visible = {
+		
+	}
+}
+IRQ_Poverty_problem = {
+	icon = GFX_decision_category_generic_economy
+	picture = GFX_decision_cat_picture_iraq_poverty
+	allowed = {
+		tag = IRQ
+	}
+	visible_when_empty = yes
+	visible = {
+		has_completed_focus = IRQ_dismiss_corrupt_bureaucrats
+		OR={
+			has_completed_focus = IRQ_develop_the_north
+			has_completed_focus = IRQ_develop_the_south
+		}
+		NOT={
+			has_country_flag = IRQ_povery_rate_lower
+		}
+	}
+}
+
+form_babylon_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+
+	allowed = {
+		always = yes
+	}
+}
+form_mashriq_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+	visible = {
+		has_completed_focus = IRQ_middle_eastern_revolution
+	}
+	allowed = {
+		always = yes
+	}
+}
+IRQ_revolution = {
+	icon = GFX_decision_category_generic_communist_revolution
+	picture = GFX_decision_cat_picture_iraq_revolt
+	allowed = {
+		tag = IRQ
+	}
+	visible_when_empty = yes
+	visible = {
+		has_completed_focus = IRQ_align_with_the_naqabat
+		
+	}
+}

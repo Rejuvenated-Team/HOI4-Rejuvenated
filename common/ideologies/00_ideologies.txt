@@ -164,6 +164,10 @@ ideologies = {
 				can_be_randomly_selected = no # won't be assigned to randomly generated country leaders
 			}
 
+			corporatocracy = { #rj
+				can_be_randomly_selected = no
+			}
+
 		}
 
 		dynamic_faction_names = {

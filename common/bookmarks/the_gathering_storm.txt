@@ -296,6 +296,24 @@ bookmarks = {
 			label = { rj_label_oceania rj_label_new_content }
 		}
 
+		IRQ = {
+			minor = yes
+			history = "rj_IRQ_GATHERING_STORM_DESC"
+			ideology = democratic
+			version = base_game
+			ideas = {
+				IRQ_Ghazi
+				IRQ_agricultural_economy_1
+				IRQ_kurdish_issue
+			}
+			focuses = {
+				IRQ_royal_coup
+				IRQ_failed_coup
+				IRQ_Bakr_reign
+			}
+			label = { rj_label_middle_east rj_label_new_content }
+		}
+
 		EGY = {
 			minor = yes
 			history = "EGY_GATHERING_STORM_DESC"

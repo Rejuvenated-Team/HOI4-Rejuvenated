@@ -1,0 +1,171 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_report_event_faisal_ii_coronation"
+		texturefile = "gfx/event_pictures/report_event_faisal_ii_coronation.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_iraq_coup"
+		texturefile = "gfx/event_pictures/report_event_iraq_coup.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_kuwait"
+		texturefile = "gfx/event_pictures/report_event_kuwait.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_syria"
+		texturefile = "gfx/event_pictures/report_event_syria.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_khazal"
+		texturefile = "gfx/event_pictures/report_event_khazal.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_palestine"
+		texturefile = "gfx/event_pictures/report_event_palestine.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_may_coup"
+		texturefile = "gfx/event_pictures/report_event_may_coup.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_zahawi_funeral"
+		texturefile = "gfx/event_pictures/report_event_zahawi_funeral.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_ghazi_funeral"
+		texturefile = "gfx/event_pictures/report_event_ghazi_funeral.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_ghazi_clique"
+		texturefile = "gfx/event_pictures/report_event_ghazi_clique.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_eid_fitr"
+		texturefile = "gfx/event_pictures/report_event_eid_fitr.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_eid_adha"
+		texturefile = "gfx/event_pictures/report_event_eid_adha.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_christmas"
+		texturefile = "gfx/event_pictures/report_event_christmas.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_poirot"
+		texturefile = "gfx/event_pictures/report_event_poirot.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_poirot2"
+		texturefile = "gfx/event_pictures/report_event_poirot2.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_arbeen"
+		texturefile = "gfx/event_pictures/report_event_arbeen.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_baghdad_Conservatory"
+		texturefile = "gfx/event_pictures/report_event_baghdad_Conservatory.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_sharif_muhiddin"
+		texturefile = "gfx/event_pictures/report_event_sharif_muhiddin.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_salima_pasha"
+		texturefile = "gfx/event_pictures/report_event_salima_pasha.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_siddiq_pasha"
+		texturefile = "gfx/event_pictures/report_event_siddiq_pasha.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_anglo_iraqi_war"
+		texturefile = "gfx/event_pictures/news_event_anglo_iraqi_war.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_farhud"
+		texturefile = "gfx/event_pictures/news_event_farhud.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_adolf_rashid"
+		texturefile = "gfx/event_pictures/report_event_adolf_rashid.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_emir_saud_in_baghdad"
+		texturefile = "gfx/event_pictures/report_event_emir_saud_in_baghdad.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_boy_scouts"
+		texturefile = "gfx/event_pictures/report_event_boy_scouts.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_basra_airport"
+		texturefile = "gfx/event_pictures/report_event_basra_airport.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_turkey_army_maneuvers"
+		texturefile = "gfx/event_pictures/report_event_turkey_army_maneuvers.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_Sans_Peur"
+		texturefile = "gfx/event_pictures/report_event_Sans_Peur.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_princess_azzah_3"
+		texturefile = "gfx/event_pictures/report_event_princess_azzah_3.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_red_line"
+		texturefile = "gfx/event_pictures/report_event_red_line.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_greece"
+		texturefile = "gfx/event_pictures/report_event_greece.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_iraq"
+		texturefile = "gfx/event_pictures/report_event_iraq.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_kurdish_revolt"
+		texturefile = "gfx/event_pictures/report_event_kurdish_revolt.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_ottomans"
+		texturefile = "gfx/event_pictures/report_event_ottomans.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_iraqi_parliament"
+		texturefile = "gfx/event_pictures/report_event_iraqi_parliament.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_iraqi_independence"
+		texturefile = "gfx/event_pictures/report_event_iraqi_independence.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_revolt"
+		texturefile = "gfx/event_pictures/report_event_revolt.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_british"
+		texturefile = "gfx/event_pictures/report_event_british.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_babylon"
+		texturefile = "gfx/event_pictures/report_event_babylon.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_king_fuad_death"
+		texturefile = "gfx/event_pictures/news_event_king_fuad_death.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_Iraq_Anti_Palestine_Partition_Protests_1937"
+		texturefile = "gfx/event_pictures/report_event_Iraq_Anti_Palestine_Partition_Protests_1937.png"
+	}
+
+
+}
+
+
+

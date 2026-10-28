@@ -1,0 +1,1940 @@
+characters={
+	IRQ_ghazi_i={
+		name="Ghazi I"
+		portraits={
+			civilian={
+				large="GFX_portrait_iraq_ghazi"
+				small=GFX_portrait_IRQ_ghazi_i_small
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	IRQ_nuri_al_said={
+		advisor={
+			slot = political_advisor
+			idea_token = IRQ_nuri_al_said
+			allowed  = {
+					original_tag  = IRQ
+				}
+				traits  = {
+					IRQ_pro_western_iraqi_nationalist
+				}
+				can_be_fired = no
+		}
+		corps_commander = {
+			traits = {
+				war_hero cavalry_leader unyielding_defender old_guard trait_IRQ_malik_loyalist
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				has_war = yes
+			}
+		}
+
+		name="Nuri Al Said"
+		portraits={
+			civilian={
+				large="gfx/leaders/IRQ/Portrait_IRQ_Nuri_Al_Said_suit.png"
+				small=GFX_portrait_IRQ_nuri_as_said_small
+			}
+			army = {
+				large="gfx/leaders/IRQ/Portrait_IRQ_Nuri_Al_Said.png"
+				
+			}
+		}
+	}
+	IRQ_yasin_al_hashimi={
+		name="Yasin Al Hashimi"
+		portraits={
+			civilian={
+				large="gfx/leaders/IRQ/IRQ_yasin_al_hashimi_civilian.png"
+				small=GFX_portrait_IRQ_yasin_al_hashimi_small
+			}
+			army={
+				large="gfx/leaders/IRQ/Portrait_IRQ_Yasin_Hashimi_Army.png"
+			}
+		}
+		country_leader={
+			ideology=centrism
+			expire="1965.1.1.1"
+			desc = IRQ_yasin_al_hashimi_desc
+			id=-1
+		}
+		corps_commander = {
+			traits = {
+				war_hero infantry_leader politically_connected old_guard trait_IRQ_malik_loyalist
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				has_war = yes
+			}
+		}
+	}
+	IRQ_Jafar_Al_Askari={
+		name="Jafar Al Askari"
+		portraits={
+			army={
+				large="gfx/leaders/IRQ/Portrait_IRQ_Jafar_Al_Askari.png"
+			}
+		}
+		field_marshal = {
+			traits = {
+				war_hero infantry_expert inspirational_leader old_guard trait_IRQ_malik_loyalist
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	IRQ_Haqqi_Tawfik_Al_Mufti={
+		name="Haqqi Tawfik Al Mufti"
+		portraits={
+			army={
+				large="gfx/leaders/IRQ/portrait_IRQ_Haqqi_Tawfik_Mufti.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer recently_promoted
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	IRQ_sami_fatah={
+		name="Sami Fatah"
+		portraits={
+			army={
+				large="gfx/leaders/IRQ/portrait_IRQ_sami_fatah.png"
+				small="gfx/interface/ideas/IRQ_sami_fatah.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				air_controller destroyer_leader 
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor={
+			slot = high_command
+			idea_token = IRQ_sami_fatah
+			ledger = air
+				allowed = {
+					original_tag = IRQ
+				}
+				traits = {
+					air_chief_reform_1
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+	}
+	IRQ_Saabeh_naguib_al_ezi={
+		name="Saabeh Al Ezi"
+		portraits={
+			army={
+				large="gfx/leaders/IRQ/portrait_IRQ_Saabeh_naguib_al_ezi.png"
+				small="gfx/interface/ideas/IRQ_Saabeh_naguib_al_ezi.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				war_hero panzer_leader
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor={
+			slot = high_command
+			idea_token = IRQ_Saabeh_naguib_al_ezi
+			ledger = army
+				allowed = {
+					original_tag = IRQ
+				}
+				traits = {
+					army_armored_1
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+	}
+	IRQ_Tahsien_Ali={
+		name="Tahsien Ali"
+		portraits={
+			army={
+				large="gfx/leaders/IRQ/portrait_IRQ_Tahsien_Ali.png"
+				small="gfx/interface/ideas/IRQ_Tahsien_Ali.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				war_hero infantry_leader 
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	IRQ_Shaker_Saadoun={
+		name="Shaker Al Saadoun"
+		portraits={
+			army={
+				large="gfx/leaders/IRQ/portrait_IRQ_Shaker_Saadoun.png"
+				small="gfx/interface/ideas/IRQ_Shaker_Saadoun.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				war_hero infantry_leader 
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				NOT={
+					has_country_flag = IRQ_mosul_baghdad_dominance
+				}
+			}
+		}
+	}
+	IRQ_rashid_ali_algaylani={
+		name="Rashid Ali al-Gaylani"
+		portraits={
+			civilian={
+				large="GFX_portrait_iraq_rashid_al_gaylani"
+				small="gfx/interface/ideas/idea_IRQ_rashid_al_gaylani.dds"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor={
+			cost = 100
+			available = {
+				has_country_flag = IRQ_1941_coup
+				has_government = fascism
+			}
+			can_be_fired = no
+			slot = political_advisor
+			idea_token = IRQ_rashid_ali_algaylani
+				allowed = {
+					original_tag = IRQ
+				}
+				traits = {
+					subservient_ultranationalist
+				}
+		}
+	}
+	IRQ_yusuf_salman_yusuf={
+		name="Yusuf Salman Yusuf"
+		portraits={
+			civilian={
+				large="gfx/leaders/IRQ/IRQ_yusuf_salman_yusuf.png"
+				small=GFX_portrait_IRQ_yusuf_salman_yusuf_small
+			}
+		}
+		country_leader={
+			ideology=leninism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = IRQ_yusuf_salman_yusuf
+			allowed = {
+				original_tag = IRQ
+			}
+			available = {
+				has_completed_focus = IRQ_Chaderchi_Cabinet
+				
+			}
+			visible = {
+				NOT={
+					has_government = communism
+				}
+			}
+			traits = {
+				ARG_communist_insurrectionist
+			}
+		}
+	}
+	IRQ_Jafar_Abu_Timman={
+		name="Jafar Abu Al Timman"
+		portraits={
+			civilian={
+				large="gfx/leaders/IRQ/Portrait_IRQ_Jafar_Abu_Timman.png"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1949.1.1.12"
+			id=-1
+		}
+	}
+	IRQ_faisal_ii={
+		name="Faisal II"
+		portraits={
+			civilian={
+				large="gfx/leaders/IRQ/Portrait_IRQ_faisal_ii_young.png"
+			}
+		}
+	}
+	IRQ_Queen_Aliyah_bint_ali={
+		name="Queen Aliyah"
+		portraits={
+			civilian={
+				large="gfx/leaders/IRQ/IRQ_Queen_Aliyah.png"
+			}
+		}
+		advisor={
+			cost = 100
+			
+			slot = political_advisor
+			idea_token = IRQ_Sharif_Sharaf
+				allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					has_completed_focus = IRQ_royal_coup
+				}
+				traits = {
+					queen_of_iraq
+				}
+				
+		}
+	}
+	IRQ_taha_al_hashimi={
+		advisor = {
+			slot = political_advisor
+			idea_token = IRQ_taha_al_hashimi
+			traits = {
+				IRQ_minister_of_defense
+			}
+			allowed = {
+				original_tag = IRQ
+			}
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			cost = 150
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = IRQ_taha_al_hashimi_ahc
+			ledger = army
+			traits = {
+				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+
+		corps_commander = {
+			traits = { trickster desert_fox }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = -1 
+			visible = {
+				NOT = {
+					has_government = communsim
+				}
+			}
+		}
+
+		name="Taha al Hashimi"
+		portraits={
+			army={
+				large="gfx/leaders/IRQ/Portrait_IRQ_Taha_al_Hashimi.png"
+				small=GFX_portrait_IRQ_taha_al_hashem_military_small
+			}
+			civilian={
+				small=GFX_portrait_IRQ_taha_al_hashem_civilian_small
+			}
+		}
+	}
+	IRQ_Salah_al_Din_al_Sabbagh={
+		name="Saladin Al Sabagh"
+		portraits={
+			army={
+				small=GFX_portrait_IRQ_salah_al_din_al_sabbagh_military_small
+				large="gfx/leaders/IRQ/Portrait_Salah_al_Din_al_Sabbagh.png"
+			}
+			civilian = {
+				small = GFX_portrait_IRQ_salah_al_din_al_sabbagh_civilian_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = IRQ_Salah_al_Din_al_Sabbagh
+
+			traits  = {
+				IRQ_knight_of_arabism
+			}
+			available = {
+				NOT={
+					has_government = communism
+					
+				}
+			}
+			ai_will_do  = {
+				base = 1
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			ledger = army
+			idea_token =IRQ_Salah_al_Din_al_Sabbagh_ahc
+			cost = 100
+			traits = {
+				army_chief_offensive_1
+			}
+			ai_will_do  = {
+				base = 1
+			}
+		}
+
+		corps_commander = {
+			traits = { infantry_leader IRQ_golden_square_member }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				#likely from start,  but might not stick around if going anything but golden square
+			}
+		}
+	}
+	IRQ_Mahmud_Salman={
+		name="Mahmud Salman"
+		portraits={
+			army={
+				small=GFX_portrait_IRQ_mahmud_salman_small
+				large="gfx/leaders/IRQ/Portrait_Mahmud_Salman.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = IRQ_mahmud_salman
+			ledger = air
+			allowed = {
+				original_tag = IRQ
+			}
+			traits = { air_warfare_theorist }
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = IRQ_mahmud_salman_ac
+			cost = 100
+
+			traits = {
+				air_chief_ground_support_2
+			}
+		}
+	}
+	IRQ_fahmi_said={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = IRQ_fahmi_said
+			ledger = air
+				allowed = {
+					original_tag = IRQ
+				}
+				traits = {
+					air_close_air_support_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Fahmi Sa'id"
+		portraits={
+			army={
+				small = GFX_portrait_IRQ_fahmi_said_military_small
+			}
+			civilian = {
+				small = GFX_portrait_IRQ_fahmi_said_civilian_small
+			}
+		}
+	}
+	IRQ_ali_mahmud_al_shaykh={
+		advisor={
+			
+			
+			slot = political_advisor
+			idea_token = IRQ_ali_mahmud_al_shaykh
+				allowed = {
+					original_tag = IRQ
+				}
+				traits = {
+					SWE_minister_of_justice
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Ali Mahmud al Shaykh"
+		portraits={
+			civilian={
+				small=GFX_portrait_IRQ_ali_mahmud_al_shaykh_small
+			}
+		}
+	}
+	IRQ_Yunis_Sabawi={
+		advisor={
+			
+			
+			slot = political_advisor
+			idea_token = IRQ_Yunis_Sabawi
+				allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					has_government = fascism
+				}
+				traits = {
+					IRQ_militant_politician 
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Yunis Al Sabawi"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_Yunis_Sabawi.png"
+			}
+		}
+	}
+	IRQ_tahsien_qadri={
+		advisor={
+			
+			
+			slot = political_advisor
+			idea_token = IRQ_tahsien_qadri
+				allowed = {
+					original_tag = IRQ
+				}
+				traits = {
+					BRA_distinguished_diplomat
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Tahsien Qadri"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_tahsien_qadri.png"
+			}
+		}
+	}
+	IRQ_Muhammad_Husayn_Kashif_Ghita={
+		advisor={
+			cost = 100
+			
+			slot = political_advisor
+			idea_token = IRQ_Muhammad_Husayn_Kashif_Ghita
+				allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					has_country_flag = IRQ_Shia_happy
+					NOT={
+						has_country_flag = IRQ_mosul_baghdad_dominance
+					}
+				}
+				traits = {
+					IRQ_shiite_philosopher
+				}
+				
+		}
+
+		name="Muhammad Husayn Kashif al-Ghita"
+		portraits={
+			civilian={
+				small= GFX_portrait_IRQ_muhammad_husayn_kashif_al_ghita_small
+			}
+		}
+	}
+	IRQ_Muhammad_hassan_al_sadr={
+		advisor={
+			cost = 100
+			
+			slot = political_advisor
+			idea_token = IRQ_Muhammad_hassan_al_sadr
+				allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					has_completed_focus = IRQ_cozy_up_to_the_clergy
+					NOT={
+						has_country_flag = IRQ_mosul_baghdad_dominance
+					}
+				}
+				traits = {
+					nationalist_cleric
+				}
+		}
+
+		name="Muhammad Hassan Al Sadr"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_Muhammad_hassan_al_sadr.png"
+				large="gfx/leaders/IRQ/IRQ_Muhammad_hassan_al_sadr.png"
+			}
+		}
+	}
+	IRQ_Kamil_Al_Chaderchi={
+		advisor={
+			cost = 100
+			
+			slot = political_advisor
+			idea_token = IRQ_Kamil_Al_Chaderchi
+				allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					has_completed_focus = IRQ_path_towards_reform
+				}
+				traits = {
+					SWI_social_democrat
+				}
+		}
+
+		name="Kamil Al Chaderchi"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_Kamil_Al_Chaderchi.png"
+				large="gfx/leaders/IRQ/Portrait_IRQ_Kamil_Al_Chaderchi.png"
+			}
+		}
+	}
+	IRQ_Ahmed_Mukhtar_Babban={
+		advisor={
+			cost = 100
+			
+			slot = political_advisor
+			idea_token = IRQ_Ahmed_Mukhtar_Babban
+				allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					OR={
+						has_completed_focus = IRQ_path_towards_reform
+						has_completed_focus = IRQ_royal_coup
+
+					}
+					NOT={
+						has_country_flag = IRQ_mosul_baghdad_dominance
+					}
+				}
+				traits = {
+					IRQ_royal_chamberlain
+				}
+		}
+
+		name="Ahmed Mukhtar Babban"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_Ahmed_Mukhtar_Babban.png"
+			}
+		}
+	}
+	IRQ_Sabhia_Al_Sheikh_Daud={
+		advisor={
+			cost = 100
+			
+			slot = political_advisor
+			idea_token = IRQ_Sabhia_Al_Sheikh_Daud
+				allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					has_completed_focus = IRQ_secular_education
+				}
+				traits = {
+					womens_rights_activist
+				}
+				
+		}
+		
+		name="Sabhia Al Sheikh Daud"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_Sabhia_Al_Sheikh_Daud.png"
+			}
+		}
+	}
+	IRQ_Naima_Al_Askari={
+		advisor={
+			cost = 100
+			
+			slot = political_advisor
+			idea_token = IRQ_Naima_Al_Askari
+				allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					has_completed_focus = IRQ_lift_some_political_restrictions
+				}
+				traits = {
+					IRQ_red_cresent
+				}
+				
+		}
+		
+		name="Naima Al Askari"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_Naima_Al_Askari.png"
+			}
+		}
+	}
+	IRQ_Amina_Al_Rahal={
+		advisor={
+			cost = 100
+			
+			slot = political_advisor
+			idea_token = IRQ_Amina_Al_Rahal
+				allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					has_completed_focus = IRQ_total_women_equality
+				}
+				traits = {
+					ARG_socialist_feminist
+				}
+				
+		}
+		
+		name="Amina Al Rahal"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_Amina_Al_Rahal.png"
+			}
+		}
+	}
+	IRQ_Hussien_Al_Rahal={
+		advisor={
+			cost = 100
+			
+			slot = political_advisor
+			idea_token = IRQ_Hussien_Al_Rahal
+				allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					OR={
+						has_government = communism
+						has_completed_focus = IRQ_align_with_the_naqabat
+
+					}
+				}
+				traits = {
+					communist_mechanical_engineer IRQ_as_sahifah_editor
+				}
+				
+		}
+		
+		name="Hussien Al Rahal"
+		portraits={
+			civilian={
+				large="gfx/leaders/IRQ/IRQ_Hussien_Al_Rahal.png"
+				small="gfx/interface/ideas/IRQ_Hussien_Al_Rahal.png"
+			}
+		}
+	}
+	IRQ_Abdulwahab_Mahmud={
+		advisor={
+			cost = 100
+			
+			slot = political_advisor
+			idea_token = IRQ_Abdulwahab_Mahmud
+				allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					OR={
+						has_government = communism
+						has_completed_focus = IRQ_align_with_the_naqabat
+
+					}
+				}
+				traits = {
+					AUS_communist_lawyer
+				}
+				
+		}
+		
+		name="Abdulwahab Mahmud"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_Abdulwahab_Mahmud.png"
+			}
+		}
+	}
+	IRQ_talib_mushtaq={ #republican
+		advisor={
+			cost = 100
+			available = {
+				NOT={
+					OR={
+						has_idea = IRQ_Ghazi
+						has_idea = IRQ_faisal
+						has_country_leader = IRQ_ghazi_i
+						has_country_leader = IRQ_faisal_ii
+					}
+				}
+			}
+			slot = political_advisor
+			idea_token = IRQ_talib_mushtaq
+				allowed = {
+					original_tag = IRQ
+				}
+				
+				traits = {
+					IRQ_radical_nationalist
+				}
+		}
+
+		name="Talib Mushtaq"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_talib_mushtaq.png"
+			}
+		}
+	}
+	IRQ_Salih_Jabr={
+		advisor={
+			
+			
+			slot = political_advisor
+			idea_token = IRQ_Salih_Jabr
+			available = {
+				NOT={
+					has_country_flag = IRQ_mosul_baghdad_dominance
+				}
+			}
+			allowed = {
+					original_tag = IRQ
+				}
+				traits = {
+					democratic_reformer
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Salih Jabr"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_Salih_Jabr.png"
+			}
+		}
+	}
+	IRQ_Saib_Shawkat={
+		advisor={
+			
+			
+			slot = political_advisor
+			idea_token = IRQ_Saib_Shawkat
+			allowed = {
+					original_tag = IRQ
+				}
+				traits = {
+					IRQ_al_muthanna_leader
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Saib Shawkat"
+		portraits={
+			civilian={
+				large="gfx/leaders/IRQ/IRQ_Saib_Shawkat.png"
+				small="gfx/interface/ideas/IRQ_Saib_Shawkat.png"
+			}
+		}
+	}
+	IRQ_Abd_Al_Latif_Nuri={
+		corps_commander = {
+			traits = { trait_reckless career_officer infantry_officer }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = high_command
+			ledger = army
+			idea_token = IRQ_Abd_Al_Latif_Nuri
+			available = {
+				not_already_hired_except_as = high_command
+			}
+			traits = { army_infantry_1 }
+			cost = 100
+		}
+		advisor = {
+			slot = theorist
+			idea_token = IRQ_Abd_Al_Latif_Nuri
+			ledger = army
+			available = {
+				not_already_hired_except_as = theorist
+			}
+			traits = { military_theorist }
+			cost = 100
+		}
+
+		name="Abdul Latif Nuri"
+		portraits={
+			army={
+				small="gfx/interface/ideas/IRQ_Abd_Al_Latif_Nuri.png"
+				large="gfx/leaders/IRQ/IRQ_abd_al_latif_nuri.png"
+			}
+		}
+	}
+	IRQ_hamdi_al_pachachi={
+		advisor={
+			
+			
+			slot = political_advisor
+			idea_token = IRQ_hamdi_al_pachachi
+			allowed = {
+					original_tag = IRQ
+				}
+				traits = {
+					IRQ_nationalist_lawyer
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Hamdi Al Pachachi"
+		portraits={
+			civilian={
+				small=GFX_portrait_IRQ_hamdi_al_pachachi_small
+			}
+		}
+	}
+	IRQ_fawzi_al_qawuqji={
+		advisor={
+			
+			
+			slot = army_chief
+			idea_token = IRQ_fawzi_al_qawuqji
+			allowed = {
+					original_tag = IRQ
+				}
+				traits = {
+					army_infantry_1
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = IRQ_fawzi_al_qawuqji
+			traits = {
+				staunch_monarchist
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}corps_commander={
+			traits = { media_personality infantry_officer trait_IRQ_malik_loyalist }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+
+		name="Fawzi Al Qawuqji"
+		portraits={
+			army={
+				small=GFX_portrait_IRQ_fawsi_al_kaukji_small
+				large="gfx/leaders/IRQ/IRQ_fawzi_al_qawuqji.png"
+			}
+		}
+	}
+	IRQ_muhammad_ali_jawad={
+		advisor={
+			
+			
+			slot = air_chief
+			idea_token = IRQ_muhammad_ali_jawad
+			allowed = {
+					original_tag = IRQ
+				}
+				traits = {
+					air_chief_ground_support_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Muhammad Ali Jawad"
+		portraits={
+			army={
+				small="gfx/interface/ideas/IRQ_muhammad_ali_jawad.png"
+			}
+		}
+	}
+	IRQ_jamil_al_midfai={
+		advisor={
+			
+			
+			slot = political_advisor
+			idea_token = IRQ_jamil_al_midfai
+			allowed = {
+					original_tag = IRQ
+				}
+				traits = {
+					moderate_reformist
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Jamil al Midfai"
+		portraits={
+			civilian={
+				small=GFX_portrait_IRQ_jamil_al_midfai_small
+			}
+		}
+	}
+	IRQ_sulayiman_fizi={ #سليمان فيضي
+		advisor={ 
+			
+			
+			slot = political_advisor
+			idea_token = IRQ_sulayiman_fizi
+			allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					NOT={
+						has_country_flag = IRQ_mosul_baghdad_dominance
+					}
+					NOT={
+						has_completed_focus = IRQ_purge_the_socialists
+					}
+				}
+				traits = {
+					socialist_journalist
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Sulayiman Fizi"
+		portraits={
+			civilian={
+				small=GFX_portrait_IRQ_fritz_grobba_small
+			}
+		}
+	}
+	IRQ_Fritz_Grobba={ #
+		advisor={ 
+			
+			
+			slot = political_advisor
+			idea_token = IRQ_sulayiman_fizi
+			allowed = {
+					original_tag = IRQ
+				}
+				visible = {
+					has_completed_focus = IRQ_establish_contact_with_berlin
+					NOT={
+						OR={
+							has_government = democratic
+							has_government = communism
+						}
+					}
+				}
+				traits = {
+					IRQ_german_ambassador
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Fritz Grobba"
+		portraits={
+			civilian={
+				small=GFX_portrait_IRQ_fritz_grobba_small
+			}
+		}
+	}
+	IRQ_werner_junck = {
+		name = IRQ_werner_junck
+		portraits = {
+			army = {
+				small = GFX_portrait_IRQ_werner_junck_small
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = IRQ_werner_junck
+			ledger = air
+
+			traits  = {
+				IRQ_fliegerfuhrer
+			}
+			cost = 100
+			available = {
+				has_government = fascism
+				has_completed_focus = IRQ_fligerfuhrer_irak
+			}
+			ai_will_do  = {
+				factor  = 0.000
+			}
+		}
+	}
+	IRQ_harry_george_smart = {
+		name = IRQ_harry_george_smart
+		portraits = {
+			army = {
+				small = GFX_portrait_IRQ_harry_george_smart_small
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = IRQ_harry_george_smart
+			ledger = air
+
+			traits  = {
+				IRQ_air_vice_marshal
+			}
+			cost = 100
+			available = {
+				is_subject_of = ENG
+
+			}
+			ai_will_do  = {
+				factor  = 0.000
+			}
+		}
+	}
+	IRQ_bakr_sidqi={
+		advisor = {
+			slot = theorist
+			idea_token = IRQ_bakr_sidqi_th
+			ledger = army
+			traits = {
+				military_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+			allowed = {
+				original_tag = IRQ
+			}
+			visible = {
+				NOT={
+					country_exists = KUR
+				}
+			}
+		}
+		
+		corps_commander={
+			traits={ hidden_sympathies career_officer harsh_leader defensive_doctrine aggressive_assaulter }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			visible = {
+				NOT={
+					country_exists = KUR
+				}
+			}
+		}
+
+		name="Bakr Sidqi"
+		portraits={
+			army={
+				large="gfx/leaders/IRQ/KUR_bakr_sidqi.png"
+				small=GFX_portrait_IRQ_bakr_sidqi_small
+			}
+		}
+	}
+	IRQ_Muhammad_Amin_Al_Umari={
+		advisor={
+			slot = army_chief
+			idea_token = IRQ_Muhammad_Amin_Al_Umari
+			allowed = {
+				original_tag = IRQ
+			}
+			traits = {
+				army_chief_offensive_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.5
+			}
+		}
+		
+		corps_commander={
+			traits={ old_guard career_officer harsh_leader offensive_doctrine trait_IRQ_malik_loyalist }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+		}
+
+		name="Muhammad Amin Al Umari"
+		portraits={
+			army={
+				large="gfx/leaders/IRQ/IRQ_Muhammad_Amin_Al_Umari.png"
+				small="gfx/interface/ideas/IRQ_Muhammad_Amin_Al_Umari.png"
+			}
+		}
+	}
+	IRQ_abdulilah={
+		advisor={
+			
+			
+			slot = political_advisor
+			idea_token = IRQ_abdulilah
+			allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					has_country_flag = IRQ_Ghazi_died
+					NOT={
+						OR={
+							has_government = fascism
+							has_government = communism
+						}
+					}
+				}
+				traits = {
+					brit_eager_collaborator
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+
+		name="Abdulilah Al Hashimi"
+		portraits={
+			civilian={
+				large="gfx/leaders/IRQ/IRQ_Abd_al_Ilah.png"
+				small=GFX_portrait_IRQ_abd_al_ilah_small
+			}
+		}
+	}
+	IRQ_zeid_ibn_hussein={
+		advisor={
+			slot = political_advisor
+			idea_token = IRQ_zeid_ibn_hussein
+			allowed  = {
+					original_tag  = IRQ
+				}
+				traits  = {
+					royal_legitimist 
+				}
+				ai_will_do  = {
+					factor  = 3.000
+				}
+		}
+		corps_commander={
+			traits={ career_officer organizer old_guard trait_IRQ_malik_loyalist }
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=1
+		}
+		advisor={
+			slot = high_command
+			idea_token = IRQ_zeid_ibn_hussein
+			ledger = army
+			allowed = {
+				original_tag = IRQ
+			}
+			traits = {
+				army_chief_planning_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
+
+		name="Zeid Abn Hussein"
+		portraits={
+			army={
+				large="gfx/leaders/IRQ/IRQ_zeid_bin_hussein_al_hashmid.png"
+				small="gfx/interface/ideas/IRQ_zeid_bin_hussein_al_hashmid.png"
+			}
+		}
+	}
+	IRQ_National_Defence_Government={
+		name="National Defence Government"
+		portraits={
+			army={
+				large="gfx/leaders/IRQ/IRQ_National_Defence_Government.png"
+			}
+		}
+	}
+	IRQ_kamil_shabib={
+		name="Kamil Shabib"
+		portraits={
+			army={
+				large="gfx/leaders/IRQ/IRQ_kamil_shabib.png"
+					small = GFX_portrait_IRQ_kamil_shabib_military_small #"GFX_idea_generic_air_arab_3"
+				}
+				civilian = {
+					small = GFX_portrait_IRQ_kamil_shabib_civilian_small
+				}
+				
+		}
+		advisor = {
+			slot = high_command
+			idea_token = IRQ_kamil_shabib
+			ledger = army
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		corps_commander = {
+			traits = { infantry_leader hill_fighter IRQ_golden_square_member }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1 
+			visible = {
+			}
+		}
+	}
+	IRQ_hikmat_sulayman={
+		advisor={
+			slot = political_advisor
+			idea_token = IRQ_hikmat_sulayman
+			allowed  = {
+					original_tag  = IRQ
+				}
+				traits  = {
+					agrarian_nationalist IRQ_minister_of_the_interior
+				}
+				available = {
+					has_country_leader = IRQ_bakr_sidqi
+				}
+				can_be_fired = no
+		}
+
+		name="Hikmat Sulayiman"
+		portraits={
+			civilian={
+				small=GFX_portrait_IRQ_hikmat_suleiman_small
+			}
+		}
+	}
+	IRQ_arshad_al_umari={
+		advisor={
+			slot = political_advisor
+			idea_token = IRQ_arshad_al_umari
+			allowed  = {
+					original_tag  = IRQ
+				}
+				traits  = {
+					silent_workhorse
+				}
+				can_be_fired = no
+		}
+
+		name="Arshad Al Umari"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_arshad_al_umari.png"
+			}
+		}
+	}
+	IRQ_Abdulmahdi_Al_Muntafiqi={
+		advisor={
+			slot = political_advisor
+			idea_token = IRQ_Abdulmahdi_Al_Muntafiqi
+			allowed  = {
+					original_tag  = IRQ
+				}
+				traits  = {
+					BRA_education_pioneer
+				}
+				available = {
+					has_country_flag = IRQ_Shia_happy
+					NOT={
+						has_country_flag = IRQ_mosul_baghdad_dominance
+					}
+				}
+				can_be_fired = no
+		}
+
+		name="Abdulmahdi Al Muntafiqi"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_Abdulmahdi_Al_Muntafiqi.png"
+			}
+		}
+	}
+	IRQ_muhammad_zaki_al_basri={
+		advisor={
+			slot = political_advisor
+			idea_token = IRQ_muhammad_zaki_al_basri
+			allowed  = {
+					original_tag  = IRQ
+				}
+				traits  = {
+					SWE_minister_of_justice
+				}
+				available = {
+					NOT={
+						has_country_flag = IRQ_mosul_baghdad_dominance
+					}
+				}
+				can_be_fired = no
+		}
+
+		name="Muhammad Zaki Al Basri"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_muhammad_zaki_al_basri.png"
+			}
+		}
+	}
+	IRQ_muhammad_amin_zaki = {
+		name = IRQ_muhammad_amin_zaki
+		portraits = {
+			civilian = {
+				small = GFX_portrait_IRQ_muhammad_amin_zaki_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = IRQ_muhammad_amin_zaki
+			traits = {
+				IRQ_kurdish_politician
+			}
+			allowed = {
+				OR = {
+					original_tag = IRQ
+					original_tag = KUR
+				}
+			}
+			available = {
+				NOT={
+					has_government = communism
+				}
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	IRQ_Muhmmad_Reza_Al_Shabibi={
+		advisor={
+			slot = political_advisor
+			idea_token = IRQ_Muhmmad_Reza_Al_Shabibi
+			allowed  = {
+					original_tag  = IRQ
+				}
+				traits  = {
+					national_poet
+				}
+				available = {
+					has_country_flag = IRQ_Shia_happy
+					NOT={
+						has_country_flag = IRQ_mosul_baghdad_dominance
+					}
+				}
+		}
+		corps_commander = {
+			traits = {
+				militias_officer irregulars_officer
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		name="Muhammad Reza Al Shabibi"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_Muhmmad_Reza_Al_Shabibi.png"
+			}
+		}
+	}
+	IRQ_Siddiq_Rasul_Al_Qadri={
+		advisor={
+			cost = 100
+			
+			slot = political_advisor
+			idea_token = IRQ_Siddiq_Rasul_Al_Qadri
+				allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					NOT={
+						has_government = communism
+					}
+
+				}
+				traits = {
+					anti_communist_crusader
+				}
+				
+		}
+		
+		name="Siddiq Rasul Al Qadri"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_Siddiq_Rasul_Al_Qadri.png"
+			}
+		}
+	}
+	IRQ_bahjat_al_attaiyah={
+		advisor={
+			cost = 100
+			
+			slot = political_advisor
+			idea_token = IRQ_bahjat_al_attaiyah
+				allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					has_intelligence_agency = yes 
+					NOT={
+						has_country_flag = IRQ_mosul_baghdad_dominance
+					}
+				}
+				traits = {
+					head_of_intelligence
+				}
+				
+		}
+		
+		name="Bahjat Al Attaiyah"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_bahjat_al_attaiyah.png"
+			}
+		}
+	}
+	IRQ_Rustam_Haidar={
+		advisor={
+			cost = 100
+			
+			slot = political_advisor
+			idea_token = IRQ_Rustam_Haidar
+				allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					NOT={
+						has_country_flag = IRQ_mosul_baghdad_dominance
+					}
+				}
+				traits = {
+					economic_organizer
+				}
+				
+		}
+		
+		name="Rustam Haidar"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_Rustam_Haidar.png"
+			}
+		}
+	}
+	IRQ_Ali_Al_Sharqi={
+		advisor={
+			cost = 100
+			
+			slot = political_advisor
+			idea_token = IRQ_Ali_Al_Sharqi
+				allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					NOT={
+						has_country_flag = IRQ_mosul_baghdad_dominance
+					}
+				}
+				traits = {
+					revolutionary_poet
+				}
+				
+		}
+		
+		name="Ali Al Sharqi"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_Ali_Al_Sharqi.png"
+			}
+		}
+	}
+	IRQ_Zari_Al_Saadon={ #ضاري ال سعدون
+		advisor={
+			cost = 100
+			
+			slot = political_advisor
+			idea_token = IRQ_Zari_Al_Saadon
+				allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					OR={
+						has_completed_focus = IRQ_develop_the_south
+						has_completed_focus = IRQ_fight_poverty
+					}
+					NOT={
+						has_country_flag = IRQ_mosul_baghdad_dominance
+					}
+				}
+				traits = {
+					tribal_leader
+				}
+				
+		}
+		
+		name="Zari Al Saadon"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_Zari_Al_Saadon.png"
+			}
+		}
+	}
+	IRQ_Ajeel_Al_Yawer={ #
+		advisor={
+			cost = 100
+			
+			slot = political_advisor
+			idea_token = IRQ_Ajeel_Al_Yawer
+				allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					OR={
+						has_completed_focus = IRQ_develop_the_north
+						has_completed_focus = IRQ_fight_poverty
+					}
+				}
+				traits = {
+					tribal_leader
+				}
+				
+		}
+		
+		name="Ajeel Al Yawer"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_Ajeel_Al_Yawer.png"
+			}
+		}
+	}
+	IRQ_Salih_Bash_Ayan_Abbasi={ #
+		advisor={
+			cost = 100
+			
+			slot = political_advisor
+			idea_token = IRQ_Salih_Bash_Ayan_Abbasi
+				allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					has_completed_focus = IRQ_path_towards_reform
+					NOT={
+						has_country_flag = IRQ_mosul_baghdad_dominance
+					}
+				}
+				traits = {
+					minister_of_religious_affairs
+				}
+				
+		}
+		
+		name="Salih Bash Ayan Al Abbasi"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_Salih_Bash_Ayan_Abbasi.png"
+			}
+		}
+	}
+	IRQ_Suleiman_Fattah_Pasha={ #
+		advisor={
+			cost = 100
+			
+			slot = political_advisor
+			idea_token = IRQ_Suleiman_Fattah_Pasha
+				allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					NOT={
+						has_government = communism
+					}
+				}
+				traits = {
+					successful_businessman 
+				}
+				
+		}
+		
+		name="Suleiman Fattah Pasha"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_Suleiman_Fattah_Pasha.png"
+			}
+		}
+	}
+	IRQ_Sharif_Sharaf={
+		advisor={
+			cost = 100
+			
+			slot = political_advisor
+			idea_token = IRQ_Sharif_Sharaf
+				allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					has_government = fascism
+				}
+				traits = {
+					crown_regent IRQ_emir_of_taif
+				}
+				
+		}
+		
+		name="Sharif Sharaf"
+		portraits={
+			civilian={
+				small=GFX_portrait_IRQ_sharaf_bin_rajeh_small
+				large="gfx/leaders/IRQ/Portrait_Iraq_Sherif_Sharaf_bin_Rajeh.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				war_hero cavalry_leader old_guard irregulars_officer hidden_sympathies
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				has_government = fascism
+			}
+		}
+	}
+	IRQ_Calouste_Gulbenkian={
+		advisor={
+			cost = 100
+			
+			slot = political_advisor
+			idea_token = IRQ_Calouste_Gulbenkian
+				allowed = {
+					original_tag = IRQ
+				}
+				available = {
+					is_subject_of = ENG
+				}
+				traits = {
+					IRQ_armenian_oil_magnate
+				}
+				
+		}
+		
+		name="Calouste Gulbenkian"
+		portraits={
+			civilian={
+				small=GFX_portrait_ARM_calouste_gulbenkian_small
+				large="gfx/leaders/IRQ/Portrait_IRQ_Calouste_Gulbenkian.png"
+			}
+		}
+	}
+	IRQ_Hussien_Fawzi={
+		name="Hussien Fawzi"
+		portraits={
+			civilian={
+				small=GFX_portrait_IRQ_hussein_fawzi_small
+				large="gfx/leaders/IRQ/IRQ_Hussien_Fawzi.png"
+			}
+		}
+		advisor = {
+			allowed = {
+				original_tag = IRQ
+			}
+			
+			slot = army_chief
+			idea_token = IRQ_Hussien_Fawzi
+			traits = {
+				army_chief_organizational_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+			available = { 
+			}
+		}
+
+		corps_commander = {
+			traits = { organizer infantry_leader war_hero media_personality }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+			}
+		}
+	}
+	IRQ_Sami_Shawkat={ #سامي شوكت
+		
+		
+		name="Sami Shawkat"
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/IRQ_Sami_Shawkat.png"
+				large="gfx/leaders/IRQ/IRQ_Sami_Shawkat.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				politically_connected hidden_sympathies 
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	IRQ_Abduljabbar_Abdullah = {
+		name = "Abdul Jabbar Abdullah"
+		portraits = {
+			army = {
+				large="gfx/leaders/IRQ/IRQ_Abduljabbar_Abdullah.png"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_specialist }
+			skills = {
+				specialization_nuclear = 1
+			}
+		}
+	}
+	IRQ_Muhammad_Kashef_Al_Ghitta = {
+		name = "Muhammad Kashef Al Ghitta"
+		portraits = {
+			army = {
+				large="gfx/leaders/IRQ/IRQ_Muhammad_Kashef_Al_Ghitta.png"
+			}
+		}
+
+		scientist = {
+			visible = {
+				date > 1943.1.1
+			}
+			traits = { scientist_trait_nuclear_specialist }
+			skills = {
+				specialization_nuclear = 1
+			}
+		}
+	}
+}

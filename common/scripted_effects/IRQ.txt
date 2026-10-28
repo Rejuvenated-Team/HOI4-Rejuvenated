@@ -1,0 +1,915 @@
+IRQ_Agrarian_development={
+	if = {
+		limit = {
+			has_idea = IRQ_agricultural_economy_1
+		 }
+		 swap_ideas = {
+			remove_idea = IRQ_agricultural_economy_1
+			add_idea = IRQ_agricultural_economy_2
+		 }
+	}
+	else_if = {
+	   limit = {
+		   has_idea = IRQ_agricultural_economy_2
+		}
+		swap_ideas = {
+		   remove_idea = IRQ_agricultural_economy_2
+		   add_idea = IRQ_agricultural_economy_3
+		}
+	}
+	else_if = {
+	   limit = {
+		   has_idea = IRQ_agricultural_economy_3 
+
+	   }
+	   swap_ideas = {
+		  remove_idea = IRQ_agricultural_economy_3
+		  add_idea = IRQ_agricultural_economy_4
+	   }
+	}
+	else_if = {
+	   limit = {
+		   has_idea = IRQ_agricultural_economy_4
+
+	   }
+	   swap_ideas = {
+		  remove_idea = IRQ_agricultural_economy_4
+		  add_idea = IRQ_agricultural_economy_5
+	   }
+	}
+	else_if = {
+	   limit = {
+		   has_idea = IRQ_agricultural_economy_5
+
+	   }
+	   swap_ideas = {
+		  remove_idea = IRQ_agricultural_economy_5
+		  add_idea = IRQ_agricultural_economy_6
+	   }
+	}
+	else_if = {
+	   limit = {
+		   has_idea = IRQ_agricultural_economy_6
+
+	   }
+	   remove_ideas = IRQ_agricultural_economy_6
+	}
+}
+IRQ_Agrarian_undevelopment={
+	if = {
+		limit = {
+			has_idea = IRQ_agricultural_economy_6
+		 }
+		 swap_ideas = {
+			remove_idea = IRQ_agricultural_economy_6
+			add_idea = IRQ_agricultural_economy_5
+		 }
+	}
+	else_if = {
+	   limit = {
+		   has_idea = IRQ_agricultural_economy_5
+		}
+		swap_ideas = {
+		   remove_idea = IRQ_agricultural_economy_5
+		   add_idea = IRQ_agricultural_economy_4
+		}
+	}
+	else_if = {
+	   limit = {
+		   has_idea = IRQ_agricultural_economy_4
+
+	   }
+	   swap_ideas = {
+		  remove_idea = IRQ_agricultural_economy_4
+		  add_idea = IRQ_agricultural_economy_3
+	   }
+	}
+	else_if = {
+	   limit = {
+		   has_idea = IRQ_agricultural_economy_3
+
+	   }
+	   swap_ideas = {
+		  remove_idea = IRQ_agricultural_economy_3
+		  add_idea = IRQ_agricultural_economy_2
+	   }
+	}
+	else_if = {
+	   limit = {
+		   has_idea = IRQ_agricultural_economy_2
+
+	   }
+	   swap_ideas = {
+		  remove_idea = IRQ_agricultural_economy_2
+		  add_idea = IRQ_agricultural_economy_1
+	   }
+	}
+}
+IRQ_Kurds_idea_up={
+	if = {
+		limit = {
+			has_idea = IRQ_kurdish_issue
+		 }
+		 swap_ideas = {
+			remove_idea = IRQ_kurdish_issue
+			add_idea = IRQ_kurdish_issue2
+		 }
+	}
+	else_if = {
+		limit = {
+			has_idea = IRQ_kurdish_issue2
+		 }
+		 swap_ideas = {
+			remove_idea = IRQ_kurdish_issue2
+			add_idea = IRQ_kurdish_issue3
+		 }
+	}
+}
+IRQ_Kurds_dyn_up={
+	if = { 	
+		limit = {
+			is_owned_and_controlled_by = IRQ
+			has_dynamic_modifier = { modifier = kurdish_agitation }
+		}
+		remove_dynamic_modifier = { modifier = kurdish_agitation }
+		add_dynamic_modifier = { modifier = kurdish_separatism }
+		add_resistance = 5
+	}
+	else_if = { 	
+		limit = {
+			is_owned_and_controlled_by = IRQ
+			has_dynamic_modifier = { modifier = kurdish_separatism }
+		}
+		remove_dynamic_modifier = { modifier = kurdish_separatism }
+		add_dynamic_modifier = { modifier = kurdish_rebellion }
+		add_resistance = 5
+	}
+	else_if = { 	
+		limit = {
+			is_owned_and_controlled_by = IRQ
+			has_dynamic_modifier = { modifier = kurdish_rebellion }
+		}
+		remove_dynamic_modifier = { modifier = kurdish_rebellion }
+		add_dynamic_modifier = { modifier = separatist_fatigue }
+		add_resistance = 5
+	}
+}
+IRQ_Kurds_idea_down={
+	if = {
+		limit = {
+			has_idea = IRQ_kurdish_issue3
+		 }
+		 swap_ideas = {
+			remove_idea = IRQ_kurdish_issue3
+			add_idea = IRQ_kurdish_issue2
+		 }
+	}
+	else_if = {
+		limit = {
+			has_idea = IRQ_kurdish_issue2
+		 }
+		 swap_ideas = {
+			remove_idea = IRQ_kurdish_issue2
+			add_idea = IRQ_kurdish_issue1
+		 }
+	}
+}
+IRQ_kurds_dyn_down = {
+	if = { 	
+		limit = {
+			is_owned_and_controlled_by = IRQ
+			has_dynamic_modifier = { modifier = separatist_fatigue }
+		}
+		remove_dynamic_modifier = { modifier = separatist_fatigue }
+		add_dynamic_modifier = { modifier = kurdish_rebellion }
+		add_resistance = -5
+	}
+	else_if = { 	
+		limit = {
+			is_owned_and_controlled_by = IRQ
+			has_dynamic_modifier = { modifier = kurdish_rebellion }
+		}
+		remove_dynamic_modifier = { modifier = kurdish_rebellion }
+		add_dynamic_modifier = { modifier = kurdish_separatism }
+		add_resistance = -5
+	}
+	else_if = { 	
+		limit = {
+			is_owned_and_controlled_by = IRQ
+			has_dynamic_modifier = { modifier = kurdish_separatism }
+		}
+		remove_dynamic_modifier = { modifier = kurdish_separatism }
+		add_dynamic_modifier = { modifier = kurdish_agitation }
+		add_resistance = -5
+	}
+}
+IRQ_tribes_up={
+	if = {
+		limit = {
+			has_idea = IRQ_Tribal_and_aristocratic_influence1_idea
+		 }
+		 swap_ideas = {
+			remove_idea = IRQ_Tribal_and_aristocratic_influence1_idea
+			add_idea = IRQ_Tribal_and_aristocratic_influence2_idea
+		 }
+	}
+	else_if = {
+		limit = {
+			has_idea = IRQ_Tribal_and_aristocratic_influence2_idea
+		 }
+		 swap_ideas = {
+			remove_idea = IRQ_Tribal_and_aristocratic_influence2_idea
+			add_idea = IRQ_Tribal_and_aristocratic_influence3_idea
+		 }
+	}
+}
+IRQ_tribes_down={
+	if = {
+		limit = {
+			has_idea = IRQ_Tribal_and_aristocratic_influence3_idea
+		 }
+		 swap_ideas = {
+			remove_idea = IRQ_Tribal_and_aristocratic_influence3_idea
+			add_idea = IRQ_Tribal_and_aristocratic_influence2_idea
+		 }
+	}
+	else_if = {
+		limit = {
+			has_idea = IRQ_Tribal_and_aristocratic_influence2_idea
+		 }
+		 swap_ideas = {
+			remove_idea = IRQ_Tribal_and_aristocratic_influence2_idea
+			add_idea = IRQ_Tribal_and_aristocratic_influence1_idea
+		 }
+	}
+}
+
+IRAQI_MEME_WAR = {
+	set_nationality = {
+		target_country = MTQ
+		character = IRQ_Shaker_Saadoun
+	}
+	set_nationality = {
+		target_country = MTQ
+		character = IRQ_Jafar_Abu_Timman
+	}
+	set_nationality = {
+		target_country = MTQ
+		character = IRQ_Abdulmahdi_Al_Muntafiqi
+	}
+	set_nationality = {
+		target_country = MTQ
+		character = IRQ_Muhammad_Husayn_Kashif_Ghita
+	}
+	set_nationality = {
+		target_country = MTQ
+		character = IRQ_Muhammad_hassan_al_sadr
+	}
+	set_nationality = {
+		target_country = MTQ
+		character = IRQ_talib_mushtaq
+	}
+	set_nationality = {
+		target_country = MTQ
+		character = IRQ_Salih_Jabr
+	}
+	set_nationality = {
+		target_country = BSR
+		character = IRQ_Abd_Al_Latif_Nuri
+	}
+	set_nationality = {
+		target_country = BSR
+		character = IRQ_sulayiman_fizi
+	}
+	set_nationality = {
+		target_country = BSR
+		character = IRQ_fawzi_al_qawuqji
+	}
+	set_nationality = {
+		target_country = BSR
+		character = IRQ_muhammad_zaki_al_basri
+	}
+	set_nationality = {
+		target_country = BSR
+		character = IRQ_Muhmmad_Reza_Al_Shabibi
+	}
+	set_nationality = {
+		target_country = BSR
+		character = IRQ_ghazi_i
+	}
+	set_nationality = {
+		target_country = BSR
+		character = IRQ_faisal_ii
+	}
+	set_nationality = {
+		target_country = BSR
+		character = IRQ_abdulilah
+	}
+	set_nationality = {
+		target_country = BSR
+		character = IRQ_zeid_ibn_hussein
+	}
+	set_nationality = {
+		target_country = BSR
+		character = IRQ_taha_al_hashimi
+	}
+	set_nationality = {
+		target_country = BSR
+		character = IRQ_yasin_al_hashimi
+	}
+	set_nationality = {
+		target_country = JAZ
+		character = IRQ_nuri_al_said
+	}
+	set_nationality = {
+		target_country = JAZ
+		character = IRQ_Jafar_Al_Askari
+	}
+	set_nationality = {
+		target_country = JAZ
+		character = IRQ_rashid_ali_algaylani
+	}
+	set_nationality = {
+		target_country = JAZ
+		character = IRQ_Salah_al_Din_al_Sabbagh
+	}
+	set_nationality = {
+		target_country = JAZ
+		character = IRQ_Muhammad_Amin_Al_Umari
+	}
+	set_nationality = {
+		target_country = JAZ
+		character = IRQ_arshad_al_umari
+	}
+	set_nationality = {
+		target_country = JAZ
+		character = IRQ_hikmat_sulayman
+	}
+	set_nationality = {
+		target_country = KUR
+		character = IRQ_bakr_sidqi
+	}
+	set_global_flag = IRQ_civil_war
+	IRQ={
+		remove_ideas = IRQ_Ghazi
+		declare_war_on = {
+			target = MTQ
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = JAZ
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = BSR
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = KUW
+			type = annex_everything
+		}
+		delete_units = {
+			division_template = "Al-Mushat"
+		}
+		delete_units = {
+			division_template = "Fursan"
+		}
+		delete_units = {
+			division_template = "Camel Corps"
+		}
+		delete_units = {
+			division_template = "Al-Mushat Garrison"
+		}
+		delete_units = {
+			division_template = "Alfurqat Aljabalia"
+		}
+
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 100
+		}
+		set_cosmetic_tag = IRQ_commune
+		division_template = {
+			name = "Ferqat Al Harb"
+			division_names_group = IRQ_INF_01
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+			}
+		}
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = IRQ
+				allow_spawning_on_enemy_provs = yes
+			}
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = IRQ
+				allow_spawning_on_enemy_provs = yes
+			}
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = IRQ
+				allow_spawning_on_enemy_provs = yes
+			}
+			
+		}
+	}
+	BSR={
+		division_template = {
+			name = "Ferqat Al Harb"
+			division_names_group = IRQ_INF_01
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+			}
+		}
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = BSR
+				allow_spawning_on_enemy_provs = yes
+			}
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = BSR
+				allow_spawning_on_enemy_provs = yes
+			}
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = BSR
+				allow_spawning_on_enemy_provs = yes
+			}
+			
+		}
+		1011={
+			transfer_state_to = BSR
+			add_core_of = BSR
+		}
+		declare_war_on = {
+			target = MTQ
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = JAZ
+			type = annex_everything
+		}
+		
+		declare_war_on = {
+			target = KUW
+			type = annex_everything
+		}
+	}
+	MTQ={
+		division_template = {
+			name = "Ferqat Al Harb"
+			division_names_group = IRQ_INF_01
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+			}
+		}
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = MTQ
+				allow_spawning_on_enemy_provs = yes
+			}
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = MTQ
+				allow_spawning_on_enemy_provs = yes
+			}
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = MTQ
+				allow_spawning_on_enemy_provs = yes
+			}
+			
+		}
+		1021={
+			transfer_state_to = MTQ
+			add_core_of = MTQ
+		}
+		1017={
+			transfer_state_to = MTQ
+			add_core_of = MTQ
+		}
+		declare_war_on = {
+			target = BSR
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = JAZ
+			type = annex_everything
+		}
+		
+		declare_war_on = {
+			target = KUW
+			type = annex_everything
+		}
+	}
+	JAZ={
+		division_template = {
+			name = "Ferqat Al Harb"
+			division_names_group = IRQ_INF_01
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+			}
+		}
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = JAZ
+				allow_spawning_on_enemy_provs = yes
+			}
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = JAZ
+				allow_spawning_on_enemy_provs = yes
+			}
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = JAZ
+				allow_spawning_on_enemy_provs = yes
+			}
+			
+		}
+		1019={
+			transfer_state_to = JAZ
+			add_core_of = JAZ
+		}
+		1010={
+			transfer_state_to = JAZ
+			add_core_of = JAZ
+		}
+		declare_war_on = {
+			target = BSR
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = MTQ
+			type = annex_everything
+		}
+		
+		declare_war_on = {
+			target = KUW
+			type = annex_everything
+		}
+	}
+	KUW={
+		division_template = {
+			name = "Ferqat Al Harb"
+			division_names_group = IRQ_INF_01
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+			}
+		}
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = KUW
+				allow_spawning_on_enemy_provs = yes
+			}
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = KUW
+				allow_spawning_on_enemy_provs = yes
+			}
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = KUW
+				allow_spawning_on_enemy_provs = yes
+			}
+			
+		}
+		transfer_state = 656
+		declare_war_on = {
+			target = BSR
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = MTQ
+			type = annex_everything
+		}
+		
+		declare_war_on = {
+			target = JAZ
+			type = annex_everything
+		}
+	}
+	ASY={
+		division_template = {
+			name = "Ferqat Al Harb"
+			division_names_group = IRQ_INF_01
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+			}
+		}
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = ASY
+				allow_spawning_on_enemy_provs = yes
+			}
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = ASY
+				allow_spawning_on_enemy_provs = yes
+			}
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = ASY
+				allow_spawning_on_enemy_provs = yes
+			}
+			
+		}
+		transfer_state = 676
+	}
+	KUR={
+		division_template = {
+			name = "Ferqat Al Harb"
+			division_names_group = IRQ_INF_01
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+			}
+		}
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = KUR
+				allow_spawning_on_enemy_provs = yes
+			}
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = KUR
+				allow_spawning_on_enemy_provs = yes
+			}
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = KUR
+				allow_spawning_on_enemy_provs = yes
+			}
+			
+		}
+		transfer_state = 1018
+		transfer_state = 1020
+		set_politics = {
+			ruling_party = neutrality
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 100
+		}
+		set_cosmetic_tag = KUR_bakr_state
+		set_party_name = {
+			ideology = neutrality
+			long_name = "Bakr Sidqi Clique"
+			name = "Bakr Sidqi Clique"
+		}
+		create_country_leader = {
+			name = "Bakr Sidqi"
+			picture = "gfx/leaders/IRQ/KUR_bakr_sidqi.png"
+			ideology = despotism
+			traits = {
+				dictator 
+			}
+		}
+	}
+	SAU={
+		675={
+			transfer_state_to = SAU
+			add_core_of = SAU
+		}
+		993={
+			transfer_state_to = SAU
+			add_core_of = SAU
+		}
+	}
+}
+
+Iraq_fighting_chance = {
+	IRQ={
+		
+		declare_war_on = {
+			target = MTQ
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = JAZ
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = BSR
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = KUW
+			type = annex_everything
+		}
+	}
+	BSR={
+		division_template = {
+			name = "Ferqat Al Harb"
+			division_names_group = IRQ_INF_01
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+			}
+		}
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = BSR
+				allow_spawning_on_enemy_provs = yes
+			}
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = BSR
+				allow_spawning_on_enemy_provs = yes
+			}
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = BSR
+				allow_spawning_on_enemy_provs = yes
+			}
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = BSR
+				allow_spawning_on_enemy_provs = yes
+			}
+			
+		}
+	}
+	IRQ={
+		division_template = {
+			name = "Ferqat Al Harb"
+			division_names_group = IRQ_INF_01
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+			}
+		}
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = IRQ
+				allow_spawning_on_enemy_provs = yes
+			}
+			
+		}
+	}
+	MTQ={
+		division_template = {
+			name = "Ferqat Al Harb"
+			division_names_group = IRQ_INF_01
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+			}
+		}
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = MTQ
+				allow_spawning_on_enemy_provs = yes
+			}
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = MTQ
+				allow_spawning_on_enemy_provs = yes
+			}
+			
+		}
+	}
+	JAZ={
+		division_template = {
+			name = "Ferqat Al Harb"
+			division_names_group = IRQ_INF_01
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+			}
+		}
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = JAZ
+				allow_spawning_on_enemy_provs = yes
+			}
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = JAZ
+				allow_spawning_on_enemy_provs = yes
+			}
+			
+		}
+	}
+	KUR={
+		division_template = {
+			name = "Ferqat Al Harb"
+			division_names_group = IRQ_INF_01
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+			}
+		}
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = KUR
+				allow_spawning_on_enemy_provs = yes
+			}
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = KUR
+				allow_spawning_on_enemy_provs = yes
+			}
+			
+		}
+	}
+	ASY={
+		division_template = {
+			name = "Ferqat Al Harb"
+			division_names_group = IRQ_INF_01
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+			}
+		}
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = ASY
+				allow_spawning_on_enemy_provs = yes
+			}
+			create_unit = {
+				division = "division_template = \"Ferqat Al Harb\" start_experience_factor = 0.4" 
+				owner = ASY
+				allow_spawning_on_enemy_provs = yes
+			}
+			
+		}
+	}
+}

@@ -1,0 +1,1442 @@
+political_actions = {
+	
+}	
+hashemite_federation_cat = {
+	IRQ_invite_to_federation = {
+		icon = GFX_decision_infiltrate_state
+	
+		allowed = {
+			original_tag = IRQ
+		}
+		
+		visible = {
+			has_completed_focus = IRQ_expand_membership
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
+		}
+		available = {
+			NOT = { has_country_flag = IRQ_inviting_to_federation_in_progress }
+			FROM = {
+				OWNER = {
+					NOT = {
+						has_country_flag = IRQ_has_permanently_rejected_fed
+					}
+				}
+			}
+		}
+		state_target = middle_east
+	    target_trigger = {
+	        FROM = {
+	        	is_capital = yes
+	        	OWNER = {
+	        		is_subject = no
+	        		exists = yes
+	        		NOT = {
+	        			original_tag = ROOT
+	        			has_war_with = ROOT
+	        		}
+	        	}
+	        	OR = {
+	        		region = 28
+	        		region = 232
+	        		region = 237
+	        		region = 196
+	        		region = 236
+	        		region = 238
+					region = 240
+	        	}
+	        }
+	    }
+	    on_map_mode = map_and_decisions_view 
+	    cost = 25
+		fire_only_once = yes
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = { flag = IRQ_inviting_to_federation_in_progress value = 1 days = 31 }
+		}
+		remove_effect = {
+			clr_country_flag = IRQ_inviting_to_federation_in_progress
+			FROM = {
+				OWNER = {
+					country_event = {
+						id = IRQ_political_events.26
+						hours = 1
+					}
+				}
+			}
+			custom_effect_tooltip = generic_higher_opinion_tt
+		}
+
+		cancel_trigger = {
+			FROM = {
+				OWNER = {
+					OR = {
+						exists = no
+						is_subject = yes
+						has_war_with = ROOT
+					}
+				}
+			} 
+		}
+
+		cancel_effect = {
+			hidden_effect = {
+				clr_country_flag = IRQ_inviting_to_federation_in_progress
+			}
+		}
+	}
+	IRQ_invite_to_federation_africa = {
+		icon = GFX_decision_infiltrate_state
+	
+		allowed = {
+			original_tag = IRQ
+		}
+		
+		visible = {
+			has_completed_focus = IRQ_expand_membership
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
+		}
+		available = {
+			NOT = { has_country_flag = IRQ_inviting_to_federation_in_progress }
+			FROM = {
+				OWNER = {
+					NOT = {
+						has_country_flag = IRQ_has_permanently_rejected_fed
+					}
+				}
+			}
+		}
+		state_target = africa
+	    target_trigger = {
+	        FROM = {
+	        	is_capital = yes
+	        	OWNER = {
+	        		is_subject = no
+	        		exists = yes
+	        		NOT = {
+	        			original_tag = ROOT
+	        			has_war_with = ROOT
+	        		}
+	        	}
+	        	OR = {
+	        		region = 128 
+					region = 225
+					region = 126
+					region = 182
+	        	}
+	        }
+	    }
+	    on_map_mode = map_and_decisions_view 
+	    cost = 25
+		fire_only_once = yes
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = IRQ_inviting_to_federation_in_progress
+		}
+		remove_effect = {
+			clr_country_flag = IRQ_inviting_to_federation_in_progress
+			FROM = {
+				OWNER = {
+					country_event = {
+						id = IRQ_political_events.26
+						hours = 1
+					}
+				}
+			}
+			custom_effect_tooltip = generic_higher_opinion_tt
+		}
+
+		cancel_trigger = {
+			FROM = {
+				OWNER = {
+					OR = {
+						exists = no
+						is_subject = yes
+						has_war_with = ROOT
+					}
+				}
+			} 
+		}
+
+		cancel_effect = {
+			hidden_effect = {
+				clr_country_flag = IRQ_inviting_to_federation_in_progress
+			}
+		}
+	}
+}
+greater_iraq_decision_cat = {
+	IRQ_core_state = {
+		icon = GFX_decision_infiltrate_state
+	
+		allowed = {
+			original_tag = IRQ
+		}
+		
+		visible = {
+			has_completed_focus = IRQ_greater_iraq
+		}
+		available = {
+			NOT = { has_country_flag = IRQ_coring_state_in_progress }
+		}
+
+		target_root_trigger = { original_tag = IRQ }
+
+		state_target = any_owned_state
+	    
+	    target_trigger = {
+	        FROM = {
+	        	NOT = { is_core_of = ROOT }
+	        	is_fully_controlled_by = ROOT
+	        	OR = {
+	        		is_core_of = KUW
+	        		is_core_of = SYR
+	        		is_core_of = LEB
+	        		is_core_of = PAL
+	        		is_core_of = JOR
+	        	}
+	        }
+	    }
+	    on_map_mode = map_and_decisions_view 
+	    cost = 50		
+		fire_only_once = yes
+		days_remove = 30
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = { flag = IRQ_coring_state_in_progress value = 1 days = 31 }
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = IRQ_coring_state_in_progress
+			}
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+
+		cancel_trigger = {
+			FROM = {
+				NOT = { is_fully_controlled_by = ROOT }
+			}
+		}
+
+		cancel_effect = {
+			hidden_effect = {
+				clr_country_flag = IRQ_coring_state_in_progress
+			}
+		}
+	}
+}
+
+IRQ_balance_of_power_category={
+	IRQ_Suppress_shia = { 
+
+		icon = GFX_decision_generic_army_support
+
+		visible = {
+			NOT={
+				has_country_flag = IRQ_dealt_with_shias
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1011
+			}
+		}
+
+		fire_only_once = yes
+		
+		custom_cost_trigger = {
+			command_power > 14
+		}
+
+		custom_cost_text = decision_cost_CP_15
+		days_remove = 30
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -15
+			}
+		}
+		modifier = {
+			weekly_manpower = -0.01
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+		remove_effect = {
+			1011={
+				add_manpower = -100
+			}
+			remove_ideas = IRQ_shia_issue
+			add_political_power = 100
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 750
+				producer = ENG
+			}
+			add_power_balance_value = {
+				id = IRQ_political_chaos_balance
+				value = 0.1
+			}
+			set_country_flag = IRQ_dealt_with_shias
+		}
+	}
+	IRQ_shia_compromise = { 
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		visible = {
+			NOT={
+				has_country_flag = IRQ_dealt_with_shias
+			}
+			is_ai = no
+		}
+		fire_only_once = yes
+
+		cost = 150
+		days_remove = 25
+
+		ai_will_do = {
+			base = 100
+		}
+		remove_effect = {
+			remove_ideas = IRQ_shia_issue
+			add_power_balance_value = {
+				id = IRQ_political_chaos_balance
+				value = -0.1
+			}
+			set_country_flag = IRQ_dealt_with_shias
+			set_country_flag = IRQ_Shia_happy
+		}
+	}
+	IRQ_crackdown_on_kurdish_movements = { 
+
+		icon = GFX_decision_generic_army_support
+
+		visible = {
+			has_country_flag = IRQ_dealt_with_shias
+			NOT={
+				has_country_flag = IRQ_dealt_with_kurds
+			}
+
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1018
+			}
+		}
+
+		fire_only_once = yes
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 499 }
+		}
+		custom_cost_text = decision_cost_ie_500
+		days_remove = 50
+		modifier = {
+			weekly_manpower = -0.01
+		}
+		ai_will_do = {
+			base = 100
+		}
+		remove_effect = {
+			1018={
+				add_manpower = -100
+			}
+			IRQ_Kurds_idea_up = yes
+			IRQ_Kurds_dyn_up = YES
+			add_power_balance_value = {
+				id = IRQ_political_chaos_balance
+				value = 0.1
+			}
+			set_country_flag = IRQ_dealt_with_kurds
+		}
+	}
+	IRQ_ally_kurdish_movements = { 
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		visible = {
+			has_country_flag = IRQ_dealt_with_shias
+			NOT={
+				has_country_flag = IRQ_dealt_with_kurds
+			}
+			is_ai = no
+		}
+		fire_only_once = yes
+
+		cost = 150
+		days_remove = 50
+		ai_will_do = {
+			base = 100
+		}
+		remove_effect = {
+			IRQ_Kurds_idea_down = yes
+			IRQ_Kurds_dyn_down = yes
+			add_power_balance_value = {
+				id = IRQ_political_chaos_balance
+				value = -0.1
+			}
+			set_country_flag = IRQ_dealt_with_kurds
+		}
+	}
+	IRQ_southern_development = { 
+
+		icon = GFX_decision_generic_construction
+		modifier = {
+			civilian_factory_use = 1
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 100
+		ai_will_do = {
+			base = 100
+		}
+		visible = {
+			
+			is_ai = no
+		}
+		remove_effect = {
+			add_power_balance_value = {
+				id = IRQ_political_chaos_balance
+				value = -0.1
+			}
+			1011={
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			IRQ_Agrarian_development = yes
+		}
+	}
+	IRQ_northern_development = { 
+
+		icon = GFX_decision_generic_construction
+		modifier = {
+			civilian_factory_use = 1
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 100
+		ai_will_do = {
+			base = 100
+		}
+		remove_effect = {
+			add_power_balance_value = {
+				id = IRQ_political_chaos_balance
+				value = 0.1
+			}
+			1018={
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			1019={
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+		}
+	}
+}
+
+IRQ_Poverty_problem={
+	IRQ_elites_fight_back = {
+		icon = GFX_decision_gre_investment_decisions
+		days_mission_timeout = 360
+		is_good = no
+		cancel_trigger = {
+			has_country_flag = IRQ_povery_rate_lower
+		}
+		activation = {
+			has_completed_focus = IRQ_dismiss_corrupt_bureaucrats
+			OR={
+				has_completed_focus = IRQ_develop_the_north
+				has_completed_focus = IRQ_develop_the_south
+			}
+		}
+		visible = {
+			has_completed_focus = IRQ_dismiss_corrupt_bureaucrats
+			OR={
+				has_completed_focus = IRQ_develop_the_north
+				has_completed_focus = IRQ_develop_the_south
+			}
+			NOT={
+				has_country_flag = IRQ_povery_rate_lower
+			}
+		}
+		available  = {
+			always = no
+		}
+		allowed = {
+			always = yes
+		}
+		timeout_effect = {
+			IRQ_tribes_up = yes
+		}
+		
+	}
+	IRQ_fight_elites={
+		icon = GFX_decision_eng_support_imperialist_coup
+		days_remove = 200
+		days_re_enable = 100
+		custom_cost_trigger = {
+			has_political_power > 24
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -25
+				add_command_power = -25
+			}
+		}
+		remove_effect = {
+			IRQ_tribes_down = yes
+		}
+	}
+	IRQ_fight_poverty_in_the_muntafiq_duwaniyah = { 
+
+		icon = GFX_decision_eng_trade_unions_support
+		on_map_mode = map_and_decisions_view
+
+		visible = {
+			NOT={
+				1021={
+					has_state_flag = IRQ_poverty_lowered
+				}
+			}
+			OR={
+				has_completed_focus = IRQ_fight_poverty_in_the_south
+				has_completed_focus = IRQ_fight_poverty
+			}
+		}
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1021
+			} 
+	    }
+		custom_cost_trigger = {
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		custom_cost_text = decision_cost_civ_factory_1
+		modifier = {
+			civilian_factory_use = 1
+		}
+		days_remove = 700
+		ai_will_do = {
+			base = 100
+		}
+		remove_effect = {
+			1021={
+				set_state_flag = IRQ_poverty_lowered
+				remove_dynamic_modifier = {
+					modifier = IRQ_poverty
+				}
+				add_dynamic_modifier = {
+					modifier = IRQ_poverty2
+				}
+			}
+		}
+	}
+	IRQ_eradicate_poverty_in_the_muntafiq_duwaniyah = { 
+
+		icon = GFX_decision_eng_trade_unions_demand
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1021
+			} 
+	    }
+		visible = {
+			NOT={
+				1021={
+					has_state_flag = IRQ_poverty_eradicated
+				}
+			}
+			1021={
+				has_state_flag = IRQ_poverty_lowered
+			}
+		}
+		fire_only_once = yes
+
+		custom_cost_trigger = {
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		custom_cost_text = decision_cost_civ_factory_1
+		modifier = {
+			civilian_factory_use = 1
+		}
+		days_remove = 600
+		ai_will_do = {
+			base = 100
+		}
+		remove_effect = {
+			1021={
+				set_state_flag = IRQ_poverty_eradicated
+				remove_dynamic_modifier = {
+					modifier = IRQ_poverty2
+				}
+			}
+		}
+	}
+	IRQ_fight_poverty_in_the_jazira = { 
+
+		icon = GFX_decision_eng_trade_unions_support
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1010
+			} 
+	    }
+		visible = {
+			NOT={
+				1010={
+					has_state_flag = IRQ_poverty_lowered
+				}
+			}
+			OR={
+				has_completed_focus = IRQ_fight_poverty_in_the_north
+				has_completed_focus = IRQ_fight_poverty
+			}
+		}
+		fire_only_once = yes
+
+		custom_cost_trigger = {
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		custom_cost_text = decision_cost_civ_factory_1
+		modifier = {
+			civilian_factory_use = 1
+		}
+		days_remove = 700
+		ai_will_do = {
+			base = 100
+		}
+		remove_effect = {
+			1010={
+				set_state_flag = IRQ_poverty_lowered
+				remove_dynamic_modifier = {
+					modifier = IRQ_poverty
+				}
+				add_dynamic_modifier = {
+					modifier = IRQ_poverty2
+				}
+			}
+		}
+	}
+	IRQ_eradicate_poverty_in_the_jazira = { 
+
+		icon = GFX_decision_eng_trade_unions_demand
+		on_map_mode = map_and_decisions_view
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1010
+			} 
+	    }
+		visible = {
+			NOT={
+				1010={
+					has_state_flag = IRQ_poverty_eradicated
+				}
+			}
+			1010={
+				has_state_flag = IRQ_poverty_lowered
+			}
+		}
+		fire_only_once = yes
+
+		custom_cost_trigger = {
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		custom_cost_text = decision_cost_civ_factory_1
+		modifier = {
+			civilian_factory_use = 1
+		}
+		days_remove = 600
+		ai_will_do = {
+			base = 100
+		}
+		remove_effect = {
+			1010={
+				set_state_flag = IRQ_poverty_eradicated
+				remove_dynamic_modifier = {
+					modifier = IRQ_poverty2
+				}
+			}
+		}
+	}
+	IRQ_fight_poverty_in_erbil = { 
+
+		icon = GFX_decision_eng_trade_unions_support
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1018
+			} 
+	    }
+		visible = {
+			NOT={
+				1019={
+					has_state_flag = IRQ_poverty_lowered
+				}
+			}
+			OR={
+				has_completed_focus = IRQ_fight_poverty_in_the_north
+				has_completed_focus = IRQ_fight_poverty
+			}
+		}
+		fire_only_once = yes
+
+		custom_cost_trigger = {
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		custom_cost_text = decision_cost_civ_factory_1
+		modifier = {
+			civilian_factory_use = 1
+		}
+		days_remove = 700
+		ai_will_do = {
+			base = 100
+		}
+		remove_effect = {
+			1019={
+				set_state_flag = IRQ_poverty_lowered
+				remove_dynamic_modifier = {
+					modifier = IRQ_poverty
+				}
+				add_dynamic_modifier = {
+					modifier = IRQ_poverty2
+				}
+			}
+		}
+	}
+	IRQ_eradicate_poverty_in_erbil = { 
+
+		icon = GFX_decision_eng_trade_unions_demand
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1018
+			} 
+	    }
+		visible = {
+			NOT={
+				1019={
+					has_state_flag = IRQ_poverty_eradicated
+				}
+			}
+			1019={
+				has_state_flag = IRQ_poverty_lowered
+			}
+		}
+		fire_only_once = yes
+
+		custom_cost_trigger = {
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		custom_cost_text = decision_cost_civ_factory_1
+		modifier = {
+			civilian_factory_use = 1
+		}
+		days_remove = 600
+		ai_will_do = {
+			base = 100
+		}
+		remove_effect = {
+			1019={
+				set_state_flag = IRQ_poverty_eradicated
+				remove_dynamic_modifier = {
+					modifier = IRQ_poverty2
+				}
+			}
+		}
+	}
+	IRQ_fight_poverty_in_the_hilla_karbala = { 
+
+		icon = GFX_decision_eng_trade_unions_support
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1017
+			} 
+	    }
+		visible = {
+			NOT={
+				1017={
+					has_state_flag = IRQ_poverty_lowered
+				}
+			}
+			OR={
+				has_completed_focus = IRQ_fight_poverty_in_the_center
+				has_completed_focus = IRQ_fight_poverty
+			}
+		}
+		fire_only_once = yes
+
+		custom_cost_trigger = {
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		custom_cost_text = decision_cost_civ_factory_1
+		modifier = {
+			civilian_factory_use = 1
+		}
+		days_remove = 700
+		ai_will_do = {
+			base = 100
+		}
+		remove_effect = {
+			1017={
+				set_state_flag = IRQ_poverty_lowered
+				remove_dynamic_modifier = {
+					modifier = IRQ_poverty
+				}
+				add_dynamic_modifier = {
+					modifier = IRQ_poverty2
+				}
+			}
+		}
+	}
+	IRQ_eradicate_poverty_in_the_hilla_karbala = { 
+
+		icon = GFX_decision_eng_trade_unions_demand
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1017
+			} 
+	    }
+		visible = {
+			NOT={
+				1017={
+					has_state_flag = IRQ_poverty_eradicated
+				}
+			}
+			1017={
+				has_state_flag = IRQ_poverty_lowered
+			}
+		}
+		fire_only_once = yes
+
+		custom_cost_trigger = {
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		custom_cost_text = decision_cost_civ_factory_1
+		modifier = {
+			civilian_factory_use = 1
+		}
+		days_remove = 600
+		ai_will_do = {
+			base = 100
+		}
+		remove_effect = {
+			1017={
+				set_state_flag = IRQ_poverty_eradicated
+				remove_dynamic_modifier = {
+					modifier = IRQ_poverty2
+				}
+			}
+		}
+	}
+	IRQ_fight_poverty_in_kut = { 
+
+		icon = GFX_decision_eng_trade_unions_support
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1022
+			} 
+	    }
+		visible = {
+			NOT={
+				1022={
+					has_state_flag = IRQ_poverty_lowered
+				}
+			}
+			OR={
+				has_completed_focus = IRQ_fight_poverty_in_the_center
+				has_completed_focus = IRQ_fight_poverty
+			}
+		}
+		fire_only_once = yes
+
+		custom_cost_trigger = {
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		custom_cost_text = decision_cost_civ_factory_1
+		modifier = {
+			civilian_factory_use = 1
+		}
+		days_remove = 700
+		ai_will_do = {
+			base = 100
+		}
+		remove_effect = {
+			1022={
+				set_state_flag = IRQ_poverty_lowered
+				remove_dynamic_modifier = {
+					modifier = IRQ_poverty
+				}
+				add_dynamic_modifier = {
+					modifier = IRQ_poverty2
+				}
+			}
+		}
+	}
+	IRQ_eradicate_poverty_in_kut = { 
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1022
+			} 
+	    }
+		on_map_mode = map_and_decisions_view
+		icon = GFX_decision_eng_trade_unions_demand
+
+		visible = {
+			NOT={
+				1022={
+					has_state_flag = IRQ_poverty_eradicated
+				}
+			}
+			1022={
+				has_state_flag = IRQ_poverty_lowered
+			}
+		}
+		fire_only_once = yes
+
+		custom_cost_trigger = {
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		custom_cost_text = decision_cost_civ_factory_1
+		modifier = {
+			civilian_factory_use = 1
+		}
+		days_remove = 600
+		ai_will_do = {
+			base = 100
+		}
+		remove_effect = {
+			1022={
+				set_state_flag = IRQ_poverty_eradicated
+				remove_dynamic_modifier = {
+					modifier = IRQ_poverty2
+				}
+			}
+		}
+	}
+
+}
+
+form_babylon_category = {
+
+	form_babylon = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = IRQ
+				original_tag = BSR
+				original_tag = JAZ
+				original_tag = ASY
+				original_tag = KUW
+				original_tag = AHZ
+			}
+		}
+
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = form_country_iraq_required_states_tt
+				controls_state = 676
+				controls_state = 675
+				controls_state = 291
+				controls_state = 1011
+				controls_state = 1018
+				controls_state = 1019
+				controls_state = 1020
+				controls_state = 1021
+				controls_state = 1010
+				controls_state = 1017
+				controls_state = 1022
+			}
+			# France: Syria, Northern Africa
+			custom_trigger_tooltip = {
+				tooltip = form_babylon_france_required_states_tt
+				# Syria
+				controls_state = 677
+				controls_state = 680
+				controls_state = 553
+				controls_state = 554
+				controls_state = 1023
+				controls_state = 799 #Hatay
+			}
+			# Britain: Egypt, Middle East, Arabia
+			custom_trigger_tooltip = {
+				tooltip = form_babylon_britain_required_states_tt
+				controls_state = 656
+				controls_state = 993
+				controls_state = 455
+				controls_state = 454
+				controls_state = 453
+				controls_state = 446
+				controls_state = 447
+				controls_state = 452
+				controls_state = 907
+				controls_state = 552
+				controls_state = 456
+				controls_state = 457
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = IRQ
+				original_tag = BSR
+				original_tag = JAZ
+				original_tag = ASY
+				original_tag = KUW
+				original_tag = AHZ
+			}
+			NOT = { has_global_flag = form_arabia_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = BABYLON_UNIFIED
+			# Iraq
+			custom_effect_tooltip = form_country_iraq_coring_states_tt
+			hidden_effect = {
+				676 = { add_core_of = ROOT }
+				675 = { add_core_of = ROOT }
+				291 = { add_core_of = ROOT }
+				1011 = { add_core_of = ROOT }
+				1018 = { add_core_of = ROOT }
+				1019 = { add_core_of = ROOT }
+				1020 = { add_core_of = ROOT }
+				1021 = { add_core_of = ROOT }
+				1010 = { add_core_of = ROOT }
+				1017 = { add_core_of = ROOT }
+				1022 = { add_core_of = ROOT }
+			}
+			# France
+			custom_effect_tooltip = form_babylon_france_coring_states_tt
+			hidden_effect = {
+				677 = { add_core_of = ROOT }
+				680 = { add_core_of = ROOT }
+				553 = { add_core_of = ROOT }
+				554 = { add_core_of = ROOT }
+				1023 = { add_core_of = ROOT }
+				799 = { add_core_of = ROOT }
+			}
+			# Britain
+			custom_effect_tooltip = form_babylon_britain_coring_states_tt
+			hidden_effect = {
+				452 = { add_core_of = ROOT }
+				447 = { add_core_of = ROOT }
+				446 = { add_core_of = ROOT }
+				456 = { add_core_of = ROOT }
+				457 = { add_core_of = ROOT }
+				453 = { add_core_of = ROOT }
+				551 = { add_core_of = ROOT }
+				454 = { add_core_of = ROOT }
+				455 = { add_core_of = ROOT }
+				993 = { add_core_of = ROOT }
+				656 = { add_core_of = ROOT }
+				907 = { add_core_of = ROOT }
+				552 = { add_core_of = ROOT }
+				906 = { add_core_of = ROOT }
+			}
+			hidden_effect = {
+				news_event = { id = iraq.100 hours = 6 }
+				set_global_flag = form_babylon_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+form_mashriq_category = {
+
+	form_mashriq = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = IRQ
+		}
+
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = form_country_iraq_required_states_tt
+				controls_state = 676
+				controls_state = 675
+				controls_state = 291
+				controls_state = 1011
+				controls_state = 1018
+				controls_state = 1019
+				controls_state = 1020
+				controls_state = 1021
+				controls_state = 1010
+				controls_state = 1017
+				controls_state = 1022
+			}
+			# France: Syria, Northern Africa
+			custom_trigger_tooltip = {
+				tooltip = form_babylon_france_required_states_tt
+				# Syria
+				controls_state = 677
+				controls_state = 680
+				controls_state = 553
+				controls_state = 554
+				controls_state = 1023
+				controls_state = 799 #Hatay
+			}
+			# Britain: Egypt, Middle East, Arabia
+			custom_trigger_tooltip = {
+				tooltip = form_babylon_britain_required_states_tt
+				controls_state = 656
+				controls_state = 993
+				controls_state = 455
+				controls_state = 454
+				controls_state = 453
+				controls_state = 446
+				controls_state = 447
+				controls_state = 452
+				controls_state = 907
+				controls_state = 552
+				controls_state = 456
+				controls_state = 457
+			}
+		}
+
+		visible = {
+			original_tag = IRQ
+			NOT = { has_global_flag = form_arabia_flag }
+			has_completed_focus = IRQ_middle_eastern_revolution
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = Mashriq_UNIFIED
+			hidden_effect = {
+				676 = { add_core_of = ROOT }
+				675 = { add_core_of = ROOT }
+				291 = { add_core_of = ROOT }
+				1011 = { add_core_of = ROOT }
+				1018 = { add_core_of = ROOT }
+				1019 = { add_core_of = ROOT }
+				1020 = { add_core_of = ROOT }
+				1021 = { add_core_of = ROOT }
+				1010 = { add_core_of = ROOT }
+				1017 = { add_core_of = ROOT }
+				1022 = { add_core_of = ROOT }
+			}
+			hidden_effect = {
+				677 = { add_core_of = ROOT }
+				680 = { add_core_of = ROOT }
+				553 = { add_core_of = ROOT }
+				554 = { add_core_of = ROOT }
+				1023 = { add_core_of = ROOT }
+				799 = { add_core_of = ROOT }
+			}
+			hidden_effect = {
+				452 = { add_core_of = ROOT }
+				447 = { add_core_of = ROOT }
+				446 = { add_core_of = ROOT }
+				456 = { add_core_of = ROOT }
+				457 = { add_core_of = ROOT }
+				453 = { add_core_of = ROOT }
+				551 = { add_core_of = ROOT }
+				454 = { add_core_of = ROOT }
+				455 = { add_core_of = ROOT }
+				993 = { add_core_of = ROOT }
+				656 = { add_core_of = ROOT }
+				907 = { add_core_of = ROOT }
+				552 = { add_core_of = ROOT }
+				906 = { add_core_of = ROOT }
+			}
+			hidden_effect = {
+				news_event = { id = iraq.100 hours = 6 }
+				set_global_flag = form_mashriq_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+IRQ_revolution = {
+	IRQ_imminent_proletarian_revolution_mission = {
+
+		priority = 1
+
+		icon = GFX_decision_revolt
+
+		available =  {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 150
+
+		fire_only_once = yes
+
+		activation = {
+			has_country_flag = IRQ_communist_revolution_flag
+			has_civil_war = no 
+		}
+
+		visible = {
+			tag = IRQ
+			has_country_flag = IRQ_communist_revolution_flag
+			has_civil_war = no 
+		}
+
+		cancel_if_not_visible = yes
+
+		is_good = yes
+
+		timeout_effect = {
+			country_event = {
+				id = iraq.102
+				hours = 12
+			}
+		}
+	}
+	
+	IRQ_expand_the_proletarian_uprisings_decision = {
+
+		icon = GFX_decision_generic_civil_support
+
+		priority = 1
+
+		allowed = {
+			original_tag = IRQ
+		}
+
+		visible = {
+
+		}
+
+		available = {
+
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = ROOT.core_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = IRQ_proletariat_uprising_modifier
+					}
+				}
+				is_capital = no
+				OR = {
+					industrial_complex > 0
+					arms_factory > 0
+					dockyard > 0
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+
+		days_remove = 30
+
+		ai_will_do = {
+			base = 15
+		}
+
+		complete_effect = {
+			set_country_flag = IRQ_encouraging_proletariat_uprisings_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = IRQ_encouraging_proletariat_uprisings_flag
+			add_days_mission_timeout = {
+				mission = IRQ_imminent_proletarian_revolution_mission
+				days = 15
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+
+			add_stability = decreased_stability
+			add_popularity = {
+				ideology = communism
+				popularity = increased_communist_support
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = IRQ_proletariat_uprising_modifier
+				}
+			}
+		}
+	}
+
+	IRQ_organize_worker_rally_decision = {
+
+		icon = GFX_decision_generic_political_discourse
+
+		priority = 1
+
+		allowed = {
+			original_tag = IRQ
+		}
+
+		visible = {
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 0
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+
+		days_remove = 30
+
+		ai_will_do = {
+			base = 50
+		}
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		cancel_trigger = {
+			has_civil_war = yes
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+
+			add_stability = -0.025
+
+			add_days_mission_timeout = {
+				mission = IRQ_imminent_proletarian_revolution_mission
+				days = 15
+			}
+		}
+	}
+}
+political_actions = {
+	IRQ_communist_propaganda_middle_east_decision = {
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		priority = 8
+
+		allowed = {
+			original_tag = IRQ
+		}
+
+		visible = {
+			has_completed_focus = IRQ_instigate_middle_eastern_revolutions
+		}
+
+		available = {
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			base = 5
+		}
+
+		fire_only_once = yes
+
+		targets = { PER SYR SAU EGY JOR LEB OMA YEM PAL KUW QAT UAE TUR }
+
+		target_trigger = {
+			NOT = {
+				ROOT = { has_wargoal_against = FROM }
+				ROOT = { has_war_with = FROM }
+			}
+			FROM = {
+				is_subject = no
+				is_major = no
+				NOT = { has_government = communism }
+				NOT = { has_government = fascism }
+				has_civil_war = no
+				NOT = {
+					has_idea = GER_communist_influence
+				}
+			}
+		}
+
+		complete_effect = {
+			add_named_threat = { threat = 1 name = GER_communist_propaganda }
+
+			FROM = {
+				country_event = {
+					id = wuw_GER_diplomacy.72
+					hours = 12
+				}
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				FROM = {
+					add_timed_idea = {
+						idea = GER_communist_influence
+						days = 730
+					}
+				}
+			}
+			custom_effect_tooltip = if_they_refuse_tt
+			effect_tooltip = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = FROM
+				}
+			}
+		}
+	}
+
+}

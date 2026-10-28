@@ -1,0 +1,5 @@
+KOS	= "countries/Kosovo.txt"
+AHZ	= "countries/Ahwaz.txt"
+JAZ	= "countries/Jazira.txt"
+MTQ	= "countries/Muntafiq.txt"
+BSR	= "countries/Basra.txt"

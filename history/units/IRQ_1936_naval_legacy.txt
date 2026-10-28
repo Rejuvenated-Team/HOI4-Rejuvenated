@@ -1,0 +1,18 @@
+﻿units = {
+
+	######## NAVAL OOB ########
+	fleet = {
+		name = "Al Bahriyah Al Iraqiyah"			
+		naval_base = 2089 # Basra
+		task_force = {
+			name = "Ferqat Al Basra"		#INS: Iraqi Naval Ship
+			location = 2089 # Basra
+			ship = { name = "INS Al Jasy" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = IRQ } } }	
+			ship = { name = "INS Zat Al Sawari" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = IRQ } } }	
+			ship = { name = "INS Janadeh" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IRQ } } }	
+			ship = { name = "INS Abdulrahman" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IRQ } } }		
+		}	
+	}
+}
+
+

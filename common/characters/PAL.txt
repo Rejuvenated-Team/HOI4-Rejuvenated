@@ -1,0 +1,92 @@
+characters={
+	PAL_harold_macmichael = {
+
+		name = PAL_harold_macmichael
+
+		portraits = {
+			civilian = {
+				large="gfx/leaders/PAL/PAL_harold_macmichael.png"
+			}
+		}
+
+		country_leader = {
+			ideology = oligarchism
+			traits = {  }
+			expire = "1969.1.1.1"
+			id = -1
+		}
+
+	}
+	PAL_Raghib_Nashashibi={
+		name="Raghib Al Nashabibi"
+		portraits={
+			civilian={
+				large="gfx/leaders/PAL/Portrait_PAL_Nashashibi.png"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			id=-1
+		}
+	}
+	PAL_Radwan_Al_Hilu={
+		name="Radwan Al Hilu"
+		portraits={
+			civilian={
+				large="gfx/leaders/PAL/Portrait_PAL_Radwan.png"
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			id=-1
+		}
+	}
+	PAL_Amin_Al_Hussieni={
+		name="Amin Al Hussieni"
+		portraits={
+			civilian={
+				large="gfx/leaders/PAL/Portrait_PAL_The_Mufti.png"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits={ captain_of_industry }
+			id=-1
+		}
+		country_leader={
+			ideology=despotism
+			traits={ eager_collaborator }
+			id=-1
+		}
+	}
+	PAL_Abdulqadir_Hussieni={
+		name="Abdulqadir Al Hussieni"
+		portraits={
+			civilian={
+				large="gfx/leaders/PAL/Portrait_PAL_al_Husayni.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	PAL_Hasan_Salama={
+		name="Hassan Salameh"
+		portraits={
+			civilian={
+				large="gfx/leaders/PAL/Portrait_PAL_Hasan_Salama.png"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+}

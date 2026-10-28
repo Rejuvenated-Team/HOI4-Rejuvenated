@@ -1,0 +1,11 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_decision_cat_picture_iraq_poverty"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_iraq_poverty.png"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_picture_iraq_revolt"
+		texturefile = "gfx/interface/decisions/decision_cat_picture_iraq_revolt.png"
+	}
+
+}
