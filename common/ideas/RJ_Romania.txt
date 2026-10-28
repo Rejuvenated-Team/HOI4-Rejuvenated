@@ -116,5 +116,29 @@ ideas = {
 				}
 			}
 		}
+
+		RJ_ROM_idea_coastal_operations = {
+			picture = SWE_coastal_support
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				shore_bombardment_bonus = 0.25
+				shore_bombardment_collateral_damage_factor = 0.10
+			}
+			equipment_bonus = {
+				ship_hull_cruiser = {
+					naval_heavy_gun_hit_chance_factor = 0.10
+					defense = 0.10
+					surface_visibility = -0.05
+				}
+			}
+		}
 	}
 }

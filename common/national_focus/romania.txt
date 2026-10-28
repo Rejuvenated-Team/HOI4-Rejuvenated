@@ -5116,7 +5116,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_ideas = RJ_ROM_idea_coastal_operations
 		}
 	}
 
