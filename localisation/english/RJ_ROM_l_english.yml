@@ -1,0 +1,42 @@
+﻿l_english:
+ 
+ ####################################################################################
+ ### FOCUSES ########################################################################
+ ####################################################################################
+
+ RJ_ROM_ministry_of_air_and_navy: "Ministry of Air & Navy"
+ RJ_ROM_ministry_of_air_and_navy_desc: "We've decided that what exists of our naval & air forces should be placed under a joint ministry to govern the development & organization of both entities. This will be a far more efficient structuring for our needs going forward, & also comes with a very welcome increase in funding."
+ RJ_ROM_expand_the_galati_shipyards: "Expand the Galati Shipyards"
+ RJ_ROM_expand_the_galati_shipyards_desc: "Our shipyards are woefully inadequate at the moment, & the ones at Galati are in particular need of expansion. Some fresh investments there should allow us to comfortably expand our ship-building capacity."
+ RJ_ROM_a_defensive_force: "A Defensive Force"
+ RJ_ROM_a_defensive_force_desc: "We have no real naval ambitions, & realistically we only need enough of a fleet for a defensive force, capable of handling our own coastline within the Black Sea."
+ RJ_ROM_greater_naval_ambitions: "Greater Naval Ambitions"
+ RJ_ROM_greater_naval_ambitions_desc: "A defensive force is utterly inadequate for our ambitions. We must think much bigger, looking beyond just the black sea."
+ RJ_ROM_mine_warfare: "Mine Warfare"
+ RJ_ROM_mine_warfare_desc: "Naval mines offer a good advantage to any navy that makes use of them, forcing opponents to slow down & causing potential landings on an enemy coast to be far sloppier in attempts to avoid mines. This is something we should take advantage of ourselves."
+ RJ_ROM_establish_the_santierul_shipyard: "Establish the Santierul Shipyard"
+ RJ_ROM_establish_the_santierul_shipyard_desc: "Our shipbuilding capabilities are still severely limited, making it difficult to establish any sort of fleet. Santierul at Constanta would be an ideal location for a new shipyard!"
+ RJ_ROM_modernize_the_destroyers: "Modernize the Destroyers"
+ RJ_ROM_modernize_the_destroyers_desc: "Our tiny destroyer fleet is already fairly obsolete. This will never do for our current ambitions."
+ RJ_ROM_defense_of_the_coast: "Defense of the Coast"
+ RJ_ROM_defense_of_the_coast_desc: "It's vital that we secure our coastlines in the case of enemy invasion!"
+ RJ_ROM_raiding_operations: "Raiding Operations"
+ RJ_ROM_raiding_operations_desc: "Submarines are perfect for a smaller navy such as ours, & we can readily handle raiding operations within the Black Sea, & perhaps even some of the Mediterreanean."
+ RJ_ROM_coastal_operations: "Coastal Operations"
+ RJ_ROM_coastal_operations_desc: "Our navy isn't capable of great feats, but we can handle patrolling the coasts for threats & supporting troops fighting on coastlines."
+
+
+
+
+
+
+
+ ###################################################
+ ### IDEAS #########################################
+ ###################################################
+
+ RJ_ROM_idea_ministry_of_air_and_navy: "Ministry of Air & Navy"
+ RJ_ROM_idea_modernize_destroyers: "Destroyer Modernization"
+ RJ_ROM_idea_mine_warfare: "Mine Warfare"
+ RJ_ROM_idea_defend_the_coast: "Defense of the Coast"
+ RJ_ROM_idea_raiding_operations: "Raiding Operations"

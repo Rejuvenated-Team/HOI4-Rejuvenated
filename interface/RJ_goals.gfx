@@ -1607,4 +1607,19 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/nzl/RJ_NZL_free_indochina.dds"
 	}
 
+
+	###############################################
+	### ROM - ROMANIA #############################
+	###############################################
+
+	SpriteType = {
+		name = "GFX_focus_RJ_ROM_ministry_of_air_and_navy"
+		texturefile = "gfx/interface/goals/rom/RJ_ROM_ministry_of_air_and_navy.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_ROM_dockyard"
+		texturefile = "gfx/interface/goals/rom/RJ_ROM_dockyard.dds"
+	}
+
 }

@@ -1,0 +1,120 @@
+ideas = {
+	country = {
+		RJ_ROM_idea_ministry_of_air_and_navy = {
+			picture = RJ_idea_ROM_ministry_of_air_and_navy
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				original_tag = ROM
+			}
+			modifier = {
+				industrial_capacity_dockyard = 0.10
+				production_speed_dockyard_factor = 0.10
+				production_speed_air_base_factor = 0.10
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_large_plane = {
+					build_cost_ic = -0.08
+				}
+				mio_cat_eq_all_medium_plane = {
+					build_cost_ic = -0.08
+				}
+				mio_cat_eq_all_small_plane = {
+					build_cost_ic = -0.08
+				}
+			}
+
+			research_bonus = {
+				air_equipment = 0.05
+				ship_tech = 0.05
+			}
+		}
+
+		RJ_ROM_idea_modernize_destroyers = {
+			picture = generic_sea_focused_navy
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				refit_speed = 0.25
+				industrial_capacity_dockyard = 0.05
+			}
+
+			equipment_bonus = {
+				destroyer = {
+					build_cost_ic = -0.15
+					naval_accidents_chance = -0.05
+					reliability_factor = 0.10
+				}
+			}
+		}
+
+		RJ_ROM_idea_mine_warfare = {
+			picture = SOV_mine_warfare
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				mines_planting_by_fleets_factor = 0.15
+				mines_sweeping_by_fleets_factor = 0.10
+			}
+		}
+
+		RJ_ROM_idea_defend_the_coast = {
+			picture = FIN_coastal_batteries_effort
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_coastal_bunker_factor = 0.25
+				coastal_bunker_effectiveness_factor = 0.10
+			}
+		}
+
+		RJ_ROM_idea_raiding_operations = {
+			picture = generic_navy_submarines
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				convoy_raiding_efficiency_factor = 0.15
+			}
+			equipment_bonus = {
+				submarine = {
+					build_cost_ic = -0.10
+					sub_visibility = -0.1
+					torpedo_attack = 0.1
+				}
+			}
+		}
+	}
+}

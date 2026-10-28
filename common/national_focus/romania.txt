@@ -4607,10 +4607,6 @@ focus_tree = {
 				mio:ROM_galati_shipyard_organization = {
 					add_mio_funds = 2500
 				}
-#					unlock_mio_trait_tooltip  = {
-#						department = ROM_mio_department_design_ship_capital_screen_weapons
-#						trait = ROM_mio_trait_coastal_defense_weapons
-#					}
 			}
 
 			else = {
@@ -4927,6 +4923,435 @@ focus_tree = {
 					category = special_forces_doctrine
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_ministry_of_air_and_navy
+		icon = GFX_focus_RJ_ROM_ministry_of_air_and_navy
+		x = 55
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			air_experience = 50
+			navy_experience = 50
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = RJ_ROM_idea_ministry_of_air_and_navy
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_expand_the_galati_shipyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = RJ_ROM_ministry_of_air_and_navy }
+		relative_position_id = RJ_ROM_ministry_of_air_and_navy
+		x = 4
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			controls_state = 971
+		}
+
+		bypass = {
+
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 971 }
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_a_defensive_force
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = RJ_ROM_expand_the_galati_shipyards }
+		relative_position_id = RJ_ROM_expand_the_galati_shipyards
+		mutually_exclusive = {
+			focus = RJ_ROM_greater_naval_ambitions
+		}
+		x = -2
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				name = RJ_ROM_naval_doctrine_bonus_basic
+				uses = 2
+				category = naval_doctrine
+			}
+			add_tech_bonus = {
+				name = RJ_ROM_defensive_navy_bonus_1
+				category = mio_cat_tech_all_cruiser_and_modules
+				uses = 3
+				bonus = 0.5
+			}
+			set_technology = {
+				coastal_defense_ships = 1
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = ROM_galati_shipyard_organization
+				mio:ROM_galati_shipyard_organization = {
+					add_mio_funds = 2500
+				}
+			}
+
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = ROM_coastal_defense_navy_designer
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_raiding_operations
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = RJ_ROM_a_defensive_force }
+		relative_position_id = RJ_ROM_a_defensive_force
+		x = -1
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RJ_ROM_submarines_bonus
+				category = ship_submarine_tech
+				uses = 2
+				bonus = 0.75
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = RJ_ROM_idea_raiding_operations
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_coastal_operations
+		icon = GFX_focus_SWE_coastal_support
+		prerequisite = { focus = RJ_ROM_a_defensive_force }
+		relative_position_id = RJ_ROM_a_defensive_force
+		x = 0
+		y = 2
+
+		cost = 7.2
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_greater_naval_ambitions
+		icon = GFX_focus_generic_large_navy
+		prerequisite = { focus = RJ_ROM_expand_the_galati_shipyards }
+		relative_position_id = RJ_ROM_expand_the_galati_shipyards
+		mutually_exclusive = {
+			focus = RJ_ROM_a_defensive_force
+		}
+		x = 2
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				name = RJ_ROM_naval_ambition_bonus
+				uses = 1
+				category = fleet_in_being_tree
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				name = RJ_ROM_ambition_research_bonus_1
+				category = ship_battleship_hull_tech
+				uses = 1
+				bonus = 1
+				ahead_reduction = 1
+			}
+			add_tech_bonus = {
+				name = RJ_ROM_ambition_research_bonus_2
+				category = ship_modules_tech
+				uses = 3
+				bonus = 0.3
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = ROM_Braila_organization
+				mio:ROM_Braila_organization = {
+					add_mio_size = 1
+					add_mio_funds = 500
+				}
+
+			}
+
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = ROM_black_sea_dominance_designer
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_mine_warfare
+		icon = GFX_focus_generic_mine_warfare
+		prerequisite = { focus = RJ_ROM_greater_naval_ambitions focus = RJ_ROM_a_defensive_force }
+		relative_position_id = RJ_ROM_greater_naval_ambitions
+		x = -1
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RJ_ROM_mines_bonus
+				category = ship_mine_tech
+				uses = 2
+				bonus = 0.5
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = RJ_ROM_idea_mine_warfare
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_defense_of_the_coast
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { focus = RJ_ROM_greater_naval_ambitions focus = RJ_ROM_a_defensive_force }
+		relative_position_id = RJ_ROM_greater_naval_ambitions
+		x = -2
+		y = 2
+
+		cost = 7.2
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			OR = {
+				controls_state = 971
+				controls_state = 77
+				controls_state = 766
+				controls_state = 211
+			}
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RJ_ROM_idea_defend_the_coast
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 971
+						state = 77
+						state = 766
+						state = 211
+					}
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_establish_the_santierul_shipyard
+		icon = GFX_focus_RJ_ROM_dockyard
+		prerequisite = { focus = RJ_ROM_greater_naval_ambitions focus = RJ_ROM_a_defensive_force }
+		relative_position_id = RJ_ROM_greater_naval_ambitions
+		x = -3
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 971 }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_modernize_the_destroyers
+		icon = GFX_focus_generic_destroyer
+		prerequisite = { focus = RJ_ROM_greater_naval_ambitions }
+		relative_position_id = RJ_ROM_greater_naval_ambitions
+		x = 1
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RJ_ROM_destroyer_bonus_1
+				category = ship_destroyer_hull_tech
+				uses = 1
+				bonus = 1
+				ahead_reduction = 0.5
+			}
+			add_tech_bonus = {
+				name = RJ_ROM_destroyer_bonus_2
+				category = ship_modules_tech
+				uses = 2
+				bonus = 0.5
+				ahead_reduction = 0.5
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = RJ_ROM_idea_modernize_destroyers
 		}
 	}
 }

@@ -666,4 +666,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/nzl/RJ_idea_NZL_peoples_voice.dds"
 	}
 
+
+	##############################################
+	### ROM - ROMANIA ############################
+	##############################################
+
+	spriteType = {
+		name = "GFX_idea_RJ_idea_ROM_ministry_of_air_and_navy"
+		texturefile = "gfx/interface/ideas/rom/RJ_idea_ROM_ministry_of_air_and_navy.dds"
+	}
+
 }
