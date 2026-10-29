@@ -9,6 +9,13 @@ leader_traits = {
 		enemy_operative_intel_extraction_rate = 0.15
 	}
 
+	exiled_idealogue = {
+		random = no
+		drift_defence_factor = 0.15
+		war_support_factor = -0.1
+		compliance_growth = 0.05
+	}
+
 	iron_heart = {
 		random = no
 		sprite = 13

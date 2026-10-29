@@ -32,7 +32,7 @@ focus_tree = {
 		id = IAL_ministry_of_infrastructure
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 5
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = IAL_continue_balbos_modernisation_plan
 		completion_reward = {
@@ -46,10 +46,15 @@ focus_tree = {
 		id = IAL_ministry_of_civilian_industry
 		icon = GFX_focus_NORDIC_dem_selector_civilian
 		cost = 5
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = IAL_ministry_of_infrastructure
-		prerequisite = { focus = IAL_ministry_of_infrastructure }
+		prerequisite = { 
+		focus = IAL_ministry_of_infrastructure
+		}
+		prerequisite = { 
+		focus = IAL_power_of_science
+		}
 		completion_reward = {
 			unlock_decision_category_tooltip = IAL_ministry_of_civilian_industry_category
 			add_stability = 0.05
@@ -61,8 +66,8 @@ focus_tree = {
 		icon = GFX_focus_generic_military_industry
 		cost = 5
 		x = 0
-		y = 2
-		relative_position_id = IAL_ministry_of_infrastructure
+		y = 1
+		relative_position_id = IAL_ministry_of_civilian_industry
 		prerequisite = { focus = IAL_ministry_of_civilian_industry }
 		completion_reward = {
 			unlock_decision_category_tooltip = IAL_ministry_of_military_industry_category
@@ -74,7 +79,7 @@ focus_tree = {
 		id = IAL_power_of_science
 		icon = GFX_SOV_national_academies_of_sciences_ccp_2d_sov_compatibility
 		cost = 5
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = IAL_continue_balbos_modernisation_plan
 		prerequisite = { focus = IAL_continue_balbos_modernisation_plan }
@@ -90,10 +95,10 @@ focus_tree = {
 		id = IAL_inspiration_from_italy
 		icon = GFX_focus_ITA_italian_irredentism
 		cost = 5
-		x = 0
+		x = -1
 		y = 1
-		relative_position_id = IAL_power_of_science
-		prerequisite = { focus = IAL_power_of_science }
+		relative_position_id = IAL_ministry_of_military_industry
+		prerequisite = { focus = IAL_ministry_of_military_industry }
 		completion_reward = {
 		swap_ideas = {
     	remove_idea = ial_modernisation_campaignsfocus1
@@ -107,8 +112,8 @@ focus_tree = {
 		icon = GFX_focus_ARG_march_to_la_casa_rosada
 		cost = 15
 		x = 0
-		y = 2
-		relative_position_id = IAL_power_of_science
+		y = 1
+		relative_position_id = IAL_inspiration_from_italy
 		prerequisite = { focus = IAL_inspiration_from_italy }
 		completion_reward = {
 		add_state_core = 448
@@ -118,10 +123,10 @@ focus_tree = {
 	focus = {
 		id = IAL_enslave_the_locals
 		icon = GFX_goal_continuous_restrict_freedom
-		x = -4
+		x = 1
 		y = 1
-		relative_position_id = IAL_continue_balbos_modernisation_plan
-		prerequisite = { focus = IAL_continue_balbos_modernisation_plan }
+		relative_position_id = IAL_ministry_of_military_industry
+		prerequisite = { focus = IAL_ministry_of_military_industry }
 	#	completion_reward = {
 	#
 	#	}
@@ -142,10 +147,11 @@ focus_tree = {
 	focus = {
 		id = IAL_encourage_brutality
 		icon = GFX_focus_ETH_amedeos_feast_of_maskal
-		x = 0
-		y = 2
-		relative_position_id = IAL_enslave_the_locals
+		x = -1
+		y = 1
+		relative_position_id = IAL_twelve_hour_workdays
 		prerequisite = { focus = IAL_twelve_hour_workdays }
+		prerequisite = { focus = IAL_a_city_like_rome }
 	#	completion_reward = {
 	#
 	#	}
@@ -156,7 +162,7 @@ focus_tree = {
 		id = IAL_challenge_balbos_modernisation
 		icon = GFX_focus_generic_modernizing_agriculture
 		cost = 5
-		x = 2
+		x = 10
 		y = 0
 		completion_reward = {
 			add_war_support = -0.10
@@ -167,7 +173,7 @@ focus_tree = {
 				days = 2
 			}
 		}
-		mutually_exclusive = { focus = IAL_continue_balbos_modernisation_plan }		
+		mutually_exclusive = { focus = IAL_continue_balbos_modernisation_plan }
 	}
 
 	focus = {

@@ -200,3 +200,13 @@ spriteTypes = {
 		texturefile = "gfx/leaders/VIN/rj_portrait_VIN_ho_chi_minh.dds"
 	}
 }
+
+	###############################
+	### IAL - Italian Libya #######
+	###############################
+
+	spriteType = {
+		name = "GFX_rj_portrait_IAL_italo_balbo"
+		texturefile = "gfx/leaders/IAL/rj_portrait_IAL_italo_balbo.dds"
+	}
+}
