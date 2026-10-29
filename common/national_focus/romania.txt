@@ -53,19 +53,13 @@ focus_tree = {
 #	} 
 
 	############################
-	##### CATEGORY HERE ! ######
-	############################
-
-
-	############################
-	##### PRESERVE G ROM #######
+	##### INDUSTRIAL ###########
 	############################
 
 	focus = {
-		id = ROM_preserve_greater_romania
-		icon = GFX_focus_rom_preserve_romania
-		mutually_exclusive = { focus = ROM_balkans_dominance }
-		x = 3
+		id = RJ_ROM_prin_noi_insine
+		icon = GFX_focus_RJ_ROM_prin_noi_insine
+		x = -5
 		y = 0
 
 		cost = 10
@@ -82,10 +76,57 @@ focus_tree = {
 
 		}
 
-		
-		
-		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RJ_ROM_idea_depression_remnant
+				add_idea = RJ_ROM_idea_depression_remnant_2
+			}
+			add_tech_bonus = {
+				name = RJ_ROM_industrial_bonus
+				bonus = 1
+				uses = 3
+				category = industry
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
 
+
+
+
+
+	############################
+	##### PRESERVE G ROM #######
+	############################
+
+	focus = {
+		id = ROM_preserve_greater_romania
+		icon = GFX_focus_rom_preserve_romania
+		mutually_exclusive = { focus = ROM_balkans_dominance }
+		x = 3
+		y = 0
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
 
 		completion_reward = {
 			add_ideas = ROM_preserve_greater_romania
@@ -1508,7 +1549,7 @@ focus_tree = {
 		x = 15
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5

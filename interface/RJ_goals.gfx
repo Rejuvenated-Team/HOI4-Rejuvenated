@@ -1632,4 +1632,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/rom/RJ_ROM_IAR_plane.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_ROM_prin_noi_insine"
+		texturefile = "gfx/interface/goals/rom/RJ_ROM_prin_noi_insine.dds"
+	}
+
 }

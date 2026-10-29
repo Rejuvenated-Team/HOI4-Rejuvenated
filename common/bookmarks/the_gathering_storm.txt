@@ -304,6 +304,7 @@ bookmarks = {
 			ideas = {
 				neutrality_idea
 				ROM_king_carol_ii_hedonist
+				RJ_ROM_idea_depression_remnant
 			}
 			focuses = {
 				RJ_ROM_ministry_of_air_and_navy

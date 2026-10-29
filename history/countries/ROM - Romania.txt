@@ -98,6 +98,7 @@ set_technology = {
 	fuel_silos = 1
 	sonar = 1
 	smoke_generator = 1
+	steelworks_tech = 1
 }
 
 if = {
@@ -164,6 +165,7 @@ if = {
 	give_guarantee = YUG
 }
 add_ideas = neutrality_idea
+add_ideas = RJ_ROM_idea_depression_remnant
 
 #Kick off kings crazy life
 if = {

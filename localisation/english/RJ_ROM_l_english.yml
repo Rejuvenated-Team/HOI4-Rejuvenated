@@ -52,6 +52,8 @@
  RJ_ROM_set_up_new_air_bases_desc: "Setting up some new air bases in strategic locations would be highly beneficial in the case of conflict with any of our neighobrs."
  RJ_ROM_aircraft_purchases: "Aircraft Purchases"
  RJ_ROM_aircraft_purchases_desc: "Many major powers would be more than willing to sell us aircraft directly, rather than just the licenses, if we were to make a request."
+ RJ_ROM_prin_noi_insine: "Prin Noi Insine"
+ RJ_ROM_prin_noi_insine_desc: "Originally created by economist Vintila Bratianu in 1905, 'Prin Noi Insine', which translates roughly to 'by ourselves' or 'through ourselves alone', became a model for interwar economic development. These sentiments stand strong even now, & can once again guide us as we recover & industrialize our nation."
 
 
 
@@ -63,6 +65,10 @@
  ### IDEAS #########################################
  ###################################################
 
+ RJ_ROM_idea_depression_remnant: "Remnant of the Depression"
+ RJ_ROM_idea_depression_remnant_desc: "The Great Depression has largely ended for us here in Romania, but some of the effects of the global catastrophe still loom & impact us."
+ RJ_ROM_idea_depression_remnant_2: "Remnant of the Depression"
+ RJ_ROM_idea_depression_remnant_2_desc: "The Great Depression has largely ended for us here in Romania, but some of the effects of the global catastrophe still loom & impact us."
  RJ_ROM_idea_ministry_of_air_and_navy: "Ministry of Air & Navy"
  RJ_ROM_idea_ministry_of_air_and_navy_2: "Ministry of Air & Navy"
  RJ_ROM_idea_modernize_destroyers: "Destroyer Modernization"
