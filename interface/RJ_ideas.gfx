@@ -676,4 +676,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/rom/RJ_idea_ROM_ministry_of_air_and_navy.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_RJ_idea_ROM_navy"
+		texturefile = "gfx/interface/ideas/rom/RJ_idea_ROM_navy.dds"
+	}
+
 }

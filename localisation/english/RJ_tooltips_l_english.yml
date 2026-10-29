@@ -21,3 +21,5 @@
  ship_tech_research: "Naval Research Speed"
  ship_mine_tech: "Mines Technology"
  ship_submarine_tech: "Submarine Technologies"
+ amphibious_tank_tech: "Amphibious Tank Technologies"
+ ship_transport_tech: "Naval Transportation Technologies"

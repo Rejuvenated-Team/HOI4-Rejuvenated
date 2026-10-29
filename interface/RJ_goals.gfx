@@ -1622,4 +1622,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/rom/RJ_ROM_dockyard.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_ROM_professional_navy"
+		texturefile = "gfx/interface/goals/rom/RJ_ROM_professional_navy.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_ROM_IAR_plane"
+		texturefile = "gfx/interface/goals/rom/RJ_ROM_IAR_plane.dds"
+	}
+
 }

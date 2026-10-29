@@ -3,10 +3,11 @@ state={
 	name="STATE_84"
 	manpower = 1886300
 	resources={
-		steel=9
-		coal = 17
-		tungsten = 5
+		steel = 14
+		coal = 25
+		tungsten = 6
 		aluminium = 6
+		chromium = 3
 	}
 	
 	state_category = city
