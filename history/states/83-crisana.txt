@@ -4,8 +4,8 @@ state={
 	name="STATE_83"
 	manpower = 632900
 	
-	state_category = town
-
+	state_category = city
+	
 	history={
 		owner = ROM
 		buildings = {
@@ -20,9 +20,7 @@ state={
 		add_core_of = TRA
 	}
 
-	provinces={
-		696 6682 6697 9640 
-	}
+	provinces = { 696 6682 6697 9640 }
 
-	local_supplies=0.0 
+	local_supplies = 6.0 
 }

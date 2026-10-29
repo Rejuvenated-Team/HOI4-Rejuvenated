@@ -4,7 +4,7 @@ state=
 	name="STATE_78"
 	manpower = 2296800
 	
-	state_category = town
+	state_category = large_city
 	
 	history= {
 		add_core_of = MOL
@@ -15,6 +15,7 @@ state=
 		buildings = {
 			infrastructure = 2
 			air_base = 2
+			industrial_complex = 2
 		}
 		add_core_of = ROM
 	}
@@ -22,5 +23,5 @@ state=
 	{
 414 565 3407 3577 3707 3724 6600 9683 11686 11705 	}
 
-	local_supplies=4.0 
+	local_supplies = 8.0 
 }

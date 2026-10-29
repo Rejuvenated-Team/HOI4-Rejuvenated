@@ -4,7 +4,7 @@ state=
 	name="STATE_766"
 	manpower = 566600
 	
-	state_category = rural
+	state_category = city
 	
 	history= {
 		victory_points = {
@@ -22,9 +22,7 @@ state=
 		}
 		add_core_of = ROM
 	}
-	provinces=
-	{
-3701 3704 6727 6743	}
+	provinces= { 3701 3704 6727 6743 }
 
-	local_supplies=0.0 
+	local_supplies = 6.0 
 }
