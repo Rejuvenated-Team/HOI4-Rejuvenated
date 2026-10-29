@@ -59,6 +59,7 @@ focus_tree = {
 	focus = {
 		id = rj_CZE_ask_for_comintern_help
 		icon = GFX_goal_support_communism
+		mutually_exclusive = { focus = rj_CZE_the_premier_and_the_castle }
 		x = 6
 		y = 0
 
@@ -125,6 +126,42 @@ focus_tree = {
 				days = 30
 			}
 			unlock_decision_tooltip = rj_CZE_fund_pravda
+		}
+	}
+	##############################
+	#### POLITICS - COMMUNISM ####
+	##############################
+
+	focus = {
+		id = rj_CZE_the_premier_and_the_castle
+		icon = GFX_goal_support_communism
+		mutually_exclusive = { focus = rj_CZE_ask_for_comintern_help }
+		x = 12
+		y = 0
+		relative_position_id = rj_CZE_ask_for_comintern_help
+
+		cost = 5
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			
 		}
 	}
 
