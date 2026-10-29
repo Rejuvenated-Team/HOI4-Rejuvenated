@@ -55,7 +55,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = trotskyite_plot
+			picture = RJ_idea_SOV_trotskyite_plot
 
 			allowed = {
 				always = no
@@ -779,8 +779,8 @@ ideas = {
 			picture = generic_exploit_mines
 
 			modifier = {
-				industry_repair_factor = 0.1
-				production_speed_infrastructure_factor = 0.1
+				industry_repair_factor = 0.5
+				production_speed_infrastructure_factor = 0.25
 				consumer_goods_factor = 0.10
 			}
 		}
@@ -804,6 +804,19 @@ ideas = {
 				production_speed_rocket_site_factor = 0.1
 				production_speed_nuclear_reactor_factor = 0.1
 			}
+
+			equipment_bonus = {
+				guided_missile_equipment = {
+					build_cost_ic = -0.25
+					air_bombing = 0.15
+					air_range = 0.10
+				}
+				ballistic_missile_equipment = {
+					build_cost_ic = -0.25
+					air_bombing = 0.15
+					air_range = 0.10
+				}
+			}
 		}
 
 		SOV_transformation_of_nature = { #Comes from focus
@@ -820,9 +833,9 @@ ideas = {
 			picture = SOV_transformation_of_nature
 
 			modifier = {
-				stability_factor = 0.05
 				consumer_goods_factor = -0.06
 				global_building_slots = 1
+				production_speed_buildings_factor = 0.10
 			}
 		}
 
@@ -1128,6 +1141,8 @@ ideas = {
 			modifier = {
 				operative_slot = 1
 				intelligence_agency_defense = 0.5
+				enemy_intel_network_gain_factor_over_occupied_tag = -0.10
+				local_intel_to_enemies = -0.10
 			}
 		}
 
@@ -1165,9 +1180,11 @@ ideas = {
 
 			modifier = {
 				subversive_activites_upkeep = -0.5
-				operative_slot = 1
+				operative_slot = 2
 				root_out_resistance_effectiveness_factor = 0.1
 				resistance_damage_to_garrison = -0.05
+				enemy_operative_capture_chance_factor = 0.10
+				agency_upgrade_time = -0.25
 			}
 		}
 
@@ -1186,8 +1203,8 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory = 0.03
-				industrial_capacity_dockyard = 0.03
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
 			}
 		}
 
@@ -1207,9 +1224,11 @@ ideas = {
 			}
 
 			modifier = {
-				military_leader_cost_factor = -0.2
+				military_leader_cost_factor = -0.25
 				promote_cost_factor	 = -0.15
 				army_org_factor = 0.05
+				unit_medal_effectiveness = 0.15
+				grant_medal_cost_factor = -0.50
 			}
 		}
 
@@ -1252,8 +1271,8 @@ ideas = {
 			}
 
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.05
-				research_speed_factor = 0.02
+				production_factory_efficiency_gain_factor = 0.08
+				research_speed_factor = 0.03
 			}
 		}
 
@@ -1273,8 +1292,9 @@ ideas = {
 			}
 
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.05
-				research_speed_factor = 0.02
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+				research_speed_factor = 0.05
 				drift_defence_factor = 0.05
 				communism_drift = 0.05
 				consumer_goods_factor = -0.05
@@ -1319,8 +1339,9 @@ ideas = {
 
 			modifier = {
 				conscription_factor = 0.15
+				weekly_manpower = 1000
 				max_dig_in_factor = 0.1
-				training_time_factor = 0.1
+				training_time_factor = -0.1
 			}
 		}
 
@@ -1494,7 +1515,7 @@ ideas = {
 			}
 
 			modifier = {
-				research_speed_factor = 0.1
+				research_speed_factor = 0.3
 			}
 		}
 
@@ -1508,7 +1529,7 @@ ideas = {
 			}
 
 			modifier = {
-				research_speed_factor = 0.01
+				research_speed_factor = 0.03
 			}
 		}
 
@@ -1522,7 +1543,7 @@ ideas = {
 			}
 
 			modifier = {
-				research_speed_factor = 0.01
+				research_speed_factor = 0.03
 			}
 		}
 
@@ -2362,7 +2383,7 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = -0.10
-				conscription = 0.01
+				conscription = 0.025
 			}
 		}
 
@@ -2524,9 +2545,10 @@ ideas = {
 
 			equipment_bonus = {
 				super_heavy_tank_chassis = {
-					build_cost_ic = -0.2
+					build_cost_ic = -0.25
 					reliability = 0.05 instant = yes
-					armor_value = 0.05
+					armor_value = 0.10
+					fuel_consumption_factor = -0.10
 				}
 			}
 		}
@@ -3819,7 +3841,9 @@ ideas = {
 			picture = generic_manpower_bonus
 
 			modifier = {
-				conscription = 0.005
+				conscription = 0.01
+				experience_gain_army = 0.15
+				training_time_factor = -0.05
 			}
 		}
 
@@ -3860,6 +3884,8 @@ ideas = {
 
 			modifier = {
 				resistance_damage_to_garrison = -0.25
+				compliance_growth = 0.10
+				resistance_growth = -0.05
 			}
 		}
 

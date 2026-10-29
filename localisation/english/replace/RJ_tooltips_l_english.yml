@@ -1,2 +1,10 @@
 ﻿l_english:
  ENG_reach_out_across_the_channel_tt: "§YInvites Spain, France, & the Benelux countries to your faction, if any of them have Communist governments."
+ GER_naval_based_on_atlantic_islands_tt: ""Every §Y[ROOT.GetName]§! or German subject controlled island with a §Y$naval_base$§! in the §YNorth Atlantic Ocean§!: Add §G3§! §Y$naval_base$§!. Add §G3§! §Y$coastal_bunker$§!. Current effect:""
+ SOV_pc_of_mechanical_engineering_ns_tt: "$SOV_modify_defense_industry_ns_intro$ \n £prod_eff_cap Production Efficiency Cap: §G+5.00%§!\n\n"
+ SOV_third_five_year_plan_ns_tt: "$SOV_modify_fyp_ns_intro$ \n£prod_eff Production Efficiency growth: §G+5.00%§! \n §YCivilian Factory§! construction speed: §G+5%§! \nIndustrial Concern Cost: §G-15%§! \nConsumer Goods Factories Factor: §Y+10.0%§!\n\n"
+ SOV_reorganize_the_pc_of_heavy_industry_ns_tt: "$SOV_modify_fyp_ns_intro$ \nConsumer Goods Factories Factor: §Y-5.0%§! \n§YCivilian Factory§! construction speed: §G+5%§! \n\n"
+ SOV_optimize_production_lines_ns_tt: "$SOV_modify_fyp_ns_intro$ \nFactory Output: §G+10.00%§! \n£prod_eff Production Efficiency growth: §G+5.00%§! \nProduction Efficiency Base: §G+5.00%§! \n\n"
+ SOV_military_engineering_university_ns_tt: "$SOV_modify_defense_industry_ns_intro$ \nMax Entrenchment: §G+5.0%§! \n§YLand Fort§! construction speed: §G+10.00%§! \n§YCoastal Fort§! construction speed: §G+10.00%§! \n\n"
+ SWI_add_forts_bordering:0 "[ROOT.GetNameDef] gains §H3 Land Forts§! in every neighboring province.\n\n"
+ SOV_fourth_five_year_plan_ns_tt: "$SOV_modify_fyp_ns_intro$ \nConsumer Goods Factories Factor: §Y-5.0%§! \nFactory Repair Speed: §G+5.00%§! \n§YCivilian Factory§! construction speed: §G+5%§! \n§YMilitary Factory§! construction speed: §G+5%§! \n£prod_eff_cap Production Efficiency Cap: §G+5.00%§! \n\n"

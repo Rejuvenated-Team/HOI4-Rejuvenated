@@ -278,6 +278,41 @@ bookmarks = {
 			label = { rj_label_south_america rj_label_new_content }
 		}
 
+		NZL = {
+			minor = yes
+			history = "rj_NZL_GATHERING_STORM_DESC"
+			ideology = democratic
+			version = base_game
+			ideas = {
+				NZL_railways_board
+				NZL_great_depression
+				NZL_commonwealth_loyalty
+			}
+			focuses = {
+				NZL_the_first_labor_government
+				RJ_NZL_samoan_economic_development
+				RJ_NZL_the_biggest_bob
+			}
+			label = { rj_label_oceania rj_label_new_content }
+		}
+
+		ROM = {
+			minor = yes
+			history = "rj_ROM_GATHERING_STORM_DESC"
+			ideology = democratic
+			version = base_game
+			ideas = {
+				neutrality_idea
+				ROM_king_carol_ii_hedonist
+			}
+			focuses = {
+				RJ_ROM_ministry_of_air_and_navy
+				ROM_preserve_greater_romania
+				ROM_institute_royal_dictatorship
+			}
+			label = { rj_label_europe rj_label_new_content }
+		}
+
 		EGY = {
 			minor = yes
 			history = "EGY_GATHERING_STORM_DESC"

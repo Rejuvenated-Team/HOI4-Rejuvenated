@@ -8,7 +8,7 @@ state={
 		tungsten = 2
 	}
 	
-	state_category = city
+	state_category = metropolis
 
 	history={
 		owner = PER
@@ -37,5 +37,5 @@ state={
 		4580 7602 10385 10768 10837 
 	}
 
-	local_supplies=5.0 
+	local_supplies = 10.0 
 }

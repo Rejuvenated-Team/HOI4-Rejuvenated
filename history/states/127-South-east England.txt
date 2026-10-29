@@ -41,12 +41,8 @@ state = {
 				# HM Dockyard, Chatham
 				naval_facility = 1
 			}
-		}
-		
-		1939.1.1 = {
-			buildings = {
-				dockyard = 3
-				industrial_complex = 2
+			507 = {
+				land_facility = 1 # Mechanical Warfare Experimental Establishment
 			}
 		}
 

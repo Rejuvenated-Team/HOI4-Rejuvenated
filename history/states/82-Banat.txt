@@ -4,9 +4,10 @@ state={
 	manpower = 1205500
 	resources={
 		aluminium=4 # was: 6
+		chromium = 1
 	}
 	
-	state_category = rural
+	state_category = large_city
 
 	history={
 		victory_points = {
@@ -21,9 +22,7 @@ state={
 		add_core_of = TRA
 	}
 
-	provinces={
-		646 662 3649 9606 11592 11608 
-	}
+	provinces = { 646 662 3649 9606 11592 11608 }
 
-	local_supplies=11.0 
+	local_supplies = 11.0 
 }

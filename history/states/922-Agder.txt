@@ -5,6 +5,7 @@ state = {
 	state_category = town
 	resources = {
 		aluminium = 5
+		chromium = 14
 	}
 	
 
@@ -31,5 +32,5 @@ state = {
 		3049 3129 6072 9096 9196 9296 11176 11367 11101
 	}
 
-	local_supplies = 0.000
+	local_supplies = 4.000
 }

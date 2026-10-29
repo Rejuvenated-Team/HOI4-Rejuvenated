@@ -4,10 +4,10 @@ state = {
 	manpower = 2725542 
 
 	resources = {
-		coal = 1 #initial distribution
+		coal = 2
 	}
 	
-	state_category = large_town
+	state_category = metropolis
 
 	history = {
 
@@ -16,13 +16,14 @@ state = {
 
 		buildings = {
 
-			infrastructure = 3 #was: 5
-			industrial_complex = 3
-			dockyard = 1 #was: 0
+			infrastructure = 4
+			industrial_complex = 4
+			dockyard = 2
 			air_base = 6
 
 			10265 = {
-				naval_base = 5
+				naval_base = 9
+				naval_supply_hub = 1
 			}
 
 		}
@@ -38,6 +39,10 @@ state = {
 		victory_points = {
 			4288 1 # Calapan
 		}
+
+		strategic_province_location = {
+			defensible_coastline = 10265
+		}
 		
 	}
 
@@ -45,5 +50,5 @@ state = {
 		1221 1288 1388 4233 4288 7323 10236 10265 10272 12236 
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 12.0 
 }

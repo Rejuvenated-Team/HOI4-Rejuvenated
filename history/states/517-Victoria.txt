@@ -3,8 +3,8 @@ state={
 	id=517
 	name="STATE_517"
 	resources={
-		steel=8.000
-		chromium=4.000
+		coal = 17
+		chromium=12.000
 	}
 
 	history={
@@ -33,9 +33,9 @@ state={
 	provinces={
 		1759 2130 2155 4776 4791 7755 7798 7811 10553 10581 10622 10637 12576 12932 
 	}
-	manpower=2219500
+	manpower=1851862
 	buildings_max_level_factor=1.000
 	state_category=large_city
 
-	local_supplies=0.0 
+	local_supplies=8.0 
 }

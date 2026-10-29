@@ -7,7 +7,7 @@ state = {
 		coal = 2 
 	}
 	
-	state_category = pastoral
+	state_category = large_town
 
 	history = {
 
@@ -15,17 +15,17 @@ state = {
 		add_core_of = PHI
 
 		buildings = {
-
-			infrastructure = 1
+			infrastructure = 3
+			industrial_complex = 1
 
 			1421 = {
-				naval_base = 1
+				naval_base = 7
 			}
 
 		}
 
 		victory_points = {
-			1421 2 # Zamboanga
+			1421 5 # Zamboanga
 		}
 		
 	}
@@ -34,5 +34,5 @@ state = {
 		1421 4399 7360 7389 7417 10184 
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 7.0 
 }

@@ -1,16 +1,16 @@
-state=
-{
+state = {
 	id=102
 	name="STATE_102"
 	manpower = 811050 # was 1144300 before Ljubljana split
 	
-	state_category = large_town
+	state_category = city
 	
-	history =
-	{
+	history = {
 		owner = YUG
 		buildings = {
 			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
 			596 = {
 				dam = 1 #Fala Hydro Power Plant
 			}
@@ -25,5 +25,5 @@ state=
 		596 665 3631 3654 6672 9596
 	}
 	
-	local_supplies=0.0 
+	local_supplies = 6.0 
 }

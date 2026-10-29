@@ -1,0 +1,76 @@
+﻿l_english:
+ 
+ ####################################################################################
+ ### FOCUSES ########################################################################
+ ####################################################################################
+
+ RJ_ROM_ministry_of_air_and_navy: "Ministry of Air & Navy"
+ RJ_ROM_ministry_of_air_and_navy_desc: "We've decided that what exists of our naval & air forces should be placed under a joint ministry to govern the development & organization of both entities. This will be a far more efficient structuring for our needs going forward, & also comes with a very welcome increase in funding."
+ RJ_ROM_expand_the_galati_shipyards: "Expand the Galati Shipyards"
+ RJ_ROM_expand_the_galati_shipyards_desc: "Our shipyards are woefully inadequate at the moment, & the ones at Galati are in particular need of expansion. Some fresh investments there should allow us to comfortably expand our ship-building capacity."
+ RJ_ROM_a_defensive_force: "A Defensive Force"
+ RJ_ROM_a_defensive_force_desc: "We have no real naval ambitions, & realistically we only need enough of a fleet for a defensive force, capable of handling our own coastline within the Black Sea."
+ RJ_ROM_greater_naval_ambitions: "Greater Naval Ambitions"
+ RJ_ROM_greater_naval_ambitions_desc: "A defensive force is utterly inadequate for our ambitions. We must think much bigger, looking beyond just the black sea."
+ RJ_ROM_mine_warfare: "Mine Warfare"
+ RJ_ROM_mine_warfare_desc: "Naval mines offer a good advantage to any navy that makes use of them, forcing opponents to slow down & causing potential landings on an enemy coast to be far sloppier in attempts to avoid mines. This is something we should take advantage of ourselves."
+ RJ_ROM_establish_the_santierul_shipyard: "Establish the Santierul Shipyard"
+ RJ_ROM_establish_the_santierul_shipyard_desc: "Our shipbuilding capabilities are still severely limited, making it difficult to establish any sort of fleet. Santierul at Constanta would be an ideal location for a new shipyard!"
+ RJ_ROM_modernize_the_destroyers: "Modernize the Destroyers"
+ RJ_ROM_modernize_the_destroyers_desc: "Our tiny destroyer fleet is already fairly obsolete. This will never do for our current ambitions."
+ RJ_ROM_defense_of_the_coast: "Defense of the Coast"
+ RJ_ROM_defense_of_the_coast_desc: "It's vital that we secure our coastlines in the case of enemy invasion!"
+ RJ_ROM_raiding_operations: "Raiding Operations"
+ RJ_ROM_raiding_operations_desc: "Submarines are perfect for a smaller navy such as ours, & we can readily handle raiding operations within the Black Sea, & perhaps even some of the Mediterreanean."
+ RJ_ROM_coastal_operations: "Coastal Operations"
+ RJ_ROM_coastal_operations_desc: "Our navy isn't capable of great feats, but we can handle patrolling the coasts for threats & supporting troops fighting on coastlines."
+ RJ_ROM_a_professional_navy: "A Professional Navy"
+ RJ_ROM_a_professional_navy_desc: "A good navy is a professional navy, which is something our fine seamen have come to understand. They're quickly becoming some of the finest there are!"
+ RJ_ROM_focus_on_domestic_production: "Focus on Domestic Production"
+ RJ_ROM_focus_on_domestic_production_desc: "We ought to be able to make our own planes, handling production & design domestically."
+ RJ_ROM_foreign_aircraft_licenses: "Foreign Aircraft Licenses"
+ RJ_ROM_foreign_aircraft_licenses_desc: "Many great powers would grant us licenses to build their own aircraft designs instead of having to come up with all of our own. However, if we were to ever go to war with the source of any of our licenses, we'd run into problems."
+ RJ_ROM_design_our_own_aircraft: "Design Our Own Aircraft"
+ RJ_ROM_design_our_own_aircraft_desc: "Relying on other powers to supply us with aircraft is a risky business, & one that cheats us of achieving a greater potential as well."
+ RJ_ROM_naval_infantry_battalions: "Naval Infantry Battalions"
+ RJ_ROM_naval_infantry_battalions_desc: "By royal high decree, a specialized force designed for naval operations shall be established, in service of our great nation!"
+ RJ_ROM_doctrinal_development: "Doctrinal Development"
+ RJ_ROM_doctrinal_development_desc: "The ministry has been working on developing air doctrine for some time now, attempting to determine the best strategies for us. They've finally come to a decission, deciding that we'd be best served focusing on support of our ground forces, & protection of our domestic airspace."
+ RJ_ROM_air_flotilla_organization: "Air Flotilla Organization"
+ RJ_ROM_air_flotilla_organization_desc: "Our air forces must be properly organized into flotillas, giving them the best possible organization & subsequently the best operational abilities."
+ RJ_ROM_recon_training: "Recon Training"
+ RJ_ROM_recon_training_desc: "The ministry has decided to push an air reconnaisance program, emphasizing a need for the most accurate possible information to assist our troops on the ground."
+ RJ_ROM_industria_aeronautica_romania_investments: "Industria Aeronautica Romania Investments"
+ RJ_ROM_industria_aeronautica_romania_investments_desc: "IAR has been our leading airplane developer & manufacturer for many years now, & they haven't let us down. A substantial investment ought to help them, & by extension us, along."
+ RJ_ROM_bomber_development: "Bomber Development"
+ RJ_ROM_bomber_development_desc: "Bombers are a good way of damaging enemy infrastructure without having to get too close ourselves."
+ RJ_ROM_CAS_development: "CAS Development"
+ RJ_ROM_CAS_development_desc: "Dive-bombers are crucial to supporting our land troops, & even have naval applications if we so choose to use them in such a way."
+ RJ_ROM_the_IAR_eighty: "The IAR-80"
+ RJ_ROM_the_IAR_eighty_desc: "The IAR has come up with a brilliant new design that they've dubbed the IAR-80! It's a great breakthrough in fighter technology that we ought to put into production immediately."
+ RJ_ROM_set_up_new_air_bases: "Set Up New Air Bases"
+ RJ_ROM_set_up_new_air_bases_desc: "Setting up some new air bases in strategic locations would be highly beneficial in the case of conflict with any of our neighobrs."
+ RJ_ROM_aircraft_purchases: "Aircraft Purchases"
+ RJ_ROM_aircraft_purchases_desc: "Many major powers would be more than willing to sell us aircraft directly, rather than just the licenses, if we were to make a request."
+
+
+
+
+
+
+
+ ###################################################
+ ### IDEAS #########################################
+ ###################################################
+
+ RJ_ROM_idea_ministry_of_air_and_navy: "Ministry of Air & Navy"
+ RJ_ROM_idea_ministry_of_air_and_navy_2: "Ministry of Air & Navy"
+ RJ_ROM_idea_modernize_destroyers: "Destroyer Modernization"
+ RJ_ROM_idea_mine_warfare: "Mine Warfare"
+ RJ_ROM_idea_defend_the_coast: "Defense of the Coast"
+ RJ_ROM_idea_raiding_operations: "Raiding Operations"
+ RJ_ROM_idea_coastal_operations: "Coastal Operations"
+ RJ_ROM_idea_professional_navy: "Professional Navy"
+ RJ_ROM_idea_air_flotillas: "Organized Air Flotillas"
+ RJ_ROM_idea_air_recon: "Aerial Reconnaisance Training"
+ RJ_ROM_idea_advanced_fighters: "Advanced Fighters"

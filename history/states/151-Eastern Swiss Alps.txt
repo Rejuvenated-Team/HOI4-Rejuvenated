@@ -3,21 +3,26 @@ state={
 	id=151
 	name="STATE_151"
 	manpower = 598920
-	state_category = rural
+	state_category = town
 	resources={
 		aluminium=15 # was: 24
+		coal = 2
 	}
 	history={
 		owner = SWI
 		victory_points = { 658 1 }
 		buildings = {
-			infrastructure = 1 
+			infrastructure = 2
 			industrial_complex = 1
+
+			11601 = {
+				bunker = 4
+			}
 		}
 		add_core_of = SWI
 	}
 	provinces={
 		658 661 3660 3662 11601 
 	}
-	local_supplies=0.0 
+	local_supplies = 4.0 
 }
