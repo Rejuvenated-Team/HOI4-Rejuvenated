@@ -3155,683 +3155,13 @@ focus_tree = {
 	}
 
 	############################
-	######## AIR BRANCH ########
-	############################
-
-	focus = {
-		id = ROM_expand_the_air_force
-		icon = GFX_goal_generic_build_airforce
-		x = 32
-		y = 0
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-
-		complete_tooltip = {
-			air_experience = 25
-			random_state = {
-				limit = {
-					has_state_flag = ROM_expand_the_air_force_AB
-				}
-				add_building_construction = {
-					type = air_base
-					level = 3
-					instant_build = yes
-				}
-			}
-			random_state = {
-				limit = {
-					has_state_flag = ROM_expand_the_air_force_AB_2
-				}
-				add_building_construction = {
-					type = air_base
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-
-		completion_reward = {
-			air_experience = 25
-			random_owned_controlled_state = {
-				prioritize = { 46 79 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					free_building_slots = {
-						building = air_base
-						size > 2
-					}
-				}
-				add_building_construction = {
-					type = air_base
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = ROM_expand_the_air_force_AB
-			}
-			random_owned_controlled_state = {
-				prioritize = { 46 79 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					free_building_slots = {
-						building = air_base
-						size > 2
-					}
-				}
-				add_building_construction = {
-					type = air_base
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = ROM_expand_the_air_force_AB_2
-			}
-		}
-	}
-	
-	focus = {
-		id = ROM_white_squadron_focus
-		icon = GFX_focus_SOV_women_in_aviation
-		x = 0
-		y = 1
-		prerequisite = { focus = ROM_expand_the_air_force }
-		relative_position_id = ROM_expand_the_air_force
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			has_war = yes
-		}
-
-		bypass = {
-
-		}
-
-		completion_reward = {
-			add_ideas = ROM_white_squadron
-		}
-	}
-	
-	focus = {
-		id = ROM_acquire_licenses
-		icon = GFX_focus_generic_license_production
-		prerequisite = { focus = ROM_expand_the_air_force }
-		mutually_exclusive = { focus = ROM_local_development }
-		x = -2
-		y = 2
-		relative_position_id = ROM_expand_the_air_force
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-
-		completion_reward = {
-			add_ideas = ROM_acquire_licenses
-		}
-	}
-
-	focus = {
-		id = ROM_air_defense
-		icon = GFX_goal_generic_air_doctrine
-		prerequisite = { focus = ROM_acquire_licenses }
-		mutually_exclusive = { focus = ROM_ground_support }
-		x = -2
-		y = 1
-		relative_position_id = ROM_acquire_licenses
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-
-			add_mastery_bonus = {
-				name = ROM_air_defense
-				bonus = 0.2
-				days = 240
-				grand_doctrine = new_operational_integrity
-			}
-			add_doctrine_cost_reduction = {
-				name = ROM_air_defense
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-			}
-		}
-	}
-
-	focus = {
-		id = ROM_ground_support
-		icon = GFX_goal_poland_goal
-		prerequisite = { focus = ROM_acquire_licenses }
-		mutually_exclusive = { focus = ROM_air_defense }
-		x = 0
-		y = 1
-		relative_position_id = ROM_acquire_licenses
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-
-			add_mastery_bonus = {
-				name = ROM_ground_support
-				bonus = 0.2
-				days = 240
-				grand_doctrine = new_battlefield_support
-			}
-			add_doctrine_cost_reduction = {
-				name = ROM_ground_support
-				cost_reduction = 0.50
-				uses = 1
-				category = air_doctrine
-			}
-		}
-	}
-
-	focus = {
-		id = ROM_medium_bombers
-		icon = GFX_goal_generic_air_bomber
-		prerequisite = { focus = ROM_ground_support }
-		x = 0
-		y = 2
-		relative_position_id = ROM_acquire_licenses
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = ROM_medium_bombers
-				bonus = 1.0
-				uses = 1
-				category = tactical_bomber
-			}
-		}
-	}
-
-	focus = {
-		id = ROM_acquire_fighters
-		icon = GFX_goal_generic_air_fighter2
-		prerequisite = { focus = ROM_air_defense }
-		x = -2
-		y = 2
-		relative_position_id = ROM_acquire_licenses
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			NOT = {
-				has_tech = fighter3
-				has_tech = heavy_fighter3
-			}
-			OR = {
-				GER = {
-					custom_trigger_tooltip = {
-						tooltip = fighter_tt
-						OR = {
-							is_available_fighter_ROM = yes
-							is_available_heavy_fighter_ROM = yes
-						}
-					}
-				}
-				FRA = {
-					custom_trigger_tooltip = {
-						tooltip = fighter_tt
-						OR = {
-							is_available_fighter_ROM = yes
-							is_available_heavy_fighter_ROM = yes
-						}
-					}
-				}
-				ITA = {
-					custom_trigger_tooltip = {
-						tooltip = fighter_tt
-						OR = {
-							is_available_fighter_ROM = yes
-							is_available_heavy_fighter_ROM = yes
-						}
-					}
-				}
-				ENG = {
-					custom_trigger_tooltip = {
-						tooltip = fighter_tt
-						OR = {
-							is_available_fighter_ROM = yes
-							is_available_heavy_fighter_ROM = yes
-						}
-					}
-				}
-				USA = {
-					custom_trigger_tooltip = {
-						tooltip = fighter_tt
-						OR = {
-							is_available_fighter_ROM = yes
-							is_available_heavy_fighter_ROM = yes
-						}
-					}
-				}
-			}
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-
-		completion_reward = {
-			country_event = DOD_romania.150
-		}
-	}
-
-	focus = {
-		id = ROM_local_development
-		icon = GFX_goal_generic_air_production
-		prerequisite = { focus = ROM_expand_the_air_force }
-		mutually_exclusive = { focus = ROM_acquire_licenses }
-		x = 2
-		y = 2
-		relative_position_id = ROM_expand_the_air_force
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 9
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-
-		completion_reward = {
-			add_ideas = ROM_local_development
-		}
-	}
-
-	focus = {
-		id = ROM_air_superiority
-		icon = GFX_goal_generic_air_fighter2
-		prerequisite = { focus = ROM_local_development }
-		mutually_exclusive = { focus = ROM_strategic_bomber_force }
-		x = -1
-		y = 1
-		relative_position_id = ROM_local_development
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 9
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-
-			add_mastery_bonus = {
-				name = ROM_air_superiority
-				bonus = 0.1
-				days = 240
-				track = fighter_aircraft
-			}
-			
-
-		}
-	}
-
-	focus = {
-		id = ROM_cas
-		icon = GFX_goal_generic_CAS
-		prerequisite = { focus = ROM_air_superiority }
-		x = 1
-		y = 1
-		relative_position_id = ROM_air_superiority
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		 
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = ROM_cas
-				bonus = 1.0
-				uses = 1
-				category = cas_bomber
-			}
-		}
-	}
-
-	focus = {
-		id = ROM_iar_80
-		icon = GFX_goal_generic_air_fighter
-		prerequisite = { focus = ROM_air_superiority }
-		x = -1
-		y = 1
-		relative_position_id = ROM_air_superiority
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			if = {
-				limit = { NOT = { has_dlc = "By Blood Alone" } }
-				if = {
-					limit = {
-						has_tech = fighter2
-					}
-					add_tech_bonus = {
-						name = ROM_iar_80
-						bonus = 1.0
-						ahead_reduction = 2
-						uses = 1
-						category = light_fighter
-					}
-					else = {
-						add_tech_bonus = {
-							name = ROM_iar_80
-							bonus = 1.0
-							ahead_reduction = 2
-							uses = 1
-							technology = fighter2
-						}
-					}
-				}
-			}
-			if = {
-				limit = { has_dlc = "By Blood Alone" }
-				if = {
-					limit = {
-						NOT = { has_tech = improved_small_airframe }
-					}
-					add_tech_bonus = {
-						name = ROM_iar_80
-						bonus = 1.0
-						ahead_reduction = 2
-						uses = 1
-						technology = improved_small_airframe
-					}
-					create_equipment_variant = {
-						name = "IAR 80"
-						type = small_plane_airframe_2
-						modules = {
-							fixed_main_weapon_slot = light_mg_4x
-							fixed_auxiliary_weapon_slot_1 = light_mg_2x
-							engine_type_slot = engine_2_1x
-							special_type_slot_1 = empty
-						}
-						icon = "GFX_ROM_fighter2_medium"
-					}
-				}
-				else = {
-					create_equipment_variant = {
-						name = "IAR 80"
-						type = small_plane_airframe_2
-						allow_without_tech = yes #Makes no difference since appropriate tech is already researched, but it improves tooltip
-						modules = {
-							fixed_main_weapon_slot = light_mg_4x
-							fixed_auxiliary_weapon_slot_1 = light_mg_2x
-							engine_type_slot = engine_2_1x
-							special_type_slot_1 = empty
-						}
-						icon = "GFX_ROM_fighter2_medium"
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = ROM_strategic_bomber_force
-		icon = GFX_goal_generic_occupy_start_war
-		prerequisite = { focus = ROM_local_development }
-		mutually_exclusive = { focus = ROM_air_superiority }
-		x = 1
-		y = 1
-		relative_position_id = ROM_local_development
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = ROM_strategic_bomber_force
-				bonus = 1.0
-				uses = 1
-				category = cat_strategic_bomber
-			}
-		}
-	}
-
-	focus = {
-		id = ROM_heavy_bombers
-		icon = GFX_goal_generic_air_bomber
-		prerequisite = { focus = ROM_strategic_bomber_force }
-		x = 1
-		y = 1
-		relative_position_id = ROM_strategic_bomber_force
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = ROM_heavy_bombers
-				bonus = 1.0
-				uses = 1
-				category = cat_strategic_bomber
-			}
-		}
-	}
-
-	focus = {
-		id = ROM_nuclear_bomb_project
-		icon = GFX_focus_wonderweapons
-		prerequisite = { focus = ROM_heavy_bombers }
-		x = 1
-		y = 2
-		relative_position_id = ROM_strategic_bomber_force
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-
-			add_breakthrough_progress = {
-				specialization = specialization_nuclear
-				value = 0.75
-			}
-
-			add_tech_bonus = {
-				name = ROM_nuclear_bomb_project
-				bonus = 1.0
-				uses = 1
-				category = nuclear
-			}
-
-		}
-	}
-
-	############################
 	####### ARMY BRANCH ########
 	############################
 
 	focus = {
 		id = ROM_army_maneuvers
 		icon = GFX_goal_generic_army_doctrines
-		x = 40
+		x = 32
 		y = 0
 
 		cost = 10
@@ -4520,15 +3850,46 @@ focus_tree = {
 		}
 	}
 
-	############################
-	####### NAVY BRANCH ########
-	############################
+	##################################
+	####### NAVY & AIR BRANCH ########
+	##################################
 
 	focus = {
-		id = ROM_expand_the_galati_shipyards
-		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 47
+		id = RJ_ROM_ministry_of_air_and_navy
+		icon = GFX_focus_RJ_ROM_ministry_of_air_and_navy
+		x = 45
 		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			air_experience = 50
+			navy_experience = 50
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = RJ_ROM_idea_ministry_of_air_and_navy
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_expand_the_galati_shipyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = RJ_ROM_ministry_of_air_and_navy }
+		relative_position_id = RJ_ROM_ministry_of_air_and_navy
+		x = 4
+		y = 1
 
 		cost = 7.2
 
@@ -4537,7 +3898,7 @@ focus_tree = {
 		}
 
 		available = {
-
+			controls_state = 971
 		}
 
 		bypass = {
@@ -4547,11 +3908,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			navy_experience = 50
 			random_owned_controlled_state = {
 				prioritize = { 971 }
 				limit = {
-					ROOT = { has_full_control_of_state = PREV }
 					free_building_slots = {
 						building = dockyard
 						size > 2
@@ -4564,40 +3923,52 @@ focus_tree = {
 					level = 3
 					instant_build = yes
 				}
-				set_state_flag = ROM_expand_the_galati_shipyards_AB
 			}
 		}
 	}
 
 	focus = {
-		id = ROM_coastal_defense_navy
-		icon = GFX_goal_generic_navy_doctrines_tactics
-		prerequisite = { focus = ROM_expand_the_galati_shipyards }
-		mutually_exclusive = { focus = ROM_black_sea_dominance }
-		x = -1
+		id = RJ_ROM_a_defensive_force
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = RJ_ROM_expand_the_galati_shipyards }
+		relative_position_id = RJ_ROM_expand_the_galati_shipyards
+		mutually_exclusive = {
+			focus = RJ_ROM_greater_naval_ambitions
+		}
+		x = -2
 		y = 1
-		relative_position_id = ROM_expand_the_galati_shipyards
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
-			factor = 9
+			factor = 1
 		}
 
 		available = {
-
+			
 		}
 
 		bypass = {
 
 		}
 
-		
-		
-		
-
 		completion_reward = {
-
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				name = RJ_ROM_naval_doctrine_bonus_basic
+				uses = 2
+				category = naval_doctrine
+			}
+			add_tech_bonus = {
+				name = RJ_ROM_defensive_navy_bonus_1
+				category = mio_cat_tech_all_cruiser_and_modules
+				uses = 3
+				bonus = 0.5
+			}
+			set_technology = {
+				coastal_defense_ships = 1
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -4607,10 +3978,6 @@ focus_tree = {
 				mio:ROM_galati_shipyard_organization = {
 					add_mio_funds = 2500
 				}
-#					unlock_mio_trait_tooltip  = {
-#						department = ROM_mio_department_design_ship_capital_screen_weapons
-#						trait = ROM_mio_trait_coastal_defense_weapons
-#					}
 			}
 
 			else = {
@@ -4621,176 +3988,118 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ROM_coastal_defense_ships
-		icon = GFX_goal_generic_navy_cruiser
-		prerequisite = { focus = ROM_coastal_defense_navy }
+		id = RJ_ROM_raiding_operations
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = RJ_ROM_a_defensive_force }
+		relative_position_id = RJ_ROM_a_defensive_force
 		x = -1
 		y = 1
-		relative_position_id = ROM_coastal_defense_navy
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
-			factor = 4
+			base = 1
 		}
 
 		available = {
-
+			
 		}
 
 		bypass = {
 
 		}
 
-		
-		
-		
-
-		completion_reward = {
-			add_ideas = ROM_coastal_defense_ships
-			#custom_effect_tooltip = ROM_coastal_defense_ships_tech_tt
-			if = { 
-				limit = { has_dlc = "Man the Guns" }
-				set_technology = { coastal_defense_ships = 1 } 
-			}
-		}
-	}
-
-	focus = {
-		id = ROM_modern_destroyers
-		icon = GFX_goal_generic_navy_anti_submarine
-		prerequisite = { focus = ROM_coastal_defense_navy focus = ROM_black_sea_dominance }
-		x = 1
-		y = 1
-		relative_position_id = ROM_coastal_defense_navy
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
-				name = ROM_modern_destroyers
-				bonus = 3.0
-				uses = 1
-				category = dd_tech
+				name = RJ_ROM_submarines_bonus
+				category = ship_submarine_tech
+				uses = 2
+				bonus = 0.75
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = RJ_ROM_idea_raiding_operations
 		}
 	}
 
 	focus = {
-		id = ROM_torpedo_boats
-		icon = GFX_goal_generic_occupy_start_war
-		prerequisite = { focus = ROM_coastal_defense_ships }
-		x = -2
-		y = 2
-		relative_position_id = ROM_coastal_defense_navy
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-
-		completion_reward = {
-			swap_ideas = {
-				add_idea = ROM_coastal_defense_ships_2
-				remove_idea = ROM_coastal_defense_ships
-			}
-		}
-	}
-	
-	focus = {
-		id = ROM_modern_submarines
-		icon = GFX_goal_generic_navy_submarine
-		prerequisite = { focus = ROM_modern_destroyers }
+		id = RJ_ROM_coastal_operations
+		icon = GFX_focus_SWE_coastal_support
+		prerequisite = { focus = RJ_ROM_a_defensive_force }
+		relative_position_id = RJ_ROM_a_defensive_force
 		x = 0
 		y = 2
-		relative_position_id = ROM_coastal_defense_navy
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
-
+			
 		}
 
 		bypass = {
 
 		}
 
-		
-		
-		
-		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = ROM_modern_submarines
-				bonus = 1.0
-				uses = 1
-				category = ss_tech
-			}
+			add_ideas = RJ_ROM_idea_coastal_operations
 		}
 	}
 
 	focus = {
-		id = ROM_black_sea_dominance
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = ROM_expand_the_galati_shipyards }
-		mutually_exclusive = { focus = ROM_coastal_defense_navy }
-		x = 1
+		id = RJ_ROM_greater_naval_ambitions
+		icon = GFX_focus_generic_large_navy
+		prerequisite = { focus = RJ_ROM_expand_the_galati_shipyards }
+		relative_position_id = RJ_ROM_expand_the_galati_shipyards
+		mutually_exclusive = {
+			focus = RJ_ROM_a_defensive_force
+		}
+		x = 2
 		y = 1
-		relative_position_id = ROM_expand_the_galati_shipyards
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
-			factor = 5
+			base = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
 		}
 
 		available = {
-
+			
 		}
 
 		bypass = {
 
 		}
 
-		
-		
-		
-
-		completion_reward = {			
-
+		completion_reward = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				name = RJ_ROM_naval_ambition_bonus
+				uses = 1
+				category = fleet_in_being_tree
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				name = RJ_ROM_ambition_research_bonus_1
+				category = ship_battleship_hull_tech
+				uses = 1
+				bonus = 1
+				ahead_reduction = 1
+			}
+			add_tech_bonus = {
+				name = RJ_ROM_ambition_research_bonus_2
+				category = ship_modules_tech
+				uses = 3
+				bonus = 0.3
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -4812,121 +4121,825 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ROM_capital_ships
-		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = ROM_black_sea_dominance }
-		x = 1
+		id = RJ_ROM_mine_warfare
+		icon = GFX_focus_generic_mine_warfare
+		prerequisite = { focus = RJ_ROM_greater_naval_ambitions focus = RJ_ROM_a_defensive_force }
+		relative_position_id = RJ_ROM_greater_naval_ambitions
+		x = -1
 		y = 1
-		relative_position_id = ROM_black_sea_dominance
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 
 		available = {
-
+			
 		}
 
 		bypass = {
 
 		}
 
-		
-		
-		
-		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_tech_bonus = {
-				name = ROM_capital_ships
-				bonus = 1.0
+				name = RJ_ROM_mines_bonus
+				category = ship_mine_tech
 				uses = 2
-				category = ca_tech
-				category = bb_tech
-				category = bc_tech
-			}
-		}
-	}
-
-	focus = {
-		id = ROM_torpedo_bombers
-		icon = GFX_goal_generic_air_naval_bomber
-		prerequisite = { focus = ROM_modern_destroyers }
-		x = 2
-		y = 2
-		relative_position_id = ROM_coastal_defense_navy
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = ROM_torpedo_bombers
-				bonus = 1.0
-				uses = 1
-				category = naval_bomber
-			}
-		}
-	}
-
-	focus = {
-		id = ROM_expand_the_marine_regiment
-		icon = GFX_goal_generic_amphibious_assault
-		prerequisite = { focus = ROM_capital_ships }
-		x = 2
-		y = 2
-		relative_position_id = ROM_black_sea_dominance
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = ROM_expand_the_marine_regiment
 				bonus = 0.5
-				uses = 2
-				category = tp_tech
-				category = marine_tech
 			}
-			if = {
-				limit = { has_dlc = "Arms Against Tyranny" }
-				add_doctrine_cost_reduction = {
-					cost_reduction = 0.5
-					uses = 2
-					category = special_forces_doctrine
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = RJ_ROM_idea_mine_warfare
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_defense_of_the_coast
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { focus = RJ_ROM_greater_naval_ambitions focus = RJ_ROM_a_defensive_force }
+		relative_position_id = RJ_ROM_greater_naval_ambitions
+		x = -2
+		y = 2
+
+		cost = 7.2
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			OR = {
+				controls_state = 971
+				controls_state = 77
+				controls_state = 766
+				controls_state = 211
+			}
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RJ_ROM_idea_defend_the_coast
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 971
+						state = 77
+						state = 766
+						state = 211
+					}
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+					instant_build = yes
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_establish_the_santierul_shipyard
+		icon = GFX_focus_RJ_ROM_dockyard
+		prerequisite = { focus = RJ_ROM_greater_naval_ambitions focus = RJ_ROM_a_defensive_force }
+		relative_position_id = RJ_ROM_greater_naval_ambitions
+		x = -3
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 971 }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_modernize_the_destroyers
+		icon = GFX_focus_generic_destroyer
+		prerequisite = { focus = RJ_ROM_greater_naval_ambitions }
+		relative_position_id = RJ_ROM_greater_naval_ambitions
+		x = 1
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RJ_ROM_destroyer_bonus_1
+				category = ship_destroyer_hull_tech
+				uses = 1
+				bonus = 1
+				ahead_reduction = 0.5
+			}
+			add_tech_bonus = {
+				name = RJ_ROM_destroyer_bonus_2
+				category = ship_modules_tech
+				uses = 2
+				bonus = 0.5
+				ahead_reduction = 0.5
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = RJ_ROM_idea_modernize_destroyers
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_a_professional_navy
+		icon = GFX_focus_RJ_ROM_professional_navy
+		prerequisite = { focus = RJ_ROM_greater_naval_ambitions }
+		relative_position_id = RJ_ROM_greater_naval_ambitions
+		x = 0
+		y = 2
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RJ_ROM_idea_professional_navy
+		}
+	}
+
+	focus = {
+		id = ROM_white_squadron_focus
+		icon = GFX_focus_SOV_women_in_aviation
+		x = -1
+		y = 1
+		prerequisite = { focus = RJ_ROM_ministry_of_air_and_navy }
+		relative_position_id = RJ_ROM_ministry_of_air_and_navy
+		cost = 5
+
+		ai_will_do = {
+			base = 5
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ROM_white_squadron
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_naval_infantry_battalions
+		icon = GFX_focus_generic_naval_invasion
+		x = 1
+		y = 1
+		prerequisite = { focus = RJ_ROM_ministry_of_air_and_navy }
+		relative_position_id = RJ_ROM_ministry_of_air_and_navy
+		cost = 7.2
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RJ_ROM_marines_bonus_1
+				category = marine_tech
+				bonus = 2
+				uses = 1
+			}
+
+			add_tech_bonus = {
+				name = RJ_ROM_marines_bonus_2
+				category = amphibious_tank_tech
+				bonus = 1
+				uses = 1
+			}
+
+			add_tech_bonus = {
+				name = RJ_ROM_marines_bonus_3
+				category = ship_transport_tech
+				bonus = 1
+				uses = 1
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_focus_on_domestic_production
+		icon = GFX_focus_PRC_establish_domestic_aircraft_production
+		prerequisite = { focus = RJ_ROM_ministry_of_air_and_navy }
+		relative_position_id = RJ_ROM_ministry_of_air_and_navy
+		x = -4
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_foreign_aircraft_licenses
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = RJ_ROM_focus_on_domestic_production }
+		relative_position_id = RJ_ROM_focus_on_domestic_production
+		x = -2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ROM_acquire_licenses
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_set_up_new_air_bases
+		icon = GFX_focus_RJ_airstrip
+		prerequisite = { focus = RJ_ROM_focus_on_domestic_production }
+		relative_position_id = RJ_ROM_focus_on_domestic_production
+		x = 0
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = {
+					46
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = {
+					78
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = {
+					76
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_design_our_own_aircraft
+		icon = GFX_focus_generic_copy_plane_designs
+		prerequisite = { focus = RJ_ROM_focus_on_domestic_production }
+		relative_position_id = RJ_ROM_focus_on_domestic_production
+		x = 2
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RJ_ROM_idea_ministry_of_air_and_navy
+				add_idea = RJ_ROM_idea_ministry_of_air_and_navy_2
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_aircraft_purchases
+		icon = GFX_focus_SMB_purchase_aircraft
+		prerequisite = { focus = RJ_ROM_foreign_aircraft_licenses }
+		relative_position_id = RJ_ROM_foreign_aircraft_licenses
+		x = -2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				GER = {
+					custom_trigger_tooltip = {
+						tooltip = fighter_tt
+						OR = {
+							is_available_fighter_ROM = yes
+							is_available_heavy_fighter_ROM = yes
+						}
+					}
+				}
+				FRA = {
+					custom_trigger_tooltip = {
+						tooltip = fighter_tt
+						OR = {
+							is_available_fighter_ROM = yes
+							is_available_heavy_fighter_ROM = yes
+						}
+					}
+				}
+				ITA = {
+					custom_trigger_tooltip = {
+						tooltip = fighter_tt
+						OR = {
+							is_available_fighter_ROM = yes
+							is_available_heavy_fighter_ROM = yes
+						}
+					}
+				}
+				ENG = {
+					custom_trigger_tooltip = {
+						tooltip = fighter_tt
+						OR = {
+							is_available_fighter_ROM = yes
+							is_available_heavy_fighter_ROM = yes
+						}
+					}
+				}
+				USA = {
+					custom_trigger_tooltip = {
+						tooltip = fighter_tt
+						OR = {
+							is_available_fighter_ROM = yes
+							is_available_heavy_fighter_ROM = yes
+						}
+					}
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			country_event = DOD_romania.150
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_doctrinal_development
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = RJ_ROM_design_our_own_aircraft focus = RJ_ROM_foreign_aircraft_licenses }
+		relative_position_id = RJ_ROM_foreign_aircraft_licenses
+		x = 0
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_mastery_bonus = {
+				name = RJ_ROM_air_mastery_bonus_1
+				bonus = 0.15
+				days = 300
+				track = strike_aircraft
+			}
+
+			add_mastery_bonus = {
+				name = RJ_ROM_air_mastery_bonus_2
+				bonus = 0.15
+				days = 300
+				track = fighter_aircraft
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				name = RJ_ROM_air_doctrine_bonus
+				uses = 2
+				category = battlefield_support_tree
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_air_flotilla_organization
+		icon = GFX_focus_NORDIC_dem_selector_airforce
+		prerequisite = { focus = RJ_ROM_doctrinal_development }
+		relative_position_id = RJ_ROM_doctrinal_development
+		x = 1
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RJ_ROM_idea_air_flotillas
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_recon_training
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = RJ_ROM_doctrinal_development }
+		relative_position_id = RJ_ROM_doctrinal_development
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RJ_ROM_idea_air_recon
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_industria_aeronautica_romania_investments
+		icon = GFX_focus_generic_aircraft_production
+		prerequisite = { focus = RJ_ROM_design_our_own_aircraft }
+		relative_position_id = RJ_ROM_design_our_own_aircraft
+		x = 0
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			base = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 81 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_facility
+					level = 1
+					instant_build = yes
+					province = 6652
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = ROM_iar_organization
+				mio:ROM_iar_organization = {
+					complete_mio_trait = generic_mio_trait_heavily_armed_aircraft
+					add_mio_funds = 2500
+				}
+			}
+			else = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = ROM_iar
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_bomber_development
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = RJ_ROM_industria_aeronautica_romania_investments }
+		relative_position_id = RJ_ROM_industria_aeronautica_romania_investments
+		x = 1
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			base = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RJ_ROM_bomber_bonus_1
+				bonus = 1
+				uses = 2
+				ahead_reduction = 0.5
+				category = heavy_air
+			}
+			add_tech_bonus = {
+				name = RJ_ROM_bomber_bonus_2
+				bonus = 0.5
+				uses = 2
+				ahead_reduction = 0.5
+				category = cat_air_bombs
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_CAS_development
+		icon = GFX_focus_generic_cas_aircraft
+		prerequisite = { focus = RJ_ROM_industria_aeronautica_romania_investments }
+		relative_position_id = RJ_ROM_industria_aeronautica_romania_investments
+		x = -1
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			base = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RJ_ROM_cas_bonus_1
+				bonus = 1
+				uses = 1
+				ahead_reduction = 0.5
+				category = cas_bomber
+			}
+			add_tech_bonus = {
+				name = RJ_ROM_cas_bonus_2
+				bonus = 0.75
+				uses = 2
+				ahead_reduction = 0.75
+				category = plane_modules_tech
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_the_IAR_eighty
+		icon = GFX_focus_RJ_ROM_IAR_plane
+		prerequisite = { focus = RJ_ROM_industria_aeronautica_romania_investments }
+		relative_position_id = RJ_ROM_industria_aeronautica_romania_investments
+		x = 0
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			base = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_dlc = "By Blood Alone" } }
+				if = {
+					limit = {
+						has_tech = fighter2
+					}
+					add_tech_bonus = {
+						name = ROM_iar_80
+						bonus = 1.0
+						ahead_reduction = 2
+						uses = 1
+						category = light_fighter
+					}
+					else = {
+						add_tech_bonus = {
+							name = ROM_iar_80
+							bonus = 1.0
+							ahead_reduction = 2
+							uses = 1
+							technology = fighter2
+						}
+					}
+				}
+			}
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				if = {
+					limit = {
+						NOT = { has_tech = improved_small_airframe }
+					}
+					set_technology = {
+						improved_small_airframe = 1
+					}
+					create_equipment_variant = {
+						name = "IAR 80"
+						type = small_plane_airframe_2
+						modules = {
+							fixed_main_weapon_slot = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_1 = light_mg_2x
+							engine_type_slot = engine_2_2x
+							special_type_slot_1 = empty
+						}
+						icon = "GFX_ROM_fighter2_medium"
+					}
+				}
+				else = {
+					create_equipment_variant = {
+						name = "IAR 80"
+						type = small_plane_airframe_2
+						allow_without_tech = yes #Makes no difference since appropriate tech is already researched, but it improves tooltip
+						modules = {
+							fixed_main_weapon_slot = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_1 = light_mg_2x
+							engine_type_slot = engine_2_2x
+							special_type_slot_1 = empty
+						}
+						icon = "GFX_ROM_fighter2_medium"
+					}
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = RJ_ROM_idea_advanced_fighters
 		}
 	}
 }
