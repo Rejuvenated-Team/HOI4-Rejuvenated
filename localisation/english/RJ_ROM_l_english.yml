@@ -68,6 +68,10 @@
  RJ_ROM_transylvanian_coal_desc: "The coal mining industry in Transylvania is an important part of our non-agricultural economic develop. Expanding mining operations will help to keep our economy stable, while also providing an increased supply of coal to bolster the steel industry."
  RJ_ROM_gold_prospection: "Gold Prospection"
  RJ_ROM_gold_prospection_desc: "Some gold has come up as a byproduct of our other mining operations. We're confident that if we prospect a bit further for gold, we should be able to find some proper veins."
+ RJ_ROM_increase_funding_to_the_romanian_academy: "Increase Funding to the Romanian Academy"
+ RJ_ROM_increase_funding_to_the_romanian_academy_desc: "The Romanian Academy is one of our oldest & most respected scientific institutions. Granting them some funding should help our government's research efforts."
+ RJ_ROM_ford_bucaresti: "Ford Bucaresti"
+ RJ_ROM_ford_bucaresti_desc: "Henry Ford opened up one of his manufacturing plants here quite recently. Our government has decided to make our own investment into the plant, in the hopes of providing some new jobs for our people."
 
 
 
@@ -97,3 +101,4 @@
  RJ_ROM_idea_air_flotillas: "Organized Air Flotillas"
  RJ_ROM_idea_air_recon: "Aerial Reconnaisance Training"
  RJ_ROM_idea_advanced_fighters: "Advanced Fighters"
+ RJ_ROM_idea_ford_bucaresti: "Ford Bucaresti"

@@ -274,6 +274,50 @@ focus_tree = {
 	}
 
 	focus = {
+		id = RJ_ROM_ford_bucaresti
+		icon = GFX_focus_RJ_ROM_ford_bucaresti
+		prerequisite = { focus = RJ_ROM_expand_the_hunedoara_steelworks }
+		relative_position_id = RJ_ROM_expand_the_hunedoara_steelworks
+		x = 1
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 46 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = RJ_ROM_idea_ford_bucaresti
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = ROM_ford
+		}
+	}
+
+	focus = {
 		id = RJ_ROM_transylvanian_coal
 		icon = GFX_focus_generic_coal_mining
 		prerequisite = { focus = RJ_ROM_support_domestic_mining_companies }
@@ -314,8 +358,8 @@ focus_tree = {
 		icon = GFX_focus_generic_expand_gold_mining
 		prerequisite = { focus = RJ_ROM_support_domestic_mining_companies }
 		relative_position_id = RJ_ROM_support_domestic_mining_companies
-		x = -2
-		y = 1
+		x = -1
+		y = 2
 
 		cost = 5
 
@@ -353,6 +397,33 @@ focus_tree = {
 				RJ_ROM_prin_noi_insine_dm_consumer_goods_factor = -0.05
 				tooltip = consumer_goods_factor_tt
 			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_increase_funding_to_the_romanian_academy
+		icon = GFX_focus_RJ_ROM_romanian_academy
+		prerequisite = { focus = RJ_ROM_prin_noi_insine }
+		relative_position_id = RJ_ROM_prin_noi_insine
+		x = 0
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
 		}
 	}
 

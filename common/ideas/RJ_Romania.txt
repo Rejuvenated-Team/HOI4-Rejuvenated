@@ -313,5 +313,24 @@ ideas = {
 				consumer_goods_factor = 0.05
 			}
 		}
+
+		RJ_ROM_idea_ford_bucaresti = {
+			picture = great_depression
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.10
+					reliability_factor = 0.10
+				}
+			}
+		}
 	}
 }
