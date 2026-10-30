@@ -297,5 +297,21 @@ ideas = {
 				political_power_cost = 0.05
 			}
 		}
+
+		RJ_ROM_idea_depression_remnant_3 = {
+			picture = great_depression
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
 	}
 }

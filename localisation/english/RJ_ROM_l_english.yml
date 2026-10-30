@@ -54,6 +54,20 @@
  RJ_ROM_aircraft_purchases_desc: "Many major powers would be more than willing to sell us aircraft directly, rather than just the licenses, if we were to make a request."
  RJ_ROM_prin_noi_insine: "Prin Noi Insine"
  RJ_ROM_prin_noi_insine_desc: "Originally created by economist Vintila Bratianu in 1905, 'Prin Noi Insine', which translates roughly to 'by ourselves' or 'through ourselves alone', became a model for interwar economic development. These sentiments stand strong even now, & can once again guide us as we recover & industrialize our nation."
+ RJ_ROM_develop_the_industrial_sector: "Develop the Industrial Sector"
+ RJ_ROM_develop_the_industrial_sector_desc: "Our economy has been largely agrarian, which is unsustainable in this day & age. We must begin developing our industrial sector so that we can survive into the future."
+ RJ_ROM_LOEA: "L.O.E.A."
+ RJ_ROM_LOEA_desc: "The Law for the Organization & Encouragement of Agriculture will help us to better coordinate the argicultural sector of our economy, fixing some of the flaws & giving production a much needed boost."
+ RJ_ROM_provide_tax_breaks: "Provide Tax Breaks"
+ RJ_ROM_provide_tax_breaks_desc: "Taxes can indeed be too much, & that can choke out industrial growth. To encourage new growth, we can give tax breaks to help new & struggling businesses, giving them more money to invest in their development."
+ RJ_ROM_support_domestic_mining_companies: "Support Domestic Mining Companies"
+ RJ_ROM_support_domestic_mining_companies_desc: "Foreign corporations shouldn't have control over our resources. They should be exploited by our own domestic companies, granting our economy full access to the minerals within our soil. A new Mining Law will help with that regulation, & will support further prospecting & exploration of additional minerals."
+ RJ_ROM_expand_the_hunedoara_steelworks: "Expand the Hunedoara Steelworks"
+ RJ_ROM_expand_the_hunedoara_steelworks_desc: "The Hunedoara Steelworks is one of the largest state-owned source of employment. It also provides vital steel that our economy needs to be able to develop. Expansion of the facility should help to provide additional jobs as well as additional steel."
+ RJ_ROM_transylvanian_coal: "Transylvanian Coal"
+ RJ_ROM_transylvanian_coal_desc: "The coal mining industry in Transylvania is an important part of our non-agricultural economic develop. Expanding mining operations will help to keep our economy stable, while also providing an increased supply of coal to bolster the steel industry."
+ RJ_ROM_gold_prospection: "Gold Prospection"
+ RJ_ROM_gold_prospection_desc: "Some gold has come up as a byproduct of our other mining operations. We're confident that if we prospect a bit further for gold, we should be able to find some proper veins."
 
 
 
@@ -64,11 +78,14 @@
  ###################################################
  ### IDEAS #########################################
  ###################################################
-
+ RJ_ROM_prin_noi_insine_dm: "Prin Noi Insine"
+ RJ_ROM_modify_pni_tt: "Modify §Y$RJ_ROM_prin_noi_insine_dm$§! by\n"
  RJ_ROM_idea_depression_remnant: "Remnant of the Depression"
  RJ_ROM_idea_depression_remnant_desc: "The Great Depression has largely ended for us here in Romania, but some of the effects of the global catastrophe still loom & impact us."
  RJ_ROM_idea_depression_remnant_2: "Remnant of the Depression"
  RJ_ROM_idea_depression_remnant_2_desc: "The Great Depression has largely ended for us here in Romania, but some of the effects of the global catastrophe still loom & impact us."
+ RJ_ROM_idea_depression_remnant_3: "Remnant of the Depression"
+ RJ_ROM_idea_depression_remnant_3_desc: "The Great Depression has largely ended for us here in Romania, but some of the effects of the global catastrophe still loom & impact us."
  RJ_ROM_idea_ministry_of_air_and_navy: "Ministry of Air & Navy"
  RJ_ROM_idea_ministry_of_air_and_navy_2: "Ministry of Air & Navy"
  RJ_ROM_idea_modernize_destroyers: "Destroyer Modernization"

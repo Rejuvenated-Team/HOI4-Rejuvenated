@@ -681,4 +681,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/rom/RJ_idea_ROM_navy.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_RJ_idea_ROM_prin_noi_insine"
+		texturefile = "gfx/interface/ideas/rom/RJ_idea_ROM_prin_noi_insine.dds"
+	}
+
 }

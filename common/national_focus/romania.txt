@@ -59,7 +59,7 @@ focus_tree = {
 	focus = {
 		id = RJ_ROM_prin_noi_insine
 		icon = GFX_focus_RJ_ROM_prin_noi_insine
-		x = -5
+		x = -9
 		y = 0
 
 		cost = 10
@@ -96,6 +96,290 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_dynamic_modifier = { modifier = RJ_ROM_prin_noi_insine_dm }
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_develop_the_industrial_sector
+		icon = GFX_focus_generic_industrial_experts
+		prerequisite = { focus = RJ_ROM_prin_noi_insine }
+		relative_position_id = RJ_ROM_prin_noi_insine
+		x = -3
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = RJ_ROM_modify_pni_tt
+			add_to_variable = {
+				RJ_ROM_prin_noi_insine_dm_production_speed_buildings_factor = 0.03
+				tooltip = production_speed_buildings_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_provide_tax_breaks
+		icon = GFX_focus_RJ_paper_coins
+		prerequisite = { focus = RJ_ROM_develop_the_industrial_sector }
+		relative_position_id = RJ_ROM_develop_the_industrial_sector
+		x = 1
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = RJ_ROM_modify_pni_tt
+			add_to_variable = {
+				RJ_ROM_prin_noi_insine_dm_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			if = {
+				limit = {
+					has_idea = RJ_ROM_idea_depression_remnant_2
+				}
+				swap_ideas = {
+					remove_idea = RJ_ROM_idea_depression_remnant_2
+					add_idea = RJ_ROM_idea_depression_remnant_3
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = RJ_ROM_idea_depression_remnant_3
+				}
+				remove_ideas = RJ_ROM_idea_depression_remnant_3
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_support_domestic_mining_companies
+		icon = GFX_focus_generic_mining_industry
+		prerequisite = { focus = RJ_ROM_develop_the_industrial_sector }
+		relative_position_id = RJ_ROM_develop_the_industrial_sector
+		x = -2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = RJ_ROM_modify_pni_tt
+			add_to_variable = {
+				RJ_ROM_prin_noi_insine_dm_local_resources_factor = 0.15
+				tooltip = local_resources_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_expand_the_hunedoara_steelworks
+		icon = GFX_focus_generic_steel_mill
+		prerequisite = { focus = RJ_ROM_support_domestic_mining_companies }
+		prerequisite = { focus = RJ_ROM_provide_tax_breaks }
+		relative_position_id = RJ_ROM_support_domestic_mining_companies
+		x = 2
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 84
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 6
+				state = 84
+			}
+			random_owned_controlled_state = {
+				prioritize = { 84 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = steelworks
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_transylvanian_coal
+		icon = GFX_focus_generic_coal_mining
+		prerequisite = { focus = RJ_ROM_support_domestic_mining_companies }
+		relative_position_id = RJ_ROM_support_domestic_mining_companies
+		x = 0
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 84
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_resource = {
+				type = coal
+				amount = 12
+				state = 84
+			}
+			modify_building_resources = {
+				building = steelworks
+				resource = steel
+				amount = 3
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_gold_prospection
+		icon = GFX_focus_generic_expand_gold_mining
+		prerequisite = { focus = RJ_ROM_support_domestic_mining_companies }
+		relative_position_id = RJ_ROM_support_domestic_mining_companies
+		x = -2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		available = {
+			controls_state = 84
+			controls_state = 82
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_resource = {
+				type = chromium
+				amount = 12
+				state = 84
+			}
+			add_resource = {
+				type = chromium
+				amount = 5
+				state = 82
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = RJ_ROM_modify_pni_tt
+			add_to_variable = {
+				RJ_ROM_prin_noi_insine_dm_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_LOEA
+		icon = GFX_focus_RJ_NZL_agricultural_workers_act
+		prerequisite = { focus = RJ_ROM_prin_noi_insine }
+		relative_position_id = RJ_ROM_prin_noi_insine
+		x = 3
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			
 		}
 	}
 

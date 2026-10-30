@@ -309,7 +309,7 @@ bookmarks = {
 			focuses = {
 				RJ_ROM_ministry_of_air_and_navy
 				ROM_preserve_greater_romania
-				ROM_institute_royal_dictatorship
+				RJ_ROM_prin_noi_insine
 			}
 			label = { rj_label_europe rj_label_new_content }
 		}
