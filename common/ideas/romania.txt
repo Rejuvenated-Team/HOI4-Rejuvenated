@@ -472,6 +472,7 @@ ideas = {
 			modifier = {
 				guarantee_tension = -1.0
 				guarantee_cost = -0.5
+				army_core_defence_factor = 0.05
 			}
 		}
 

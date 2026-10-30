@@ -278,7 +278,7 @@ focus_tree = {
 		icon = GFX_focus_RJ_ROM_ford_bucaresti
 		prerequisite = { focus = RJ_ROM_expand_the_hunedoara_steelworks }
 		relative_position_id = RJ_ROM_expand_the_hunedoara_steelworks
-		x = 1
+		x = -1
 		y = 1
 
 		cost = 7.2
@@ -300,12 +300,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -314,6 +309,53 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = ROM_ford
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_malaxa_investments
+		icon = GFX_focus_generic_industry_investment
+		prerequisite = { focus = RJ_ROM_expand_the_hunedoara_steelworks }
+		relative_position_id = RJ_ROM_expand_the_hunedoara_steelworks
+		x = 1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = RJ_ROM_modify_pni_tt
+			add_to_variable = {
+				RJ_ROM_prin_noi_insine_dm_industrial_capacity_factory = 0.10
+				tooltip = industrial_capacity_factory_tt
+			}
 		}
 	}
 
