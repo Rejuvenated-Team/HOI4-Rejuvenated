@@ -1003,7 +1003,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_preserve_greater_romania
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -1042,7 +1042,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_a_deal_with_the_devil
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -1074,7 +1074,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = ROM_a_deal_with_the_devil
 
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 1
@@ -1192,7 +1192,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_preserve_greater_romania
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 9
@@ -1226,7 +1226,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = ROM_trade_treaty_with_germany
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1277,7 +1277,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = ROM_trade_treaty_with_germany
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1463,7 +1463,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_preserve_greater_romania
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -1501,7 +1501,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_renew_the_romanian_polish_alliance
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1578,7 +1578,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = ROM_renew_the_romanian_polish_alliance
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -1649,7 +1649,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = ROM_renew_the_romanian_polish_alliance
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1933,7 +1933,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_balkans_dominance
 		will_lead_to_war_with = HUN
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 9
@@ -2261,7 +2261,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_institute_royal_dictatorship
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2295,7 +2295,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_fortify_the_borders
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 5
@@ -2346,7 +2346,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_his_majestys_loyal_government
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -2385,7 +2385,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = ROM_his_majestys_loyal_government
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2424,7 +2424,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_institute_royal_dictatorship
 
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -2536,6 +2536,11 @@ focus_tree = {
 			    name = ROM_fascism_party
 			}
 			hidden_effect = { retire_character = ROM_corneliu_codreanu }
+			add_stability = 0.10
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
 		}
 	}
 	
