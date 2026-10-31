@@ -59,7 +59,7 @@ focus_tree = {
 	focus = {
 		id = RJ_ROM_prin_noi_insine
 		icon = GFX_focus_RJ_ROM_prin_noi_insine
-		x = -9
+		x = -7
 		y = 0
 
 		cost = 10
@@ -228,6 +228,53 @@ focus_tree = {
 	}
 
 	focus = {
+		id = RJ_ROM_import_modern_machinery
+		icon = GFX_SOV_industrial_modernization_ccp_2d_sov_compatibility
+		prerequisite = { focus = RJ_ROM_provide_tax_breaks }
+		relative_position_id = RJ_ROM_provide_tax_breaks
+		x = 1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = RJ_ROM_modify_pni_tt
+			add_to_variable = {
+				RJ_ROM_prin_noi_insine_dm_production_speed_buildings_factor = 0.15
+				tooltip = production_speed_buildings_factor_tt
+			}
+			add_to_variable = {
+				RJ_ROM_prin_noi_insine_dm_production_factory_efficiency_gain_factor = 0.10
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+			add_to_variable = {
+				RJ_ROM_prin_noi_insine_dm_production_factory_max_efficiency_factor = 0.10
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				name = RJ_ROM_machinery_bonus
+				bonus = 1
+				uses = 1
+				ahead_reduction = 1
+				category = production_tech
+			}
+		}
+	}
+
+	focus = {
 		id = RJ_ROM_expand_the_hunedoara_steelworks
 		icon = GFX_focus_generic_steel_mill
 		prerequisite = { focus = RJ_ROM_support_domestic_mining_companies }
@@ -267,6 +314,49 @@ focus_tree = {
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_ploiesti_oil
+		icon = GFX_focus_RJ_NZL_taranaki_oil
+		prerequisite = { focus = RJ_ROM_expand_the_hunedoara_steelworks }
+		relative_position_id = RJ_ROM_expand_the_hunedoara_steelworks
+		x = 0
+		y = 2
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		available = {
+			controls_state = 46
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 24
+				state = 46
+			}
+			random_owned_controlled_state = {
+				prioritize = { 46 }
+				add_building_construction = {
+					type = fuel_silo
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -316,6 +406,7 @@ focus_tree = {
 		id = RJ_ROM_malaxa_investments
 		icon = GFX_focus_generic_industry_investment
 		prerequisite = { focus = RJ_ROM_expand_the_hunedoara_steelworks }
+		prerequisite = { focus = RJ_ROM_import_modern_machinery }
 		relative_position_id = RJ_ROM_expand_the_hunedoara_steelworks
 		x = 1
 		y = 1
@@ -355,6 +446,68 @@ focus_tree = {
 			add_to_variable = {
 				RJ_ROM_prin_noi_insine_dm_industrial_capacity_factory = 0.10
 				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = {
+				RJ_ROM_prin_noi_insine_dm_production_speed_industrial_complex_factor = 0.05
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_resita_industrialization
+		icon = GFX_focus_RJ_industry1
+		prerequisite = { focus = RJ_ROM_malaxa_investments }
+		relative_position_id = RJ_ROM_malaxa_investments
+		x = 0
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 82
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 82 }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 82 }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 82 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = steelworks
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 82
 			}
 		}
 	}
@@ -492,7 +645,319 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = RJ_ROM_modify_pni_tt
+			add_to_variable = {
+				RJ_ROM_prin_noi_insine_dm_global_building_slots_factor = 0.15
+				tooltip = global_building_slots_factor_tt
+			}
+			add_stability = 0.1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_idea = RJ_ROM_idea_depression_remnant_2
+				}
+				swap_ideas = {
+					remove_idea = RJ_ROM_idea_depression_remnant_2
+					add_idea = RJ_ROM_idea_depression_remnant_3
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = RJ_ROM_idea_depression_remnant_3
+				}
+				remove_ideas = RJ_ROM_idea_depression_remnant_3
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_romanian_timber
+		icon = GFX_focus_INS_import_lumber
+		prerequisite = { focus = RJ_ROM_LOEA }
+		relative_position_id = RJ_ROM_LOEA
+		x = 1
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = RJ_ROM_modify_pni_tt
+			add_to_variable = {
+				RJ_ROM_prin_noi_insine_dm_production_speed_buildings_factor = 0.08
+				tooltip = production_speed_buildings_factor_tt
+			}
+			add_to_variable = {
+				RJ_ROM_prin_noi_insine_dm_trade_opinion_factor = 0.25
+				tooltip = trade_opinion_factor_tt
+			}
+			add_to_variable = {
+				RJ_ROM_prin_noi_insine_dm_min_export = -0.05
+				tooltip = min_export_tt
+			}
 			
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_agricultural_encouragement_fund
+		icon = GFX_focus_generic_agricultural_subsidies
+		prerequisite = { focus = RJ_ROM_LOEA }
+		relative_position_id = RJ_ROM_LOEA
+		x = -1
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = RJ_ROM_modify_pni_tt
+			add_to_variable = {
+				RJ_ROM_prin_noi_insine_dm_global_building_slots_factor = 0.10
+				tooltip = global_building_slots_factor_tt
+			}
+			add_to_variable = {
+				RJ_ROM_prin_noi_insine_dm_production_speed_infrastructure_factor = 0.15
+				tooltip = production_speed_infrastructure_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_new_agricultural_equipment
+		icon = GFX_focus_generic_modernizing_agriculture
+		prerequisite = { focus = RJ_ROM_agricultural_encouragement_fund }
+		relative_position_id = RJ_ROM_agricultural_encouragement_fund
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = RJ_ROM_modify_pni_tt
+			add_to_variable = {
+				RJ_ROM_prin_noi_insine_dm_global_building_slots_factor = 0.05
+				tooltip = global_building_slots_factor_tt
+			}
+			add_to_variable = {
+				RJ_ROM_prin_noi_insine_dm_monthly_population = 0.75
+				tooltip = monthly_population_tt
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_storage_and_processing_facilities
+		icon = GFX_focus_RJ_ROM_storage_and_processing_facilities
+		prerequisite = { focus = RJ_ROM_LOEA }
+		relative_position_id = RJ_ROM_LOEA
+		x = 0
+		y = 2
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = RJ_ROM_modify_pni_tt
+			add_to_variable = {
+				RJ_ROM_prin_noi_insine_dm_production_speed_industrial_complex_factor = 0.10
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_industrial_crops
+		icon = GFX_focus_generic_farmland
+		prerequisite = { focus = RJ_ROM_storage_and_processing_facilities }
+		prerequisite = { focus = RJ_ROM_new_agricultural_equipment }
+		relative_position_id = RJ_ROM_storage_and_processing_facilities
+		x = -1
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = RJ_ROM_modify_pni_tt
+			add_to_variable = {
+				RJ_ROM_prin_noi_insine_dm_consumer_goods_factor = -0.10
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				RJ_ROM_prin_noi_insine_dm_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_fund_industrial_research
+		icon = GFX_focus_research
+		prerequisite = { focus = RJ_ROM_increase_funding_to_the_romanian_academy }
+		prerequisite = { focus = RJ_ROM_new_agricultural_equipment }
+		prerequisite = { focus = RJ_ROM_import_modern_machinery }
+		relative_position_id = RJ_ROM_increase_funding_to_the_romanian_academy
+		x = 0
+		y = 3
+
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RJ_ROM_idea_industrial_research
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_baita_uranium_discovery
+		icon = GFX_focus_generic_uranium_extraction
+		prerequisite = { focus = RJ_ROM_fund_industrial_research }
+		relative_position_id = RJ_ROM_fund_industrial_research
+		x = 0
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = RJ_ROM_modify_pni_tt
+			add_to_variable = {
+				RJ_ROM_prin_noi_insine_dm_production_speed_nuclear_facility_factor = 0.25
+				tooltip = production_speed_nuclear_facility_factor_tt
+			}
+			add_to_variable = {
+				RJ_ROM_prin_noi_insine_dm_production_speed_nuclear_reactor_factor = 0.25
+				tooltip = production_speed_nuclear_reactor_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_breakthrough_progress = {
+				value = 0.25
+				specialization = specialization_nuclear
+			}
+			add_tech_bonus = {
+				name = RJ_ROM_nuclear_bonus
+				bonus = 2
+				uses = 1
+				category = nuclear
+			}
 		}
 	}
 
@@ -1321,619 +1786,6 @@ focus_tree = {
 		}
 	}
 
-	############################
-	##### INDUSTRY BRANCH ######
-	############################
-
-	focus = {
-		id = ROM_civil_works
-		icon = GFX_goal_generic_construction
-		prerequisite = { focus = ROM_preserve_greater_romania }
-		x = 5
-		y = 1
-		relative_position_id = ROM_preserve_greater_romania
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 20
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = ROM_civil_works
-				bonus = 1.0
-				uses = 2
-				category = industry
-			}
-		}
-	}
-
-	focus = {
-		id = ROM_national_defense_industry
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = ROM_balkans_dominance }
-		x = 2
-		y = 0
-		relative_position_id = ROM_civil_works
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 20
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = ROM_national_defense_industry_AF1
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_state = {
-				limit = {
-					has_state_flag = ROM_national_defense_industry_AF2
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 79 81 }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = ROM_national_defense_industry_AF1
-			}
-			random_owned_controlled_state = {
-				prioritize = { 79 81 }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = ROM_national_defense_industry_AF2
-			}
-		}
-	}
-
-	focus = {
-		id = ROM_agrarian_reform
-		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = ROM_civil_works focus = ROM_national_defense_industry }
-		x = 1
-		y = 1
-		relative_position_id = ROM_civil_works
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			add_ideas = ROM_agrarian_reform
-		}
-	}
-
-	focus = {
-		id = ROM_danubian_transport_network
-		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = ROM_agrarian_reform }
-		x = 1
-		y = 2
-		relative_position_id = ROM_civil_works
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = ROM_danubian_transport_network_Inf
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_state = {
-				limit = {
-					has_state_flag = ROM_danubian_transport_network_Inf_2
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_state = {
-				limit = {
-					has_state_flag = ROM_danubian_transport_network_Inf_3
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 46 }
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = ROM_danubian_transport_network_Inf
-			}
-			random_owned_controlled_state = {
-				prioritize = { 81 }
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = ROM_danubian_transport_network_Inf_2
-			}
-			random_owned_controlled_state = {
-				prioritize = { 82 }
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = ROM_danubian_transport_network_Inf_3
-			}
-		}
-	}
-
-	focus = {
-		id = ROM_malaxa
-		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = ROM_danubian_transport_network }
-		mutually_exclusive = { focus = ROM_invite_foreign_motor_companies }
-		x = 0
-		y = 3
-		relative_position_id = ROM_civil_works
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 9
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = ROM_malaxa_IC
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = industrial_complex
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 79 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV } 
-					free_building_slots = {
-						building = industrial_complex
-						size > 2
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = industrial_complex
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = ROM_malaxa_IC
-			}
-		}
-	}
-
-	focus = {
-		id = ROM_invite_foreign_motor_companies
-		icon = GFX_goal_generic_army_motorized
-		prerequisite = { focus = ROM_danubian_transport_network }
-		mutually_exclusive = { focus = ROM_malaxa }
-		x = 2
-		y = 3
-		relative_position_id = ROM_civil_works
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-
-
-		completion_reward = {
-			country_event = DOD_romania.120
-		}
-	}
-
-	focus = {
-		id = ROM_hunedoara_steel_works
-		icon = GFX_goal_generic_construct_civilian
-		prerequisite = { focus = ROM_invite_foreign_motor_companies focus = ROM_malaxa }
-		x = 0
-		y = 4
-		relative_position_id = ROM_civil_works
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = ROM_hunedoara_steel_works_IC
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-				add_resource = {
-					type = steel
-					amount = 8
-				}
-			}
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 84 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV } 
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = ROM_hunedoara_steel_works_IC
-				add_resource = {
-					type = steel
-					amount = 12
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = ROM_invest_in_the_iar
-		icon = GFX_goal_generic_construct_military
-		prerequisite = { focus = ROM_invite_foreign_motor_companies focus = ROM_malaxa }
-		x = 2
-		y = 4
-		relative_position_id = ROM_civil_works
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = ROM_invest_in_the_iar_AF1
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 81 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					free_building_slots = {
-						building = arms_factory
-						size > 2
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = ROM_invest_in_the_iar_AF1
-			}
-
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = ROM_iar_organization
-				mio:ROM_iar_organization = {
-					complete_mio_trait = generic_mio_trait_heavily_armed_aircraft
-					add_mio_funds = 2500
-				}
-			}
-			else = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = ROM_iar
-			}
-		}
-	}
-
-	focus = {
-		id = ROM_expand_ploiesti_oil_production
-		icon = GFX_goal_generic_oil_refinery
-		prerequisite = { focus = ROM_invest_in_the_iar }
-		prerequisite = { focus = ROM_hunedoara_steel_works }
-		x = 1
-		y = 5
-		relative_position_id = ROM_civil_works
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			has_full_control_of_state = 46
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			46 = {
-				add_resource = {
-					type = oil
-					amount = 24
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = ROM_expand_the_university_of_bucharest
-		icon = GFX_focus_research
-		prerequisite = { focus = ROM_expand_ploiesti_oil_production }
-		x = 1
-		y = 6
-		relative_position_id = ROM_civil_works
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			num_of_factories > 50
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-
-	focus = {
-		id = ROM_exploit_the_baita_mines
-		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = ROM_expand_the_university_of_bucharest }
-		x = 1
-		y = 7
-		relative_position_id = ROM_civil_works
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		
-		
-		
-
-		completion_reward = {
-			add_ideas = ROM_exploit_the_baita_mines
-		}
-	}
 
 	##########################
 	### BALKANS DOMINANCE ####

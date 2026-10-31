@@ -83,8 +83,10 @@ set_variable = { RJ_ROM_prin_noi_insine_dm_materiel_manufacturer_cost_factor = 0
 set_variable = { RJ_ROM_prin_noi_insine_dm_industrial_concern_cost_factor = 0 }
 set_variable = { RJ_ROM_prin_noi_insine_dm_production_factory_efficiency_gain_factor = 0 }
 set_variable = { RJ_ROM_prin_noi_insine_dm_production_factory_max_efficiency_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_trade_opinion_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_min_export = 0 }
 
-set_research_slots = 3
+set_research_slots = 4
 set_stability = 0.6
 set_war_support = 0.6
 
