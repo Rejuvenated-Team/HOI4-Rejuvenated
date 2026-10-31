@@ -1632,4 +1632,24 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/rom/RJ_ROM_IAR_plane.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_ROM_prin_noi_insine"
+		texturefile = "gfx/interface/goals/rom/RJ_ROM_prin_noi_insine.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_ROM_romanian_academy"
+		texturefile = "gfx/interface/goals/rom/RJ_ROM_romanian_academy.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_ROM_ford_bucaresti"
+		texturefile = "gfx/interface/goals/rom/RJ_ROM_ford_bucaresti.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_RJ_ROM_storage_and_processing_facilities"
+		texturefile = "gfx/interface/goals/rom/RJ_ROM_storage_and_processing_facilities.dds"
+	}
+
 }

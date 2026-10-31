@@ -52,7 +52,41 @@ if = {
 	}
 }
 
-set_research_slots = 3
+set_variable = { RJ_ROM_prin_noi_insine_dm_global_building_slots_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_consumer_goods_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_conversion_cost_civ_to_mil_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_production_speed_arms_factory_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_production_speed_industrial_complex_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_production_speed_infrastructure_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_industrial_capacity_factory = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_industrial_capacity_dockyard = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_monthly_population = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_production_speed_buildings_factor = 0.03 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_industrial_capacity_dockyard = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_local_resources_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_production_speed_rail_way_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_production_speed_supply_node_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_production_speed_dockyard_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_production_speed_naval_base_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_production_speed_naval_supply_hub_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_production_speed_air_base_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_production_speed_anti_air_building_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_production_speed_land_facility_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_production_speed_naval_facility_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_production_speed_air_facility_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_production_speed_nuclear_facility_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_production_speed_nuclear_reactor_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_tank_manufacturer_cost_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_aircraft_manufacturer_cost_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_naval_manufacturer_cost_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_materiel_manufacturer_cost_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_industrial_concern_cost_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_production_factory_efficiency_gain_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_production_factory_max_efficiency_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_trade_opinion_factor = 0 }
+set_variable = { RJ_ROM_prin_noi_insine_dm_min_export = 0 }
+
+set_research_slots = 4
 set_stability = 0.6
 set_war_support = 0.6
 
@@ -98,6 +132,7 @@ set_technology = {
 	fuel_silos = 1
 	sonar = 1
 	smoke_generator = 1
+	steelworks_tech = 1
 }
 
 if = {
@@ -164,6 +199,7 @@ if = {
 	give_guarantee = YUG
 }
 add_ideas = neutrality_idea
+add_ideas = RJ_ROM_idea_depression_remnant
 
 #Kick off kings crazy life
 if = {

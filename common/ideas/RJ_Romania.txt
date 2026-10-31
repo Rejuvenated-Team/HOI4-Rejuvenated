@@ -263,5 +263,93 @@ ideas = {
 				}
 			}
 		}
+
+		RJ_ROM_idea_depression_remnant = {
+			picture = great_depression
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = 0.15
+				political_power_cost = 0.10
+			}
+		}
+
+		RJ_ROM_idea_depression_remnant_2 = {
+			picture = great_depression
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = 0.10
+				political_power_cost = 0.05
+			}
+		}
+
+		RJ_ROM_idea_depression_remnant_3 = {
+			picture = great_depression
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		RJ_ROM_idea_ford_bucaresti = {
+			picture = RJ_idea_ROM_ford
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.10
+					reliability_factor = 0.10
+				}
+			}
+		}
+
+		RJ_ROM_idea_industrial_research = {
+			picture = generic_research_bonus
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				research_speed_factor = 0.05
+			}
+			research_bonus = {
+				industry = 0.10
+			}
+		}
 	}
 }
