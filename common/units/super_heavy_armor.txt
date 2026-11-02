@@ -37,7 +37,7 @@ sub_units = {
 		training_time = 180
 		weight = 1.0
 		
-		supply_consumption = 0.4
+		supply_consumption = 0.3
 
 		#Support nerfs to combat abilities
 		#soft_attack = -0.30
@@ -53,26 +53,19 @@ sub_units = {
 		    attack = -0.25
 			movement = -0.3
 		}
-		hills = {
-		    attack = -0.15
-		    defence = -0.15
-		}
 		mountain = 	{
-		    attack = -0.2
 		    defence = -0.2
 		}
 		urban = {
-			attack = -0.3
-			defence = -0.3
+			attack = 0.1
+			defence = 0.3
 		}
 		jungle = {
-		    attack = -0.35
-		    defence = -0.35
+		    attack = -0.20
+		    defence = -0.10
 			movement = -0.3
 		}
 		marsh = {
-		    attack = -0.3
-		    defence = -0.3
 			movement = -0.3
 		}
 		fort = {
@@ -81,7 +74,6 @@ sub_units = {
 		}
 		river = { 
 			attack = -0.25
-			defence = -0.25
 			movement = -0.3
 		}
 		amphibious = { 

@@ -44,45 +44,37 @@ sub_units = {
 		suppression = 4 #SH: 2.5 / Infantry: 1.5
 		
 		forest = {
-			attack = -0.3
-			defence = -0.3
+			attack = -0.2
+			defence = -0.2
 			movement = -0.2
 		}
 		hills = {
-			attack = -0.2
-			defence = -0.2
-			movement = -0.25
+			movement = -0.1
 		}
 		mountain = 	{
-			attack = -0.3
-			defence = -0.3
+			attack = -0.15
+			defence = -0.1
 			movement = -0.3
 		}
 		jungle = {
-			attack = -0.4
-			defence = -0.4
+			attack = -0.3
+			defence = -0.3
 			movement = -0.35
 		}
 		marsh = {
-			attack = -0.4
-			defence = -0.4
+			defence = -0.1
 			movement = -0.5
 		}
-		urban = {
-			attack = -0.3
-			defence = -0.3
-		}
 		river = { 
-			attack = -0.35
-			defence = -0.35
+			attack = -0.25
 			movement = -0.5
 		}
 		amphibious = { 
-			attack = -0.7
+			attack = -0.5
 		}
 		fort = {
-			attack = 0.2
-			defence = 0.1
+			attack = 0.5
+			defence = 0.25
 		}
 	}
 }
