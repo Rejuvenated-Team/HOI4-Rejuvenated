@@ -12,7 +12,7 @@ ideas = {
 			removal_cost = -1
 			picture = ARG_construction_guilds
 			modifier = {			
-				production_speed_infrastructure_factor = 0.15
+				production_speed_infrastructure_factor = 0.20
 				production_speed_energy_infrastructure_factor = 0.10
 				production_speed_industrial_infrastructure_factor = 0.10
 			}			
@@ -705,6 +705,28 @@ ideas = {
 					build_cost_ic = -0.15
 					hardness = 0.10
 					instant = yes
+				}
+			}
+		}
+
+		USA_tanks_idea = {
+			picture = generic_armor
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.1
+					reliability_factor = 0.1
+					armor_value = 0.1
 				}
 			}
 		}

@@ -5,7 +5,7 @@ state={
 	resources = {
 		coal = 10
 		steel = 3
-		chromium = 18
+		chromium = 29
 	}
 
 	history={
@@ -36,7 +36,7 @@ state={
 	}
 	manpower=67500
 	buildings_max_level_factor=1
-	state_category="town"
+	state_category = town
 
-	local_supplies=3.0 
+	local_supplies=5.0 
 }
