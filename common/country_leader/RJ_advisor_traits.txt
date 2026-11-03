@@ -52,4 +52,12 @@ leader_traits = {
 			base = 3
 		}
 	}
+
+	RJ_industrial_tycoon = {
+		random = no
+		production_speed_buildings_factor = 0.15
+		industrial_capacity_factory = 0.10
+		local_resources_factor = 0.10
+		sprite = 13
+	}
 }

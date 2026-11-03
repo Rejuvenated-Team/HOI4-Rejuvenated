@@ -451,6 +451,10 @@ focus_tree = {
 				RJ_ROM_prin_noi_insine_dm_production_speed_industrial_complex_factor = 0.05
 				tooltip = production_speed_industrial_complex_factor_tt
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = RJ_ROM_nicolae_malaxa
+			
 		}
 	}
 
@@ -2235,7 +2239,7 @@ focus_tree = {
 				desc = "POLITICS_CAROL_II_DESC"
 				picture = GFX_Portrait_romania_Carol_II				
 				expire = "1965.1.1"
-				ideology = despotism
+				ideology = monarchy
 				traits = {
 					hedonist
 				}
