@@ -40,7 +40,7 @@ characters={
 			id=-1
 		}
 		country_leader={
-			ideology=despotism
+			ideology = monarchy
 			expire="1965.1.1.1"
 			id=-1
 		}
@@ -514,6 +514,33 @@ characters={
 		}
 	}
 
+	RJ_ROM_nicolae_malaxa = {
+		name = "Nicolae Malaxa"
+		portraits = {
+			army = {
+				small = GFX_rj_portrait_ROM_nicolae_malaxa_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = RJ_ROM_nicolae_malaxa
+			allowed = {
+				original_tag = ROM
+			}
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Death or Dishonor"
+					}
+					has_completed_focus = RJ_ROM_malaxa_investments
+				}
+			}
+			traits = {
+				RJ_industrial_tycoon
+			}
+		}
+	}
+
 	ROM_gheorghe_gheorghiu_dej={
 		name=ROM_gheorghe_gheorghiu_dej
 		portraits={
@@ -564,26 +591,6 @@ characters={
 			}
 			traits = {
 				silent_workhorse 
-			}
-		}
-	}
-
-	ROM_nicolae_malaxa={
-		name=ROM_nicolae_malaxa
-		portraits={
-			army={
-				small="GFX_idea_ROM_nicolae_malaxa"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ROM_nicolae_malaxa
-			allowed = {
-				original_tag = ROM
-				has_dlc = "Death or Dishonor"
-			}
-			traits = {
-				captain_of_industry 
 			}
 		}
 	}

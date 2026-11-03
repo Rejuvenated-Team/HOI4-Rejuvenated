@@ -5,7 +5,7 @@ state={
 		steel=12
 	}
 
-	state_category = large_city
+	state_category = metropolis
 
 
 	history={
@@ -35,5 +35,5 @@ state={
 	manpower= 4290000
 	buildings_max_level_factor=1.000
 
-	local_supplies=5.0 
+	local_supplies=12.0 
 }

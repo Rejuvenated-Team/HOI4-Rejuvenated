@@ -52,7 +52,7 @@ sub_units = {
 		}
 
 		mountain = {
-			attack = -0.1
+			attack = -0.05
 			movement = -0.05
 		}
 
@@ -106,7 +106,7 @@ sub_units = {
 		training_time = 160		
 		weight = 0.6
 		
-		supply_consumption = 0.1
+		supply_consumption = 0.08
 
 		#Offensive Abilities
 		suppression = 2
@@ -121,7 +121,6 @@ sub_units = {
 
 		mountain = {
 			attack = -0.1
-			movement = -0.05
 		}
 
 		jungle = {

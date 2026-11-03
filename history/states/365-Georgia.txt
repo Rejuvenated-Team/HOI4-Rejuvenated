@@ -4,7 +4,7 @@ state={
 	name="STATE_365"
 	manpower = 3100000
 	
-	state_category = city
+	state_category = large_city
 
 	history={
 		owner = USA
@@ -30,5 +30,5 @@ state={
 		638 968 1433 1480 5090 7118 7583 7612 9949 9996 10394 10437 10465 10492 11975 12325 12384 12470 12498 
 	}
 
-	local_supplies=0.0 
+	local_supplies = 8.0 
 }

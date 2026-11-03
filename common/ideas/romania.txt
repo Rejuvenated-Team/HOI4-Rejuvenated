@@ -82,8 +82,8 @@ ideas = {
 			}
 
 			modifier = {
-				production_speed_bunker_factor = 0.2
-				production_speed_coastal_bunker_factor = 0.2
+				production_speed_bunker_factor = 0.25
+				production_speed_coastal_bunker_factor = 0.25
 			}
 		}
 
@@ -302,7 +302,8 @@ ideas = {
 			}
 			
 			modifier = {
-				neutrality_drift = 0.02
+				neutrality_drift = 0.05
+				party_popularity_stability_factor = 0.10
 			}
 		}
 
@@ -339,7 +340,7 @@ ideas = {
 			}			
 
 			modifier = {
-				conscription = 0.01
+				conscription = 0.03
 			}
 		}
 
@@ -357,7 +358,8 @@ ideas = {
 
 			modifier = {
 				army_morale_factor = 0.1
-				conscription = 0.02
+				army_core_defence_factor = 0.10
+				conscription = 0.04
 			}
 		}
 
@@ -472,6 +474,7 @@ ideas = {
 			modifier = {
 				guarantee_tension = -1.0
 				guarantee_cost = -0.5
+				army_core_defence_factor = 0.05
 			}
 		}
 
@@ -509,8 +512,9 @@ ideas = {
 			}
 			
 			modifier = {
-				communism_drift = 0.01
-				conscription = 0.01
+				communism_drift = 0.03
+				conscription = 0.03
+				army_org_factor = 0.10
 			}
 		}
 
@@ -689,7 +693,7 @@ ideas = {
 			
 			modifier = {
 				license_air_purchase_cost = -0.5
-				license_tech_difference_speed = 0.2
+				license_tech_difference_speed = 0.25
 			}
 		}
 
@@ -960,7 +964,7 @@ ideas = {
 			}
 
 			available = {
-				has_completed_focus = ROM_coastal_defense_navy
+				has_completed_focus = RJ_ROM_a_defensive_force
 			}
 			
 			research_bonus = {
@@ -970,13 +974,17 @@ ideas = {
 			equipment_bonus = {
 				ship_hull_light = {
 					lg_attack = 0.1
-					naval_range = -0.5
-					build_cost_ic = -0.20
+					naval_range = -0.25
+					build_cost_ic = -0.25
 				}
 				ship_hull_cruiser = {
 					lg_attack = 0.1
-					naval_range = -0.5
-					build_cost_ic = -0.20
+					naval_range = -0.25
+					build_cost_ic = -0.25
+				}
+				ship_hull_cruiser_coastal_defense_ship = {
+					lg_attack = 0.1
+					build_cost_ic = -0.25
 				}
 			}
 			
@@ -998,7 +1006,7 @@ ideas = {
 			}
 
 			available = {
-				has_completed_focus = ROM_black_sea_dominance
+				has_completed_focus = RJ_ROM_greater_naval_ambitions
 			}
 			
 			research_bonus = {
@@ -1006,14 +1014,14 @@ ideas = {
 			}
 			
 			equipment_bonus = {
-				ship_hull_cruiser = {
+				destroyer = {
 					hg_attack = 0.2
-					naval_range = -0.5
+					naval_range = 0.15
 					armor_value = 0.2
 				}
 				ship_hull_heavy = {
 					hg_attack = 0.2
-					naval_range = -0.5
+					naval_range = 0.15
 					armor_value = 0.2
 				}
 			}
@@ -1074,7 +1082,7 @@ ideas = {
 			
 
 			available = {
-				has_country_flag = USA_mot_chosen
+				has_completed_focus = RJ_ROM_ford_bucaresti
 			}
 			
 			research_bonus = {
@@ -1088,7 +1096,8 @@ ideas = {
 					build_cost_ic = -0.05
 				}
 				mechanized_equipment = {
-					build_cost_ic = -0.05
+					build_cost_ic = -0.10
+					reliability_factor = 0.05
 				}
 			}
 
@@ -1110,6 +1119,19 @@ ideas = {
 			research_bonus = {
 				motorized_equipment = 0.15
 			}
+
+			equipment_bonus = {
+				armored_car_equipment = {
+					reliability_factor = 0.10
+					build_cost_ic = -0.10
+					defense = 0.05
+				}
+				mio_cat_eq_all_light_tank = {
+					reliability_factor = 0.05
+					build_cost_ic = -0.10
+					defense = 0.05
+				}
+			}
 			
 			traits = { motorized_equipment_manufacturer }
 			
@@ -1127,6 +1149,12 @@ ideas = {
 			research_bonus = {
 				infantry_weapons = 0.15
 			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15
+				}
+			}
 			
 			traits = { infantry_equipment_manufacturer }
 			
@@ -1143,6 +1171,13 @@ ideas = {
 			
 			research_bonus = {
 				artillery = 0.15
+			}
+
+			equipment_bonus = {
+				mio_cat_eq_all_artillery = {
+					reliability_factor = 0.05
+					soft_attack = 0.05
+				}
 			}
 			
 			traits = { artillery_manufacturer }
@@ -1171,9 +1206,11 @@ ideas = {
 			equipment_bonus = {
 				motorized_equipment = {
 					reliability = 0.1
+					maximum_speed = 0.1
 				}
 				mechanized_equipment = {
 					reliability = 0.1
+					maximum_speed = 0.1
 				}
 			}
 			
@@ -1222,7 +1259,7 @@ ideas = {
 					limit = {
 						has_dlc = "Death or Dishonor"
 					}
-					has_completed_focus = ROM_invest_in_the_iar
+					has_completed_focus = RJ_ROM_industria_aeronautica_romania_investments
 				}
 			}
 
@@ -1234,29 +1271,37 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.05
+				air_equipment = 0.10
 			}			
 			
 			equipment_bonus = {
 				# produced the IAR-80 fighter/ground attack aircraft around 350 of them during 36-44
 				small_plane_airframe = {
 					air_attack = 0.1
+					reliability_factor = 0.05
+					air_range = 0.05
 				}
 				cv_small_plane_airframe = {
 					air_attack = 0.1
+					reliability_factor = 0.05
+					air_range = 0.05
 				}
 				small_plane_cas_airframe = {
 					air_ground_attack = 0.1
+					reliability_factor = 0.05
+					air_range = 0.05
 				}
 				cv_small_plane_cas_airframe = {
 					air_ground_attack = 0.1
+					reliability_factor = 0.05
+					air_range = 0.05
 				}
 			}
 
 			traits = { aircraft_manufacturer }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 10
 			}
 		}
 
