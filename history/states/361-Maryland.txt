@@ -4,7 +4,7 @@ state={
 	name="STATE_361"
 	manpower = 2150000
 	
-	state_category = city
+	state_category = metropolis
 
 	history={
 		owner = USA
@@ -40,5 +40,5 @@ state={
 		3957 6823 6892 6929 6984 9758 9786 11892 
 	}
 
-	local_supplies=0.0 
+	local_supplies=12.0 
 }

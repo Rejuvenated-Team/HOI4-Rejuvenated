@@ -109,7 +109,7 @@ ROM_iar_organization = {
 			limit = {
 				has_dlc = "Death or Dishonor"
 			}
-			FROM = { has_completed_focus = ROM_invest_in_the_iar }
+			FROM = { has_completed_focus = RJ_ROM_industria_aeronautica_romania_investments }
 		}
 	}
 
@@ -126,7 +126,7 @@ ROM_iar_organization = {
 		}
 
 		available = {
-			FROM = { has_completed_focus = ROM_invest_in_the_iar }
+			FROM = { has_completed_focus = RJ_ROM_industria_aeronautica_romania_investments }
 		}
 
 		equipment_bonus = {

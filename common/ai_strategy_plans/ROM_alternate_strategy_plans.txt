@@ -23,14 +23,14 @@ ROM_allies = {
 		ROM_preserve_greater_romania
 		ROM_army_maneuvers
 		RJ_ROM_ministry_of_air_and_navy
-		ROM_civil_works
-		ROM_agrarian_reform
+		RJ_ROM_prin_noi_insine
+		RJ_ROM_LOEA
 		RJ_ROM_focus_on_domestic_production
 		RJ_ROM_design_our_own_aircraft
 		RJ_ROM_foreign_aircraft_licenses
 		ROM_army_war_college
-		ROM_danubian_transport_network
-		ROM_malaxa
+		RJ_ROM_agricultural_encouragement_fund
+		RJ_ROM_romanian_timber
 		ROM_renew_the_romanian_polish_alliance
 		ROM_institute_royal_dictatorship
 		ROM_revise_the_constitution
@@ -48,12 +48,19 @@ ROM_allies = {
 		ROM_the_zb_53
 		RJ_ROM_expand_the_galati_shipyards
 		ROM_vanatori_de_munte
-		ROM_hunedoara_steel_works
+		RJ_ROM_develop_the_industrial_sector
+		RJ_ROM_provide_tax_breaks
+		RJ_ROM_import_modern_machinery
+		RJ_ROM_expand_the_hunedoara_steelworks
+		RJ_ROM_malaxa_investments
+		RJ_ROM_ploiesti_oil
+		RJ_ROM_increase_funding_to_the_romanian_academy
+		RJ_ROM_storage_and_processing_facilities
+		RJ_ROM_new_agricultural_equipment
 		ROM_the_armored_division
-		ROM_expand_ploiesti_oil_production
-		ROM_expand_the_university_of_bucharest
+		RJ_ROM_ford_bucaresti
+		RJ_ROM_resita_industrialization
 		ROM_acquire_modern_tanks
-		ROM_invest_in_the_iar
 		ROM_artillery_modernization
 		ROM_mobile_tank_destroyers
 		ROM_mountain_artillery
@@ -124,20 +131,27 @@ ROM_dominance = {
 	ai_national_focuses = {
 		
 		ROM_balkans_dominance
-		ROM_national_defense_industry
-		ROM_agrarian_reform
-		ROM_danubian_transport_network
-		ROM_malaxa
-		ROM_hunedoara_steel_works
+		RJ_ROM_prin_noi_insine
+		RJ_ROM_LOEA
+		RJ_ROM_agricultural_encouragement_fund
+		RJ_ROM_romanian_timber
+		RJ_ROM_develop_the_industrial_sector
+		RJ_ROM_provide_tax_breaks
+		RJ_ROM_import_modern_machinery
+		RJ_ROM_expand_the_hunedoara_steelworks
+		RJ_ROM_malaxa_investments
+		RJ_ROM_ploiesti_oil
+		RJ_ROM_increase_funding_to_the_romanian_academy
+		RJ_ROM_storage_and_processing_facilities
+		RJ_ROM_new_agricultural_equipment
+		RJ_ROM_ford_bucaresti
+		RJ_ROM_resita_industrialization
 		ROM_army_maneuvers
-		ROM_invest_in_the_iar
 		RJ_ROM_ministry_of_air_and_navy
-		ROM_expand_ploiesti_oil_production
 		ROM_institute_royal_dictatorship
 		ROM_revise_the_constitution
 		ROM_crack_down_on_extremism
 		ROM_the_royal_foundation
-		ROM_expand_the_university_of_bucharest
 		RJ_ROM_focus_on_domestic_production
 		ROM_army_war_college
 		ROM_the_zb_53
@@ -229,11 +243,21 @@ ROM_communist = {
 	ai_national_focuses = {
 		
 		ROM_preserve_greater_romania
-		ROM_civil_works
-		ROM_agrarian_reform
-		ROM_danubian_transport_network
-		ROM_malaxa
-		ROM_hunedoara_steel_works
+		RJ_ROM_prin_noi_insine
+		RJ_ROM_LOEA
+		RJ_ROM_agricultural_encouragement_fund
+		RJ_ROM_romanian_timber
+		RJ_ROM_develop_the_industrial_sector
+		RJ_ROM_provide_tax_breaks
+		RJ_ROM_import_modern_machinery
+		RJ_ROM_expand_the_hunedoara_steelworks
+		RJ_ROM_malaxa_investments
+		RJ_ROM_ploiesti_oil
+		RJ_ROM_increase_funding_to_the_romanian_academy
+		RJ_ROM_storage_and_processing_facilities
+		RJ_ROM_new_agricultural_equipment
+		RJ_ROM_ford_bucaresti
+		RJ_ROM_resita_industrialization
 		ROM_institute_royal_dictatorship
 		ROM_revise_the_constitution
 		ROM_crack_down_on_extremism
@@ -241,7 +265,6 @@ ROM_communist = {
 		ROM_appoint_soviet_friendly_government
 		ROM_a_deal_with_the_devil
 		ROM_the_royal_foundation
-		ROM_expand_ploiesti_oil_production
 		ROM_basing_rights_for_soviet_union
 		ROM_army_maneuvers
 		ROM_army_war_college
@@ -251,7 +274,6 @@ ROM_communist = {
 		ROM_reserve_divisions
 		ROM_romanian_volunteer_brigades
 		ROM_the_zb_53
-		ROM_invest_in_the_iar
 		RJ_ROM_ministry_of_air_and_navy
 		RJ_ROM_focus_on_domestic_production
 		RJ_ROM_design_our_own_aircraft
@@ -260,7 +282,6 @@ ROM_communist = {
 		RJ_ROM_the_IAR_eighty
 		RJ_ROM_doctrinal_development
 		RJ_ROM_air_flotilla_organization
-		ROM_expand_the_university_of_bucharest
 		ROM_securitate
 		ROM_force_abdication
 		RJ_ROM_foreign_aircraft_licenses

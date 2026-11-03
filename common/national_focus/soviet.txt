@@ -1381,6 +1381,11 @@ focus_tree = {
 				uses = 2
 				category = cat_synth_rubber
 			}
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = rubber
+				amount = 4
+			}
 		}
 	}
 

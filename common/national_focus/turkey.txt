@@ -4481,7 +4481,6 @@ focus_tree = {
 				limit = {
 					ROM = {
 						is_in_faction_with = TUR
-						has_completed_focus = ROM_danubian_transport_network
 						AND = {
 							controls_state = 82
 							controls_state = 81

@@ -42,6 +42,7 @@
  USA_air_corps_expansion_program_idea: "Air Corps Expansion Program"
  USA_flying_fortress_idea: "Flying Fortresses"
  USA_mechanize_the_army_idea: "Mechanize the Army"
+ USA_tanks_idea: "Tank Experiments"
 
 
  ##############################################################################################################################
@@ -56,7 +57,7 @@
  fleet_landing_army_DM_tt: "Modify §YUnited States Army§! by \nInvasion Penalty: §G-10%§!"
  selective_training_DM_tt: "Division Training Time: §Y-10%§!"
  rock_island_DM_tt: "Factory Output: §G+15%§!\nArtillery Attack:§G+10%§!"
- supply_of_services_DM_tt: "Supply Range: §G+15%§!\nAttrition:§G-15%§!\nArmy Fuel Capacity: §G+10%§!"
+ supply_of_services_DM_tt: "Supply Range: §G+20%§!\nAttrition:§G-15%§!\nArmy Fuel Capacity: §G+10%§!"
 
 
 

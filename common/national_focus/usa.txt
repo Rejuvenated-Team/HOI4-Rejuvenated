@@ -447,9 +447,9 @@ focus_tree = {
 	#
 	#	}
 	#
-	#	cancel_if_invalid = yes
-	#	continue_if_invalid = no
-	#	available_if_capitulated = no
+	#	
+	#	
+	#	
 	#
 	#	completion_reward = {
 	#		if = {
@@ -1305,9 +1305,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			army_experience = 50
@@ -1694,7 +1694,7 @@ focus_tree = {
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available_if_capitulated = no
+		
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_NATIONAL_SPIRIT }
 		completion_reward = {
 			USA_great_depression_level_down = yes
@@ -1736,7 +1736,7 @@ focus_tree = {
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available_if_capitulated = no
+		
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_NATIONAL_SPIRIT }
 		completion_reward = {
 			USA_great_depression_level_down = yes
@@ -1771,7 +1771,7 @@ focus_tree = {
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available_if_capitulated = no
+		
 		complete_tooltip = {
 			every_owned_state = {
 				limit = {
@@ -1861,7 +1861,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_wpa }
 		relative_position_id = USA_wpa
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -1874,10 +1874,7 @@ focus_tree = {
 		bypass = {
 
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_research_slot = 1
@@ -1908,6 +1905,11 @@ focus_tree = {
 				technology = improved_rubber_processing
 				technology = advanced_rubber_processing
 				technology = modern_rubber_processing
+			}
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = rubber
+				amount = 4
 			}
 		}
 	}
@@ -1944,7 +1946,7 @@ focus_tree = {
 		#	factor = 1
 		#}
 
-		available_if_capitulated = no
+		
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 
@@ -2115,9 +2117,9 @@ focus_tree = {
 			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			unlock_decision_category_tooltip = USA_intervention_mandate
@@ -2229,9 +2231,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			unlock_decision_category_tooltip = USA_intervention_mandate
@@ -2275,9 +2277,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_ideas = USA_magic
@@ -2507,7 +2509,7 @@ focus_tree = {
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available_if_capitulated = no
+		
 		
 		completion_reward = {
 			custom_effect_tooltip = RJ_focus_limit_tt
@@ -2642,7 +2644,7 @@ focus_tree = {
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available_if_capitulated = no
+		
 		search_filters = { FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_NATIONAL_SPIRIT FOCUS_FILTER_DIPLOMACY }
 		completion_reward = {
 			ENG = {
@@ -3450,9 +3452,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_NATIONAL_SPIRIT }
 		completion_reward = {
 			add_ideas = USA_gold_standard
@@ -3494,7 +3496,7 @@ focus_tree = {
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available_if_capitulated = no
+		
 		
 		completion_reward = {
 			add_timed_idea = { idea = USA_adjusted_compensation_payment days = 180 }
@@ -3535,7 +3537,7 @@ focus_tree = {
 	#
 	#	cancel_if_invalid = no
 	#	continue_if_invalid = yes
-	#	available_if_capitulated = no
+	#	
 	#	search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 	#	completion_reward = {
 	#		add_ideas = USA_labour_management_relations_act
@@ -3568,9 +3570,9 @@ focus_tree = {
 			congress_medium_support_trigger = yes
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_NATIONAL_SPIRIT }
 		completion_reward = {
 			USA_congress_small_opposition = yes
@@ -3599,9 +3601,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_NATIONAL_SPIRIT }
 		completion_reward = {
 			USA_great_depression_level_down = yes
@@ -3638,7 +3640,7 @@ focus_tree = {
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available_if_capitulated = no
+		
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			USA_great_depression_level_down = yes
@@ -3668,9 +3670,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_research_slot = 1
@@ -3715,9 +3717,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
@@ -3762,7 +3764,7 @@ focus_tree = {
 	#
 	#	cancel_if_invalid = no
 	#	continue_if_invalid = yes
-	#	available_if_capitulated = no
+	#	
 	#	search_filters = {FOCUS_FILTER_USA_CONGRESS}
 	#	completion_reward = {
 	#		USA_congress_large_support = yes
@@ -3876,7 +3878,7 @@ focus_tree = {
 	#
 	#	cancel_if_invalid = no
 	#	continue_if_invalid = yes
-	#	available_if_capitulated = no
+	#	
 	#
 	#	completion_reward = {
 	#		USA_return_majority = yes
@@ -4135,9 +4137,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 		search_filters = { FOCUS_FILTER_NATIONAL_SPIRIT FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY }
 		completion_reward = {
 			add_research_slot = 1
@@ -4168,9 +4170,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			custom_effect_tooltip = RJ_silver_shirts_completed_tt
@@ -4202,9 +4204,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			air_experience = 75
@@ -4245,9 +4247,9 @@ focus_tree = {
 			has_civil_war = yes
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_DIPLOMACY }
 		completion_reward = {
 			add_stability = 0.05
@@ -4279,9 +4281,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			unlock_decision_tooltip = USA_raise_the_free_corps 
@@ -4316,9 +4318,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			unlock_decision_category_tooltip = USA_honor_the_confederacy
@@ -4360,7 +4362,7 @@ focus_tree = {
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available_if_capitulated = no
+		
 
 		completion_reward = {
 			add_ideas = USA_war_powers_act
@@ -4406,9 +4408,9 @@ focus_tree = {
 			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			if = {
@@ -4491,9 +4493,9 @@ focus_tree = {
 			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			MEX = {
@@ -4553,9 +4555,9 @@ focus_tree = {
 				}
 			}
 		}	
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			473 = { CONTROLLER = { country_event = mtg_usa_canadian_corridor.1 } }
@@ -4665,9 +4667,9 @@ focus_tree = {
 			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			every_country = {
@@ -4734,9 +4736,9 @@ focus_tree = {
 				}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			IF = {
@@ -4914,9 +4916,9 @@ focus_tree = {
 					}
 				}
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			every_country = {
@@ -4982,9 +4984,9 @@ focus_tree = {
 			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 		
 		## AST is Subject, NZL is not ## 	
 		completion_reward = {
@@ -5148,9 +5150,9 @@ focus_tree = {
 			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			if = {
@@ -5253,9 +5255,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			every_country = {
@@ -5350,9 +5352,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			custom_effect_tooltip = available_chief_of_army
@@ -6164,9 +6166,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_ideas = USA_war_department
@@ -6211,7 +6213,7 @@ focus_tree = {
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available_if_capitulated = no
+		
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_USA_CONGRESS FOCUS_FILTER_ARMY FOCUS_FILTER_NATIONAL_SPIRIT }
 		completion_reward = {
 			if = {
@@ -6346,9 +6348,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY FOCUS_FILTER_NATIONAL_SPIRIT }
 		completion_reward = {
 			add_tech_bonus = {
@@ -6364,7 +6366,7 @@ focus_tree = {
 				tooltip = coordination_bonus_tt
 			}
 			add_to_variable = {
-				RJ_USA_army_org_regain = 0.05
+				RJ_USA_army_org_regain = 0.15
 				tooltip = army_org_regain_tt
 			}
 		}
@@ -6391,9 +6393,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			custom_effect_tooltip = USA_modify_us_army_tt
@@ -6555,7 +6557,7 @@ focus_tree = {
 				RJ_USA_army_attrition = -0.15
 			}
 			add_to_variable = {
-				RJ_USA_army_supply_range = 0.15
+				RJ_USA_army_supply_range = 0.2
 			}
 		}
 	}
@@ -6626,6 +6628,7 @@ focus_tree = {
 				bonus = 1.0
 				category = armor
 			}
+			add_ideas = USA_tanks_idea
 		}
 	}
 
@@ -6686,9 +6689,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 		search_filters = { FOCUS_FILTER_NATIONAL_SPIRIT FOCUS_FILTER_ARMY }
 		completion_reward = {
 			add_ideas = USA_mechanize_the_army_idea
@@ -6716,9 +6719,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			IF = {
@@ -6761,9 +6764,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			IF = {
@@ -6805,9 +6808,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_ideas = USA_the_pentagon
@@ -6837,9 +6840,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			swap_ideas = {
