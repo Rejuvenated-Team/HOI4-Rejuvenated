@@ -75,7 +75,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			create_faction = YUG_little_entente_faction
+			
 		}
 	}
 	focus = {
@@ -299,7 +299,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			create_faction = YUG_little_entente_faction
 		}
 	}
 	focus = {
@@ -994,7 +994,9 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			AUS = {
+				is_puppet_of = YUG
+			}
 		}
 
 		icon = GFX_focus_PLACEHOLDER
@@ -1006,7 +1008,10 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = AUS
+			}
 		}
 	}
 	focus = {
