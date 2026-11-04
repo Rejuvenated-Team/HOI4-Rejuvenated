@@ -75,7 +75,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			
 		}
 	}
 	focus = {
@@ -208,7 +208,9 @@ focus_tree = {
 		}
 
 		bypass = {
-			
+			HUN = {
+				is_puppet_of = YUG
+			}
 		}
 
 		icon = GFX_focus_PLACEHOLDER
@@ -827,7 +829,13 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
 
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_war_support = 0.1
 		}
 	}
 	focus = {
@@ -1115,7 +1123,8 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			add_stability = 0.05
+			add_war_support = 0.05
 		}
 	}
 	focus = {
@@ -1413,7 +1422,10 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			add_timed_idea = {
+				idea = YUG_training_peter_ii_royal_skills
+				days = 875
+			}
 		}
 	}
 	focus = { 
@@ -1437,7 +1449,16 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			custom_effect_tooltip = YUG_regency_intro_tt
 
+			add_to_variable = {
+				YUG_regency_war_support_factor = 0.05
+				tooltip = war_support_factor_tt
+			}
+			add_to_variable = {
+				YUG_regency_party_popularity_stability_factor = 0.1
+				tooltip = party_popularity_stability_factor_tt
+			}
 		}
 	}
 	focus = { 
@@ -1462,7 +1483,17 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			custom_effect_tooltip = YUG_corruption_intro_tt
 
+			add_to_variable { 
+				YUG_corruption_stability_factor = 0.05
+				tooltip = stability_factor_tt
+			}
+
+			add_to_variable { 
+				YUG_corruption_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
 		}
 	}
 	focus = { 
@@ -1486,7 +1517,17 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			custom_effect_tooltip = YUG_corruption_intro_tt
 
+			add_to_variable { 
+				YUG_corruption_political_power_factor = -0.1
+				tooltip = political_power_factor_tt
+			}
+
+			add_to_variable { 
+				YUG_corruption_consumer_goods_factor = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
 		}
 	}
 	focus = { 
@@ -2412,7 +2453,10 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			hidden_effect = {
+				country_event = rj_yugoslavia.1
+			}
+			custom_effect_tooltip = YUG_croatia_puppet_question_tt
 		}
 	}
 	focus = { #ANTI REGENCY

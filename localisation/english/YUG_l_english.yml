@@ -27,9 +27,13 @@
  YUG_hungarian_seperatism_appeased: "Hungarian Seperatists §GAppeased§!"
  YUG_anti_german_generals: "Anti-German Generals"
  YUG_pm_milan_stojadinovic: "Milan Stojadinović"
+ YUG_training_peter_ii_royal_skills: "Training Peter II's Royal Skills" 
+ YUG_croatian_federalisation: "Croatian Federalisation"
+
 
  #Tooltips
  HUN_has_removed_treaty_of_trianon_tt: "Hungary has removed the Treaty of Trianon"
+ YUG_croatia_puppet_question_tt: "§GWe will be able to either give more power to Croatian states, or release them as a puppet state.§!"
 
  #Focuses
  YUG_the_three_man_regency: "The Three Man Regency"
@@ -225,4 +229,10 @@
  YUG_industrial_methods: "Industrial Methods"
  YUG_industrial_methods_desc: ""
  YUG_the_sporazum_agreement: "The Sporazum Agreement"
- YUG_the_sporazum_agreement_desc: ""
+ YUG_the_sporazum_agreement_desc: "" 
+
+ #events
+ rj_yugoslavia.1.t: "The Sporazum Agreement"
+ rj_yugoslavia.1.d: "WIP"
+ rj_yugoslavia.1.a: "Release them as a puppet state"
+ rj_yugoslavia.1.b: "Federalize them into Yugoslavia"

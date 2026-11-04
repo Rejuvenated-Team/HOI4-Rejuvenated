@@ -245,5 +245,30 @@ ideas = {
                 defense_bonus_against = 0.0250
 			}
 		}
+		### OTHER NS 
+		YUG_training_peter_ii_royal_skills = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = HUN_hungarian_gendarmerie
+
+			modifier = {
+				political_power_gain = 0.1
+				neutrality_drift = 0.05
+			}
+		}
+		YUG_croatian_federalisation = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = HUN_hungarian_gendarmerie
+
+			modifier = {
+				stability_weekly_factor = 0.0010
+				democratic_drift = 0.02
+			}
+		}
 	}
 }
