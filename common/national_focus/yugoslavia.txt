@@ -12,7 +12,7 @@ focus_tree = {
 	
 	default = no
 
-	continuous_focus_position = { x = 50 y = 2000 }
+	continuous_focus_position = { x = 50 y = 2300 }
 
 	focus = {
 		id = YUG_the_three_man_regency
@@ -1588,6 +1588,78 @@ focus_tree = {
 		}
 	}
 	focus = { 
+		id = YUG_begin_state_intervention
+		relative_position_id = YUG_introduce_anti_corruption_laws
+		prerequisite = { focus = YUG_reshape_the_prime_minister focus = YUG_dismiss_the_prime_minister }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_regulate_the_elite_and_grand_corporation
+		relative_position_id = YUG_begin_state_intervention
+		prerequisite = { focus = YUG_begin_state_intervention }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_a_corruption_free_yugoslavia
+		relative_position_id = YUG_regulate_the_elite_and_grand_corporation
+		prerequisite = { focus = YUG_regulate_the_elite_and_grand_corporation }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
 		id = YUG_what_the_public_eye_doesnt_see
 		relative_position_id = YUG_train_peter_ii_royalty
 		prerequisite = { focus = YUG_aftermath_of_the_34_assassination focus = YUG_train_peter_ii_royalty }
@@ -1603,6 +1675,713 @@ focus_tree = {
 		icon = GFX_focus_PLACEHOLDER
 		x = -3
 		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_develop_the_literacy
+		relative_position_id = YUG_the_three_man_regency
+		prerequisite = { focus = YUG_what_the_public_eye_doesnt_see focus = YUG_denounce_corruption }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 0
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_spend_the_treassure_well
+		relative_position_id = YUG_what_the_public_eye_doesnt_see
+		prerequisite = { focus = YUG_what_the_public_eye_doesnt_see }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_purchase_foreign_industry
+		relative_position_id = YUG_spend_the_treassure_well
+		prerequisite = { focus = YUG_spend_the_treassure_well }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_politicize_the_army
+		relative_position_id = YUG_spend_the_treassure_well
+		prerequisite = { focus = YUG_spend_the_treassure_well }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_purchase_politicians_loyalty
+		relative_position_id = YUG_spend_the_treassure_well
+		prerequisite = { focus = YUG_spend_the_treassure_well }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_shut_down_opposition_parties
+		relative_position_id = YUG_purchase_politicians_loyalty
+		prerequisite = { focus = YUG_purchase_politicians_loyalty }
+		prerequisite = { focus = YUG_politicize_the_army }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_promote_a_cult_of_personality_for_milan
+		relative_position_id = YUG_politicize_the_army
+		prerequisite = { focus = YUG_purchase_politicians_loyalty }
+		prerequisite = { focus = YUG_purchase_foreign_industry }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_purchase_foreign_equipment
+		relative_position_id = YUG_politicize_the_army
+		prerequisite = { focus = YUG_shut_down_opposition_parties }
+		prerequisite = { focus = YUG_promote_a_cult_of_personality_for_milan }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_the_elite_yugoslavia
+		relative_position_id = YUG_politicize_the_army
+		prerequisite = { focus = YUG_purchase_foreign_equipment }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 0
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_peter_ii_our_king
+		relative_position_id = YUG_the_three_man_regency
+		prerequisite = { focus = YUG_the_elite_yugoslavia focus = YUG_a_corruption_free_yugoslavia }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 0
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_enforce_a_royal_dictatorship
+		relative_position_id = YUG_peter_ii_our_king
+		prerequisite = { focus = YUG_peter_ii_our_king }
+		mutually_exclusive = { focus = YUG_constitutional_reforms }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -5
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_royal_loyalty
+		relative_position_id = YUG_enforce_a_royal_dictatorship
+		prerequisite = { focus = YUG_enforce_a_royal_dictatorship }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_strike_down_the_CPY
+		relative_position_id = YUG_enforce_a_royal_dictatorship
+		prerequisite = { focus = YUG_enforce_a_royal_dictatorship }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_target_right_wing_parties
+		relative_position_id = YUG_royal_loyalty
+		prerequisite = { focus = YUG_royal_loyalty }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_target_left_wing_parties
+		relative_position_id = YUG_strike_down_the_CPY
+		prerequisite = { focus = YUG_strike_down_the_CPY }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_target_centrist_parties
+		relative_position_id = YUG_strike_down_the_CPY
+		prerequisite = { focus = YUG_strike_down_the_CPY }
+		prerequisite = { focus = YUG_royal_loyalty }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_establish_the_royal_constitution
+		relative_position_id = YUG_target_centrist_parties
+		prerequisite = { focus = YUG_target_centrist_parties }
+		prerequisite = { focus = YUG_target_right_wing_parties }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_absolute_monarchy
+		relative_position_id = YUG_target_centrist_parties
+		prerequisite = { focus = YUG_target_centrist_parties }
+		prerequisite = { focus = YUG_target_left_wing_parties }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_constitutional_reforms
+		relative_position_id = YUG_peter_ii_our_king
+		prerequisite = { focus = YUG_peter_ii_our_king }
+		mutually_exclusive = { focus = YUG_enforce_a_royal_dictatorship }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 5
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_election_reforms
+		relative_position_id = YUG_constitutional_reforms
+		prerequisite = { focus = YUG_constitutional_reforms }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_encourage_political_freedom
+		relative_position_id = YUG_constitutional_reforms
+		prerequisite = { focus = YUG_constitutional_reforms }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_ban_extremist_parties
+		relative_position_id = YUG_encourage_political_freedom
+		prerequisite = { focus = YUG_encourage_political_freedom }
+		prerequisite = { focus = YUG_election_reforms }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_allied_support
+		relative_position_id = YUG_election_reforms
+		prerequisite = { focus = YUG_election_reforms }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_fight_off_axis_influence
+		relative_position_id = YUG_encourage_political_freedom
+		prerequisite = { focus = YUG_encourage_political_freedom }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_open_up_american_investments
+		relative_position_id = YUG_ban_extremist_parties
+		prerequisite = { focus = YUG_ban_extremist_parties }
+		prerequisite = { focus = YUG_fight_off_axis_influence }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_fight_off_soviet_influence
+		relative_position_id = YUG_ban_extremist_parties
+		prerequisite = { focus = YUG_ban_extremist_parties }
+		prerequisite = { focus = YUG_allied_support }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_yugoslavian_diplomacy
+		relative_position_id = YUG_peter_ii_our_king
+		prerequisite = { focus = YUG_absolute_monarchy focus = YUG_establish_the_royal_constitution focus = YUG_open_up_american_investments focus = YUG_fight_off_soviet_influence }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 0
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_agrarian_politics
+		relative_position_id = YUG_peter_ii_our_king
+		prerequisite = { focus = YUG_enforce_a_royal_dictatorship focus = YUG_constitutional_reforms }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = -2
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+
+		}
+	}
+	focus = { 
+		id = YUG_industrial_methods
+		relative_position_id = YUG_peter_ii_our_king
+		prerequisite = { focus = YUG_enforce_a_royal_dictatorship focus = YUG_constitutional_reforms }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_PLACEHOLDER
+		x = 2
+		y = 2
 		cost = 5
 		ai_will_do = {
 			factor = 1
