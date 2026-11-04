@@ -931,7 +931,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+		HUN = { country_event = rj_yugoslavia.2 }
 		}
 	}
 	focus = {

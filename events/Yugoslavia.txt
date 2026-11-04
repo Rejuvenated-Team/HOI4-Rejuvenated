@@ -655,4 +655,66 @@ country_event = {
 		add_Ideas = YUG_croatian_federalisation
 	}
 }
+# Yugoslavia Demanded our Submission
+country_event = {
+	id = rj_yugoslavia.2
+	title = rj_yugoslavia.2.t
+	desc = rj_yugoslavia.2.d
+	picture = GFX_report_event_generic_croatia_handshake
+	
+	is_triggered_only = yes
+	
+	option = { # Surrender
+		name = rj_yugoslavia.2.a
+		ai_chance = {
+			factor = 90
+			modifier = { # If they stand a chance to hold the line they will fight
+				factor = 0.1
+				strength_ratio = {
+					tag = YUG
+					ratio > 0.70
+				}
+			}
+			modifier = { #decrease if in faction
+				factor = 0.5
+				is_in_faction = yes
+			}
+			modifier = { # Increase it again if other bordering nations are in Yugoslavia's faction
+				any_neighbor_country = {
+					NOT = { tag = YUG }
+					is_in_faction_with = YUG
+				}
+				factor = 2.0
+			}
+		}
+		YUG = { country_event = rj_yugoslavia.3 } #They Accept!
+		YUG = { puppet = ROOT }
+	}
+	option = { # Refuse anyway
+		name = rj_yugoslavia.2.b
+		ai_chance = { factor = 10 }
+		YUG = {
+			country_event = rj_yugoslavia.4 #Yugoslavia gains wargoal
+			effect_tooltip = {
+				create_wargoal = {
+					type = puppet
+					target = ROOT
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = rj_yugoslavia.3
+	title = rj_yugoslavia.3.t
+	desc = rj_yugoslavia.3.d
+	picture = GFX_report_event_fascists_posing
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rj_yugoslavia.3.a
+	}
+}
 
