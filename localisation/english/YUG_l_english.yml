@@ -1,7 +1,7 @@
 ﻿l_english:
  #NATIONAL SPIRITS
  YUG_army: "Jugoslovenska Vojska"
- YUG_army_tt: "Modify §YJugoslovenska Vojska§! by:"
+ YUG_army_intro_tt: "Modify §YJugoslovenska Vojska§! by:"
  YUG_regency: "The Regency Council"
  YUG_regency_intro_tt: "Modify §YThe Regency Council§! by:"
  YUG_corruption: "Corruption"
@@ -100,7 +100,7 @@
  YUG_giving_in_to_the_lions_demands_desc: ""
  YUG_to_pursue_balkan_dominance: "To Pursue Balkan Dominance"
  YUG_to_pursue_balkan_dominance_desc: ""
- YUG_revenge_from_1915: "Revenge from 1915"
+ YUG_revenge_from_1915: "Revenge for 1915"
  YUG_revenge_from_1915_desc: ""
  YUG_demand_banat: "Demand Banat"
  YUG_demand_banat_desc: ""
@@ -236,3 +236,6 @@
  rj_yugoslavia.1.d: "WIP"
  rj_yugoslavia.1.a: "Release them as a puppet state"
  rj_yugoslavia.1.b: "Federalize them into Yugoslavia"
+
+ #factions
+ YUG_little_entente_faction: "The Little Entente"

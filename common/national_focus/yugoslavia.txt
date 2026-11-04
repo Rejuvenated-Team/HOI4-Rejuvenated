@@ -75,7 +75,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			create_faction = YUG_little_entente_faction
 		}
 	}
 	focus = {
@@ -222,7 +222,10 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = HUN
+			}
 		}
 	}
 	focus = {
@@ -1424,7 +1427,7 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = YUG_training_peter_ii_royal_skills
-				days = 875
+				days = 1575
 			}
 		}
 	}
@@ -1485,12 +1488,12 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = YUG_corruption_intro_tt
 
-			add_to_variable { 
+			add_to_variable = { 
 				YUG_corruption_stability_factor = 0.05
 				tooltip = stability_factor_tt
 			}
 
-			add_to_variable { 
+			add_to_variable = { 
 				YUG_corruption_consumer_goods_factor = -0.05
 				tooltip = consumer_goods_factor_tt
 			}
@@ -1519,12 +1522,12 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = YUG_corruption_intro_tt
 
-			add_to_variable { 
+			add_to_variable = { 
 				YUG_corruption_political_power_factor = -0.1
 				tooltip = political_power_factor_tt
 			}
 
-			add_to_variable { 
+			add_to_variable = { 
 				YUG_corruption_consumer_goods_factor = -0.1
 				tooltip = consumer_goods_factor_tt
 			}

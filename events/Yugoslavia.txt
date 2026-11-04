@@ -649,10 +649,16 @@ country_event = {
 		name = rj_yugoslavia.1.a
 		release = CRO
         puppet = CRO
+		ai_chance = {
+			base = 1
+		}
 	}
 	option = {
 		name = rj_yugoslavia.1.b
 		add_Ideas = YUG_croatian_federalisation
+		ai_chance = {
+			base = 2
+		}
 	}
 }
 # Yugoslavia Demanded our Submission
