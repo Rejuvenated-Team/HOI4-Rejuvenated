@@ -41,6 +41,19 @@ ideas = {
 				production_speed_buildings_factor = -0.1
 			}
 		}
+		YUG_sls_integrated = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = ARG_growing_nationalism_modifier
+
+			modifier = {
+				consumer_goods_factor = 0.025
+				production_speed_buildings_factor = 0.05
+				democratic_drift = 0.03
+			}
+		}
 		YUG_pm_milan_stojadinovic = {
 			allowed = {
 				tag = YUG
@@ -82,7 +95,7 @@ ideas = {
 
 			modifier = {
 				political_power_factor = -0.05
-				stability_factor = -0.1
+				stability_factor = -0.15
 				war_support_factor = -0.1
 			}
 		}
@@ -94,8 +107,20 @@ ideas = {
 			picture = PER_islamic_traditions_ns
 
 			modifier = {
-				political_power_factor = 0.05
+				political_power_factor = -0.1
 				stability_factor = 0.1
+			}
+		}
+		YUG_state_orthodox_idea = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = YUG_orthodox_church_support
+
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = -0.1
 			}
 		}
 		YUG_severe_illiteracy = {
@@ -268,6 +293,18 @@ ideas = {
 			modifier = {
 				stability_weekly_factor = 0.0010
 				democratic_drift = 0.02
+			}
+		}
+		YUG_greater_yugoslavia_idea = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = HUN_hungarian_gendarmerie
+
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
 			}
 		}
 	}

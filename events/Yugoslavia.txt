@@ -652,10 +652,25 @@ country_event = {
 		ai_chance = {
 			base = 1
 		}
+		if = {
+			limit = {
+				has_idea = YUG_croatian_nationalism
+			}
+			CRO = { add_ideas = YUG_croatian_nationalism }
+		}
+		if = {
+			limit = {
+				has_idea = YUG_croatian_nationalism_handled
+			}
+			CRO = { add_ideas = YUG_croatian_nationalism_handled }
+		}
 	}
 	option = {
 		name = rj_yugoslavia.1.b
-		add_Ideas = YUG_croatian_federalisation
+		add_timed_idea = {
+			idea = YUG_croatian_federalisation
+			days = 550
+		}
 		ai_chance = {
 			base = 2
 		}
