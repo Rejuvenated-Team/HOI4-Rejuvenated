@@ -17,7 +17,7 @@ YUG_developing_literacy_category = {
     remove_effect = {
         add_to_variable = { literacy_decision_count = 1 }
 
-        if = {
+        if_else = {
             limit = { check_variable = { literacy_decision_count == 2 } }
             swap_ideas = {
                 remove_idea = YUG_severe_illiteracy
@@ -25,7 +25,7 @@ YUG_developing_literacy_category = {
             }
         }
 
-        if = {
+        if_else = {
             limit = { check_variable = { literacy_decision_count == 3 } }
             swap_ideas = {
                 remove_idea = YUG_severe_illiteracy_2
@@ -33,14 +33,14 @@ YUG_developing_literacy_category = {
             }
         }
 
-        if = {
+        if_else = {
             limit = { check_variable = { literacy_decision_count == 4 } }
             swap_ideas = {
                 remove_idea = YUG_severe_illiteracy_3
                 add_idea = YUG_severe_illiteracy_4
             }
         }
-        if = {
+        if_else = {
             limit = { check_variable = { literacy_decision_count == 5 } }
             remove_ideas = YUG_severe_illiteracy_4
         }
