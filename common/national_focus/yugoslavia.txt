@@ -222,7 +222,10 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = HUN
+			}
 		}
 	}
 	focus = {
@@ -296,7 +299,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			create_faction = YUG_little_entente_faction
 		}
 	}
 	focus = {
@@ -392,7 +395,11 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+            create_wargoal = {
+                type = take_state_focus
+                target = BUL
+                generator = { 341 }
+            }
 		}
 	}
 	focus = {
@@ -991,7 +998,9 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			AUS = {
+				is_puppet_of = YUG
+			}
 		}
 
 		icon = GFX_focus_PLACEHOLDER
@@ -1003,7 +1012,10 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = AUS
+			}
 		}
 	}
 	focus = {
@@ -1027,7 +1039,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			set_cosmetic_tag = YUG_greater_yugoslavia_cosmic
 		}
 	}
 	focus = {
@@ -1174,7 +1186,10 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = YUG_croatian_nationalism
+				add_idea = YUG_croatian_nationalism_handled
+			}
 		}
 	}
 	focus = {
@@ -1323,7 +1338,10 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = YUG_slovene_autonomy_movements
+				add_idea = YUG_sls_integrated
+			}
 		}
 	}
 	focus = {
@@ -1348,7 +1366,13 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			add_popularity = {
+				ideology = neutrality 
+				popularity = 0.05
+			}
 
+			custom_effect_tooltip = generic_skip_one_line_tt
+			remove_ideas = YUG_slovene_autonomy_movements
 		}
 	}
 	focus = {
@@ -1424,7 +1448,7 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = YUG_training_peter_ii_royal_skills
-				days = 875
+				days = 1575
 			}
 		}
 	}
@@ -1485,12 +1509,12 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = YUG_corruption_intro_tt
 
-			add_to_variable { 
+			add_to_variable = { 
 				YUG_corruption_stability_factor = 0.05
 				tooltip = stability_factor_tt
 			}
 
-			add_to_variable { 
+			add_to_variable = { 
 				YUG_corruption_consumer_goods_factor = -0.05
 				tooltip = consumer_goods_factor_tt
 			}
@@ -1519,12 +1543,12 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = YUG_corruption_intro_tt
 
-			add_to_variable { 
+			add_to_variable = { 
 				YUG_corruption_political_power_factor = -0.1
 				tooltip = political_power_factor_tt
 			}
 
-			add_to_variable { 
+			add_to_variable = { 
 				YUG_corruption_consumer_goods_factor = -0.1
 				tooltip = consumer_goods_factor_tt
 			}
