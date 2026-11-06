@@ -6,6 +6,8 @@ YUG_developing_literacy_category = {
 
     days_re_enable = 0
 
+    days_remove = 90
+
     cost = 50
 
     available = {
@@ -21,7 +23,6 @@ YUG_developing_literacy_category = {
                 remove_idea = YUG_severe_illiteracy
                 add_idea = YUG_severe_illiteracy_2
             }
-            days = 90
         }
 
         if = {
@@ -29,7 +30,6 @@ YUG_developing_literacy_category = {
             swap_ideas = {
                 remove_idea = YUG_severe_illiteracy_2
                 add_idea = YUG_severe_illiteracy_3
-                days = 90
             }
         }
 
@@ -39,7 +39,6 @@ YUG_developing_literacy_category = {
                 remove_idea = YUG_severe_illiteracy_3
                 add_idea = YUG_severe_illiteracy_4
             }
-            days = 90
         }
         if = {
             limit = { check_variable = { literacy_decision_count == 5 } }
