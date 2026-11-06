@@ -20,8 +20,8 @@ YUG_developing_literacy_category = {
             swap_ideas = {
                 remove_idea = YUG_severe_illiteracy
                 add_idea = YUG_severe_illiteracy_2
-                days = 90
             }
+            days = 90
         }
 
         if = {
@@ -38,8 +38,8 @@ YUG_developing_literacy_category = {
             swap_ideas = {
                 remove_idea = YUG_severe_illiteracy_3
                 add_idea = YUG_severe_illiteracy_4
-                days = 90
             }
+            days = 90
         }
         if = {
             limit = { check_variable = { literacy_decision_count == 5 } }
