@@ -31,6 +31,11 @@
  YUG_training_peter_ii_royal_skills: "Training Peter II's Royal Skills" 
  YUG_croatian_federalisation: "Croatian Federalisation"
  YUG_state_orthodox_idea: "State Orthodox"
+ YUG_greater_yugoslavia_idea: "Greater Yugoslavia"
+ YUG_iscle: "The ISCLE"
+ YUG_iscle_alt: "The ISCLE"
+ YUG_italian_migration: "Italian Migration"
+ YUG_czechoslovak_tourism: "Czechoslovak Tourism"
 
 
  #Tooltips
@@ -239,6 +244,11 @@
  rj_yugoslavia.1.a: "Release them as a puppet state"
  rj_yugoslavia.1.b: "Federalize them into Yugoslavia"
 
+ #decisions
+ YUG_developing_literacy_category: "Developing Literacy"
+ YUG_developing_literacy_category_desc: "Yugoslavia suffers from a high illiteracy rate, which affects the students future, making it harder to get useful employees. Thus, we must do what we can to improve the literacy rates."
+ YUG_develop_the_literacy_decisions: "Develop the Literacy Program"
  #funny extras
  YUG_little_entente_faction: "The Little Entente"
- YUG_greater_yugoslavia_cosmic: "Greater Yugoslavia"
+ rj_YUG_greater_yugoslavia_cosmic: "Greater Yugoslavia"
+ YUG_distance_from_the_little_entente_opinion: "Distanced Themselves From The Little Entente"

@@ -307,5 +307,53 @@ ideas = {
 				army_core_defence_factor = 0.1
 			}
 		}
+		YUG_italian_migration = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = HUN_hungarian_gendarmerie
+
+			modifier = {
+				monthly_population = 0.25
+				consumer_goods_factor = 0.075
+			}
+		}
+		YUG_iscle = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = HUN_hungarian_gendarmerie
+
+			modifier = {
+				operative_slot = 1
+				agency_upgrade_time = -0.25
+			}
+		}
+		YUG_iscle_alt = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = HUN_hungarian_gendarmerie
+
+			modifier = {
+				decryption_factor = 0.25
+				encryption_factor = 0.25
+			}
+		}
+		YUG_czechoslovak_tourism = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = HUN_hungarian_gendarmerie
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				stability_factor = -0.05
+			}
+		}
 	}
 }
