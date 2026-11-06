@@ -423,7 +423,10 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			add_timed_idea = {
+				idea = YUG_czechoslovak_tourism
+				days = 790
+			}
 		}
 	}
 	focus = {
@@ -447,7 +450,14 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				add_ideas = YUG_iscle
+			}
+			if = {
+				limit = { NOT = { has_dlc = "La Resistance" } }
+				add_ideas = YUG_iscle_alt
+			}
 		}
 	}
 	focus = {
@@ -521,7 +531,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-		ALB = { country_event = rj_yugoslavia.2 }
+		    ALB = { country_event = rj_yugoslavia.2 }
 		}
 	}
 	focus = {
@@ -570,7 +580,23 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			add_political_power = 75
+			add_war_support = 0.05
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 
+			CZE = {
+				add_opinion_modifier = {
+					target = YUG 
+					modifier = YUG_distance_from_the_little_entente_opinion
+				}
+			}
+			ROM = {
+				add_opinion_modifier = {
+					target = YUG 
+					modifier = YUG_distance_from_the_little_entente_opinion
+				}
+			}
 		}
 	}
 	focus = {
