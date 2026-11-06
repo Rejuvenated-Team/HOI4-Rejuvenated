@@ -422,4 +422,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/nzl/advisors/rj_advisor_NZL_sid_scott.dds"
 	}
 
+
+	##################################################
+	### ROMANIA ######################################
+	##################################################
+
+	spriteType = {
+		name = "GFX_rj_portrait_ROM_nicolae_malaxa_small"
+		texturefile = "gfx/interface/ideas/rom/advisors/rj_advisor_ROM_nicolae_malaxa.dds"
+	}
+
 }
