@@ -1193,7 +1193,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = YUG_appease_albanian_seperatists
+		id = YUG_corporate_with_the_imro
 		relative_position_id = YUG_road_to_national_unification
 		prerequisite = { focus = YUG_destroy_the_ustase focus = YUG_appease_croatian_nationalists }
 		mutually_exclusive = { focus = YUG_arrest_albanian_seperatists }
@@ -1218,7 +1218,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = YUG_arrest_albanian_seperatists
+		id = YUG_destroy_the_imro
 		relative_position_id = YUG_road_to_national_unification
 		prerequisite = { focus = YUG_destroy_the_ustase focus = YUG_appease_croatian_nationalists }
 		mutually_exclusive = { focus = YUG_appease_albanian_seperatists }
@@ -1239,10 +1239,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = YUG_religious_tensions
-				add_idea = YUG_state_orthodox_idea
-			}
+			
 		}
 	}
 	focus = {
@@ -1295,13 +1292,16 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = YUG_religious_tensions
+				add_idea = YUG_state_orthodox_idea
+			}
 		}
 	}
 	focus = {
 		id = YUG_a_united_yugoslavia
 		relative_position_id = YUG_road_to_national_unification
-		prerequisite = { focus = YUG_appease_albanian_seperatists focus = YUG_arrest_albanian_seperatists focus = YUG_state_orthodox focus = YUG_introduce_secularism }
+		prerequisite = { focus = YUG_corporate_with_the_imro focus = YUG_destroy_the_imro focus = YUG_state_orthodox focus = YUG_introduce_secularism }
 		available = {
 
 		}

@@ -4,15 +4,15 @@ YUG_developing_literacy_category = {
 
     fire_only_once = no
 
-    days_re_enable = 120
+    days_re_enable = 0
 
     cost = 50
 
     available = {
-        check_variable = { literacy_decision_count < 4 }
+        check_variable = { literacy_decision_count < 5 }
     }
 
-    remove_effect = {
+    complete_effect = {
         add_to_variable = { literacy_decision_count = 1 }
 
         if = {
@@ -20,14 +20,16 @@ YUG_developing_literacy_category = {
             swap_ideas = {
                 remove_idea = YUG_severe_illiteracy
                 add_idea = YUG_severe_illiteracy_2
+                days = 90
             }
         }
 
         if = {
-            limit = { check_variable = { my_decision_click_count == 3 } }
+            limit = { check_variable = { literacy_decision_count == 3 } }
             swap_ideas = {
                 remove_idea = YUG_severe_illiteracy_2
                 add_idea = YUG_severe_illiteracy_3
+                days = 90
             }
         }
 
@@ -36,12 +38,17 @@ YUG_developing_literacy_category = {
             swap_ideas = {
                 remove_idea = YUG_severe_illiteracy_3
                 add_idea = YUG_severe_illiteracy_4
+                days = 90
             }
+        }
+        if = {
+            limit = { check_variable = { literacy_decision_count == 5 } }
+            remove_ideas = YUG_severe_illiteracy_4
         }
     }
 
     visible = {
-        check_variable = { literacy_decision_count < 4 }
+        check_variable = { literacy_decision_count < 5 }
     }
   }
 }
