@@ -596,6 +596,11 @@ focus_tree = {
 					target = YUG 
 					modifier = YUG_distance_from_the_little_entente_opinion
 				}
+				diplomatic_relation = {
+					country = YUG
+					relation = guarantee
+					active = no
+				}
 			}
 		}
 	}
@@ -869,6 +874,10 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			add_war_support = 0.1
+			add_named_threat = {
+				threat = 1
+				name = YUG_balkan_dominance_threat
+			}
 		}
 	}
 	focus = {
