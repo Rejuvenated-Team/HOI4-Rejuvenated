@@ -11,14 +11,20 @@ YUG_developing_literacy_category = {
     cost = 50
 
     available = {
-        check_variable = { literacy_decision_count < 5 }
+        custom_trigger_tooltip = {
+            tooltip = YUG_we_havent_solved_literacy_tt 
+            OR = {
+                has_idea = YUG_severe_illiteracy
+                has_idea = YUG_severe_illiteracy_2
+                has_idea = YUG_severe_illiteracy_3
+                has_idea = YUG_severe_illiteracy_4
+            }
+        }
     }
 
     remove_effect = {
-        add_to_variable = { literacy_decision_count = 1 }
 
         if_else = {
-            limit = { check_variable = { literacy_decision_count == 2 } }
             swap_ideas = {
                 remove_idea = YUG_severe_illiteracy
                 add_idea = YUG_severe_illiteracy_2
@@ -26,7 +32,6 @@ YUG_developing_literacy_category = {
         }
 
         if_else = {
-            limit = { check_variable = { literacy_decision_count == 3 } }
             swap_ideas = {
                 remove_idea = YUG_severe_illiteracy_2
                 add_idea = YUG_severe_illiteracy_3
@@ -34,20 +39,25 @@ YUG_developing_literacy_category = {
         }
 
         if_else = {
-            limit = { check_variable = { literacy_decision_count == 4 } }
             swap_ideas = {
                 remove_idea = YUG_severe_illiteracy_3
                 add_idea = YUG_severe_illiteracy_4
             }
         }
         if_else = {
-            limit = { check_variable = { literacy_decision_count == 5 } }
             remove_ideas = YUG_severe_illiteracy_4
         }
     }
 
     visible = {
-        check_variable = { literacy_decision_count < 5 }
+        NOT = {
+            OR = {
+                has_idea = YUG_severe_illiteracy
+                has_idea = YUG_severe_illiteracy_2
+                has_idea = YUG_severe_illiteracy_3
+                has_idea = YUG_severe_illiteracy_4
+            }
+        }
     }
   }
 }
