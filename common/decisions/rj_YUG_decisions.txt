@@ -51,12 +51,10 @@ YUG_developing_literacy_category = {
 
     visible = {
         NOT = {
-            OR = {
-                has_idea = YUG_severe_illiteracy
-                has_idea = YUG_severe_illiteracy_2
-                has_idea = YUG_severe_illiteracy_3
-                has_idea = YUG_severe_illiteracy_4
-            }
+            has_idea = YUG_severe_illiteracy
+            has_idea = YUG_severe_illiteracy_2
+            has_idea = YUG_severe_illiteracy_3
+            has_idea = YUG_severe_illiteracy_4
         }
     }
   }
