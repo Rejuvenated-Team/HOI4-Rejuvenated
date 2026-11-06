@@ -682,28 +682,32 @@ country_event = {
 	title = rj_yugoslavia.2.t
 	desc = rj_yugoslavia.2.d
 	picture = GFX_report_event_generic_croatia_handshake
-	
 	is_triggered_only = yes
-	
 	option = { # Surrender
 		name = rj_yugoslavia.2.a
 		ai_chance = {
 			factor = 90
 			modifier = { # If they stand a chance to hold the line they will fight
 				factor = 0.1
+				ROOT = {
 				strength_ratio = {
 					tag = YUG
 					ratio > 0.70
 				}
+				}
 			}
 			modifier = { #decrease if in faction
 				factor = 0.5
+				ROOT = {
 				is_in_faction = yes
+				}
 			}
 			modifier = { # Increase it again if other bordering nations are in Yugoslavia's faction
+				ROOT = {
 				any_neighbor_country = {
 					NOT = { tag = YUG }
 					is_in_faction_with = YUG
+				}
 				}
 				factor = 2.0
 			}
@@ -733,9 +737,7 @@ country_event = {
 	title = rj_yugoslavia.3.t
 	desc = rj_yugoslavia.3.d
 	picture = GFX_report_event_fascists_posing
-	
 	is_triggered_only = yes
-	
 	option = {
 		name = rj_yugoslavia.3.a
 	}
@@ -746,9 +748,7 @@ country_event = {
 	title = rj_yugoslavia.4.t
 	desc = rj_yugoslavia.4.d
 	picture = GFX_report_event_fascists_posing
-	
 	is_triggered_only = yes
-	
 	option = {
 		name = rj_yugoslavia.4.a
 	}
