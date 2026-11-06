@@ -696,9 +696,11 @@ country_event = {
 		YUG = {
 			country_event = rj_yugoslavia.4 #Yugoslavia gains wargoal
 			effect_tooltip = {
+				YUG = {
 				create_wargoal = {
 					type = puppet
 					target = ROOT
+				}
 				}
 			}
 		}
@@ -715,6 +717,19 @@ country_event = {
 	
 	option = {
 		name = rj_yugoslavia.3.a
+	}
+}
+
+country_event = {
+	id = rj_yugoslavia.4
+	title = rj_yugoslavia.4.t
+	desc = rj_yugoslavia.4.d
+	picture = GFX_report_event_fascists_posing
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rj_yugoslavia.4.a
 	}
 }
 

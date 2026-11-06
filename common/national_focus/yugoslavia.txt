@@ -514,7 +514,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+		ALB = { country_event = rj_yugoslavia.2 }
 		}
 	}
 	focus = {
@@ -1075,7 +1075,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+		TUR = { country_event = rj_yugoslavia.2 }
 		}
 	}
 	focus = {
