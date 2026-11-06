@@ -938,7 +938,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-		HUN = { country_event = rj_yugoslavia.2 }
+			HUN = { country_event = rj_yugoslavia.2 }
 		}
 	}
 	focus = {
@@ -1040,6 +1040,7 @@ focus_tree = {
 		
 		completion_reward = {
 			set_cosmetic_tag = rj_YUG_greater_yugoslavia_cosmic
+			add_ideas = YUG_greater_yugoslavia_idea
 		}
 	}
 	focus = {
@@ -1087,7 +1088,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-		TUR = { country_event = rj_yugoslavia.2 }
+		    TUR = { country_event = rj_yugoslavia.2 }
 		}
 	}
 	focus = {
