@@ -1,0 +1,38 @@
+YUG_developing_literacy_category = {
+    YUG_develop_the_literacy_decisions = {
+        icon = generic_political_action
+
+        fire_only_once = no 
+
+        days_re_enable = 120
+
+        cost = 50
+
+        available = {
+            check_variable = { my_decision_click_count < 4 }
+        }
+
+        complete_effect = {
+            change_variable = { my_decision_click_count = 1 }
+            
+            if = {
+                limit = { check_variable = { my_decision_click_count == 1 } }
+            }
+            if = {
+                limit = { check_variable = { my_decision_click_count == 2 } }
+                swap_ideas = { remove_idea = YUG_severe_illiteracy add_idea = YUG_severe_illiteracy_2 }
+            }
+            if = {
+                limit = { check_variable = { my_decision_click_count == 3 } }
+                swap_ideas = { remove_idea = YUG_severe_illiteracy_2 add_idea = YUG_severe_illiteracy_3 }
+            }
+            if = {
+                limit = { check_variable = { my_decision_click_count == 4 } }
+                swap_ideas = { remove_idea = YUG_severe_illiteracy_3 add_idea = YUG_severe_illiteracy_4 }
+            }
+        }
+        visible = {
+            check_variable = { my_decision_click_count < 4 }
+        }
+    }
+}

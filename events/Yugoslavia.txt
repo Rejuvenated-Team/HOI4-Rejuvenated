@@ -657,12 +657,14 @@ country_event = {
 				has_idea = YUG_croatian_nationalism
 			}
 			CRO = { add_ideas = YUG_croatian_nationalism }
+			remove_ideas = YUG_croatian_nationalism
 		}
 		if = {
 			limit = {
 				has_idea = YUG_croatian_nationalism_handled
 			}
 			CRO = { add_ideas = YUG_croatian_nationalism_handled }
+			remove_ideas = YUG_croatian_nationalism_handled
 		}
 	}
 	option = {

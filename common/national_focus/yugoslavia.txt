@@ -1039,7 +1039,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			set_cosmetic_tag = YUG_greater_yugoslavia_cosmic
+			set_cosmetic_tag = rj_YUG_greater_yugoslavia_cosmic
 		}
 	}
 	focus = {
@@ -1239,7 +1239,10 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = YUG_religious_tensions
+				add_idea = YUG_state_orthodox_idea
+			}
 		}
 	}
 	focus = {
@@ -1264,7 +1267,10 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = YUG_religious_tensions
+				add_idea = YUG_religious_tensions_united
+			}
 		}
 	}
 	focus = {
@@ -1770,7 +1776,8 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			add_stability = 0.05
+			unlock_decision_category_tooltip = YUG_developing_literacy_category
 		}
 	}
 	focus = { 

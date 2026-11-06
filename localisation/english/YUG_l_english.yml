@@ -239,6 +239,10 @@
  rj_yugoslavia.1.a: "Release them as a puppet state"
  rj_yugoslavia.1.b: "Federalize them into Yugoslavia"
 
+ #decisions
+ YUG_developing_literacy_category: "Developing Literacy"
+ YUG_developing_literacy_category_desc: "Yugoslavia suffers from a high illiteracy rate, which affects the students future, making it harder to get useful employees. Thus, we must do what we can to improve the literacy rates."
+ YUG_develop_the_literacy_decisions: "Develop the Literacy Program"
  #funny extras
  YUG_little_entente_faction: "The Little Entente"
- YUG_greater_yugoslavia_cosmic: "Greater Yugoslavia"
+ rj_YUG_greater_yugoslavia_cosmic: "Greater Yugoslavia"
