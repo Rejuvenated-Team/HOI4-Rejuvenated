@@ -14,7 +14,7 @@ YUG_developing_literacy_category = {
         check_variable = { literacy_decision_count < 5 }
     }
 
-    complete_effect = {
+    remove_effect = {
         add_to_variable = { literacy_decision_count = 1 }
 
         if = {
