@@ -9,8 +9,7 @@ state={
 		buildings = {
 			infrastructure = 1
 			4980 = {
-				naval_base = 2
-
+				naval_base = 3
 			}
 
 		}
@@ -28,6 +27,6 @@ state={
 	}
 	manpower=350000
 	buildings_max_level_factor=1.000
-	state_category=pastoral
-	local_supplies=0.000
+	state_category = large_town
+	local_supplies = 5.000
 }

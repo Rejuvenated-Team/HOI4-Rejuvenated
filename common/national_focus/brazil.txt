@@ -680,7 +680,7 @@ focus_tree = {
 		relative_position_id = bra_tecnocratic_reform
 		x = -1
 		y = 1
-		cost = 10
+		cost = 7.2
 		ai_will_do = {
 			factor = 160
 		}
@@ -787,7 +787,7 @@ focus_tree = {
 		relative_position_id = bra_federal_institutes
 		x = -2
 		y = 2
-		cost = 10
+		cost = 7.2
 		ai_will_do = {
 			factor = 40
 		}
@@ -893,7 +893,7 @@ focus_tree = {
 		relative_position_id = bra_federal_universities
 		x = 0
 		y = 2
-		cost = 10
+		cost = 7.2
 		ai_will_do = {
 			factor = 40
 		}
@@ -930,7 +930,7 @@ focus_tree = {
 		}
 		x = 0
 		y = 1
-		cost = 10
+		cost = 7.2
 		ai_will_do = {
 			factor = 40
 		}
@@ -1641,7 +1641,7 @@ focus_tree = {
 		relative_position_id = bra_CTEF_CLT
 		x = -5
 		y = 1
-		cost = 10
+		cost = 7.2
 		ai_will_do = {
 			factor = 160
 		}
@@ -1664,14 +1664,14 @@ focus_tree = {
 				limit = {
 					free_building_slots = {
 						building = industrial_complex
-						size > 1
+						size > 2
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 				}
 			}
 			
@@ -1727,7 +1727,7 @@ focus_tree = {
 		relative_position_id = bra_sub_priv
 		x = -1
 		y = 1
-		cost = 10
+		cost = 7.2
 		ai_will_do = {
 			factor = 40
 		}
@@ -1747,6 +1747,20 @@ focus_tree = {
 					level = 2
 				}
 			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
 			
 			hidden_effect = { if = { limit = { BRA = { AND = { is_ai = no has_country_flag = bra_voz_ligada_flag } } } sound_effect =  bra_assovio_1 } }
 		}
@@ -1759,7 +1773,7 @@ focus_tree = {
 		relative_position_id = bra_eng_mart
 		x = 0
 		y = 1
-		cost = 10
+		cost = 7.2
 		ai_will_do = {
 			factor = 40
 		}
@@ -1788,7 +1802,7 @@ focus_tree = {
 		relative_position_id = bra_IRFM
 		x = -1
 		y = 1
-		cost = 10
+		cost = 7.2
 		ai_will_do = {
 			factor = 40
 		}
@@ -1816,7 +1830,7 @@ focus_tree = {
 		relative_position_id = bra_obras_exterior
 		x = -1
 		y = 1
-		cost = 7.2
+		cost = 5
 		ai_will_do = {
 			factor = 40
 		}
@@ -1842,7 +1856,7 @@ focus_tree = {
 		relative_position_id = bra_belem_porto
 		x = 0
 		y = 1
-		cost = 10
+		cost = 7.2
 		ai_will_do = {
 			factor = 40
 		}
@@ -1867,7 +1881,7 @@ focus_tree = {
 		relative_position_id = bra_obras_exterior
 		x = 1
 		y = 1
-		cost = 10
+		cost = 7.2
 		ai_will_do = {
 			factor = 40
 		}
@@ -1986,7 +2000,7 @@ focus_tree = {
 		relative_position_id = bra_natal_porto
 		x = -2
 		y = 1
-		cost = 10
+		cost = 7.2
 		ai_will_do = {
 			factor = 40
 		}
@@ -2413,7 +2427,7 @@ focus_tree = {
 			factor = 40
 		}
 		completion_reward = {
-			add_resource = { type = oil amount = 5 state = 499 }
+			add_resource = { type = oil amount = 12 state = 499 }
 			
 			hidden_effect = { if = { limit = { BRA = { AND = { is_ai = no has_country_flag = bra_voz_ligada_flag } } } sound_effect = bra_assovio_2 } }
 		}
@@ -2474,9 +2488,9 @@ focus_tree = {
 			factor = 160
 		}
 		completion_reward = {
-			add_resource = { type = oil amount = 5 state = 499 }
-			add_resource = { type = oil amount = 5 state = 500 }
-			add_resource = { type = oil amount = 5 state = 504 }
+			add_resource = { type = oil amount = 7 state = 499 }
+			add_resource = { type = oil amount = 7 state = 500 }
+			add_resource = { type = oil amount = 7 state = 504 }
 			
 			
 			hidden_effect = { if = { limit = { BRA = { AND = { is_ai = no has_country_flag = bra_voz_ligada_flag } } } sound_effect = bra_assovio_2 } }
@@ -2731,7 +2745,7 @@ focus_tree = {
 		}
 		x = 0
 		y = 1
-		cost = 14.4
+		cost = 10
 		completion_reward = {
 			hidden_effect = {
 				set_technology = { BRA_jungle_warfare_instruction_center = 1 }

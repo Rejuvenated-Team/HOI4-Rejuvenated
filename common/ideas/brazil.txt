@@ -223,7 +223,7 @@ ideas = {
 			picture = BRA_natdev
 
 			modifier = {
-				production_speed_buildings_factor = 0.2
+				production_speed_buildings_factor = 0.25
 			}
 		}
 
@@ -241,7 +241,7 @@ ideas = {
 			picture = BRA_natdev
 
 			modifier = {
-				production_speed_buildings_factor = 0.2
+				production_speed_buildings_factor = 0.25
 				global_building_slots_factor = 0.2
 			}
 		}
@@ -260,7 +260,7 @@ ideas = {
 			picture = BRA_natdev
 
 			modifier = {
-				production_speed_buildings_factor = 0.2
+				production_speed_buildings_factor = 0.25
 				global_building_slots_factor = 0.2
 				line_change_production_efficiency_factor = 0.1
 			}
@@ -280,7 +280,7 @@ ideas = {
 			picture = BRA_natdev
 
 			modifier = {
-				production_speed_buildings_factor = 0.2
+				production_speed_buildings_factor = 0.25
 				global_building_slots_factor = 0.2
 				production_factory_efficiency_gain_factor = 0.05
 			}
@@ -300,7 +300,7 @@ ideas = {
 			picture = BRA_natdev
 
 			modifier = {
-				production_speed_buildings_factor = 0.2
+				production_speed_buildings_factor = 0.25
 				global_building_slots_factor = 0.2
 				line_change_production_efficiency_factor = 0.2
 				war_support_factor = 0.1
@@ -322,7 +322,7 @@ ideas = {
 			picture = BRA_natdev
 
 			modifier = {
-				production_speed_buildings_factor = 0.2
+				production_speed_buildings_factor = 0.25
 				global_building_slots_factor = 0.2
 				production_factory_efficiency_gain_factor = 0.1
 				war_support_factor = 0.1
@@ -384,14 +384,15 @@ ideas = {
 			picture = generic_energy_concern
 
 			modifier = {
-				industrial_capacity_dockyard = 0.15
-				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.20
+				industrial_capacity_factory = 0.20
 				war_support_factor = 0.05
 				stability_factor = 0.05
 				conversion_cost_civ_to_mil_factor = -0.1
 				conversion_cost_mil_to_civ_factor = -0.1
 				production_speed_energy_infrastructure_factor = 0.15
 				production_speed_industrial_infrastructure_factor = 0.15
+				production_lack_of_resource_penalty_factor = -0.1
 			}
 		}
 
@@ -1328,6 +1329,20 @@ ideas = {
 				air_accidents_factor = -0.10
 				air_detection = 0.10
 			}
+			equipment_bonus = {
+				mio_cat_eq_all_large_plane = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				mio_cat_eq_all_medium_plane = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				mio_cat_eq_all_small_plane = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
 		}
 
 		BRA_ministry_of_sciences_and_technology_idea = {
@@ -1344,9 +1359,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				production_speed_land_facility_factor = 0.15
-				production_speed_air_facility_factor = 0.15
-				production_speed_naval_facility_factor = 0.15
+				production_speed_facility_factor = 0.20
 				research_speed_factor = 0.05
 			}
 		}
@@ -1365,10 +1378,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				production_speed_land_facility_factor = 0.15
-				production_speed_air_facility_factor = 0.15
-				production_speed_naval_facility_factor = 0.15
-				research_speed_factor = 0.08
+				production_speed_facility_factor = 0.20
+				research_speed_factor = 0.10
 				special_project_speed_factor = 0.20
 			}
 		}
