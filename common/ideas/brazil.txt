@@ -471,7 +471,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				monthly_population = 0.25
+				monthly_population = 0.50
 			}
 		}
 
@@ -490,7 +490,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				monthly_population = 0.50
+				monthly_population = 1
 			}
 		}
 
@@ -509,9 +509,10 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				monthly_population = 0.50
+				monthly_population = 1
 				max_fuel_factor = 0.25
 				fuel_gain_factor = 0.15
+				army_fuel_consumption_factor = -0.05
 			}
 		}
 
@@ -1308,6 +1309,8 @@ ideas = {
 				army_leader_start_logistics_level = 1
 				army_leader_start_planning_level = 1
 				army_org_factor = 0.08
+				max_planning_factor = 0.10
+				planning_speed = 0.05
 			}
 		}
 

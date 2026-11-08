@@ -1593,7 +1593,7 @@ focus_tree = {
 		relative_position_id = bra_blitz
 		x = 0
 		y = 1
-		cost = 14.4
+		cost = 10
 		ai_will_do = {
 			factor = 40
 		}
@@ -2313,7 +2313,7 @@ focus_tree = {
 	
 	focus = {
 		id = bra_itabira
-		icon = GFX_focus_generic_steel
+		icon = GFX_focus_generic_steel_mill
 		prerequisite = {
 			focus = bra_CTEF_CLT
 		}
@@ -2340,7 +2340,7 @@ focus_tree = {
 	
 	focus = {
 		id = bra_lobato
-		icon = GFX_focus_RJ_oil_pump
+		icon = GFX_focus_RJ_NZL_taranaki_oil
 		prerequisite = {
 			focus = bra_CTEF_CLT
 		}
@@ -2738,13 +2738,13 @@ focus_tree = {
 	focus = {
 		id = bra_territoriosfederais
 		icon = GFX_focus_BRA_jaguar_diplomacy
-		prerequisite = { focus = bra_tiro_de_guerra }
+		prerequisite = { focus = bra_tiro_de_guerra focus = bra_patri_8_focus focus = bra_patri_7_focus }
 		relative_position_id = bra_tiro_de_guerra
 		ai_will_do = {
 			factor = 160
 		}
 		x = 0
-		y = 1
+		y = 2
 		cost = 10
 		completion_reward = {
 			hidden_effect = {
@@ -3390,7 +3390,7 @@ focus_tree = {
 		relative_position_id = bra_monarquia_focus
 		x = 0
 		y = 1
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			factor = 480
 		}
@@ -3404,6 +3404,8 @@ focus_tree = {
 			add_ideas = bra_march_in_silence
 			add_popularity = { ideology = neutrality popularity = 0.025 }
 			add_popularity = { ideology = fascism popularity = 0.025 }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			swap_ideas = { remove_idea = bra_antropofagia add_idea = bra_antropofagia_neu_1 }
 		}
 	}
 	
@@ -3427,6 +3429,8 @@ focus_tree = {
 			swap_ideas = { remove_idea = bra_instabilidade add_idea = bra_instabilidade_2 }
 			add_popularity = { ideology = neutrality popularity = 0.025 }
 			add_popularity = { ideology = fascism popularity = 0.025 }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			swap_ideas = { remove_idea = bra_antropofagia_neu_1 add_idea = bra_antropofagia_neu_2 }
 		}
 	}
 	
@@ -3436,7 +3440,7 @@ focus_tree = {
 		relative_position_id = bra_monarquia_2_focus
 		x = 0
 		y = 1
-		cost = 10
+		cost = 7.2
 		ai_will_do = {
 			factor = 240
 		}
@@ -3619,6 +3623,13 @@ focus_tree = {
 		completion_reward = {
 			country_event = { id = bra.19 }
 			hidden_effect = { if = { limit = { BRA = { AND = { is_ai = no has_country_flag = bra_voz_ligada_flag } } } sound_effect =  bra_monarquia_focus } }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				swap_ideas = { remove_idea = bra_antropofagia_neu_2 add_idea = bra_antropofagia_neu_3 }
+			}
 		}
 	}
 }
