@@ -90,6 +90,8 @@ set_research_slots = 4
 set_stability = 0.6
 set_war_support = 0.6
 
+set_grand_doctrine = grand_battleplan
+
 recruit_character = ROM_gheorghe_tatarescu
 recruit_character = ROM_constantin_ion_parhon
 recruit_character = ROM_armand_calinescu

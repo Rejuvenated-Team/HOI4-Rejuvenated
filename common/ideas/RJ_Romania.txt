@@ -345,10 +345,27 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				research_speed_factor = 0.05
+				research_speed_factor = 0.06
 			}
 			research_bonus = {
-				industry = 0.10
+				industry = 0.15
+			}
+		}
+
+		RJ_ROM_idea_rearmament_plan = {
+			picture = HUN_secret_rearmament
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+				industrial_capacity_factory = 0.10
 			}
 		}
 	}
