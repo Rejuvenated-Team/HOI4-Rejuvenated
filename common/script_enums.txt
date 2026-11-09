@@ -291,7 +291,7 @@ script_enum_equipment_bonus_type = {
 	small_plane_airframe_3
 	small_plane_airframe_4
 	small_plane_airframe_5
-	small_plane_airframe_6
+	#small_plane_airframe_6
 	cv_small_plane_airframe_0
 	cv_small_plane_airframe_1
 	cv_small_plane_airframe_2
@@ -450,7 +450,7 @@ script_enum_equipment_bonus_type = {
 	small_plane_cas_airframe_3
 	small_plane_cas_airframe_4
 	small_plane_cas_airframe_5
-	small_plane_cas_airframe_6
+	#small_plane_cas_airframe_6
 	cv_small_plane_cas_airframe_0
 	cv_small_plane_cas_airframe_1
 	cv_small_plane_cas_airframe_2
@@ -463,7 +463,7 @@ script_enum_equipment_bonus_type = {
 	small_plane_naval_bomber_airframe_3
 	small_plane_naval_bomber_airframe_4
 	small_plane_naval_bomber_airframe_5
-	small_plane_naval_bomber_airframe_6
+	#small_plane_naval_bomber_airframe_6
 	cv_small_plane_naval_bomber_airframe_0
 	cv_small_plane_naval_bomber_airframe_1
 	cv_small_plane_naval_bomber_airframe_2
@@ -477,7 +477,7 @@ script_enum_equipment_bonus_type = {
 	small_plane_suicide_airframe_3
 	small_plane_suicide_airframe_4
 	small_plane_suicide_airframe_5
-	small_plane_suicide_airframe_6
+	#small_plane_suicide_airframe_6
 	cv_small_plane_suicide_airframe_0
 	cv_small_plane_suicide_airframe_1
 	cv_small_plane_suicide_airframe_2
