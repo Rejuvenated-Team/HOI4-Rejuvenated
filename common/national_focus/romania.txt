@@ -3460,7 +3460,7 @@ focus_tree = {
 	focus = {
 		id = RJ_ROM_initiate_the_rearmament_plans
 		icon = GFX_focus_RJ_USA_military_construction
-		x = 32
+		x = 34
 		y = 0
 
 		cost = 10
@@ -3510,7 +3510,8 @@ focus_tree = {
 		icon = GFX_focus_CZE_build_infantry
 		prerequisite = { focus = RJ_ROM_initiate_the_rearmament_plans }
 		relative_position_id = RJ_ROM_initiate_the_rearmament_plans
-		x = 3
+		mutually_exclusive = { focus = RJ_ROM_the_modern_model }
+		x = -2
 		y = 1
 
 		cost = 7.2
@@ -3532,7 +3533,65 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				name = RJ_ROM_traditional_model_bonus_1
+				uses = 2
+				category = land_doctrine
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 1
+				name = RJ_ROM_traditional_model_bonus_2
+				uses = 1
+				category = cat_superior_firepower
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_the_modern_model
+		icon = GFX_focus_generic_tank_assault
+		prerequisite = { focus = RJ_ROM_initiate_the_rearmament_plans }
+		relative_position_id = RJ_ROM_initiate_the_rearmament_plans
+		mutually_exclusive = { focus = RJ_ROM_the_traditional_model }
+		x = 2
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			base = 3
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				name = RJ_ROM_modern_model_bonus_1
+				uses = 2
+				category = land_doctrine
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 1
+				name = RJ_ROM_modern_model_bonus_2
+				uses = 1
+				category = cat_mobile_warfare
+			}
 		}
 	}
 
@@ -4235,7 +4294,7 @@ focus_tree = {
 	focus = {
 		id = RJ_ROM_ministry_of_air_and_navy
 		icon = GFX_focus_RJ_ROM_ministry_of_air_and_navy
-		x = 45
+		x = 50
 		y = 0
 
 		cost = 10

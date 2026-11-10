@@ -98,6 +98,8 @@
  RJ_ROM_initiate_the_rearmament_plans_desc: "With the tensions rising in Europe, the general staff has pressured us to begin working on plans for rearmament, which we're about ready to enact now. Otherwise we may not be adequately prepared for the next war."
  RJ_ROM_the_traditional_model: "The Traditional Model"
  RJ_ROM_the_traditional_model_desc: "The Great War taught the powers of Europe about warfare on a much grander scale, but it emphasizes elements such as infantry & cavalry over modernized elements such as armor. This is adequate enough for us in any case."
+ RJ_ROM_the_modern_model: "The Modern Model"
+ RJ_ROM_the_modern_model_desc: "Warfare has evolved since the era of the Great War. This new era is rapidly developing around mobile warfare, using armored vehicles & rapid maneuvers rather than dug-in trench warfare. Either we adapt, or we fall."
 
 
 
