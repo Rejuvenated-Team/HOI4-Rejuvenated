@@ -1652,4 +1652,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/rom/RJ_ROM_storage_and_processing_facilities.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_focus_RJ_ROM_the_french_model"
+		texturefile = "gfx/interface/goals/rom/RJ_ROM_the_french_model.dds"
+	}
+
 }

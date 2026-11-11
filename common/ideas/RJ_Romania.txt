@@ -368,5 +368,24 @@ ideas = {
 				industrial_capacity_factory = 0.10
 			}
 		}
+
+		RJ_ROM_idea_prepare_the_defenses = {
+			picture = generic_fortify_the_borders
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_bunker_factor = 0.25
+				production_speed_coastal_bunker_factor = 0.25
+				production_speed_anti_air_building_factor = 0.15
+				army_core_defence_factor = 0.05
+			}
+		}
 	}
 }

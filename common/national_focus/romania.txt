@@ -3507,7 +3507,7 @@ focus_tree = {
 
 	focus = {
 		id = RJ_ROM_the_traditional_model
-		icon = GFX_focus_CZE_build_infantry
+		icon = GFX_focus_RJ_ROM_the_french_model
 		prerequisite = { focus = RJ_ROM_initiate_the_rearmament_plans }
 		relative_position_id = RJ_ROM_initiate_the_rearmament_plans
 		mutually_exclusive = { focus = RJ_ROM_the_modern_model }
@@ -3544,6 +3544,173 @@ focus_tree = {
 				name = RJ_ROM_traditional_model_bonus_2
 				uses = 1
 				category = cat_superior_firepower
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_prepare_the_defenses
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = RJ_ROM_the_traditional_model }
+		relative_position_id = RJ_ROM_the_traditional_model
+		x = -2
+		y = 1
+
+		cost = 7.2
+
+		ai_will_do = {
+			base = 3
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = RJ_ROM_idea_prepare_the_defenses
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				name = RJ_ROM_prepare_defenses_bonus
+				uses = 2
+				bonus = 0.5
+				category = fortification_tech
+			}
+
+			if = {
+				limit = {
+					NOT = {
+						has_tech = basic_fortification_tech
+					}
+				}
+				set_technology = {
+					basic_fortification_tech = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_fortify_the_hungarian_border
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = RJ_ROM_prepare_the_defenses }
+		relative_position_id = RJ_ROM_prepare_the_defenses
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			base = 3
+		}
+
+		available = {
+			controls_state = 82
+			controls_state = 83
+			controls_state = 76
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			82 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border_country = HUN
+					}
+				}
+			}
+			83 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border_country = HUN
+					}
+				}
+			}
+			76 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border_country = HUN
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_fortify_the_soviet_border
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = RJ_ROM_prepare_the_defenses }
+		relative_position_id = RJ_ROM_prepare_the_defenses
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			base = 3
+		}
+
+		available = {
+			controls_state = 78
+			controls_state = 766
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			78 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border_country = SOV
+					}
+				}
+			}
+			766 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border_country = SOV
+					}
+				}
 			}
 		}
 	}

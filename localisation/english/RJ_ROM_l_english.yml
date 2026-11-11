@@ -96,10 +96,16 @@
  RJ_ROM_baita_uranium_discovery_desc: "Miners at the Baita mine have made quite the discovery! They reported finding a strange yellow rock they'd never seen before. We dispatched some experts immediately upon hearing this, & they confirmed our suspicions: Uranium Ore! The applications & potential for this new resource are quite great indeed."
  RJ_ROM_initiate_the_rearmament_plans: "Initiate the Rearmament Plans"
  RJ_ROM_initiate_the_rearmament_plans_desc: "With the tensions rising in Europe, the general staff has pressured us to begin working on plans for rearmament, which we're about ready to enact now. Otherwise we may not be adequately prepared for the next war."
- RJ_ROM_the_traditional_model: "The Traditional Model"
- RJ_ROM_the_traditional_model_desc: "The Great War taught the powers of Europe about warfare on a much grander scale, but it emphasizes elements such as infantry & cavalry over modernized elements such as armor. This is adequate enough for us in any case."
+ RJ_ROM_the_traditional_model: "The French Model"
+ RJ_ROM_the_traditional_model_desc: "The Great War taught the powers of Europe about warfare on a much grander scale, but it emphasizes elements such as infantry & cavalry over modernized elements such as armor. The French in particular have developed some great insights from studying their Great War tactics, & we believe them to be the best for us as well."
  RJ_ROM_the_modern_model: "The Modern Model"
  RJ_ROM_the_modern_model_desc: "Warfare has evolved since the era of the Great War. This new era is rapidly developing around mobile warfare, using armored vehicles & rapid maneuvers rather than dug-in trench warfare. Either we adapt, or we fall."
+ RJ_ROM_prepare_the_defenses: "Prepare the Defenses"
+ RJ_ROM_prepare_the_defenses_desc: "To be ready for the next war, we must begin preparing to construct fortifications & readying our troops for a potential conflict on our soil. Our fortified positions will be set along the borders with the countries that we believe will be the most likely threats."
+ RJ_ROM_fortify_the_hungarian_border: "Fortify the Hungarian Border"
+ RJ_ROM_fortify_the_hungarian_border_desc: "Hungary poses a potential threat to us, especially if they decide that they should once again control Transylvania. We must set up our defenses immediately!"
+ RJ_ROM_fortify_the_soviet_border: "Fortify the Soviet Border"
+ RJ_ROM_fortify_the_soviet_border_desc: "The Soviets pose a real threat to us, with historic claims to some of our northern territories. Given much of their rhetoric, we must prepare for the potential of an invasion to take our land."
 
 
 
@@ -132,3 +138,4 @@
  RJ_ROM_idea_ford_bucaresti: "Ford Bucaresti"
  RJ_ROM_idea_industrial_research: "Industrial Research Funding"
  RJ_ROM_idea_rearmament_plan: "Rearmament Plan"
+ RJ_ROM_idea_prepare_the_defenses: "Prepare the Defenses"
