@@ -3553,7 +3553,7 @@ focus_tree = {
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = RJ_ROM_the_traditional_model }
 		relative_position_id = RJ_ROM_the_traditional_model
-		x = -2
+		x = -3
 		y = 1
 
 		cost = 7.2
@@ -3709,6 +3709,75 @@ focus_tree = {
 					province = {
 						all_provinces = yes
 						limit_to_border_country = SOV
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RJ_ROM_fortify_the_bulgarian_border
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = RJ_ROM_prepare_the_defenses }
+		relative_position_id = RJ_ROM_prepare_the_defenses
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			base = 3
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		available = {
+			controls_state = 77
+			controls_state = 46
+			controls_state = 81
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			77 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border_country = BUL
+					}
+				}
+			}
+			46 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border_country = BUL
+					}
+				}
+			}
+			81 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border_country = BUL
 					}
 				}
 			}
