@@ -1,0 +1,15 @@
+RJ_ROM_prepare_the_defenses_cat = {
+	icon = GFX_decision_generic_fortification
+
+	allowed = {
+		original_tag = ROM
+	}
+
+	visible = {
+		ROM = {
+			has_completed_focus = RJ_ROM_prepare_the_defenses
+		}
+	}
+
+	priority = 25
+}
