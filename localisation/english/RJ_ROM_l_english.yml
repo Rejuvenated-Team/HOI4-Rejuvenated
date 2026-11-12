@@ -102,12 +102,6 @@
  RJ_ROM_the_modern_model_desc: "Warfare has evolved since the era of the Great War. This new era is rapidly developing around mobile warfare, using armored vehicles & rapid maneuvers rather than dug-in trench warfare. Either we adapt, or we fall."
  RJ_ROM_prepare_the_defenses: "Prepare the Defenses"
  RJ_ROM_prepare_the_defenses_desc: "To be ready for the next war, we must begin preparing to construct fortifications & readying our troops for a potential conflict on our soil. Our fortified positions will be set along the borders with the countries that we believe will be the most likely threats."
- RJ_ROM_fortify_the_hungarian_border: "Fortify the Hungarian Border"
- RJ_ROM_fortify_the_hungarian_border_desc: "Hungary poses a potential threat to us, especially if they decide that they should once again control Transylvania. We must set up our defenses immediately!"
- RJ_ROM_fortify_the_soviet_border: "Fortify the Soviet Border"
- RJ_ROM_fortify_the_soviet_border_desc: "The Soviets pose a real threat to us, with historic claims to some of our northern territories. Given much of their rhetoric, we must prepare for the potential of an invasion to take our land."
- RJ_ROM_fortify_the_bulgarian_border: "Fortify the Bulgarian Border"
- RJ_ROM_fortify_the_bulgarian_border_desc: "The Tsar has been making concerning moves in recent times, which has us worried about Bulgarian intentions. Their historical claim on Dobrudja might be enough to push them to threats of war!"
 
 
 
@@ -147,10 +141,22 @@
 
 
 ########### MISC
+ RJ_ROM_fortifications_unlock_tt: "§YUnlocks Fortification Decisions!"
+
  RJ_ROM_carol_line_built: "Has built the Carol II Line"
+ RJ_ROM_sereth_reinforced: "Reinforced the Sereth Line"
+ RJ_ROM_bessarabia_fortified: "Fortified Bessarabia"
 
  RJ_ROM_prepare_the_defenses_cat: "Prepare the Defenses"
  RJ_ROM_carol_line: "Build the Carol II Line"
  RJ_ROM_carol_line_desc: "Hungary poses a potential threat to us, especially if they decide that they should once again control Transylvania. We must set up our defenses immediately!"
- RJ_ROM_improve_carol_line: "Improve the Carol II  Line"
+ RJ_ROM_improve_carol_line: "Improve the Carol II Line"
  RJ_ROM_improve_carol_line_desc: "The Carol II line is a good start, but we worry that we might have underestimated Hungary's strength. We should strengthent the fortifications as a precaution."
+ RJ_ROM_sereth_line: "Reinforce the Sereth Line"
+ RJ_ROM_sereth_line_desc: "The Sereth line & the subsequent Focsani gate were set up as a defensive line under the reign of Carol I, as a deterrent to potential invaders who would be forced to move through the lowlands east of the Carpathians. This is our best hope for defense if an enemy should breach our northern borders."
+ RJ_ROM_sereth_line_extension: "Extend the Sereth Line"
+ RJ_ROM_sereth_line_extension_desc: "Enemies may yet attempt to cross the Danube into northern Dabruja in the east. It would be best if we fortified this line as well, just in case."
+ RJ_ROM_fortify_bessarabia: "Fortify Bessarabia"
+ RJ_ROM_fortify_bessarabia_desc: "The Soviets are a very real potential threat to us, & it would be wise to shore up our border defenses with them, just in case they attempt to reassert old claims again."
+ RJ_ROM_reinforce_bessarabia: "Improve Bessarabian Fortifications"
+ RJ_ROM_reinforce_bessarabia_desc: "While the fortifications we've developed so far are respectable, the high command believes we can still achieve a better result. They recommend we add additional bunkers & some anti-air installations."

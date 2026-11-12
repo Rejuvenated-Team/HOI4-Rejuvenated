@@ -275,6 +275,21 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 4421;10234;sea;7010;-1;-1;-1;-1;;Bismarck-Bougainville
 4226;12265;sea;229;-1;-1;-1;-1;;Bougainville-Solomon Islands
 6322;185;sea;2107;-1;-1;-1;-1;;Kurzeme-Saaremaa
+3689;11655;impassable;-1;-1;-1;-1;-1;;Eastern Carpathians
+3689;11672;impassable;-1;-1;-1;-1;-1;;Eastern Carpathians
+711;11672;impassable;-1;-1;-1;-1;-1;;Eastern Carpathians
+711;3728;impassable;-1;-1;-1;-1;-1;;Eastern Carpathians
+9685;3728;impassable;-1;-1;-1;-1;-1;;Eastern Carpathians
+9685;11689;impassable;-1;-1;-1;-1;-1;;Eastern Carpathians
+727;11689;impassable;-1;-1;-1;-1;-1;;Eastern Carpathians
+727;9548;impassable;-1;-1;-1;-1;-1;;Eastern Carpathians
+727;3743;impassable;-1;-1;-1;-1;-1;;Eastern Carpathians
+690;11655;impassable;-1;-1;-1;-1;-1;;Eastern Carpathians
+690;11619;impassable;-1;-1;-1;-1;-1;;Eastern Carpathians
+690;660;impassable;-1;-1;-1;-1;-1;;Eastern Carpathians
+3676;660;impassable;-1;-1;-1;-1;-1;;Eastern Carpathians
+3676;6695;impassable;-1;-1;-1;-1;-1;;Eastern Carpathians
+9704;3743;impassable;-1;-1;-1;-1;-1;;Eastern Carpathians
 -1;-1;;-1;-1;-1;-1;-1;-1 
 #Start province ID;End province ID;Adjacency type;Through province ID;Starting X position;Starting Y position;Ending X position;Ending Y position;Adjacency rule;Comment
 
