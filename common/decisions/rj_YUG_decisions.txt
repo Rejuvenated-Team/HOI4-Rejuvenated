@@ -1,0 +1,61 @@
+YUG_developing_literacy_category = {
+    YUG_develop_the_literacy_decisions = {
+    icon = generic_political_action
+
+    fire_only_once = no
+
+    days_re_enable = 0
+
+    days_remove = 90
+
+    cost = 50
+
+    available = {
+        custom_trigger_tooltip = {
+            tooltip = YUG_we_havent_solved_literacy_tt 
+            OR = {
+                has_idea = YUG_severe_illiteracy
+                has_idea = YUG_severe_illiteracy_2
+                has_idea = YUG_severe_illiteracy_3
+                has_idea = YUG_severe_illiteracy_4
+            }
+        }
+    }
+
+    remove_effect = {
+
+        if = {
+            swap_ideas = {
+                remove_idea = YUG_severe_illiteracy
+                add_idea = YUG_severe_illiteracy_2
+            }
+        }
+
+        if = {
+            swap_ideas = {
+                remove_idea = YUG_severe_illiteracy_2
+                add_idea = YUG_severe_illiteracy_3
+            }
+        }
+
+        if = {
+            swap_ideas = {
+                remove_idea = YUG_severe_illiteracy_3
+                add_idea = YUG_severe_illiteracy_4
+            }
+        }
+        if_else = {
+            remove_ideas = YUG_severe_illiteracy_4
+        }
+    }
+
+    visible = {
+        OR = {
+            has_idea = YUG_severe_illiteracy
+            has_idea = YUG_severe_illiteracy_2
+            has_idea = YUG_severe_illiteracy_3
+            has_idea = YUG_severe_illiteracy_4
+        }
+    }
+  }
+}
