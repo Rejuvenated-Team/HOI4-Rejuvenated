@@ -1250,7 +1250,11 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			add_war_support = 0.1
+			swap_ideas = {
+				remove_idea = YUG_imro
+				add_idea = YUG_imro_2
+			}
 		}
 	}
 	focus = {
@@ -1275,7 +1279,8 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			
+			add_stability = -0.15
+			remove_ideas = YUG_imro
 		}
 	}
 	focus = {
