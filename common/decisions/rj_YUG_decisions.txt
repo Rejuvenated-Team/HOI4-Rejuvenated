@@ -24,27 +24,27 @@ YUG_developing_literacy_category = {
 
     remove_effect = {
 
-        if_else = {
+        if = {
             swap_ideas = {
                 remove_idea = YUG_severe_illiteracy
                 add_idea = YUG_severe_illiteracy_2
             }
         }
 
-        if_else = {
+        if = {
             swap_ideas = {
                 remove_idea = YUG_severe_illiteracy_2
                 add_idea = YUG_severe_illiteracy_3
             }
         }
 
-        if_else = {
+        if = {
             swap_ideas = {
                 remove_idea = YUG_severe_illiteracy_3
                 add_idea = YUG_severe_illiteracy_4
             }
         }
-        if_else = {
+        if = {
             remove_ideas = YUG_severe_illiteracy_4
         }
     }
