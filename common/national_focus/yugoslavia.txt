@@ -28,7 +28,7 @@ focus_tree = {
 
 		}
 
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_CZE_coalition_building
 		x = 12
 		y = 0
 		cost = 5
@@ -172,7 +172,7 @@ focus_tree = {
 
 		}
 
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_generic_befriend_hungary
 		x = -5
 		y = 1
 		cost = 5
@@ -213,7 +213,7 @@ focus_tree = {
 			}
 		}
 
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_goal_generic_forceful_treaty
 		x = -3
 		y = 1
 		cost = 5
@@ -241,7 +241,7 @@ focus_tree = {
 
 		}
 
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_chi_reach_out_to_france
 		x = 9
 		y = 1
 		cost = 5
@@ -266,7 +266,7 @@ focus_tree = {
 			
 		}
 
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
 		x = 11
 		y = 1
 		cost = 5
@@ -290,7 +290,7 @@ focus_tree = {
 
 		}
 
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_generic_little_entente
 		x = 0
 		y = 1
 		cost = 5
@@ -314,7 +314,7 @@ focus_tree = {
 
 		}
 
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_invite_romania
 		x = -4
 		y = 2
 		cost = 5
@@ -338,7 +338,7 @@ focus_tree = {
 
 		}
 
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_PER_increase_oil_sales
 		x = -2
 		y = 1
 		cost = 5
@@ -362,7 +362,7 @@ focus_tree = {
 
 		}
 
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_CZE_bohemia_crown
 		x = 1
 		y = 1
 		cost = 5
@@ -892,7 +892,7 @@ focus_tree = {
 
 		}
 
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_generic_attack_bulgaria
 		x = -1
 		y = 1
 		cost = 5
@@ -988,7 +988,7 @@ focus_tree = {
 
 		}
 
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_generic_attack_greece
 		x = 1
 		y = 1
 		cost = 5
@@ -1012,7 +1012,7 @@ focus_tree = {
 
 		}
 
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_generic_attack_romania
 		x = 0
 		y = 2
 		cost = 5
@@ -1038,7 +1038,7 @@ focus_tree = {
 			}
 		}
 
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_generic_attack_austria
 		x = 0
 		y = 2
 		cost = 5
@@ -1090,7 +1090,7 @@ focus_tree = {
 
 		}
 
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_attack_italy
 		x = -1
 		y = 1
 		cost = 5
@@ -1114,7 +1114,7 @@ focus_tree = {
 
 		}
 
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_generic_attack_turkey
 		x = 1
 		y = 1
 		cost = 5
@@ -1138,7 +1138,7 @@ focus_tree = {
 
 		}
 
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_CZE_federative_republic
 		x = 0
 		y = 2
 		cost = 10
@@ -1484,7 +1484,7 @@ focus_tree = {
 
 		}
 
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_ARG_anti_corruption_policies
 		x = -1
 		y = 1
 		cost = 5
