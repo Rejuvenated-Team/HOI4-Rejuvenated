@@ -3880,7 +3880,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = ITA_army_primacy_bba
-		cost = 10
+		cost = 7.2
 		available = {
 		}
 
@@ -8434,7 +8434,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = ITA_solid_progress
-		cost = 10
+		cost = 7.2
 		available = {
 		}
 
@@ -8978,7 +8978,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = ITA_triumph_in_africa_bba
-		cost = 10
+		cost = 7.2
 		available = {
 			has_country_leader = {
 				character = ITA_benito_mussolini
@@ -10993,7 +10993,7 @@ focus_tree = {
 		x = 0
 		y = 2
 
-		cost = 10
+		cost = 7.2
 		available = {}
 		
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -15982,7 +15982,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_potential_allies_in_the_balkans
-		cost = 10
+		cost = 7.2
 
 		bypass = {
 			is_faction_leader = yes
@@ -16082,7 +16082,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ITA_pact_of_steel
-		cost = 10
+		cost = 5
 
 		available = {
 			country_exists = JAP
