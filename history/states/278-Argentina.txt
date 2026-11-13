@@ -3,7 +3,7 @@ state = {
 	name = "STATE_278" # Pampas
 	manpower = 4406366
 	
-	state_category = metropolis
+	state_category = large_city
 
 	history = {
 
@@ -43,5 +43,5 @@ state = {
 		1555 1568 1596 1624 1639 4573 4602 4643 7621 10375 10390 10402 10418 12351 12364 12379 12394 12409 12494 12998 
 	}
 
-	local_supplies = 15.0 
+	local_supplies = 0.0 
 }

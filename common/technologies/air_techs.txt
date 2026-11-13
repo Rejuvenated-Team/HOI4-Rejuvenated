@@ -447,6 +447,7 @@ technologies = {
 
 		enable_equipments = {
 			fighter_equipment_3
+			
 		}
 		
 		path = {

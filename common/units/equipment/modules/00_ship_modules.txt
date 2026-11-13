@@ -1892,7 +1892,7 @@ equipment_modules = {
 
 	sub_ship_nuclear_engine_1 = {
 		abbreviation = "sbn"
-		category = sub_ship_engine
+		category = sub_ship_nuclear_engine
 		sfx = sfx_ui_sd_module_engine
 		
 		multiply_stats = {
@@ -2149,7 +2149,7 @@ equipment_modules = {
 	}
 	heavy_ship_nuclear_engine_1 = {
 		abbreviation = "sbn"
-		category = heavy_ship_engine
+		category = heavy_ship_nuclear_engine
 		sfx = sfx_ui_sd_module_engine
 
 		
@@ -2287,7 +2287,7 @@ equipment_modules = {
 	}
 	carrier_ship_nuclear_engine_1 = {
 		abbreviation = "sbn"
-		category = carrier_ship_engine
+		category = carrier_ship_nuclear_engine
 		sfx = sfx_ui_sd_module_engine
 
 		
@@ -2529,9 +2529,10 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			torpedo_attack = 56
+			torpedo_attack = 44
 			build_cost_ic = 520
 			naval_torpedo_hit_chance_factor = 0.05
+			reliability = -0.15
 		}
 
 		multiply_stats = {

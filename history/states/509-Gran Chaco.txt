@@ -3,7 +3,7 @@ state = {
 	name = "STATE_509" # Chaco Australis
 	manpower = 704241
 	
-	state_category = town
+	state_category = rural
 	
 	resources = {
 		tungsten = 30 # was: 46, then 35

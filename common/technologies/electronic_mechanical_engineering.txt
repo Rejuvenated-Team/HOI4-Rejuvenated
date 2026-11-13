@@ -17,7 +17,6 @@ technologies = {
 
 		# small boost to research speed
 		research_speed_factor = 0.04
-		special_project_speed_factor = 0.01
 		
 		path = {
 			leads_to_tech = radio 
@@ -884,7 +883,6 @@ technologies = {
 
 		# small boost to research speed
 		research_speed_factor = 0.05
-		special_project_speed_factor = 0.02
 		
 		path = {
 			leads_to_tech = computing_machine 
@@ -922,7 +920,6 @@ technologies = {
 
 		# small boost to research speed
 		research_speed_factor = 0.06
-		special_project_speed_factor = 0.03
 		
 		path = {
 			leads_to_tech = improved_computing_machine 
@@ -975,7 +972,6 @@ technologies = {
 
 		# small boost to research speed
 		research_speed_factor = 0.08
-		special_project_speed_factor = 0.03
 		enable_equipment_modules = {
 			stabilizer
 			bomb_sights_2
@@ -1038,7 +1034,6 @@ technologies = {
 
 		# small boost to research speed
 		research_speed_factor = 0.08
-		special_project_speed_factor = 0.04
 		
 		path = {
 			leads_to_tech = advanced_encryption 
@@ -1092,7 +1087,6 @@ technologies = {
 
 		# small boost to research speed
 		research_speed_factor = 0.1
-		special_project_speed_factor = 0.06
 		
 		path = {
 			leads_to_tech = advanced_next_gen_computing_machine
@@ -1134,7 +1128,6 @@ technologies = {
 
 		# small boost to research speed
 		research_speed_factor = 0.12
-		special_project_speed_factor = 0.08
 		
 		path = {
 			leads_to_tech = modern_computing_machine
@@ -1176,7 +1169,6 @@ technologies = {
 
 		# small boost to research speed
 		research_speed_factor = 0.12
-		special_project_speed_factor = 0.08
 		
 		research_cost = 2.4
 		start_year = 1948
@@ -2253,14 +2245,13 @@ technologies = {
 	atomic_research = {
 
 		research_speed_factor = 0.08
-		special_project_speed_factor = 0.05
 		
 		#path = {
 		#	leads_to_tech = nuclear_reactor 
 		#	research_cost_coeff = 1
 		#}
 		
-		start_year = 1939
+		start_year = 1940
 		research_cost = 4
 		
 		folder = {

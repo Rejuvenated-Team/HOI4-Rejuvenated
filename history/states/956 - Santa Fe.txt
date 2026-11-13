@@ -7,7 +7,7 @@ state = {
 		oil = 6
 	}
 	
-	state_category = city
+	state_category = town
 
 	history = {
 
@@ -35,5 +35,5 @@ state = {
 		2172 5163 7500 8208 10985 10975 13000
 	}
 
-	local_supplies = 6.0 
+	local_supplies = 0.0 
 }

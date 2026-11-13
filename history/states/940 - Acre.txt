@@ -4,7 +4,7 @@ state = {
 	name = "STATE_940"
 	manpower = 463559
 	
-	state_category = town
+	state_category = pastoral
 	
 	resources = {
 		rubber = 12
@@ -30,5 +30,5 @@ state = {
 		13278 13279 13280
 	}
 
-	local_supplies = 4.0 
+	local_supplies = 0.0 
 }
