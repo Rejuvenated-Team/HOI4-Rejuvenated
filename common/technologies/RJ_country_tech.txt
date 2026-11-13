@@ -15,10 +15,20 @@ technologies = {
 				attack = 0.1
 				movement = 0.2
 			}
+			forest = {
+				defence = 0.2
+				attack = 0.1
+				movement = 0.2
+			}
 		}
 
 		category_all_armor = {
 			jungle = {
+				defence = 0.2
+				attack = 0.1
+				movement = 0.2
+			}
+			forest = {
 				defence = 0.2
 				attack = 0.1
 				movement = 0.2
@@ -31,10 +41,20 @@ technologies = {
 				attack = 0.1
 				movement = 0.2
 			}
+			forest = {
+				defence = 0.2
+				attack = 0.1
+				movement = 0.2
+			}
 		}
 
 		armored_car = {
 			jungle = {
+				defence = 0.2
+				attack = 0.1
+				movement = 0.2
+			}
+			forest = {
 				defence = 0.2
 				attack = 0.1
 				movement = 0.2
@@ -47,10 +67,20 @@ technologies = {
 				attack = 0.1
 				movement = 0.2
 			}
+			forest = {
+				defence = 0.2
+				attack = 0.1
+				movement = 0.2
+			}
 		}
 
 		mechanized = {
 			jungle = {
+				defence = 0.2
+				attack = 0.1
+				movement = 0.2
+			}
+			forest = {
 				defence = 0.2
 				attack = 0.1
 				movement = 0.2
@@ -62,6 +92,11 @@ technologies = {
 				defence = 0.2
 				attack = 0.1
 				movement = 0.2
+			}
+			forest = {
+				defence = 0.15
+				attack = 0.1
+				movement = 0.15
 			}
 		}
 
