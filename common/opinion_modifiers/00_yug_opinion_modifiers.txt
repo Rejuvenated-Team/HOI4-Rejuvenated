@@ -1,5 +1,0 @@
-opinion_modifiers = {
-    YUG_distance_from_the_little_entente_opinion = {
-        value = -50
-    }
-}
