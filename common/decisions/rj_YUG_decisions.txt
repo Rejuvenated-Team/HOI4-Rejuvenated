@@ -24,21 +24,21 @@ YUG_developing_literacy_category = {
 
     remove_effect = {
 
-        if_else = {
+        if = {
             swap_ideas = {
                 remove_idea = YUG_severe_illiteracy
                 add_idea = YUG_severe_illiteracy_2
             }
         }
 
-        if_else = {
+        if = {
             swap_ideas = {
                 remove_idea = YUG_severe_illiteracy_2
                 add_idea = YUG_severe_illiteracy_3
             }
         }
 
-        if_else = {
+        if = {
             swap_ideas = {
                 remove_idea = YUG_severe_illiteracy_3
                 add_idea = YUG_severe_illiteracy_4
@@ -50,7 +50,7 @@ YUG_developing_literacy_category = {
     }
 
     visible = {
-        NOT = {
+        OR = {
             has_idea = YUG_severe_illiteracy
             has_idea = YUG_severe_illiteracy_2
             has_idea = YUG_severe_illiteracy_3
