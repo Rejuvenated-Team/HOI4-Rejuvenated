@@ -4677,7 +4677,7 @@
 		completion_reward = {
 			add_popularity = {
 				ideology = communism
-				popularity = 0.5
+				popularity = 0.05
 			}
 			add_political_power = 25
 		}
