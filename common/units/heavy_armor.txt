@@ -24,14 +24,14 @@ sub_units = {
 
 
 		forest = {
-		    attack = -0.15
+		    attack = -0.05
 			movement = -0.35
 		}
 		mountain = 	{
-		    attack = -0.10
+		    attack = -0.05
 		}
 		jungle = {
-		    attack = -0.25
+		    attack = -0.15
 			movement = -0.4
 		}
 		marsh = {

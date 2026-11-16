@@ -40,12 +40,12 @@ sub_units = {
 		suppression = 1.25
 
 		forest = {
-		    attack = -0.2
-			movement = -0.4
+		    attack = -0.05
+			movement = -0.10
 		}
 		jungle = {
-		    attack = -0.3
-			movement = -0.4
+		    attack = -0.10
+			movement = -0.15
 		}
 		marsh = {
 			movement = -0.1
@@ -98,12 +98,12 @@ sub_units = {
 		suppression = 1.5
 
 		forest = {
-		    attack = -0.3
-			movement = -0.4
+		    attack = -0.1
+			movement = -0.2
 		}
 		jungle = {
-		    attack = -0.4
-			movement = -0.4
+		    attack = -0.15
+			movement = -0.25
 		}
 		marsh = {
 		    attack = -0.1 
@@ -158,12 +158,12 @@ sub_units = {
 		suppression = 1.5
 
 		forest = {
-		    attack = -0.30
-			movement = -0.40
+		    attack = -0.15
+			movement = -0.20
 		}
 		jungle = {
-		    attack = -0.4
-			movement = -0.4
+		    attack = -0.2
+			movement = -0.25
 		}
 		marsh = {
 			movement = -0.2
@@ -219,12 +219,12 @@ sub_units = {
 		suppression = 1.25
 
 		forest = {
-		    attack = -0.4
-			movement = -0.4
+		    attack = -0.2
+			movement = -0.25
 		}
 		jungle = {
-		    attack = -0.5
-			movement = -0.4
+		    attack = -0.25
+			movement = -0.30
 		}
 		marsh = {
 			movement = -0.2
@@ -282,8 +282,8 @@ sub_units = {
 		suppression = 1.5
 
 		forest = {
-		    attack = -0.3
-			movement = -0.4
+		    attack = -0.1
+			movement = -0.2
 		}
 		hills = 	{
 		    attack = -0.1
@@ -298,10 +298,6 @@ sub_units = {
 		marsh = {
 		    attack = -0.1 
 			movement = -0.1
-		}
-		urban = {
-			attack = -0.4
-			defence = -0.1
 		}
 		river = { 
 			attack = -0.2 

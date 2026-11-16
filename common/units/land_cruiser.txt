@@ -32,20 +32,20 @@ sub_units = {
 
 		#Size Definitions
 		manpower = 1000 #SH: 500 / Infantry: 1000
-		max_organisation = 60 #SH: 10 / Infantry: 60
-		default_morale = 0.3 #SH: 0.3 / Infantry: 0.3
-		max_strength = 15 #SH: 2 / Infantry: 25
+		max_organisation = 80 #SH: 10 / Infantry: 60
+		default_morale = 0.5 #SH: 0.3 / Infantry: 0.3
+		max_strength = 25 #SH: 2 / Infantry: 25
 
-		training_time = 250 #SH: 180 / Infantry: 90
+		training_time = 200 #SH: 180 / Infantry: 90
 		weight = 2 #SH: 1 / Infantry: 0.5
 		
 		supply_consumption = 0.6 #SH: 0.4 / Infantry: 0.06
 		
-		suppression = 4 #SH: 2.5 / Infantry: 1.5
+		suppression = 10 #SH: 2.5 / Infantry: 1.5
 		
 		forest = {
-			attack = -0.2
-			defence = -0.2
+			attack = -0.15
+			defence = 0.2
 			movement = -0.2
 		}
 		hills = {
@@ -53,28 +53,26 @@ sub_units = {
 		}
 		mountain = 	{
 			attack = -0.15
-			defence = -0.1
 			movement = -0.3
 		}
 		jungle = {
-			attack = -0.3
-			defence = -0.3
-			movement = -0.35
+			attack = -0.20
+			defence = 0.3
+			movement = -0.3
 		}
 		marsh = {
-			defence = -0.1
 			movement = -0.5
 		}
 		river = { 
-			attack = -0.25
-			movement = -0.5
+			attack = -0.10
+			movement = -0.25
 		}
 		amphibious = { 
 			attack = -0.5
 		}
 		fort = {
 			attack = 0.5
-			defence = 0.25
+			defence = 0.5
 		}
 	}
 }

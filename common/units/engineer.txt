@@ -74,6 +74,7 @@ sub_units = {
 
 		jungle = {
 			defence = 0.25
+			movement = 0.10
 		}
 
 		marsh = {
