@@ -9,6 +9,7 @@ if = {
 			engines_1 = 1
 			aa_lmg = 1
 			aircraft_construction = 1
+			photo_reconnaisance = 1
 		}
 	else = {
 		set_oob = "SWI_1936"
@@ -19,6 +20,8 @@ if = {
 		}
 	}
 }
+
+set_grand_doctrine = new_battlefield_support
 
 set_research_slots = 4
 
