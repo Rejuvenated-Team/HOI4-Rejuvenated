@@ -14,7 +14,7 @@ set_convoys = 200
 
 set_stability = 0.4
 set_war_support = 0.2
-set_research_slots = 3
+set_research_slots = 4
 
 ###### Country Leaders ######
 recruit_character = BRA_getulio_vargas
@@ -111,6 +111,8 @@ set_technology = {
 	fuel_silos = 1
 	tech_trucks = 1	
 	basic_train = 1
+	steelworks_tech = 1
+	sonar = 1
 }
 if = {
 	limit = { has_dlc = "By Blood Alone" }
@@ -131,6 +133,15 @@ if = {
 			early_transport_plane = 1
 			CAS1 = 1
 		}
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
 	}
 }
 
@@ -171,6 +182,9 @@ IF = {
 	}
 	set_technology = {
 		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		armor_tech_1 = 1
+		engine_tech_1 = 1
 	}
 }
 IF = {
@@ -179,6 +193,7 @@ IF = {
 	}
 	set_technology = {
 		gwtank = 1
+		basic_light_tank = 1
 	}
 }
 
@@ -292,5 +307,28 @@ IF = {
 			fixed_ship_engine_slot = sub_ship_engine_2
 			rear_1_custom_slot = ship_mine_layer_sub
 		}
+	}
+}
+
+IF = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	create_equipment_variant = {
+		name = "FT mod. 31"
+		type = light_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 1
+			tank_nsb_armor_upgrade = 2
+		}
+		obsolete = yes
 	}
 }

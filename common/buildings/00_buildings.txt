@@ -97,7 +97,7 @@ buildings = {
 
 	supply_node = {
 		show_on_map = 1
-		base_cost = 10000
+		base_cost = 8000
 		disabled_in_dmz = yes
 		icon_frame = 15
 		centered = yes
@@ -152,7 +152,7 @@ buildings = {
 		show_on_map = 1
 		show_on_map_meshes = 3
 		always_shown = yes
-		base_cost = 3500
+		base_cost = 2500
 		per_level_extra_cost = 150
 		spawn_point = naval_base_spawn 
 		only_costal = yes
@@ -285,7 +285,7 @@ buildings = {
 
 	fuel_silo = {
 		show_on_map = 1
-		base_cost = 5000
+		base_cost = 2000
 		icon_frame = 14
 		value = 5
 		infrastructure_construction_effect = yes
@@ -322,7 +322,7 @@ buildings = {
 		dlc_allowed = { has_dlc = Gotterdammerung }
 		hide_if_missing_tech = yes
 		show_on_map = 1
-		base_cost = 18000
+		base_cost = 15000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 24
 		value = 1
@@ -368,7 +368,7 @@ buildings = {
 		building_prerequisite = {
 			building_dependency = {
 				building = naval_base
-				level = 8
+				level = 6
 			}
 		}
 		level_cap = {
@@ -730,6 +730,7 @@ buildings = {
 		}
 		state_modifiers = {
 			local_factory_energy_consumption_per_infrastructure = -0.075
+			state_production_speed_buildings_factor = 0.3
 		}
 	}
 	

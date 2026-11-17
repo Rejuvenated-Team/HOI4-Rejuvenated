@@ -3,7 +3,7 @@ state = {
 	name = "STATE_496" # Minas Gerais
 	manpower = 3603600
 	
-	state_category = town
+	state_category = city
 	
 	resources = {
 		steel = 180
@@ -24,7 +24,7 @@ state = {
 		}
 
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 			industrial_complex = 1
 		}
 		
@@ -33,5 +33,5 @@ state = {
 	provinces = { 4570 5223 7589 8233 10931 12903 12909 12938 10945 12977 2167 7476 8148 12923 2190 2218 12438 10360 8210 12479 2185 8226 12334
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 6.0 
 }

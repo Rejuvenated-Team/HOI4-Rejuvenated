@@ -16089,6 +16089,7 @@ leader_traits = {
 	air_chief_ground_support_1 = {  # Air superiority impact on land units improved by 5%
 		sprite = 2
 		army_bonus_air_superiority_factor = 0.05
+		ground_attack_factor = 0.03
 		experience_gain_air = @chief_experience_gain_low
 
 		command_cap_increase = @tier1_cp_cap_increase
@@ -16106,6 +16107,7 @@ leader_traits = {
 	air_chief_ground_support_2 = {  # Air superiority impact on land units improved by 10%
 		sprite = 2
 		army_bonus_air_superiority_factor = 0.1
+		ground_attack_factor = 0.05
 		experience_gain_air = @chief_experience_gain_medium
 
 		command_cap_increase = @tier2_cp_cap_increase
@@ -16123,6 +16125,7 @@ leader_traits = {
 	air_chief_ground_support_3 = {  # Air superiority impact on land units improved by 15%
 		sprite = 2
 		army_bonus_air_superiority_factor = 0.15
+		ground_attack_factor = 0.10
 		experience_gain_air = @chief_experience_gain_high
 
 		command_cap_increase = @tier3_cp_cap_increase
