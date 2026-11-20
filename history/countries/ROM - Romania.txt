@@ -52,6 +52,47 @@ if = {
 	}
 }
 
+set_research_slots = 4
+set_stability = 0.6
+set_war_support = 0.6
+
+if = {
+	limit = {
+		#has_dlc = Battle for the Bosporus
+	}
+	add_opinion_modifier = { 
+		target = GRE
+		modifier = BFTB_balkan_pact_ally
+	}
+	add_opinion_modifier = { 
+		target = TUR
+		modifier = BFTB_balkan_pact_ally
+	}
+	add_opinion_modifier = { 
+		target = YUG
+		modifier = BFTB_balkan_pact_ally
+	}
+	add_opinion_modifier = { 
+		target = BUL
+		modifier = BFTB_balkan_pact_enemy
+	}
+	add_opinion_modifier = { 
+		target = HUN
+		modifier = BFTB_incongruous_neighbors
+	}
+}
+
+#Ideas
+add_ideas = {
+	neutrality_idea
+	ROM_king_carol_ii_hedonist
+	RJ_ROM_idea_depression_remnant
+}
+give_guarantee = CZE
+give_guarantee = GRE
+give_guarantee = TUR
+give_guarantee = YUG
+
 set_variable = { RJ_ROM_prin_noi_insine_dm_global_building_slots_factor = 0 }
 set_variable = { RJ_ROM_prin_noi_insine_dm_consumer_goods_factor = 0 }
 set_variable = { RJ_ROM_prin_noi_insine_dm_conversion_cost_civ_to_mil_factor = 0 }
@@ -86,14 +127,15 @@ set_variable = { RJ_ROM_prin_noi_insine_dm_production_factory_max_efficiency_fac
 set_variable = { RJ_ROM_prin_noi_insine_dm_trade_opinion_factor = 0 }
 set_variable = { RJ_ROM_prin_noi_insine_dm_min_export = 0 }
 
-set_research_slots = 4
-set_stability = 0.6
-set_war_support = 0.6
-
 recruit_character = ROM_gheorghe_tatarescu
 recruit_character = ROM_constantin_ion_parhon
-recruit_character = ROM_armand_calinescu
 recruit_character = ROM_corneliu_codreanu
+recruit_character = ROM_boris_stefanov
+recruit_character = ROM_ana_pauker
+recruit_character = ROM_constantin_bratianu
+recruit_character = ROM_horia_sima
+recruit_character = ROM_carol_ii
+recruit_character = ROM_armand_calinescu
 recruit_character = ROM_petre_dumitrescu
 recruit_character = ROM_ion_antonescu
 recruit_character = ROM_ioan_mihail_racovita
@@ -114,8 +156,28 @@ recruit_character = ROM_gheorghe_gheorghiu_dej
 recruit_character = ROM_mihail_sturdza
 recruit_character = ROM_gheorghe_argeseanu
 recruit_character = ROM_king_michael
+recruit_character = ROM_regency_council
 recruit_character = ROM_octavian_goga
-recruit_character = RJ_ROM_nicolae_malaxa
+recruit_character = ROM_nicolae_malaxa
+
+if = {
+	limit = {
+		has_start_date < 1936.1.2
+	}
+	country_event = {
+		id = BA_romania.13
+		days = 128
+	}
+	country_event = {
+		id = BA_romania_flavour.6
+		days = 2778
+	}
+}
+
+add_breakthrough_progress = {
+	specialization = specialization_air
+	value = 0.4	#solid theoretical work by scientists, industry greatly lacking behind though
+}
 
 # Starting tech
 set_technology = {
@@ -174,71 +236,8 @@ if = {
 	}
 }
 
-#Ideas
-if = {
-	limit = {
-		has_dlc = "Death or Dishonor"
-	}
-	add_ideas = {
-		ROM_king_carol_ii_hedonist
-	}
-	give_guarantee = CZE
-	give_guarantee = GRE
-	give_guarantee = TUR
-	give_guarantee = YUG
-}
-if = {
-	limit = {
-		AND = {  
-			NOT = { has_dlc = "Death or Dishonor" }
-			has_dlc = "Battle for the Bosporus"
-		}
-	}
-	give_guarantee = GRE
-	give_guarantee = TUR
-	give_guarantee = YUG
-}
-add_ideas = neutrality_idea
-add_ideas = RJ_ROM_idea_depression_remnant
-
 #Kick off kings crazy life
-if = {
-	limit = {
-		has_dlc = "Death or Dishonor"
-	}
-	ROM = {
-		#Pick from list of the sane events first
-		random_list = {
-			100 = { country_event = { id = DOD_romania.81 days = 2 random_days = 20 } }
-		}
-	}
-}
-
-if = {
-	limit = {
-		#has_dlc = Battle for the Bosporus
-	}
-	add_opinion_modifier = { 
-		target = GRE
-		modifier = BFTB_balkan_pact_ally
-	}
-	add_opinion_modifier = { 
-		target = TUR
-		modifier = BFTB_balkan_pact_ally
-	}
-	add_opinion_modifier = { 
-		target = YUG
-		modifier = BFTB_balkan_pact_ally
-	}
-	add_opinion_modifier = { 
-		target = BUL
-		modifier = BFTB_balkan_pact_enemy
-	}
-	add_opinion_modifier = { 
-		target = HUN
-		modifier = BFTB_balkan_pact_enemy
-	}
-}
+country_event = { id = DOD_romania.81 days = 2 random_days = 20 }
 
 set_convoys = 10
 
@@ -254,6 +253,51 @@ set_popularities = {
 	communism = 2
 	neutrality = 20
 }
+### INFANTRY VARIANTS ###
+if = {
+	limit = {
+		has_dlc = "To The Bitter End"
+	}
+	create_equipment_variant = {
+		type = infantry_equipment_1
+		design_team = mio:ROM_cugir_organization_ba
+		show_position = no
+		mark_older_equipment_obsolete = yes
+	}
+	else = {
+		create_equipment_variant = {
+			type = infantry_equipment_1
+			design_team = mio:ROM_cugir_organization
+			show_position = no
+			mark_older_equipment_obsolete = yes
+		}
+	}
+}
+create_equipment_variant = {
+	type = motorized_equipment_1
+	design_team = mio:USA_ford_motor_company_organization
+	show_position = no
+	mark_older_equipment_obsolete = yes
+}
+create_equipment_variant = {
+	type = artillery_equipment_1
+	design_team = mio:ROM_resita_works_organization
+	show_position = no
+	mark_older_equipment_obsolete = yes
+}
+create_equipment_variant = {
+	type = train_equipment_1
+	design_team = mio:ROM_malaxa_organization_ba
+	show_position = no
+	mark_older_equipment_obsolete = yes
+}
+create_equipment_variant = {
+	type = anti_air_equipment_1
+	design_team = mio:ROM_resita_works_organization
+	show_position = no
+	mark_older_equipment_obsolete = yes
+}
+
 
 ### VARIANTS ###
 # 1936 Start #
@@ -295,8 +339,8 @@ if = {
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = ship_mine_layer_sub
+			fixed_ship_engine_slot = sub_ship_engine_2
+			rear_1_custom_slot = ship_torpedo_sub_1 #accurate to the original design
 		}
 	}
 	# Destroyers #

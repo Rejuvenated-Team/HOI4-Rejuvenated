@@ -25,7 +25,16 @@ state = {
 			infrastructure = 3
 			arms_factory = 3
 			industrial_complex = 1
-			air_base = 3
+			air_base = 4
+
+			9617 = {
+				landmark_arcul_de_triumf = {
+					allowed = {
+						has_dlc = "To The Bitter End"
+					}
+					level = 1
+				}
+			}
 		}
 		
 	}

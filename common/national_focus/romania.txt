@@ -452,8 +452,8 @@ focus_tree = {
 				tooltip = production_speed_industrial_complex_factor_tt
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = RJ_ROM_nicolae_malaxa
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = ROM_Malaxa_industrial
 			
 		}
 	}
@@ -512,6 +512,13 @@ focus_tree = {
 				type = steel
 				amount = 8
 				state = 82
+			}
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				unlock_military_industrial_organization_tooltip = mio:ROM_astra_works_organization
 			}
 		}
 	}
@@ -975,7 +982,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_preserve_greater_romania
-		icon = GFX_focus_rom_preserve_romania
+		icon = GFX_focus_ROM_in_defense_of_greater_romania
 		mutually_exclusive = { focus = ROM_balkans_dominance }
 		x = 3
 		y = 0
@@ -2489,7 +2496,7 @@ focus_tree = {
 	
 	focus = {
 		id = ROM_crack_down_on_extremism
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_AUS_lawmaking_leniency
 		prerequisite = { focus = ROM_institute_royal_dictatorship }
 		x = 3
 		y = 1
@@ -3459,7 +3466,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_army_maneuvers
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_focus_ROM_kickstart_the_ten_year_modernization_plan
 		x = 32
 		y = 0
 
@@ -4184,7 +4191,7 @@ focus_tree = {
 
 	focus = {
 		id = RJ_ROM_expand_the_galati_shipyards
-		icon = GFX_goal_generic_construct_naval_dockyard
+		icon = GFX_focus_ROM_invest_in_galati_shipyards
 		prerequisite = { focus = RJ_ROM_ministry_of_air_and_navy }
 		relative_position_id = RJ_ROM_ministry_of_air_and_navy
 		x = 4
@@ -5011,7 +5018,7 @@ focus_tree = {
 
 	focus = {
 		id = RJ_ROM_industria_aeronautica_romania_investments
-		icon = GFX_focus_generic_aircraft_production
+		icon = GFX_focus_ROM_new_iar_production_facilities
 		prerequisite = { focus = RJ_ROM_design_our_own_aircraft }
 		relative_position_id = RJ_ROM_design_our_own_aircraft
 		x = 0

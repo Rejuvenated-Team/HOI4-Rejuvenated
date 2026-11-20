@@ -4,14 +4,15 @@ state={
 	manpower = 474600
 
 	resources = {
-		coal = 1 #initial distribution
+		coal = 2 #initial distribution
 	}
 	
-	state_category = large_city
+	state_category = town
 	
-	history = {
+	history=
+	{
 		victory_points = {
-			577 1 
+			577 5 
 		}
 		owner = ROM
 		buildings = {
@@ -21,7 +22,9 @@ state={
 		add_core_of = ROM
 		add_core_of = UKR
 	}
-	provinces = { 577 9548 }
+	provinces={
+		577 9548
+	}
 
-	local_supplies = 8.0 
+	local_supplies=2.0 
 }
