@@ -23,6 +23,7 @@ IF = {
 	set_variable = { ETH_buy_arms_from_host_cost = 20 }
 
 	set_variable = { ETH_re_enable_time_international_actions = 30 } # Timer for various interaction decisions
+	add_ideas = war_economy
 
 
 	### Set variables for Dynamic Modifiers

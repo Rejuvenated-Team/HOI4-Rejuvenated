@@ -30,6 +30,7 @@
  RJ_ETH_traditional_warfare_tt: "Modify §YTraditional Warfare§! by:"
  RJ_ETH_corrupt_b_tt: "Modify §YCorrupt Bureaucracy§! by:"
  RJ_ETH_army_tt: "Modify §YTraditional Warfare§! by:"
+ RJ_ETH_airforce_tt: "Modify §YAirforce in Infancy§! by:"
  
  air_equipment_upgrade_xp_cost_tt: " $MODIFIER_AIR_EQUIPMENT_UPGRADE_XP_COST$: $RIGHT|-=%1$"
  land_equipment_upgrade_xp_cost_tt: " $MODIFIER_LAND_EQUIPMENT_UPGRADE_XP_COST$: $RIGHT|-=%1$"

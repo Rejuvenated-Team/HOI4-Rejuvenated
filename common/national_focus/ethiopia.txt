@@ -500,7 +500,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ETH_university_of_capital
-		cost = 10
+		cost = 7.2
 		available = {
 		}
 		ai_will_do = {
@@ -1074,7 +1074,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ETH_debre_zeyit_air_force_training_center
-		 icon = GFX_goal_generic_build_airforce
+		icon = GFX_focus_generic_pilot_training
 		prerequisite = { focus = ETH_copy_plane_designs }
 
 		x = 0
@@ -1103,7 +1103,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ETH_purchase_obsolete_ships
-		 icon = GFX_focus_generic_navy_battleship2
+		icon = GFX_focus_generic_navy_battleship2
 		prerequisite = { focus = ETH_asmera_naval_college }
 
 		x = 0
@@ -1220,6 +1220,7 @@ focus_tree = {
 			ETH_improve_airforce_spirit_effect = yes 
 		}
 	}
+
 	focus = {
 		id = ETH_ethiopian_officers
 		icon = GFX_goal_generic_air_doctrine
@@ -1250,6 +1251,40 @@ focus_tree = {
 			ETH_improve_airforce_spirit_effect = yes 
 		}
 	}
+
+	focus = {
+		id = RJ_ETH_professional_training_program
+		icon = GFX_focus_CHI_formalise_training_regime
+		prerequisite = { focus = ETH_ethiopian_officers }
+		prerequisite = { focus = ETH_bring_in_foreign_advisors}
+		x = 1
+		y = 1
+		relative_position_id = ETH_ethiopian_officers
+		cost = 7.2
+		dynamic = yes 
+		available = {
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.25
+				has_government = neutrality
+				has_completed_focus = ETH_the_lion_stands_firm
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = RJ_ETH_airforce_tt
+			add_to_variable = {	ETH_airforce_air_accidents_factor = -0.1 tooltip = air_accidents_factor_tt }
+			add_to_variable = { ETH_airforce_air_doctrine_cost_factor = -0.25 tooltip = air_doctrine_cost_factor_tt }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			swap_ideas = {
+				remove_idea = ETH_ethiopian_officers_idea
+				add_idea = ETH_ethiopian_officers_idea_2
+			}
+		}
+	}
+
 	focus = {
 		id = ETH_promote_the_war_heroes
 		icon = GFX_focus_ETH_promote_the_war_heroes
@@ -2732,7 +2767,7 @@ focus_tree = {
  				idea = ETH_war_support_idea
  				days = 180
  			}
- 			add_manpower = 10000
+ 			add_manpower = 20000
  		}
  	}
  	focus = {
@@ -3809,6 +3844,7 @@ focus_tree = {
 			# Eritrea: state = 550
 		}
 	}
+
 	focus = {
 		id = ETH_the_ferengi
 		icon = GFX_focus_generic_commonwealth_build_infantry
@@ -3817,7 +3853,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = ETH_addressing_the_league_of_nations
-		cost = 10
+		cost = 7.2
 		ai_will_do = {
 			base = 1
 		}
@@ -3840,6 +3876,7 @@ focus_tree = {
 
 		}
 	}
+
 	focus = {
 		id = ETH_recruit_from_the_african_diaspora
 		icon = GFX_focus_generic_support_the_left_right
@@ -4130,7 +4167,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ETH_the_ferengi
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -7664,7 +7701,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ETH_declare_for_italy
-		cost = 10
+		cost = 7.2
 		available = {
 			has_civil_war = no
 		}
@@ -7691,7 +7728,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = ETH_restore_the_country
-		cost = 10
+		cost = 5
 		available = {
 			is_subject_of = ITA
 		}
@@ -7739,7 +7776,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ETH_restore_the_country
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -7801,7 +7838,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = ETH_restore_the_country
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -7856,7 +7893,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ETH_invite_italian_settlers
-		cost = 10
+		cost = 7.2
 		available = {
 			is_subject_of = ITA
 			ITA = {
@@ -8025,7 +8062,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ETH_the_capital_victory_parade
-		cost = 10
+		cost = 5
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = ETH_france_divided_tt
@@ -8048,6 +8085,7 @@ focus_tree = {
 			custom_effect_tooltip = ETH_exploit_french_weakness_tt
 		}
 	}
+
 	focus = {
 		id = ETH_invite_italian_investors
 		icon = GFX_goal_generic_intelligence_exchange
@@ -8056,7 +8094,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = ETH_amedeos_feast_of_maskal
-		cost = 10
+		cost = 7.2
 		available = {
 			is_subject_of = ITA
 			ITA = {
@@ -8074,9 +8112,10 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			add_offsite_building = { type = industrial_complex level = 2 }
+			add_offsite_building = { type = industrial_complex level = 3 }
 		}
 	}
+
 	focus = {
 		id = ETH_italian_general_staff
 		icon = GFX_focus_generic_military_mission
@@ -8085,7 +8124,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ETH_amedeos_feast_of_maskal
-		cost = 10
+		cost = 5
 		available = {
 			is_subject_of = ITA
 			ITA = {
@@ -8113,6 +8152,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = ETH_cooperation
 		icon = GFX_goal_generic_improve_relations
@@ -8121,7 +8161,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ETH_amedeos_feast_of_maskal
-		cost = 10
+		cost = 7.2
 		available = {
 		}
 
@@ -8130,7 +8170,7 @@ focus_tree = {
 		completion_reward = {
 			add_offsite_building = {
 				type = industrial_complex
- 	  			level = 2
+ 	  			level = 3
 			}
 			IF = {
 				limit = {is_or_will_be_jimma = yes}
@@ -8148,6 +8188,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = ETH_reinforce_dynamic_identity 
 		icon = GFX_goal_generic_propaganda
@@ -8156,7 +8197,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ETH_assertiveness
-		cost = 10
+		cost = 7.2
 		available = {
 		}
 
@@ -8176,6 +8217,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = ETH_underground_wargames
 		icon = GFX_goal_generic_cavalry
@@ -8184,7 +8226,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = ETH_assertiveness
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -8195,6 +8237,7 @@ focus_tree = {
 			add_offsite_building = { type = arms_factory level = 1 }
 		}
 	}
+
 	focus = {
 		id = ETH_adopt_the_lira
 		icon = GFX_focus_ETH_adopt_the_lira
@@ -8203,7 +8246,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ETH_invite_italian_investors
-		cost = 10
+		cost = 7.2
 		available = {
 			is_subject_of = ITA
 			ITA = {
@@ -8226,6 +8269,7 @@ focus_tree = {
 			add_offsite_building = { type = industrial_complex level = 2 }
 		}
 	}
+
 	focus = {
 		id = ETH_request_italian_equipment
 		icon = GFX_goal_generic_small_arms
@@ -8234,7 +8278,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ETH_italian_general_staff
-		cost = 10
+		cost = 5
 		available = {
 			is_subject_of = ITA
 			ITA = {
@@ -8259,6 +8303,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = ETH_recruit_mercenaries
 		icon = GFX_goal_generic_military_deal
@@ -8267,7 +8312,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ETH_cooperation
-		cost = 10
+		cost = 7.2
 		available = {
 		}
 
@@ -8361,6 +8406,7 @@ focus_tree = {
 			}			
 		}
 	}
+
 	focus = {
 		id = ETH_set_up_a_customs_barrier
 		icon = GFX_goal_generic_trade
@@ -8369,7 +8415,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ETH_reinforce_dynamic_identity
-		cost = 10
+		cost = 7.2
 		available = {
 		}
 
@@ -8381,6 +8427,7 @@ focus_tree = {
 			ITA = { add_ideas = ETH_customs_barrier_ITA_idea }
 		}
 	}
+
 	focus = {
 		id = ETH_contact_the_exiles
 		icon = GFX_goal_generic_forceful_treaty
@@ -8389,7 +8436,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ETH_underground_wargames
-		cost = 10
+		cost = 7.2
 		available = {
 		}
 
@@ -8417,6 +8464,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = ETH_outsourced_production
 		icon = GFX_focus_generic_truck
@@ -8425,7 +8473,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ETH_adopt_the_lira
-		cost = 10
+		cost = 5
 		available = {
 			is_subject_of = ITA
 			ITA = {
@@ -8481,6 +8529,7 @@ focus_tree = {
 			custom_effect_tooltip = ETH_outsourced_production_factories_tt
 		}
 	}
+
 	focus = {
 		id = ETH_together_for_victory
 		icon = GFX_focus_generic_diplomatic_treaty
@@ -8489,7 +8538,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ETH_set_up_a_customs_barrier
-		cost = 10
+		cost = 7.2
 		available = {
 		}
 		bypass = { is_subject = no }
@@ -8536,6 +8585,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = ETH_our_enemys_enemy
 		icon = GFX_goal_generic_dangerous_deal
@@ -8544,7 +8594,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ETH_set_up_a_customs_barrier
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -8570,6 +8620,7 @@ focus_tree = {
 			custom_effect_tooltip = ETH_our_enemys_enemy_tt
 		}
 	}
+
 	focus = {
 		id = ETH_raid_italian_depots
 		icon = GFX_focus_generic_conspiracy
@@ -8578,7 +8629,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ETH_contact_the_exiles
-		cost = 10
+		cost = 7.2
 		available = {
 		}
 
@@ -8616,6 +8667,7 @@ focus_tree = {
 			}			
 		}
 	}
+
 	focus = {
 		id = ETH_the_italian_language
 		icon = GFX_focus_generic_italy_propaganda
@@ -8624,7 +8676,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ETH_outsourced_production
-		cost = 10
+		cost = 5
 		available = {
 			is_subject_of = ITA
 			ITA = {
@@ -8662,6 +8714,7 @@ focus_tree = {
 
 		}
 	}
+
 	focus = {
 		id = ETH_compensation
 		icon = GFX_focus_ETH_compensation
@@ -8670,7 +8723,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ETH_outsourced_production
-		cost = 10
+		cost = 7.2
 		available = {
 			is_subject_of = ITA
 			ITA = {
@@ -8708,6 +8761,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = ETH_negusa_nagast
 		icon = GFX_focus_ETH_negusa-nagast
@@ -8716,7 +8770,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ETH_our_enemys_enemy
-		cost = 10
+		cost = 7.2
 		available = {
 		}
 		bypass = {
@@ -8740,6 +8794,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = ETH_the_italo-ethiopian_empire
 		icon = GFX_focus_ETH_the-italo_ethiopian_empire
@@ -8749,7 +8804,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ETH_the_italian_language
-		cost = 10
+		cost = 7.2
 		available = {
 			is_subject_of = ITA
 			ITA = {
@@ -8855,6 +8910,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = ETH_reclaim_the_empire
 		icon = GFX_goal_generic_major_war
@@ -8863,7 +8919,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ETH_negusa_nagast
-		cost = 10
+		cost = 7.2
 		available = {
 		}
 
@@ -8890,7 +8946,8 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
-			add_political_power = 120
+			add_political_power = 200
+			add_stability = 0.15
 			IF = {
 				limit = {
 					OR = {
@@ -8962,6 +9019,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = ETH_consolidate_east_africa
 		icon = GFX_focus_ETH_consolidate_east_africa
@@ -8970,7 +9028,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ETH_reclaim_the_empire
-		cost = 10
+		cost = 7.2
 		available = {
 		}
 

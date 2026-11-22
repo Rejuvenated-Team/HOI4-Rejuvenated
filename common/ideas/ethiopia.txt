@@ -13,8 +13,8 @@ ideas = {
 			
 			modifier = {
 				war_support_factor = 0.2
-				army_org_regain = 0.1
-				army_defence_against_major_factor = 0.05
+				army_org_regain = 0.15
+				army_defence_against_major_factor = 0.1
 			}
 		}
 		ETH_djibouti_purchase_idea = {
@@ -227,7 +227,6 @@ ideas = {
 			modifier = {
 				army_infantry_attack_factor = 0.1
 				land_doctrine_cost_factor = 0.50
-				research_speed_factor = -0.15
 				max_command_power_mult = -0.25
 			}
 		}
@@ -543,7 +542,7 @@ ideas = {
 			
 			modifier = {
 				production_speed_buildings_factor = 0.15
-				monthly_population = 0.05
+				monthly_population = 0.25
 			}
 		}
 
@@ -1093,6 +1092,25 @@ ideas = {
 
 			modifier = {
 				air_ace_generation_chance_factor = 0.10
+			}
+		}
+		ETH_ethiopian_officers_idea_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_air_bonus		
+
+			modifier = {
+				air_ace_generation_chance_factor = 0.20
+				air_superiority_efficiency = 0.15
 			}
 		}
 		ETH_purge_ideology_boost_idea = {
