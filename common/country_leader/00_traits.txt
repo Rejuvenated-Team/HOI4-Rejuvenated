@@ -3992,10 +3992,13 @@ leader_traits = {
 
 	anarcho_communist_council = {
 		random = no
-		surrender_limit = 0.2
+		surrender_limit = 0.25
 		army_core_defence_factor = 0.15
 		stability_factor = -0.05
 		mobilization_speed = 0.05
+		non_core_manpower = 0.1
+		compliance_gain = 0.1
+		resistance_decay = 0.1
 	}
 
 	revolutionary_council = {
