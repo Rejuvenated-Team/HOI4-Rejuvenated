@@ -3,7 +3,7 @@ state = {
 	name = "STATE_838"
 	manpower = 1400000
 	
-	state_category = rural
+	state_category = town
 
 	history = {
 		set_variable = { ETH_state_development_production_speed = -0.3 }
@@ -45,5 +45,5 @@ state = {
  		7912 13244 13245
  	}
 
-	local_supplies = 1.0 
+	local_supplies = 4.0 
 }
