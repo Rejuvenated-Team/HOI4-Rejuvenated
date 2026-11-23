@@ -8,7 +8,7 @@ leader_traits = {
 		random = no
 		communism_drift = 0.08
 		war_support_factor = 0.05
-		conscriptior_factor = 0.05
+		conscription_factor = 0.05
 	}
 	YUG_yugoslavian_revolutionary = {
 		random = no

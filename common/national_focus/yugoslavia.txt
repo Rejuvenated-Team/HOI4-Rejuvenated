@@ -893,8 +893,8 @@ focus_tree = {
 			BUL = {
 				exists = yes
 			}
-			OR = {
-				BUL = {
+			BUL = {
+				OR = {
 					owns_state = 48
 					owns_state = 77
 					owns_state = 211

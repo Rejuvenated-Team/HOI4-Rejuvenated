@@ -4,7 +4,7 @@ YUG_developing_literacy_category = {
 
     fire_only_once = no
 
-    days_re_enable = 0
+    days_re_enable = 1
 
     days_remove = 90
 
