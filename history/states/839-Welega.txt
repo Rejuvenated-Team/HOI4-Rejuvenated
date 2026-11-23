@@ -2,8 +2,12 @@ state = {
 	id = 839 # Welega
 	name = "STATE_839"
 	manpower = 1200000
+
+	resources = {
+		chromium = 11
+	}
 	
-	state_category = pastoral
+	state_category = town
 
 	history = {
 		set_variable = { ETH_state_development_production_speed = -0.3 }
@@ -45,5 +49,5 @@ state = {
  		2009 12856 13243
  	}
 
-	local_supplies = 0.0 
+	local_supplies = 4.0 
 }

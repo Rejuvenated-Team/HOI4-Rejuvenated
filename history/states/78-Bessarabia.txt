@@ -10,12 +10,12 @@ state=
 		add_core_of = MOL
 		owner = ROM
 		victory_points = {
-			3707 1
+			3707 5
 		}
 		buildings = {
 			infrastructure = 2
-			air_base = 2
 			industrial_complex = 2
+			air_base = 2
 		}
 		add_core_of = ROM
 	}
@@ -23,5 +23,5 @@ state=
 	{
 414 565 3407 3577 3707 3724 6600 9683 11686 11705 	}
 
-	local_supplies = 8.0 
+	local_supplies=7.0 
 }

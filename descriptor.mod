@@ -13,4 +13,4 @@ tags={
 	"Ideologies"
 }
 name="Rejuvenated Local"
-supported_version="1.19.*"
+supported_version="1.20.*"

@@ -2,7 +2,7 @@ state={
 	id=905
 	name="STATE_905"
 	manpower = 1017600
-	state_category = pastoral
+	state_category = large_town
 
 	history={
 		owner = ENG
@@ -26,5 +26,5 @@ state={
 	}
 
 	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	local_supplies = 4.000
 }

@@ -32,7 +32,7 @@ buildings = {
 	#   repair_speed_factor = 0.5 # Optional. Factor for how fast the building is repaired (default = 1.0)
 
 	infrastructure = {
-		base_cost = 5000
+		base_cost = 3000
 		icon_frame = 3
 		infrastructure = yes
 		value = 1
@@ -604,9 +604,9 @@ buildings = {
 		}
 		show_modifier = yes
 		state_modifiers = {
-			state_production_speed_buildings_factor = 0.15
-			local_building_slots_factor = 0.15
-			state_resources_factor = 0.1
+			state_production_speed_buildings_factor = 0.25
+			local_building_slots_factor = 0.25
+			state_resources_factor = 0.15
 			local_factory_energy_consumption = -0.65
 		}
 	}
@@ -715,7 +715,7 @@ buildings = {
 	#### Energy
 	
 	energy_infrastructure = {
-		base_cost = 12000
+		base_cost = 9000
 		icon_frame = 30
 		value = 1
 
@@ -735,7 +735,7 @@ buildings = {
 	}
 	
 	industrial_infrastructure = {
-		base_cost = 12000
+		base_cost = 9000
 		icon_frame = 31
 		value = 1
 

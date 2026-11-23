@@ -1815,7 +1815,7 @@ prospect_for_resources = {
 			837 = {
 				add_resource = {
 					type = rubber
-					amount = 6
+					amount = 16
 				}
 			}
 		}
@@ -10534,6 +10534,1960 @@ prospect_for_resources = {
 				add_resource = {
 					type = coal
 					amount = 13
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_adola_gold = {
+		icon = chromium
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation2
+		}
+
+		state_target = yes
+		targets = { 837 }
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {  # Too low PP
+				factor = 0.5
+				has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = chromium
+					amount < 1
+				}
+			}
+		}
+		remove_effect = {
+			837 = {
+				add_resource = {
+					type = chromium
+					amount = 13
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_bikilal_iron = {
+		icon = steel
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation2
+		}
+
+		state_target = yes
+		targets = { 839 }
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {  # Too low PP
+				factor = 0.5
+				has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = steel
+					amount < 1
+				}
+			}
+		}
+		remove_effect = {
+			839 = {
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_melka_arba_iron = {
+		icon = steel
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation2
+		}
+
+		state_target = yes
+		targets = { 836 }
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {  # Too low PP
+				factor = 0.5
+				has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = steel
+					amount < 1
+				}
+			}
+		}
+		remove_effect = {
+			836 = {
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_western_greenstone_iron = {
+		icon = steel
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+			has_tech = excavation3
+		}
+
+		state_target = yes
+		targets = { 839 }
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {  # Too low PP
+				factor = 0.5
+				has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = steel
+					amount < 1
+				}
+			}
+		}
+		remove_effect = {
+			839 = {
+				add_resource = {
+					type = steel
+					amount = 16
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_western_greenstone_molybdenum = {
+		icon = tungsten
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+			has_tech = excavation4
+		}
+
+		state_target = yes
+		targets = { 839 }
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 80
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {  # Too low PP
+				factor = 0.5
+				has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = tungsten
+					amount < 1
+				}
+			}
+		}
+		remove_effect = {
+			839 = {
+				add_resource = {
+					type = tungsten
+					amount = 12
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_western_greenstone_iron_2 = {
+		icon = steel
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			has_tech = excavation3
+		}
+
+		state_target = yes
+		targets = { 840 }
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {  # Too low PP
+				factor = 0.5
+				has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = steel
+					amount < 1
+				}
+			}
+		}
+		remove_effect = {
+			840 = {
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_western_greenstone_zinc = {
+		icon = aluminium
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 6
+			has_tech = excavation4
+		}
+
+		state_target = yes
+		targets = { 840 }
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 7
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {  # Too low PP
+				factor = 0.5
+				has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = aluminium
+					amount < 1
+				}
+			}
+		}
+		remove_effect = {
+			840 = {
+				add_resource = {
+					type = aluminium
+					amount = 24
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_northern_greenstone_iron = {
+		icon = steel
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+			has_tech = excavation3
+		}
+
+		state_target = yes
+		targets = { 842 }
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {  # Too low PP
+				factor = 0.5
+				has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = steel
+					amount < 1
+				}
+			}
+		}
+		remove_effect = {
+			842 = {
+				add_resource = {
+					type = steel
+					amount = 16
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_northern_greenstone_copper = {
+		icon = steel
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation1
+		}
+
+		state_target = yes
+		targets = { 842 }
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {  # Too low PP
+				factor = 0.5
+				has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = steel
+					amount < 1
+				}
+			}
+		}
+		remove_effect = {
+			842 = {
+				add_resource = {
+					type = steel
+					amount = 7
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_northern_greenstone_tungsten = {
+		icon = tungsten
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 6
+			has_tech = excavation4
+		}
+
+		state_target = yes
+		targets = { 842 }
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 7
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {  # Too low PP
+				factor = 0.5
+				has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = steel
+					amount < 1
+				}
+			}
+		}
+		remove_effect = {
+			842 = {
+				add_resource = {
+					type = tungsten
+					amount = 20
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_yayu_coal_basin = {
+		icon = coal
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation2
+		}
+
+		state_target = yes
+		targets = { 838 }
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {  # Too low PP
+				factor = 0.5
+				has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = coal
+					amount < 1
+				}
+			}
+		}
+		remove_effect = {
+			838 = {
+				add_resource = {
+					type = coal
+					amount = 8
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_chilga_coal_basin = {
+		icon = coal
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation2
+		}
+
+		state_target = yes
+		targets = { 841 }
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {  # Too low PP
+				factor = 0.5
+				has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = coal
+					amount < 1
+				}
+			}
+		}
+		remove_effect = {
+			841 = {
+				add_resource = {
+					type = coal
+					amount = 8
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_expand_sidamo_rubber_plantations = { #837
+
+		icon = rubber
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+			has_tech = excavation3
+			837 = {
+				has_state_flag = sidamo_rubber_developed
+			}
+		}
+
+		state_target = yes
+		targets = { 837 }
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 100
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {
+				factor = 0
+				OR = {
+					AND = { #Ultimatum decisions are available and we should prio them
+						original_tag = SOV
+						SOV_we_want_to_send_ultimatums = yes
+					}
+					AND = { #Too low MP we need to save PP for the laws
+						has_manpower < 10000
+						NOT = { has_idea = scraping_the_barrel }
+					}
+				}
+			}
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = rubber
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			837 = {
+				add_resource = {
+					type = rubber
+					amount = 16
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_eritrean_iron_deposits = {
+
+		icon = steel
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation1
+		}
+
+		state_target = yes
+		targets = { 550 }
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = steel
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			550 = {
+				add_resource = {
+					type = steel
+					amount = 5
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_eritrean_copper_deposits = {
+
+		icon = steel
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			has_tech = excavation1
+		}
+
+		state_target = yes
+		targets = { 550 }
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = steel
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			550 = {
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_eritrean_manganese_deposits = {
+
+		icon = steel
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation3
+		}
+
+		state_target = yes
+		targets = { 550 }
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = steel
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			550 = {
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+				add_resource = {
+					type = chromium
+					amount = 2
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_somalian_lead_deposits = {
+
+		icon = tungsten
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation2
+		}
+
+		state_target = yes
+		targets = { 269 }
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = tungsten
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			269 = {
+				add_resource = {
+					type = tungsten
+					amount = 8
+				}
+				set_state_flag = RJ_somalian_lead_prospected
+			}
+		}
+	}
+
+	RJ_prospecting_somalian_lead_deposits_2 = {
+
+		icon = tungsten
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+			has_tech = excavation3
+			269 = {
+				has_state_flag = RJ_somalian_lead_prospected
+			}
+		}
+
+		state_target = yes
+		targets = { 269 }
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = tungsten
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			269 = {
+				add_resource = {
+					type = tungsten
+					amount = 16
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_somalian_coal_deposits = {
+
+		icon = coal
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation1
+		}
+
+		state_target = yes
+		targets = { 269 }
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = coal
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			269 = {
+				add_resource = {
+					type = coal
+					amount = 5
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_red_sea_hills_gold = {
+
+		icon = chromium
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation1
+		}
+
+		state_target = yes
+		targets = { 883 }
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = chromium
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			883 = {
+				add_resource = {
+					type = chromium
+					amount = 9
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_nubian_desert_gold = {
+
+		icon = chromium
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation2
+		}
+
+		state_target = yes
+		targets = { 551 }
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = chromium
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			551 = {
+				add_resource = {
+					type = chromium
+					amount = 13
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_sudanese_iron_copper_gold = {
+
+		icon = steel
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation2
+		}
+
+		state_target = yes
+		targets = { 549 }
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = steel
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			549 = {
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_kakamega_gold_field = {
+
+		icon = chromium
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			has_tech = excavation2
+		}
+
+		state_target = yes
+		targets = { 904 }
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = chromium
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			904 = {
+				add_resource = {
+					type = chromium
+					amount = 12
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_nyanza_copper = {
+
+		icon = steel
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			has_tech = excavation1
+		}
+
+		state_target = yes
+		targets = { 904 }
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = steel
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			904 = {
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_nyanza_lead = {
+
+		icon = tungsten
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+			has_tech = excavation3
+		}
+
+		state_target = yes
+		targets = { 904 }
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = tungsten
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			904 = {
+				add_resource = {
+					type = tungsten
+					amount = 12
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_nyanza_zinc = {
+
+		icon = aluminium
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+			has_tech = excavation3
+		}
+
+		state_target = yes
+		targets = { 904 }
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 80
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = aluminium
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			904 = {
+				add_resource = {
+					type = aluminium
+					amount = 16
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_nyanza_manganese = {
+
+		icon = steel
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 6
+			has_tech = excavation4
+		}
+
+		state_target = yes
+		targets = { 904 }
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 7
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = steel
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			904 = {
+				add_resource = {
+					type = steel
+					amount = 16
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_kenyan_rubber = {
+
+		icon = rubber
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+			has_tech = excavation2
+		}
+
+		state_target = yes
+		targets = { 548 }
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 120
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = rubber
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			548 = {
+				add_resource = {
+					type = rubber
+					amount = 15
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_kenyan_tungsten = {
+
+		icon = tungsten
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+			has_tech = excavation3
+		}
+
+		state_target = yes
+		targets = { 548 }
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = tungsten
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			548 = {
+				add_resource = {
+					type = tungsten
+					amount = 12
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_kenyan_tin = {
+
+		icon = tungsten
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			has_tech = excavation3
+		}
+
+		state_target = yes
+		targets = { 548 }
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 6
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = tungsten
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			548 = {
+				add_resource = {
+					type = tungsten
+					amount = 16
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_saudi_cradle_of_gold = {
+
+		icon = chromium
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			has_tech = excavation3
+		}
+
+		state_target = yes
+		targets = { 679 }
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 6
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = chromium
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			679 = {
+				add_resource = {
+					type = chromium
+					amount = 24
+				}
+				set_state_flag = cradle_of_gold_mines_opened
+			}
+		}
+	}
+
+	RJ_prospecting_saudi_copper = {
+
+		icon = steel
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+			has_tech = excavation4
+			679 = {
+				has_state_flag = cradle_of_gold_mines_opened
+			}
+		}
+
+		state_target = yes
+		targets = { 679 }
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = steel
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			679 = {
+				add_resource = {
+					type = steel
+					amount = 16
+				}
+			}
+		}
+	}
+
+	RJ_prospecting_saudi_lead = {
+
+		icon = tungsten
+
+		allowed = {
+
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+			has_tech = excavation4
+			679 = {
+				has_state_flag = cradle_of_gold_mines_opened
+			}
+		}
+
+		state_target = yes
+		targets = { 679 }
+		target_trigger = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		ai_will_do = {
+			base = 0.3
+			modifier = {  # Too low PP
+				factor = 0.5
+					has_political_power < 80
+			}
+			modifier = { #We have plenty of PP, avanti!
+				factor = 3
+				has_political_power > 200
+			}
+			modifier = { #Running out of the stuff, need more!
+				factor = 5
+				has_resources_in_country = {
+					resource = tungsten
+					amount < 1
+				}
+			}
+		}
+
+		remove_effect = {
+			679 = {
+				add_resource = {
+					type = tungsten
+					amount = 12
 				}
 			}
 		}
