@@ -2,7 +2,11 @@ state = {
 	id = 883
 	name = "STATE_883"
 	manpower = 511402
-	state_category = rural
+	state_category = town
+
+	resources = {
+		chromium = 14
+	}
 
 	history = {
 		owner = EGY
@@ -23,5 +27,5 @@ state = {
 	}
 	
 	buildings_max_level_factor = 1.000
-	local_supplies = 0.000
+	local_supplies = 4.000
 }
