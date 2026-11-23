@@ -355,5 +355,20 @@ ideas = {
 				stability_factor = -0.05
 			}
 		}
+		YUG_united_yugoslavia = {
+			allowed = {
+				tag = YUG
+			}
+
+			picture = HUN_hungarian_gendarmerie
+
+			modifier = {
+				political_power_factor = 0.25
+				stability_factor = 0.1
+				conscription = 0.015
+				neutrality_drift = 0.15
+				democratic_drift = 0.08
+			}
+		}
 	}
 }

@@ -1,0 +1,20 @@
+leader_traits = {
+	YUG_fascist_economist = {
+		random = no
+		fascism_drift = 0.03
+		consumer_goods_factor = -0.1
+	}
+	YUG_voice_of_the_yugoslavian_workers = {
+		random = no
+		communism_drift = 0.08
+		war_support_factor = 0.05
+		conscriptior_factor = 0.05
+	}
+	YUG_yugoslavian_revolutionary = {
+		random = no
+		communism_drift = 0.1
+		political_power_factor = 0.05
+		war_support_factor = 0.1
+		conscription_factor = 0.1
+	}
+}

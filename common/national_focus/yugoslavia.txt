@@ -1270,7 +1270,7 @@ focus_tree = {
 		id = YUG_corporate_with_the_imro
 		relative_position_id = YUG_road_to_national_unification
 		prerequisite = { focus = YUG_destroy_the_ustase focus = YUG_appease_croatian_nationalists }
-		mutually_exclusive = { focus = YUG_arrest_albanian_seperatists }
+		mutually_exclusive = { focus = YUG_destroy_the_imro }
 		available = {
 
 		}
@@ -1299,7 +1299,7 @@ focus_tree = {
 		id = YUG_destroy_the_imro
 		relative_position_id = YUG_road_to_national_unification
 		prerequisite = { focus = YUG_destroy_the_ustase focus = YUG_appease_croatian_nationalists }
-		mutually_exclusive = { focus = YUG_appease_albanian_seperatists }
+		mutually_exclusive = { focus = YUG_corporate_with_the_imro }
 		available = {
 
 		}
