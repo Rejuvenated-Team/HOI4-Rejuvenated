@@ -725,7 +725,7 @@ country_event = {
 			effect_tooltip = {
 				YUG = {
 				create_wargoal = {
-					type = puppet
+					type = puppet_wargoal_focus
 					target = ROOT
 				}
 				}

@@ -25,7 +25,9 @@ YUG_developing_literacy_category = {
     remove_effect = {
 
         if = {
-            has_idea = YUG_severe_illiteracy
+            limit = {
+                has_idea = YUG_severe_illiteracy
+            }
             swap_ideas = {
                 remove_idea = YUG_severe_illiteracy
                 add_idea = YUG_severe_illiteracy_2
@@ -33,7 +35,9 @@ YUG_developing_literacy_category = {
         }
 
         if = {
-            has_idea = YUG_severe_illiteracy_2
+            limit = {
+                has_idea = YUG_severe_illiteracy_2
+            }
             swap_ideas = {
                 remove_idea = YUG_severe_illiteracy_2
                 add_idea = YUG_severe_illiteracy_3
@@ -41,14 +45,18 @@ YUG_developing_literacy_category = {
         }
 
         if = {
-            has_idea = YUG_severe_illiteracy_3
+            limit = {
+                has_idea = YUG_severe_illiteracy_3
+            }
             swap_ideas = {
                 remove_idea = YUG_severe_illiteracy_3
                 add_idea = YUG_severe_illiteracy_4
             }
         }
         if = {
-            has_idea = YUG_severe_illiteracy_4
+            limit = {
+                has_idea = YUG_severe_illiteracy_4
+            }
             remove_ideas = YUG_severe_illiteracy_4
         }
     }

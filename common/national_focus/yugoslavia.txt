@@ -890,7 +890,18 @@ focus_tree = {
 		relative_position_id = YUG_to_pursue_balkan_dominance
 		prerequisite = { focus = YUG_to_pursue_balkan_dominance }
 		available = {
-
+			BUL = {
+				exists = yes
+			}
+			OR = {
+				BUL = {
+					owns_state = 48
+					owns_state = 77
+					owns_state = 211
+					owns_state = 212
+					owns_state = 801
+				}
+			}
 		}
 
 		bypass = {
@@ -900,13 +911,22 @@ focus_tree = {
 		icon = GFX_focus_generic_attack_bulgaria
 		x = -1
 		y = 1
-		cost = 5
+		cost = 7.2
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
-
+			add_state_core = 48
+			add_state_core = 77
+			add_state_core = 211
+			add_state_core = 212
+			add_state_core = 801
+			
+			create_wargoal = {
+				type = take_state_focus
+                target = BUL
+			}
 		}
 	}
 	focus = {
