@@ -519,7 +519,12 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			OR = {
+				ALB = {
+					is_puppet_of = YUG
+					exists = no
+				}
+			}
 		}
 
 		icon = GFX_focus_PLACEHOLDER
@@ -985,7 +990,12 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			OR = {
+				GRE = {
+					is_puppet_of = YUG
+					exists = no
+				}
+			}
 		}
 
 		icon = GFX_focus_generic_attack_greece
@@ -997,7 +1007,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			GRE = { country_event = rj_yugoslavia.2 }
 		}
 	}
 	focus = {
@@ -1033,8 +1043,11 @@ focus_tree = {
 		}
 
 		bypass = {
-			AUS = {
-				is_puppet_of = YUG
+			OR = {
+				AUS = {
+					is_puppet_of = YUG
+					exists = no
+				}
 			}
 		}
 
@@ -1111,7 +1124,12 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			OR = {
+				TUR = {
+					is_puppet_of = YUG
+					exists = no
+				}
+			}
 		}
 
 		icon = GFX_focus_generic_attack_turkey
@@ -2460,6 +2478,7 @@ focus_tree = {
 		id = YUG_agrarian_politics
 		relative_position_id = YUG_peter_ii_our_king
 		prerequisite = { focus = YUG_enforce_a_royal_dictatorship focus = YUG_constitutional_reforms }
+		mutually_exclusive = { focus = YUG_industrial_methods }
 		available = {
 
 		}
@@ -2484,6 +2503,7 @@ focus_tree = {
 		id = YUG_industrial_methods
 		relative_position_id = YUG_peter_ii_our_king
 		prerequisite = { focus = YUG_enforce_a_royal_dictatorship focus = YUG_constitutional_reforms }
+		mutually_exclusive = { focus = YUG_agrarian_politics }
 		available = {
 
 		}
@@ -2509,11 +2529,11 @@ focus_tree = {
 		relative_position_id = YUG_the_three_man_regency
 		prerequisite = { focus = YUG_the_three_man_regency }
 		available = {
-
+			CRO = { exists = no }
 		}
 
 		bypass = {
-
+			CRO = { is_puppet_of = YUG }
 		}
 
 		icon = GFX_focus_PLACEHOLDER
