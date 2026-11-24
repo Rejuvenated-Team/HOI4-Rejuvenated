@@ -32,7 +32,12 @@ characters={
 			allowed  = {
 					original_tag  = YUG
 				}
-				available = { is_country_leader = no }
+				available = {
+					has_country_leader = {
+				    character = YUG_milan_stojadinovic
+				    ruling_only = no
+			      }
+				}
 				traits  = {
 					YUG_fascist_economist 
 				}
@@ -130,6 +135,7 @@ characters={
 				ai_will_do = {
                    factor = 1
                 }
+				cost = 75
 		}
 		portraits={
 			army={
