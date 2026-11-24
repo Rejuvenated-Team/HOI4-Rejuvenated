@@ -36,6 +36,10 @@ characters={
 				traits  = {
 					YUG_fascist_economist 
 				}
+				can_be_fired = no
+				ai_will_do = {
+                   factor = 1
+                }
 		}
 	}
 	YUG_milan_grol={
@@ -123,7 +127,6 @@ characters={
 				traits  = {
 					YUG_voice_of_the_yugoslavian_workers 
 				}
-				can_be_fired = no
 				ai_will_do = {
                    factor = 1
                 }

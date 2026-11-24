@@ -40,11 +40,10 @@ if = {
 
 set_research_slots = 3
 
-activate_advisor = YUG_milan_stojadinovic_advisor
-
 recruit_character = YUG_prince_paul
 recruit_character = YUG_milan_stojadinovic
 recruit_character = YUG_milan_stojadinovic_advisor
+activate_advisor = YUG_milan_stojadinovic_advisor
 recruit_character = YUG_milan_grol
 recruit_character = YUG_josip_broz_tito
 recruit_character = YUG_josip_broz_tito_advisor
