@@ -215,6 +215,21 @@ characters = {
 				traits = { gallant_doctor }
 				id = -1
 			}
+			advisor = {
+				slot = political_advisor
+				idea_token = RJ_ETH_alemework_beyene
+				available = {
+					OR = {
+						NOT = {
+							has_government = fascism
+						}
+						NOT = {
+							has_country_leader = ETH_alemework_beyene
+						}
+					}
+				}
+				traits = { RJ_gallant_doctor_advisor }
+			}
 		}
 		instance = {
 			allowed = {
@@ -1066,10 +1081,7 @@ characters = {
 				original_tag  = ETH
 			}
 			available = {
-				OR = {
-					has_government = neutrality
-					has_government = democratic
-				}
+				
 			}
 			traits  = {
 				japanizer 

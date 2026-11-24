@@ -18,10 +18,10 @@ state = {
 		add_dynamic_modifier = {
 			modifier = ETH_state_development_dynamic_modifier
 		}
-		add_dynamic_modifier = {
-			modifier = ETH_state_decentralization_dynamic_modifier
-			scope = ETH
-		}
+		#add_dynamic_modifier = {
+		#	modifier = ETH_state_decentralization_dynamic_modifier
+		#	scope = ETH
+		#}
 		
 		buildings = {
 			# infrastructure = 1

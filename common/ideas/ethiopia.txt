@@ -12,9 +12,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				war_support_factor = 0.2
-				army_org_regain = 0.15
-				army_defence_against_major_factor = 0.1
+				war_support_factor = 0.25
+				army_org_regain = 0.25
+				army_defence_against_major_factor = 0.15
 			}
 		}
 		ETH_djibouti_purchase_idea = {
@@ -348,7 +348,6 @@ ideas = {
 				unit_camelry_design_cost_factor = -1
 				cavalry_attack_factor = 0.10
 				cavalry_defence_factor = 0.10
-				cavalry_leader_xp_gain_factor = 0.25
 				modifier_army_sub_unit_camelry_attack_factor = 0.10
 				modifier_army_sub_unit_camelry_defence_factor = 0.10
 			}
@@ -716,7 +715,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				 has_government = communism
+				has_government = communism
 			}
 
 			removal_cost = -1
@@ -724,9 +723,10 @@ ideas = {
 			picture = por_hydroelectric_power
 
 			modifier = {
-				production_speed_industrial_complex_factor = 0.15
-				production_speed_infrastructure_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				production_speed_infrastructure_factor = 0.25
 				production_lack_of_resource_penalty_factor = -0.1
+				local_resource_gain_efficiency_per_infrastructure = 0.15
 			}
 		}
 
@@ -1132,7 +1132,207 @@ ideas = {
 				legitimacy_daily = -1
 			}
 		}
+
+		RJ_ETH_african_wildfire_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_org_of_african_unity		
+
+			modifier = {
+				conscription = 0.03
+				mobilization_speed = 0.25
+				non_core_manpower = 0.05
+				justify_war_goal_time = -0.5
+				compliance_growth = 0.25
+				command_power_gain_mult = 1
+			}
+		}
+
+		RJ_ETH_professional_officers_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = tur_kemalist_officers	
+
+			modifier = {
+				army_leader_start_level = 1
+				army_leader_cost_factor = -0.5
+				promote_cost_factor = -0.5
+				field_officer_promotion_penalty = -1
+			}
+		}
+
+		RJ_ETH_professional_officers_idea_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = tur_kemalist_officers	
+
+			modifier = {
+				army_leader_start_level = 2
+				army_leader_cost_factor = -0.5
+				promote_cost_factor = -0.5
+				field_officer_promotion_penalty = -1
+				experience_gain_army_factor = 0.25
+				training_time_army_factor = -0.1
+				experience_gain_army_unit_factor = 0.10
+			}
+		}
+
+		RJ_ETH_communist_government_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+
+			modifier = {
+				political_power_gain = 0.15
+				political_advisor_cost_factor = -0.25
+				communism_drift = 0.10
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+		}
+
+		RJ_ETH_naval_academy_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_naval_manufacturer_1
+
+			modifier = {
+				experience_gain_navy_factor = 0.15
+				navy_leader_start_level = 2
+				navy_leader_cost_factor = -0.5
+			}
+		}
+
+		RJ_ETH_naval_academy_idea_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_naval_manufacturer_1
+
+			modifier = {
+				experience_gain_navy_factor = 0.15
+				navy_leader_start_level = 2
+				navy_leader_cost_factor = -0.5
+				naval_coordination = 0.15
+				positioning = 0.10
+				refit_speed = 0.25
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+		}
+
+		RJ_ETH_coastal_navy_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_naval_manufacturer_1
+
+			modifier = {
+				industrial_capacity_dockyard = 0.15
+				naval_defense_factor = 0.15
+			}
+			equipment_bonus = {
+				ship_hull_cruiser_coastal_defense_ship = {
+					build_cost_ic = -0.25
+					reliability = 0.10
+					sub_detection = 0.1
+				}
+				convoy = {
+					build_cost_ic = -0.25
+					reliability = 0.10
+					sub_detection = 0.1
+				}
+			}
+		}
+
+		RJ_ETH_copy_planes_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_air_research
+
+			research_bonus = {
+				air_equipment = 0.20
+			}
+		}
 	}
+
+
+
+
 	industrial_concern = {
 		ETH_cie = { 
 

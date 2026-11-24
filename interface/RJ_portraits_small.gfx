@@ -432,4 +432,15 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/rom/advisors/rj_advisor_ROM_nicolae_malaxa.dds"
 	}
 
+
+
+	##################################################
+	### ETHIOPIA #####################################
+	##################################################
+
+	spriteType = {
+		name = "GFX_rj_portrait_ETH_alemework_beyene_small"
+		texturefile = "gfx/interface/ideas/eth/advisors/rj_advisor_ETH_alemework_beyene.dds"
+	}
+
 }

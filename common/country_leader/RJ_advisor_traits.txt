@@ -60,4 +60,11 @@ leader_traits = {
 		local_resources_factor = 0.10
 		sprite = 13
 	}
+
+	RJ_gallant_doctor_advisor = {
+		random = no
+		sprite = 13
+		casualty_trickleback = 0.25
+		experience_loss_factor = -0.15
+	}
 }

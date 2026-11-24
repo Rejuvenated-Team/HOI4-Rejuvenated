@@ -13213,6 +13213,27 @@ form_horn_of_africa_africa_category = {
 			}
 		}
 
+		highlight_states = {
+			highlight_state_targets = {
+				state = 842
+				state = 843
+				state = 908
+				state = 841
+				state = 840
+				state = 839
+				state = 838
+				state = 837
+				state = 271
+				state = 836
+				state = 835
+				state = 550
+				state = 268
+				state = 269
+				state = 559
+				state = 844
+			}
+		}
+
 		complete_effect = {
 			set_cosmetic_tag = horn_of_africa
 			
@@ -13266,6 +13287,8 @@ form_horn_of_africa_africa_category = {
 
 			# Socotra
 			906 = { add_claim_by = ROOT }
+
+			906 = { add_core_of = ROOT }
 			
 			hidden_effect = { 
 				

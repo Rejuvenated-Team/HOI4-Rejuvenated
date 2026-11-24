@@ -10704,7 +10704,7 @@ prospect_for_resources = {
 			836 = {
 				add_resource = {
 					type = steel
-					amount = 10
+					amount = 12
 				}
 			}
 		}
@@ -10761,7 +10761,7 @@ prospect_for_resources = {
 			839 = {
 				add_resource = {
 					type = steel
-					amount = 16
+					amount = 20
 				}
 			}
 		}
@@ -10818,7 +10818,7 @@ prospect_for_resources = {
 			839 = {
 				add_resource = {
 					type = tungsten
-					amount = 12
+					amount = 20
 				}
 			}
 		}
@@ -10875,7 +10875,7 @@ prospect_for_resources = {
 			840 = {
 				add_resource = {
 					type = steel
-					amount = 10
+					amount = 14
 				}
 			}
 		}
@@ -10932,7 +10932,7 @@ prospect_for_resources = {
 			840 = {
 				add_resource = {
 					type = aluminium
-					amount = 24
+					amount = 30
 				}
 			}
 		}
@@ -10989,7 +10989,7 @@ prospect_for_resources = {
 			842 = {
 				add_resource = {
 					type = steel
-					amount = 16
+					amount = 24
 				}
 			}
 		}
@@ -11046,7 +11046,7 @@ prospect_for_resources = {
 			842 = {
 				add_resource = {
 					type = steel
-					amount = 7
+					amount = 10
 				}
 			}
 		}
@@ -11160,7 +11160,7 @@ prospect_for_resources = {
 			838 = {
 				add_resource = {
 					type = coal
-					amount = 8
+					amount = 12
 				}
 			}
 		}
@@ -11217,7 +11217,7 @@ prospect_for_resources = {
 			841 = {
 				add_resource = {
 					type = coal
-					amount = 8
+					amount = 15
 				}
 			}
 		}
@@ -11351,7 +11351,7 @@ prospect_for_resources = {
 			550 = {
 				add_resource = {
 					type = steel
-					amount = 5
+					amount = 8
 				}
 			}
 		}
@@ -11410,7 +11410,7 @@ prospect_for_resources = {
 			550 = {
 				add_resource = {
 					type = steel
-					amount = 4
+					amount = 8
 				}
 			}
 		}
@@ -11425,7 +11425,7 @@ prospect_for_resources = {
 		}
 
 		available = {
-			num_of_civilian_factories_available_for_projects > 2
+			num_of_civilian_factories_available_for_projects > 3
 			has_tech = excavation3
 		}
 
@@ -11443,7 +11443,7 @@ prospect_for_resources = {
 		days_remove = 60
 
 		modifier = {
-			civilian_factory_use = 3
+			civilian_factory_use = 4
 		}
 
 		ai_will_do = {
@@ -11469,11 +11469,11 @@ prospect_for_resources = {
 			550 = {
 				add_resource = {
 					type = steel
-					amount = 8
+					amount = 18
 				}
 				add_resource = {
 					type = chromium
-					amount = 2
+					amount = 4
 				}
 			}
 		}
@@ -11595,7 +11595,7 @@ prospect_for_resources = {
 			269 = {
 				add_resource = {
 					type = tungsten
-					amount = 16
+					amount = 24
 				}
 			}
 		}
@@ -11654,7 +11654,7 @@ prospect_for_resources = {
 			269 = {
 				add_resource = {
 					type = coal
-					amount = 5
+					amount = 8
 				}
 			}
 		}
@@ -11669,7 +11669,7 @@ prospect_for_resources = {
 		}
 
 		available = {
-			num_of_civilian_factories_available_for_projects > 2
+			num_of_civilian_factories_available_for_projects > 3
 			has_tech = excavation1
 		}
 
@@ -11687,7 +11687,7 @@ prospect_for_resources = {
 		days_remove = 60
 
 		modifier = {
-			civilian_factory_use = 3
+			civilian_factory_use = 4
 		}
 
 		ai_will_do = {
@@ -11713,7 +11713,7 @@ prospect_for_resources = {
 			883 = {
 				add_resource = {
 					type = chromium
-					amount = 9
+					amount = 18
 				}
 			}
 		}
@@ -11890,7 +11890,7 @@ prospect_for_resources = {
 			904 = {
 				add_resource = {
 					type = chromium
-					amount = 12
+					amount = 16
 				}
 			}
 		}
@@ -11949,7 +11949,7 @@ prospect_for_resources = {
 			904 = {
 				add_resource = {
 					type = steel
-					amount = 8
+					amount = 9
 				}
 			}
 		}
@@ -12067,7 +12067,7 @@ prospect_for_resources = {
 			904 = {
 				add_resource = {
 					type = aluminium
-					amount = 16
+					amount = 19
 				}
 			}
 		}
@@ -12126,7 +12126,7 @@ prospect_for_resources = {
 			904 = {
 				add_resource = {
 					type = steel
-					amount = 16
+					amount = 22
 				}
 			}
 		}
@@ -12244,7 +12244,7 @@ prospect_for_resources = {
 			548 = {
 				add_resource = {
 					type = tungsten
-					amount = 12
+					amount = 15
 				}
 			}
 		}
@@ -12303,7 +12303,7 @@ prospect_for_resources = {
 			548 = {
 				add_resource = {
 					type = tungsten
-					amount = 16
+					amount = 20
 				}
 			}
 		}
@@ -12362,7 +12362,7 @@ prospect_for_resources = {
 			679 = {
 				add_resource = {
 					type = chromium
-					amount = 24
+					amount = 45
 				}
 				set_state_flag = cradle_of_gold_mines_opened
 			}
@@ -12487,7 +12487,7 @@ prospect_for_resources = {
 			679 = {
 				add_resource = {
 					type = tungsten
-					amount = 12
+					amount = 15
 				}
 			}
 		}

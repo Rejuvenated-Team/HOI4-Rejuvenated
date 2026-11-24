@@ -24,6 +24,7 @@ IF = {
 
 	set_variable = { ETH_re_enable_time_international_actions = 30 } # Timer for various interaction decisions
 	add_ideas = war_economy
+	add_ideas = limited_exports
 
 
 	### Set variables for Dynamic Modifiers
@@ -142,6 +143,15 @@ set_technology = {
 	tech_mountaineers = 1
 	tech_trucks = 1
 	basic_train = 1
+}
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
 }
 
 recruit_character = ETH_haile_selassie

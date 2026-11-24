@@ -1,5 +1,16 @@
 ﻿l_english:
  RJ_ETH_professional_training_program: "Professional Training Program"
  RJ_ETH_professional_training_program_desc: "Our pilots have gained a great deal of experience. With a more professional training program, they can compete with some of the finest pilots of more developed nations!"
+ RJ_ETH_send_officers_abroad: "Send Officers Abroad"
+ RJ_ETH_send_officers_abroad_desc: "Our navy is still highly inexperienced. The officers that we've begun to train would benefit greatly from traveling abroad & learning from the experiences of other countries."
+ RJ_ETH_coastal_navy: "Establish the Coastal Navy"
+ RJ_ETH_coastal_navy_desc: "We don't have the resources for a large navy, but we can still establish a strong coastal navy for our defense."
  
  ETH_ethiopian_officers_idea_2: "Ethiopian Air Officers"
+ RJ_ETH_african_wildfire_idea: "African Wildfire"
+ RJ_ETH_professional_officers_idea: "Professional Officers"
+ RJ_ETH_communist_government_idea: "Communist Administration"
+ RJ_ETH_naval_academy_idea: "Naval Academy"
+ RJ_ETH_naval_academy_idea_2: "Experienced Naval Officers"
+ RJ_ETH_coastal_navy_idea: "Coastal Navy"
+ RJ_ETH_copy_planes_idea: "Copy Plane Designs"
