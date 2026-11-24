@@ -114,6 +114,9 @@ add_dynamic_modifier = {
 	modifier = YUG_army
 }
 
+45 = { add_dynamic_modifier = { modifier = YUG_hungarian_seperatists } }
+764 = { add_dynamic_modifier = { modifier = YUG_hungarian_seperatists } }
+
 add_ideas = {
 	YUG_economic_reliance_on_germany
 	YUG_croatian_nationalism
