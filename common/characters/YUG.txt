@@ -32,6 +32,7 @@ characters={
 			allowed  = {
 					original_tag  = YUG
 				}
+				available = { is_country_leader = no }
 				traits  = {
 					YUG_fascist_economist 
 				}
@@ -115,9 +116,10 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = YUG_josip_broz_tito_advisor
-			allowed  = {
+			allowed = {
 					original_tag  = YUG
 				}
+				available = { is_country_leader = no }
 				traits  = {
 					YUG_voice_of_the_yugoslavian_workers 
 				}
