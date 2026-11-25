@@ -1661,7 +1661,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-
+			deactivate_advisor = YUG_milan_stojadinovic_advisor
 		}
 	}
 	focus = { 

@@ -33,10 +33,12 @@ characters={
 					original_tag  = YUG
 				}
 				available = {
-					has_country_leader = {
-				    character = YUG_milan_stojadinovic
-				    ruling_only = no
-			      }
+					NOT = {
+						has_country_leader = {
+				            character = YUG_milan_stojadinovic
+				            ruling_only = yes
+			            }
+					}
 				}
 				traits  = {
 					YUG_fascist_economist 
