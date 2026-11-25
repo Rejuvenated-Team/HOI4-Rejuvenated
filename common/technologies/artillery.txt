@@ -1,5 +1,6 @@
 technologies = {
 	@anti_air = -7
+	@flak = -13
 	@anti_tank = 7
 	@rocket_artillery = 3
 
@@ -28,6 +29,10 @@ technologies = {
 
 		path = {
 			leads_to_tech = interwar_antiair
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = interwar_flak
 			research_cost_coeff = 1
 		}
 
@@ -2631,6 +2636,35 @@ technologies = {
 				is_major = yes
 			}
 		}
+	}
+
+	interwar_flak = {
+
+		enable_equipments = {
+			flak_equipment_1
+		}
+
+		armored_car = {
+			soft_attack = 0.1
+		}
+
+		research_cost = 1.2
+
+		start_year = 1936
+
+		folder = {
+			name = artillery_folder
+			position = { x = @flak y = 2 }
+		}
+		enable_subunits = {
+			flak
+			flak_brigade
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		special_project_specialization = { specialization_land specialization_air }
 	}
 
 }

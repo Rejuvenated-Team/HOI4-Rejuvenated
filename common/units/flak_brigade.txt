@@ -4,7 +4,7 @@
 
 sub_units = {
 
-	anti_air_brigade = {
+	flak_brigade = {
 		abbreviation = "FLAKN"
 		sprite = infantry
 		map_icon_category = infantry
@@ -22,10 +22,12 @@ sub_units = {
 		group = combat_support
 		
 		categories = {
+			category_front_line
 			category_army
 			category_line_artillery
-			category_anti_air
 			category_anti_tank
+			category_anti_air
+			category_artillery
 		}		
 		
 		combat_width = 1
@@ -86,10 +88,12 @@ sub_units = {
 		group = mobile_combat_support
 		
 		categories = {
+			category_front_line
 			category_army
 			category_line_artillery
-			category_anti_air
 			category_anti_tank
+			category_anti_air
+			category_artillery
 			category_mobile_and_mobile_combat_sup
 		}		
 		

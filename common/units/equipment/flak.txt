@@ -1,6 +1,6 @@
 equipments = {
 
-	anti_air_equipment = {
+	flak_equipment = {
 		year = 1934
 
 		is_archetype = yes
@@ -42,7 +42,7 @@ equipments = {
 		
 	}
 
-	anti_air_equipment_1 = {
+	flak_equipment_1 = {
 		year = 1936
 
 		archetype = anti_air_equipment
@@ -50,7 +50,7 @@ equipments = {
 		visual_level = 0
 	}
 	
-	anti_air_equipment_2 = {
+	flak_equipment_2 = {
 		year = 1940
 
 		archetype = anti_air_equipment
@@ -70,7 +70,7 @@ equipments = {
 		}
 	}
 	
-	anti_air_equipment_3 = {
+	flak_equipment_3 = {
 		year = 1943
 
 		archetype = anti_air_equipment
@@ -90,7 +90,7 @@ equipments = {
 		}
 	}
 
-	anti_air_equipment_4 = {
+	flak_equipment_4 = {
 		year = 1946
 
 		archetype = anti_air_equipment

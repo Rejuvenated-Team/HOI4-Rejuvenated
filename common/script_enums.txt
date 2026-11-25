@@ -195,6 +195,11 @@ script_enum_equipment_bonus_type = {
 	anti_air
 	artillery
 	anti_tank
+	flak_equipment
+	flak_equipment_1
+	flak_equipment_2
+	flak_equipment_3
+	flak_equipment_4
 	rocket
 	flame
 	land_cruiser
