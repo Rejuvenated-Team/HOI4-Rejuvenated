@@ -47,6 +47,7 @@ political_actions = {
 					id = rj_soviet.12
 					days = 30
 				}
+				set_country_flag = RJ_SOV_interparty_discourse
 			}
 		}
 	}
