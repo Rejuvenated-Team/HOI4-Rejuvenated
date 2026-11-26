@@ -622,8 +622,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {			
-				terrain_penalty_reduction = 0.05
-				naval_invasion_penalty = -0.05
+				terrain_penalty_reduction = 0.1
+				naval_invasion_penalty = -0.1
 				naval_invasion_division_cap = 3
 			}
 		}
@@ -683,6 +683,7 @@ ideas = {
 					air_defence = 0.20
 					air_attack = 0.20
 					reliability_factor = 0.10
+					instant = yes
 				}
 			}
 		}
@@ -725,12 +726,38 @@ ideas = {
 			equipment_bonus = {
 				armor = {
 					build_cost_ic = -0.1
-					reliability_factor = 0.1
+					reliability_factor = 0.15
 					armor_value = 0.1
+					instant = yes
 				}
 			}
 		}
 
+		USA_intelligence_communist_idea = {
+			picture = generic_spy_intel
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				intelligence_operation_speed = 0.15
+				operative_slot = 2
+				enemy_operative_detection_chance = 3
+				enemy_operative_capture_chance_factor = 0.15
+				intel_network_gain_factor = 0.15
+				intelligence_agency_defense = 1
+				army_intel_to_others = -10
+				navy_intel_to_others = -10
+				airforce_intel_to_others = -10
+			}
+		}
 	}
 
 }

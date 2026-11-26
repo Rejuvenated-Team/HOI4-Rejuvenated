@@ -43,6 +43,7 @@
  USA_flying_fortress_idea: "Flying Fortresses"
  USA_mechanize_the_army_idea: "Mechanize the Army"
  USA_tanks_idea: "Tank Experiments"
+ USA_intelligence_communist_idea: "Communist Intelligence Apparatus"
 
 
  ##############################################################################################################################
@@ -55,7 +56,7 @@
  full_desegregation_DM_tt: "Modify §YUnited States Army§! by \nRecruitable Population: §Y+1.00%§! \nRecruitable Population Factor: §G+30%§!"
  militia_mobilization_act_DM_tt: "Modify §YUnited States Army§! by \nDivision Training Time: §Y-10%§! \nRecruitable Population Factor: §G+20%§! \nMobilization Speed: §G+15%§!"
  fleet_landing_army_DM_tt: "Modify §YUnited States Army§! by \nInvasion Penalty: §G-10%§!"
- selective_training_DM_tt: "Division Training Time: §Y-10%§!"
+ selective_training_DM_tt: "Division Training Time: §Y-15%§!"
  rock_island_DM_tt: "Factory Output: §G+15%§!\nArtillery Attack:§G+10%§!"
  supply_of_services_DM_tt: "Supply Range: §G+20%§!\nAttrition:§G-15%§!\nArmy Fuel Capacity: §G+10%§!"
 
@@ -74,7 +75,7 @@
  payload2_DM_tt: "Ground Support Efficiency: §G+10%§!"
  payload3_DM_tt: "Ground Attack: §G+5%§!"
  air_plans_DM_tt: "Air Accidents Chance: §G-10%§!\nAir Mission Experience Gain: §G+15%§!\nAir Mission Efficiency: §G+15%§!\nAir Mastery Gain Factor: §G+10%§!"
- lessons_learned_DM_tt: "Air Escort Efficiency: §G+15%§!"
+ lessons_learned_DM_tt: "Air Escort Efficiency: §G+25%§!"
  us_air_force_DM_tt: "Air Mastery Gain Factor: §G+15%§!\nAce Generation Chance: §G+15%§!"
  ground_support_DM_tt: "Ground Support: §G+10%§!\nGround Attack: §G+5%§!"
  drop_tank_program_DM_tt: "Air Range: §G+8%§!"
@@ -174,6 +175,8 @@
  RJ_USA_ninety_division_gamble_desc: "General Marshal suggests a bold strategy of maintaining a lesser amount of overall divisions, focusing on manpower replacements & enhancement of strength for each division."
  RJ_USA_mechanize_the_army: "Mechanize the Army"
  RJ_USA_mechanize_the_army_desc: "With ever-growing industrial capacity, we have more than enough ability to begin mechanization of our armed forces!"
+ RJ_USA_the_communist_intelligence_apparatus: "The Communist Intelligence Apparatus"
+ RJ_USA_the_communist_intelligence_apparatus_desc: "The Soviets have relied heavily on their NKVD to establish order & ensure that they remain protected against external destabilizing forces. Many such forces are sure to attempt to target us now as well, & thusly we'll need our own defenses against such threats."
 
 
 

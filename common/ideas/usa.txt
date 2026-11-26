@@ -232,7 +232,8 @@ ideas = {
 			
 			modifier = {
 				planning_speed = 0.10
-				max_planning = 0.10
+				max_planning = 0.15
+				supply_consumption_factor = -0.10
 			}
 		}
 		USA_intervention_in_europe = {
@@ -249,8 +250,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				command_power_gain_mult = 0.1
-				supply_node_range = 0.05
+				command_power_gain_mult = 0.25
+				supply_node_range = 0.10
 			}
 		}
 		USA_airborne_divisions = {
@@ -885,6 +886,7 @@ ideas = {
 				large_plane_airframe = {
 					air_range = 0.1 instant = yes
 					air_bombing = 0.1
+					air_defence = 0.15
 				}	
 			}
 		}
@@ -1475,9 +1477,11 @@ ideas = {
 			equipment_bonus = {
 				medium_tank_chassis = {
 					build_cost_ic = -0.1
+					instant = yes
 				}
 				light_tank_chassis = {
 					build_cost_ic = -0.1
+					instant = yes
 				}
 			}
 
@@ -1507,16 +1511,19 @@ ideas = {
 					build_cost_ic = -0.1
 					ap_attack = 0.1
 					hard_attack = 0.25
+					instant = yes
 				}
 				medium_tank_destroyer_chassis = {
 					build_cost_ic = -0.1
 					ap_attack = 0.1
 					hard_attack = 0.25
+					instant = yes
 				}
 				heavy_tank_destroyer_chassis = {
 					build_cost_ic = -0.1
 					ap_attack = 0.1
 					hard_attack = 0.25
+					instant = yes
 				}
 			}
 

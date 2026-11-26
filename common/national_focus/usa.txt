@@ -168,7 +168,7 @@ focus_tree = {
 	focus = {
 		id = RJ_USA_the_american_popular_front
 		icon = GFX_focus_RJ_USA_popular_front
-		cost = 7.2
+		cost = 5
 
 		prerequisite = { focus = USA_suspend_the_presecution }
 		relative_position_id = USA_suspend_the_presecution
@@ -201,7 +201,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_suspend_the_presecution }
 		relative_position_id = USA_suspend_the_presecution
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -745,7 +745,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_union_representation_act }
 		relative_position_id = USA_union_representation_act
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -776,7 +776,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_union_representation_act }
 		relative_position_id = USA_union_representation_act
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -830,7 +830,7 @@ focus_tree = {
 		prerequisite = { focus = USA_old_age_pension_act }
 		prerequisite = { focus = USA_accumulated_wealth_tax_act }
 		relative_position_id = USA_union_representation_act
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1085,6 +1085,39 @@ focus_tree = {
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = RJ_USA_the_communist_intelligence_apparatus
+		icon = GFX_focus_generic_secret_agent_operative
+		prerequisite = { focus = USA_reach_out_to_the_ware_group }
+		
+		available = {
+			
+		}
+
+		x = 3
+		y = 1
+		relative_position_id = USA_reach_out_to_the_ware_group
+		cost = 7.2
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_intelligence_agency = no
+				}
+				create_intelligence_agency = {
+					name = "Office of Secret Services"
+					icon = GFX_intelligence_agency_logo_usa
+				}
+			}
+			add_ideas = USA_intelligence_communist_idea
+		}
+
+		search_filters = { FOCUS_FILTER_DIPLOMACY }
 	}
 
 	focus = {
@@ -1652,7 +1685,7 @@ focus_tree = {
 			}
 		}
 
-		cost = 10
+		cost = 7.2
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -5456,7 +5489,7 @@ focus_tree = {
 		y = 2
 		prerequisite = { focus = USA_intervention_in_the_americas }
 		relative_position_id = USA_intervention_in_the_americas
-		cost = 7.2
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -5763,7 +5796,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = USA_war_plan_black
-		cost = 7.2
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -6033,7 +6066,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = USA_intervention_in_asia
-		cost = 14.4
+		cost = 10
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -6244,7 +6277,7 @@ focus_tree = {
 			custom_effect_tooltip = USA_modify_us_army_tt
 			custom_effect_tooltip = selective_training_DM_tt
 			add_to_variable = {
-				training_time_army_factor = -0.10
+				training_time_army_factor = -0.15
 			}
 		}
 	}
@@ -6628,6 +6661,7 @@ focus_tree = {
 				bonus = 1.0
 				category = armor
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = USA_tanks_idea
 		}
 	}
@@ -7278,7 +7312,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_to_variable = {
-				RJ_USA_air_force_air_escort_efficiency = 0.15
+				RJ_USA_air_force_air_escort_efficiency = 0.25
 			}
 			custom_effect_tooltip = air_DM_tt
 			custom_effect_tooltip = lessons_learned_DM_tt
@@ -7408,7 +7442,7 @@ focus_tree = {
 		y = 2
 		prerequisite = { focus = USA_bureau_of_ships }
 		relative_position_id = USA_bureau_of_ships
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -7997,7 +8031,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = USA_modify_us_navy_tt
 			add_to_variable = {
-				RJ_USA_navy_shore_bombardment_bonus = 0.10
+				RJ_USA_navy_shore_bombardment_bonus = 0.15
 				tooltip = shore_bombardment_bonus_tt
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -8027,7 +8061,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = USA_modify_us_navy_tt
 			add_to_variable = {
-				RJ_USA_navy_convoy_raiding_efficiency = 0.10
+				RJ_USA_navy_convoy_raiding_efficiency = 0.15
 				tooltip = convoy_raiding_efficiency_factor_tt
 			}
 			add_to_variable = {
