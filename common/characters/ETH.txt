@@ -224,7 +224,10 @@ characters = {
 							has_government = fascism
 						}
 						NOT = {
-							has_country_leader = ETH_alemework_beyene
+							has_country_leader = {
+								character = ETH_alemework_beyene
+								ruling_only = yes
+							}
 						}
 					}
 				}

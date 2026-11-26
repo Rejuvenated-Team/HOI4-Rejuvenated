@@ -185,8 +185,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				autonomy_gain = 2.5
-				political_power_factor = 0.1
+				autonomy_gain = 5
+				political_power_factor = 0.15
+				ai_join_ally_desire_factor = -1
 			}
 		}
 

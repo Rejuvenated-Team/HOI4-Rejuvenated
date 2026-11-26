@@ -1522,7 +1522,7 @@ ETH_anti_colonialism_category = {
 		custom_cost_text = ETH_support_resistance_decision_cost
 
 		modifier = {
-			industrial_capacity_factory = -0.15
+			industrial_capacity_factory = -0.05
 		}
 
 		complete_effect = {
@@ -1561,7 +1561,7 @@ ETH_anti_colonialism_category = {
 			add_command_power = -15
 			FROM = {
 				add_compliance = -30
-				add_resistance = 20
+				add_resistance = 30
 				add_dynamic_modifier = {
 					modifier = ETH_state_supporting_resistance_modifier
 					scope = THIS.owner 
@@ -1626,6 +1626,7 @@ ETH_anti_colonialism_category = {
 			clr_country_flag = ETH_arm_resistance_flag
 			FROM = {
 				add_resistance = 30
+				add_compliance = -20
 			}
 		}
 		ai_will_do = {
@@ -1691,7 +1692,7 @@ ETH_anti_colonialism_category = {
 			FROM = {
 				add_timed_idea = {
 					idea = ETH_ethiopia_supporting_independence_idea
-					days = 90
+					days = 120
 				}
 			}	
 			set_country_flag = {
@@ -1751,7 +1752,7 @@ ETH_anti_colonialism_category = {
 		days_remove = 30
 		cost = 15
 		modifier = {
-			political_power_factor = -0.25
+			political_power_factor = -0.15
 		}
 		complete_effect = {
 			set_country_flag = ETH_independence_support_progress_flag
@@ -1766,8 +1767,8 @@ ETH_anti_colonialism_category = {
 						is_controlled_by = PREV
 						has_active_resistance = yes
 					}
-					add_compliance = -20
-					add_resistance = 5
+					add_compliance = -25
+					add_resistance = 10
 				}
 			}
 		}
@@ -1801,7 +1802,7 @@ ETH_anti_colonialism_category = {
 		visible = {
 			has_country_flag = ETH_can_intervene_flag
 		}
-		cost = 100
+		cost = 25
 		complete_effect = {
 			custom_effect_tooltip = ETH_demand_peace_decision_tt
 			set_country_flag = ETH_currently_demanding_peace_flag # Only one at a time please
@@ -4055,8 +4056,8 @@ ETH_improve_the_horn_of_africa_category = {
 			# num_of_available_civilian_factories > 1
 		}
 		modifier = {
-			production_speed_buildings_factor = -0.5
-			consumer_goods_factor = +0.10
+			production_speed_buildings_factor = -0.05
+			consumer_goods_factor = 0.05
 			# civilian_factory_use = 2
 		}
 
@@ -4127,8 +4128,8 @@ ETH_improve_the_horn_of_africa_category = {
 			# num_of_available_civilian_factories > 1
 		}
 		modifier = {
-			production_speed_buildings_factor = -0.5
-			consumer_goods_factor = +0.10
+			production_speed_buildings_factor = -0.05
+			consumer_goods_factor = 0.05
 			# civilian_factory_use = 2
 		}
 
@@ -4195,8 +4196,8 @@ ETH_improve_the_horn_of_africa_category = {
 			# num_of_available_civilian_factories > 1
 		}
 		modifier = {
-			production_speed_buildings_factor = -0.5
-			consumer_goods_factor = +0.10
+			production_speed_buildings_factor = -0.05
+			consumer_goods_factor = 0.1
 			# civilian_factory_use = 2
 		}
 

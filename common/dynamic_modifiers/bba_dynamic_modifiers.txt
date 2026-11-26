@@ -318,10 +318,10 @@ ETH_state_supporting_resistance_modifier = {
 	enable = { always = yes  }
 	icon = GFX_modifiers_bul_macedonian_revolutionaries
 	resistance_damage_to_garrison = 0.25
-	resistance_activity = 0.3
-	resistance_growth = 0.75
+	resistance_activity = 0.5
+	resistance_growth = 0.85
 	resistance_target = 1
-	compliance_growth = -0.15
+	compliance_growth = -0.25
 }
 ### African Union/Organization of Unity ###
 

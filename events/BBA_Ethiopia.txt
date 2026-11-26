@@ -918,7 +918,7 @@ country_event = {
 			base = 10
 		}
 		ETH_BOP_centralization_small_effect = yes 
-		add_political_power = -150
+		add_political_power = -25
 		var:ROOT.ETH_bop_state = {
 			custom_effect_tooltip = ETH_investments_in_state_tt
 			add_to_variable = { ETH_state_independence = -1 } # for logging for now
@@ -933,12 +933,6 @@ country_event = {
 			base = 10
 		}
 		ETH_BOP_decentralization_small_effect = yes 
-		add_stability = -0.05
-		add_war_support = -0.05
-		add_popularity = {
-			ideology = ROOT
-			popularity = -0.05
-		}
 		var:ROOT.ETH_bop_state = {
 			custom_effect_tooltip = ETH_decline_in_state_tt
 			add_to_variable = { ETH_state_independence = 1 } # for logging for now
@@ -3491,7 +3485,7 @@ country_event = {
 	option = {
 		name = BBA_ethiopia_anti_colonialism_events.2.a
 		ai_chance = {
-			base = 10
+			base = 30
 		}
 		trigger = {
 			NOT = { has_war_with = var:global.african_supporting_country }
@@ -3581,11 +3575,6 @@ country_event = {
 		name = BBA_ethiopia_anti_colonialism_events.4.a
 		ai_chance = {
 			base = 10
-		}
-		add_war_support = -0.05
-		add_popularity = {
-			ideology = ROOT 
-			popularity = -0.05
 		}
 		ETH = {
 			clr_country_flag = ETH_currently_demanding_peace_flag
@@ -3802,7 +3791,7 @@ country_event = {
 		}
 		country_event = {
 			id = BBA_ethiopia_industrial_financial_events.1
-			days = 60
+			days = 40
 			random_days = 15 
 		}
 	}
