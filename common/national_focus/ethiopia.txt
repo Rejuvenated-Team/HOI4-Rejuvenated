@@ -266,7 +266,7 @@ focus_tree = {
 
 	focus = {
 		id = ETH_expand_the_mehal_sefari
-		 icon = GFX_goal_generic_small_arms
+		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = ETH_ecole_militaire_haile_selassie_1er }
 		mutually_exclusive = { focus = ETH_keep_the_chitet }
 		x = 1
@@ -274,47 +274,7 @@ focus_tree = {
 		relative_position_id = ETH_ecole_militaire_haile_selassie_1er
 		cost = 5
 		available = {	
-			IF = {
-				limit = { NOT = { has_government = communism } }
-				NOT = {
-					is_power_balance_in_range = {
-						id = ETH_centralization_balance
-						range = ETH_mesafint_total_control_range
-					}
-					is_power_balance_in_range = {
-						id = ETH_centralization_balance
-						range = ETH_mesafint_dominant_range
-					}
-					is_power_balance_in_range = {
-						id = ETH_centralization_balance
-						range = ETH_mesafint_power_range
-					}
-					is_power_balance_in_range = {
-						id = ETH_centralization_balance
-						range = ETH_mesafint_influence_range
-					}
-				}
-			}
-			ELSE = {
-				NOT = {
-					is_power_balance_in_range = {
-						id = ETH_centralization_balance
-						range = ETH_anarchist_influence_range
-					}
-					is_power_balance_in_range = {
-						id = ETH_centralization_balance
-						range = ETH_anarchist_power_range
-					}
-					is_power_balance_in_range = {
-						id = ETH_centralization_balance
-						range = ETH_anarchist_dominant_range
-					}
-					is_power_balance_in_range = {
-						id = ETH_centralization_balance
-						range = ETH_total_anarchist_range
-					}
-				}
-			}			
+						
 		}
 		ai_will_do = {
 			base = 1
@@ -931,8 +891,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_research_slot = 1
-			custom_effect_tooltip = generic_skip_one_line_tt
-			country_event = rj_generic.1
 		}
 	}
 
@@ -7126,11 +7084,11 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			add_political_power = 100
-			add_war_support = 0.05
-			add_command_power = 50 
-			custom_effect_tooltip = ETH_arabian_independence_tt
-			ETH_set_up_middle_east_resistance_states = yes # build array		
+			add_war_support = 0.10
+			swap_ideas = {
+				remove_idea = RJ_ETH_african_wildfire_idea
+				add_idea = RJ_ETH_african_wildfire_idea_2
+			}		
 		}
 	}
 

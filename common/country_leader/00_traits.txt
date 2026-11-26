@@ -4033,7 +4033,7 @@ leader_traits = {
 		war_support_factor = 0.05
 	}
 
-	archbishop_of_ethiopian_orthodox_tewahedo_church  = {
+	archbishop_of_ethiopian_orthodox_tewahedo_church = {
 		random = no
 		sprite = 13
 		legitimacy_gain_factor = 0.15
@@ -4046,10 +4046,10 @@ leader_traits = {
 		random = no
 		sprite = 13
 		legitimacy_gain_factor = 0.15
-		drift_defence_factor = 0.1
-		request_lease_tension = -0.3
-		production_factory_max_efficiency_factor = 0.1
-		female_random_army_leader_chance = 0.35
+		production_factory_max_efficiency_factor = 0.15
+		female_random_army_leader_chance = 0.5
+		weekly_manpower = 2500
+		conscription_factor = 0.15
 	}
 
 	minister_of_the_interior_aregai = {
@@ -4092,7 +4092,7 @@ leader_traits = {
 		sprite = 13
 		consumer_goods_factor = -0.05
 		production_speed_buildings_factor = 0.1
-		industry_free_repair_factor = 0.15
+		industry_free_repair_factor = 0.5
 	}
 
 	ARG_anti_unionist_pure_anarchist = {
@@ -4106,18 +4106,21 @@ leader_traits = {
 	transnational_anarchist = {
 		random = no
 		sprite = 13
-		global_building_slots_factor = 0.05
 		conscription_factor = 0.05
 		non_core_manpower = 0.05
+		resistance_decay = 0.10
+		required_garrison_factor = -0.25
+		resistance_damage_to_garrison = -0.25
 	}
 
 	black_cross_anarchist = {
 		random = no
 		sprite = 13
-		war_support_factor = 0.05
-		stability_factor = -0.1
-		conscription_factor = 0.1
-		communism_drift = 0.03
+		war_support_weekly_factor = 0.0025
+		weekly_casualties_war_support = 0.0025
+		stability_factor = -0.05
+		conscription_factor = 0.2
+		communism_drift = 0.05
 	}
 	
 	constitutional_philosopher = {

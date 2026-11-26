@@ -1029,12 +1029,15 @@ ideas = {
 			equipment_bonus = {
 				motorized_equipment = {
 					build_cost_ic = -0.15
+					instant = yes
 				}
 				armored_car_equipment = {
 					build_cost_ic = -0.15
+					instant = yes
 				}
 				train_equipment = {
 					build_cost_ic = -0.15
+					instant = yes
 				}
 			}
 		}
@@ -1154,6 +1157,33 @@ ideas = {
 				justify_war_goal_time = -0.5
 				compliance_growth = 0.25
 				command_power_gain_mult = 1
+			}
+		}
+
+		RJ_ETH_african_wildfire_idea_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_org_of_african_unity		
+
+			modifier = {
+				conscription = 0.03
+				mobilization_speed = 0.25
+				non_core_manpower = 0.10
+				justify_war_goal_time = -0.75
+				compliance_growth = 0.25
+				command_power_gain_mult = 1
+				breakthrough_factor = 0.15
+				army_org_factor = 0.15
+				training_time_army_factor = -0.25
 			}
 		}
 
