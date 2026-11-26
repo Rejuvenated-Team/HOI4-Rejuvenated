@@ -326,13 +326,13 @@ equipments = {
 		archetype = ship_hull_cruiser
 		priority = 1900
 		parent = ship_hull_cruiser_3
-		naval_speed = 33
+		naval_speed = 36
 		reliability = 0.95
 		manpower = 1300
 		build_cost_ic = 2100
 		naval_range = 4500
 		max_strength = 130
-		sub_detection = 2.5
+		sub_detection = 3
 		naval_dominance_factor = 150
 		resources = {
 			steel = 3
@@ -523,7 +523,7 @@ equipments = {
 		
 		surface_detection = 30
 		sub_detection = 10
-		naval_speed = 29
+		naval_speed = 35
 		reliability = 0.90
 
 		naval_range = 4000
@@ -565,17 +565,17 @@ equipments = {
 		}
 		lg_armor_piercing = 0
 		lg_attack = 0
-		torpedo_attack = 2
+		torpedo_attack = 3
 		sub_attack = 8
 		
 		anti_air_attack = 0
 		
-		armor_value = 8
+		armor_value = 10
 
 		
 		surface_detection = 40
-		sub_detection = 10
-		naval_speed = 30
+		sub_detection = 12
+		naval_speed = 40
 		reliability = 0.92
 
 		naval_range = 4500
@@ -841,7 +841,7 @@ equipments = {
 		
 		anti_air_attack = 0
 		
-		armor_value = 13
+		armor_value = 18
 
 		
 		surface_detection = 40
@@ -967,7 +967,7 @@ equipments = {
 		surface_detection = 40
 		sub_detection = 10
 		surface_visibility = 15
-		naval_speed = 25
+		naval_speed = 28
 		reliability = 0.9
 		
 		naval_range = 4000

@@ -1039,7 +1039,7 @@ equipments = {
 		
 		anti_air_attack = 0
 		
-		armor_value = 47
+		armor_value = 50
 
 		
 		surface_detection = 15
@@ -1050,14 +1050,13 @@ equipments = {
 		
 		naval_range = 4000
 		
-		max_strength = 600
+		max_strength = 700
 		
 
 		fuel_consumption = 93
 		
-		build_cost_ic = 8500
+		build_cost_ic = 6000
 		resources = {
-			#oil = 2
 			steel = 4
 			chromium = 1
 		}
@@ -1162,7 +1161,7 @@ equipments = {
 
 		anti_air_attack = 0
 		
-		armor_value = 3
+		armor_value = 70
 
 		
 		surface_detection = 25
@@ -1171,22 +1170,22 @@ equipments = {
 		naval_speed = 24
 		reliability = 0.90
 		
-		naval_range = 4500
+		naval_range = 5000
 
-		max_strength = 800
+		max_strength = 900
 		
 
 		fuel_consumption = 93
 		
-		build_cost_ic = 13000
+		build_cost_ic = 8000
 		resources = {
-			#oil = 2
 			steel = 5
 			chromium = 3
 		}
 		manpower = 3000
 		
 	}
+
 	battle_cruiser_1 = {
 		year = 1922
 		visual_level = 0
@@ -1393,24 +1392,23 @@ equipments = {
 
 		anti_air_attack = 0
 		
-		armor_value = 40
+		armor_value = 45
 
 		
-		surface_detection = 42
-		sub_detection = 6
+		surface_detection = 45
+		sub_detection = 7
 		surface_visibility = 30
-		naval_speed = 31
-		reliability = 0.92
+		naval_speed = 35
+		reliability = 0.95
 
 		naval_range = 7500
 		fuel_consumption = 80
-		max_strength = 550
+		max_strength = 650
 		
 
 		
 		build_cost_ic = 6200
 		resources = {
-			#oil = 2
 			steel = 5
 			chromium = 3
 		}

@@ -118,5 +118,7 @@
  gun_ramming_mechanism: "Gun Ramming Mechanism"
  gun_ramming_mechanism_desc: ""
  light_tank_chassis_4: "Modern Light Tank Chassis"
+ ship_airplane_launcher_3: "Modern Catapult"
+ ship_airplane_launcher_3_desc: ""
 
  motorized_engine_upgrade: "Engine"

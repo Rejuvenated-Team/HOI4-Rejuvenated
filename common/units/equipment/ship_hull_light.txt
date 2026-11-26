@@ -409,7 +409,7 @@ equipments = {
 
 		fuel_consumption = 7
 		
-		build_cost_ic = 400
+		build_cost_ic = 300
 		resources = {
 			#oil = 1
 			steel = 2
@@ -444,7 +444,7 @@ equipments = {
 		armor_value = 0
 
 		
-		surface_detection = 25
+		surface_detection = 30
 		sub_detection = 10
 		surface_visibility = 10
 		naval_speed = 30
@@ -461,7 +461,7 @@ equipments = {
 			anti_air
 		}
 
-		build_cost_ic = 500
+		build_cost_ic = 400
 		resources = {
 			#oil = 1
 			steel = 3
@@ -497,9 +497,9 @@ equipments = {
 
 		
 		surface_detection = 40
-		sub_detection = 10
+		sub_detection = 12
 		surface_visibility = 10
-		naval_speed = 30
+		naval_speed = 35
 		reliability = 0.90
 
 		naval_range = 2000
@@ -547,11 +547,11 @@ equipments = {
 		armor_value = 0
 
 		
-		surface_detection = 40
-		sub_detection = 10
+		surface_detection = 45
+		sub_detection = 15
 		surface_visibility = 10
-		naval_speed = 30
-		reliability = 0.92
+		naval_speed = 40
+		reliability = 0.95
 
 		naval_range = 2500
 		
@@ -564,7 +564,7 @@ equipments = {
 			anti_air
 		}
 
-		build_cost_ic = 500
+		build_cost_ic = 600
 		resources = {
 			#oil = 2
 			steel = 4

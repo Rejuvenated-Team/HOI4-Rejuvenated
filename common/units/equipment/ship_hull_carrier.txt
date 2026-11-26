@@ -287,7 +287,7 @@ equipments = {
 		}
 
 		naval_range = 5000
-		reliability = 0.8
+		reliability = 0.85
 		max_strength = 350
 		naval_dominance_factor = 350
 
@@ -366,12 +366,12 @@ equipments = {
 		}
 
 		naval_range = 7500
-		reliability = 0.85
-		max_strength = 400
-		naval_speed = 30
+		reliability = 0.95
+		max_strength = 450
+		naval_speed = 35
 		fuel_consumption = 90
-		naval_dominance_factor = 400
-		build_cost_ic = 4250
+		naval_dominance_factor = 450
+		build_cost_ic = 4000
 		resources = {
 			steel = 5
 			chromium = 3
@@ -446,13 +446,13 @@ equipments = {
 		}
 
 		naval_range = 7000
-		reliability = 0.8
-		max_strength = 350
+		reliability = 0.90
+		max_strength = 600
 
-		build_cost_ic = 4500
+		build_cost_ic = 4200
 		surface_visibility = 40
-		naval_speed = 18
-		naval_dominance_factor = 350
+		naval_speed = 20
+		naval_dominance_factor = 500
 		fuel_consumption = 95		
 		resources = {
 			steel = 5
