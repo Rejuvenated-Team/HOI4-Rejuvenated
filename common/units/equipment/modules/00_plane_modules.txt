@@ -2863,7 +2863,7 @@ equipment_modules = {
 		abbreviation = "ar1s"
 		category = nav_bomber_weapon
 		sfx = sfx_ui_sd_module_turret
-		add_equipment_type = { naval_bomber }
+		add_equipment_type = { naval_bomber maritime_patrol_plane }
 		add_stats = {
 			naval_strike_attack = 10
 			build_cost_ic = 2
@@ -2873,6 +2873,8 @@ equipment_modules = {
 		xp_cost = 1
 		allow_mission_type = {
 			naval_bomber
+			port_strike
+			naval_patrol
 		}
 	}
 
@@ -2881,7 +2883,7 @@ equipment_modules = {
 		category = nav_bomber_weapon
 		sfx = sfx_ui_sd_module_turret
 		parent = aerial_rockets_1s
-		add_equipment_type = { naval_bomber }
+		add_equipment_type = { naval_bomber maritime_patrol_plane }
 		add_stats = {
 			naval_strike_attack = 15
 			build_cost_ic = 2.25
@@ -2891,6 +2893,8 @@ equipment_modules = {
 		xp_cost = 1
 		allow_mission_type = {
 			naval_bomber
+			port_strike
+			naval_patrol
 		}
 	}
 
@@ -2899,7 +2903,7 @@ equipment_modules = {
 		category = nav_bomber_weapon
 		sfx = sfx_ui_sd_module_turret
 		parent = aerial_rockets_2s
-		add_equipment_type = { naval_bomber }
+		add_equipment_type = { naval_bomber maritime_patrol_plane }
 		add_stats = {
 			naval_strike_attack = 20
 			build_cost_ic = 2.5
@@ -2909,6 +2913,8 @@ equipment_modules = {
 		xp_cost = 1
 		allow_mission_type = {
 			naval_bomber
+			port_strike
+			naval_patrol
 		}
 	}
 
@@ -2917,7 +2923,7 @@ equipment_modules = {
 		category = nav_bomber_weapon
 		sfx = sfx_ui_sd_module_turret
 		parent = aerial_rockets_3s
-		add_equipment_type = { naval_bomber }
+		add_equipment_type = { naval_bomber maritime_patrol_plane }
 		add_stats = {
 			naval_strike_attack = 25
 			build_cost_ic = 2.75
@@ -2927,6 +2933,8 @@ equipment_modules = {
 		xp_cost = 1
 		allow_mission_type = {
 			naval_bomber
+			port_strike
+			naval_patrol
 		}
 	}
 

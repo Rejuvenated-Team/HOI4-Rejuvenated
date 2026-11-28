@@ -120,5 +120,10 @@
  light_tank_chassis_4: "Modern Light Tank Chassis"
  ship_airplane_launcher_3: "Modern Catapult"
  ship_airplane_launcher_3_desc: ""
+ destroyer_ship_nuclear_engine_1: "Nuclear Destroyer Engine"
+ destroyer_ship_nuclear_engine_1_desc: ""
+ cruiser_ship_nuclear_engine_1: "Nuclear Cruiser Engine"
+ cruiser_ship_nuclear_engine_1_desc: ""
+ ship_heavy_battery_5_desc: ""
 
  motorized_engine_upgrade: "Engine"

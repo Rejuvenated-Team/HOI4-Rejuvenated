@@ -470,6 +470,26 @@ ideas = {
 				army_core_attack_factor = 0.2
 			}
 		}
+		RJ_USA_fleet_submarine_idea = {
+			name = USA_fleet_submarines
+			picture = generic_navy_submarines
+			removal_cost = -1
+
+			allowed = { always = no }
+
+			modifier = {
+				sp_naval_fleet_submarine_speed_factor = 1
+			}
+			equipment_bonus = {
+				ship_hull_fleet_submarine = {
+					instant = yes
+					build_cost_ic = -0.1
+					reliability = 0.10
+					max_strength = 0.25
+					sub_visibility = -0.10
+				}
+			}
+		}
 		USA_armed_forces_desegregation = {
 			
 			picture = usa_desegregation_1
@@ -527,8 +547,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				industrial_capacity_factory = 0.10
-				industrial_capacity_dockyard = 0.10
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
 			}
 		}
 		USA_labour_management_relations_act = {
@@ -761,6 +781,7 @@ ideas = {
 
 			modifier = {
 				conversion_cost_civ_to_mil_factor = -0.5
+				production_speed_arms_factory_factor = 0.25
 			}
 		}
 	
@@ -819,7 +840,7 @@ ideas = {
 
 				submarine = {
 					surface_detection = 0.1 instant = yes
-					sub_visibility = -0.1 instant = yes
+					sub_visibility = -0.15 instant = yes
 				}
 			}
 		}

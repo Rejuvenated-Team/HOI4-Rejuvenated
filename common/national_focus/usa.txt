@@ -899,6 +899,8 @@ focus_tree = {
 				}
 			}
 			USA_great_depression_level_down = yes
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = civilian_economy
 		}
 	}
 
@@ -1226,7 +1228,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_secure_china focus = USA_unholy_alliance }
 		relative_position_id = USA_secure_china
-		cost = 10
+		cost = 7.2
 
 		ai_will_do = {
 			factor = 1
@@ -1237,21 +1239,8 @@ focus_tree = {
 				has_war_with = SOU
 			}
 		}
-		
-		bypass = {
-			SOU = {
-				OR = {
-					exists = no
-					has_war_with = USA
-					is_subject = yes
-				}
-			}
-		}
 
 		completion_reward = {
-			SOU = { add_to_tech_sharing_group = USA_SOV_tech_group }
-			add_to_tech_sharing_group = USA_SOV_tech_group
-
 			if = {
 				limit = {
 					has_completed_focus = USA_unholy_alliance
@@ -6958,7 +6947,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = air_DM_tt
 			add_to_variable = {
-				RJ_USA_air_force_daily_experience_gain = 0.05
+				RJ_USA_air_force_daily_experience_gain = 0.15
 				tooltip = army_air_force_DM_tt
 			}
 		}
@@ -7642,7 +7631,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = USA_carrier_primacy
-		cost = 7.2
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -7817,7 +7806,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = USA_escort_effort
-		cost = 7.2
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -7881,11 +7870,11 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = USA_modify_us_navy_tt
 			add_to_variable = {
-				RJ_USA_navy_escort_efficiency = 0.10
+				RJ_USA_navy_escort_efficiency = 0.15
 				tooltip = convoy_escort_efficiency_tt
 			}
 			add_to_variable = {
-				RJ_USA_navy_convoy_retreat = 0.10
+				RJ_USA_navy_convoy_retreat = 0.15
 				tooltip = convoy_retreat_speed_tt
 			}
 		}
@@ -7921,18 +7910,10 @@ focus_tree = {
 
 			add_breakthrough_progress = {
 				specialization = specialization_naval
-				value = 0.25
+				value = 0.5
 			}
-
-			IF = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				add_ideas = fleet_submarine_specialization_mtg
-			}
-			ELSE = {
-				add_ideas = fleet_submarine_specialization
-			}	
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = RJ_USA_fleet_submarine_idea	
 		}
 	}
 
@@ -7968,7 +7949,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = RJ_USA_doctrinal_refinements
-		cost = 7.2
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -8061,7 +8042,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = USA_modify_us_navy_tt
 			add_to_variable = {
-				RJ_USA_navy_convoy_raiding_efficiency = 0.15
+				RJ_USA_navy_convoy_raiding_efficiency = 0.20
 				tooltip = convoy_raiding_efficiency_factor_tt
 			}
 			add_to_variable = {

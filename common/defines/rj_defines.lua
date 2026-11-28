@@ -78,7 +78,7 @@ NDefines.NNavy.AGGRESION_MULTIPLIER_FOR_COMBAT = 1.2 -- ships are more aggresive
 NDefines.NNavy.AGGRESSION_TORPEDO_EFFICIENCY_ON_LIGHT_SHIPS = 0.1 -- ratio for scoring for different gun types against light ships
 NDefines.NNavy.AGGRESSION_TORPEDO_EFFICIENCY_ON_HEAVY_SHIPS = 1.1 -- ratio for scoring for different gun types against heavy ships
 NDefines.NNavy.MIN_SHIP_COUNT_FOR_TASK_FORCE_ROLE_ASSIGNMENT = 4 -- define the minimum number of ship that should be in a task force for it to be considered a patrol or an escort task force (used to the insignia assignment, see TASK_FORCE_ROLE_TO_INSIGNIA)
-NDefines.NNavy.NAVAL_INVASION_PREPARE_DAYS = 30
+NDefines.NNavy.NAVAL_INVASION_PREPARE_DAYS = 45
 NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR = 0.30
 NDefines.NNavy.MAX_POSITIONING_PENALTY_FROM_HIGHER_SHIP_RATIO = 0.80
 
